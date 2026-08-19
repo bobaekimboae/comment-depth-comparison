@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>댓글 100개 스트레스 테스트 · 댓글 뎁스 구조 비교</title>
+<meta name="description" content="동일한 100개 댓글 시나리오를 Threads/Reddit/YouTube/Facebook/네이버 카페/보배드림 권장안 6개 구조로 렌더링해 가독성과 가로폭을 비교합니다.">
+<style>
+  :root{
+    --bg:#f4f5f7;--card:#fff;--line:#ebedf0;--line-strong:#dfe2e6;--line-soft:#f1f2f4;
+    --text:#17191c;--sub:#6b7178;--dim:#8b9199;--blue:#2f6bff;--bubble:#f2f3f5;--radius:14px;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none !important}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:'Pretendard','Pretendard Variable',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI',Roboto,'Noto Sans KR','Malgun Gothic',system-ui,sans-serif;
+    font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%;word-break:keep-all;
+  }
+  .wrap{max-width:780px;margin:0 auto;padding:28px 16px 80px}
+  .page-head h1{margin:0 0 6px;font-size:25px;letter-spacing:-.02em}
+  .page-head p{margin:0 0 4px;color:var(--sub);font-size:14px}
+  .backlink{display:inline-block;margin-top:8px;font-size:13px;color:var(--blue);text-decoration:none;font-weight:600}
+  .backlink:hover{text-decoration:underline}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin:16px 0}
+  .card h2{margin:0 0 12px;font-size:16px;font-weight:700}
+
+  /* 시나리오 요약 */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:8px;margin:0}
+  .stat{background:#f8f9fb;border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+  .stat dt{margin:0;font-size:11.5px;color:var(--dim);font-weight:600}
+  .stat dd{margin:2px 0 0;font-size:17px;font-weight:700;letter-spacing:-.02em}
+  .stat dd span{font-size:12px;font-weight:600;color:var(--sub);margin-left:1px}
+  .depthbars{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px}
+  .depthbars li{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub)}
+  .depthbars b{flex:none;width:52px;font-weight:600;color:var(--text)}
+  .depthbars i{display:block;height:8px;border-radius:4px;background:var(--blue);opacity:.75}
+  .depthbars em{font-style:normal;flex:none;color:var(--dim)}
+
+  /* 구조 탭 */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px}
+  .tab{
+    font:inherit;font-size:13px;font-weight:600;cursor:pointer;
+    background:#f6f7f9;border:1px solid var(--line);border-radius:999px;padding:7px 13px;color:var(--sub);
+  }
+  .tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+  .ctrl{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .btn{
+    font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;color:var(--sub);
+    background:#fff;border:1px solid var(--line-strong);border-radius:8px;padding:6px 11px;
+  }
+  .btn:hover{background:#f7f8fa}
+  button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:6px}
+
+  .note{margin:10px 0 0;font-size:12.5px;color:var(--dim)}
+  .stage{border-top:1px solid var(--line);margin-top:14px;padding-top:14px;overflow-x:hidden}
+
+  /* 댓글 공통 */
+  .c{display:flex;gap:10px;padding:6px 0}
+  .av{flex:none;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+      font-size:13px;font-weight:700;color:#fff;user-select:none}
+  .av.sm{width:24px;height:24px;font-size:11px}
+  .a1{background:#5b8def}.a2{background:#e2725b}.a3{background:#4caf82}
+  .a4{background:#9a72d9}.a5{background:#e0a12b}.a6{background:#6c7a89}
+  .body{min-width:0;flex:1}
+  .meta{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+  .name{font-size:13.5px;font-weight:600}
+  .time{font-size:12px;color:var(--dim)}
+  .text{margin:2px 0 0;font-size:14px}
+  .mention{color:var(--blue);font-weight:600}
+  .acts{display:flex;gap:12px;margin-top:3px}
+  .act{background:none;border:0;padding:2px 0;margin:0;cursor:pointer;font:inherit;font-size:12.5px;font-weight:600;color:var(--dim)}
+  .act:hover{color:var(--sub)}
+  .depth-tag{font-size:11px;font-weight:700;color:var(--dim);background:#f4f5f7;border-radius:5px;padding:1px 6px}
+
+  .toggle{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:6px 0;margin:0;
+          cursor:pointer;font:inherit;font-size:13px;font-weight:700;color:var(--blue);border-radius:6px}
+  .toggle:hover{text-decoration:underline}
+  .toggle.plain{color:var(--sub)}
+  .toggle .arw{display:inline-block;font-size:10px;line-height:1;transition:transform .15s ease}
+  .toggle[aria-expanded="true"] .arw{transform:rotate(180deg)}
+
+  /* 구조별 */
+  .rail{position:relative}
+  .rail::before{content:"";position:absolute;left:15px;top:40px;bottom:30px;width:2px;background:var(--line-strong);border-radius:1px}
+  .kids-line{border-left:2px solid var(--line-strong);padding-left:14px;margin-left:8px}
+  .kids-line-soft{border-left:1.5px solid #e6e8ec;padding-left:13px;margin-left:8px}
+  .kids-plain{padding-left:0}
+  .item{position:relative}
+  .kids-line > .item::before{content:"";position:absolute;left:-14px;top:22px;width:10px;height:2px;background:var(--line-strong)}
+  .collapse{flex:none;width:22px;height:22px;margin-top:6px;padding:0;border:1px solid var(--line-strong);border-radius:6px;
+            background:#fafbfc;cursor:pointer;font:inherit;font-size:12px;font-weight:700;color:var(--sub);
+            display:flex;align-items:center;justify-content:center}
+  .row{display:flex;gap:8px}
+  .fb-bubble{background:var(--bubble);border-radius:16px;padding:8px 12px;display:inline-block;max-width:100%}
+  .fb-bubble .name{display:block;font-size:13px}
+  .nv-item{border-bottom:1px solid var(--line-soft)}
+  .nv-reply{background:#fafbfc;border-radius:10px;padding:6px 10px;border-bottom:0}
+  .nv-arrow{flex:none;color:var(--dim);font-size:13px;line-height:26px}
+  .flat-note{margin:6px 0 2px;font-size:12px;color:var(--dim);background:#f8f9fa;border:1px dashed var(--line-strong);border-radius:8px;padding:5px 9px}
+
+  footer{margin-top:26px;text-align:center;color:var(--dim);font-size:12.5px}
+
+  @media (max-width:600px){
+    .wrap{padding:18px 12px 60px}
+    .card{padding:14px 12px}
+    .page-head h1{font-size:21px}
+    .kids-line,.kids-line-soft{padding-left:11px;margin-left:4px}
+    .kids-line > .item::before{left:-11px;width:8px}
+    .text{font-size:13.5px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-head">
+    <h1>댓글 100개 스트레스 테스트</h1>
+    <p>가상 시나리오: 자동차 커뮤니티 「순정 타이어 3만km 편마모」 스레드 · 댓글 100개</p>
+    <p>동일한 100개 댓글 데이터를 6개 구조로 각각 렌더링해 가독성·가로폭·스크롤 길이를 비교합니다.</p>
+    <a class="backlink" href="./">← 기본 비교 페이지로</a>
+  </header>
+
+  <section class="card">
+    <h2>시나리오 요약</h2>
+    <dl class="stats" id="scenario-stats"></dl>
+    <ul class="depthbars" id="depth-bars"></ul>
+  </section>
+
+  <section class="card">
+    <h2>구조 선택</h2>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="ctrl">
+      <button type="button" class="btn" id="expand-all">전체 펼치기</button>
+      <button type="button" class="btn" id="collapse-all">전체 접기</button>
+    </div>
+    <p class="note" id="mode-desc"></p>
+  </section>
+
+  <section class="card">
+    <h2>렌더링 지표</h2>
+    <dl class="stats" id="render-stats"></dl>
+    <p class="note">기본 노출 = 페이지 진입 직후 보이는 댓글 수 · 렌더 높이 = 현재 상태에서 이 영역이 차지하는 세로 픽셀</p>
+  </section>
+
+  <section class="card">
+    <h2 id="stage-title">렌더링 결과</h2>
+    <div class="stage" id="stage"></div>
+  </section>
+
+  <footer>댓글 뎁스 구조 비교 · 100개 댓글 스트레스 테스트 (가상 데이터)</footer>
+</div>
+
+<script>
+var DATA = [{"id":1,"parent":null,"author":"휠얼라인","avatar":"a5","initial":"휠","text":"순정 타이어 3만km 탔는데 안쪽만 심하게 편마모가 왔습니다. 얼라인먼트부터 보는 게 맞을까요?","time":"9:03","likes":0,"depth":0},{"id":2,"parent":1,"author":"무사고10년","avatar":"a6","initial":"무","text":"저도 같은 차종인데 2만8천에 똑같은 증상 나왔습니다. 순정 타이어 자체가 무른 편이에요.","time":"9:20","likes":13,"depth":1},{"id":3,"parent":2,"author":"리프트올림","avatar":"a2","initial":"리","text":"안쪽 편마모면 토우값이 제일 유력합니다. 캠버도 같이 보세요.","time":"9:27","likes":0,"depth":2},{"id":4,"parent":1,"author":"타이어연구","avatar":"a6","initial":"타","text":"측정지 안 주는 정비소는 거르시는 게 좋습니다. 전/후 값 비교까지 주는 곳으로 가세요.","time":"9:30","likes":0,"depth":1},{"id":5,"parent":null,"author":"공기압체크","avatar":"a2","initial":"공","text":"공기압 관리는 어떻게 하셨나요? 낮게 타면 양쪽 숄더가 같이 닳습니다.","time":"9:47","likes":18,"depth":0},{"id":6,"parent":4,"author":"휠복원소","avatar":"a3","initial":"휠","text":"한쪽만 닳았으면 공기압보다는 각도 문제가 큽니다.","time":"10:05","likes":24,"depth":2},{"id":7,"parent":1,"author":"고속도로순찰","avatar":"a1","initial":"고","text":"얼라인먼트 비용 요즘 얼마 정도 하나요?","time":"10:14","likes":0,"depth":1},{"id":8,"parent":4,"author":"서스펜션","avatar":"a3","initial":"서","text":"동네는 5~7만원 선, 장비 좋은 곳은 10만원 넘는 곳도 있습니다.","time":"10:19","likes":7,"depth":2},{"id":9,"parent":1,"author":"보험처리","avatar":"a4","initial":"보","text":"저는 8만원 주고 받았는데 측정지 주고 재측정까지 해줬습니다. 만족했어요.","time":"10:32","likes":16,"depth":1},{"id":10,"parent":5,"author":"주말드라이버","avatar":"a2","initial":"주","text":"재측정 조건 꼭 확인하세요. 100km 정도 타고 다시 봐주는 곳이 좋습니다.","time":"10:35","likes":20,"depth":1},{"id":11,"parent":null,"author":"초보운전중","avatar":"a4","initial":"초","text":"혹시 연석 밟거나 포트홀 크게 지나신 적 있나요? 한 번에 틀어지기도 합니다.","time":"10:42","likes":15,"depth":0},{"id":12,"parent":4,"author":"정비왕","avatar":"a1","initial":"정","text":"장마철에 포트홀 크게 밟은 기억이 있긴 합니다.","time":"10:58","likes":37,"depth":2},{"id":13,"parent":2,"author":"중고차탐험","avatar":"a3","initial":"중","text":"그러면 거의 확정이라고 봅니다. 로어암 부싱까지 같이 점검받으세요.","time":"11:07","likes":17,"depth":2},{"id":14,"parent":12,"author":"정속주행","avatar":"a5","initial":"정","text":"부싱 나가면 얼라인먼트 잡아도 금방 다시 틀어집니다. 순서가 중요해요.","time":"11:17","likes":21,"depth":3},{"id":15,"parent":4,"author":"딸기라떼","avatar":"a3","initial":"딸","text":"맞습니다. 하체 점검 → 부품 교체 → 얼라인먼트 순서입니다.","time":"11:30","likes":33,"depth":2},{"id":16,"parent":null,"author":"엔진오일교체","avatar":"a4","initial":"엔","text":"순서 반대로 해서 두 번 돈 쓴 사람 여기 있습니다.","time":"11:41","likes":23,"depth":0},{"id":17,"parent":10,"author":"차박러","avatar":"a6","initial":"차","text":"저도요. 부싱 교체 전에 얼라인 봤다가 2주 만에 다시 틀어졌습니다.","time":"11:45","likes":0,"depth":2},{"id":18,"parent":9,"author":"오너드라이버","avatar":"a4","initial":"오","text":"타이어는 이미 편마모 심하면 로테이션으로도 못 살립니다.","time":"11:53","likes":7,"depth":2},{"id":19,"parent":12,"author":"코너링장인","avatar":"a5","initial":"코","text":"소음 나기 시작하면 이미 늦은 겁니다. 웅웅거리는 소리 나면 교체하세요.","time":"12:06","likes":35,"depth":3},{"id":20,"parent":null,"author":"출퇴근120km","avatar":"a1","initial":"출","text":"고속에서 핸들 떨림도 같이 오던가요?","time":"12:11","likes":30,"depth":0},{"id":21,"parent":10,"author":"휠얼라인","avatar":"a5","initial":"휠","text":"떨림은 휠 밸런스 쪽이 더 큽니다. 편마모랑은 다른 증상이에요.","time":"12:17","likes":35,"depth":2},{"id":22,"parent":null,"author":"무사고10년","avatar":"a6","initial":"무","text":"밸런스랑 얼라인먼트 헷갈리는 분들 정말 많습니다.","time":"12:21","likes":22,"depth":0},{"id":23,"parent":12,"author":"리프트올림","avatar":"a2","initial":"리","text":"간단히 말하면 밸런스는 무게중심, 얼라인먼트는 각도입니다.","time":"12:34","likes":37,"depth":3},{"id":24,"parent":null,"author":"타이어연구","avatar":"a6","initial":"타","text":"이 설명이 제일 깔끔하네요. 저장해둡니다.","time":"12:47","likes":0,"depth":0},{"id":25,"parent":23,"author":"공기압체크","avatar":"a2","initial":"공","text":"3만km면 순정 기준으로는 짧은 편도 아닙니다. 주행 스타일도 보세요.","time":"13:03","likes":21,"depth":4},{"id":26,"parent":13,"author":"휠복원소","avatar":"a3","initial":"휠","text":"출퇴근 왕복 120km라 고속 비중이 높습니다.","time":"13:12","likes":24,"depth":3},{"id":27,"parent":16,"author":"고속도로순찰","avatar":"a1","initial":"고","text":"고속 위주면 오히려 마모가 균일한 편인데 한쪽만 닳은 건 이상하네요.","time":"13:23","likes":12,"depth":1},{"id":28,"parent":21,"author":"서스펜션","avatar":"a3","initial":"서","text":"그래서 하체 의심하는 겁니다.","time":"13:31","likes":7,"depth":3},{"id":29,"parent":19,"author":"보험처리","avatar":"a4","initial":"보","text":"저는 같은 증상으로 스태빌라이저 링크 교체했습니다.","time":"13:44","likes":7,"depth":4},{"id":30,"parent":18,"author":"주말드라이버","avatar":"a2","initial":"주","text":"링크 나가면 소리부터 나지 않나요? 덜컹거리는 소리요.","time":"13:51","likes":26,"depth":3},{"id":31,"parent":23,"author":"초보운전중","avatar":"a4","initial":"초","text":"네 방지턱 넘을 때 딸깍거렸습니다.","time":"14:09","likes":4,"depth":4},{"id":32,"parent":18,"author":"정비왕","avatar":"a1","initial":"정","text":"그 소리 나면 거의 링크 확정입니다. 부품값도 비싸지 않아요.","time":"14:20","likes":28,"depth":3},{"id":33,"parent":22,"author":"중고차탐험","avatar":"a3","initial":"중","text":"공임 포함 양쪽 10만원 안쪽으로 했습니다.","time":"14:38","likes":19,"depth":1},{"id":34,"parent":25,"author":"정속주행","avatar":"a5","initial":"정","text":"생각보다 저렴하네요. 저도 견적 받아봐야겠습니다.","time":"14:49","likes":0,"depth":5},{"id":35,"parent":30,"author":"딸기라떼","avatar":"a3","initial":"딸","text":"타이어 브랜드는 뭐 쓰셨어요?","time":"14:52","likes":2,"depth":4},{"id":36,"parent":33,"author":"엔진오일교체","avatar":"a4","initial":"엔","text":"순정 그대로입니다. 아직 안 바꿨습니다.","time":"14:55","likes":8,"depth":2},{"id":37,"parent":27,"author":"차박러","avatar":"a6","initial":"차","text":"이번에 바꾸실 거면 마모 지수 높은 걸로 가세요. 승차감은 조금 포기하고요.","time":"15:11","likes":17,"depth":2},{"id":38,"parent":36,"author":"오너드라이버","avatar":"a4","initial":"오","text":"정숙성 포기 못 하겠으면 컴포트 계열도 요즘 마모 지수 괜찮습니다.","time":"15:20","likes":1,"depth":3},{"id":39,"parent":29,"author":"코너링장인","avatar":"a5","initial":"코","text":"가격 차이가 본당 3~4만원은 납니다.","time":"15:28","likes":4,"depth":5},{"id":40,"parent":36,"author":"출퇴근120km","avatar":"a1","initial":"출","text":"4짝이면 15만원 차이인데 수명 생각하면 비싼 게 나을 수도 있습니다.","time":"15:32","likes":0,"depth":3},{"id":41,"parent":33,"author":"휠얼라인","avatar":"a5","initial":"휠","text":"저는 싼 거 두 번 갈 바에 좋은 거 한 번 간다는 주의입니다.","time":"15:42","likes":23,"depth":2},{"id":42,"parent":null,"author":"무사고10년","avatar":"a6","initial":"무","text":"케바케입니다. 연 주행거리 1만도 안 되면 무른 게 나을 수도 있어요.","time":"15:46","likes":41,"depth":0},{"id":43,"parent":42,"author":"리프트올림","avatar":"a2","initial":"리","text":"연식 오래되면 마모보다 경화가 먼저 옵니다. 그건 맞습니다.","time":"15:53","likes":24,"depth":1},{"id":44,"parent":35,"author":"타이어연구","avatar":"a6","initial":"타","text":"제조일자 꼭 확인하세요. 재고 오래된 거 파는 곳 있습니다.","time":"16:04","likes":7,"depth":5},{"id":45,"parent":40,"author":"공기압체크","avatar":"a2","initial":"공","text":"4자리 숫자로 주차 확인하시면 됩니다. 앞 두 자리가 주차예요.","time":"16:09","likes":3,"depth":4},{"id":46,"parent":43,"author":"휠복원소","avatar":"a3","initial":"휠","text":"이거 모르는 분들 의외로 많습니다.","time":"16:16","likes":10,"depth":2},{"id":47,"parent":43,"author":"고속도로순찰","avatar":"a1","initial":"고","text":"저도 이번에 처음 알았습니다. 감사합니다.","time":"16:30","likes":31,"depth":2},{"id":48,"parent":43,"author":"서스펜션","avatar":"a3","initial":"서","text":"정렬값 규격은 차종 매뉴얼에 나옵니다. 정비소마다 기준이 조금씩 달라요.","time":"16:36","likes":28,"depth":2},{"id":49,"parent":43,"author":"보험처리","avatar":"a4","initial":"보","text":"제조사 규격 벗어나지만 않으면 크게 문제 없습니다.","time":"16:44","likes":48,"depth":2},{"id":50,"parent":null,"author":"주말드라이버","avatar":"a2","initial":"주","text":"규격 안에 있어도 좌우 편차가 크면 편마모 옵니다.","time":"16:47","likes":13,"depth":0},{"id":51,"parent":42,"author":"초보운전중","avatar":"a4","initial":"초","text":"이게 핵심입니다. 좌우 밸런스를 봐야 해요.","time":"17:00","likes":22,"depth":1},{"id":52,"parent":43,"author":"정비왕","avatar":"a1","initial":"정","text":"측정지에 좌우 값 같이 나오니까 꼭 비교해 보세요.","time":"17:10","likes":2,"depth":2},{"id":53,"parent":49,"author":"중고차탐험","avatar":"a3","initial":"중","text":"사진 찍어두면 나중에 비교하기 좋습니다.","time":"17:23","likes":0,"depth":3},{"id":54,"parent":null,"author":"정속주행","avatar":"a5","initial":"정","text":"저는 정비 이력 전부 사진으로 남깁니다. 중고로 팔 때도 도움 됩니다.","time":"17:26","likes":33,"depth":0},{"id":55,"parent":54,"author":"딸기라떼","avatar":"a3","initial":"딸","text":"이력 관리 잘하면 중고가 확실히 다릅니다.","time":"17:30","likes":35,"depth":1},{"id":56,"parent":49,"author":"엔진오일교체","avatar":"a4","initial":"엔","text":"얼마나 차이 나던가요?","time":"17:47","likes":24,"depth":3},{"id":57,"parent":null,"author":"차박러","avatar":"a6","initial":"차","text":"같은 연식 같은 주행거리에서 100만원 정도 더 받았습니다.","time":"17:50","likes":16,"depth":0},{"id":58,"parent":52,"author":"오너드라이버","avatar":"a4","initial":"오","text":"생각보다 큰 차이네요.","time":"17:57","likes":13,"depth":3},{"id":59,"parent":55,"author":"코너링장인","avatar":"a5","initial":"코","text":"매물 설명에 정비 이력 사진 올려두면 문의 자체가 다릅니다.","time":"18:05","likes":33,"depth":2},{"id":60,"parent":54,"author":"출퇴근120km","avatar":"a1","initial":"출","text":"요즘은 앱으로 정비 이력 자동 기록되는 것도 있습니다.","time":"18:16","likes":17,"depth":1},{"id":61,"parent":57,"author":"휠얼라인","avatar":"a5","initial":"휠","text":"그거 순정 내비 연동되는 차만 되지 않나요?","time":"18:29","likes":33,"depth":1},{"id":62,"parent":52,"author":"무사고10년","avatar":"a6","initial":"무","text":"OBD 꽂는 방식도 있습니다. 저는 그거 씁니다.","time":"18:34","likes":12,"depth":3},{"id":63,"parent":49,"author":"리프트올림","avatar":"a2","initial":"리","text":"OBD 상시 연결하면 배터리 방전 위험 없나요?","time":"18:50","likes":8,"depth":3},{"id":64,"parent":null,"author":"타이어연구","avatar":"a6","initial":"타","text":"요즘 제품은 절전모드 들어가서 괜찮습니다. 오래된 건 위험합니다.","time":"19:08","likes":5,"depth":0},{"id":65,"parent":59,"author":"공기압체크","avatar":"a2","initial":"공","text":"저는 일주일 세워뒀다가 방전된 적 있습니다. 그 뒤로 뺐습니다.","time":"19:19","likes":17,"depth":3},{"id":66,"parent":58,"author":"휠복원소","avatar":"a3","initial":"휠","text":"블랙박스 상시전원이랑 겹치면 확실히 부담됩니다.","time":"19:23","likes":2,"depth":4},{"id":67,"parent":61,"author":"고속도로순찰","avatar":"a1","initial":"고","text":"보조배터리 다는 게 답이긴 한데 비용이 만만치 않죠.","time":"19:37","likes":44,"depth":2},{"id":68,"parent":62,"author":"서스펜션","avatar":"a3","initial":"서","text":"30만원대부터 시작하더라고요.","time":"19:41","likes":3,"depth":4},{"id":69,"parent":59,"author":"보험처리","avatar":"a4","initial":"보","text":"저는 그냥 주차모드 시간 제한 걸어놨습니다.","time":"19:48","likes":22,"depth":3},{"id":70,"parent":null,"author":"주말드라이버","avatar":"a2","initial":"주","text":"현실적인 타협이네요.","time":"20:03","likes":21,"depth":0},{"id":71,"parent":69,"author":"초보운전중","avatar":"a4","initial":"초","text":"다시 본론으로 돌아가서, 얼라인먼트 예약은 하셨나요?","time":"20:21","likes":0,"depth":4},{"id":72,"parent":null,"author":"정비왕","avatar":"a1","initial":"정","text":"네 내일 오전으로 잡았습니다. 측정지 주는 곳으로 확인했습니다.","time":"20:38","likes":29,"depth":0},{"id":73,"parent":72,"author":"중고차탐험","avatar":"a3","initial":"중","text":"결과 나오면 후기 부탁드립니다. 저도 같은 증상이라 궁금합니다.","time":"20:51","likes":32,"depth":1},{"id":74,"parent":70,"author":"정속주행","avatar":"a5","initial":"정","text":"저도 구독하고 기다리겠습니다.","time":"9:01","likes":31,"depth":1},{"id":75,"parent":74,"author":"딸기라떼","avatar":"a3","initial":"딸","text":"후기 올라오면 스크랩해두려고요.","time":"9:19","likes":0,"depth":2},{"id":76,"parent":64,"author":"엔진오일교체","avatar":"a4","initial":"엔","text":"혹시 차종이랑 연식 알 수 있을까요?","time":"9:34","likes":0,"depth":1},{"id":77,"parent":73,"author":"차박러","avatar":"a6","initial":"차","text":"2021년식 준중형입니다. 순정 16인치입니다.","time":"9:40","likes":7,"depth":2},{"id":78,"parent":64,"author":"오너드라이버","avatar":"a4","initial":"오","text":"그 차종 하체 무른 걸로 유명합니다. 부싱 먼저 보세요.","time":"9:54","likes":22,"depth":1},{"id":79,"parent":74,"author":"코너링장인","avatar":"a5","initial":"코","text":"정보 감사합니다. 부싱도 같이 봐달라고 하겠습니다.","time":"10:05","likes":1,"depth":2},{"id":80,"parent":79,"author":"출퇴근120km","avatar":"a1","initial":"출","text":"부싱 교체하면 승차감도 같이 좋아집니다.","time":"10:20","likes":11,"depth":3},{"id":81,"parent":null,"author":"휠얼라인","avatar":"a5","initial":"휠","text":"새 차 느낌까지는 아니어도 확실히 다릅니다.","time":"10:38","likes":19,"depth":0},{"id":82,"parent":78,"author":"무사고10년","avatar":"a6","initial":"무","text":"저는 부싱 교체하고 노면 소음이 줄었습니다.","time":"10:41","likes":22,"depth":2},{"id":83,"parent":82,"author":"리프트올림","avatar":"a2","initial":"리","text":"소음까지 줄어드나요? 그건 몰랐네요.","time":"10:47","likes":18,"depth":3},{"id":84,"parent":70,"author":"타이어연구","avatar":"a6","initial":"타","text":"진동이 줄어드니까 체감상 조용해집니다.","time":"10:56","likes":20,"depth":1},{"id":85,"parent":84,"author":"공기압체크","avatar":"a2","initial":"공","text":"타이어 편마모도 소음 원인 중 하나입니다.","time":"11:05","likes":15,"depth":2},{"id":86,"parent":74,"author":"휠복원소","avatar":"a3","initial":"휠","text":"톱니 모양으로 닳으면 그때부터 웅웅거립니다.","time":"11:11","likes":22,"depth":2},{"id":87,"parent":81,"author":"고속도로순찰","avatar":"a1","initial":"고","text":"그 상태면 이미 교체 시기입니다.","time":"11:22","likes":38,"depth":1},{"id":88,"parent":null,"author":"서스펜션","avatar":"a3","initial":"서","text":"안전 문제도 있으니 미루지 마세요. 빗길 제동거리가 확 늘어납니다.","time":"11:32","likes":17,"depth":0},{"id":89,"parent":77,"author":"보험처리","avatar":"a4","initial":"보","text":"마모 한계선 확인하는 방법도 알려드릴게요. 트레드 홈에 돌기가 있습니다.","time":"11:50","likes":27,"depth":3},{"id":90,"parent":85,"author":"주말드라이버","avatar":"a2","initial":"주","text":"그 돌기랑 표면이 같아지면 교체 시점입니다.","time":"12:03","likes":0,"depth":3},{"id":91,"parent":null,"author":"초보운전중","avatar":"a4","initial":"초","text":"100원 동전으로 확인하는 방법도 있습니다.","time":"12:17","likes":41,"depth":0},{"id":92,"parent":89,"author":"정비왕","avatar":"a1","initial":"정","text":"저는 그냥 정비소에서 봐달라고 합니다.","time":"12:21","likes":0,"depth":4},{"id":93,"parent":91,"author":"중고차탐험","avatar":"a3","initial":"중","text":"그게 제일 정확하긴 하죠.","time":"12:28","likes":15,"depth":1},{"id":94,"parent":null,"author":"정속주행","avatar":"a5","initial":"정","text":"정리하면 하체 점검 → 필요 부품 교체 → 얼라인먼트 → 필요시 타이어 교체 순서네요.","time":"12:35","likes":28,"depth":0},{"id":95,"parent":88,"author":"딸기라떼","avatar":"a3","initial":"딸","text":"네 이 순서가 맞습니다. 잘 정리해주셨습니다.","time":"12:48","likes":0,"depth":1},{"id":96,"parent":93,"author":"엔진오일교체","avatar":"a4","initial":"엔","text":"이 글 정리본으로 저장합니다. 초보들한테 도움 많이 될 것 같습니다.","time":"12:51","likes":0,"depth":2},{"id":97,"parent":96,"author":"차박러","avatar":"a6","initial":"차","text":"좋은 정보 공유해주신 분들 감사합니다.","time":"12:54","likes":13,"depth":3},{"id":98,"parent":89,"author":"오너드라이버","avatar":"a4","initial":"오","text":"댓글이 벌써 100개 가까이 달렸네요. 스크롤이 상당합니다.","time":"12:58","likes":34,"depth":4},{"id":99,"parent":93,"author":"코너링장인","avatar":"a5","initial":"코","text":"이래서 뎁스 제한이랑 접기 기능이 중요한 것 같습니다.","time":"13:07","likes":27,"depth":2},{"id":100,"parent":96,"author":"출퇴근120km","avatar":"a1","initial":"출","text":"긴 스레드는 접기 없으면 읽기 힘들어요.","time":"13:25","likes":18,"depth":3}];
+
+/* ── 트리 구성 ────────────────────────────── */
+var byId = {}, kids = {};
+DATA.forEach(function (c) { byId[c.id] = c; (kids[c.parent || 0] = kids[c.parent || 0] || []).push(c); });
+var roots = kids[0] || [];
+var maxDepth = Math.max.apply(null, DATA.map(function (c) { return c.depth; }));
+
+/* ── 구조별 설정 ──────────────────────────── */
+var MODES = {
+  threads: {
+    label: 'Threads형', title: 'Threads형 · 얕은 대화',
+    desc: '단일 수직 라인 / 작성자 레일로 연결 / 얕은 대화(1~2뎁스)에 적합 — 3뎁스 이상은 더 들여쓰지 않고 레일 안에서 이어집니다.',
+    maxIndent: 2, indent: 28, line: 'none', rail: true, fold: 'root',
+    foldLabel: function (n) { return '답글 ' + n + '개 보기'; }, unfoldLabel: '답글 숨기기'
+  },
+  reddit: {
+    label: 'Reddit형', title: 'Reddit형 · 깊은 트리',
+    desc: '깊이별 수직 + 가로선 / 깊은 토론에 적합 / 모바일 본문 폭 감소 — 뎁스 제한 없이 ' + (maxDepth + 1) + '단계까지 그대로 들여씁니다.',
+    maxIndent: 99, indent: 22, line: 'strong', fold: 'node'
+  },
+  youtube: {
+    label: 'YouTube형', title: 'YouTube형 · 3뎁스 후 평탄화',
+    desc: '최대 3뎁스 / 이후 답글은 같은 폭 / 긴 대화의 가로폭 보호 — 원댓글별 답글은 기본 접힘입니다.',
+    maxIndent: 3, indent: 24, line: 'light', fold: 'root', flatNote: true,
+    foldLabel: function (n) { return '답글 ' + n + '개 보기'; }, unfoldLabel: '답글 숨기기'
+  },
+  facebook: {
+    label: 'Facebook형', title: 'Facebook형 · 1단 들여쓰기',
+    desc: '연결선 없음 / 원댓글 아래 1단 들여쓰기 / @멘션으로 답글 대상 표시 — 2뎁스 이상은 모두 같은 폭에 @멘션으로 표시됩니다.',
+    maxIndent: 1, indent: 40, line: 'none', bubble: true, mention: true, fold: 'root',
+    foldLabel: function (n) { return '답글 ' + n + '개 보기'; }, unfoldLabel: '답글 숨기기'
+  },
+  naver: {
+    label: '네이버 카페형', title: '네이버 카페형 · 1단 답글',
+    desc: '연결선 없음 / 원댓글과 답글만 구분 / 국내 커뮤니티에 익숙한 방식 — 답글은 작은 아바타와 ↳ 화살표로만 구분합니다.',
+    maxIndent: 1, indent: 30, line: 'none', arrow: true, smallReply: true, fold: 'root',
+    foldLabel: function (n) { return '답글 ' + n + '개 더보기'; }, unfoldLabel: '답글 숨기기'
+  },
+  bobae: {
+    label: '보배드림 권장', title: '보배드림 권장 · 3뎁스 + 접기',
+    desc: '최대 3뎁스 연결선 / 이후 답글은 접기·더보기 / 가독성과 긴 토론 관리의 균형 — 2뎁스까지 기본 노출, 3뎁스부터는 접힙니다.',
+    maxIndent: 3, indent: 20, line: 'soft', fold: 'depth', foldFrom: 3,
+    foldLabel: function (n) { return '답글 ' + n + '개 더 보기'; }, unfoldLabel: '답글 접기'
+  }
+};
+var ORDER = ['threads', 'reddit', 'youtube', 'facebook', 'naver', 'bobae'];
+var current = 'threads';
+
+/* ── 유틸 ─────────────────────────────────── */
+function el(tag, cls, txt) {
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (txt != null) n.textContent = txt;
+  return n;
+}
+function countTree(c) {
+  var n = 0, ch = kids[c.id] || [];
+  ch.forEach(function (k) { n += 1 + countTree(k); });
+  return n;
+}
+function makeToggle(cls, labelOff, labelOn, expanded, target, onToggle) {
+  var b = el('button', 'toggle ' + (cls || ''));
+  b.type = 'button';
+  b.setAttribute('aria-expanded', String(expanded));
+  var arw = el('span', 'arw', '▼'), lbl = el('span', 'lbl', expanded ? labelOn : labelOff);
+  b.appendChild(arw); b.appendChild(lbl);
+  b.addEventListener('click', function () {
+    var now = b.getAttribute('aria-expanded') !== 'true';
+    b.setAttribute('aria-expanded', String(now));
+    target.hidden = !now;
+    lbl.textContent = now ? labelOn : labelOff;
+    if (onToggle) onToggle(now);
+    measure();
+  });
+  b._set = function (open) {
+    b.setAttribute('aria-expanded', String(open));
+    target.hidden = !open;
+    lbl.textContent = open ? labelOn : labelOff;
+  };
+  return b;
+}
+
+/* ── 댓글 1건 렌더 ────────────────────────── */
+function renderComment(c, m, shownDepth) {
+  var art = el('article', 'c');
+  if (m.smallReply && c.depth > 0) art.classList.add('reply');
+  if (m.arrow && c.depth > 0) {
+    var ar = el('span', 'nv-arrow', '↳'); ar.setAttribute('aria-hidden', 'true'); art.appendChild(ar);
+  }
+  var av = el('div', 'av ' + c.avatar + ((m.smallReply && c.depth > 0) ? ' sm' : ''), c.initial);
+  art.appendChild(av);
+
+  var body = el('div', 'body');
+  var metaWrap = body, holder = body;
+  if (m.bubble) { holder = el('div', 'fb-bubble'); body.appendChild(holder); }
+
+  var meta = el('div', 'meta');
+  meta.appendChild(el('span', 'name', c.author));
+  if (!m.bubble) meta.appendChild(el('span', 'time', c.time));
+  var tag = c.depth === 0 ? '원댓글' : (c.depth + '뎁스');
+  if (shownDepth < c.depth) tag = c.depth + '뎁스 → ' + shownDepth + '단 표시';
+  meta.appendChild(el('span', 'depth-tag', tag));
+  holder.appendChild(meta);
+
+  var p = el('p', 'text');
+  if (m.mention && c.depth >= 2 && byId[c.parent]) {
+    var mn = el('span', 'mention', '@' + byId[c.parent].author);
+    p.appendChild(mn); p.appendChild(document.createTextNode(' ' + c.text));
+  } else { p.textContent = c.text; }
+  holder.appendChild(p);
+
+  var acts = el('div', 'acts');
+  var b1 = el('button', 'act', '답글'); b1.type = 'button';
+  var b2 = el('button', 'act', '추천 ' + c.likes); b2.type = 'button';
+  acts.appendChild(b1); acts.appendChild(b2);
+  if (m.bubble) acts.appendChild(el('span', 'time', c.time));
+  metaWrap.appendChild(acts);
+
+  art.appendChild(body);
+  return art;
+}
+
+/* ── 노드(댓글 + 하위) 렌더 ───────────────── */
+var toggles = [];
+function renderNode(c, m) {
+  var shown = Math.min(c.depth, m.maxIndent);
+  var wrap = el('div', 'item');
+  var children = kids[c.id] || [];
+
+  if (m.fold === 'node' && children.length) {
+    var row = el('div', 'row');
+    var kidsBox = el('div', m.line === 'strong' ? 'kids-line' : 'kids-plain');
+    var cb = el('button', 'collapse'); cb.type = 'button';
+    cb.setAttribute('aria-expanded', 'true');
+    cb.setAttribute('aria-label', c.author + ' 님의 대화 접기/펼치기');
+    cb.textContent = '－';
+    cb.addEventListener('click', function () {
+      var open = cb.getAttribute('aria-expanded') !== 'true';
+      cb.setAttribute('aria-expanded', String(open));
+      kidsBox.hidden = !open; cb.textContent = open ? '－' : '＋';
+      measure();
+    });
+    cb._set = function (open) { cb.setAttribute('aria-expanded', String(open)); kidsBox.hidden = !open; cb.textContent = open ? '－' : '＋'; };
+    toggles.push({ btn: cb, defaultOpen: true });
+    var inner = el('div', ''); inner.style.flex = '1'; inner.style.minWidth = '0';
+    inner.appendChild(renderComment(c, m, shown));
+    children.forEach(function (k) { kidsBox.appendChild(renderNode(k, m)); });
+    inner.appendChild(kidsBox);
+    row.appendChild(cb); row.appendChild(inner);
+    wrap.appendChild(row);
+    return wrap;
+  }
+
+  wrap.appendChild(renderComment(c, m, shown));
+
+  if (!children.length) return wrap;
+
+  // 자식 컨테이너 (들여쓰기 + 선)
+  var deeper = Math.min(c.depth + 1, m.maxIndent) > shown;
+  var box = el('div', m.line === 'strong' ? 'kids-line' : (m.line === 'light' && deeper ? 'kids-line' : (m.line === 'soft' && deeper ? 'kids-line-soft' : 'kids-plain')));
+  if (deeper) box.style.marginLeft = (m.line === 'none' ? m.indent : Math.max(0, m.indent - 22)) + 'px';
+  if (m.flatNote && !deeper && c.depth + 1 > m.maxIndent && c.depth === m.maxIndent) {
+    box.appendChild(el('p', 'flat-note', '여기부터는 더 들여쓰지 않고 ' + m.maxIndent + '뎁스와 같은 폭에서 이어집니다.'));
+  }
+  children.forEach(function (k) { box.appendChild(renderNode(k, m)); });
+
+  // depth 기반 접기 (보배드림 권장안)
+  if (m.fold === 'depth' && c.depth + 1 >= m.foldFrom) {
+    box.hidden = true;
+    var n = 0; children.forEach(function (k) { n += 1 + countTree(k); });
+    var t = makeToggle('', m.foldLabel(n), m.unfoldLabel, false, box);
+    toggles.push({ btn: t, defaultOpen: false });
+    wrap.appendChild(t);
+  }
+  wrap.appendChild(box);
+  return wrap;
+}
+
+/* ── 루트 단위 렌더 ───────────────────────── */
+function renderRoot(c, m) {
+  var wrap = el('div', 'item' + (m.rail ? ' rail' : '') + (m.arrow ? ' nv-item' : ''));
+  var children = kids[c.id] || [];
+
+  if (m.fold === 'root' && children.length) {
+    wrap.appendChild(renderComment(c, m, 0));
+    var box = el('div', m.line === 'light' ? 'kids-line' : 'kids-plain');
+    box.style.marginLeft = m.indent + 'px';
+    box.hidden = true;
+    children.forEach(function (k) { box.appendChild(renderNode(k, m)); });
+    var n = 0; children.forEach(function (k) { n += 1 + countTree(k); });
+    var t = makeToggle('', m.foldLabel(n), m.unfoldLabel, false, box);
+    t.style.marginLeft = m.indent + 'px';
+    toggles.push({ btn: t, defaultOpen: false });
+    wrap.appendChild(t); wrap.appendChild(box);
+    return wrap;
+  }
+
+  if (m.fold === 'depth') {
+    var inner = renderNode(c, m);
+    wrap.appendChild(inner);
+    if (children.length) {
+      var all = el('div'); // 대화 전체 접기용 래퍼
+      while (inner.childNodes.length > 1) all.appendChild(inner.childNodes[1]);
+      var t2 = makeToggle('plain', '대화 펼치기', '대화 접기', true, all);
+      toggles.push({ btn: t2, defaultOpen: true });
+      inner.appendChild(t2); inner.appendChild(all);
+    }
+    return wrap;
+  }
+
+  wrap.appendChild(renderNode(c, m));
+  return wrap;
+}
+
+/* ── 지표 ─────────────────────────────────── */
+function measure() {
+  var stage = document.getElementById('stage');
+  var visible = 0;
+  DATA.forEach(function () {});
+  Array.prototype.forEach.call(stage.querySelectorAll('article.c'), function (a) {
+    if (a.offsetParent !== null) visible++;
+  });
+  var maxLeft = 0;
+  Array.prototype.forEach.call(stage.querySelectorAll('article.c'), function (a) {
+    if (a.offsetParent === null) return;
+    var d = a.getBoundingClientRect().left - stage.getBoundingClientRect().left;
+    if (d > maxLeft) maxLeft = d;
+  });
+  var m = MODES[current];
+  var stats = [
+    ['기본 노출 댓글', visible, '개'],
+    ['접힌 댓글', (100 - visible), '개'],
+    ['최대 들여쓰기', Math.round(maxLeft), 'px'],
+    ['본문 최소 폭', Math.max(0, Math.round(stage.clientWidth - maxLeft)), 'px'],
+    ['렌더 높이', Math.round(stage.scrollHeight), 'px'],
+    ['최대 표시 뎁스', Math.min(maxDepth, m.maxIndent) + 1, '단']
+  ];
+  var box = document.getElementById('render-stats');
+  box.innerHTML = '';
+  stats.forEach(function (s) {
+    var d = el('div', 'stat');
+    d.appendChild(el('dt', '', s[0]));
+    var dd = el('dd', '', String(s[1]));
+    dd.appendChild(el('span', '', s[2]));
+    d.appendChild(dd); box.appendChild(d);
+  });
+}
+
+/* ── 렌더 진입점 ──────────────────────────── */
+function render(mode) {
+  current = mode; toggles = [];
+  var m = MODES[mode];
+  var stage = document.getElementById('stage');
+  stage.innerHTML = '';
+  roots.forEach(function (c) { stage.appendChild(renderRoot(c, m)); });
+  document.getElementById('stage-title').textContent = m.title;
+  document.getElementById('mode-desc').textContent = m.desc;
+  Array.prototype.forEach.call(document.querySelectorAll('.tab'), function (t) {
+    t.setAttribute('aria-selected', String(t.dataset.mode === mode));
+  });
+  measure();
+}
+
+/* ── 탭 · 전체 제어 ───────────────────────── */
+var tabs = document.getElementById('tabs');
+ORDER.forEach(function (k) {
+  var b = el('button', 'tab', MODES[k].label);
+  b.type = 'button'; b.dataset.mode = k; b.setAttribute('role', 'tab');
+  b.setAttribute('aria-selected', 'false');
+  b.addEventListener('click', function () { render(k); });
+  tabs.appendChild(b);
+});
+document.getElementById('expand-all').addEventListener('click', function () {
+  toggles.forEach(function (t) { t.btn._set(true); }); measure();
+});
+document.getElementById('collapse-all').addEventListener('click', function () {
+  toggles.forEach(function (t) { t.btn._set(false); }); measure();
+});
+
+/* ── 시나리오 요약 ────────────────────────── */
+(function () {
+  var dist = {}, maxN = 0;
+  DATA.forEach(function (c) { dist[c.depth] = (dist[c.depth] || 0) + 1; });
+  Object.keys(dist).forEach(function (k) { maxN = Math.max(maxN, dist[k]); });
+  var summary = [
+    ['전체 댓글', DATA.length, '개'],
+    ['원댓글', roots.length, '개'],
+    ['답글', DATA.length - roots.length, '개'],
+    ['최대 뎁스', maxDepth + 1, '단'],
+    ['평균 답글', (((DATA.length - roots.length) / roots.length).toFixed(1)), '개'],
+    ['최다 스레드', Math.max.apply(null, roots.map(function (r) { return countTree(r) + 1; })), '개']
+  ];
+  var sb = document.getElementById('scenario-stats');
+  summary.forEach(function (s) {
+    var d = el('div', 'stat');
+    d.appendChild(el('dt', '', s[0]));
+    var dd = el('dd', '', String(s[1])); dd.appendChild(el('span', '', s[2]));
+    d.appendChild(dd); sb.appendChild(d);
+  });
+  var db = document.getElementById('depth-bars');
+  Object.keys(dist).sort(function (a, b) { return a - b; }).forEach(function (k) {
+    var li = el('li');
+    li.appendChild(el('b', '', k === '0' ? '원댓글' : k + '뎁스'));
+    var bar = el('i'); bar.style.width = Math.round(dist[k] / maxN * 100) + '%';
+    var barWrap = el('span'); barWrap.style.flex = '1'; barWrap.appendChild(bar);
+    li.appendChild(barWrap);
+    li.appendChild(el('em', '', dist[k] + '개'));
+    db.appendChild(li);
+  });
+})();
+
+render('threads');
+window.addEventListener('resize', measure);
+</script>
+</body>
+</html>
