@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>자동차댓글-V46 · compact avatars for 3-4 depth</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f6f6f3}
+iframe{display:block;width:100%;height:100%;border:0;background:#f6f6f3}
+</style>
+</head>
+<body>
+<iframe id="app" src="./reddit-fmkorea-hybrid.html?v=fc00337" title="자동차댓글 V46"></iframe>
+<script>
+const app=document.getElementById('app');
+function patch(){
+  const d=app.contentDocument;
+  if(!d||!d.body)return;
+  d.title='자동차댓글-V46 · compact avatars for 3-4 depth';
+  const ver=d.querySelector('.ver');
+  if(ver)ver.textContent='자동차댓글-V46';
+  const applied=d.querySelector('.applied');
+  if(applied)applied.textContent='V46 · 3뎁스·4뎁스 프사 크기를 5뎁스 기준으로 통일';
+  if(!d.getElementById('v46-compact-avatar-fix')){
+    const s=d.createElement('style');
+    s.id='v46-compact-avatar-fix';
+    s.textContent=`
+      .feed.t3small .node,.feed.yt .node,.feed.d5 .node,.feed.ph .node{grid-template-columns:24px minmax(0,1fr)!important;--axis:12px!important;--avatar:24px!important}
+      .feed.t3small .av,.feed.yt .av,.feed.d5 .av,.feed.ph .av{width:24px!important;height:24px!important}
+      .feed.t3small .peek,.feed.yt .peek,.feed.d5 .peek,.feed.ph .peek{margin-left:34px!important}
+      .feed.t3small .t3{margin-left:12px!important;padding:13px 0 0 12px!important}
+      .feed.t3small .deep{margin-left:11px!important;padding-left:10px!important;border-left-color:#eef0f3!important}
+      .feed.t3small .thread .child:before,.feed.t3small .child:before{left:-12px!important;width:12px!important;height:22px!important}
+      .feed.t3small .grand:before{left:-10px!important;width:10px!important;height:20px!important;border-color:#eef0f3!important}
+    `;
+    d.head.appendChild(s);
+  }
+  function sync(){
+    const feed=d.getElementById('feed');
+    const active=d.querySelector('.tab.on');
+    const isT3=active&&active.dataset&&active.dataset.m==='t3';
+    if(feed)feed.classList.toggle('t3small',!!isT3);
+  }
+  sync();
+  d.querySelectorAll('.tab').forEach(b=>{
+    if(!b.dataset.v46bound){
+      b.dataset.v46bound='1';
+      b.addEventListener('click',()=>setTimeout(sync,0));
+    }
+  });
+  const feed=d.getElementById('feed');
+  if(feed&&!feed.dataset.v46observed){
+    feed.dataset.v46observed='1';
+    new MutationObserver(sync).observe(feed,{attributes:true,attributeFilter:['class'],childList:true,subtree:false});
+  }
+}
+app.addEventListener('load',()=>setTimeout(patch,80));
+</script>
+</body>
+</html>
