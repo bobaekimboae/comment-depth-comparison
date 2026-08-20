@@ -22,10 +22,11 @@
   <button class="fab" aria-label="글쓰기"><img class="writeIcon" src="./assets/write.svg?v=220f7dd" alt=""></button>
 </main><div id="toast" class="toast"></div>
 <script src="./scenario-data.js?v=a0871ea"></script>
+<script src="./rank-icons-mixed.js?v=20260820c"></script>
 <script>
 const posts=window.BOBAE_POSTS;
 function rankImg(p){return window.BOBAE_RANKS[p.rank]?`<img class="rankIcon" src="${window.BOBAE_RANKS[p.rank]}" alt="계급">`:''}
-function render(data=posts){list.innerHTML=data.map(p=>{const thumb=p.thumbnail?`<div class="thumbWrap"><img class="thumb" src="${p.thumbnail}" alt="${p.title} 썸네일">${p.photos?`<span class="photoBadge">${p.photos}+</span>`:''}${p.video?'<span class="play"></span>':''}</div>`:'';return `<button class="item ${p.thumbnail?'':'noThumb'} ${p.fresh?'isFresh':''}" onclick="location.href='./naver-cafe-detail.html?id=${p.id}&v=a0871ea'"><span class="dot"></span><div class="body"><div class="itemTitle">${p.title}</div><div class="meta">${rankImg(p)}<span>${p.user}</span><span>${p.time}</span><span>조회 ${p.view}</span></div></div>${thumb}<span class="commentBox"><b>${p.reply}</b><span>댓글</span></span></button>`}).join('')}
+function render(data=posts){list.innerHTML=data.map(p=>{const thumb=p.thumbnail?`<div class="thumbWrap"><img class="thumb" src="${p.thumbnail}" alt="${p.title} 썸네일">${p.photos?`<span class="photoBadge">${p.photos}+</span>`:''}${p.video?'<span class="play"></span>':''}</div>`:'';return `<button class="item ${p.thumbnail?'':'noThumb'} ${p.fresh?'isFresh':''}" onclick="location.href='./naver-cafe-detail.html?id=${p.id}&v=20260820b'"><span class="dot"></span><div class="body"><div class="itemTitle">${p.title}</div><div class="meta">${rankImg(p)}<span>${p.user}</span><span>${p.time}</span><span>조회 ${p.view}</span></div></div>${thumb}<span class="commentBox"><b>${p.reply}</b><span>댓글</span></span></button>`}).join('')}
 render();
 document.querySelectorAll('.cat').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.cat').forEach(b=>b.classList.remove('on'));btn.classList.add('on');const key=btn.textContent;render(key==='전체'?posts:posts.filter(p=>p.category===key));show(key+' 선택')});
 document.querySelector('.fab').onclick=()=>show('글쓰기 화면 연결 대상');
