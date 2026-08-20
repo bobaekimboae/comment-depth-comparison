@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>인터랙션 보기</title>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}.frame{width:100%;height:100dvh;border:0;background:#fff}.toast{position:fixed;left:50%;top:12px;transform:translateX(-50%) translateY(-16px);z-index:50;opacity:0;background:#111827;color:#fff;border-radius:999px;padding:9px 12px;font:800 12px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;transition:.16s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}</style>
+</head>
+<body><iframe id="frame" class="frame"></iframe><div id="toast" class="toast">완료</div><script>
+const params=new URLSearchParams(location.search);const src=params.get('src')||'facebook-comments-v1.html';const mode=params.get('mode')||'generic';const version=params.get('v')||Date.now();frame.src='./'+src+(src.includes('?')?'&':'?')+'interactive='+version;
+frame.onload=()=>{try{install(frame.contentWindow.document);show('추천/비추천 동작 준비')}catch(e){show('내부 적용 제한')}};
+function install(doc){if(doc.__interactiveVoteInstalled)return;doc.__interactiveVoteInstalled=true;const style=doc.createElement('style');style.textContent=`.rightIcon,.count,.actions button{cursor:pointer;touch-action:manipulation}.rightIcon.vote-on,.actions button.vote-on{color:#1877f2!important}.rightIcon.vote-down,.actions button.vote-down{color:#d84b40!important}.count.vote-on .countIcon{transform:scale(1.08);box-shadow:0 0 0 2px rgba(24,119,242,.16)}.actions .num{font-variant-numeric:tabular-nums}`;doc.head.appendChild(style);
+  doc.addEventListener('click',e=>{
+    if(handleFacebookLike(e,doc))return;
+    if(handleV61Like(e,doc))return;
+  },true);
+}
+function parseCount(el){if(!el)return 0;const m=(el.textContent||'').match(/\d+/);return m?parseInt(m[0],10):0}
+function setCount(el,n){if(!el)return;const icon=el.querySelector('.countIcon');el.textContent='';if(icon)el.appendChild(icon);el.appendChild(document.createTextNode(String(Math.max(0,n))))}
+function handleFacebookLike(e,doc){const icon=e.target.closest('.rightIcon');const count=e.target.closest('.count');if(!icon&&!count)return false;const actions=(icon||count).closest('.actions');if(!actions)return false;const icons=[...actions.querySelectorAll('.rightIcon')];const likeIcon=icons[0], dislikeIcon=icons[1];const countEl=actions.querySelector('.count');let n=parseCount(countEl);
+  if(count||icon===likeIcon){e.preventDefault();e.stopPropagation();const was=likeIcon.classList.contains('vote-on');if(dislikeIcon)dislikeIcon.classList.remove('vote-down');likeIcon.classList.toggle('vote-on',!was);countEl?.classList.toggle('vote-on',!was);setCount(countEl,n+(was?-1:1));show(was?'추천 취소':'추천 완료');return true}
+  if(icon===dislikeIcon){e.preventDefault();e.stopPropagation();const was=dislikeIcon.classList.contains('vote-down');if(likeIcon?.classList.contains('vote-on')){likeIcon.classList.remove('vote-on');countEl?.classList.remove('vote-on');setCount(countEl,Math.max(0,n-1))}dislikeIcon.classList.toggle('vote-down',!was);show(was?'비추천 취소':'비추천 완료');return true}
+  return false;
+}
+function handleV61Like(e,doc){const btn=e.target.closest('.actions button');if(!btn)return false;const actions=btn.closest('.actions');const buttons=[...actions.querySelectorAll('button')];const idx=buttons.indexOf(btn);if(idx!==0&&idx!==1)return false;e.preventDefault();e.stopPropagation();const likeBtn=buttons[0], dislikeBtn=buttons[1];const num=likeBtn.querySelector('.num');let n=parseInt(num?.textContent||'0',10)||0;if(idx===0){const was=likeBtn.classList.contains('vote-on');dislikeBtn?.classList.remove('vote-down');likeBtn.classList.toggle('vote-on',!was);if(num)num.textContent=String(Math.max(0,n+(was?-1:1)));show(was?'추천 취소':'추천 완료')}else{const was=dislikeBtn.classList.contains('vote-down');if(likeBtn.classList.contains('vote-on')){likeBtn.classList.remove('vote-on');if(num)num.textContent=String(Math.max(0,n-1))}dislikeBtn.classList.toggle('vote-down',!was);show(was?'비추천 취소':'비추천 완료')}return true}
+function show(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),950)}
+</script></body></html>
