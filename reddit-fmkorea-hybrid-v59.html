@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>자동차댓글-V59 · Xianyu 2-depth time tab</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f6f6f3}
+iframe{display:block;width:100%;height:100%;border:0;background:#f6f6f3}
+</style>
+</head>
+<body>
+<iframe id="v52" src="./reddit-fmkorea-hybrid-v52.html?v=3095180" title="자동차댓글 V59"></iframe>
+<script>
+const outer=document.getElementById('v52');
+const moreSvg='<span class="moreSvg" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M16 11.75a1.75 1.75 0 11.001-3.501A1.75 1.75 0 0116 11.75ZM11.75 10a1.75 1.75 0 10-3.501.001A1.75 1.75 0 0011.75 10Zm-6 0a1.75 1.75 0 10-3.501.001A1.75 1.75 0 005.75 10Z"/></svg></span>';
+const heartSvg='<span class="xyHeart" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.55-9.7-9.2C.7 8.45 2.65 5 6.25 5c2.05 0 3.4 1.15 4.2 2.28C11.25 6.15 12.6 5 14.65 5c3.6 0 5.55 3.45 3.95 6.8C16.4 16.45 12 21 12 21Z"/></svg></span>';
+const cars=['쏘렌토하브','싼타페고민','연비체크러','중고가보는눈','카시트아빠','캠핑짐만렙','정비소삼촌','전기차궁금','타이어마스터','고속도로요정'];
+const xRoot=[
+ ['쏘렌토하브','저도 42km 출퇴근이면 하이브리드 쪽이 답이라고 봅니다 😂','06-27 서울 답글','23'],
+ ['싼타페고민','2열이랑 트렁크는 싼타페가 편했는데 중고가 방어는 쏘렌토가 더 안정적이네요','07-13 경기 답글','9'],
+ ['연비체크러','겨울 공조 켜면 숫자가 확 내려가서 시승 후기만 보면 안 됩니다','4일 전 인천 답글','1'],
+ ['중고가보는눈','중고가까지 보면 인기 트림이 제일 중요합니다. 색상도 은근히 큽니다','06-27 부산 답글','20'],
+ ['카시트아빠','카시트 두 개면 2열 문 열림각이 진짜 중요합니다','8일 전 대구 답글','18'],
+ ['캠핑짐만렙','캠핑박스 넣어보면 트렁크 리터보다 입구 높이가 먼저 보입니다','13시간 전 강원 답글','12'],
+ ['정비소삼촌','배터리 보증 조건이랑 공식센터 거리는 꼭 봐야 합니다','2시간 전 광주 답글','7'],
+ ['전기차궁금','집밥 충전 없으면 전기차보다 하이브리드가 아직 편합니다','1시간 전 제주 답글','31']
+];
+const xReply=[
+ ['정비소삼촌','답글 쏘렌토하브 : 도심 정체가 많으면 체감 연비 차이 큽니다','13시간 전 경기 답글'],
+ ['하브실차주','답글 싼타페고민 : 가족이 뒤에 오래 타면 2열 승차감 먼저 보세요','4일 전 서울 답글'],
+ ['타이어마스터','답글 연비체크러 : 18인치가 승차감이랑 타이어값 모두 무난합니다','8일 전 대전 답글'],
+ ['보험이력체커','답글 중고가보는눈 : 보험이력은 금액보다 수리 위치가 중요합니다','06-28 충남 답글'],
+ ['트렁크테트리스','답글 카시트아빠 : 유모차 넣고 빼는 동선도 꼭 확인하세요','13시간 전 경기 답글'],
+ ['차박준비중','답글 캠핑짐만렙 : 평탄화 단차가 있으면 차박은 바로 불편합니다','3일 전 제주 답글'],
+ ['보증조건봄','답글 정비소삼촌 : 보증은 연식별로 달라서 계약 전 확인 필수입니다','2시간 전 서울 답글'],
+ ['하브연비러','답글 전기차궁금 : 회사 충전 가능하면 계산이 다시 달라집니다','1시간 전 인천 답글']
+];
+function patch(){
+  const od=outer.contentDocument;
+  if(!od)return;
+  od.title='자동차댓글-V59 · Xianyu 2-depth time tab';
+  const inner=od.getElementById('app');
+  const d=inner&&inner.contentDocument;
+  if(!d||!d.body){setTimeout(patch,80);return;}
+  d.title='자동차댓글-V59 · Xianyu 2-depth time tab';
+  const ver=d.querySelector('.ver');
+  if(ver)ver.textContent='자동차댓글-V59';
+  const applied=d.querySelector('.applied');
+  if(applied)applied.textContent='V59 · 스레드 2뎁스 옆에 시엔위 2뎁스·시간 탭 추가';
+  if(!d.getElementById('v59-xianyu-style')){
+    const s=d.createElement('style');
+    s.id='v59-xianyu-style';
+    s.textContent=`
+      .actions{height:24px!important;min-height:24px!important;align-items:center!important;gap:12px!important}
+      .actions button{height:24px!important;min-height:24px!important;align-items:center!important;justify-content:center!important;line-height:16px!important}
+      .mini,.mini.plus{color:#8a929b!important;background:transparent!important;border:0!important;width:20px!important;height:20px!important;min-height:20px!important;padding:2px!important;top:2px!important;left:calc(var(--axis) - var(--avatar) - var(--gap) - 10px)!important;box-shadow:0 0 0 2px #fff!important}
+      .mini .toggleSvg,.mini .toggleSvg svg{width:16px!important;height:16px!important}.mini .toggleSvg svg{fill:currentColor!important;opacity:.76!important}
+      .feed .has:after{left:var(--axis)!important;top:var(--avatar)!important}
+      .row{padding-right:28px!important;min-height:24px!important;align-items:center!important}.more{right:0!important;top:50%!important;transform:translateY(-50%)!important;width:24px!important;height:24px!important;padding:0!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;color:#65707b!important;opacity:.88!important;font-size:0!important;line-height:0!important}.moreSvg,.moreSvg svg{width:16px!important;height:16px!important;display:block!important}.moreSvg svg{fill:currentColor!important;stroke:none!important}
+      .feed.xy{border-radius:18px;padding:0 12px;background:#fff;border:1px solid var(--line)}
+      .xyRoot{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr) 38px;gap:10px;padding:17px 0;border-top:1px solid #f3f1ed}.xyRoot:first-child{border-top:0}
+      .xyAv{width:32px;height:32px;border-radius:50%;overflow:hidden;background:#eee;border:1px solid #eee}.xyAv img{width:100%;height:100%;object-fit:cover}.xyBody{min-width:0}.xyName{font-size:14px;color:#a7adb4;font-weight:700;line-height:20px}.xyTxt{font-size:15px;color:#252a30;line-height:1.45;margin:2px 0 6px}.xyMeta{font-size:13px;color:#a2a7ae;line-height:18px}.xyMeta b{font-weight:800;color:#777}.xyLike{display:flex;flex-direction:column;align-items:center;gap:4px;color:#626970;font-size:12px;padding-top:2px}.xyHeart,.xyHeart svg{width:21px;height:21px;display:block}.xyHeart svg{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.xyReply{display:grid;grid-template-columns:24px minmax(0,1fr) 34px;gap:9px;margin:12px 0 0 52px}.xyReply .xyAv{width:24px;height:24px}.xyReply .xyTxt{font-size:14.5px}.xyMore{margin:10px 0 0 52px;border:0;background:transparent;color:#244866;font-size:14px;font-weight:800;padding:3px 0}.xyMore:after{content:'⌄';margin-left:5px;color:#244866}.xyRoot.closed .xyReply{display:none}.xyRoot.closed .xyMore:after{content:'⌄'}.xyRoot:not(.closed) .xyMore:after{content:'⌃'}
+    `;
+    d.head.appendChild(s);
+  }
+  function decorateMore(){d.querySelectorAll('.more').forEach(btn=>{if(!btn.dataset.v59){btn.dataset.v59='1';btn.innerHTML=moreSvg;btn.setAttribute('aria-label','더보기')}})}
+  decorateMore();
+  const tabs=d.querySelector('.tabs');
+  if(tabs&&!d.querySelector('.tab[data-m="xy2"]')){
+    const first=tabs.querySelector('.tab[data-m="t2"]');
+    const b=d.createElement('button');
+    b.className='tab';b.dataset.m='xy2';b.textContent='시엔위 2뎁스·시간';
+    first&&first.after(b);
+  }
+  function xyHtml(){let h='';for(let i=0;i<xRoot.length;i++){const r=xRoot[i], rp=xReply[i], img=['0','1','2','3','4','5','6','7'][i%8];h+=`<div class="xyRoot${i%3===0?' closed':''}"><span class="xyAv"><img src="https://images.unsplash.com/photo-${['1492144534655-ae79c964c9d7','1503376780353-7e6692767b70','1542362567-b07e54358753','1511919884226-fd3cad34687c','1552519507-da3b142c6e3d','1503736334956-4c8f8e92946d','1549924231-f129b911e442','1449965408869-eaa3f722e40d'][i%8]}?auto=format&fit=crop&w=120&q=80"></span><div class="xyBody"><div class="xyName">${r[0]}</div><div class="xyTxt">${r[1]}</div><div class="xyMeta">${r[2]}</div></div><div class="xyLike">${heartSvg}<span>${r[3]}</span></div><div class="xyReply"><span class="xyAv"><img src="https://images.unsplash.com/photo-${['1502877338535-766e1452684a','1603386329225-868f9b1ee6c9','1541899481282-d53bffe3c35d','1553440569-bcc63803a83d','1533473359331-0135ef1b58bf','1503736334956-4c8f8e92946d','1549924231-f129b911e442','1449965408869-eaa3f722e40d'][i%8]}?auto=format&fit=crop&w=120&q=80"></span><div><div class="xyName">${rp[0]}</div><div class="xyTxt">${rp[1]}</div><div class="xyMeta">${rp[2]}</div></div><div class="xyLike">${heartSvg}<span>${(i*3+1)%9+1}</span></div></div><button class="xyMore" data-count="${6+i%5}">답글 ${6+i%5}개 보기</button></div>`}return h}
+  function setXy(){
+    d.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.dataset.m==='xy2'));
+    const feed=d.getElementById('feed'); if(feed){feed.className='feed xy'; feed.innerHTML=xyHtml();}
+    const mt=d.getElementById('mt'), md=d.getElementById('md'), cnt=d.getElementById('cnt');
+    if(mt)mt.textContent='시엔위 2뎁스 · 시간/지역 메타';
+    if(md)md.textContent='시엔위처럼 원댓글 아래에 1개 답글을 미리 노출하고, 날짜·시간·지역·답글 액션을 한 줄 메타로 배치합니다. 우측 하트 좋아요와 접힌 답글 보기 흐름을 테스트합니다.';
+    if(cnt)cnt.textContent='214';
+    d.querySelectorAll('.xyMore').forEach(btn=>btn.onclick=()=>{const root=btn.closest('.xyRoot');const closed=root.classList.toggle('closed');btn.textContent=closed?'답글 '+btn.dataset.count+'개 보기':'답글 닫기'});
+  }
+  d.querySelectorAll('.tab').forEach(btn=>{
+    if(!btn.dataset.v59tab){btn.dataset.v59tab='1';btn.addEventListener('click',()=>{if(btn.dataset.m==='xy2')setTimeout(setXy,0);else setTimeout(decorateMore,80)})}
+  });
+  const feed=d.getElementById('feed');
+  if(feed&&!feed.dataset.v59observed){feed.dataset.v59observed='1';new MutationObserver(()=>setTimeout(decorateMore,0)).observe(feed,{childList:true,subtree:true});}
+}
+outer.addEventListener('load',()=>setTimeout(patch,220));
+setTimeout(patch,600);
+</script>
+</body>
+</html>
