@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>자동차댓글-V55 · balanced node toggle spacing</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f6f6f3}
+iframe{display:block;width:100%;height:100%;border:0;background:#f6f6f3}
+</style>
+</head>
+<body>
+<iframe id="v52" src="./reddit-fmkorea-hybrid-v52.html?v=3095180" title="자동차댓글 V55"></iframe>
+<script>
+const outer=document.getElementById('v52');
+function patch(){
+  const od=outer.contentDocument;
+  if(!od)return;
+  od.title='자동차댓글-V55 · balanced node toggle spacing';
+  const inner=od.getElementById('app');
+  const d=inner&&inner.contentDocument;
+  if(!d||!d.body){setTimeout(patch,80);return;}
+  d.title='자동차댓글-V55 · balanced node toggle spacing';
+  const ver=d.querySelector('.ver');
+  if(ver)ver.textContent='자동차댓글-V55';
+  const applied=d.querySelector('.applied');
+  if(applied)applied.textContent='V55 · 노드 토글과 좋아요 액션 간격·수직 위치 균형 보정';
+  if(!d.getElementById('v55-toggle-like-balance')){
+    const s=d.createElement('style');
+    s.id='v55-toggle-like-balance';
+    s.textContent=`
+      .actions{height:24px!important;min-height:24px!important;align-items:center!important;gap:12px!important}
+      .actions button{height:24px!important;min-height:24px!important;align-items:center!important;justify-content:center!important;line-height:16px!important}
+      .mini,.mini.plus{
+        color:#8a929b!important;
+        background:transparent!important;
+        border:0!important;
+        width:20px!important;
+        height:20px!important;
+        min-height:20px!important;
+        padding:2px!important;
+        top:2px!important;
+        left:calc(var(--axis) - var(--avatar) - var(--gap) - 6px)!important;
+        box-shadow:0 0 0 2px #fff!important;
+      }
+      .mini .toggleSvg svg{fill:currentColor!important;opacity:.76!important}
+      .mini .toggleSvg,.mini .toggleSvg svg{width:16px!important;height:16px!important}
+      .actions button:not(.mini):first-of-type{margin-left:2px!important}
+    `;
+    d.head.appendChild(s);
+  }
+}
+outer.addEventListener('load',()=>setTimeout(patch,180));
+setTimeout(patch,500);
+</script>
+</body>
+</html>
