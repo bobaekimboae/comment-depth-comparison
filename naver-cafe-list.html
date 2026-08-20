@@ -13,7 +13,7 @@
 </head>
 <body>
 <main class="phone">
-  <header class="appbar"><button class="back" aria-label="뒤로"></button><div class="title">테슬라코리아클럽 TKC</div><button class="searchIcon" aria-label="검색"></button><button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button></header>
+  <header class="appbar"><button class="back" aria-label="뒤로"></button><div class="title">보배드림 자동차토론</div><button class="searchIcon" aria-label="검색"></button><button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button></header>
   <section class="boardTop"><button class="boardPill">☰ 자유게시판 ☰</button><button class="noticePill">공지</button><div class="subscribe"><span class="check"></span><span>구독중</span></div><button class="gridIcon" aria-label="보기 방식"><span></span><span></span><span></span><span></span></button></section>
   <nav class="category"><button class="cat on">전체</button><button class="cat">유머</button><button class="cat">뻘글</button><button class="cat">SOS</button><button class="cat">고민상담</button><button class="cat">공감구걸</button></nav>
   <section class="noticeRow"><span class="noticeBadge">공지</span><span class="noticeText">리퍼럴 홍보 안내</span></section>
@@ -23,36 +23,36 @@
 </main><div id="toast" class="toast"></div>
 <script>
 const posts=[
-{title:'[뻘글] 옵션질 좋아하는 현기!',user:'경북T이세완',lv:'2',time:'17:18',view:'조회 7',reply:0,fresh:true},
-{title:'fsd 핸들을 가볍게 움직이라고 자꾸 뜨네요? 정상인가요?',user:'서울T카푸치노',lv:'2',time:'17:17',view:'조회 43',reply:0,video:true,img:'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=160&q=75',fresh:true},
-{title:'[공감구걸] 노충전 자리 ㄴㄴ',user:'서울T지오파파',lv:'4',time:'17:17',view:'조회 27',reply:0,fresh:true},
-{title:'FSD Lite 구독 버튼 전환 0시 부터일까요...?',user:'경기TSLA',lv:'V',time:'17:17',view:'조회 19',reply:0,fresh:true},
-{title:'사제 블박으로 문콕을 잡을 수 있나요 ?',user:'서울T32화전',lv:'2',time:'17:17',view:'조회 12',reply:1,fresh:true},
-{title:'주니퍼 통화 음질 크게 별로가요?',user:'서울T백만볼트',lv:'1',time:'17:16',view:'조회 31',reply:3},
-{title:'프렁크 소프트 클로징 장착 후기입니다',user:'부산T임기석',lv:'1',time:'17:15',view:'조회 96',reply:8,video:true,img:'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=160&q=75',photos:1},
-{title:'[뻘글] 하하하 도박 중독보다 위험하네요...',user:'일산T와쵸스키',lv:'2',time:'17:13',view:'조회 157',reply:12,img:'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=160&q=75',photos:2},
-{title:'[뻘글] 청원완료 했네요! 5907번째 입니다.',user:'서울T데멋대로하슈',lv:'2',time:'17:12',view:'조회 114',reply:4,img:'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=160&q=75',photos:4},
-{title:'청원 완료하였습니다',user:'용인T김군',lv:'1',time:'17:10',view:'조회 24',reply:0,img:'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=160&q=75',photos:10},
-{title:'나만 쓰기 좋은 근처 급속 충전소 공유합니다',user:'성남T모델삼',lv:'1',time:'17:08',view:'조회 233',reply:21,img:'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=160&q=75',photos:3},
-{title:'무슨 차 그립톡 구매 완료했는데 색상 고민이네요',user:'수원T하이랜드',lv:'3',time:'17:05',view:'조회 72',reply:6,img:'https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=160&q=75',photos:2},
-{title:'FSD 숫자랑 주행 로그 나누는 나눔 합니다',user:'파주T구름',lv:'2',time:'17:03',view:'조회 118',reply:2},
-{title:'모닝 세차 루틴 공유합니다',user:'분당T흰둥이',lv:'1',time:'17:01',view:'조회 86',reply:5},
-{title:'링크 후기 | 나도 나눔 봤누 가보자 ㅎㅎ',user:'송파T스노우',lv:'2',time:'16:59',view:'조회 144',reply:13,img:'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=160&q=75',photos:5},
-{title:'차주 인증사진 올립니다',user:'김포T롱레인지',lv:'1',time:'16:57',view:'조회 212',reply:11,img:'https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=160&q=75',photos:7},
-{title:'고속도로 풍절음 잡는 팁 있을까요?',user:'인천T초보',lv:'1',time:'16:55',view:'조회 175',reply:18},
-{title:'모델Y 트렁크 매트 추천 부탁드립니다',user:'대전T패밀리',lv:'2',time:'16:53',view:'조회 152',reply:22,img:'https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=160&q=75',photos:4},
-{title:'하이랜드 실내 잡소리 체크 포인트',user:'하남T화이트',lv:'1',time:'16:51',view:'조회 261',reply:10,img:'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=160&q=75',photos:8},
-{title:'타이어 공기압 42psi 유지하시는 분들 계신가요?',user:'남양주T정비왕',lv:'2',time:'16:48',view:'조회 342',reply:31},
-{title:'센터 예약 없이 워셔액 누수 봐줄까요?',user:'천안T블루',lv:'1',time:'16:45',view:'조회 89',reply:7,img:'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=160&q=75',photos:2},
-{title:'전비 5.8 나오는데 제 운전 습관 문제일까요',user:'대구T전비요정',lv:'4',time:'16:42',view:'조회 507',reply:45},
-{title:'겨울 대비 배터리 프리컨디셔닝 체감 후기',user:'강릉T눈길조심',lv:'2',time:'16:39',view:'조회 386',reply:19,img:'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=160&q=75',photos:6},
-{title:'보험료 갱신했는데 작년보다 18만원 올랐네요',user:'광주T보험문의',lv:'1',time:'16:36',view:'조회 273',reply:28},
-{title:'중고 모델3 롱레인지 6만km면 괜찮을까요?',user:'안양T중고입문',lv:'2',time:'16:33',view:'조회 621',reply:63,img:'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=160&q=75',photos:9},
-{title:'[SOS] 충전 중 차단기 내려갔습니다 조언 부탁드려요',user:'제주T충전초보',lv:'1',time:'16:30',view:'조회 198',reply:16},
-{title:'랩핑 색상 샘플 받았는데 무광이 관리 어렵나요?',user:'부천T랩핑고민',lv:'3',time:'16:27',view:'조회 244',reply:24,img:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=160&q=75',photos:4},
-{title:'오토파일럿 차선 중앙 유지가 어제부터 흔들립니다',user:'세종T차선중앙',lv:'2',time:'16:24',view:'조회 319',reply:9,video:true,img:'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=160&q=75',photos:1},
-{title:'실내 필터 교체 직접 해보신 분 난이도 어떤가요?',user:'울산T자가정비',lv:'1',time:'16:21',view:'조회 155',reply:14},
-{title:'주차장 기둥 살짝 긁었는데 붓펜으로 가능할까요',user:'동탄T문콕싫어',lv:'2',time:'16:18',view:'조회 433',reply:37,img:'https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=160&q=75',photos:3}
+{title:'[뻘글] 옵션질 좋아하는 현기!',user:'옵션비교러',lv:'2',time:'17:18',view:'조회 7',reply:0,fresh:true},
+{title:'fsd 핸들을 가볍게 움직이라고 자꾸 뜨네요? 정상인가요?',user:'핸들감각',lv:'2',time:'17:17',view:'조회 43',reply:0,video:true,img:'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=160&q=75',fresh:true},
+{title:'[공감구걸] 노충전 자리 ㄴㄴ',user:'충전자리매너',lv:'4',time:'17:17',view:'조회 27',reply:0,fresh:true},
+{title:'FSD Lite 구독 버튼 전환 0시 부터일까요...?',user:'구독알림봇',lv:'V',time:'17:17',view:'조회 19',reply:0,fresh:true},
+{title:'사제 블박으로 문콕을 잡을 수 있나요 ?',user:'블박찾는눈',lv:'2',time:'17:17',view:'조회 12',reply:1,fresh:true},
+{title:'주니퍼 통화 음질 크게 별로가요?',user:'통화품질체크',lv:'1',time:'17:16',view:'조회 31',reply:3},
+{title:'프렁크 소프트 클로징 장착 후기입니다',user:'프렁크장인',lv:'1',time:'17:15',view:'조회 96',reply:8,video:true,img:'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=160&q=75',photos:1},
+{title:'[뻘글] 하하하 도박 중독보다 위험하네요...',user:'과몰입주의',lv:'2',time:'17:13',view:'조회 157',reply:12,img:'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=160&q=75',photos:2},
+{title:'[뻘글] 청원완료 했네요! 5907번째 입니다.',user:'청원완료봇',lv:'2',time:'17:12',view:'조회 114',reply:4,img:'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=160&q=75',photos:4},
+{title:'청원 완료하였습니다',user:'인증완료러',lv:'1',time:'17:10',view:'조회 24',reply:0,img:'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=160&q=75',photos:10},
+{title:'나만 쓰기 좋은 근처 급속 충전소 공유합니다',user:'급속충전러',lv:'1',time:'17:08',view:'조회 233',reply:21,img:'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=160&q=75',photos:3},
+{title:'무슨 차 그립톡 구매 완료했는데 색상 고민이네요',user:'컬러고민러',lv:'3',time:'17:05',view:'조회 72',reply:6,img:'https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=160&q=75',photos:2},
+{title:'FSD 숫자랑 주행 로그 나누는 나눔 합니다',user:'주행로그수집',lv:'2',time:'17:03',view:'조회 118',reply:2},
+{title:'모닝 세차 루틴 공유합니다',user:'세차루틴러',lv:'1',time:'17:01',view:'조회 86',reply:5},
+{title:'링크 후기 | 나도 나눔 봤누 가보자 ㅎㅎ',user:'나눔후기러',lv:'2',time:'16:59',view:'조회 144',reply:13,img:'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=160&q=75',photos:5},
+{title:'차주 인증사진 올립니다',user:'차주인증러',lv:'1',time:'16:57',view:'조회 212',reply:11,img:'https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=160&q=75',photos:7},
+{title:'고속도로 풍절음 잡는 팁 있을까요?',user:'풍절음잡자',lv:'1',time:'16:55',view:'조회 175',reply:18},
+{title:'모델Y 트렁크 매트 추천 부탁드립니다',user:'트렁크매트러',lv:'2',time:'16:53',view:'조회 152',reply:22,img:'https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=160&q=75',photos:4},
+{title:'하이랜드 실내 잡소리 체크 포인트',user:'실내잡소리',lv:'1',time:'16:51',view:'조회 261',reply:10,img:'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=160&q=75',photos:8},
+{title:'타이어 공기압 42psi 유지하시는 분들 계신가요?',user:'공기압42',lv:'2',time:'16:48',view:'조회 342',reply:31},
+{title:'센터 예약 없이 워셔액 누수 봐줄까요?',user:'워셔액누수',lv:'1',time:'16:45',view:'조회 89',reply:7,img:'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=160&q=75',photos:2},
+{title:'전비 5.8 나오는데 제 운전 습관 문제일까요',user:'전비계산기',lv:'4',time:'16:42',view:'조회 507',reply:45},
+{title:'겨울 대비 배터리 프리컨디셔닝 체감 후기',user:'겨울배터리',lv:'2',time:'16:39',view:'조회 386',reply:19,img:'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=160&q=75',photos:6},
+{title:'보험료 갱신했는데 작년보다 18만원 올랐네요',user:'보험료실화냐',lv:'1',time:'16:36',view:'조회 273',reply:28},
+{title:'중고 모델3 롱레인지 6만km면 괜찮을까요?',user:'중고차보는눈',lv:'2',time:'16:33',view:'조회 621',reply:63,img:'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=160&q=75',photos:9},
+{title:'[SOS] 충전 중 차단기 내려갔습니다 조언 부탁드려요',user:'차단기멘붕',lv:'1',time:'16:30',view:'조회 198',reply:16},
+{title:'랩핑 색상 샘플 받았는데 무광이 관리 어렵나요?',user:'랩핑샘플러',lv:'3',time:'16:27',view:'조회 244',reply:24,img:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=160&q=75',photos:4},
+{title:'오토파일럿 차선 중앙 유지가 어제부터 흔들립니다',user:'차선중앙러',lv:'2',time:'16:24',view:'조회 319',reply:9,video:true,img:'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=160&q=75',photos:1},
+{title:'실내 필터 교체 직접 해보신 분 난이도 어떤가요?',user:'필터자가교체',lv:'1',time:'16:21',view:'조회 155',reply:14},
+{title:'주차장 기둥 살짝 긁었는데 붓펜으로 가능할까요',user:'붓펜초보',lv:'2',time:'16:18',view:'조회 433',reply:37,img:'https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=160&q=75',photos:3}
 ];
 function render(){list.innerHTML=posts.map(p=>{const levelClass=p.lv==='2'?'blue':p.lv==='4'?'green':p.lv==='V'?'gold':'';const thumb=p.img?`<div class="thumbWrap"><img class="thumb" src="${p.img}" alt="${p.title} 썸네일">${p.photos?`<span class="photoBadge">${p.photos}+</span>`:''}${p.video?'<span class="play"></span>':''}</div>`:'';return `<article class="item ${p.img?'':'noThumb'} ${p.fresh?'isFresh':''}"><span class="dot"></span><div class="body"><div class="itemTitle">${p.title}</div><div class="meta"><span>${p.user}</span><span class="level ${levelClass}">${p.lv}</span><span>${p.time}</span><span>${p.view}</span></div></div>${thumb}<button class="commentBox" type="button"><b>${p.reply}</b><span>댓글</span></button></article>`}).join('')}
 render();
