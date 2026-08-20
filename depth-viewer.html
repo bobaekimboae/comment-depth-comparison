@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>댓글 뎁스 직접 보기</title>
+<style>
+:root{--bg:#f6f6f3;--line:#e6e8ec;--ink:#15181d;--blue:#1264c4}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Pretendard,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',Arial,sans-serif;color:var(--ink)}.bar{position:fixed;left:0;right:0;top:0;z-index:20;height:48px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:0 10px;backdrop-filter:blur(10px)}.back{height:34px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#303741;font-size:13px;font-weight:850;padding:0 11px;text-decoration:none;display:inline-flex;align-items:center}.title{flex:1;min-width:0;font-size:15px;font-weight:900;letter-spacing:-.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mode{height:30px;border-radius:999px;background:#eef6ff;color:var(--blue);display:inline-flex;align-items:center;padding:0 10px;font-size:12px;font-weight:900}.frame{position:fixed;left:0;right:0;top:48px;bottom:0;width:100%;height:calc(100vh - 48px);border:0;background:#fff}.toast{position:fixed;left:50%;top:58px;transform:translateX(-50%);z-index:40;background:#111827;color:#fff;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:800;opacity:0;transition:.18s}.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<header class="bar"><a class="back" href="./comment-ui-lab.html">허브</a><div id="title" class="title">댓글 뎁스 직접 보기</div><span id="badge" class="mode">mode</span></header>
+<iframe id="frame" class="frame" src="./reddit-fmkorea-hybrid-v61.html?v=depth-viewer"></iframe><div id="toast" class="toast">선택 완료</div>
+<script>
+const names={t2:'스레드 2뎁스',t3:'스레드 3뎁스',yt:'유튜브 4뎁스',d5:'5단계 테스트',ph:'PH 대량 테스트'};
+const params=new URLSearchParams(location.search);const mode=params.get('mode')||'t2';
+title.textContent=names[mode]||names.t2;badge.textContent=mode;
+frame.onload=()=>{try{const doc=frame.contentWindow.document;const tab=doc.querySelector(`[data-m="${mode}"]`);if(tab)tab.click();setTimeout(()=>{try{const firstPeek=doc.querySelector('.peek');if(firstPeek&&doc.querySelector('#feed')?.classList.contains('fold'))firstPeek.click()}catch(e){}},160);show('뎁스 시안 로드됨')}catch(e){show('브라우저 보안상 내부 클릭 제한')}};
+function show(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1200)}
+</script>
+</body>
+</html>
