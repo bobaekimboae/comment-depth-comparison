@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>자동차댓글-V52 · slightly larger like dislike icons</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f6f6f3}
+iframe{display:block;width:100%;height:100%;border:0;background:#f6f6f3}
+</style>
+</head>
+<body>
+<iframe id="app" src="./reddit-fmkorea-hybrid.html?v=fc00337" title="자동차댓글 V52"></iframe>
+<script>
+const app=document.getElementById('app');
+const likeSvg='<span class="actionSvg likeSvg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2M7 18H4V9h3zm14-7-3 7H9V8l4.34-4.34L12 9h9z"/></svg></span>';
+const dislikeSvg='<span class="actionSvg dislikeSvg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2M17 6h3v9h-3zM3 13l3-7h9v10l-4.34 4.34L12 15H3z"/></svg></span>';
+const commentSvg='<span class="actionSvg commentSvg" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1a9 9 0 00-9 9c0 1.947.79 3.58 1.935 4.957L.231 17.661A.784.784 0 00.785 19H10a9 9 0 009-9 9 9 0 00-9-9zm0 16.2H6.162c-.994.004-1.907.053-3.045.144l-.076-.188a36.981 36.981 0 002.328-2.087l-1.05-1.263C3.297 12.576 2.8 11.331 2.8 10c0-3.97 3.23-7.2 7.2-7.2s7.2 3.23 7.2 7.2-3.23 7.2-7.2 7.2z"/></svg></span>';
+const plusSvg='<span class="toggleSvg plusSvg" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 1a9 9 0 100 18 9 9 0 000-18zm0 16.2a7.2 7.2 0 117.2-7.2 7.208 7.208 0 01-7.2 7.2zm.9-8.1H14v1.8h-3.1V14H9.1v-3.1H6V9.1h3.1V6h1.8v3.1z"/></svg></span>';
+const minusSvg='<span class="toggleSvg minusSvg" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 2.8A7.2 7.2 0 112.8 10 7.208 7.208 0 0110 2.8zM10 1a9 9 0 100 18 9 9 0 000-18zm4 8.1H6v1.8h8V9.1z"/></svg></span>';
+function patch(){
+  const d=app.contentDocument;
+  if(!d||!d.body)return;
+  d.title='자동차댓글-V52 · slightly larger like dislike icons';
+  const ver=d.querySelector('.ver');
+  if(ver)ver.textContent='자동차댓글-V52';
+  const applied=d.querySelector('.applied');
+  if(applied)applied.textContent='V52 · 좋아요·싫어요 아이콘만 아주 약간 확대';
+  if(!d.getElementById('v52-balanced-svg-icons')){
+    const s=d.createElement('style');
+    s.id='v52-balanced-svg-icons';
+    s.textContent=`
+      .feed .node{grid-template-columns:24px minmax(0,1fr)!important;--axis:12px!important;--avatar:24px!important;--gap:10px!important}
+      .feed .av{width:24px!important;height:24px!important}
+      .feed .peek{margin-left:34px!important}
+      .feed.thread .t2,.feed.thread .t3{margin-left:12px!important;padding:13px 0 0 12px!important}
+      .feed.thread .deep{margin-left:11px!important;padding-left:10px!important;border-left-color:#eef0f3!important}
+      .feed.thread .child:before{left:-12px!important;width:12px!important;height:22px!important}
+      .feed.thread .grand:before{left:-10px!important;width:10px!important;height:20px!important;border-color:#eef0f3!important}
+      .feed .has:after{left:12px!important;top:24px!important}
+      .actions{gap:12px!important;color:#65707b!important;font-size:12.5px!important;min-height:24px!important;height:24px!important;align-items:center!important}
+      .actions button{height:24px!important;min-height:24px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:4px!important;color:#65707b!important;font-weight:800!important;line-height:16px!important}
+      .actions .ico{display:none!important}
+      .actionSvg,.toggleSvg{width:16px!important;height:16px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 16px!important;line-height:16px!important}
+      .actionSvg svg,.toggleSvg svg{width:16px!important;height:16px!important;display:block!important;fill:currentColor!important;stroke:none!important;vertical-align:middle!important}
+      .likeSvg svg,.dislikeSvg svg{transform:scale(.98);transform-origin:50% 50%}
+      .commentSvg svg{transform:scale(1);transform-origin:50% 50%}
+      .actions button:not(.mini) span:not(.actionSvg){min-width:16px!important;text-align:center!important;line-height:16px!important}
+      .mini{width:20px!important;height:20px!important;min-height:20px!important;border:0!important;background:transparent!important;box-shadow:0 0 0 2px #fff!important;color:#0f1a1c!important;font-size:0!important;line-height:0!important;padding:2px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;left:calc(var(--axis) - var(--avatar) - var(--gap) - 10px)!important;top:2px!important}
+      .mini.plus{color:#0f1a1c!important;background:transparent!important;border:0!important}
+      .mini .toggleSvg,.mini .toggleSvg svg{width:16px!important;height:16px!important}
+    `;
+    d.head.appendChild(s);
+  }
+  function decorate(){
+    d.querySelectorAll('.actions').forEach(row=>{
+      const btns=[...row.querySelectorAll('button')].filter(b=>!b.classList.contains('mini'));
+      if(btns[0]&&!btns[0].dataset.v52){
+        const count=(btns[0].textContent||'').trim().match(/\d+/)?.[0]||'';
+        btns[0].dataset.v52='1';
+        btns[0].innerHTML=likeSvg+(count?`<span>${count}</span>`:'');
+      }
+      if(btns[1]&&!btns[1].dataset.v52){
+        btns[1].dataset.v52='1';
+        btns[1].innerHTML=dislikeSvg;
+      }
+      if(btns[2]&&!btns[2].dataset.v52){
+        btns[2].dataset.v52='1';
+        btns[2].innerHTML=commentSvg+'<span>답글</span>';
+      }
+    });
+    d.querySelectorAll('.mini').forEach(btn=>{
+      const isPlus=btn.classList.contains('plus') || btn.textContent.trim()==='+';
+      btn.dataset.v52='1';
+      btn.innerHTML=isPlus?plusSvg:minusSvg;
+      btn.setAttribute('aria-label',isPlus?'하위 댓글 펼치기':'하위 댓글 접기');
+    });
+  }
+  decorate();
+  const feed=d.getElementById('feed');
+  if(feed&&!feed.dataset.v52observed){
+    feed.dataset.v52observed='1';
+    new MutationObserver(()=>setTimeout(decorate,0)).observe(feed,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+  }
+}
+app.addEventListener('load',()=>setTimeout(patch,80));
+</script>
+</body>
+</html>
