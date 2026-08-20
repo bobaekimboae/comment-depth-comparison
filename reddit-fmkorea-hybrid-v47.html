@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>자동차댓글-V47 · uniform avatar depth sizing</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f6f6f3}
+iframe{display:block;width:100%;height:100%;border:0;background:#f6f6f3}
+</style>
+</head>
+<body>
+<iframe id="app" src="./reddit-fmkorea-hybrid.html?v=fc00337" title="자동차댓글 V47"></iframe>
+<script>
+const app=document.getElementById('app');
+function patch(){
+  const d=app.contentDocument;
+  if(!d||!d.body)return;
+  d.title='자동차댓글-V47 · uniform avatar depth sizing';
+  const ver=d.querySelector('.ver');
+  if(ver)ver.textContent='자동차댓글-V47';
+  const applied=d.querySelector('.applied');
+  if(applied)applied.textContent='V47 · 2·3·4·5뎁스 프사 크기와 스레드 라인축 24px로 통일';
+  if(!d.getElementById('v47-uniform-avatar-fix')){
+    const s=d.createElement('style');
+    s.id='v47-uniform-avatar-fix';
+    s.textContent=`
+      .feed .node{grid-template-columns:24px minmax(0,1fr)!important;--axis:12px!important;--avatar:24px!important;--gap:10px!important}
+      .feed .av{width:24px!important;height:24px!important}
+      .feed .peek{margin-left:34px!important}
+      .feed.thread .t2,.feed.thread .t3{margin-left:12px!important;padding:13px 0 0 12px!important}
+      .feed.thread .deep{margin-left:11px!important;padding-left:10px!important;border-left-color:#eef0f3!important}
+      .feed.thread .child:before{left:-12px!important;width:12px!important;height:22px!important}
+      .feed.thread .grand:before{left:-10px!important;width:10px!important;height:20px!important;border-color:#eef0f3!important}
+      .feed .has:after{left:12px!important;top:24px!important}
+      .feed.yt .node,.feed.d5 .node,.feed.ph .node{grid-template-columns:24px minmax(0,1fr)!important;--axis:12px!important;--avatar:24px!important}
+      .feed.yt .av,.feed.d5 .av,.feed.ph .av{width:24px!important;height:24px!important}
+    `;
+    d.head.appendChild(s);
+  }
+}
+app.addEventListener('load',()=>setTimeout(patch,80));
+</script>
+</body>
+</html>
