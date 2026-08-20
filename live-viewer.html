@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>댓글 시안 실제 화면</title>
+<style>
+:root{--ink:#15181d;--muted:#737b86;--line:#e4e7ec;--blue:#1264c4;--red:#ff6154;--bg:#fff}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',Arial,sans-serif;-webkit-font-smoothing:antialiased}.app{width:100%;height:100dvh;display:flex;flex-direction:column;background:#fff}.bar{height:52px;flex:0 0 52px;display:flex;align-items:center;gap:9px;padding:8px 10px calc(8px + env(safe-area-inset-top));border-bottom:1px solid var(--line);background:rgba(255,255,255,.98);backdrop-filter:blur(12px);z-index:10}.close{height:34px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#20242b;padding:0 12px;font-size:13px;font-weight:900}.title{min-width:0;flex:1;font-size:15.5px;font-weight:900;letter-spacing:-.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hint{color:var(--muted);font-size:11.5px;font-weight:800;white-space:nowrap}.frame{flex:1;width:100%;min-height:0;border:0;background:#fff}.fallback{display:none;padding:22px}.fallback.show{display:block}.fallback h1{font-size:19px;margin:0 0 8px}.fallback p{font-size:14px;line-height:1.5;color:#5f6874}.fallback a{color:var(--blue);font-weight:900}@media(min-width:760px){.bar{height:56px;flex-basis:56px}.close{height:36px}.title{font-size:16px}}
+</style>
+</head>
+<body>
+<main class="app">
+  <div class="bar">
+    <button id="close" class="close" type="button">창닫기</button>
+    <div id="title" class="title">댓글 시안 실제 화면</div>
+    <span class="hint">실제 화면</span>
+  </div>
+  <iframe id="frame" class="frame" title="댓글 시안"></iframe>
+  <section id="fallback" class="fallback"><h1>열 수 없는 주소입니다</h1><p>허브에서 다시 시안을 선택하세요. <a href="./comment-ui-lab.html">허브로 이동</a></p></section>
+</main>
+<script>
+const allowed=new Set(['depth-viewer.html','interactive-viewer.html','xianyu-2depth-time-v1.html','youtube-threads-equal-avatar.html','facebook-comments-v1.html','stress.html','reddit-fmkorea-hybrid-v61.html']);
+const q=new URLSearchParams(location.search);const src=q.get('src')||'';const title=q.get('title')||'댓글 시안 실제 화면';document.getElementById('title').textContent=title;
+function safeSrc(value){try{const decoded=decodeURIComponent(value);const u=new URL(decoded,location.href);if(u.origin!==location.origin)return null;const name=u.pathname.split('/').pop();if(!allowed.has(name))return null;u.searchParams.set('live',Date.now());return u.href}catch(e){return null}}
+const target=safeSrc(src);const frame=document.getElementById('frame');const fallback=document.getElementById('fallback');if(target){frame.src=target}else{frame.style.display='none';fallback.classList.add('show')}
+document.getElementById('close').onclick=()=>{window.close();setTimeout(()=>{if(document.visibilityState==='visible'){history.length>1?history.back():location.href='./comment-ui-lab.html'}},120)};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('close').click()});
+</script>
+</body>
+</html>
