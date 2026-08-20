@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>보배드림 댓글 UX 시안 허브</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#15181d;--muted:#737b86;--line:#e4e7ec;--blue:#1264c4;--red:#ff6154;--green:#119c66;--shadow:0 12px 34px rgba(15,23,42,.08)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',Arial,sans-serif;-webkit-font-smoothing:antialiased}.app{max-width:900px;margin:auto;min-height:100vh;padding:14px 12px 82px}.top{position:sticky;top:0;z-index:30;background:rgba(245,246,248,.94);backdrop-filter:blur(12px);padding:10px 0 12px;border-bottom:1px solid rgba(228,231,236,.7)}.brand{display:flex;align-items:center;gap:10px}.logo{width:40px;height:40px;border-radius:14px;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:900;font-size:20px;box-shadow:0 8px 22px rgba(255,97,84,.22)}h1{font-size:22px;line-height:1.2;letter-spacing:-.04em;margin:0}.sub{margin:4px 0 0;color:var(--muted);font-size:13px;line-height:1.45}.controls{display:flex;gap:8px;overflow:auto;padding:13px 0 2px}.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 13px;white-space:nowrap;color:#4b5563;font-size:13px;font-weight:850;box-shadow:0 2px 8px rgba(15,23,42,.03)}.tab.on{border-color:#bfd7fa;background:#f3f8ff;color:var(--blue)}.status{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow)}.panelTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.name{font-size:18px;line-height:1.25;font-weight:900;letter-spacing:-.035em}.desc{margin:6px 0 0;color:#5f6874;font-size:13.5px;line-height:1.5;word-break:keep-all}.pill{display:inline-flex;align-items:center;gap:5px;height:28px;border-radius:999px;padding:0 9px;background:#f0fbf6;color:var(--green);font-size:12px;font-weight:900;white-space:nowrap}.pill:before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.metric{background:#f7f8fa;border:1px solid #edf0f4;border-radius:13px;padding:10px}.metric b{display:block;font-size:15px;line-height:18px}.metric span{display:block;margin-top:3px;color:#7b838d;font-size:11.5px;font-weight:700}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.btn{height:38px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 12px;font-size:13px;font-weight:900;color:#3f4752;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.warn{background:#fff6f5;border-color:#ffd1cc;color:#d8463b}.frameShell{margin-top:12px;background:#101318;border-radius:22px;padding:10px;box-shadow:0 20px 44px rgba(15,23,42,.16)}.phoneBar{height:28px;display:flex;align-items:center;justify-content:space-between;color:#b9c0ca;font-size:12px;font-weight:800;padding:0 8px}.dots{display:flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:#515a66}.preview{width:100%;height:720px;border:0;border-radius:16px;background:#fff;display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}.card{border:1px solid var(--line);background:#fff;border-radius:16px;padding:13px;text-decoration:none;color:inherit}.card b{display:block;font-size:15px;letter-spacing:-.02em}.card span{display:block;margin-top:5px;color:#707986;font-size:12.5px;line-height:1.4}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:#111827;color:#fff;border-radius:999px;padding:11px 15px;font-size:13px;font-weight:800;transition:.18s;z-index:60}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}@media(max-width:560px){.app{padding-left:10px;padding-right:10px}.top{padding-top:8px}.logo{width:36px;height:36px;border-radius:12px}h1{font-size:20px}.panel{padding:13px;border-radius:16px}.meta{grid-template-columns:1fr 1fr}.preview{height:calc(100vh - 275px);min-height:520px}.grid{grid-template-columns:1fr}.actions .btn{flex:1}.actions .btn.primary{flex-basis:100%}}
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <div class="brand"><div class="logo">보</div><div><h1>댓글 UX 시안 허브</h1><p class="sub">탭을 눌러 각 댓글 구조를 실제 동작 화면으로 확인합니다.</p></div></div>
+    <nav id="tabs" class="controls"></nav>
+  </header>
+  <section class="status">
+    <div class="panel">
+      <div class="panelTop"><div><div id="name" class="name"></div><p id="desc" class="desc"></p></div><span class="pill">동작 확인용</span></div>
+      <div id="meta" class="meta"></div>
+      <div class="actions"><a id="open" class="btn primary" target="_self">전체 화면 열기</a><button id="reload" class="btn">미리보기 새로고침</button><button id="copy" class="btn">주소 복사</button><a id="raw" class="btn warn" target="_blank" rel="noopener">GitHub 파일</a></div>
+    </div>
+    <div class="frameShell"><div class="phoneBar"><span id="frameTitle">preview</span><span class="dots"><i></i><i></i><i></i></span></div><iframe id="preview" class="preview" title="댓글 시안 미리보기"></iframe></div>
+    <div class="grid" id="quick"></div>
+  </section>
+</main>
+<div id="toast" class="toast">복사됨</div>
+<script>
+const version=Date.now();
+const demos=[
+  {id:'main',name:'메인 통합 · Reddit/PH 라인',file:'reddit-fmkorea-hybrid-v61.html',github:'reddit-fmkorea-hybrid-v61.html',desc:'2뎁스, 3뎁스, 유튜브 4뎁스, 5단계, PH 대량 테스트 탭이 들어간 메인 실험안입니다.',metrics:[['5개','탭'],['386개','PH 대량 댓글'],['24px','전 뎁스 프사 동일']]},
+  {id:'xianyu',name:'시엔위 2뎁스 시간형',file:'xianyu-2depth-time-v1.html',github:'xianyu-2depth-time-v1.html',desc:'시엔위처럼 세로 라인 없는 피드형 댓글, 시간·지역·답글 메타, 답글 상세 화면 진입을 테스트합니다.',metrics:[['100개','가상 댓글'],['30/24px','1·2뎁스 프사'],['상세화면','답글 보기']]},
+  {id:'facebook',name:'페이스북 별도 시안',file:'facebook-comments-v1.html',github:'facebook-comments-v1.html',desc:'페이스북 하단 댓글 시트, 답글 보기/닫기, 우측 좋아요·싫어요 액션을 테스트합니다.',metrics:[['80개','가상 댓글'],['48/32px','1·2뎁스 프사'],['인라인','답글 펼침']]},
+  {id:'youtube',name:'유튜브 4뎁스',file:'youtube-threads-equal-avatar.html',github:'youtube-threads-equal-avatar.html',desc:'유튜브식 다단 답글과 1뎁스 제외 하위 프사 동일 규칙을 확인하는 시안입니다.',metrics:[['4단계','댓글 깊이'],['동일화','하위 프사'],['모바일','댓글 바텀 UX']]},
+  {id:'stress',name:'댓글 스트레스 테스트',file:'stress.html',github:'stress.html',desc:'많은 댓글과 깊은 스레드가 한 화면에서 얼마나 복잡해지는지 확인하는 대량 테스트 페이지입니다.',metrics:[['대량','댓글'],['복잡도','라인 확인'],['UX','스캔 테스트']]}
+];
+const $=s=>document.querySelector(s);
+function url(d){return `./${d.file}?v=${d.id}-${version}`}
+function githubUrl(d){return `https://github.com/bobaekimboae/comment-depth-comparison/blob/main/${d.github}`}
+function renderTabs(active){$('#tabs').innerHTML=demos.map(d=>`<button class="tab ${d.id===active.id?'on':''}" data-id="${d.id}">${d.name.split(' · ')[0]}</button>`).join('');document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>setDemo(b.dataset.id));}
+function setDemo(id){const d=demos.find(x=>x.id===id)||demos[0];renderTabs(d);$('#name').textContent=d.name;$('#desc').textContent=d.desc;$('#meta').innerHTML=d.metrics.map(m=>`<div class="metric"><b>${m[0]}</b><span>${m[1]}</span></div>`).join('');$('#open').href=url(d);$('#raw').href=githubUrl(d);$('#frameTitle').textContent=d.file;$('#preview').src=url(d);history.replaceState(null,'',`#${d.id}`)}
+$('#reload').onclick=()=>{const src=$('#preview').src.split('?')[0];$('#preview').src=src+'?v=reload-'+Date.now()};
+$('#copy').onclick=async()=>{const link=$('#open').href;try{await navigator.clipboard.writeText(link);showToast('주소 복사됨')}catch(e){showToast(link)}};
+function showToast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1500)}
+$('#quick').innerHTML=demos.map(d=>`<a class="card" href="${url(d)}"><b>${d.name}</b><span>${d.desc}</span></a>`).join('');
+setDemo(location.hash.replace('#','')||'main');
+</script>
+</body>
+</html>
