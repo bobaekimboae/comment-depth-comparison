@@ -16,8 +16,34 @@
 const names={t2:'스레드 2뎁스',t3:'스레드 3뎁스',yt:'유튜브 4뎁스',d5:'5단계 테스트',ph:'PH 대량 테스트'};
 const params=new URLSearchParams(location.search);const mode=params.get('mode')||'t2';
 title.textContent=names[mode]||names.t2;badge.textContent=mode;
-frame.onload=()=>{try{const doc=frame.contentWindow.document;const tab=doc.querySelector(`[data-m="${mode}"]`);if(tab)tab.click();setTimeout(()=>{try{const firstPeek=doc.querySelector('.peek');if(firstPeek&&doc.querySelector('#feed')?.classList.contains('fold'))firstPeek.click()}catch(e){}},160);show('뎁스 시안 로드됨')}catch(e){show('브라우저 보안상 내부 클릭 제한')}};
-function show(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1200)}
+frame.onload=()=>{try{const doc=frame.contentWindow.document;const tab=doc.querySelector(`[data-m="${mode}"]`);if(tab)tab.click();installVotes(doc);setTimeout(()=>{try{const firstPeek=doc.querySelector('.peek');if(firstPeek&&doc.querySelector('#feed')?.classList.contains('fold'))firstPeek.click();installVotes(doc)}catch(e){}},180);show('뎁스 시안 로드됨')}catch(e){show('브라우저 보안상 내부 클릭 제한')}};
+function installVotes(doc){
+  if(doc.__voteInstalled)return;doc.__voteInstalled=true;
+  const style=doc.createElement('style');
+  style.textContent='.actions button.vote-on{color:#1264c4!important}.actions button.vote-down{color:#d84b40!important}.actions button{cursor:pointer;touch-action:manipulation}.actions .num{font-variant-numeric:tabular-nums}';
+  doc.head.appendChild(style);
+  doc.addEventListener('click',e=>{
+    const btn=e.target.closest('.actions button');if(!btn)return;
+    const actions=btn.closest('.actions');const buttons=[...actions.querySelectorAll('button')];
+    const idx=buttons.indexOf(btn);if(idx!==0&&idx!==1)return;
+    e.preventDefault();e.stopPropagation();
+    const likeBtn=buttons[0], dislikeBtn=buttons[1];const num=likeBtn.querySelector('.num');
+    let n=parseInt(num?.textContent||'0',10)||0;
+    if(idx===0){
+      const was=likeBtn.classList.contains('vote-on');
+      if(dislikeBtn)dislikeBtn.classList.remove('vote-down');
+      likeBtn.classList.toggle('vote-on',!was);
+      if(num)num.textContent=String(Math.max(0,n+(was?-1:1)));
+      show(was?'추천 취소':'추천 완료');
+    }else{
+      const was=dislikeBtn.classList.contains('vote-down');
+      if(likeBtn.classList.contains('vote-on')){likeBtn.classList.remove('vote-on');if(num)num.textContent=String(Math.max(0,n-1));}
+      dislikeBtn.classList.toggle('vote-down',!was);
+      show(was?'비추천 취소':'비추천 완료');
+    }
+  },true);
+}
+function show(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1000)}
 </script>
 </body>
 </html>
