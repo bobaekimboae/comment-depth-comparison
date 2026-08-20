@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>자동차댓글-V58 · overflow icon row alignment</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f6f6f3}
+iframe{display:block;width:100%;height:100%;border:0;background:#f6f6f3}
+</style>
+</head>
+<body>
+<iframe id="v52" src="./reddit-fmkorea-hybrid-v52.html?v=3095180" title="자동차댓글 V58"></iframe>
+<script>
+const outer=document.getElementById('v52');
+const moreSvg='<span class="moreSvg" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M16 11.75a1.75 1.75 0 11.001-3.501A1.75 1.75 0 0116 11.75ZM11.75 10a1.75 1.75 0 10-3.501.001A1.75 1.75 0 0011.75 10Zm-6 0a1.75 1.75 0 10-3.501.001A1.75 1.75 0 005.75 10Z"/></svg></span>';
+function patch(){
+  const od=outer.contentDocument;
+  if(!od)return;
+  od.title='자동차댓글-V58 · overflow icon row alignment';
+  const inner=od.getElementById('app');
+  const d=inner&&inner.contentDocument;
+  if(!d||!d.body){setTimeout(patch,80);return;}
+  d.title='자동차댓글-V58 · overflow icon row alignment';
+  const ver=d.querySelector('.ver');
+  if(ver)ver.textContent='자동차댓글-V58';
+  const applied=d.querySelector('.applied');
+  if(applied)applied.textContent='V58 · 우측 3점 더보기 아이콘을 닉네임/시간 행 중앙에 정렬';
+  if(!d.getElementById('v58-overflow-row-align')){
+    const s=d.createElement('style');
+    s.id='v58-overflow-row-align';
+    s.textContent=`
+      .actions{height:24px!important;min-height:24px!important;align-items:center!important;gap:12px!important}
+      .actions button{height:24px!important;min-height:24px!important;align-items:center!important;justify-content:center!important;line-height:16px!important}
+      .mini,.mini.plus{
+        color:#8a929b!important;
+        background:transparent!important;
+        border:0!important;
+        width:20px!important;
+        height:20px!important;
+        min-height:20px!important;
+        padding:2px!important;
+        top:2px!important;
+        left:calc(var(--axis) - var(--avatar) - var(--gap) - 10px)!important;
+        box-shadow:0 0 0 2px #fff!important;
+      }
+      .mini .toggleSvg,.mini .toggleSvg svg{width:16px!important;height:16px!important}
+      .mini .toggleSvg svg{fill:currentColor!important;opacity:.76!important}
+      .feed .has:after{left:var(--axis)!important;top:var(--avatar)!important}
+      .row{padding-right:28px!important;min-height:24px!important;align-items:center!important}
+      .more{
+        right:0!important;
+        top:50%!important;
+        transform:translateY(-50%)!important;
+        width:24px!important;
+        height:24px!important;
+        padding:0!important;
+        display:inline-flex!important;
+        align-items:center!important;
+        justify-content:center!important;
+        color:#65707b!important;
+        opacity:.88!important;
+        font-size:0!important;
+        line-height:0!important;
+      }
+      .moreSvg,.moreSvg svg{width:16px!important;height:16px!important;display:block!important;flex:0 0 16px!important}
+      .moreSvg svg{fill:currentColor!important;stroke:none!important}
+    `;
+    d.head.appendChild(s);
+  }
+  function decorateMore(){
+    d.querySelectorAll('.more').forEach(btn=>{
+      if(!btn.dataset.v58){
+        btn.dataset.v58='1';
+        btn.innerHTML=moreSvg;
+        btn.setAttribute('aria-label','더보기');
+      }
+    });
+  }
+  decorateMore();
+  const feed=d.getElementById('feed');
+  if(feed&&!feed.dataset.v58observed){
+    feed.dataset.v58observed='1';
+    new MutationObserver(()=>setTimeout(decorateMore,0)).observe(feed,{childList:true,subtree:true});
+  }
+}
+outer.addEventListener('load',()=>setTimeout(patch,180));
+setTimeout(patch,500);
+</script>
+</body>
+</html>
