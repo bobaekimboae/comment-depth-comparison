@@ -527,10 +527,6 @@
           <h2 class="section-title">리스트 표시</h2>
           <div class="option-list">
             <div class="option">
-              <div class="label-stack">제목 <span class="locked">항상 표시</span></div>
-              <button class="switch is-on is-locked" type="button" aria-label="제목 항상 표시" aria-disabled="true"></button>
-            </div>
-            <div class="option">
               <div class="label-stack">썸네일</div>
               <button class="switch is-on" type="button" aria-label="썸네일 표시"></button>
             </div>
@@ -604,7 +600,7 @@
         target.classList.add("is-active");
       });
       document.querySelectorAll(".switch").forEach((button, index) => {
-        button.classList.toggle("is-on", index < 4);
+        button.classList.toggle("is-on", index < 3);
       });
     });
 
