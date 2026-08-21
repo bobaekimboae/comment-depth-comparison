@@ -115,6 +115,10 @@ openSheet=function(){
   document.getElementById('sheetApply').onclick=closeSheet;
   document.getElementById('sheetReset').onclick=function(){mode='list';thumbPosition='right';titleLines=2;rankPosition='before';display={thumbnail:true,commentBadge:true,recommendCount:false,categoryLabel:true,tag:false,highlight:false,rankBadge:false,profileAvatar:false,timeIcon:false,viewIcon:false,recommendIcon:false,commentIcon:false};renderList();openSheet()};
 };
+// The original bindings were registered before the enhanced sheet was defined.
+// Rebind after the override so the public controls always open the current editor.
+document.getElementById('viewBtn').onclick=openSheet;
+document.getElementById('typeBtn').onclick=openTypeSheet;
 openTypeSheet=function(){
   var types=[['compact','간결형','',true,true,'compact'],['default','목록형','기본',true,true,'list'],['no-badge','목록형 · 댓글 배지 없음','',true,false,'list'],['no-thumb','목록형 · 썸네일 없음','',false,true,'list']];
   var sh=document.getElementById('sheet'),ov=document.getElementById('overlay');
