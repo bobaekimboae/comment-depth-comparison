@@ -4,8 +4,8 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=700362527`
-- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 간결형 목록 화면을 원본 캡처와 함께 시각 비교함.
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=08e36b8`
+- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 간결형 목록 화면을 원본 캡처와 함께 시각 비교함. 최종 캡처에서 말머리 잔여 문자 없이 제목·댓글·메타·48 px 썸네일을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
 - Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
@@ -25,14 +25,17 @@
 6. Reply-count preservation: inline reply counts could be cut off when a one-line title reached its clamp boundary.
    - Fix: split the compact title into a truncating `compactTitleText` region and a non-shrinking reply-count region.
    - Post-fix evidence: a long-title row truncates only its title while the `(28)` reply count remains fully visible.
+7. Bobaedream token alignment and prefix repair: the source-prefix removal rule left a leading `]` on compact titles, and the compact color token drifted toward the Chzzk reference.
+   - Fix: correct the prefix matcher to consume the closing bracket; use the Bobaedream list tokens `#111` for titles and `#96989D` for metadata. Chzzk remains the reference for compact density, one-line truncation, and thumbnail scale only.
+   - Post-fix evidence: deployed browser state reports `strayPrefix: false`, title `rgb(17, 17, 17)`, metadata `rgb(150, 152, 157)`, and blue reply counts `rgb(35, 143, 227)`.
 
 ## Required fidelity surfaces
 
 ### Fonts and typography
 
 - Pretendard is used throughout.
-- Compact titles are one line at 15.5 px/21 px, weight 400, and source-matched charcoal `#35363a`; metadata is visually subordinate at 12.5 px with 10.5 px icons.
-- Parenthesized reply counts are green and attached to the title, matching the reference hierarchy.
+- Compact titles are one line at 15.5 px/21 px, weight 400, and Bobaedream list color `#111`; metadata is visually subordinate at 12.5 px with 10.5 px icons and `#96989D`.
+- Parenthesized reply counts are blue and attached to the title, following the board's existing comment-color convention while remaining fully visible after title truncation.
 
 ### Spacing and layout rhythm
 
@@ -41,7 +44,7 @@
 
 ### Colors and visual tokens
 
-- Compact list rows use neutral-gray metadata, red new dots, and green reply counts inside the existing Bobaedream shell.
+- Compact list rows use Bobaedream neutral-gray metadata, red new dots, blue reply counts, and the existing Bobaedream shell.
 
 ### Image quality and asset fidelity
 
