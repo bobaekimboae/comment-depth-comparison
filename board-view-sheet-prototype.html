@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>보배드림 보기방식 바텀시트 시안</title>
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --sheet: #fff;
+      --text: #111;
+      --muted: #6f737a;
+      --line: #e5e6e9;
+      --soft: #f1f2f4;
+      --soft-2: #e9eaed;
+      --black: #202020;
+      --red: #8b0018;
+      --radius-xl: 28px;
+      --radius-lg: 18px;
+      --radius-md: 13px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 50% 0, #ffffff 0, #eef0f4 56%, #dfe2e8 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    }
+
+    .phone {
+      position: relative;
+      width: min(390px, 100vw);
+      height: min(844px, 100vh);
+      overflow: hidden;
+      background: var(--bg);
+      box-shadow: 0 28px 80px rgba(20, 24, 32, .22);
+    }
+
+    .status {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      font-size: 14px;
+      font-weight: 800;
+      background: #fff;
+    }
+
+    .topbar {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(180deg, #8d001c 0%, #6b0015 100%);
+    }
+
+    .back {
+      width: 34px;
+      height: 34px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .brand {
+      flex: 1;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -.2px;
+    }
+
+    .top-icon {
+      width: 34px;
+      height: 34px;
+      border: 2px solid rgba(255,255,255,.75);
+      border-radius: 50%;
+    }
+
+    .hamburger {
+      width: 34px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .hamburger span {
+      height: 3px;
+      border-radius: 99px;
+      background: rgba(255,255,255,.82);
+    }
+
+    .list {
+      padding: 14px 16px 190px;
+      background: #fff;
+    }
+
+    .article {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 72px;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #ececef;
+    }
+
+    .article h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .dot {
+      color: var(--red);
+      margin-right: 5px;
+      font-size: 18px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #74777d;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .level {
+      display: inline-grid;
+      place-items: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #c9ca8d;
+      color: #343511;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .badge {
+      align-self: center;
+      justify-self: end;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: #f2f3f5;
+      color: #1f2023;
+      font-weight: 900;
+      line-height: 1.05;
+    }
+
+    .badge span {
+      display: block;
+      color: #65686e;
+      font-size: 11px;
+      margin-top: 3px;
+    }
+
+    .scrim {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.56);
+    }
+
+    .sheet {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 650px;
+      display: flex;
+      flex-direction: column;
+      background: var(--sheet);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      box-shadow: 0 -16px 50px rgba(0,0,0,.18);
+    }
+
+    .handle {
+      width: 58px;
+      height: 5px;
+      margin: 12px auto 0;
+      border-radius: 99px;
+      background: #dedfe3;
+    }
+
+    .sheet-head {
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: 72px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .sheet-head h1 {
+      margin: 0;
+      font-size: 23px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -.4px;
+    }
+
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 18px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      background: transparent;
+      font-size: 36px;
+      line-height: 30px;
+      color: #111;
+    }
+
+    .sheet-body {
+      flex: 1;
+      overflow: auto;
+      padding: 18px 16px 20px;
+    }
+
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      color: #5f636b;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -.2px;
+    }
+
+    .segmented {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding: 4px;
+      border-radius: 18px;
+      background: var(--soft-2);
+    }
+
+    .segment {
+      min-height: 44px;
+      border: 0;
+      border-radius: 14px;
+      background: transparent;
+      color: #363941;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: -.25px;
+    }
+
+    .segment.is-active {
+      background: #fff;
+      color: #111;
+      box-shadow: 0 2px 8px rgba(26,29,36,.12);
+    }
+
+    .segment-icon {
+      display: block;
+      margin-bottom: 2px;
+      color: #858992;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .option-list {
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: #f7f7f8;
+      border: 1px solid #efeff1;
+    }
+
+    .option {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 0 14px 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .option:last-child {
+      border-bottom: 0;
+    }
+
+    .label-stack {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: -.25px;
+    }
+
+    .locked {
+      color: #7b7f87;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .switch {
+      position: relative;
+      width: 50px;
+      height: 30px;
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 999px;
+      background: #dfe1e5;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.02);
+      transition: background .18s ease;
+    }
+
+    .switch::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,.23);
+      transition: transform .18s ease;
+    }
+
+    .switch.is-on {
+      background: #202020;
+    }
+
+    .switch.is-on::after {
+      transform: translateX(20px);
+    }
+
+    .switch.is-locked {
+      opacity: .5;
+    }
+
+    .position-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .choice {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 13px 0 16px;
+      border: 1px solid #d9dbe0;
+      border-radius: var(--radius-md);
+      background: #fff;
+      color: #292b30;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.3px;
+    }
+
+    .choice.is-active {
+      border-color: #171717;
+      background: #f9fafb;
+      box-shadow: inset 0 0 0 1px #171717;
+    }
+
+    .radio {
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 2px solid #d2d4d9;
+      color: transparent;
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .choice.is-active .radio {
+      border-color: #202020;
+      background: #202020;
+      color: #fff;
+    }
+
+    .default-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 0 7px;
+      border-radius: 99px;
+      background: #202020;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .sheet-foot {
+      height: 108px;
+      display: grid;
+      grid-template-columns: 1fr 196px;
+      align-items: center;
+      gap: 18px;
+      padding: 12px 25px 24px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,.98);
+    }
+
+    .reset {
+      justify-self: start;
+      border: 0;
+      border-bottom: 2px solid #111;
+      background: transparent;
+      color: #111;
+      padding: 2px 0;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .apply {
+      height: 58px;
+      border: 0;
+      border-radius: 17px;
+      background: #202020;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 950;
+      letter-spacing: -.4px;
+      box-shadow: 0 6px 14px rgba(0,0,0,.16);
+    }
+
+    .toast {
+      position: absolute;
+      left: 50%;
+      bottom: 120px;
+      transform: translateX(-50%) translateY(16px);
+      padding: 11px 16px;
+      border-radius: 99px;
+      background: rgba(20,20,20,.92);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-height: 760px) {
+      .phone {
+        height: 100vh;
+      }
+
+      .sheet {
+        height: calc(100vh - 84px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="phone" aria-label="보배드림 모바일 게시판 보기방식 시안">
+    <div class="status">
+      <span>9:08</span>
+      <span>5G 98</span>
+    </div>
+    <header class="topbar">
+      <button class="back" aria-label="뒤로가기">‹</button>
+      <div class="brand">보배드림 자동차톡</div>
+      <div class="top-icon" aria-hidden="true"></div>
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+    </header>
+
+    <section class="list" aria-hidden="true">
+      <article class="article">
+        <div>
+          <h2><span class="dot">•</span>[시승기] 아이오닉5N 하루 타보고 느낀 점</h2>
+          <div class="meta"><span class="level">−</span> 고속도로요정 <span>12분 전</span> <span>조회 512</span></div>
+        </div>
+        <div class="badge">1만<span>댓글</span></div>
+      </article>
+      <article class="article">
+        <div>
+          <h2><span class="dot">•</span>주말 강변북로 사고 정체 심하네요</h2>
+          <div class="meta"><span class="level">−</span> 무사고운전 <span>25분 전</span> <span>조회 283</span></div>
+        </div>
+        <div class="badge">742<span>댓글</span></div>
+      </article>
+    </section>
+
+    <div class="scrim" aria-hidden="true"></div>
+
+    <section class="sheet" aria-label="보기방식 편집">
+      <div class="handle" aria-hidden="true"></div>
+      <header class="sheet-head">
+        <h1>보기방식 편집</h1>
+        <button class="close" aria-label="닫기">×</button>
+      </header>
+
+      <div class="sheet-body">
+        <section class="section">
+          <h2 class="section-title">보기 방식</h2>
+          <div class="segmented" data-group="view">
+            <button class="segment is-active" type="button"><span class="segment-icon">☷</span>목록형</button>
+            <button class="segment" type="button"><span class="segment-icon">☰</span>피드형</button>
+            <button class="segment" type="button"><span class="segment-icon">▦</span>앨범형</button>
+            <button class="segment" type="button"><span class="segment-icon">▶</span>영상만</button>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">리스트 표시</h2>
+          <div class="option-list">
+            <div class="option">
+              <div class="label-stack">제목 <span class="locked">항상 표시</span></div>
+              <button class="switch is-on is-locked" type="button" aria-label="제목 항상 표시" aria-disabled="true"></button>
+            </div>
+            <div class="option">
+              <div class="label-stack">썸네일</div>
+              <button class="switch is-on" type="button" aria-label="썸네일 표시"></button>
+            </div>
+            <div class="option">
+              <div class="label-stack">댓글 배지</div>
+              <button class="switch is-on" type="button" aria-label="댓글 배지 표시"></button>
+            </div>
+            <div class="option">
+              <div class="label-stack">계급 배지</div>
+              <button class="switch is-on" type="button" aria-label="계급 배지 표시"></button>
+            </div>
+            <div class="option">
+              <div class="label-stack">추천수</div>
+              <button class="switch" type="button" aria-label="추천수 표시"></button>
+            </div>
+            <div class="option">
+              <div class="label-stack">설명</div>
+              <button class="switch" type="button" aria-label="설명 표시"></button>
+            </div>
+            <div class="option">
+              <div class="label-stack">태그</div>
+              <button class="switch" type="button" aria-label="태그 표시"></button>
+            </div>
+            <div class="option">
+              <div class="label-stack">하이라이트</div>
+              <button class="switch" type="button" aria-label="하이라이트 표시"></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">썸네일 위치</h2>
+          <div class="position-row" data-group="thumb">
+            <button class="choice" type="button">왼쪽 <span class="radio">✓</span></button>
+            <button class="choice is-active" type="button">오른쪽 <span class="default-chip">기본</span><span class="radio">✓</span></button>
+          </div>
+        </section>
+      </div>
+
+      <footer class="sheet-foot">
+        <button class="reset" type="button">초기화</button>
+        <button class="apply" type="button">게시판에 적용</button>
+      </footer>
+    </section>
+
+    <div class="toast" role="status">보기방식이 적용되었습니다</div>
+  </main>
+
+  <script>
+    document.querySelectorAll("[data-group]").forEach((group) => {
+      group.addEventListener("click", (event) => {
+        const button = event.target.closest("button");
+        if (!button) return;
+        group.querySelectorAll("button").forEach((item) => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+      });
+    });
+
+    document.querySelectorAll(".switch").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.classList.contains("is-locked")) return;
+        button.classList.toggle("is-on");
+      });
+    });
+
+    document.querySelector(".reset").addEventListener("click", () => {
+      document.querySelectorAll("[data-group]").forEach((group) => {
+        const buttons = group.querySelectorAll("button");
+        buttons.forEach((item) => item.classList.remove("is-active"));
+        const target = group.dataset.group === "thumb" ? buttons[1] : buttons[0];
+        target.classList.add("is-active");
+      });
+      document.querySelectorAll(".switch").forEach((button, index) => {
+        button.classList.toggle("is-on", index < 4);
+      });
+    });
+
+    document.querySelector(".apply").addEventListener("click", () => {
+      const toast = document.querySelector(".toast");
+      toast.classList.add("show");
+      window.setTimeout(() => toast.classList.remove("show"), 1500);
+    });
+  </script>
+</body>
+</html>
