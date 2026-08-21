@@ -107,14 +107,6 @@ openSheet=function(){
   metaGroup.innerHTML=metaRows.map(function(row){return '<button class="toggleRow" data-meta-key="'+row[0]+'"><span>'+row[1]+'</span><span class="switch '+(metaDisplay[row[0]]?'on':'')+'"></span></button>'}).join('');
   scroll.appendChild(metaLabel);
   scroll.appendChild(metaGroup);
-  metaGroup.addEventListener('click',function(event){
-    var button=event.target.closest('[data-meta-key]');
-    if(!button||!metaGroup.contains(button))return;
-    var key=button.dataset.metaKey;
-    metaDisplay[key]=!metaDisplay[key];
-    renderList();
-    openSheet();
-  });
   var label=document.createElement('div');
   label.className='sheetLabel';
   label.textContent='제목 줄 수';
@@ -133,6 +125,16 @@ openSheet=function(){
   var originalReset=reset.onclick;
   reset.onclick=function(){titleLines=2;rankPosition='before';metaDisplay={profileAvatar:false,timeIcon:false,viewIcon:false,recommendIcon:false,commentIcon:false};originalReset.call(this)};
 };
+document.addEventListener('click',function(event){
+  var button=event.target;
+  while(button&&button!==document&&!button.dataset.metaKey)button=button.parentNode;
+  if(!button||button===document)return;
+  event.preventDefault();
+  var key=button.dataset.metaKey;
+  metaDisplay[key]=!metaDisplay[key];
+  renderList();
+  openSheet();
+});
 document.getElementById('viewBtn').onclick=openSheet;
 })();
 // title line selector is added inside the main list controller below.
