@@ -1,0 +1,3 @@
+board view sheet prototype deploy trigger
+commit source: board-view-sheet-prototype.html
+created: 2026-08-21T00:25:43.017Z
