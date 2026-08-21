@@ -4,8 +4,8 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=5f1ed529`
-- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 치지직 라운지형 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, `자유게시판` 선택 시트, 헤더 바로 아래의 저밀도 상단 4탭, 차콜 글쓰기 버튼을 확인함.
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=50ab788f`
+- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 치지직 라운지형 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, `자유게시판` 선택 시트, 당근 기준의 얇은 구분선 상단 4탭, 차콜 글쓰기 버튼을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
 - Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
@@ -52,6 +52,9 @@
 15. Top-navigation optical weight: the initial four-way top navigation was heavier and taller than the Chzzk reference hierarchy, competing with the app title and board toolbar.
    - Fix: reduce the tab strip from 64 px to 56 px; reduce labels from `20 px / 720` to `17 px / 650`, active weight from 820 to 760, and active underline from `58 × 4 px` to `48 × 3 px`.
    - Post-fix evidence: deployed browser reports `56 px` navigation height, `17 px / 650` inactive labels, `17 px / 760` active label, and `48 × 3 px` underline. Selecting `제보` still changes the active state and shows `제보 메뉴 선택`; document-originated console errors are absent.
+16. Karrot-scale top navigation and divider: the Chzzk-scale strip still occupied too much vertical space for the automotive board, and its shadow was stronger than the supplied Karrot community reference.
+   - Fix: set the strip to 52 px with `15 px / 600` inactive labels and `15 px / 700` active label; retain a `48 × 2 px` active underline and use only a `#e5e6e9` 1 px lower divider, without elevation.
+   - Post-fix evidence: deployed browser reports `52 px` navigation height, `15 px / 600` labels, `15 px / 700` active label, `48 × 2 px` underline, `1 px solid rgb(229, 230, 233)` lower divider, and `box-shadow: none`. Document-originated console errors are absent.
 
 ## Required fidelity surfaces
 
@@ -97,6 +100,7 @@
 - [x] Lower and reduce the fixed GNB, move the visible left chevron toward the reference edge, and switch the compose FAB to charcoal black.
 - [x] Move `홈 / 게시판 / 제보 / 결함` from the bottom GNB to the app-bar-adjacent Chzzk-style top tab strip.
 - [x] Reduce the upper four-tab GNB visual weight to the Chzzk-style hierarchy.
+- [x] Recalibrate the top GNB to the supplied Karrot community reference and replace its shadow with a hairline divider.
 
 ## Follow-up polish
 
