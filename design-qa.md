@@ -4,8 +4,8 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=e39eea0`
-- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 간결형 목록 화면을 원본 캡처와 함께 시각 비교함. 최종 캡처에서 제목 바로 뒤 댓글, 50 px 썸네일, 69 px 행 리듬, 12 px 메타 아이콘 및 9 px 이미지 수를 확인함.
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=6402cff`
+- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 캡처에서 간결한 `자유` 보드명, 동등한 우측 보기 방식·유형 컨트롤, 제목 바로 뒤 댓글, 50 px 썸네일, 69 px 행 리듬을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
 - Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
@@ -34,6 +34,9 @@
 9. Metadata icon and image-count optical scale: the compact icons and thumbnail count read smaller than the Chzzk reference at the same screen scale.
    - Fix: increase compact metadata icons from 10.5 px to 12 px; increase the thumbnail count to 9 px in a 16 px capsule.
    - Post-fix evidence: deployed browser measures 12 × 12 px metadata icons and a 9 px image-count label in a 16 px-high capsule.
+10. Board-control simplification: the prior red news chip, separate notice chip, and subscription action made the list header materially heavier than the Chzzk board-control pattern.
+   - Fix: replace that group with a plain `자유 ▾` board selector; place `보기 방식` and `목록형 ▾` as equal-height right controls. The Bobaedream app header, category row, and notice post remain unchanged.
+   - Post-fix evidence: deployed browser confirms the news/notice top controls are absent, board-control height is 56 px, and both right controls have 44 px touch height with matching vertical centers.
 
 ## Required fidelity surfaces
 
