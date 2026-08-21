@@ -284,6 +284,36 @@
       border: 1px solid #f0f1f3;
     }
 
+    .thumb-panel {
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: #f7f7f8;
+      border: 1px solid #f0f1f3;
+    }
+
+    .thumb-panel .option {
+      border-bottom: 0;
+    }
+
+    .thumb-position {
+      padding: 12px 14px 14px 18px;
+      border-top: 1px solid #e9eaed;
+      transition: opacity .18s ease;
+    }
+
+    .thumb-position-label {
+      margin: 0 0 10px;
+      color: #6f737a;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -.2px;
+    }
+
+    .thumb-position.is-disabled {
+      opacity: .42;
+      pointer-events: none;
+    }
+
     .option {
       min-height: 58px;
       display: flex;
@@ -523,12 +553,25 @@
         </section>
 
         <section class="section">
+          <h2 class="section-title">썸네일</h2>
+          <div class="thumb-panel">
+            <div class="option">
+              <div class="label-stack">표시</div>
+              <button class="switch is-on" type="button" aria-label="썸네일 표시" data-thumbnail-toggle></button>
+            </div>
+            <div class="thumb-position">
+              <p class="thumb-position-label">위치</p>
+              <div class="position-row" data-group="thumb">
+                <button class="choice" type="button">왼쪽 <span class="radio">✓</span></button>
+                <button class="choice is-active" type="button">오른쪽 <span class="default-chip">기본</span><span class="radio">✓</span></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
           <h2 class="section-title">리스트 표시</h2>
           <div class="option-list">
-            <div class="option">
-              <div class="label-stack">썸네일</div>
-              <button class="switch is-on" type="button" aria-label="썸네일 표시"></button>
-            </div>
             <div class="option">
               <div class="label-stack">댓글 배지</div>
               <button class="switch is-on" type="button" aria-label="댓글 배지 표시"></button>
@@ -549,18 +592,6 @@
               <div class="label-stack">태그</div>
               <button class="switch" type="button" aria-label="태그 표시"></button>
             </div>
-            <div class="option">
-              <div class="label-stack">하이라이트</div>
-              <button class="switch" type="button" aria-label="하이라이트 표시"></button>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">썸네일 위치</h2>
-          <div class="position-row" data-group="thumb">
-            <button class="choice" type="button">왼쪽 <span class="radio">✓</span></button>
-            <button class="choice is-active" type="button">오른쪽 <span class="default-chip">기본</span><span class="radio">✓</span></button>
           </div>
         </section>
       </div>
@@ -584,10 +615,18 @@
       });
     });
 
+    const updateThumbnailPosition = () => {
+      const toggle = document.querySelector("[data-thumbnail-toggle]");
+      const position = document.querySelector(".thumb-position");
+      if (!toggle || !position) return;
+      position.classList.toggle("is-disabled", !toggle.classList.contains("is-on"));
+    };
+
     document.querySelectorAll(".switch").forEach((button) => {
       button.addEventListener("click", () => {
         if (button.classList.contains("is-locked")) return;
         button.classList.toggle("is-on");
+        updateThumbnailPosition();
       });
     });
 
@@ -601,7 +640,10 @@
       document.querySelectorAll(".switch").forEach((button, index) => {
         button.classList.toggle("is-on", index < 3);
       });
+      updateThumbnailPosition();
     });
+
+    updateThumbnailPosition();
 
     document.querySelector(".apply").addEventListener("click", () => {
       const toast = document.querySelector(".toast");
