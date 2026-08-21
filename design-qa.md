@@ -19,13 +19,16 @@
 4. Density calibration: the initial 60 px thumbnails and 100 px rows were visibly larger than the Chzzk source.
    - Fix: thumbnail set to 48 px; list row to 64 px plus divider (browser-measured 65 px); recommendation/view icons set to 12 px.
    - Post-fix evidence: final deployed browser state reports `compact: true`, thumbnail `48 × 48 px`, row `65 px`, and meta icon `12 × 12 px`.
+5. Typography calibration: title, reply count, and meta text in the Bobaedream capture remained heavier and larger than the Chzzk source.
+   - Fix: title `17 px/420/22 px`, parenthesized reply count `16 px/500`, metadata `13 px`; meta icon `11 px` with a `3 px` gap before its number and `6 px` between metadata groups.
+   - Post-fix evidence: deployed browser computed styles match those values with `compact: true`.
 
 ## Required fidelity surfaces
 
 ### Fonts and typography
 
 - Pretendard is used throughout.
-- Compact titles are one line at 18 px/23 px with truncation; metadata is visually subordinate at 14 px and 12 px icons.
+- Compact titles are one line at 17 px/22 px with truncation; metadata is visually subordinate at 13 px with 11 px icons.
 - Parenthesized reply counts are green and attached to the title, matching the reference hierarchy.
 
 ### Spacing and layout rhythm
