@@ -4,8 +4,8 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=b4004acd`
-- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 네이버 카페 인기글형의 낮은 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, `자유게시판` 선택 시트, 탭 굵기와 언더라인으로만 선택 상태를 구분한 상단 4탭, 차콜 글쓰기 버튼을 확인함.
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=e7d85215`
+- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 네이버 카페 인기글형의 낮은 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, 치지직형 회색 밴드로 분리한 `자유게시판` 도구줄, 탭 굵기와 언더라인으로만 선택 상태를 구분한 상단 4탭, 차콜 글쓰기 버튼을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
 - Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
@@ -58,6 +58,9 @@
 17. Final Naver-community header and top-navigation hierarchy: the supplied Naver Cafe popular-post reference has a quiet title bar and dark, readable tabs that differ through emphasis rather than through a large color or size jump.
    - Fix: use a 60 px, shadow-free header with `커뮤니티` at `19 px / 700`; use a 50 px top navigation with `16 px / 520` inactive labels in `#4B4D52`, an active `16 px / 720` label in `#111214`, a `44 × 3 px` underline, and a single 1 px lower divider.
    - Post-fix evidence: deployed browser reports header `60 px`, title `19 px / 700`, no header shadow; navigation `50 px`, inactive `16 px / 520 / rgb(75, 77, 82)`, active `16 px / 720 / rgb(17, 18, 20)`, underline `44 × 3 px`, and no document-originated console errors.
+18. Board-toolbar separation: the line above the top navigation created unnecessary header chrome, while the `자유게시판` row lacked the visual bands that separate the Chzzk board-control layer from navigation and categories.
+   - Fix: remove the app-header lower border. Surround the 56 px board toolbar with 8 px `#f6f7f8` bands and 1 px `#e7e8eb` upper and lower dividers; preserve the top-navigation lower divider.
+   - Post-fix evidence: deployed browser reports no app-header border, top-navigation `1 px solid rgb(229, 230, 233)` divider, and board-toolbar 8 px upper/lower bands with matching `1 px solid rgb(231, 232, 235)` dividers. No document-originated console errors were observed.
 
 ## Required fidelity surfaces
 
@@ -105,6 +108,7 @@
 - [x] Reduce the upper four-tab GNB visual weight to the Chzzk-style hierarchy.
 - [x] Recalibrate the top GNB to the supplied Karrot community reference and replace its shadow with a hairline divider.
 - [x] Finalize the header and top navigation with the supplied Naver Cafe popular-post hierarchy.
+- [x] Remove the line above the top menu and add Chzzk-style bands and dividers around the board toolbar.
 
 ## Follow-up polish
 
