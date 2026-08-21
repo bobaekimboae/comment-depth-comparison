@@ -4,8 +4,8 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=e7d85215`
-- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 네이버 카페 인기글형의 낮은 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, 치지직형 회색 밴드로 분리한 `자유게시판` 도구줄, 탭 굵기와 언더라인으로만 선택 상태를 구분한 상단 4탭, 차콜 글쓰기 버튼을 확인함.
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=ed9a99f3`
+- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 네이버 카페 인기글형의 낮은 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, 치지직형 회색 밴드로 분리한 `자유게시판` 도구줄과 36 px 자동차 커뮤니티 프사, 탭 굵기와 언더라인으로만 선택 상태를 구분한 상단 4탭, 차콜 글쓰기 버튼을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
 - Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
@@ -61,6 +61,9 @@
 18. Board-toolbar separation: the line above the top navigation created unnecessary header chrome, while the `자유게시판` row lacked the visual bands that separate the Chzzk board-control layer from navigation and categories.
    - Fix: remove the app-header lower border. Surround the 56 px board toolbar with 8 px `#f6f7f8` bands and 1 px `#e7e8eb` upper and lower dividers; preserve the top-navigation lower divider.
    - Post-fix evidence: deployed browser reports no app-header border, top-navigation `1 px solid rgb(229, 230, 233)` divider, and board-toolbar 8 px upper/lower bands with matching `1 px solid rgb(231, 232, 235)` dividers. No document-originated console errors were observed.
+19. Board identity and quiet notice treatment: the board selector needed a compact identity anchor, and the red notice treatment was visually louder than the surrounding list.
+   - Fix: calibrate the inner board-control row to 48 px while retaining 8 px `#f6f7f8` bands and its hairline dividers; add a 36 px circular automobile-community avatar before `자유게시판`. Change the notice chip to `#f4f5f6` / `#74777d`, lower the notice title to weight 520, and use the FM Korea-style immediate blue reply count `[39]` after the title.
+   - Post-fix evidence: deployed browser reports a complete 36 × 36 px avatar (96 px natural image), 48 px toolbar with 8 px top/bottom margins, notice chip `rgb(244, 245, 246)` / `rgb(116, 119, 125)`, notice title weight 520, and `[39]` in `rgb(50, 103, 174)`. No document-originated console errors were observed.
 
 ## Required fidelity surfaces
 
@@ -109,6 +112,7 @@
 - [x] Recalibrate the top GNB to the supplied Karrot community reference and replace its shadow with a hairline divider.
 - [x] Finalize the header and top navigation with the supplied Naver Cafe popular-post hierarchy.
 - [x] Remove the line above the top menu and add Chzzk-style bands and dividers around the board toolbar.
+- [x] Match the board-toolbar inner rhythm to Chzzk, add the circular automotive board avatar, and soften the notice row with FM Korea-style blue bracket replies.
 
 ## Follow-up polish
 
