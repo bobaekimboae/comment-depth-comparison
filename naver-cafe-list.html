@@ -65,6 +65,8 @@ renderList=function(){
 openSheet=function(){
   baseOpenSheet();
   var scroll=document.querySelector('#sheet .sheetScroll');
+  var highlight=scroll.querySelector('[data-key="highlight"]');
+  if(highlight)highlight.remove();
   var label=document.createElement('div');
   label.className='sheetLabel';
   label.textContent='제목 줄 수';
