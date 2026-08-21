@@ -53,6 +53,7 @@ function openTypeSheet(){var types=[['default','목록형','기본',true,true],[
 function closeSheet(){document.getElementById('overlay').classList.remove('open');document.getElementById('sheet').classList.remove('open')}
 document.getElementById('overlay').onclick=closeSheet;document.getElementById('viewBtn').onclick=openSheet;document.getElementById('typeBtn').onclick=openTypeSheet;document.querySelector('.fab').onclick=function(){toast('글쓰기 화면 연결 대상')};renderTabs();renderList();
 var titleLines=2;
+var rankPosition='before';
 var baseRenderList=renderList;
 var baseOpenSheet=openSheet;
 var titleLineStyle=document.createElement('style');
@@ -61,12 +62,33 @@ document.head.appendChild(titleLineStyle);
 renderList=function(){
   baseRenderList();
   [].forEach.call(document.querySelectorAll('.item'),function(item){item.classList.toggle('title1',titleLines===1)});
+  [].forEach.call(document.querySelectorAll('.meta'),function(meta){
+    var rank=meta.querySelector('.rank');
+    if(!rank)return;
+    var user=rank.nextElementSibling;
+    if(rankPosition==='after'&&user)user.insertAdjacentElement('afterend',rank);
+    else meta.insertBefore(rank,meta.firstChild);
+  });
 };
 openSheet=function(){
   baseOpenSheet();
   var scroll=document.querySelector('#sheet .sheetScroll');
   var highlight=scroll.querySelector('[data-key="highlight"]');
   if(highlight)highlight.remove();
+  var rankLabel=document.createElement('div');
+  rankLabel.className='sheetLabel';
+  rankLabel.textContent='계급 배지 위치';
+  var rankGroup=document.createElement('div');
+  rankGroup.className='sheetGroup';
+  rankGroup.innerHTML=[['before','닉네임 앞','기본'],['after','닉네임 뒤','']].map(function(option){
+    var on=rankPosition===option[0];
+    return '<button class="modeRow '+(on?'on':'')+'" data-rank-position="'+option[0]+'">'+icon('list')+'<span class="modeText"><b>'+option[1]+'</b>'+(option[2]?'<em class="stateChip">'+option[2]+'</em>':'')+'</span><span class="radio"></span></button>';
+  }).join('');
+  scroll.appendChild(rankLabel);
+  scroll.appendChild(rankGroup);
+  [].forEach.call(rankGroup.querySelectorAll('[data-rank-position]'),function(button){
+    button.onclick=function(){rankPosition=button.dataset.rankPosition;renderList();openSheet()};
+  });
   var label=document.createElement('div');
   label.className='sheetLabel';
   label.textContent='제목 줄 수';
@@ -83,7 +105,7 @@ openSheet=function(){
   });
   var reset=document.getElementById('sheetReset');
   var originalReset=reset.onclick;
-  reset.onclick=function(){titleLines=2;originalReset.call(this)};
+  reset.onclick=function(){titleLines=2;rankPosition='before';originalReset.call(this)};
 };
 document.getElementById('viewBtn').onclick=openSheet;
 })();
