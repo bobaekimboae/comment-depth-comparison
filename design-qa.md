@@ -4,8 +4,8 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=6402cff`
-- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 캡처에서 간결한 `자유` 보드명, 동등한 우측 보기 방식·유형 컨트롤, 제목 바로 뒤 댓글, 50 px 썸네일, 69 px 행 리듬을 확인함.
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=6392f5e`
+- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 `자유게시판` 보드명과 게시판 선택 시트, 균형 잡힌 우측 보기 방식·유형 컨트롤, 제목 바로 뒤 댓글, 50 px 썸네일, 68 px 행 리듬을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
 - Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
@@ -37,19 +37,22 @@
 10. Board-control simplification: the prior red news chip, separate notice chip, and subscription action made the list header materially heavier than the Chzzk board-control pattern.
    - Fix: replace that group with a plain `자유 ▾` board selector; place `보기 방식` and `목록형 ▾` as equal-height right controls. The Bobaedream app header, category row, and notice post remain unchanged.
    - Post-fix evidence: deployed browser confirms the news/notice top controls are absent, board-control height is 56 px, and both right controls have 44 px touch height with matching vertical centers.
+11. Compact reply and board-selection calibration: reply counts needed to remain subordinate to the title while retaining the board's blue token; the top board name needed the source's selectable-board behavior.
+   - Fix: set compact replies to `15 px / 500` with a 4 px title gap; retain the `15.5 px / 400` Bobaedream title and `#96989D` metadata. Rename the selector to `자유게시판` and add a Chzzk-pattern `게시판 선택` bottom sheet. Reduce the compose FAB to `60 px` with a `28 px` pencil icon.
+   - Post-fix evidence: deployed browser reports reply `15 px / 500 / rgb(35, 143, 227)`, title `15.5 px / 400 / rgb(17, 17, 17)`, 4 px title–reply gap, 50 × 50 px thumbnail, and 60 × 60 px FAB. The sheet opens with `자유게시판` selected; selecting `테슬라` closes it, changes the toolbar label, activates the Tesla tab, and renders four matching posts.
 
 ## Required fidelity surfaces
 
 ### Fonts and typography
 
 - Pretendard is used throughout.
-- Compact titles are one line at 15.5 px/21 px, weight 400, and Bobaedream list color `#111`; metadata is visually subordinate at 12.5 px with 10.5 px icons and `#96989D`.
+- Compact titles are one line at 15.5 px/21 px, weight 400, and Bobaedream list color `#111`; metadata is visually subordinate at 12.5 px with 12 px icons and `#96989D`.
 - Parenthesized reply counts are blue and attached to the title, following the board's existing comment-color convention while remaining fully visible after title truncation.
 
 ### Spacing and layout rhythm
 
 - The existing Bobaedream header, category tabs, notice row, and compose action remain outside this view-mode change.
-- List rows use a compact 68 px rhythm plus a 1 px divider, thin dividers, left new dots, and 50 px intermittent thumbnails.
+- List rows use a compact 68 px rhythm plus a 1 px divider, thin dividers, left new dots, and 50 px intermittent thumbnails. The compose FAB is 60 px with a 28 px pencil icon.
 
 ### Colors and visual tokens
 
@@ -77,6 +80,7 @@
 - [x] Apply Chzzk-inspired title truncation, 12 px icon metadata, 50 px thumbnail rhythm, and 68 px compact row density to the list area only.
 - [x] Keep the reply count immediately after the visible title while preserving it on long titles.
 - [x] Verify the deployed compact view in the browser.
+- [x] Add and verify the `자유게시판` bottom-sheet selector and Chzzk-scale compose FAB.
 
 ## Follow-up polish
 
