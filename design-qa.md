@@ -15,6 +15,7 @@
 1. Initial compact view showed automotive category labels such as `[전기차]` in titles.
    - Fix: compact view renders the title without the category prefix.
 2. Post-fix browser capture confirms one-line titles, green parenthesized reply counts, icon metadata, intermittent 60 px right thumbnails, and dark circular compose FAB.
+3. Scope refinement: compact mode is now limited to board-list rows; the Bobaedream header, category tabs, notice row, and compose action remain unchanged.
 
 ## Required fidelity surfaces
 
@@ -26,14 +27,12 @@
 
 ### Spacing and layout rhythm
 
-- White 76 px header and 58 px Home/Board tab row establish the same two-tier hierarchy.
+- The existing Bobaedream header, category tabs, notice row, and compose action remain outside this view-mode change.
 - List rows use a compact 100 px rhythm, thin dividers, left new dots, and 60 px intermittent thumbnails.
-- The fixed compose action is a dark circular button in the lower-right corner.
 
 ### Colors and visual tokens
 
-- Compact mode uses a white background, charcoal text and tab underline, neutral-gray metadata, red new dots, and green reply counts.
-- The red Bobaedream shell is suppressed only while compact mode is active.
+- Compact list rows use neutral-gray metadata, red new dots, and green reply counts inside the existing Bobaedream shell.
 
 ### Image quality and asset fidelity
 
@@ -54,7 +53,7 @@
 
 - [x] Add `간결형` to the view selector.
 - [x] Rename the expanded list option to `상세 목록형`.
-- [x] Apply the Chzzk-inspired compact header, tabs, title truncation, icon metadata, thumbnail rhythm, and compose action.
+- [x] Apply Chzzk-inspired title truncation, icon metadata, thumbnail rhythm, and compact row density to the list area only.
 - [x] Verify the deployed compact view in the browser.
 
 ## Follow-up polish
