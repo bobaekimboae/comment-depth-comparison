@@ -4,7 +4,7 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=ffbfcb650`
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=dbaf4fe23`
 - Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 간결형 목록 화면을 원본 캡처와 함께 시각 비교함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
