@@ -54,21 +54,29 @@ function closeSheet(){document.getElementById('overlay').classList.remove('open'
 document.getElementById('overlay').onclick=closeSheet;document.getElementById('viewBtn').onclick=openSheet;document.getElementById('typeBtn').onclick=openTypeSheet;document.querySelector('.fab').onclick=function(){toast('글쓰기 화면 연결 대상')};renderTabs();renderList();
 var titleLines=2;
 var rankPosition='before';
+var metaDisplay={profileAvatar:false,timeIcon:false,viewIcon:false,recommendIcon:false,commentIcon:false};
 var baseRenderList=renderList;
 var baseOpenSheet=openSheet;
 var titleLineStyle=document.createElement('style');
-titleLineStyle.textContent='.item.title1 .itemTitle{-webkit-line-clamp:1;max-height:21px}';
+titleLineStyle.textContent='.item.title1 .itemTitle{-webkit-line-clamp:1;max-height:21px}.metaAvatar{width:15px;height:15px;border-radius:50%;object-fit:cover;flex:0 0 15px}.metaIcon{width:12px;height:12px;vertical-align:-2px;margin-right:2px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.metaRecommend{display:inline-flex;align-items:center}';
 document.head.appendChild(titleLineStyle);
+function metaIcon(type){var path={clock:'<circle cx="8" cy="8" r="5.5"></circle><path d="M8 5v3.3l2.2 1.4"></path>',eye:'<path d="M1.6 8s2.3-4.2 6.4-4.2S14.4 8 14.4 8 12.1 12.2 8 12.2 1.6 8 1.6 8z"></path><circle cx="8" cy="8" r="1.7"></circle>',thumb:'<path d="M5.7 14H3.2V8h2.5"></path><path d="M5.7 8l2.1-4.5c.4-.8 1.6-.5 1.6.4V6h2.7c1 0 1.5.8 1.3 1.8l-.8 4.4c-.2 1.1-.8 1.8-1.9 1.8H5.7z"></path>',comment:'<path d="M2.2 3.5h11.6v7.4H7.3L4.2 13v-2.1h-2z"></path>'}[type]||'';return '<svg class="metaIcon" viewBox="0 0 16 16" aria-hidden="true">'+path+'</svg>'}
 renderList=function(){
   baseRenderList();
   [].forEach.call(document.querySelectorAll('.item'),function(item){item.classList.toggle('title1',titleLines===1)});
-  [].forEach.call(document.querySelectorAll('.meta'),function(meta){
+  [].forEach.call(document.querySelectorAll('.meta'),function(meta,index){
     var rank=meta.querySelector('.rank');
-    if(!rank)return;
-    var user=rank.nextElementSibling;
-    if(rankPosition==='after'&&user)user.insertAdjacentElement('afterend',rank);
-    else meta.insertBefore(rank,meta.firstChild);
+    var parts=[].filter.call(meta.children,function(child){return !child.classList.contains('rank')});
+    var user=parts[0],time=parts[1],viewCount=parts[2];
+    if(!user||!time||!viewCount)return;
+    if(metaDisplay.profileAvatar){var avatar=document.createElement('img');avatar.className='metaAvatar';avatar.alt='';avatar.src='https://i.pravatar.cc/48?img='+((Number(item.dataset.id||index+1)%70)+1);meta.insertBefore(avatar,user)}
+    var rawTime=time.textContent.trim(),rawView=viewCount.textContent.replace(/^조회\s*/, '').trim();
+    time.innerHTML=(metaDisplay.timeIcon?metaIcon('clock'):'')+rawTime;
+    viewCount.innerHTML=(metaDisplay.viewIcon?metaIcon('eye'): '조회 ')+rawView;
+    if(display.recommendCount){var recommend=document.createElement('span');recommend.className='metaRecommend';var n=(Number(item.dataset.id||index+1)*7)%53+1;recommend.innerHTML=(metaDisplay.recommendIcon?metaIcon('thumb'):'추천 ')+n;meta.appendChild(recommend)}
+    if(rank){if(rankPosition==='after')user.insertAdjacentElement('afterend',rank);else meta.insertBefore(rank,user)}
   });
+  [].forEach.call(document.querySelectorAll('.commentBox span'),function(label){label.innerHTML=metaDisplay.commentIcon?metaIcon('comment'):'댓글'});
 };
 openSheet=function(){
   baseOpenSheet();
@@ -89,6 +97,19 @@ openSheet=function(){
   [].forEach.call(rankGroup.querySelectorAll('[data-rank-position]'),function(button){
     button.onclick=function(){rankPosition=button.dataset.rankPosition;renderList();openSheet()};
   });
+  var metaLabel=document.createElement('div');
+  metaLabel.className='sheetLabel';
+  metaLabel.textContent='메타정보 아이콘';
+  var metaGroup=document.createElement('div');
+  metaGroup.className='sheetGroup';
+  metaGroup.dataset.adminOnly='true';
+  var metaRows=[['profileAvatar','닉네임 프사'],['timeIcon','등록시간 아이콘'],['viewIcon','조회수 아이콘'],['recommendIcon','추천수 아이콘'],['commentIcon','댓글 아이콘']];
+  metaGroup.innerHTML=metaRows.map(function(row){return '<button class="toggleRow" data-meta-key="'+row[0]+'"><span>'+row[1]+'</span><span class="switch '+(metaDisplay[row[0]]?'on':'')+'"></span></button>'}).join('');
+  scroll.appendChild(metaLabel);
+  scroll.appendChild(metaGroup);
+  [].forEach.call(metaGroup.querySelectorAll('[data-meta-key]'),function(button){
+    button.onclick=function(){var key=button.dataset.metaKey;metaDisplay[key]=!metaDisplay[key];renderList();openSheet()};
+  });
   var label=document.createElement('div');
   label.className='sheetLabel';
   label.textContent='제목 줄 수';
@@ -105,7 +126,7 @@ openSheet=function(){
   });
   var reset=document.getElementById('sheetReset');
   var originalReset=reset.onclick;
-  reset.onclick=function(){titleLines=2;rankPosition='before';originalReset.call(this)};
+  reset.onclick=function(){titleLines=2;rankPosition='before';metaDisplay={profileAvatar:false,timeIcon:false,viewIcon:false,recommendIcon:false,commentIcon:false};originalReset.call(this)};
 };
 document.getElementById('viewBtn').onclick=openSheet;
 })();
