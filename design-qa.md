@@ -64,6 +64,9 @@
 19. Board identity and quiet notice treatment: the board selector needed a compact identity anchor, and the red notice treatment was visually louder than the surrounding list.
    - Fix: calibrate the inner board-control row to 48 px while retaining 8 px `#f6f7f8` bands and its hairline dividers; add a 28 px circular automobile-community avatar before `자유게시판`. Change the notice chip to `#f4f5f6` / `#74777d`, lower the notice title to weight 520, and use a regular-weight immediate blue reply count `(39)` after the title.
    - Post-fix evidence: deployed browser reports a complete 28 × 28 px avatar (96 px natural image), 48 px toolbar with 8 px top/bottom margins, notice chip `rgb(244, 245, 246)` / `rgb(116, 119, 125)`, notice title weight 520, and `(39)` at weight 400. No document-originated console errors were observed.
+20. Compact metadata icon optical alignment: the 24 px heart source and 20 px eye source occupied different amounts of their SVG viewboxes even when their CSS boxes were equal.
+   - Fix: place recommendation and view metrics in dedicated 16 px flex rows; retain a 12 px heart box and set the eye box to 14 px so both visible glyphs share the same vertical center.
+   - Post-fix evidence: deployed compact view reports heart `12 × 12 px`, eye `14 × 14 px`, and a `0 px` center-line delta.
 
 ## Required fidelity surfaces
 
