@@ -57,7 +57,7 @@ var rankPosition='before';
 var baseRenderList=renderList;
 var baseOpenSheet=openSheet;
 var titleLineStyle=document.createElement('style');
-titleLineStyle.textContent='.item.title1 .itemTitle{-webkit-line-clamp:1;max-height:21px}.metaAvatar{width:15px;height:15px;border-radius:50%;object-fit:cover;flex:0 0 15px}.metaIcon{width:12px;height:12px;vertical-align:-2px;margin-right:2px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.metaRecommend{display:inline-flex;align-items:center}';
+titleLineStyle.textContent='.item.title1 .itemTitle{-webkit-line-clamp:1;max-height:21px}.metaAvatar{width:15px;height:15px;border-radius:50%;object-fit:cover;flex:0 0 15px}.metaIcon{width:12px;height:12px;vertical-align:-2px;margin-right:2px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.metaRecommend{display:inline-flex;align-items:center}.radio{width:19px;height:19px;border-radius:50%;border-color:#a3a6ab;background:#fff;flex-basis:19px}.modeRow.on .radio{border-color:#222;background:#fff}.modeRow.on .radio:after{inset:4px;width:auto;height:auto;border:0;border-radius:50%;background:#222;transform:none}';
 document.head.appendChild(titleLineStyle);
 function metaIcon(type){var path={clock:'<circle cx="8" cy="8" r="5.5"></circle><path d="M8 5v3.3l2.2 1.4"></path>',eye:'<path d="M1.6 8s2.3-4.2 6.4-4.2S14.4 8 14.4 8 12.1 12.2 8 12.2 1.6 8 1.6 8z"></path><circle cx="8" cy="8" r="1.7"></circle>',thumb:'<path d="M5.7 14H3.2V8h2.5"></path><path d="M5.7 8l2.1-4.5c.4-.8 1.6-.5 1.6.4V6h2.7c1 0 1.5.8 1.3 1.8l-.8 4.4c-.2 1.1-.8 1.8-1.9 1.8H5.7z"></path>',comment:'<path d="M2.2 3.5h11.6v7.4H7.3L4.2 13v-2.1h-2z"></path>'}[type]||'';return '<svg class="metaIcon" viewBox="0 0 16 16" aria-hidden="true">'+path+'</svg>'}
 renderList=function(){
@@ -84,8 +84,8 @@ openSheet=function(){
   var scroll=document.getElementById('sheetScroll');
   function section(label){var head=document.createElement('div');head.className='sheetLabel';head.textContent=label;var group=document.createElement('div');group.className='sheetGroup';scroll.appendChild(head);scroll.appendChild(group);return group}
   function dataKey(attribute){return attribute.slice(5).replace(/-([a-z])/g,function(_,letter){return letter.toUpperCase()})}
-  function choices(label,items,selected,key,handler){var group=section(label),property=dataKey(key);group.innerHTML=items.map(function(item){var on=selected===item[0];return '<button class="modeRow '+(on?'on':'')+'" '+key+'="'+item[0]+'">'+icon(item[3]||'list')+'<span class="modeText"><b>'+item[1]+'</b>'+(item[2]?'<em class="stateChip">'+item[2]+'</em>':'')+'</span><span class="radio"></span></button>'}).join('');[].forEach.call(group.querySelectorAll('['+key+']'),function(button){button.onclick=function(){handler(button.dataset[property]);renderList();openSheet()}})}
-  function toggles(label,items,values,key){var group=section(label),property=dataKey(key);group.innerHTML=items.map(function(item){return '<button class="toggleRow" '+key+'="'+item[0]+'"><span>'+item[1]+'</span><span class="switch '+(values[item[0]]?'on':'')+'"></span></button>'}).join('');[].forEach.call(group.querySelectorAll('['+key+']'),function(button){button.onclick=function(){var name=button.dataset[property];values[name]=!values[name];renderList();openSheet()}});return group}
+  function choices(label,items,selected,key,handler){var group=section(label),property=dataKey(key);group.setAttribute('role','radiogroup');group.setAttribute('aria-label',label);group.innerHTML=items.map(function(item){var on=selected===item[0];return '<button class="modeRow '+(on?'on':'')+'" role="radio" aria-checked="'+on+'" '+key+'="'+item[0]+'">'+icon(item[3]||'list')+'<span class="modeText"><b>'+item[1]+'</b>'+(item[2]?'<em class="stateChip">'+item[2]+'</em>':'')+'</span><span class="radio" aria-hidden="true"></span></button>'}).join('');[].forEach.call(group.querySelectorAll('['+key+']'),function(button){button.onclick=function(){handler(button.dataset[property]);renderList();openSheet()}})}
+  function toggles(label,items,values,key){var group=section(label),property=dataKey(key);group.innerHTML=items.map(function(item){var on=!!values[item[0]];return '<button class="toggleRow" role="switch" aria-checked="'+on+'" '+key+'="'+item[0]+'"><span>'+item[1]+'</span><span class="switch '+(on?'on':'')+'" aria-hidden="true"></span></button>'}).join('');[].forEach.call(group.querySelectorAll('['+key+']'),function(button){button.onclick=function(){var name=button.dataset[property];values[name]=!values[name];renderList();openSheet()}});return group}
   choices('보기 방식',[['list','목록형','기본','list'],['feed','피드형','','feed'],['album','앨범형','','album']],mode,'data-mode',function(value){mode=value});
   toggles('리스트 표시',[['thumbnail','썸네일'],['commentBadge','댓글 배지'],['rankBadge','계급 배지'],['recommendCount','추천수'],['categoryLabel','말머리'],['tag','태그']],display,'data-display-key');
   choices('썸네일 위치',[['right','오른쪽','기본','thumbRight'],['left','왼쪽','','thumbLeft']],thumbPosition,'data-thumb-position',function(value){thumbPosition=value});
@@ -97,7 +97,18 @@ openSheet=function(){
   document.getElementById('sheetApply').onclick=closeSheet;
   document.getElementById('sheetReset').onclick=function(){mode='list';thumbPosition='right';titleLines=2;rankPosition='before';display={thumbnail:true,commentBadge:true,recommendCount:false,categoryLabel:true,tag:false,highlight:false,rankBadge:false,profileAvatar:false,timeIcon:false,viewIcon:false,recommendIcon:false,commentIcon:false};renderList();openSheet()};
 };
+openTypeSheet=function(){
+  var types=[['default','목록형','기본',true,true],['no-badge','목록형 · 댓글 배지 없음','',true,false],['no-thumb','목록형 · 썸네일 없음','',false,true]];
+  var sh=document.getElementById('sheet'),ov=document.getElementById('overlay');
+  sh.innerHTML='<div class="handle"></div><div class="sheetHead"><div class="sheetTitle">유형 선택</div><button class="sheetClose" id="sheetClose" aria-label="닫기">×</button></div><div class="sheetScroll"><div class="sheetLabel">목록형 유형</div><div class="sheetGroup" role="radiogroup" aria-label="목록형 유형">'+types.map(function(type){var on=display.thumbnail===type[3]&&display.commentBadge===type[4];return '<button class="modeRow '+(on?'on':'')+'" role="radio" aria-checked="'+on+'" data-thumb="'+(type[3]?'1':'0')+'" data-badge="'+(type[4]?'1':'0')+'">'+icon(type[3]?'list':'text')+'<span class="modeText"><b>'+type[1]+'</b>'+(type[2]?'<em class="stateChip">'+type[2]+'</em>':'')+'</span><span class="radio" aria-hidden="true"></span></button>'}).join('')+'</div></div><div class="sheetFooter"><button class="clearBtn" id="typeReset">초기화</button><button class="applyBtn" id="typeApply">적용</button></div>';
+  ov.classList.add('open');sh.classList.add('open');
+  document.getElementById('sheetClose').onclick=closeSheet;
+  document.getElementById('typeApply').onclick=closeSheet;
+  document.getElementById('typeReset').onclick=function(){display.thumbnail=true;display.commentBadge=true;renderList();openTypeSheet()};
+  [].forEach.call(sh.querySelectorAll('[data-thumb]'),function(button){button.onclick=function(){display.thumbnail=button.dataset.thumb==='1';display.commentBadge=button.dataset.badge==='1';renderList();openTypeSheet()}});
+};
 document.getElementById('viewBtn').onclick=openSheet;
+document.getElementById('typeBtn').onclick=openTypeSheet;
 })();
 // title line selector is added inside the main list controller below.
 </script>
