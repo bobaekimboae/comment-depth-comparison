@@ -107,8 +107,13 @@ openSheet=function(){
   metaGroup.innerHTML=metaRows.map(function(row){return '<button class="toggleRow" data-meta-key="'+row[0]+'"><span>'+row[1]+'</span><span class="switch '+(metaDisplay[row[0]]?'on':'')+'"></span></button>'}).join('');
   scroll.appendChild(metaLabel);
   scroll.appendChild(metaGroup);
-  [].forEach.call(metaGroup.querySelectorAll('[data-meta-key]'),function(button){
-    button.onclick=function(){var key=button.dataset.metaKey;metaDisplay[key]=!metaDisplay[key];renderList();openSheet()};
+  metaGroup.addEventListener('click',function(event){
+    var button=event.target.closest('[data-meta-key]');
+    if(!button||!metaGroup.contains(button))return;
+    var key=button.dataset.metaKey;
+    metaDisplay[key]=!metaDisplay[key];
+    renderList();
+    openSheet();
   });
   var label=document.createElement('div');
   label.className='sheetLabel';
