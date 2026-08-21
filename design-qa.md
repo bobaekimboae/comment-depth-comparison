@@ -4,8 +4,8 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=dc959434`
-- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 치지직 라운지형 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, `자유게시판` 선택 시트, 화면 최하단 GNB, 차콜 글쓰기 버튼을 확인함.
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=49b785872`
+- Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 치지직 라운지형 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, `자유게시판` 선택 시트, 헤더 바로 아래의 상단 4탭, 차콜 글쓰기 버튼을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
 - Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
@@ -46,6 +46,9 @@
 13. Bottom anchoring and left-chevron calibration: the GNB read slightly tall/high in the browser capture, while the left chevron's visible mark needed to sit closer to the Chzzk reference's screen edge.
    - Fix: reduce the GNB to 56 px, keep it fixed at viewport bottom, move the FAB down to a 10 px clearance above it, and set the header's left padding to 8 px (visible chevron mark lands at approximately 16 px after SVG internal spacing). Change the FAB fill to Airbnb-style charcoal `#252525`.
    - Post-fix evidence: deployed browser reports GNB `56 px` at `bottom: 0`, FAB bottom offset `66 px`, 10 px FAB–GNB clearance, header height `64 px`, and charcoal FAB `rgb(37, 37, 37)`.
+14. Primary-navigation hierarchy: a fixed bottom GNB obscured the reference's header-to-board-tab hierarchy, which presents its primary sections directly below the app header.
+   - Fix: move `홈 / 게시판 / 제보 / 결함` to a non-fixed, four-column top navigation immediately after the app bar. Set the navigation to 64 px; use 20 px labels and a 58 × 4 px charcoal underline for the active tab. Return the charcoal compose FAB to the bottom-safe area.
+   - Post-fix evidence: deployed browser reports the navigation directly after `.appbar`, `64 px` height, `position: relative`, active `게시판`, and FAB `rgb(37, 37, 37)` at 22 px from the viewport bottom. Selecting `제보` changes the active tab and displays the selection toast with no document-originated console errors.
 
 ## Required fidelity surfaces
 
@@ -89,6 +92,7 @@
 - [x] Add and verify the `자유게시판` bottom-sheet selector and Chzzk-scale compose FAB.
 - [x] Replace the red title header with the supplied lounge icons, add the four-way GNB, and verify the heart recommendation icon.
 - [x] Lower and reduce the fixed GNB, move the visible left chevron toward the reference edge, and switch the compose FAB to charcoal black.
+- [x] Move `홈 / 게시판 / 제보 / 결함` from the bottom GNB to the app-bar-adjacent Chzzk-style top tab strip.
 
 ## Follow-up polish
 
