@@ -78,6 +78,11 @@ renderList=function(){
   });
   [].forEach.call(document.querySelectorAll('.commentBox span'),function(label){label.innerHTML=metaDisplay.commentIcon?metaIcon('comment'):'댓글'});
 };
+window.toggleMetaDisplay=function(key){
+  metaDisplay[key]=!metaDisplay[key];
+  renderList();
+  openSheet();
+};
 openSheet=function(){
   baseOpenSheet();
   var scroll=document.querySelector('#sheet .sheetScroll');
@@ -104,7 +109,7 @@ openSheet=function(){
   metaGroup.className='sheetGroup';
   metaGroup.dataset.adminOnly='true';
   var metaRows=[['profileAvatar','닉네임 프사'],['timeIcon','등록시간 아이콘'],['viewIcon','조회수 아이콘'],['recommendIcon','추천수 아이콘'],['commentIcon','댓글 아이콘']];
-  metaGroup.innerHTML=metaRows.map(function(row){return '<button class="toggleRow" data-meta-key="'+row[0]+'"><span>'+row[1]+'</span><span class="switch '+(metaDisplay[row[0]]?'on':'')+'"></span></button>'}).join('');
+  metaGroup.innerHTML=metaRows.map(function(row){return '<button class="toggleRow" data-meta-key="'+row[0]+'" onclick="window.toggleMetaDisplay(\''+row[0]+'\')"><span>'+row[1]+'</span><span class="switch '+(metaDisplay[row[0]]?'on':'')+'"></span></button>'}).join('');
   scroll.appendChild(metaLabel);
   scroll.appendChild(metaGroup);
   var label=document.createElement('div');
@@ -125,16 +130,6 @@ openSheet=function(){
   var originalReset=reset.onclick;
   reset.onclick=function(){titleLines=2;rankPosition='before';metaDisplay={profileAvatar:false,timeIcon:false,viewIcon:false,recommendIcon:false,commentIcon:false};originalReset.call(this)};
 };
-document.addEventListener('click',function(event){
-  var button=event.target;
-  while(button&&button!==document&&!button.dataset.metaKey)button=button.parentNode;
-  if(!button||button===document)return;
-  event.preventDefault();
-  var key=button.dataset.metaKey;
-  metaDisplay[key]=!metaDisplay[key];
-  renderList();
-  openSheet();
-});
 document.getElementById('viewBtn').onclick=openSheet;
 })();
 // title line selector is added inside the main list controller below.
