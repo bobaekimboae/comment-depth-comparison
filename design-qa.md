@@ -4,7 +4,7 @@
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=dbaf4fe23`
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=700362527`
 - Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 간결형 목록 화면을 원본 캡처와 함께 시각 비교함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
@@ -22,13 +22,16 @@
 5. Typography calibration: title, reply count, and meta text in the Bobaedream capture remained heavier and larger than the Chzzk source.
    - Fix: title `17 px/420/22 px`, parenthesized reply count `16 px/500`, metadata `13 px`; meta icon `11 px` with a `3 px` gap before its number and `6 px` between metadata groups.
    - Post-fix evidence: deployed browser computed styles match those values with `compact: true`.
+6. Reply-count preservation: inline reply counts could be cut off when a one-line title reached its clamp boundary.
+   - Fix: split the compact title into a truncating `compactTitleText` region and a non-shrinking reply-count region.
+   - Post-fix evidence: a long-title row truncates only its title while the `(28)` reply count remains fully visible.
 
 ## Required fidelity surfaces
 
 ### Fonts and typography
 
 - Pretendard is used throughout.
-- Compact titles are one line at 17 px/22 px with truncation; metadata is visually subordinate at 13 px with 11 px icons.
+- Compact titles are one line at 15.5 px/21 px, weight 400, and source-matched charcoal `#35363a`; metadata is visually subordinate at 12.5 px with 10.5 px icons.
 - Parenthesized reply counts are green and attached to the title, matching the reference hierarchy.
 
 ### Spacing and layout rhythm
