@@ -8,6 +8,7 @@
 - Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
+- Console: document-originated errors 없음. Cloud Browser 확장 프로그램의 메타데이터 전송 오류만 관찰됐으며 페이지 코드와 무관함.
 
 ## Comparison history
 
