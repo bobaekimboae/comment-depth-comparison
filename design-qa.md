@@ -1,10 +1,10 @@
-# 간결형 보기 방식 QA
+# 게시판 보기 방식 QA
 
 ## 비교 기준
 
 - Source visual truth: `/workspace/scratch/c9ff4797639b/upload/02-1000012648.png`
 - Source pixels: 709 × 1536 px, 모바일 캡처(상태 표시줄 포함)
-- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=c7fad05a`
+- Implementation: `https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-list.html?v=5a68782c`
 - Implementation capture: Cloud Browser 렌더링 화면, CSS 콘텐츠 폭 393 px, 브라우저 외곽은 비교에서 제외. 최종 상태에서 네이버 카페 인기글형의 낮은 흰색 `커뮤니티` 헤더, 좌측 안전 여백에 맞춘 셰브론, 첨부 검색·전체 메뉴 자산, 치지직형 회색 밴드로 분리한 `자유게시판` 도구줄과 36 px 자동차 커뮤니티 프사, 탭 굵기와 언더라인으로만 선택 상태를 구분한 상단 4탭, 차콜 글쓰기 버튼을 확인함.
 - State: 보기 방식 편집에서 `간결형` 선택, 바텀시트 닫힘
 - Primary interactions tested: 보기 방식 열기 → 간결형 라디오 선택 → 화면 전환 → 바텀시트 닫기
@@ -67,6 +67,9 @@
 20. Compact metadata icon optical alignment: the 24 px heart source and 20 px eye source occupied different amounts of their SVG viewboxes even when their CSS boxes were equal.
    - Fix: place recommendation and view metrics in dedicated 16 px flex rows; retain a 12 px heart box and set the eye box to 14 px so both visible glyphs share the same vertical center.
    - Post-fix evidence: deployed compact view reports heart `12 × 12 px`, eye `14 × 14 px`, and a `0 px` center-line delta.
+21. Naver Cafe feed view: a generic `피드형` name would collide with the planned Reddit and Threads variants, and the existing list renderer could not express the Cafe feed's author-to-media rhythm.
+   - Fix: add an independent `피드 네이버 카페` radio option. It renders author avatar and time, fresh-title dot, two-line excerpt, rounded `4:3` photo/video media, image count, heart/comment actions, and right-aligned views as consecutive feed cards. Rebound the public view button after the enhanced editor override so it opens the new option.
+   - Post-fix evidence: browser-selected feed state reports `mode: true`, `typeLabel: 피드 네이버 카페`, `30` cards, a `31 px` author avatar, and first media `359 × 269.25 px` with computed `4 / 3` aspect ratio. The public control visibly lists `피드 네이버 카페`; no document-originated console errors were observed.
 
 ## Required fidelity surfaces
 
@@ -94,11 +97,27 @@
 - Product naming is adapted from the game-lounge title to `자동차토론`.
 - Original source labels are removed from compact titles, preserving the reference's clean single-title scan pattern.
 
+### Naver Cafe feed comparison
+
+- Source visual truth: `/workspace/scratch/c9ff4797639b/upload/01-1000012739.png`
+- Source pixels: `709 × 1536 px`; normalized to `393 × 851 px` for comparison.
+- Implementation screenshot: `/workspace/scratch/feed-cafe-mobile-5a68782c.jpg`
+- Combined full-view comparison: `/workspace/scratch/feed-cafe-comparison-5a68782c.jpg`
+- Implementation pixels / CSS content size / density: `393 × 852 px` crop from a Cloud Browser render; `393 px` content width; density normalized to the source width before comparison.
+- State: `보기 방식 → 피드 네이버 카페 → 게시판에 적용`.
+- Primary interaction tested: the visible `피드 네이버 카페` radio selected successfully and `게시판에 적용` returned to the feed list with the type label updated.
+- Full-view evidence: the normalized comparison shows the same author → fresh title → excerpt → dominant rounded media → reaction/view order and a matching thin card-divider rhythm. The product shell remains intentionally the existing community header and top menu rather than the source Cafe's dark header.
+- Focused-region evidence: author block (31 px circular avatar, name and time), 4:3 media, lower-right count badge, and action row were checked from the captured top card; a separate region image was not needed because these details remain legible in the combined capture.
+- Console: Cloud Browser extension metadata messages were present only from `chrome-extension://…`; document-originated errors were absent.
+
 ## Findings
 
 - [P3] Source-specific game art and title copy differ by intent.
   - Evidence: the reference is Dragon Village 3; this prototype is an automotive Bobaedream board.
   - Decision: preserve vehicle imagery and automotive titles while matching the view pattern.
+- [P3] Feed shell differs intentionally.
+  - Evidence: the source uses Naver Cafe's dark top header and Cafe-specific chips, while this screen retains the shared automotive community shell.
+  - Decision: the requested scope is the new feed view type; use the shared shell so future `피드 레딧` and `피드 스레드` variants can sit beside it consistently.
 
 ## Implementation checklist
 
@@ -116,9 +135,11 @@
 - [x] Finalize the header and top navigation with the supplied Naver Cafe popular-post hierarchy.
 - [x] Remove the line above the top menu and add Chzzk-style bands and dividers around the board toolbar.
 - [x] Match the board-toolbar inner rhythm to Chzzk, add the circular automotive board avatar, and soften the notice row with FM Korea-style blue bracket replies.
+- [x] Add and deploy the independently named `피드 네이버 카페` view type, then select it in the public editor and verify its feed-card layout.
 
 ## Follow-up polish
 
 - If a production game-board variant is needed later, supply game-specific thumbnail assets while keeping this layout token set.
+- Add `피드 레딧` and `피드 스레드` as separate view IDs rather than changing the `피드 네이버 카페` renderer.
 
 final result: passed
