@@ -79,7 +79,7 @@ renderList=function(){
     if(display.recommendCount){var recommend=document.createElement('span');recommend.className='metaRecommend';var n=(Number(item.dataset.id||index+1)*7)%53+1;recommend.innerHTML=(display.recommendIcon?metaIcon('thumb'):'추천 ')+n;meta.appendChild(recommend)}
     if(rank){if(rankPosition==='after')user.insertAdjacentElement('afterend',rank);else meta.insertBefore(rank,user)}
   });
-  if(compact){[].forEach.call(document.querySelectorAll('.item'),function(item){var index=Number(item.dataset.id)-1,post=posts[index],title=item.querySelector('.itemTitle'),meta=item.querySelector('.meta');if(!post||!title||!meta)return;title.insertAdjacentHTML('beforeend','<span class="compactReply">('+esc(countFull(post.reply))+')</span>');meta.innerHTML='<span>'+esc(post.user)+'</span><span>'+esc(post.time)+'</span><span>'+metaIcon('thumb')+esc((index*7)%4)+'</span><span>'+metaIcon('eye')+esc(view(post.view))+'</span>'})}
+  if(compact){[].forEach.call(document.querySelectorAll('.item'),function(item){var index=Number(item.dataset.id)-1,post=posts[index],title=item.querySelector('.itemTitle'),meta=item.querySelector('.meta');if(!post||!title||!meta)return;title.innerHTML=esc(post.title.replace(/^\[[^\]]+\]\s*/,''))+'<span class="compactReply">('+esc(countFull(post.reply))+')</span>';meta.innerHTML='<span>'+esc(post.user)+'</span><span>'+esc(post.time)+'</span><span>'+metaIcon('thumb')+esc((index*7)%4)+'</span><span>'+metaIcon('eye')+esc(view(post.view))+'</span>'})}
   [].forEach.call(document.querySelectorAll('.commentBox span'),function(label){label.innerHTML=display.commentIcon?metaIcon('comment'):'댓글'});
 };
 openSheet=function(){
