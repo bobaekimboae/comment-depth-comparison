@@ -376,7 +376,7 @@ function esc(value){return String(value).replace(/[&<>"']/g,function(ch){return(
 function row(post){
   const reply=post[6]?'<span class="replyNum">('+post[6]+')</span>':'';
   const lock=post[0]==='사고/블박'?'<span class="locked">!</span>':'';
-  return '<tr><td><div class="boardTitleCell"><span class="boardLabel">'+esc(post[0])+'</span><a class="articleTitle" href="#">'+esc(post[1])+'</a>'+reply+lock+'</div></td><td class="authorCell">'+esc(post[2])+'</td><td class="centerCell">'+esc(post[3])+'</td><td class="centerCell">'+esc(post[4])+'</td><td class="centerCell">'+esc(post[5])+'</td></tr>';
+  return '<tr><td><div class="boardTitleCell"><span class="boardLabel">'+esc(post[0])+'</span><a class="articleTitle" href="bobaedream-pc-board-detail.html">'+esc(post[1])+'</a>'+reply+lock+'</div></td><td class="authorCell">'+esc(post[2])+'</td><td class="centerCell">'+esc(post[3])+'</td><td class="centerCell">'+esc(post[4])+'</td><td class="centerCell">'+esc(post[5])+'</td></tr>';
 }
 function popularRow(item){
   return '<li class="rightItem"><a class="rightLink" href="#"><span class="rightText">'+esc(item[0])+'</span><span class="rightReply">('+item[1]+')</span></a></li>';
