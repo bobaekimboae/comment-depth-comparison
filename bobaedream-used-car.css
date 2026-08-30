@@ -3318,6 +3318,7 @@ html.bobae-main-page body {
 
 .bbMainHome {
   padding-bottom: 14px;
+  word-break: keep-all;
 }
 
 .bobae-main-page .bbHeaderInner,
@@ -3388,7 +3389,7 @@ html.bobae-main-page body {
 .mainSearchTabs {
   height: 58px;
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   gap: 24px;
   border-bottom: 1px solid #eceef2;
 }
@@ -3396,6 +3397,11 @@ html.bobae-main-page body {
 .mainSearchTabs button {
   height: 58px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 0 2px;
   color: #555d69;
   font-size: 16px;
   line-height: 22px;
@@ -3429,8 +3435,9 @@ html.bobae-main-page body {
   height: 44px;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
   padding: 0 42px 0 14px;
   border: 1px solid #ccd1d8;
   border-radius: 4px;
@@ -3442,12 +3449,12 @@ html.bobae-main-page body {
   content: "";
   position: absolute;
   right: 18px;
-  top: 16px;
+  top: 50%;
   width: 8px;
   height: 8px;
   border-right: 2px solid #11151b;
   border-bottom: 2px solid #11151b;
-  transform: rotate(45deg);
+  transform: translateY(-60%) rotate(45deg);
 }
 
 .mainSelect span {
@@ -3455,6 +3462,12 @@ html.bobae-main-page body {
 }
 
 .mainSelect strong {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: #15181d;
   font-size: 15px;
   line-height: 20px;
@@ -3463,6 +3476,10 @@ html.bobae-main-page body {
 
 .mainSearchButton {
   height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
   border-radius: 4px;
   background: var(--blue);
   color: #fff;
@@ -3490,6 +3507,8 @@ html.bobae-main-page body {
 }
 
 .mainSearchFooter button {
+  display: inline-flex;
+  align-items: center;
   color: var(--blue);
   font-weight: 900;
 }
@@ -3582,10 +3601,12 @@ html.bobae-main-page body {
 .mainBodyCard {
   height: 70px;
   display: grid;
-  grid-template-rows: 42px 21px;
+  grid-template-rows: 44px 20px;
+  align-content: center;
   align-items: center;
   justify-items: center;
-  padding: 2px 4px 0;
+  row-gap: 2px;
+  padding: 0 4px;
   border-radius: 6px;
   background: transparent;
   transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
@@ -3599,7 +3620,7 @@ html.bobae-main-page body {
 
 .mainBodyImage {
   width: 100%;
-  height: 42px;
+  height: 44px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -3612,6 +3633,16 @@ html.bobae-main-page body {
 }
 
 .mainBodyCard strong {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: #191d24;
   font-size: 15px;
   line-height: 20px;
@@ -4135,14 +4166,16 @@ body[data-bobae-main] .footer {
 
   .mainSearchTabs {
     height: 50px;
-    gap: 18px;
+    gap: 16px;
     overflow-x: auto;
     scrollbar-width: none;
   }
 
   .mainSearchTabs button {
     height: 50px;
+    padding: 0 1px;
     font-size: 14px;
+    line-height: 20px;
   }
 
   .mainSearchFields {
@@ -4180,6 +4213,11 @@ body[data-bobae-main] .footer {
     line-height: 28px;
   }
 
+  .mainSearchExplore .mainSectionHeading h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
   .mainBodyTypeGrid,
   .mainVehicleGrid,
   .mainEditorial,
@@ -4196,6 +4234,7 @@ body[data-bobae-main] .footer {
   .mainBodyCard {
     height: 74px;
     grid-template-rows: 44px 22px;
+    row-gap: 3px;
     padding: 1px 4px 0;
   }
 
@@ -4209,6 +4248,7 @@ body[data-bobae-main] .footer {
   }
 
   .mainBodyCard strong {
+    height: 22px;
     font-size: 12px;
     line-height: 17px;
     text-align: center;

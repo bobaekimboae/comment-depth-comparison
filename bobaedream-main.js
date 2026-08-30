@@ -6,7 +6,7 @@
 
   const state = {
     tab: "all",
-    maker: { label: "전체 제조사", value: "" },
+    maker: { label: "제조사 모델", value: "" },
     region: { label: "전국", value: "" },
     price: { label: "전체 가격", value: "" }
   };
@@ -46,7 +46,7 @@
 
   const selectOptions = {
     maker: [
-      { label: "전체 제조사", value: "" },
+      { label: "제조사 모델", value: "" },
       { label: "현대", value: "hyundai" },
       { label: "기아", value: "kia" },
       { label: "제네시스", value: "genesis" },
