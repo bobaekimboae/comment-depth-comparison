@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-08-31T05:18:00+09:00",
+  "categoryAssets": 7,
+  "missingAssets": [],
+  "listCacheKeyUpdated": true,
+  "detailCacheKeyUpdated": true,
+  "assets": [
+    {
+      "key": "used",
+      "label": "중고차",
+      "asset": "assets/used-car/categories/s03-23-category-used-car.svg",
+      "viewBox": "0 0 24 24",
+      "size": "32x32",
+      "usesCurrentColor": true
+    },
+    {
+      "key": "truck",
+      "label": "트럭 · 특장",
+      "asset": "assets/used-car/categories/s03-24-category-truck.svg",
+      "viewBox": "0 0 24 24",
+      "size": "32x32",
+      "usesCurrentColor": true
+    },
+    {
+      "key": "bike",
+      "label": "바이크",
+      "asset": "assets/used-car/categories/s03-25-category-bike.svg",
+      "viewBox": "0 0 24 24",
+      "size": "32x32",
+      "usesCurrentColor": true
+    },
+    {
+      "key": "camping",
+      "label": "캠핑카",
+      "asset": "assets/used-car/categories/s03-26-category-camping.svg",
+      "viewBox": "0 0 24 24",
+      "size": "32x32",
+      "usesCurrentColor": true
+    },
+    {
+      "key": "old",
+      "label": "올드카",
+      "asset": "assets/used-car/categories/s03-27-category-old-car.svg",
+      "viewBox": "0 0 24 24",
+      "size": "32x32",
+      "usesCurrentColor": true
+    },
+    {
+      "key": "machine",
+      "label": "건설기계",
+      "asset": "assets/used-car/categories/s03-28-category-machine.svg",
+      "viewBox": "0 0 24 24",
+      "size": "32x32",
+      "usesCurrentColor": true
+    },
+    {
+      "key": "parts",
+      "label": "부품 · 용품",
+      "asset": "assets/used-car/categories/s03-29-category-parts.svg",
+      "viewBox": "0 0 24 24",
+      "size": "32x32",
+      "usesCurrentColor": true
+    }
+  ]
+}

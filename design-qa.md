@@ -1,3 +1,24 @@
+# Bobaedream Used Car Category Icon Replacement QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after replacing the vehicle category icons.
+- The desktop category grid and mobile category rail both read from the same `categories` data source, so the seven supplied S03 SVG icons apply to both surfaces.
+
+**Implementation Checklist**
+- [x] Copied the supplied category SVG files `S03-23` through `S03-29` into `assets/used-car/categories/`.
+- [x] Replaced the previous temporary `cat-*.png` paths with the supplied SVG asset paths.
+- [x] Updated list/detail cache keys so GitHub Pages loads the latest category asset mapping.
+
+**Evidence**
+- Metrics: `captures/category-icons-v2-20260831/category-icons-v2.json`
+
+**Measured Pass**
+- `categoryAssets=7`, `missingAssets=[]`.
+- All supplied SVGs use `viewBox="0 0 24 24"`, `width="32"`, `height="32"`.
+- List/detail pages load `bobae-category-icons-v2-20260831`.
+
+final result: passed
+
 # Bobaedream Used Car Option Icon Alignment QA
 
 **Findings**
