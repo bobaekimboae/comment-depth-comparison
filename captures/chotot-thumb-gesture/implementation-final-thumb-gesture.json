@@ -1,0 +1,1004 @@
+{
+  "finalBefore": {
+    "activeIndex": "0",
+    "count": 18,
+    "counter": "1 / 18",
+    "cssVersion": "http://127.0.0.1:4177/bobaedream-used-car.css?v=chotot-thumb-gesture-20260830",
+    "firstImages": [
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 254.8,
+        "w": 84.8,
+        "x": 170,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 354.8,
+        "w": 84.8,
+        "x": 270,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 454.8,
+        "w": 84.8,
+        "x": 370,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 554.8,
+        "w": 84.8,
+        "x": 470,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 654.8,
+        "w": 84.8,
+        "x": 570,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 754.8,
+        "w": 84.8,
+        "x": 670,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 854.8,
+        "w": 84.8,
+        "x": 770,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 954.8,
+        "w": 84.8,
+        "x": 870,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 1054.8,
+        "w": 84.8,
+        "x": 970,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 1154.8,
+        "w": 84.8,
+        "x": 1070,
+        "y": 543.6
+      }
+    ],
+    "jsVersion": "http://127.0.0.1:4177/bobaedream-used-car-interactions.js?v=chotot-thumb-gesture-20260830",
+    "mainSrc": "hero-silver-car.jpg",
+    "next": {
+      "cls": "thumbArrow next",
+      "display": "grid",
+      "rect": {
+        "bottom": 611,
+        "h": 44,
+        "right": 884.4,
+        "w": 44,
+        "x": 840.4,
+        "y": 567
+      }
+    },
+    "prev": {
+      "cls": "thumbArrow prev is-disabled",
+      "display": "none",
+      "rect": {
+        "bottom": 0,
+        "h": 0,
+        "right": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      }
+    },
+    "strip": {
+      "bottom": 642,
+      "h": 106,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 536
+    },
+    "thumbViewport": {
+      "bottom": 642,
+      "h": 106,
+      "right": 896.4,
+      "w": 734,
+      "x": 162.4,
+      "y": 536
+    },
+    "track": {
+      "clientWidth": 1800,
+      "inlineTransform": "translate3d(0px, 0px, 0px)",
+      "rect": {
+        "bottom": 636,
+        "h": 100,
+        "right": 1962.4,
+        "w": 1800,
+        "x": 162.4,
+        "y": 536
+      },
+      "scrollWidth": 1800,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    "viewportSize": {
+      "dpr": 1.25,
+      "h": 695,
+      "w": 1536
+    },
+    "visibleThumbs": [
+      {
+        "cls": "detailThumb is-active",
+        "index": "0",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 262.4,
+          "w": 100,
+          "x": 162.4,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "1",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 362.4,
+          "w": 100,
+          "x": 262.4,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "2",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 462.4,
+          "w": 100,
+          "x": 362.4,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "3",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 562.4,
+          "w": 100,
+          "x": 462.4,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "4",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 662.4,
+          "w": 100,
+          "x": 562.4,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "5",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 762.4,
+          "w": 100,
+          "x": 662.4,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "6",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 862.4,
+          "w": 100,
+          "x": 762.4,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "7",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 962.4,
+          "w": 100,
+          "x": 862.4,
+          "y": 536
+        }
+      }
+    ]
+  },
+  "finalAfterNext": {
+    "activeIndex": "0",
+    "count": 18,
+    "counter": "1 / 18",
+    "cssVersion": "http://127.0.0.1:4177/bobaedream-used-car.css?v=chotot-thumb-gesture-20260830",
+    "firstImages": [
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 254.8,
+        "w": 84.8,
+        "x": 170,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 354.8,
+        "w": 84.8,
+        "x": 270,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 454.8,
+        "w": 84.8,
+        "x": 370,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 554.8,
+        "w": 84.8,
+        "x": 470,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 654.8,
+        "w": 84.8,
+        "x": 570,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 754.8,
+        "w": 84.8,
+        "x": 670,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 854.8,
+        "w": 84.8,
+        "x": 770,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 954.8,
+        "w": 84.8,
+        "x": 870,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 1054.8,
+        "w": 84.8,
+        "x": 970,
+        "y": 302
+      },
+      {
+        "bottom": 386.8,
+        "h": 84.8,
+        "right": 1154.8,
+        "w": 84.8,
+        "x": 1070,
+        "y": 302
+      }
+    ],
+    "jsVersion": "http://127.0.0.1:4177/bobaedream-used-car-interactions.js?v=chotot-thumb-gesture-20260830",
+    "mainSrc": "hero-silver-car.jpg",
+    "next": {
+      "cls": "thumbArrow next",
+      "display": "grid",
+      "rect": {
+        "bottom": 369.4,
+        "h": 44,
+        "right": 884.4,
+        "w": 44,
+        "x": 840.4,
+        "y": 325.4
+      }
+    },
+    "prev": {
+      "cls": "thumbArrow prev",
+      "display": "grid",
+      "rect": {
+        "bottom": 369.4,
+        "h": 44,
+        "right": 218.4,
+        "w": 44,
+        "x": 174.4,
+        "y": 325.4
+      }
+    },
+    "strip": {
+      "bottom": 400.4,
+      "h": 106,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 294.4
+    },
+    "thumbViewport": {
+      "bottom": 400.4,
+      "h": 106,
+      "right": 896.4,
+      "w": 734,
+      "x": 162.4,
+      "y": 294.4
+    },
+    "track": {
+      "clientWidth": 1800,
+      "inlineTransform": "translate3d(-500px, 0px, 0px)",
+      "rect": {
+        "bottom": 394.4,
+        "h": 100,
+        "right": 1962.4,
+        "w": 1800,
+        "x": 162.4,
+        "y": 294.4
+      },
+      "scrollWidth": 1800,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    "viewportSize": {
+      "dpr": 1.25,
+      "h": 695,
+      "w": 1536
+    },
+    "visibleThumbs": [
+      {
+        "cls": "detailThumb is-active",
+        "index": "0",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 262.4,
+          "w": 100,
+          "x": 162.4,
+          "y": 294.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "1",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 362.4,
+          "w": 100,
+          "x": 262.4,
+          "y": 294.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "2",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 462.4,
+          "w": 100,
+          "x": 362.4,
+          "y": 294.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "3",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 562.4,
+          "w": 100,
+          "x": 462.4,
+          "y": 294.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "4",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 662.4,
+          "w": 100,
+          "x": 562.4,
+          "y": 294.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "5",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 762.4,
+          "w": 100,
+          "x": 662.4,
+          "y": 294.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "6",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 862.4,
+          "w": 100,
+          "x": 762.4,
+          "y": 294.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "7",
+        "rect": {
+          "bottom": 394.4,
+          "h": 100,
+          "right": 962.4,
+          "w": 100,
+          "x": 862.4,
+          "y": 294.4
+        }
+      }
+    ]
+  },
+  "finalAfterThumbClick": {
+    "activeIndex": "0",
+    "count": 18,
+    "counter": "1 / 18",
+    "cssVersion": "http://127.0.0.1:4177/bobaedream-used-car.css?v=chotot-thumb-gesture-20260830",
+    "firstImages": [
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -311.6,
+        "w": 84.8,
+        "x": -396.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -211.6,
+        "w": 84.8,
+        "x": -296.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -111.6,
+        "w": 84.8,
+        "x": -196.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -11.6,
+        "w": 84.8,
+        "x": -96.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 88.4,
+        "w": 84.8,
+        "x": 3.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 188.4,
+        "w": 84.8,
+        "x": 103.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 288.4,
+        "w": 84.8,
+        "x": 203.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 388.4,
+        "w": 84.8,
+        "x": 303.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 488.4,
+        "w": 84.8,
+        "x": 403.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 588.4,
+        "w": 84.8,
+        "x": 503.6,
+        "y": 305.2
+      }
+    ],
+    "jsVersion": "http://127.0.0.1:4177/bobaedream-used-car-interactions.js?v=chotot-thumb-gesture-20260830",
+    "mainSrc": "hero-silver-car.jpg",
+    "next": {
+      "cls": "thumbArrow next",
+      "display": "grid",
+      "rect": {
+        "bottom": 372.6,
+        "h": 44,
+        "right": 884.4,
+        "w": 44,
+        "x": 840.4,
+        "y": 328.6
+      }
+    },
+    "prev": {
+      "cls": "thumbArrow prev",
+      "display": "grid",
+      "rect": {
+        "bottom": 372.6,
+        "h": 44,
+        "right": 218.4,
+        "w": 44,
+        "x": 174.4,
+        "y": 328.6
+      }
+    },
+    "strip": {
+      "bottom": 403.6,
+      "h": 106,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 297.6
+    },
+    "thumbViewport": {
+      "bottom": 403.6,
+      "h": 106,
+      "right": 896.4,
+      "w": 734,
+      "x": 162.4,
+      "y": 297.6
+    },
+    "track": {
+      "clientWidth": 1800,
+      "inlineTransform": "translate3d(-500px, 0px, 0px)",
+      "rect": {
+        "bottom": 397.6,
+        "h": 100,
+        "right": 1396,
+        "w": 1800,
+        "x": -404,
+        "y": 297.6
+      },
+      "scrollWidth": 1800,
+      "transform": "matrix(1, 0, 0, 1, -500, 0)"
+    },
+    "viewportSize": {
+      "dpr": 1.25,
+      "h": 695,
+      "w": 1536
+    },
+    "visibleThumbs": [
+      {
+        "cls": "detailThumb",
+        "index": "5",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 196,
+          "w": 100,
+          "x": 96,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "6",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 296,
+          "w": 100,
+          "x": 196,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "7",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 396,
+          "w": 100,
+          "x": 296,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "8",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 496,
+          "w": 100,
+          "x": 396,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "9",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 596,
+          "w": 100,
+          "x": 496,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "10",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 696,
+          "w": 100,
+          "x": 596,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "11",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 796,
+          "w": 100,
+          "x": 696,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "12",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 896,
+          "w": 100,
+          "x": 796,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "13",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 996,
+          "w": 100,
+          "x": 896,
+          "y": 297.6
+        }
+      }
+    ]
+  },
+  "finalAfterDrag": {
+    "activeIndex": "0",
+    "count": 18,
+    "counter": "1 / 18",
+    "cssVersion": "http://127.0.0.1:4177/bobaedream-used-car.css?v=chotot-thumb-gesture-20260830",
+    "firstImages": [
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -391.6,
+        "w": 84.8,
+        "x": -476.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -291.6,
+        "w": 84.8,
+        "x": -376.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -191.6,
+        "w": 84.8,
+        "x": -276.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": -91.6,
+        "w": 84.8,
+        "x": -176.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 8.4,
+        "w": 84.8,
+        "x": -76.4,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 108.4,
+        "w": 84.8,
+        "x": 23.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 208.4,
+        "w": 84.8,
+        "x": 123.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 308.4,
+        "w": 84.8,
+        "x": 223.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 408.4,
+        "w": 84.8,
+        "x": 323.6,
+        "y": 305.2
+      },
+      {
+        "bottom": 390,
+        "h": 84.8,
+        "right": 508.4,
+        "w": 84.8,
+        "x": 423.6,
+        "y": 305.2
+      }
+    ],
+    "jsVersion": "http://127.0.0.1:4177/bobaedream-used-car-interactions.js?v=chotot-thumb-gesture-20260830",
+    "mainSrc": "hero-silver-car.jpg",
+    "next": {
+      "cls": "thumbArrow next",
+      "display": "grid",
+      "rect": {
+        "bottom": 372.6,
+        "h": 44,
+        "right": 884.4,
+        "w": 44,
+        "x": 840.4,
+        "y": 328.6
+      }
+    },
+    "prev": {
+      "cls": "thumbArrow prev",
+      "display": "grid",
+      "rect": {
+        "bottom": 372.6,
+        "h": 44,
+        "right": 218.4,
+        "w": 44,
+        "x": 174.4,
+        "y": 328.6
+      }
+    },
+    "strip": {
+      "bottom": 403.6,
+      "h": 106,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 297.6
+    },
+    "thumbViewport": {
+      "bottom": 403.6,
+      "h": 106,
+      "right": 896.4,
+      "w": 734,
+      "x": 162.4,
+      "y": 297.6
+    },
+    "track": {
+      "clientWidth": 1800,
+      "inlineTransform": "translate3d(-600px, 0px, 0px)",
+      "rect": {
+        "bottom": 397.6,
+        "h": 100,
+        "right": 1316,
+        "w": 1800,
+        "x": -484,
+        "y": 297.6
+      },
+      "scrollWidth": 1800,
+      "transform": "matrix(1, 0, 0, 1, -580, 0)"
+    },
+    "viewportSize": {
+      "dpr": 1.25,
+      "h": 695,
+      "w": 1536
+    },
+    "visibleThumbs": [
+      {
+        "cls": "detailThumb",
+        "index": "6",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 216,
+          "w": 100,
+          "x": 116,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "7",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 316,
+          "w": 100,
+          "x": 216,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "8",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 416,
+          "w": 100,
+          "x": 316,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "9",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 516,
+          "w": 100,
+          "x": 416,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "10",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 616,
+          "w": 100,
+          "x": 516,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "11",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 716,
+          "w": 100,
+          "x": 616,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "12",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 816,
+          "w": 100,
+          "x": 716,
+          "y": 297.6
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "13",
+        "rect": {
+          "bottom": 397.6,
+          "h": 100,
+          "right": 916,
+          "w": 100,
+          "x": 816,
+          "y": 297.6
+        }
+      }
+    ]
+  },
+  "nextClickError": null,
+  "thumbClickError": null
+}

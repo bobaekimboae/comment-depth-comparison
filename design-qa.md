@@ -1,3 +1,36 @@
+# Bobaedream Used Car Chotot Thumbnail Gesture QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after the thumbnail gesture correction.
+- [P3] The thumbnail prev/next controls currently use CSS chevrons. Swap these to the supplied SVG icons in the later icon replacement pass without changing the measured rail geometry.
+
+**Implementation Checklist**
+- [x] Captured the live Chotot detail thumbnail rail from the user-supplied source detail URL.
+- [x] Matched the Chotot thumbnail rail sizing: outer strip `736px`, viewport `734px`, slide pitch `100px`, thumbnail image about `84px`, and next arrow `44px`.
+- [x] Changed the Bobaedream detail thumbnail rail from a stretched static row to a clipped, draggable track.
+- [x] Matched Chotot-style arrow paging: next/previous buttons move the track by `5` slides, or `500px`.
+- [x] Added direct pointer dragging with `100px` snapping and kept thumbnail click/tap behavior working after a drag.
+- [x] Added the gallery counter state so the main image shows `1 / 18`, `9 / 18`, etc.
+
+**Evidence**
+- Source visual truth path: `captures/chotot-thumb-gesture/source-thumb-before.png`
+- Source metrics path: `captures/chotot-thumb-gesture/source-thumb-before.json`
+- Implementation before/after screenshots: `captures/chotot-thumb-gesture/implementation-playwright-before.png`, `captures/chotot-thumb-gesture/implementation-playwright-after-drag-click.png`
+- Implementation metrics path: `captures/chotot-thumb-gesture/implementation-playwright-final.json`
+- Combined comparison image: `captures/chotot-thumb-gesture/comparison-source-vs-implementation-thumb.png`
+- Viewport: Chrome CSS viewport `1536px x 695px`, device scale factor `1`
+- State: PC used-car detail top gallery and thumbnail rail.
+
+**Measured Pass**
+- Source rail: outer thumbnail wrapper `736px`, slick list `734px`, slide pitch `100px`, image `84.8px x 84.8px`, next arrow `44px`, disabled previous arrow hidden, counter `1 / 18`.
+- Implementation initial rail: document `scrollWidth=1536`, strip `736px`, viewport `734px`, first image `84px x 84px`, previous arrow hidden, next arrow `44px`, counter `1 / 18`.
+- Implementation next click: track transform `translate3d(-500px, 0px, 0px)` and visible thumbnail indices `5` through `12`.
+- Implementation drag gesture: dragging left by about `240px` snaps to `translate3d(-200px, 0px, 0px)` and visible thumbnail indices `2` through `9`.
+- Implementation thumbnail click after drag: clicking visible index `8` updates the active state and counter to `9 / 18`.
+- Console and page errors checked: no document-originated errors.
+
+final result: passed
+
 # Bobaedream Used Car Chotot Detail Image Fit QA
 
 **Findings**

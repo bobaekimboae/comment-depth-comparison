@@ -758,18 +758,32 @@
     document.title = `${car.title} | 보배드림 중고차 PC 상세`;
 
     const imageList = car.images && car.images.length ? car.images : [];
-    const galleryCount = Math.max(imageList.length, Math.min(Number(car.photoCount) || imageList.length, 12));
+    const requestedGalleryCount = Number(car.photoCount) || imageList.length;
+    const galleryCount = Math.max(imageList.length, Math.min(requestedGalleryCount, 18));
     const galleryImages = imageList.length
       ? Array.from({ length: galleryCount }, (_, index) => imageList[index % imageList.length])
       : [];
+    const galleryImageMarkup = (src, index) => src
+      ? `<img src="${src}" alt="${car.title} 대표 이미지"><span class="galleryCounter" data-gallery-counter>${index + 1} / ${galleryImages.length}</span>`
+      : thumbMarkup(car, true);
 
     qs("#detailGallery").innerHTML = `
-      <div class="galleryStage">${thumbMarkup(car, true)}</div>
+      <div class="galleryStage">${galleryImageMarkup(galleryImages[0], 0)}</div>
       <div class="galleryControl">
         <button class="circleTool" type="button" data-toast="공유 링크가 복사되었습니다." aria-label="공유"><span class="shareIcon"></span></button>
         <button class="circleTool" type="button" data-toast="더보기 메뉴는 시안에서 준비 중입니다." aria-label="더보기"><span class="moreIcon"></span></button>
       </div>
-      ${galleryImages.length ? `<div class="thumbStrip">${galleryImages.map((src, index) => `<button class="detailThumb${index === 0 ? " is-active" : ""}" type="button" data-gallery-src="${src}"><img src="${src}" alt=""></button>`).join("")}</div>` : ""}
+      ${galleryImages.length ? `
+        <div class="thumbStrip" data-thumb-strip>
+          <button class="thumbArrow prev is-disabled" type="button" data-thumb-prev aria-label="이전 사진 목록"></button>
+          <div class="thumbViewport">
+            <div class="thumbTrack">
+              ${galleryImages.map((src, index) => `<button class="detailThumb${index === 0 ? " is-active" : ""}" type="button" data-gallery-src="${src}" data-gallery-index="${index}"><img src="${src}" alt="" draggable="false"></button>`).join("")}
+            </div>
+          </div>
+          <button class="thumbArrow next" type="button" data-thumb-next aria-label="다음 사진 목록"></button>
+        </div>
+      ` : ""}
     `;
 
     qs("#detailTitle").textContent = car.title;
@@ -838,13 +852,101 @@
       </a>
     `).join("");
 
-    qsa("[data-gallery-src]").forEach((button) => {
+    const galleryStage = qs(".galleryStage");
+    const thumbStrip = qs("[data-thumb-strip]");
+    const thumbViewport = thumbStrip ? qs(".thumbViewport", thumbStrip) : null;
+    const thumbTrack = thumbStrip ? qs(".thumbTrack", thumbStrip) : null;
+    const thumbButtons = thumbStrip ? qsa("[data-gallery-src]", thumbStrip) : [];
+    const thumbPrev = thumbStrip ? qs("[data-thumb-prev]", thumbStrip) : null;
+    const thumbNext = thumbStrip ? qs("[data-thumb-next]", thumbStrip) : null;
+    const thumbSlideWidth = 100;
+    const thumbStep = 5;
+    let thumbOffset = 0;
+    let thumbDragStartX = 0;
+    let thumbDragStartOffset = 0;
+    let thumbDidDrag = false;
+    let thumbWheelTimer = 0;
+    let thumbDragPointerId = null;
+
+    const getMaxThumbOffset = () => {
+      if (!thumbTrack || !thumbViewport) return 0;
+      return Math.max(0, thumbTrack.scrollWidth - thumbViewport.clientWidth);
+    };
+    const renderThumbTrack = () => {
+      if (!thumbTrack) return;
+      const maxOffset = getMaxThumbOffset();
+      thumbOffset = Math.max(0, Math.min(thumbOffset, maxOffset));
+      thumbTrack.style.transform = `translate3d(${-thumbOffset}px, 0, 0)`;
+      thumbPrev?.classList.toggle("is-disabled", thumbOffset <= 0);
+      thumbNext?.classList.toggle("is-disabled", thumbOffset >= maxOffset - 1);
+    };
+    const moveThumbTrack = (nextOffset) => {
+      thumbOffset = nextOffset;
+      renderThumbTrack();
+    };
+    const snapThumbTrack = () => {
+      moveThumbTrack(Math.round(thumbOffset / thumbSlideWidth) * thumbSlideWidth);
+    };
+    const shiftThumbTrack = (direction) => {
+      moveThumbTrack(thumbOffset + direction * thumbSlideWidth * thumbStep);
+    };
+
+    thumbPrev?.addEventListener("click", () => shiftThumbTrack(-1));
+    thumbNext?.addEventListener("click", () => shiftThumbTrack(1));
+    thumbViewport?.addEventListener("wheel", (event) => {
+      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+      if (!delta) return;
+      event.preventDefault();
+      moveThumbTrack(thumbOffset + delta);
+      clearTimeout(thumbWheelTimer);
+      thumbWheelTimer = setTimeout(snapThumbTrack, 120);
+    }, { passive: false });
+    thumbViewport?.addEventListener("pointerdown", (event) => {
+      if (!thumbTrack) return;
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      thumbDragPointerId = event.pointerId;
+      thumbTrack.classList.add("is-dragging");
+      thumbDragStartX = event.clientX;
+      thumbDragStartOffset = thumbOffset;
+      thumbDidDrag = false;
+    });
+    const handleThumbPointerMove = (event) => {
+      if (!thumbTrack?.classList.contains("is-dragging")) return;
+      if (thumbDragPointerId !== null && event.pointerId !== thumbDragPointerId) return;
+      const deltaX = event.clientX - thumbDragStartX;
+      if (Math.abs(deltaX) > 4 && !thumbDidDrag) {
+        thumbDidDrag = true;
+        thumbViewport?.setPointerCapture?.(event.pointerId);
+      }
+      event.preventDefault();
+      moveThumbTrack(thumbDragStartOffset - deltaX);
+    };
+    const endThumbPointerDrag = (event) => {
+      if (thumbDragPointerId !== null && event?.pointerId !== undefined && event.pointerId !== thumbDragPointerId) return;
+      if (!thumbTrack?.classList.contains("is-dragging")) return;
+      thumbTrack.classList.remove("is-dragging");
+      thumbDragPointerId = null;
+      snapThumbTrack();
+      setTimeout(() => {
+        thumbDidDrag = false;
+      }, 0);
+    };
+    thumbViewport?.addEventListener("pointermove", handleThumbPointerMove);
+    window.addEventListener("pointermove", handleThumbPointerMove, { passive: false });
+    ["pointerup", "pointercancel"].forEach((eventName) => {
+      window.addEventListener(eventName, endThumbPointerDrag);
+    });
+    thumbViewport?.addEventListener("lostpointercapture", endThumbPointerDrag);
+
+    thumbButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        qsa("[data-gallery-src]").forEach((item) => item.classList.remove("is-active"));
+        if (thumbDidDrag) return;
+        thumbButtons.forEach((item) => item.classList.remove("is-active"));
         button.classList.add("is-active");
-        qs(".galleryStage").innerHTML = `<img src="${button.dataset.gallerySrc}" alt="${car.title} 대표 이미지">`;
+        if (galleryStage) galleryStage.innerHTML = galleryImageMarkup(button.dataset.gallerySrc, Number(button.dataset.galleryIndex) || 0);
       });
     });
+    renderThumbTrack();
 
     qsa(".detailAnchorNav a").forEach((link) => {
       link.addEventListener("click", (event) => {

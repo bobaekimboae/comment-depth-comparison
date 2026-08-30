@@ -1,0 +1,685 @@
+{
+  "before": {
+    "activeIndex": "0",
+    "counter": "1 / 18",
+    "cssVersion": "http://127.0.0.1:4177/bobaedream-used-car.css?v=chotot-thumb-gesture-20260830",
+    "jsVersion": "http://127.0.0.1:4177/bobaedream-used-car-interactions.js?v=chotot-thumb-gesture-20260830",
+    "mainSrc": "hero-silver-car.jpg",
+    "next": {
+      "cls": "thumbArrow next",
+      "display": "grid",
+      "rect": {
+        "bottom": 611,
+        "h": 44,
+        "right": 764,
+        "w": 44,
+        "x": 720,
+        "y": 567
+      }
+    },
+    "prev": {
+      "cls": "thumbArrow prev is-disabled",
+      "display": "none",
+      "rect": {
+        "bottom": 0,
+        "h": 0,
+        "right": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      }
+    },
+    "scrollY": 0,
+    "strip": {
+      "bottom": 642,
+      "h": 106,
+      "right": 776,
+      "w": 736,
+      "x": 40,
+      "y": 536
+    },
+    "thumbImages": [
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 134.4,
+        "w": 84.8,
+        "x": 49.6,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 234.4,
+        "w": 84.8,
+        "x": 149.6,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 334.4,
+        "w": 84.8,
+        "x": 249.6,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 434.4,
+        "w": 84.8,
+        "x": 349.6,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 534.4,
+        "w": 84.8,
+        "x": 449.6,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 634.4,
+        "w": 84.8,
+        "x": 549.6,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 734.4,
+        "w": 84.8,
+        "x": 649.6,
+        "y": 543.6
+      },
+      {
+        "bottom": 628.4,
+        "h": 84.8,
+        "right": 834.4,
+        "w": 84.8,
+        "x": 749.6,
+        "y": 543.6
+      }
+    ],
+    "total": 18,
+    "track": {
+      "clientWidth": 1800,
+      "computedTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "inlineTransform": "translate3d(0px, 0px, 0px)",
+      "rect": {
+        "bottom": 636,
+        "h": 100,
+        "right": 1842,
+        "w": 1800,
+        "x": 42,
+        "y": 536
+      },
+      "scrollWidth": 1800
+    },
+    "viewport": {
+      "bottom": 642,
+      "h": 106,
+      "right": 776,
+      "w": 734,
+      "x": 42,
+      "y": 536
+    },
+    "visible": [
+      {
+        "cls": "detailThumb is-active",
+        "index": "0",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 142,
+          "w": 100,
+          "x": 42,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "1",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 242,
+          "w": 100,
+          "x": 142,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "2",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 342,
+          "w": 100,
+          "x": 242,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "3",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 442,
+          "w": 100,
+          "x": 342,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "4",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 542,
+          "w": 100,
+          "x": 442,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "5",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 642,
+          "w": 100,
+          "x": 542,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "6",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 742,
+          "w": 100,
+          "x": 642,
+          "y": 536
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "7",
+        "rect": {
+          "bottom": 636,
+          "h": 100,
+          "right": 842,
+          "w": 100,
+          "x": 742,
+          "y": 536
+        }
+      }
+    ]
+  },
+  "afterNext": {
+    "activeIndex": "0",
+    "counter": "1 / 18",
+    "cssVersion": "http://127.0.0.1:4177/bobaedream-used-car.css?v=chotot-thumb-gesture-20260830",
+    "jsVersion": "http://127.0.0.1:4177/bobaedream-used-car-interactions.js?v=chotot-thumb-gesture-20260830",
+    "mainSrc": "hero-silver-car.jpg",
+    "next": {
+      "cls": "thumbArrow next",
+      "display": "grid",
+      "rect": {
+        "bottom": 374.2,
+        "h": 44,
+        "right": 764,
+        "w": 44,
+        "x": 720,
+        "y": 330.2
+      }
+    },
+    "prev": {
+      "cls": "thumbArrow prev",
+      "display": "grid",
+      "rect": {
+        "bottom": 374.2,
+        "h": 44,
+        "right": 98,
+        "w": 44,
+        "x": 54,
+        "y": 330.2
+      }
+    },
+    "scrollY": 236.8,
+    "strip": {
+      "bottom": 405.2,
+      "h": 106,
+      "right": 776,
+      "w": 736,
+      "x": 40,
+      "y": 299.2
+    },
+    "thumbImages": [
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": -365.6,
+        "w": 84.8,
+        "x": -450.4,
+        "y": 306.8
+      },
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": -265.6,
+        "w": 84.8,
+        "x": -350.4,
+        "y": 306.8
+      },
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": -165.6,
+        "w": 84.8,
+        "x": -250.4,
+        "y": 306.8
+      },
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": -65.6,
+        "w": 84.8,
+        "x": -150.4,
+        "y": 306.8
+      },
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": 34.4,
+        "w": 84.8,
+        "x": -50.4,
+        "y": 306.8
+      },
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": 134.4,
+        "w": 84.8,
+        "x": 49.6,
+        "y": 306.8
+      },
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": 234.4,
+        "w": 84.8,
+        "x": 149.6,
+        "y": 306.8
+      },
+      {
+        "bottom": 391.6,
+        "h": 84.8,
+        "right": 334.4,
+        "w": 84.8,
+        "x": 249.6,
+        "y": 306.8
+      }
+    ],
+    "total": 18,
+    "track": {
+      "clientWidth": 1800,
+      "computedTransform": "matrix(1, 0, 0, 1, -500, 0)",
+      "inlineTransform": "translate3d(-500px, 0px, 0px)",
+      "rect": {
+        "bottom": 399.2,
+        "h": 100,
+        "right": 1342,
+        "w": 1800,
+        "x": -458,
+        "y": 299.2
+      },
+      "scrollWidth": 1800
+    },
+    "viewport": {
+      "bottom": 405.2,
+      "h": 106,
+      "right": 776,
+      "w": 734,
+      "x": 42,
+      "y": 299.2
+    },
+    "visible": [
+      {
+        "cls": "detailThumb",
+        "index": "5",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 142,
+          "w": 100,
+          "x": 42,
+          "y": 299.2
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "6",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 242,
+          "w": 100,
+          "x": 142,
+          "y": 299.2
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "7",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 342,
+          "w": 100,
+          "x": 242,
+          "y": 299.2
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "8",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 442,
+          "w": 100,
+          "x": 342,
+          "y": 299.2
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "9",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 542,
+          "w": 100,
+          "x": 442,
+          "y": 299.2
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "10",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 642,
+          "w": 100,
+          "x": 542,
+          "y": 299.2
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "11",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 742,
+          "w": 100,
+          "x": 642,
+          "y": 299.2
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "12",
+        "rect": {
+          "bottom": 399.2,
+          "h": 100,
+          "right": 842,
+          "w": 100,
+          "x": 742,
+          "y": 299.2
+        }
+      }
+    ]
+  },
+  "afterThumb": {
+    "activeIndex": "8",
+    "counter": "9 / 18",
+    "cssVersion": "http://127.0.0.1:4177/bobaedream-used-car.css?v=chotot-thumb-gesture-20260830",
+    "jsVersion": "http://127.0.0.1:4177/bobaedream-used-car-interactions.js?v=chotot-thumb-gesture-20260830",
+    "mainSrc": "thumb-escalade.png",
+    "next": {
+      "cls": "thumbArrow next",
+      "display": "grid",
+      "rect": {
+        "bottom": 377.4,
+        "h": 44,
+        "right": 764,
+        "w": 44,
+        "x": 720,
+        "y": 333.4
+      }
+    },
+    "prev": {
+      "cls": "thumbArrow prev",
+      "display": "grid",
+      "rect": {
+        "bottom": 377.4,
+        "h": 44,
+        "right": 98,
+        "w": 44,
+        "x": 54,
+        "y": 333.4
+      }
+    },
+    "scrollY": 233.6,
+    "strip": {
+      "bottom": 408.4,
+      "h": 106,
+      "right": 776,
+      "w": 736,
+      "x": 40,
+      "y": 302.4
+    },
+    "thumbImages": [
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": -365.6,
+        "w": 84.8,
+        "x": -450.4,
+        "y": 310
+      },
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": -265.6,
+        "w": 84.8,
+        "x": -350.4,
+        "y": 310
+      },
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": -165.6,
+        "w": 84.8,
+        "x": -250.4,
+        "y": 310
+      },
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": -65.6,
+        "w": 84.8,
+        "x": -150.4,
+        "y": 310
+      },
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": 34.4,
+        "w": 84.8,
+        "x": -50.4,
+        "y": 310
+      },
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": 134.4,
+        "w": 84.8,
+        "x": 49.6,
+        "y": 310
+      },
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": 234.4,
+        "w": 84.8,
+        "x": 149.6,
+        "y": 310
+      },
+      {
+        "bottom": 394.8,
+        "h": 84.8,
+        "right": 334.4,
+        "w": 84.8,
+        "x": 249.6,
+        "y": 310
+      }
+    ],
+    "total": 18,
+    "track": {
+      "clientWidth": 1800,
+      "computedTransform": "matrix(1, 0, 0, 1, -500, 0)",
+      "inlineTransform": "translate3d(-500px, 0px, 0px)",
+      "rect": {
+        "bottom": 402.4,
+        "h": 100,
+        "right": 1342,
+        "w": 1800,
+        "x": -458,
+        "y": 302.4
+      },
+      "scrollWidth": 1800
+    },
+    "viewport": {
+      "bottom": 408.4,
+      "h": 106,
+      "right": 776,
+      "w": 734,
+      "x": 42,
+      "y": 302.4
+    },
+    "visible": [
+      {
+        "cls": "detailThumb",
+        "index": "5",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 142,
+          "w": 100,
+          "x": 42,
+          "y": 302.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "6",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 242,
+          "w": 100,
+          "x": 142,
+          "y": 302.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "7",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 342,
+          "w": 100,
+          "x": 242,
+          "y": 302.4
+        }
+      },
+      {
+        "cls": "detailThumb is-active",
+        "index": "8",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 442,
+          "w": 100,
+          "x": 342,
+          "y": 302.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "9",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 542,
+          "w": 100,
+          "x": 442,
+          "y": 302.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "10",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 642,
+          "w": 100,
+          "x": 542,
+          "y": 302.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "11",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 742,
+          "w": 100,
+          "x": 642,
+          "y": 302.4
+        }
+      },
+      {
+        "cls": "detailThumb",
+        "index": "12",
+        "rect": {
+          "bottom": 402.4,
+          "h": 100,
+          "right": 842,
+          "w": 100,
+          "x": 742,
+          "y": 302.4
+        }
+      }
+    ]
+  },
+  "clickNextError": null,
+  "clickThumbError": null
+}

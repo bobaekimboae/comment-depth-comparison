@@ -88,7 +88,7 @@ window.BOBAE_USED_CAR = {
       accident: "없음",
       thumbnail: "assets/used-car/hero-silver-car.jpg",
       images: ["assets/used-car/hero-silver-car.jpg", "assets/used-car/thumb-range-rover.png", "assets/used-car/thumb-escalade.png"],
-      photoCount: 10,
+      photoCount: 18,
       video: true,
       dealer: "main",
       intro: "ㄴㅇㄹㅎㄴㅇㅎㄴㅇㅎ",
