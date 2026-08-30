@@ -6,9 +6,9 @@
 
   const state = {
     tab: "all",
-    maker: { label: "제조사 모델", value: "" },
-    region: { label: "전국", value: "" },
-    price: { label: "전체 가격", value: "" }
+    maker: { label: "제조사", value: "" },
+    model: { label: "모델", value: "" },
+    region: { label: "전국", value: "" }
   };
 
   const tabMeta = {
@@ -46,7 +46,7 @@
 
   const selectOptions = {
     maker: [
-      { label: "제조사 모델", value: "" },
+      { label: "제조사", value: "" },
       { label: "현대", value: "hyundai" },
       { label: "기아", value: "kia" },
       { label: "제네시스", value: "genesis" },
@@ -54,6 +54,18 @@
       { label: "BMW", value: "bmw" },
       { label: "아우디", value: "audi" },
       { label: "포르쉐", value: "porsche" }
+    ],
+    model: [
+      { label: "모델", value: "" },
+      { label: "G80", value: "g80" },
+      { label: "GV70", value: "gv70" },
+      { label: "그랜저", value: "grandeur" },
+      { label: "쏘나타", value: "sonata" },
+      { label: "에스컬레이드", value: "escalade" },
+      { label: "레인지로버", value: "range-rover" },
+      { label: "GLE클래스", value: "gle-class" },
+      { label: "X5", value: "x5" },
+      { label: "르반떼", value: "levante" }
     ],
     region: [
       { label: "전국", value: "" },
@@ -63,21 +75,13 @@
       { label: "부산", value: "busan" },
       { label: "대구", value: "daegu" },
       { label: "대전", value: "daejeon" }
-    ],
-    price: [
-      { label: "전체 가격", value: "" },
-      { label: "1천만원 이하", value: "under-1000" },
-      { label: "3천만원 이하", value: "under-3000" },
-      { label: "5천만원 이하", value: "under-5000" },
-      { label: "1억원 이상", value: "over-10000" },
-      { label: "리스 승계", value: "lease-transfer" }
     ]
   };
 
   const valueIds = {
     maker: "mainMakerValue",
-    region: "mainRegionValue",
-    price: "mainPriceValue"
+    model: "mainModelValue",
+    region: "mainRegionValue"
   };
 
   const popularCards = cars.slice(0, 4);
@@ -207,7 +211,7 @@
   function buildSearchUrl() {
     const params = new URLSearchParams();
     params.set("type", state.tab);
-    ["maker", "region", "price"].forEach((key) => {
+    ["maker", "model", "region"].forEach((key) => {
       if (state[key].value) params.set(key, state[key].value);
     });
     return `${listUrl}?${params.toString()}`;
