@@ -1,3 +1,38 @@
+# Bobaedream Used Car PC QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The implementation intentionally uses local mock data for the listing/detail content and local image assets for GitHub Pages stability.
+
+**Implementation Checklist**
+- [x] Captured the source PC list and detail surfaces from `https://dev.bbmuseum.co.kr/car/list`.
+- [x] Added `bobaedream-used-car-list.html` with the source PC header, 240px left filter panel, 1152px list column, summary filter chips, category icons, seller tabs, video toggle, sort control, rows, and pagination.
+- [x] Added `bobaedream-used-car-detail.html` with the 736px gallery/info column and 412px price/dealer right rail.
+- [x] Added shared scenario data in `bobaedream-used-car-data.js`, including board-like virtual used-car inventory, detail specifications, options, insurance history, seller info, and related listings.
+- [x] Added shared interactions in `bobaedream-used-car-interactions.js`: list filtering, seller tabs, video-only toggle, sort cycling, detail hydration by `id`, gallery thumbnails, sticky section tabs, favorite buttons, and toast feedback.
+- [x] Saved source-derived logo/category/thumb assets and local high-resolution hero images under `assets/used-car/`.
+
+**Evidence**
+- Source list screenshot: `captures/used-car-source/source-list-desktop-top.png`
+- Source detail screenshot: `captures/used-car-source/source-detail-desktop-top.png`
+- Final implementation screenshots: `captures/used-car-implementation/list-final-1440.png`, `captures/used-car-implementation/detail-final-1440.png`
+- Image-detail screenshot: `captures/used-car-implementation/detail-escalade-1440-v2.png`
+- Sticky detail navigation screenshot: `captures/used-car-implementation/detail-sticky-nav-1440-v2.png`
+- Viewport: `1440 x 1200`
+
+**Measured Pass**
+- List summary card: `x=272`, `y=141`, `w=1152`, `h=222`.
+- List toolbar starts at `y=387`, matching the source rhythm.
+- Initial list count renders as `14,896대`; 11 mock rows render on the base screen.
+- Seller filter test: `개인` tab renders 2 rows.
+- Video filter test: `영상 매물` toggle renders 6 rows.
+- First list title links to `bobaedream-used-car-detail.html?id=d8yrckju0e`.
+- Detail gallery: `x=140`, `y=141`, `w=736`, `h=412`.
+- Detail price card: `x=888`, `y=141`, `w=412`, `h=302`; dealer card starts at `y=455`.
+- Detail vehicle info card starts at `y=753`.
+- Sticky section navigation appears at scrollY `700` with `x=140`, `top=0`, `w=736`.
+- Console and page errors checked with Playwright: passed.
+
 # Bobaedream PC Detail QA
 
 **Findings**

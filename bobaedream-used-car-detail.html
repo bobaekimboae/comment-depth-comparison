@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="bobaedream-used-car.css">
+<title>보배드림 중고차 PC 상세</title>
+</head>
+<body data-used-car-detail>
+  <header class="bbHeader">
+    <div class="bbHeaderTop">
+      <div class="bbHeaderInner">
+        <nav class="bbHeaderLinks" aria-label="회원 메뉴">
+          <a href="#" data-toast="로그인 화면은 시안에서 준비 중입니다.">로그인</a>
+          <a href="#" data-toast="회원가입 화면은 시안에서 준비 중입니다.">회원가입</a>
+          <a href="#" data-toast="고객센터 화면은 시안에서 준비 중입니다.">고객센터</a>
+        </nav>
+      </div>
+    </div>
+    <div class="bbHeaderMain">
+      <div class="bbHeaderInner">
+        <a class="bbLogo" href="bobaedream-used-car-list.html" aria-label="보배드림 홈">
+          <img src="assets/used-car/bobaedream-logo.png" alt="보배드림">
+        </a>
+      </div>
+    </div>
+    <nav class="bbNav" aria-label="보배드림 주요 메뉴">
+      <div class="bbHeaderInner">
+        <div class="bbNavList">
+          <a class="bbNavLink" data-nav="shorts" href="#" data-toast="숏폼카 화면은 시안에서 준비 중입니다.">숏폼카</a>
+          <a class="bbNavLink" href="bobaedream-used-car-list.html">국산차</a>
+          <a class="bbNavLink" href="bobaedream-used-car-list.html?category=used">수입차</a>
+          <a class="bbNavLink" href="#" data-toast="매물등록 기능은 다음 단계에서 연결합니다.">매물등록</a>
+          <a class="bbNavLink" href="#" data-toast="딜러 페이지는 시안에서 준비 중입니다.">딜러</a>
+          <a class="bbNavLink" href="bobaedream-used-car-list.html?category=parts">부품·용품</a>
+          <a class="bbNavLink" href="bobaedream-pc-board-list.html">커뮤니티</a>
+          <a class="bbNavLink bbNavMore" href="#" data-toast="더보기 메뉴는 시안에서 준비 중입니다.">더보기</a>
+        </div>
+        <div class="bbHeaderActions" aria-label="빠른 메뉴">
+          <button class="headerIcon search" type="button" data-toast="검색창은 시안에서 준비 중입니다." aria-label="검색"></button>
+          <button class="headerIcon person" type="button" data-toast="마이페이지는 시안에서 준비 중입니다." aria-label="마이페이지"></button>
+          <button class="headerIcon heart" type="button" data-toast="찜한 매물 화면은 시안에서 준비 중입니다." aria-label="찜"></button>
+          <button class="headerIcon bell" type="button" data-toast="알림 화면은 시안에서 준비 중입니다." aria-label="알림"></button>
+          <button class="headerIcon menu" type="button" data-toast="전체 메뉴는 시안에서 준비 중입니다." aria-label="전체 메뉴"><span></span></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="detailShell">
+    <section class="detailLeft" aria-label="차량 상세 정보">
+      <div class="galleryCard" id="detailGallery"></div>
+
+      <article class="overviewCard">
+        <h1 class="detailTitle" id="detailTitle"></h1>
+        <button class="overviewHeart" type="button" data-toggle-heart aria-label="찜하기"><span class="heartIcon"></span></button>
+        <div class="detailSubcopy" id="detailSubcopy"></div>
+        <div class="detailMeta" id="detailMeta"></div>
+        <div class="badgeRow" id="detailBadges"></div>
+        <div class="overviewStats" id="detailStats"></div>
+      </article>
+
+      <nav class="detailAnchorNav" aria-label="상세 섹션 이동">
+        <a class="is-active" href="#carInfo">차량 정보</a>
+        <a href="#carOptions">차량 옵션</a>
+        <a href="#insuranceInfo">보험 이력</a>
+        <a href="#historyInfo">이력정보</a>
+        <a href="#warrantyInfo">제조사 보증</a>
+        <a href="#sellerCars">딜러 매물</a>
+      </nav>
+
+      <section class="infoCard" id="carInfo">
+        <h2>차량 정보</h2>
+        <div class="specGrid" id="basicSpecs"></div>
+        <div class="sectionDivider"></div>
+        <h2>상세 정보</h2>
+        <div class="specGrid" id="detailSpecs"></div>
+      </section>
+
+      <section class="infoCard" id="carOptions">
+        <h2>차량 옵션</h2>
+        <div class="optionGrid" id="optionGrid"></div>
+        <div class="selectedOption">
+          선택 옵션
+          <p id="selectedOptions"></p>
+        </div>
+      </section>
+
+      <section class="infoCard" id="insuranceInfo">
+        <h2>보험 이력</h2>
+        <div class="historySummary" id="historySummary"></div>
+        <dl class="historyDetails" id="historyDetails"></dl>
+        <button class="widePillBtn" type="button" data-toast="보험 이력 전체 보기는 시안에서 준비 중입니다.">보험 이력 전체 보기</button>
+      </section>
+
+      <section class="infoCard" id="historyInfo">
+        <h2>이력정보</h2>
+        <div class="timeline">
+          <div class="timelineDate"><span class="calendarDot"></span><span>17년 05월</span></div>
+          <div class="timelineBox">
+            <strong>신차 출고</strong>
+            <p id="historyEvent"></p>
+          </div>
+        </div>
+        <button class="widePillBtn" type="button" data-toast="이력정보 상세 보기는 시안에서 준비 중입니다.">이력정보 1건 모두 보기</button>
+      </section>
+
+      <section class="infoCard" id="warrantyInfo">
+        <h2>제조사 보증</h2>
+        <p class="descText">보증 만료 또는 별도 고지 조건이 있는 차량입니다. 딜러 상담 시 상품화 점검표와 보증 가능 항목을 함께 확인하세요.</p>
+      </section>
+
+      <section class="infoCard" id="descriptionInfo">
+        <h2>차량 설명</h2>
+        <p class="descText" id="descriptionText"></p>
+      </section>
+
+      <section class="infoCard" id="sellerCars">
+        <h2>딜러 매물</h2>
+        <div class="similarGrid" id="similarGrid"></div>
+      </section>
+    </section>
+
+    <aside class="detailRight" aria-label="가격 및 판매자 정보">
+      <section class="sideCard priceCard">
+        <div class="priceTop">
+          <strong class="detailPrice" id="detailPrice"></strong>
+          <button class="outlineBlueBtn" type="button" data-toast="보험료 계산 화면은 시안에서 준비 중입니다.">보험료 계산</button>
+        </div>
+        <div class="insuranceLine">
+          <span>보험이력</span>
+          <span><strong id="insuranceCount">0건</strong> ›</span>
+        </div>
+        <div class="costBox">
+          <div class="costRows" id="costRows"></div>
+          <div class="costDivider"></div>
+          <div class="costTotal">예상 총 비용<strong id="totalCost"></strong></div>
+        </div>
+        <div class="sideBtnRow">
+          <button class="sideBtn" type="button" data-toast="비용계산기를 열었습니다.">비용계산기</button>
+          <button class="sideBtn" type="button" data-toast="동급매물을 비교합니다.">동급매물</button>
+          <button class="sideBtn" type="button" data-toast="팔린매물 데이터는 시안입니다.">팔린매물</button>
+        </div>
+      </section>
+
+      <section class="sideCard dealerCard">
+        <div class="dealerProfile">
+          <span class="dealerAvatar"><img id="dealerAvatar" src="assets/used-car/dealer-avatar.png" alt=""></span>
+          <div>
+            <div class="dealerName" id="dealerName"></div>
+            <div class="dealerStats" id="dealerStats"></div>
+            <div class="dealerLocation" id="dealerLocation"></div>
+          </div>
+        </div>
+        <div class="dealerTable">
+          <div class="dealerInfoRow"><span>종사원번호</span><strong><span id="dealerNo"></span> <u id="dealerGroup"></u></strong></div>
+          <div class="dealerInfoRow"><span>매매유형</span><strong>-</strong></div>
+        </div>
+        <div class="contactRow">
+          <button class="contactBtn" type="button" data-toast="채팅은 로그인 후 사용할 수 있습니다.">채팅</button>
+          <button class="contactBtn phone" type="button" data-toast="전화 연결은 실제로 실행하지 않는 시안입니다." id="dealerPhone"></button>
+        </div>
+        <button class="reportBtn" type="button" data-toast="신고 사유 선택 화면은 시안에서 준비 중입니다.">신고하기</button>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <strong>(주) 보배네트워크</strong> 사업자 정보 대표이사: 김보배 사업자등록번호 : 117-81-64543 사업자정보 확인<br>
+    주소 : (07995) 서울 양천구 목동동로 233-1 드림타워 11, 12층 통신판매업신고번호 : 제2013-서울양천-0465호 개인정보관리책임자 : 이은호<br>
+    회사소개 · 제휴/광고문의 · 이용약관 · 제휴/신고센터 · 고객센터 · 청소년보호정책 · 개인정보취급방침
+  </footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="bobaedream-used-car-data.js"></script>
+  <script src="bobaedream-used-car-interactions.js"></script>
+</body>
+</html>
