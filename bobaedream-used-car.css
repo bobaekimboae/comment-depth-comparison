@@ -3333,11 +3333,12 @@ html.bobae-main-page body {
 
 body[data-bobae-main] .bbHeaderTop {
   height: 32px;
-  border-bottom: 1px solid #f0f1f3;
+  border-bottom: 0;
 }
 
 body[data-bobae-main] .bbHeader {
   height: 96px;
+  border-bottom: 0;
 }
 
 body[data-bobae-main] .bbHeaderTop .bbHeaderInner {
@@ -3433,18 +3434,12 @@ body[data-bobae-main] .bbHeaderLinks a {
 }
 
 body[data-bobae-main] .bbHeaderLinks a + a {
-  margin-left: 14px;
-  padding-left: 14px;
+  margin-left: 24px;
+  padding-left: 0;
 }
 
 body[data-bobae-main] .bbHeaderLinks a + a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 1px;
-  height: 12px;
-  background: #dfe3e8;
+  display: none;
 }
 
 body[data-bobae-main] .bbFamilyNav {
@@ -3516,13 +3511,18 @@ body[data-bobae-main] .bbNavLink {
   font-weight: 750;
 }
 
+body[data-bobae-main] .bbNavLink.is-active {
+  color: #101114;
+  font-weight: 900;
+}
+
 body[data-bobae-main] .bbNavMore {
   padding-right: 10px;
 }
 
 body[data-bobae-main] .bbFamilyLink.is-active::after,
 body[data-bobae-main] .bbNavLink.is-active::after {
-  bottom: 0;
+  display: none;
 }
 
 .mainHero {
@@ -3793,14 +3793,14 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 
 .mainBodyTypeGrid {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 6px;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 8px;
 }
 
 .mainBodyCard {
-  height: 70px;
+  height: 88px;
   display: grid;
-  grid-template-rows: 44px 20px;
+  grid-template-rows: 62px 20px;
   align-content: center;
   align-items: center;
   justify-items: center;
@@ -3819,16 +3819,41 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 
 .mainBodyImage {
   width: 100%;
-  height: 44px;
+  height: 62px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 
 .mainBodyImage img {
-  width: 92px;
-  height: 42px;
+  width: 76px;
+  height: 58px;
   object-fit: contain;
+}
+
+.mainBodyCard[data-category="domestic"] .mainBodyImage img,
+.mainBodyCard[data-category="import"] .mainBodyImage img {
+  width: 94px;
+}
+
+.mainBodyCard[data-category="truck"] .mainBodyImage img {
+  width: 104px;
+}
+
+.mainBodyCard[data-category="bike"] .mainBodyImage img,
+.mainBodyCard[data-category="scooter"] .mainBodyImage img,
+.mainBodyCard[data-category="electric-scooter"] .mainBodyImage img,
+.mainBodyCard[data-category="ebike"] .mainBodyImage img {
+  width: 82px;
+}
+
+.mainBodyCard[data-category="parts"] .mainBodyImage img {
+  width: 74px;
+}
+
+.mainBodyCard[data-category="machine"] .mainBodyImage img {
+  width: 80px;
+  height: 62px;
 }
 
 .mainBodyCard strong {
@@ -4301,7 +4326,7 @@ body[data-bobae-main] .footer {
     flex: 0 0 auto;
     gap: 0;
     padding-left: 12px;
-    border-left: 1px solid #e2e5ea;
+    border-left: 0;
     font-size: 12px;
     line-height: 18px;
   }
@@ -4510,24 +4535,33 @@ body[data-bobae-main] .footer {
   }
 
   .mainBodyTypeGrid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 8px 4px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px 6px;
   }
 
   .mainBodyCard {
-    height: 74px;
-    grid-template-rows: 44px 22px;
+    height: 88px;
+    grid-template-rows: 62px 22px;
     row-gap: 3px;
     padding: 1px 4px 0;
   }
 
   .mainBodyImage,
   .mainBodyImage img {
-    height: 44px;
+    height: 62px;
   }
 
   .mainBodyImage img {
-    width: 94px;
+    width: 78px;
+  }
+
+  .mainBodyCard[data-category="domestic"] .mainBodyImage img,
+  .mainBodyCard[data-category="import"] .mainBodyImage img {
+    width: 92px;
+  }
+
+  .mainBodyCard[data-category="truck"] .mainBodyImage img {
+    width: 100px;
   }
 
   .mainBodyCard strong {

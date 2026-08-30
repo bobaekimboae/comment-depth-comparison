@@ -3,6 +3,7 @@
   const cars = Array.isArray(data.cars) ? data.cars : [];
   const listUrl = "bobaedream-used-car-list.html";
   const detailUrl = "bobaedream-used-car-detail.html";
+  const categoryAssetVersion = "?v=vehicle-type-images-20260831";
 
   const state = {
     tab: "all",
@@ -23,14 +24,15 @@
   };
 
   const bodyTypes = [
-    { key: "suv", label: "SUV · 픽업", count: "4,208", image: "assets/main/categories/suv_2x_car.png" },
-    { key: "sedan", label: "세단", count: "3,964", image: "assets/main/categories/sedan_2x_car.png" },
-    { key: "wagon", label: "왜건", count: "326", image: "assets/main/categories/station-wagon_2x_car.png" },
-    { key: "compact", label: "소형 · 해치백", count: "1,185", image: "assets/main/categories/compact_2x_car.png" },
-    { key: "van", label: "밴 · 승합", count: "612", image: "assets/main/categories/van_2x_car.png" },
-    { key: "coupe", label: "쿠페", count: "284", image: "assets/main/categories/coupe_2x_car.png" },
-    { key: "convertible", label: "컨버터블", count: "91", image: "assets/main/categories/convertible_2x_car.png" },
-    { key: "transport", label: "화물 · 특장", count: "742", image: "assets/main/categories/transport_2x_car.png" }
+    { key: "domestic", label: "국산차", count: "8,121", image: `assets/main/categories/vehicle-type-all.png${categoryAssetVersion}`, href: `${listUrl}?category=domestic` },
+    { key: "import", label: "수입차", count: "4,092", image: `assets/main/categories/vehicle-type-import.png${categoryAssetVersion}`, href: `${listUrl}?category=import` },
+    { key: "truck", label: "트럭·특장", count: "742", image: `assets/main/categories/vehicle-type-truck.png${categoryAssetVersion}`, href: `${listUrl}?category=truck` },
+    { key: "bike", label: "바이크", count: "982", image: `assets/main/categories/vehicle-type-bike.png${categoryAssetVersion}`, href: `${listUrl}?category=bike` },
+    { key: "scooter", label: "스쿠터", count: "436", image: `assets/main/categories/vehicle-type-scooter.png${categoryAssetVersion}`, href: `${listUrl}?category=scooter` },
+    { key: "electric-scooter", label: "전기스쿠터", count: "214", image: `assets/main/categories/vehicle-type-electric-scooter.png${categoryAssetVersion}`, href: `${listUrl}?category=electric-scooter` },
+    { key: "ebike", label: "자전거", count: "167", image: `assets/main/categories/vehicle-type-ebike.png${categoryAssetVersion}`, href: `${listUrl}?category=ebike` },
+    { key: "parts", label: "부품·용품", count: "1,430", image: `assets/main/categories/vehicle-type-parts.png${categoryAssetVersion}`, href: `${listUrl}?category=parts` },
+    { key: "machine", label: "건설기계", count: "181", image: `assets/main/categories/vehicle-type-machine.png${categoryAssetVersion}`, href: `${listUrl}?category=machine` }
   ];
 
   const brands = [
@@ -117,7 +119,8 @@
     bodyTypes.forEach((item) => {
       const card = document.createElement("a");
       card.className = "mainBodyCard";
-      card.href = `${listUrl}?body=${encodeURIComponent(item.key)}`;
+      card.href = item.href || `${listUrl}?category=${encodeURIComponent(item.key)}`;
+      card.dataset.category = item.key;
       card.setAttribute("aria-label", `${item.label} 매물 보기`);
 
       const imageWrap = document.createElement("span");

@@ -1,3 +1,39 @@
+# S03-P-H Bobaedream Main Header Gap And Vehicle Type Image QA
+
+**Source Visual Truth**
+- Header behavior reference: Kaidee Auto and AutoTrader use spacing and hierarchy instead of hard divider lines in the top navigation.
+- Supplied vehicle type source images: `C:\Users\bobae\OneDrive\사진\0_플랫폼별_사진\2_중동_슈퍼카\베트남_초톳\*.png`.
+
+**Implementation Screenshot**
+- `captures/main-vehicle-type-images-20260831/bobae-main-vehicle-types-desktop-final.png`
+
+**Viewport And State**
+- Desktop top-of-main page in the Codex in-app browser.
+- State: signed-out visual state, no user interaction.
+
+**Findings**
+- No actionable P0/P1/P2 issues remain.
+- Header bottom border, top-row border, top link divider, and active GNB underline are removed on the main page.
+- Active navigation is now expressed by typography and color only.
+- All `9` vehicle type category images load successfully from normalized `240 x 140` PNG assets.
+- Vehicle category tiles render as one stable row with no horizontal overflow.
+
+**Fixes Made**
+- Replaced body-shape category imagery with supplied vehicle type imagery.
+- Normalized supplied transparent PNGs into balanced `assets/main/categories/vehicle-type-*.png` assets.
+- Updated category labels to `국산차`, `수입차`, `트럭·특장`, `바이크`, `스쿠터`, `전기스쿠터`, `자전거`, `부품·용품`, `건설기계`.
+- Added image cache-busting for the category assets.
+- Removed header divider lines on the main page while keeping active menu emphasis.
+
+**Required Fidelity Surfaces**
+- Fonts and typography: active header state now relies on weight and color, matching the no-divider direction.
+- Spacing and layout rhythm: header rows are separated by height and spacing rather than borders.
+- Colors and visual tokens: Bobaedream navy/black hierarchy remains unchanged.
+- Image quality and assets: supplied PNGs are used, transparent padding normalized for balanced rendering.
+- Copy and content: category labels now describe vehicle types rather than body styles.
+
+final result: passed
+
 # S03-P-H Bobaedream Main Kaidee Title Balance QA
 
 **Source Visual Truth**
