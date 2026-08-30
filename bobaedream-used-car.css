@@ -755,7 +755,24 @@ img {
   align-self: start;
 }
 
-.thumbLink img {
+.thumbLink::after,
+.mobileThumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 54px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .56) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.thumbLink img,
+.mobileThumb img {
+  position: absolute;
+  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -824,32 +841,74 @@ img {
 
 .thumbTime {
   position: absolute;
-  left: 8px;
-  bottom: 8px;
+  left: 6px;
+  bottom: 7px;
   color: #fff;
-  font-size: 13px;
-  font-weight: 900;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .34);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  z-index: 2;
+}
+
+.thumbMedia {
+  position: absolute;
+  right: 6px;
+  bottom: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .55);
+  z-index: 2;
+}
+
+.thumbPhotoCount {
+  min-width: 9px;
+  text-align: right;
+}
+
+.photoMark {
+  width: 12px;
+  height: 9px;
+  border: 1.4px solid currentColor;
+  border-radius: 2px;
+  position: relative;
+  box-sizing: border-box;
+  opacity: .96;
+}
+
+.photoMark::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  width: 3px;
+  height: 3px;
+  border: 1.2px solid currentColor;
+  border-radius: 50%;
 }
 
 .videoMark {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  background: #fff;
+  position: relative;
+  width: 12px;
+  height: 10px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, .95);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .14);
 }
 
 .videoMark::before {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 3px;
+  left: 4px;
+  top: 2px;
   border-left: 5px solid #3e4249;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .rowBody {

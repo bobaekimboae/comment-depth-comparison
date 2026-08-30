@@ -67,6 +67,38 @@ final result: passed
 
 final result: passed
 
+# Bobaedream Used Car Chotot Thumbnail QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The list thumbnail slot now matches Chotot's square photo treatment before the final SVG icon replacement pass.
+
+**Implementation Checklist**
+- [x] Captured and measured the live Chotot listing thumbnail.
+- [x] Updated list thumbnails to prefer the original car photo from `images[0]` and use `thumbnail` only as fallback.
+- [x] Added real photo media to the first G80 scenario so the first row can be compared against the Chotot photo state instead of a no-photo placeholder.
+- [x] Matched the image slot to `160px x 160px`, `8px` radius, clipped overflow, absolute full-fill image, and `object-fit: cover`.
+- [x] Matched bottom overlay placement with a subtle gradient, left time label, right photo count, photo marker, and video marker.
+- [x] Preserved the same behavior for mobile thumbnails by sharing the image-fit rule.
+
+**Evidence**
+- Source thumbnail screenshot: `captures/chotot-thumbnail/source-chotot-thumbnail-crop.png`
+- Source thumbnail metrics: `captures/chotot-thumbnail/source-chotot-thumbnail-measurements.json`
+- Implementation thumbnail screenshot: `captures/chotot-thumbnail/impl-bobae-thumbnail-crop.png`
+- Implementation thumbnail metrics: `captures/chotot-thumbnail/impl-bobae-thumbnail-measurements.json`
+- Implementation full-list screenshot: `captures/chotot-thumbnail/impl-bobae-list-thumb-1280.png`
+- Combined comparison image: `captures/chotot-thumbnail/comparison-chotot-vs-bobae-thumbnail.png`
+- Viewport: `1280 x 720`
+- State: first desktop used-car listing row, photo/video thumbnail state.
+
+**Measured Pass**
+- Source thumbnail: `160px x 160px`, `8px` radius, clipped overflow, inner image `160px x 160px`, `object-fit: cover`.
+- Implementation thumbnail: `160px x 160px`, `8px` radius, clipped overflow, inner image `160px x 160px`, `object-fit: cover`.
+- Implementation overlay: left time label `11px / 14px / 700`, left `6px`, bottom `7px`; right media group `10px / 12px / 700`, right `6px`, bottom `7px`.
+- Full row remained stable after image swap: first listing row height stays `193px`.
+
+final result: passed
+
 # Bobaedream Export Mobile List QA
 
 **Findings**

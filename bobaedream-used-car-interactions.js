@@ -121,11 +121,13 @@
   }
 
   function thumbMarkup(car, large = false) {
-    if (car.thumbnail && !large) {
-      return `<img src="${car.thumbnail}" alt="${car.title} 썸네일">`;
+    const imageList = (car.images || []).filter(Boolean);
+    const listImage = imageList[0] || car.thumbnail;
+    if (listImage && !large) {
+      return `<img src="${listImage}" alt="${car.title} 썸네일">`;
     }
-    if (large && car.images && car.images.length) {
-      return `<img src="${car.images[0]}" alt="${car.title} 대표 이미지">`;
+    if (large && imageList.length) {
+      return `<img src="${imageList[0]}" alt="${car.title} 대표 이미지">`;
     }
     return `
       <div class="${large ? "galleryPlaceholder" : "thumbPlaceholder"}">
@@ -134,6 +136,18 @@
           <div class="${large ? "" : "thumbPlaceholderText"}">사진 준비 중</div>
         </div>
       </div>
+    `;
+  }
+
+  function thumbOverlayMarkup(car) {
+    const imageList = (car.images || []).filter(Boolean);
+    const photoCount = Number.isFinite(car.photoCount) ? car.photoCount : imageList.length || (car.thumbnail ? 1 : 0);
+    if (!photoCount && !car.video) return "";
+    return `
+      <span class="thumbMedia" aria-label="사진 ${photoCount}장${car.video ? ", 영상 포함" : ""}">
+        ${photoCount ? `<span class="thumbPhotoCount">${photoCount}</span><span class="photoMark" aria-hidden="true"></span>` : ""}
+        ${car.video ? `<span class="videoMark" aria-hidden="true"></span>` : ""}
+      </span>
     `;
   }
 
@@ -324,7 +338,7 @@
           <a class="mobileThumb" href="${detailUrl}" aria-label="${car.title} 상세 보기">
             ${thumbMarkup(car)}
             <span class="thumbTime">${car.posted}</span>
-            ${car.video ? `<span class="videoMark" aria-label="영상 매물"></span>` : ""}
+            ${thumbOverlayMarkup(car)}
           </a>
           <div class="mobileRowBody">
             <a class="mobileRowTitle" href="${detailUrl}">${car.title}</a>
@@ -364,7 +378,7 @@
           <a class="thumbLink" href="${detailUrl}" aria-label="${car.title} 상세 보기">
             ${thumbMarkup(car)}
             <span class="thumbTime">${car.posted}</span>
-            ${car.video ? `<span class="videoMark" aria-label="영상 매물"></span>` : ""}
+            ${thumbOverlayMarkup(car)}
           </a>
           <div class="rowBody">
             <a class="rowTitle" href="${detailUrl}">${car.title}</a>

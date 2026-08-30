@@ -1,0 +1,227 @@
+{
+  "count": {
+    "rect": {
+      "bottom": 629,
+      "height": 12,
+      "right": 508,
+      "width": 10.74,
+      "x": 497.26,
+      "y": 617
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "bottom": "auto",
+      "color": "rgb(255, 255, 255)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "height": "12px",
+      "left": "auto",
+      "lineHeight": "12px",
+      "objectFit": "fill",
+      "overflow": "visible",
+      "position": "static",
+      "right": "auto",
+      "width": "10.7375px",
+      "zIndex": "auto"
+    },
+    "text": "10"
+  },
+  "gradient": {
+    "background": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.56) 100%)",
+    "bottom": "0px",
+    "height": "54px",
+    "zIndex": "1"
+  },
+  "img": {
+    "rect": {
+      "bottom": 636,
+      "height": 160,
+      "right": 544,
+      "width": 160,
+      "x": 384,
+      "y": 476
+    },
+    "src": "assets/used-car/hero-silver-car.jpg",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "bottom": "0px",
+      "color": "rgb(16, 17, 20)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "height": "160px",
+      "left": "0px",
+      "lineHeight": "18.9px",
+      "objectFit": "cover",
+      "overflow": "clip",
+      "position": "absolute",
+      "right": "0px",
+      "width": "160px",
+      "zIndex": "auto"
+    }
+  },
+  "media": {
+    "rect": {
+      "bottom": 629,
+      "height": 12,
+      "right": 538,
+      "width": 40.74,
+      "x": 497.26,
+      "y": 617
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "bottom": "7px",
+      "color": "rgb(255, 255, 255)",
+      "display": "flex",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "700",
+      "gap": "3px",
+      "height": "12px",
+      "left": "113.262px",
+      "lineHeight": "12px",
+      "objectFit": "fill",
+      "overflow": "visible",
+      "position": "absolute",
+      "right": "6px",
+      "width": "40.7375px",
+      "zIndex": "2"
+    },
+    "text": "10"
+  },
+  "photo": {
+    "rect": {
+      "bottom": 627.5,
+      "height": 9,
+      "right": 523,
+      "width": 12,
+      "x": 511,
+      "y": 618.5
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "2px",
+      "bottom": "0px",
+      "color": "rgb(255, 255, 255)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "height": "9px",
+      "left": "0px",
+      "lineHeight": "12px",
+      "objectFit": "fill",
+      "overflow": "visible",
+      "position": "relative",
+      "right": "0px",
+      "width": "12px",
+      "zIndex": "auto"
+    }
+  },
+  "rowText": "1일전\n10\n제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩\n17년05월(18년형) · 54만km · 가솔린 · 자동\n56,544만원\n서울 서초구 · 오토갤러리\n한강모터스-박성수 딜러\n· 판매중 41대",
+  "thumb": {
+    "rect": {
+      "bottom": 636,
+      "height": 160,
+      "right": 544,
+      "width": 160,
+      "x": 384,
+      "y": 476
+    },
+    "style": {
+      "background": "rgb(231, 231, 232)",
+      "borderRadius": "8px",
+      "bottom": "0px",
+      "color": "rgb(16, 17, 20)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "height": "160px",
+      "left": "0px",
+      "lineHeight": "18.9px",
+      "objectFit": "fill",
+      "overflow": "hidden",
+      "position": "relative",
+      "right": "0px",
+      "width": "160px",
+      "zIndex": "auto"
+    }
+  },
+  "time": {
+    "rect": {
+      "bottom": 629,
+      "height": 14,
+      "right": 415.31,
+      "width": 25.31,
+      "x": 390,
+      "y": 615
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "bottom": "7px",
+      "color": "rgb(255, 255, 255)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "11px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "height": "14px",
+      "left": "6px",
+      "lineHeight": "14px",
+      "objectFit": "fill",
+      "overflow": "visible",
+      "position": "absolute",
+      "right": "128.688px",
+      "width": "25.3125px",
+      "zIndex": "2"
+    },
+    "text": "1일전"
+  },
+  "video": {
+    "rect": {
+      "bottom": 628,
+      "height": 10,
+      "right": 538,
+      "width": 12,
+      "x": 526,
+      "y": 618
+    },
+    "style": {
+      "background": "rgba(255, 255, 255, 0.95)",
+      "borderRadius": "2px",
+      "bottom": "0px",
+      "color": "rgb(255, 255, 255)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "height": "10px",
+      "left": "0px",
+      "lineHeight": "12px",
+      "objectFit": "fill",
+      "overflow": "visible",
+      "position": "relative",
+      "right": "0px",
+      "width": "12px",
+      "zIndex": "auto"
+    }
+  },
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}
