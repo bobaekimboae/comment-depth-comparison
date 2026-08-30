@@ -1,0 +1,65 @@
+{
+  "body": {
+    "bottom": 2845.8,
+    "height": 2845.8,
+    "right": 1280,
+    "width": 1280,
+    "x": 0,
+    "y": 0
+  },
+  "candidates": [],
+  "filterPanel": {
+    "rect": {
+      "bottom": 1481.8,
+      "height": 1343.8,
+      "right": 340,
+      "width": 300,
+      "x": 40,
+      "y": 138
+    },
+    "style": {
+      "borderRadius": "10px",
+      "columnGap": "normal",
+      "display": "block",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "maxWidth": "none",
+      "minWidth": "auto",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "width": "300px"
+    }
+  },
+  "layout": null,
+  "mainColumn": {
+    "rect": {
+      "bottom": 2665,
+      "height": 2527,
+      "right": 1240,
+      "width": 876,
+      "x": 364,
+      "y": 138
+    },
+    "style": {
+      "borderRadius": "0px",
+      "columnGap": "normal",
+      "display": "block",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "marginLeft": "0px",
+      "marginRight": "0px",
+      "maxWidth": "none",
+      "minWidth": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "width": "876px"
+    }
+  },
+  "url": "https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-used-car-list.html?v=5b2a164-width-check",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}

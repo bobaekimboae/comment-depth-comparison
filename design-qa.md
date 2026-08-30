@@ -99,6 +99,35 @@ final result: passed
 
 final result: passed
 
+# Bobaedream Used Car Chotot Filter Width QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The Bobaedream left filter width already matches Chotot's right filter/card body width.
+
+**Implementation Checklist**
+- [x] Measured Chotot's right rail and actual right filter/card body width.
+- [x] Measured the deployed Bobaedream left filter and main list layout.
+- [x] Confirmed no CSS width change is needed.
+
+**Evidence**
+- Source screenshot: `captures/chotot-filter-width/source-chotot-right-filter-width.png`
+- Source metrics: `captures/chotot-filter-width/source-chotot-right-filter-width.json`
+- Implementation screenshot: `captures/chotot-filter-width/impl-bobae-left-filter-width.png`
+- Implementation metrics: `captures/chotot-filter-width/impl-bobae-left-filter-width.json`
+- Viewport: `1280 x 720`
+- State: desktop used-car listing page.
+
+**Measured Pass**
+- Chotot right rail wrapper: `324px` total, made of `300px` side body plus `24px` left margin/gap.
+- Chotot right filter/card body: `300px`.
+- Bobaedream left filter body: `300px`.
+- Bobaedream left filter to main list gap: `24px`.
+- Bobaedream main list body: `876px`.
+- Layout ratio matches directionally: Chotot `876 + 24 + 300`, Bobaedream `300 + 24 + 876`.
+
+final result: passed
+
 # Bobaedream Export Mobile List QA
 
 **Findings**
