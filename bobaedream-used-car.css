@@ -1729,7 +1729,11 @@ body[data-used-car-list] .listShell .viewLine {
   transform: translate(var(--option-icon-x), var(--option-icon-y));
 }
 
-.optionGlyph--sunroof,
+.optionGlyph--sunroof {
+  --option-icon-size: 40px;
+  --option-icon-y: 1.5px;
+}
+
 .optionGlyph--smart-key {
   --option-icon-size: 40px;
 }

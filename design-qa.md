@@ -3,12 +3,14 @@
 **Findings**
 - No actionable P0/P1/P2 issues remain after normalizing the option icon alignment.
 - The original icon image files remain unchanged; sizing and center correction are handled in CSS.
+- Follow-up optical correction: `선루프` is lowered by `1.5px` because its upper roof mass made it look visually high despite geometric centering.
 
 **Implementation Checklist**
 - [x] Fixed each option cell to a stable 40px icon row plus text row.
 - [x] Added per-icon CSS classes from the mapped asset filename.
 - [x] Normalized visual icon size around a 35px painted-area target and corrected small center offsets.
 - [x] Updated list/detail cache keys so GitHub Pages loads the alignment CSS and interaction script.
+- [x] Split `선루프` from the shared 40px rule and applied the optical Y-axis correction.
 
 **Evidence**
 - Metrics: `captures/option-icons-alignment-20260831/detail-option-icons-alignment.json`
