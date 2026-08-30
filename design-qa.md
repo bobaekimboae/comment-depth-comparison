@@ -1,3 +1,26 @@
+# Bobaedream Used Car Original Option Icon QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after removing the rounded option icon treatment.
+- [P3] `s03-39-option-head-up-display` is still missing from the supplied icon set, so `헤드업 디스플레이` remains a plain `39` fallback.
+
+**Implementation Checklist**
+- [x] Removed the circular blue option icon background.
+- [x] Removed the active-state blue CSS filter and inactive opacity treatment.
+- [x] Rendered the supplied PNG option icons at their original color treatment with transparent backgrounds.
+- [x] Kept the existing option grid spacing and text alignment stable.
+
+**Evidence**
+- Implementation screenshot: `captures/option-icons-original-20260831/detail-option-icons-original-1536.png`
+- Implementation metrics: `captures/option-icons-original-20260831/detail-option-icons-original-1536.json`
+
+**Measured Pass**
+- `loadedIconCount=11`, `brokenIconLabels=[]`, `hasRoundedIconBackground=false`.
+- `fallbackLabels=["39:헤드업 디스플레이"]`.
+- Console and page errors checked: no document-originated errors.
+
+final result: passed
+
 # Bobaedream Used Car Option Icon Replacement QA
 
 **Findings**

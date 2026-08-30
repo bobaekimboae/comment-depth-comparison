@@ -1,0 +1,145 @@
+{
+  "itemCount": 12,
+  "loadedIconCount": 11,
+  "fallbackLabels": [
+    "39:헤드업 디스플레이"
+  ],
+  "brokenIconLabels": [],
+  "hasRoundedIconBackground": false,
+  "items": [
+    {
+      "label": "선루프",
+      "active": true,
+      "src": "assets/used-car/options/s03-30-option-sunroof.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "LED 헤드램프",
+      "active": true,
+      "src": "assets/used-car/options/s03-31-option-led-headlamp.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "어댑티브 크루즈 컨트롤",
+      "active": true,
+      "src": "assets/used-car/options/s03-32-option-adaptive-cruise.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "후방카메라",
+      "active": true,
+      "src": "assets/used-car/options/s03-33-option-rear-camera.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "어라운드뷰",
+      "active": true,
+      "src": "assets/used-car/options/s03-34-option-around-view.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "스마트키",
+      "active": true,
+      "src": "assets/used-car/options/s03-35-option-smart-key.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "순정 내비게이션",
+      "active": true,
+      "src": "assets/used-car/options/s03-36-option-navigation.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "열선시트",
+      "active": true,
+      "src": "assets/used-car/options/s03-37-option-heated-seat.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "통풍시트",
+      "active": true,
+      "src": "assets/used-car/options/s03-38-option-ventilated-seat.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "헤드업 디스플레이",
+      "active": true,
+      "src": null,
+      "naturalWidth": 0,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": null,
+      "imgFilter": null,
+      "fallbackText": "39"
+    },
+    {
+      "label": "전동트렁크",
+      "active": true,
+      "src": "assets/used-car/options/s03-40-option-power-trunk.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    },
+    {
+      "label": "전방충돌방지",
+      "active": true,
+      "src": "assets/used-car/options/s03-41-option-collision-warning.png",
+      "naturalWidth": 144,
+      "glyphBorderRadius": "0px",
+      "glyphBackground": "rgba(0, 0, 0, 0)",
+      "imgOpacity": "1",
+      "imgFilter": "none",
+      "fallbackText": null
+    }
+  ],
+  "consoleMessages": [],
+  "pageErrors": []
+}
