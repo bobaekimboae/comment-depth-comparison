@@ -34,3 +34,15 @@ Threads, Reddit, YouTube, Facebook, 네이버 카페, 보배드림 권장안의 
 GitHub Pages (`main` 브랜치 / `/(root)`)로 배포됩니다.
 
 - 공개 URL: https://bobaekimboae.github.io/comment-depth-comparison/
+- 시안 작업 순번표: https://bobaekimboae.github.io/comment-depth-comparison/sian-work-index.html
+
+## 시안 작업 순번
+
+앞으로 활성 시안은 `SIAN_WORK_INDEX.md` 기준으로 부릅니다.
+
+| 순번 | 확정 명칭 | 짧은 호출명 |
+|---|---|---|
+| S00 | 댓글/보기 방식 연구소 | 연구소 |
+| S01 | 보배드림 커뮤니티 모바일 | 커뮤모바일 |
+| S02 | 보배드림 커뮤니티 PC | 커뮤PC |
+| S03 | 보배드림 중고차 매물 | 중고차 |
