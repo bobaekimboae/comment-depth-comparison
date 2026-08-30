@@ -1,3 +1,35 @@
+# Bobaedream Used Car Header GNB QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- Header and GNB now align to the used-car list shell width while preserving the existing desktop navigation density.
+
+**Implementation Checklist**
+- [x] Updated the shared header inner width from `1280px` to `1200px`.
+- [x] Added `홈` as the first PC GNB link on both list and detail pages.
+- [x] Kept `숏폼카` immediately after `홈`, ahead of the vehicle category links.
+- [x] Updated the header active state so `홈` is highlighted instead of forcing `숏폼카` active.
+
+**Evidence**
+- Source visual truth path: `captures/used-car-implementation/list-chotot-width-1440.png`
+- Implementation list screenshot path: `captures/used-car-implementation/list-header-gnb-1200-1440.png`
+- Implementation detail screenshot path: `captures/used-car-implementation/detail-header-gnb-1200-1440.png`
+- List metrics path: `captures/used-car-implementation/list-header-gnb-1200-metrics.json`
+- Detail metrics path: `captures/used-car-implementation/detail-header-gnb-1200-metrics.json`
+- Viewport: `1440 x 900`
+- State: desktop used-car list and detail top screens.
+- Full-view comparison evidence: the header inner rows and the list shell all render at `w=1200`, with matching left alignment at the same viewport.
+- Focused region comparison evidence: GNB labels render in order `홈`, `숏폼카`, `국산차`, `수입차`, `매물등록`, `딜러`, `부품·용품`, `커뮤니티`, `더보기`; `홈` is the only active link.
+
+**Measured Pass**
+- List header inner rows: each `w=1200`.
+- List shell: `w=1200`.
+- List GNB: first link `홈`, second link `숏폼카`.
+- Detail header inner rows: each `w=1200`.
+- Header action group remains inside the 1200px lane; no document-originated console errors.
+
+final result: passed
+
 # Bobaedream Used Car Chotot Width QA
 
 **Findings**

@@ -139,7 +139,7 @@
 
   function renderHeaderActive() {
     qsa(".bbNavLink").forEach((link) => {
-      if (link.dataset.nav === "shorts") link.classList.add("is-active");
+      link.classList.toggle("is-active", link.dataset.nav === "home");
     });
   }
 

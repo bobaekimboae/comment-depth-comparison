@@ -1,0 +1,74 @@
+{
+  "metrics": {
+    "detailShell": {
+      "h": 2847,
+      "w": 1160,
+      "x": 132,
+      "y": 141
+    },
+    "headerInner": [
+      {
+        "h": 29,
+        "index": 0,
+        "w": 1200,
+        "x": 112,
+        "y": 0
+      },
+      {
+        "h": 34,
+        "index": 1,
+        "w": 1200,
+        "x": 112,
+        "y": 29
+      },
+      {
+        "h": 54,
+        "index": 2,
+        "w": 1200,
+        "x": 112,
+        "y": 63
+      }
+    ],
+    "innerWidth": 1440,
+    "navLabels": [
+      {
+        "active": true,
+        "text": "홈"
+      },
+      {
+        "active": false,
+        "text": "숏폼카"
+      },
+      {
+        "active": false,
+        "text": "국산차"
+      },
+      {
+        "active": false,
+        "text": "수입차"
+      },
+      {
+        "active": false,
+        "text": "매물등록"
+      },
+      {
+        "active": false,
+        "text": "딜러"
+      },
+      {
+        "active": false,
+        "text": "부품·용품"
+      },
+      {
+        "active": false,
+        "text": "커뮤니티"
+      },
+      {
+        "active": false,
+        "text": "더보기"
+      }
+    ],
+    "scrollWidth": 1425
+  },
+  "consoleErrors": []
+}
