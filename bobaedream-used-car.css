@@ -3327,6 +3327,19 @@ html.bobae-main-page body {
   margin: 0 auto;
 }
 
+body[data-bobae-main] .bbHeaderTop {
+  height: 29px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+body[data-bobae-main] .bbHeaderTop .bbHeaderInner {
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 body[data-bobae-main] .bbHeaderMain {
   height: 48px;
 }
@@ -3334,46 +3347,106 @@ body[data-bobae-main] .bbHeaderMain {
 body[data-bobae-main] .bbHeaderMain .bbHeaderInner {
   height: 48px;
   align-items: center;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 body[data-bobae-main] .bbLogo {
   flex: 0 0 114px;
 }
 
-.bbFamilyNav {
+body[data-bobae-main] .bbHeaderActions {
   height: 48px;
-  display: flex;
-  align-items: center;
-  gap: 23px;
-  min-width: 0;
+  margin-left: auto;
+  gap: 14px;
 }
 
-.bbFamilyLink {
-  height: 48px;
+.bbTopIconAction {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  transition: background-color .16s ease;
+}
+
+.bbTopIconAction:hover {
+  background: #f3f6fa;
+}
+
+.bbTopIconAction img {
+  width: 24px;
+  height: 24px;
+}
+
+.bbHeaderDivider {
+  width: 1px;
+  height: 22px;
+  flex: 0 0 auto;
+  background: #d9dde5;
+}
+
+.bbSellChip {
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 0 17px;
+  border-radius: 4px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+body[data-bobae-main] .bbHeaderLinks {
+  flex: 0 0 auto;
+}
+
+body[data-bobae-main] .bbFamilyNav {
+  height: 29px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+body[data-bobae-main] .bbFamilyNav::-webkit-scrollbar {
+  display: none;
+}
+
+body[data-bobae-main] .bbFamilyLink {
+  height: 29px;
   position: relative;
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-  color: #333944;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 800;
+  color: #454b56;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 750;
   white-space: nowrap;
 }
 
-.bbFamilyLink.is-active {
+body[data-bobae-main] .bbFamilyLink.is-active {
   color: #0a0c10;
-  font-weight: 950;
+  font-weight: 900;
 }
 
-.bbFamilyLink.is-active::after {
+body[data-bobae-main] .bbFamilyLink.is-active::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1px;
-  height: 3px;
+  bottom: 0;
+  height: 2px;
   border-radius: 2px 2px 0 0;
   background: #101114;
 }
@@ -3935,6 +4008,7 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 
 .mainVehicleBody {
   display: block;
+  min-width: 0;
   padding: 14px 14px 16px;
 }
 
@@ -3955,6 +4029,7 @@ body[data-bobae-main] .bbNavLink.is-active::after {
   font-size: 16px;
   line-height: 22px;
   font-weight: 950;
+  overflow-wrap: anywhere;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
@@ -3964,13 +4039,16 @@ body[data-bobae-main] .bbNavLink.is-active::after {
   display: flex;
   align-items: baseline;
   gap: 8px;
+  min-width: 0;
   color: var(--price);
   font-size: 20px;
   line-height: 26px;
   font-weight: 950;
+  overflow-wrap: anywhere;
 }
 
 .mainVehiclePrice del {
+  min-width: 0;
   color: #868e99;
   font-size: 13px;
   line-height: 18px;
@@ -4152,7 +4230,25 @@ body[data-bobae-main] .footer {
   }
 
   body[data-bobae-main] .bbHeaderTop {
-    display: none;
+    display: block;
+    height: 34px;
+    overflow: hidden;
+  }
+
+  body[data-bobae-main] .bbHeaderTop .bbHeaderInner {
+    height: 34px;
+    justify-content: space-between;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  body[data-bobae-main] .bbHeaderTop .bbHeaderLinks {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0;
+    padding-left: 12px;
+    border-left: 1px solid #e2e5ea;
+    font-size: 11px;
   }
 
   body[data-bobae-main] .bbHeaderInner {
@@ -4167,18 +4263,45 @@ body[data-bobae-main] .footer {
   body[data-bobae-main] .bbHeaderMain .bbHeaderInner {
     height: 52px;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     overflow: hidden;
   }
 
   body[data-bobae-main] .bbLogo {
-    flex: 0 0 108px;
-    width: 108px;
-    height: 27px;
+    flex: 0 0 104px;
+    width: 104px;
+    height: 26px;
+  }
+
+  body[data-bobae-main] .bbHeaderActions {
+    height: 52px;
+    display: flex;
+    gap: 8px;
+  }
+
+  body[data-bobae-main] .bbTopIconAction {
+    width: 30px;
+    height: 30px;
+  }
+
+  body[data-bobae-main] .bbTopIconAction img {
+    width: 22px;
+    height: 22px;
+  }
+
+  body[data-bobae-main] .bbHeaderDivider {
+    height: 20px;
+  }
+
+  body[data-bobae-main] .bbSellChip {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 17px;
   }
 
   body[data-bobae-main] .bbFamilyNav {
-    height: 52px;
+    height: 34px;
     flex: 1 1 auto;
     gap: 18px;
     overflow-x: auto;
@@ -4190,7 +4313,7 @@ body[data-bobae-main] .footer {
   }
 
   body[data-bobae-main] .bbFamilyLink {
-    height: 52px;
+    height: 34px;
     font-size: 13px;
     line-height: 18px;
   }
@@ -4222,10 +4345,6 @@ body[data-bobae-main] .footer {
   body[data-bobae-main] .bbNavLink {
     height: 48px;
     font-size: 14px;
-  }
-
-  body[data-bobae-main] .bbHeaderActions {
-    display: none;
   }
 
   body[data-bobae-main] .mainHomeShell,
@@ -4387,6 +4506,13 @@ body[data-bobae-main] .footer {
 
   .mainVehiclePrice {
     font-size: 18px;
+    line-height: 24px;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+  }
+
+  .mainVehiclePrice del {
+    flex-basis: 100%;
   }
 
   .mainNewsletter,
