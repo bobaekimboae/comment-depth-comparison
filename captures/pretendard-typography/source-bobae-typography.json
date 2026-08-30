@@ -1,0 +1,374 @@
+{
+  "sourceMetrics": {
+    "device": {
+      "w": 390,
+      "h": 844,
+      "scrollW": 390,
+      "bodyFont": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif"
+    },
+    "fonts": [
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "900",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "800",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "700",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "600",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "500",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "300",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "200",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "100",
+        "style": "normal"
+      }
+    ],
+    "out": {
+      "region": {
+        "selector": ".car-list-mobile-region-tools__select",
+        "text": "지역: 전국",
+        "x": 16,
+        "y": 70,
+        "w": 108,
+        "h": 21,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(26, 26, 26)"
+      },
+      "reset": {
+        "selector": ".car-list-mobile-region-tools__reset",
+        "text": "초기화",
+        "x": 335,
+        "y": 70,
+        "w": 39,
+        "h": 21,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 58, 58)"
+      },
+      "filterChip": {
+        "selector": ".car-list-mobile-filter__button--filter",
+        "text": "필터",
+        "x": 16,
+        "y": 110,
+        "w": 70,
+        "h": 32,
+        "fontFamily": "Pretendard, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "19.6px",
+        "letterSpacing": "normal",
+        "color": "rgb(34, 34, 34)"
+      },
+      "selectedRemove": {
+        "selector": ".car-list-mobile-filter__selected-remove",
+        "text": "",
+        "x": 169,
+        "y": 119,
+        "w": 14,
+        "h": 14,
+        "fontFamily": "Pretendard, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "19.6px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      },
+      "makerChip": {
+        "selector": ".car-list-mobile-filter__button:not(.car-list-mobile-filter__button--filter)",
+        "text": "전체중고차",
+        "x": 92,
+        "y": 110,
+        "w": 103,
+        "h": 32,
+        "fontFamily": "Pretendard, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "19.6px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      },
+      "categoryButton": {
+        "selector": ".car-list-category-menu__button",
+        "text": "중고차",
+        "x": 24,
+        "y": 160,
+        "w": 65,
+        "h": 72,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "color": "rgb(26, 26, 26)"
+      },
+      "toolbarTab": {
+        "selector": ".car-list-content-toolbar__seller-tab",
+        "text": "전체",
+        "x": 16,
+        "y": 296,
+        "w": 38,
+        "h": 47,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(26, 26, 26)"
+      },
+      "sortButton": {
+        "selector": ".car-list-content-toolbar__sort",
+        "text": "업데이트순",
+        "x": 242,
+        "y": 309,
+        "w": 87,
+        "h": 21,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 58, 58)"
+      },
+      "viewButton": {
+        "selector": ".car-list-content-toolbar__view",
+        "text": "목록형",
+        "x": 354,
+        "y": 296,
+        "w": 20,
+        "h": 47,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "500",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(26, 26, 26)"
+      },
+      "cardTitle": {
+        "selector": ".car-list-result-card__title",
+        "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+        "x": 162,
+        "y": 356,
+        "w": 212,
+        "h": 40,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(26, 26, 26)"
+      },
+      "cardMeta": {
+        "selector": ".car-list-result-card__spec",
+        "text": "17년05월(18년형) · 54만km · 가솔린 · 304마력 · 주황색 시트",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "18.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(118, 118, 118)"
+      },
+      "cardPrice": {
+        "selector": ".car-list-result-card__price",
+        "text": "56,544만원",
+        "x": 162,
+        "y": 422,
+        "w": 90,
+        "h": 24,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "lineHeight": "23.8px",
+        "letterSpacing": "normal",
+        "color": "rgb(231, 54, 98)"
+      }
+    }
+  },
+  "sourceSheetMetrics": {
+    "device": {
+      "w": 390,
+      "h": 844,
+      "scrollW": 390,
+      "bodyFont": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif"
+    },
+    "fonts": [
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "900",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "800",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "700",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "600",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "500",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "300",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "200",
+        "style": "normal"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "100",
+        "style": "normal"
+      }
+    ],
+    "out": {
+      "activeSheet": null,
+      "sheetHead": null,
+      "sheetTitle": null,
+      "sheetBody": null,
+      "sheetFooter": null
+    }
+  },
+  "textMetrics": [
+    {
+      "name": "",
+      "text": "카테고리중고차트럭 · 특장바이크캠핑카올드카건설기계부품 · 용품",
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0,
+      "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal"
+    },
+    {
+      "name": "",
+      "text": "보배드림 필터 검색조건 유지 최근검색기록 0 검색조건 저장 카테고리 바디타입 차급 제조사 · 모델 제조사·모델 제외하기 연식 주행거리 가격 지역 매매단지 인승 구동방식 성능 · 보",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 4744,
+      "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal"
+    },
+    {
+      "name": "",
+      "text": "정렬업데이트순등록순가격 낮은순가격 높은순연식 최신순주행거리 짧은순최고출력순연비순제시신고순가까운순",
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0,
+      "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal"
+    },
+    {
+      "name": "",
+      "text": "초기화 14,896대 보기",
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0,
+      "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal"
+    },
+    {
+      "name": "",
+      "text": "초기화 14,896대 보기",
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0,
+      "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal"
+    }
+  ]
+}

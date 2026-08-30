@@ -1,0 +1,27 @@
+{
+  "list": {
+    "viewport": {
+      "w": 1536,
+      "h": 695,
+      "scrollW": 1536
+    },
+    "bodyFont": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "title": null,
+    "errors": []
+  },
+  "detail": {
+    "viewport": {
+      "w": 1536,
+      "h": 695,
+      "scrollW": 1536
+    },
+    "bodyFont": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "title": {
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+      "font": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "size": "24px",
+      "weight": "700"
+    },
+    "errors": []
+  }
+}

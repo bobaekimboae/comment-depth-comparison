@@ -1,3 +1,33 @@
+# Bobaedream Used Car Pretendard Typography QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after the Pretendard typography correction.
+- [P3] Vehicle photos and brand logo assets still differ from the live source, which is expected until the planned icon/asset replacement pass.
+
+**Implementation Checklist**
+- [x] Confirmed the live Bobaedream mobile source loads Pretendard from `https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css`.
+- [x] Replaced the prototype-wide used-car font import and `--font-system` with Pretendard.
+- [x] Matched measured mobile list typography: region `15px/400/21px`, chip `14px/600/20px`, category `16px/400`, toolbar `15px/600/21px`, title `15px/600/20px`, meta `13px/400/18.2px`, price `17px/700/23.8px`.
+- [x] Matched measured mobile filter sheet typography and geometry: header `57px`, title `16px/600/22.4px`, rows `14px/600/19.6px`, scroll body `593px`, footer `77px`, footer buttons `44px`.
+- [x] Updated the export mobile wrapper font stack and normalized the export-only `950` font weight to Pretendard's `900`.
+
+**Evidence**
+- Source typography metrics: `captures/pretendard-typography/source-bobae-typography.json`
+- Implementation mobile metrics: `captures/pretendard-typography/implementation-pretendard-typography.json`
+- Implementation PC smoke metrics: `captures/pretendard-typography/implementation-pretendard-pc-smoke.json`
+- Implementation export mobile smoke metrics: `captures/pretendard-typography/implementation-pretendard-export-smoke.json`
+- Combined comparison image: `captures/pretendard-typography/comparison-source-vs-implementation-pretendard-typography.png`
+- Viewports: mobile `390px x 844px`, PC `1536px x 695px`, device scale factor `1`.
+
+**Measured Pass**
+- Korean mobile list: Pretendard loaded, `documentElement.scrollWidth=390`, `body.scrollWidth=390`, no horizontal overflow.
+- Korean mobile filter sheet: active sheet `x=0 y=0 w=390 h=844`; header `57px`, body `593px`, footer `77px`.
+- Korean mobile toolbar sheets: sort sheet `y=207 h=637`, view sheet `y=477 h=367`, within `3px` of the live source measurements after the header correction.
+- PC list/detail: Pretendard applied with `documentElement.scrollWidth=1536` at a `1536px` viewport.
+- Export mobile list: Pretendard applied, `scrollWidth=390`, no document-originated console errors.
+
+final result: passed
+
 # Bobaedream Used Car Original Filter Chip Bottom Sheet QA
 
 **Findings**

@@ -1,0 +1,483 @@
+{
+  "top": {
+    "viewport": {
+      "w": 390,
+      "h": 844,
+      "scrollW": 390,
+      "bodyScrollW": 390
+    },
+    "fonts": [
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "900"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "800"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "700"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "600"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "500"
+      },
+      {
+        "family": "Pretendard",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "300"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "200"
+      },
+      {
+        "family": "Pretendard",
+        "status": "unloaded",
+        "weight": "100"
+      }
+    ],
+    "out": {
+      "region": {
+        "text": "지역: 전국",
+        "x": 16,
+        "y": 67,
+        "w": 95,
+        "h": 21,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "lineHeight": "21px",
+        "letterSpacing": "normal"
+      },
+      "reset": {
+        "text": "초기화",
+        "x": 335,
+        "y": 67,
+        "w": 39,
+        "h": 21,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "21px",
+        "letterSpacing": "normal"
+      },
+      "filterChip": {
+        "text": "필터",
+        "x": 16,
+        "y": 106,
+        "w": 86,
+        "h": 32,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "selectedChip": {
+        "text": "전체중고차 x",
+        "x": 110,
+        "y": 106,
+        "w": 108,
+        "h": 32,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "makerChip": {
+        "text": "제조사",
+        "x": 226,
+        "y": 106,
+        "w": 76,
+        "h": 32,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "categoryButton": {
+        "text": "중고차",
+        "x": 24,
+        "y": 147,
+        "w": 65,
+        "h": 74,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "21.6px",
+        "letterSpacing": "normal"
+      },
+      "toolbarTab": {
+        "text": "전체",
+        "x": 16,
+        "y": 270,
+        "w": 26,
+        "h": 51,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "21px",
+        "letterSpacing": "normal"
+      },
+      "sortButton": {
+        "text": "업데이트순",
+        "x": 238,
+        "y": 270,
+        "w": 111,
+        "h": 51,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "21px",
+        "letterSpacing": "normal"
+      },
+      "cardTitle": {
+        "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+        "x": 162,
+        "y": 340,
+        "w": 184,
+        "h": 40,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "cardMeta": {
+        "text": "17년05월(18년형) · 54만km · 가솔린 · 자동",
+        "x": 162,
+        "y": 384,
+        "w": 184,
+        "h": 19,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "18.2px",
+        "letterSpacing": "normal"
+      },
+      "cardPrice": {
+        "text": "56,544만원",
+        "x": 162,
+        "y": 408,
+        "w": 184,
+        "h": 24,
+        "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "lineHeight": "23.8px",
+        "letterSpacing": "normal"
+      }
+    }
+  },
+  "sheets": {
+    "필터": {
+      "layer": {
+        "variant": "filter",
+        "activeSheet": "filter",
+        "z": "260"
+      },
+      "active": {
+        "sheet": "filter",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "bottom": 0
+      },
+      "header": {
+        "text": "필터",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 57,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "title": {
+        "text": "필터",
+        "x": 16,
+        "y": 17,
+        "w": 28,
+        "h": 22,
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22.4px"
+      },
+      "scroll": {
+        "text": "카테고리 바디타입 차급 제조사 · 모델 제조사·모델 제외하기 연식 주행거리 가격 지역 매매단지 판매자 구분 연료 옵션 차량 특징 차량번호 / 판매자",
+        "x": 0,
+        "y": 174,
+        "w": 390,
+        "h": 593,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "footer": {
+        "text": "초기화 14,896대 보기",
+        "x": 0,
+        "y": 767,
+        "w": 390,
+        "h": 77,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "first": {
+        "text": "카테고리",
+        "x": 0,
+        "y": 174,
+        "w": 390,
+        "h": 58,
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "19.6px"
+      }
+    },
+    "제조사": {
+      "layer": {
+        "variant": "filter",
+        "activeSheet": "maker",
+        "z": "260"
+      },
+      "active": {
+        "sheet": "maker",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "bottom": 0
+      },
+      "header": {
+        "text": "제조사 선택",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 57,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "title": {
+        "text": "제조사 선택",
+        "x": 16,
+        "y": 17,
+        "w": 73,
+        "h": 22,
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22.4px"
+      },
+      "scroll": {
+        "text": "국산 현 현대 2,696 제 제네시스 1,510 기 기아 2,358 쉐 쉐보레(국산) 288 G GM대우 69 르 르노코리아(삼성) 303 K KG모빌리티(쌍용) 390 어 어울림모터스 1 기 기타 국산차 6 수입 벤 벤츠 1,975 B BMW 844 아 아우디 221 폭 폭스바겐 50 렉 렉서스 61 미 미니 76 G GMC 78 닛 닛산 10 다 다이하쓰 3 닷 닷지 76",
+        "x": 0,
+        "y": 57,
+        "w": 390,
+        "h": 710,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "footer": {
+        "text": "초기화 14,896대 보기",
+        "x": 0,
+        "y": 767,
+        "w": 390,
+        "h": 77,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "first": {
+        "text": "현 현대 2,696",
+        "x": 0,
+        "y": 93,
+        "w": 390,
+        "h": 66,
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "20.25px"
+      }
+    },
+    "가격": {
+      "layer": {
+        "variant": "filter",
+        "activeSheet": "price",
+        "z": "260"
+      },
+      "active": {
+        "sheet": "generic",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844,
+        "bottom": 0
+      },
+      "header": {
+        "text": "가격",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 57,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "title": {
+        "text": "가격",
+        "x": 16,
+        "y": 17,
+        "w": 28,
+        "h": 22,
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22.4px"
+      },
+      "scroll": {
+        "text": "전체 14,896 3천만원 이하 4,218 5천만원 이하 8,120 7천만원 이하 10,966 1억원 이하 12,304 1억원 이상 2,592",
+        "x": 0,
+        "y": 57,
+        "w": 390,
+        "h": 710,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "footer": {
+        "text": "초기화 14,896대 보기",
+        "x": 0,
+        "y": 767,
+        "w": 390,
+        "h": 77,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "first": {
+        "text": "전체 14,896",
+        "x": 16,
+        "y": 73,
+        "w": 171,
+        "h": 24,
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "19.6px"
+      }
+    },
+    "업데이트순": {
+      "layer": {
+        "variant": "toolbar",
+        "activeSheet": "sort",
+        "z": "240"
+      },
+      "active": {
+        "sheet": "sort",
+        "x": 0,
+        "y": 207,
+        "w": 390,
+        "h": 637,
+        "bottom": 0
+      },
+      "header": {
+        "text": "정렬",
+        "x": 0,
+        "y": 207,
+        "w": 390,
+        "h": 57,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "title": {
+        "text": "정렬",
+        "x": 16,
+        "y": 224,
+        "w": 28,
+        "h": 22,
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22.4px"
+      },
+      "scroll": null,
+      "footer": null,
+      "first": {
+        "text": "업데이트순",
+        "x": 16,
+        "y": 280,
+        "w": 358,
+        "h": 44,
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22.4px"
+      }
+    },
+    "보기": {
+      "layer": {
+        "variant": "toolbar",
+        "activeSheet": "view",
+        "z": "240"
+      },
+      "active": {
+        "sheet": "view",
+        "x": 0,
+        "y": 477,
+        "w": 390,
+        "h": 367,
+        "bottom": 0
+      },
+      "header": {
+        "text": "리스트 필터",
+        "x": 0,
+        "y": 477,
+        "w": 390,
+        "h": 57,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px"
+      },
+      "title": {
+        "text": "리스트 필터",
+        "x": 16,
+        "y": 494,
+        "w": 73,
+        "h": 22,
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22.4px"
+      },
+      "scroll": null,
+      "footer": null,
+      "first": {
+        "text": "목록으로 보기",
+        "x": 16,
+        "y": 550,
+        "w": 358,
+        "h": 44,
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22.4px"
+      }
+    }
+  },
+  "consoleErrors": []
+}

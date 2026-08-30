@@ -1,0 +1,23 @@
+{
+  "metrics": {
+    "viewport": {
+      "w": 390,
+      "h": 844,
+      "scrollW": 390,
+      "bodyScrollW": 390
+    },
+    "bodyFont": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "title": {
+      "text": "2024 Kia EV6 Long Range 2WD",
+      "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "600",
+      "lineHeight": "21px"
+    },
+    "status": {
+      "text": "FOB Korea",
+      "fontWeight": "900"
+    }
+  },
+  "errors": []
+}

@@ -3,6 +3,7 @@
   --export-green: #1f8f66;
   --export-text: #11151b;
   --export-muted: #707782;
+  --font-system: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", Helvetica, Arial, "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
 .exportPreviewPage {
@@ -15,7 +16,7 @@
   justify-content: center;
   background: #eef0f3;
   color: var(--export-text);
-  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Helvetica, Arial, "Malgun Gothic", sans-serif;
+  font-family: var(--font-system);
 }
 
 .exportDeviceFrame {
@@ -134,7 +135,7 @@
     flex: 0 0 auto;
     color: var(--export-blue);
     font-size: 12px;
-    font-weight: 950;
+    font-weight: 900;
   }
 
   .exportMobileApp .mobileCarRow {
