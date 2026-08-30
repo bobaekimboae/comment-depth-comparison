@@ -1,3 +1,39 @@
+# Bobaedream Used Car Mobile Interaction QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- Mobile list interactions now follow the source-style modern sheet pattern: full-screen filter/maker/region/generic sheets and rounded sort/view bottom sheets.
+
+**Implementation Checklist**
+- [x] Captured source mobile list and sheet references from `https://dev.bbmuseum.co.kr/car/list`.
+- [x] Added the mobile used-car list surface to `bobaedream-used-car-list.html`.
+- [x] Added responsive mobile CSS for the top search bar, filter chips, category rail, toolbar, list rows, bottom navigation, full sheets, and bottom sheets.
+- [x] Added mobile interaction state in `bobaedream-used-car-interactions.js` for filter open/close, nested sheet switching, apply/close, reset, maker selection, region selection, sorting, seller tabs, video-only filtering, generic conditions, and favorite buttons.
+- [x] Kept the PC list/detail surface intact by scoping the mobile app to `max-width: 767px`.
+
+**Evidence**
+- Source mobile list screenshot: `captures/used-car-source/source-mobile-list-top.png`
+- Source mobile filter screenshot: `captures/used-car-source/source-mobile-filter-sheet.png`
+- Source mobile maker screenshot: `captures/used-car-source/source-mobile-manufacturer-sheet-coordinate.png`
+- Source mobile sort screenshot: `captures/used-car-source/source-mobile-sort-sheet-coordinate.png`
+- Source mobile region screenshot: `captures/used-car-source/source-mobile-region-sheet-coordinate.png`
+- Final mobile implementation screenshots: `captures/used-car-implementation/mobile-list-390.png`, `captures/used-car-implementation/mobile-filter-sheet-390.png`, `captures/used-car-implementation/mobile-maker-sheet-390.png`, `captures/used-car-implementation/mobile-sort-sheet-390.png`, `captures/used-car-implementation/mobile-region-sheet-390.png`
+- Viewport: `390 x 844`
+
+**Measured Pass**
+- Mobile list is displayed and desktop list is hidden at `390px`; no horizontal overflow detected.
+- Base mobile list renders 11 mock rows.
+- Filter sheet opens with header `필터`, source-like filter rows, and `14,896대 보기` footer.
+- Nested filter-to-maker transition opens `제조사 선택`; selecting `제네시스` updates the chip and filters to 3 rows.
+- Sort bottom sheet opens; selecting `가격 높은순` updates the toolbar label and row ordering.
+- Region sheet opens; selecting `경기` updates the region label and filters to 1 row.
+- Video toggle turns on and filters to 6 video rows.
+- Generic `연식` sheet opens with 6 selectable options.
+- PC regression at `1440px`: mobile surface is hidden, desktop list remains visible, summary card stays at `x=272`, `y=141`, `w=1152`, `h=222`.
+- Console and page errors checked with Playwright: passed.
+
+final result: passed
+
 # Bobaedream Used Car PC QA
 
 **Findings**

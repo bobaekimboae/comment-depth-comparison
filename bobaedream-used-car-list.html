@@ -51,6 +51,158 @@
     </nav>
   </header>
 
+  <section class="mobileCarApp" data-mobile-list aria-label="모바일 중고차 매물 목록">
+    <header class="mobileTopBar">
+      <button class="mobileBackBtn" type="button" data-toast="이전 화면은 시안에서 준비 중입니다." aria-label="뒤로"></button>
+      <button class="mobileSearchPill" type="button" data-toast="검색어 입력 화면은 시안에서 준비 중입니다.">
+        <span class="mobileSearchIcon"></span>
+        <strong>중고차</strong>
+        <span class="mobileBookmark"></span>
+      </button>
+      <button class="mobileHeartBtn" type="button" data-toast="찜한 매물 화면은 시안에서 준비 중입니다." aria-label="찜"></button>
+      <button class="mobileChatBtn" type="button" data-toast="채팅 화면은 시안에서 준비 중입니다." aria-label="채팅"></button>
+    </header>
+
+    <div class="mobileRegionRow">
+      <button class="mobileRegionBtn" type="button" data-open-sheet="region"><span class="mobilePin"></span>지역: <strong id="mobileRegionLabel">전국</strong></button>
+      <button class="mobileResetInline" type="button" data-mobile-reset>초기화</button>
+    </div>
+
+    <nav class="mobileChipScroller" aria-label="모바일 필터">
+      <button class="mobileChip" type="button" data-open-sheet="filter"><span class="mobileTuneIcon"></span>필터</button>
+      <button class="mobileChip is-dark" type="button" data-mobile-reset>전체중고차 <span>x</span></button>
+      <button class="mobileChip" type="button" data-open-sheet="maker"><span id="mobileMakerLabel">제조사</span></button>
+      <button class="mobileChip" type="button" data-open-sheet="year">연식</button>
+      <button class="mobileChip" type="button" data-open-sheet="price">가격</button>
+      <button class="mobileChip" type="button" data-open-sheet="fuel">연료</button>
+      <button class="mobileChip" type="button" data-open-sheet="seller">판매자</button>
+    </nav>
+
+    <nav class="mobileCategoryRail" id="mobileCategoryRail" aria-label="모바일 카테고리"></nav>
+
+    <div class="mobileToolbar">
+      <label class="mobileVideoToggle">
+        <span>영상 매물</span>
+        <button class="switch" type="button" id="mobileVideoSwitch" aria-label="영상 매물 토글"></button>
+      </label>
+      <div class="mobileSellerTabs">
+        <button class="mobileSellerTab is-active" type="button" data-mobile-seller="all">전체</button>
+        <button class="mobileSellerTab" type="button" data-mobile-seller="private">개인</button>
+        <button class="mobileSellerTab" type="button" data-mobile-seller="dealer">딜러</button>
+      </div>
+      <button class="mobileSortButton" type="button" data-open-sheet="sort"><span id="mobileSortLabel">업데이트순</span></button>
+      <button class="mobileViewButton" type="button" data-open-sheet="view" aria-label="보기 방식"></button>
+    </div>
+
+    <div class="mobileCarRows" id="mobileCarRows"></div>
+
+    <nav class="mobileBottomNav" aria-label="모바일 하단 메뉴">
+      <a class="is-active" href="#"><span></span>홈</a>
+      <a href="#" data-toast="채팅 화면은 시안에서 준비 중입니다."><span></span>채팅</a>
+      <button class="mobilePlus" type="button" data-toast="매물등록 화면은 다음 단계에서 연결합니다.">+</button>
+      <a href="bobaedream-pc-board-list.html"><span></span>커뮤니티</a>
+      <a href="#" data-toast="마이페이지는 시안에서 준비 중입니다."><span></span>마이</a>
+    </nav>
+
+    <div class="mobileSheetLayer" id="mobileSheetLayer" aria-hidden="true">
+      <button class="mobileSheetBackdrop" type="button" data-close-sheet aria-label="닫기"></button>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="filter" role="dialog" aria-modal="true" aria-label="필터">
+        <header class="mobileSheetHeader">
+          <strong>필터</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="닫기"></button>
+        </header>
+        <div class="mobileFilterIntro">
+          <div><button class="switch" type="button"></button><span>검색조건 유지</span></div>
+          <button type="button">최근검색기록 0</button>
+          <button class="mobileSaveCondition" type="button" data-toast="검색조건을 저장했습니다.">검색조건 저장</button>
+        </div>
+        <div class="mobileSheetScroll">
+          <button class="mobileFilterRow" type="button" data-open-sheet="category">카테고리</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="body">바디타입</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="class">차급</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="maker">제조사 · 모델</button>
+          <button class="mobileFilterRow muted" type="button" data-toast="제조사 제외 조건이 켜졌습니다.">제조사·모델 제외하기</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="year">연식</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="mileage">주행거리</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="price">가격</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="region">지역</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="complex">매매단지</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="seller">판매자 구분</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="fuel">연료</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="option">옵션</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="feature">차량 특징</button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="plate">차량번호 / 판매자</button>
+        </div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>초기화</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span id="mobileApplyCount">14,896대 보기</span></button>
+        </footer>
+      </section>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="maker" role="dialog" aria-modal="true" aria-label="제조사 선택">
+        <header class="mobileSheetHeader">
+          <strong>제조사 선택</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="닫기"></button>
+        </header>
+        <div class="mobileSheetScroll makerList" id="mobileMakerList"></div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>초기화</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span>14,896대 보기</span></button>
+        </footer>
+      </section>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="region" role="dialog" aria-modal="true" aria-label="지역">
+        <header class="mobileSheetHeader">
+          <strong>지역</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="닫기"></button>
+        </header>
+        <div class="mobileSheetScroll">
+          <div class="mobileOptionGrid" id="mobileRegionGrid"></div>
+        </div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>초기화</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span>14,896대 보기</span></button>
+        </footer>
+      </section>
+
+      <section class="mobileSheet mobileSheetPop" data-sheet="sort" role="dialog" aria-modal="true" aria-label="정렬">
+        <header class="mobileSheetHeader">
+          <strong>정렬</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="닫기"></button>
+        </header>
+        <div class="mobileActionList" id="mobileSortList"></div>
+      </section>
+
+      <section class="mobileSheet mobileSheetPop" data-sheet="view" role="dialog" aria-modal="true" aria-label="보기 방식">
+        <header class="mobileSheetHeader">
+          <strong>리스트 필터</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="닫기"></button>
+        </header>
+        <div class="mobileActionList">
+          <button class="is-active" type="button" data-close-sheet>목록으로 보기</button>
+          <button type="button" data-toast="카드 보기 화면은 시안에서 준비 중입니다.">카드로 보기</button>
+          <button type="button" data-toast="쇼츠 영상 보기 화면은 시안에서 준비 중입니다.">쇼츠 영상으로 보기</button>
+          <button type="button" data-toast="텍스트 보기 화면은 시안에서 준비 중입니다.">텍스트로 보기</button>
+        </div>
+      </section>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="generic" role="dialog" aria-modal="true" aria-label="조건 선택">
+        <header class="mobileSheetHeader">
+          <strong id="genericSheetTitle">조건 선택</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="닫기"></button>
+        </header>
+        <div class="mobileSheetScroll">
+          <div class="mobileOptionGrid" id="genericSheetOptions"></div>
+        </div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>초기화</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span>14,896대 보기</span></button>
+        </footer>
+      </section>
+    </div>
+  </section>
+
   <main class="listShell">
     <aside class="filterPanel" aria-label="중고차 필터">
       <div class="filterSummary">
