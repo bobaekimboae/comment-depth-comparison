@@ -454,7 +454,7 @@
       '<button class="commentMore" aria-label="더보기"></button>',
       '<p class="commentText">'+esc(comment.text)+'</p>',
       '<div class="commentMeta">'+esc(comment.time||'방금 전')+' <button class="replyWrite">답글 쓰기</button></div>',
-      '<div class="commentActions"><button class="smallVote">버프'+(comment.buff?'<span class="num">'+comment.buff+'</span>':'')+'</button><button class="smallVote">너프'+(comment.nerf?'<span class="num">'+comment.nerf+'</span>':'')+'</button></div>',
+      '<div class="commentActions"><button class="smallVote">추천'+(comment.buff?'<span class="num">'+comment.buff+'</span>':'')+'</button><button class="smallVote">비추천'+(comment.nerf?'<span class="num">'+comment.nerf+'</span>':'')+'</button></div>',
       '</li>'
     ].join('');
   }
