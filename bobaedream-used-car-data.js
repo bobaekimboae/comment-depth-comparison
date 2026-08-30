@@ -26,13 +26,13 @@ window.BOBAE_USED_CAR = {
     ]
   },
   categories: [
-    { key: "used", label: "중고차", asset: "assets/used-car/categories/s03-23-category-used-car.svg" },
-    { key: "truck", label: "트럭 · 특장", asset: "assets/used-car/categories/s03-24-category-truck.svg" },
-    { key: "bike", label: "바이크", asset: "assets/used-car/categories/s03-25-category-bike.svg" },
-    { key: "camping", label: "캠핑카", asset: "assets/used-car/categories/s03-26-category-camping.svg" },
-    { key: "old", label: "올드카", asset: "assets/used-car/categories/s03-27-category-old-car.svg" },
-    { key: "machine", label: "건설기계", asset: "assets/used-car/categories/s03-28-category-machine.svg" },
-    { key: "parts", label: "부품 · 용품", asset: "assets/used-car/categories/s03-29-category-parts.svg" }
+    { key: "used", label: "중고차", asset: "assets/used-car/cat-used.png" },
+    { key: "truck", label: "트럭 · 특장", asset: "assets/used-car/cat-truck.png" },
+    { key: "bike", label: "바이크", asset: "assets/used-car/cat-bike.png" },
+    { key: "camping", label: "캠핑카", asset: "assets/used-car/cat-camping.png" },
+    { key: "old", label: "올드카", asset: "assets/used-car/cat-old.png" },
+    { key: "machine", label: "건설기계", asset: "assets/used-car/cat-machine.png" },
+    { key: "parts", label: "부품 · 용품", asset: "assets/used-car/cat-parts.png" }
   ],
   dealers: {
     main: {
