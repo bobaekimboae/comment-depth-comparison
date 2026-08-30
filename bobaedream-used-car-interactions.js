@@ -18,6 +18,8 @@
     "내비게이션": "s03-36-option-navigation.png",
     "열선시트": "s03-37-option-heated-seat.png",
     "통풍시트": "s03-38-option-ventilated-seat.png",
+    "헤드업 디스플레이": "s03-39-option-head-up-display.webp",
+    "HUD": "s03-39-option-head-up-display.webp",
     "전동트렁크": "s03-40-option-power-trunk.png",
     "전방충돌방지": "s03-41-option-collision-warning.png"
   };

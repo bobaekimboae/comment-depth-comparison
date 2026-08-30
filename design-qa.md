@@ -1,3 +1,25 @@
+# Bobaedream Used Car HUD Option Icon QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after adding the supplied HUD icon.
+- `헤드업 디스플레이` now uses the supplied `s03-39-option-head-up-display.webp` asset instead of the numeric fallback.
+
+**Implementation Checklist**
+- [x] Copied the supplied HUD WebP into `assets/used-car/options/`.
+- [x] Mapped `헤드업 디스플레이` and `HUD` to the new icon asset.
+- [x] Updated list/detail cache keys so GitHub Pages loads the latest interaction script.
+
+**Evidence**
+- Source file: `assets/used-car/options/s03-39-option-head-up-display.webp`
+- Metrics: `captures/option-icons-hud-20260831/detail-option-icons-hud-1536.json`
+
+**Measured Pass**
+- `totalDetailOptions=12`, `loadedIconCount=12`, `brokenIconLabels=[]`.
+- `fallbackLabels=[]`.
+- HUD file header verified as WebP (`RIFF...WEBPVP8X`).
+
+final result: passed
+
 # Bobaedream Used Car Original Option Icon QA
 
 **Findings**
