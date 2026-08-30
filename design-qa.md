@@ -1,3 +1,39 @@
+# S03-P-H Bobaedream Main Kaidee Title Balance QA
+
+**Source Visual Truth**
+- `captures/kaidee-title-balance-20260831/kaidee-source-1440.png`
+- Source URL: `https://rod.kaidee.com/`
+
+**Implementation Screenshot**
+- `captures/kaidee-title-balance-20260831/bobae-after-title-balance-final-1440.png`
+- Comparison image: `captures/kaidee-title-balance-20260831/comparison-kaidee-bobae-title-balance-final.png`
+
+**Viewport And State**
+- Browser viewport: `1280 x 720` CSS px in the Codex in-app browser viewport override.
+- State: desktop top-of-main page, signed-out visual state, no user interaction.
+
+**Findings**
+- No actionable P0/P1/P2 issues remain for the requested title vertical balance.
+- The Kaidee source title sits at `top 128 / bottom 176`; the Bobaedream title now also sits at `top 128 / bottom 176`.
+- The source top header to title gap is `32px`; Bobaedream now matches at `32px`.
+- The source secondary line to search strip gap is `30px`; Bobaedream now matches at `30px`.
+- The search panel's internal category/search order remains a deliberate Bobaedream-specific product structure rather than a 1:1 Kaidee clone.
+
+**Fixes Made**
+- Reduced `.mainHeroCopy` top padding from `14px` to `6px`.
+- Moved `.mainSearchDock` from `-70px` to `-92px`.
+- Removed the extra `차종별 중고차를 검색하세요` heading inside the search card.
+- Reduced `.mainSearchExplore` top spacing from `20px` to `18px`.
+
+**Required Fidelity Surfaces**
+- Fonts and typography: title remains `32px / 48px` in Pretendard with Korean optical weight preserved.
+- Spacing and layout rhythm: requested vertical title rhythm now matches the source measurements.
+- Colors and visual tokens: no color drift introduced.
+- Image quality and assets: no asset changes in this pass.
+- Copy and content: removed the extra in-card body-type heading that previously added visual noise.
+
+final result: passed
+
 # Bobaedream Used Car Option Icon Alignment QA
 
 **Findings**

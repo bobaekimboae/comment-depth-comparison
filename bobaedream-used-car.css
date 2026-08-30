@@ -3526,7 +3526,7 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 }
 
 .mainHero {
-  min-height: 302px;
+  min-height: 238px;
   background:
     linear-gradient(90deg, rgba(10, 18, 31, .94) 0%, rgba(16, 38, 63, .86) 47%, rgba(16, 38, 63, .2) 100%),
     url("assets/used-car/hero-black-car.jpg") right center / cover no-repeat;
@@ -3534,14 +3534,15 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 }
 
 .mainHeroInner {
-  min-height: 302px;
+  min-height: 238px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .mainHeroCopy {
   width: 430px;
-  padding-bottom: 36px;
+  padding-top: 6px;
+  padding-bottom: 0;
 }
 
 .mainHeroKicker {
@@ -3570,7 +3571,7 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 
 .mainSearchDock {
   width: min(1200px, calc(100% - 80px));
-  margin: -68px auto 0;
+  margin: -92px auto 0;
   position: relative;
   z-index: 2;
 }
@@ -3743,8 +3744,8 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 }
 
 .mainSearchExplore {
-  margin-top: 20px;
-  padding-top: 1px;
+  margin-top: 18px;
+  padding-top: 0;
 }
 
 .mainSectionHeading {
