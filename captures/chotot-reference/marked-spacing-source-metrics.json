@@ -1,0 +1,23 @@
+{
+  "source": "C:/Users/bobae/Downloads/7-xe-ô-tô-cũ-mới-tại-Huyện-Châu-Thành-Kiên-Giang-08-2026.png",
+  "capturedPage": "https://xe.chotot.com/mua-ban-oto-dien-sdfu4",
+  "image": {
+    "width": 1836,
+    "height": 582
+  },
+  "measuredRows": {
+    "headerWhiteEndsAtY": 62,
+    "pageGrayStartsAtY": 63,
+    "filterCardAntialiasStartsAtY": 84,
+    "filterCardSolidWhiteStartsAtY": 86,
+    "filterCardAntialiasEndsAtY": 385,
+    "pageGrayResumesAtY": 386,
+    "listTabsAntialiasStartsAtY": 402,
+    "listTabsSolidWhiteStartsAtY": 404
+  },
+  "targetSpacing": {
+    "gnbToFilterCardTop": 21,
+    "filterCardBottomToListTabs": 16
+  },
+  "notes": "Rows were sampled from the user-marked Chotot screenshot. Anti-aliased rounded-card edges start before the solid white card fill, so target spacing uses the first visible card edge."
+}

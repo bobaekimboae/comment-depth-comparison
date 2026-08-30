@@ -1,3 +1,36 @@
+# Bobaedream Used Car Chotot Spacing QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The used-car list now follows the user-marked Chotot vertical rhythm around the top filter card.
+
+**Implementation Checklist**
+- [x] Measured the user-marked Chotot screenshot for the GNB-to-filter and filter-to-list-tab vertical gaps.
+- [x] Updated `.listShell` top margin from `24px` to `21px`.
+- [x] Updated `.toolbar` top margin from `24px` to `16px`.
+- [x] Updated the list/detail stylesheet version query to force the new spacing CSS on GitHub Pages.
+
+**Evidence**
+- Source visual truth path: `captures/chotot-reference/marked-spacing-source.png`
+- Source metrics path: `captures/chotot-reference/marked-spacing-source-metrics.json`
+- Implementation screenshot path: `captures/used-car-implementation/list-chotot-spacing-1440.jpg`
+- Implementation metrics path: `captures/used-car-implementation/list-chotot-spacing-metrics.json`
+- Combined comparison image: `captures/used-car-implementation/comparison-chotot-spacing.jpg`
+- Viewport: `1440 x 900`
+- Source screenshot pixels: `1836 x 582`
+- Implementation capture pixels: browser viewport screenshot, CSS viewport `1440 x 900`, device scale factor `1`
+- State: desktop used-car list top screen.
+- Full-view comparison evidence: the reference card begins at the first visible rounded edge `21px` below the GNB/background break, and the list tabs begin `16px` below the filter card edge. The implementation measures `topGap=21` and `bottomGap=16`.
+- Focused region comparison evidence: spacing was checked against the annotated source area and confirmed with DOM measurements from the rendered implementation.
+
+**Measured Pass**
+- Source target: GNB to filter card top `21px`, filter card bottom to list tabs `16px`.
+- Implementation: header bottom `117`, list shell y `138`, top gap `21`.
+- Implementation: summary card bottom `360`, toolbar y `376`, bottom gap `16`.
+- No document-originated console errors.
+
+final result: passed
+
 # Bobaedream Used Car Active GNB QA
 
 **Findings**

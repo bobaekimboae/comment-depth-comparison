@@ -1,0 +1,38 @@
+{
+  "metrics": {
+    "bottomGap": 16,
+    "header": {
+      "bottom": 117,
+      "h": 117,
+      "w": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "innerWidth": 1440,
+    "scrollWidth": 1425,
+    "shell": {
+      "bottom": 2835,
+      "h": 2697,
+      "w": 1200,
+      "x": 112,
+      "y": 138
+    },
+    "stylesheet": "http://127.0.0.1:8787/bobaedream-used-car.css?v=chotot-spacing-20260830",
+    "summary": {
+      "bottom": 360,
+      "h": 222,
+      "w": 876,
+      "x": 436,
+      "y": 138
+    },
+    "toolbar": {
+      "bottom": 432,
+      "h": 56,
+      "w": 876,
+      "x": 436,
+      "y": 376
+    },
+    "topGap": 21
+  },
+  "consoleErrors": []
+}
