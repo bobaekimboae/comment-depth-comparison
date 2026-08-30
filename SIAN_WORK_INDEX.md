@@ -5,7 +5,7 @@
 ## 호출 규칙
 
 - `S01`, `S02`, `S03`은 사이트/제품 영역 번호다.
-- `L`은 리스트, `D`는 상세, `W`는 글쓰기, `C`는 댓글/상호작용, `M`은 모바일, `P`는 PC다.
+- `H`는 홈/메인, `L`은 리스트, `D`는 상세, `W`는 글쓰기, `C`는 댓글/상호작용, `M`은 모바일, `P`는 PC다.
 - 예시: `S02-L`은 보배드림 커뮤니티 PC 리스트, `S03-M-필터`는 중고차 모바일 필터 시트다.
 - 배포 링크는 GitHub Pages URL 뒤에 `?v=커밋해시`를 붙여 캐시를 우회한다.
 - 새 시안은 활성 파일명에는 버전 번호를 붙이지 않고, 검증 캡처와 QA 기록은 `design-qa.md`에 남긴다.
@@ -17,7 +17,7 @@
 | S00 | 댓글/보기 방식 연구소 | 연구소 | LAB | `comment-ui-lab.html`, `depth-viewer.html`, `board-view-sheet-prototype.html` | 참고/실험 |
 | S01 | 보배드림 커뮤니티 모바일 | 커뮤모바일 | `S01-M-L`, `S01-M-D`, `S01-M-시트` | `naver-cafe-list.html`, `naver-cafe-detail.html`, `board-view-sheet-prototype.html` | 모바일 기준 시안 |
 | S02 | 보배드림 커뮤니티 PC | 커뮤PC | `S02-P-L`, `S02-P-D`, `S02-P-W`, `S02-P-C` | `bobaedream-pc-board-list.html`, `bobaedream-pc-board-detail.html` | 리스트/상세/글쓰기/댓글 동작 완료 |
-| S03 | 보배드림 중고차 매물 | 중고차 | `S03-P-L`, `S03-P-D`, `S03-M-L`, `S03-M-필터`, `S03-M-EX-L` | `bobaedream-used-car-list.html`, `bobaedream-used-car-detail.html`, `bobaedream-export-mobile-list.html` | PC 리스트/상세, 모바일 리스트/필터 시트, 수출용 영문 모바일 리스트 완료 |
+| S03 | 보배드림 중고차 매물 | 중고차 | `S03-P-H`, `S03-P-L`, `S03-P-D`, `S03-M-L`, `S03-M-필터`, `S03-M-EX-L` | `bobaedream-main.html`, `bobaedream-used-car-list.html`, `bobaedream-used-car-detail.html`, `bobaedream-export-mobile-list.html` | PC 메인, PC 리스트/상세, 모바일 리스트/필터 시트, 수출용 영문 모바일 리스트 완료 |
 
 ## 활성 배포 URL
 
@@ -27,6 +27,7 @@
 | S01-M-D | 커뮤니티 모바일 상세 | https://bobaekimboae.github.io/comment-depth-comparison/naver-cafe-detail.html |
 | S02-P-L | 커뮤니티 PC 리스트 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-pc-board-list.html |
 | S02-P-D | 커뮤니티 PC 상세 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-pc-board-detail.html |
+| S03-P-H | 중고차 매물 메인 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-main.html |
 | S03-P/M-L | 중고차 매물 리스트 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-used-car-list.html |
 | S03-P-D | 중고차 매물 상세 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-used-car-detail.html?id=d8yrckju0e |
 | S03-M-EX-L | 중고차 수출용 영문 모바일 리스트 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-export-mobile-list.html |

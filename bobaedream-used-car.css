@@ -3309,3 +3309,964 @@ body[data-used-car-list] .listShell .viewLine {
     max-width: calc(100% - 32px);
   }
 }
+
+html.bobae-main-page,
+html.bobae-main-page body {
+  min-width: 0;
+  background: #f4f5f7;
+}
+
+.bbMainHome {
+  padding-bottom: 14px;
+}
+
+.bobae-main-page .bbHeaderInner,
+.mainHomeShell {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.mainHero {
+  min-height: 302px;
+  background:
+    linear-gradient(90deg, rgba(10, 18, 31, .94) 0%, rgba(16, 38, 63, .86) 47%, rgba(16, 38, 63, .2) 100%),
+    url("assets/used-car/hero-black-car.jpg") right center / cover no-repeat;
+  color: #fff;
+}
+
+.mainHeroInner {
+  min-height: 302px;
+  display: flex;
+  align-items: center;
+}
+
+.mainHeroCopy {
+  width: 430px;
+  padding-bottom: 36px;
+}
+
+.mainHeroKicker {
+  display: block;
+  color: #c9def8;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+}
+
+.mainHeroCopy h1 {
+  margin: 10px 0 0;
+  font-size: 42px;
+  line-height: 52px;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.mainHeroCopy p {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, .88);
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 700;
+}
+
+.mainSearchDock {
+  width: min(1200px, calc(100% - 80px));
+  margin: -68px auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+.mainSearchPanel {
+  position: relative;
+  padding: 0 28px 24px;
+  border: 1px solid #dedfe4;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(20, 24, 31, .16);
+}
+
+.mainSearchTabs {
+  height: 58px;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  border-bottom: 1px solid #eceef2;
+}
+
+.mainSearchTabs button {
+  height: 58px;
+  position: relative;
+  color: #555d69;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.mainSearchTabs button.is-active {
+  color: #11151b;
+}
+
+.mainSearchTabs button.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 2px 2px 0 0;
+  background: var(--blue);
+}
+
+.mainSearchFields {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 280px;
+  gap: 12px;
+}
+
+.mainSelect {
+  height: 44px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 42px 0 14px;
+  border: 1px solid #ccd1d8;
+  border-radius: 4px;
+  background: #fff;
+  text-align: left;
+}
+
+.mainSelect::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #11151b;
+  border-bottom: 2px solid #11151b;
+  transform: rotate(45deg);
+}
+
+.mainSelect span {
+  display: none;
+}
+
+.mainSelect strong {
+  color: #15181d;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 850;
+}
+
+.mainSearchButton {
+  height: 44px;
+  border-radius: 4px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 950;
+}
+
+.mainSearchFooter {
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  color: #5d6470;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+}
+
+.mainSearchFooter strong {
+  color: #101114;
+  font-size: 15px;
+  font-weight: 950;
+}
+
+.mainSearchFooter button {
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.mainSelectMenu {
+  position: absolute;
+  z-index: 8;
+  max-height: 278px;
+  padding: 6px;
+  overflow-y: auto;
+  border: 1px solid #d6d9df;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 30px rgba(20, 24, 31, .18);
+}
+
+.mainSelectMenu button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 6px;
+  color: #252a32;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.mainSelectMenu button:hover,
+.mainSelectMenu button.is-active {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.mainSearchExplore {
+  margin-top: 20px;
+  padding-top: 1px;
+}
+
+.mainSectionHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.mainSectionHeading h2 {
+  margin: 0;
+  color: #101114;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.mainSearchExplore .mainSectionHeading {
+  margin-bottom: 12px;
+}
+
+.mainSearchExplore .mainSectionHeading h2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 950;
+}
+
+.mainSectionHeading p {
+  margin: 4px 0 0;
+  color: #737b87;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.mainSectionHeading a {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 900;
+}
+
+.mainBodyTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.mainBodyCard {
+  height: 70px;
+  display: grid;
+  grid-template-rows: 42px 21px;
+  align-items: center;
+  justify-items: center;
+  padding: 2px 4px 0;
+  border-radius: 6px;
+  background: transparent;
+  transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
+}
+
+.mainBodyCard:hover {
+  background: #f5f8fc;
+  box-shadow: inset 0 0 0 1px #dbe8f7;
+  transform: translateY(-1px);
+}
+
+.mainBodyImage {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.mainBodyImage img {
+  width: 92px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.mainBodyCard strong {
+  color: #191d24;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 950;
+}
+
+.mainBodyCard > span:last-child {
+  display: none;
+  color: #737b87;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 800;
+}
+
+.mainBrandBlock {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.mainBrandRail {
+  margin-top: 22px;
+}
+
+.mainBrandBlock > strong {
+  color: #20242b;
+  font-size: 15px;
+  font-weight: 950;
+}
+
+.mainBrandLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mainBrandLink {
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid #dbe0e6;
+  border-radius: 17px;
+  background: #fff;
+  color: #303742;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.mainSellBand {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 270px 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.mainSellLead {
+  padding: 8px 12px 0 0;
+}
+
+.mainSellLead h2 {
+  margin: 0;
+  color: #101114;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.mainSellLead p {
+  margin: 9px 0 0;
+  color: #6d7480;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.mainSellCard {
+  min-height: 210px;
+  padding: 22px 24px;
+  border: 1px solid #dfe4eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.mainSellCard.is-dealer {
+  background: #f0f6ff;
+}
+
+.mainSellCard.is-listing {
+  background: #fff9ed;
+}
+
+.mainSellCard span {
+  display: inline-flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 9px;
+  border-radius: 13px;
+  background: rgba(25, 83, 155, .12);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.mainSellCard h3 {
+  margin: 12px 0 0;
+  color: #171b22;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.mainSellCard ul {
+  margin: 13px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 7px;
+  color: #545b66;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 750;
+}
+
+.mainSellCard li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.mainSellCard li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.mainSellCard button {
+  height: 38px;
+  margin-top: 18px;
+  padding: 0 16px;
+  border-radius: 4px;
+  background: #11151b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.mainVehicleSection {
+  margin-top: 52px;
+}
+
+.mainVehicleGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mainVehicleCard {
+  min-width: 0;
+  min-height: 334px;
+  overflow: hidden;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
+}
+
+.mainVehicleCard:hover {
+  border-color: #b8cce6;
+  box-shadow: 0 14px 28px rgba(20, 24, 31, .12);
+  transform: translateY(-1px);
+}
+
+.mainVehicleMedia {
+  height: 166px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #e6e9ed;
+}
+
+.mainVehicleMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainVehicleBadge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: rgba(17, 21, 27, .84);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.mainVehicleBody {
+  display: block;
+  padding: 14px 14px 16px;
+}
+
+.mainVehicleBrand {
+  display: block;
+  color: #6b737f;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.mainVehicleTitle {
+  min-height: 44px;
+  margin-top: 4px;
+  display: -webkit-box;
+  overflow: hidden;
+  color: #15191f;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 950;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.mainVehiclePrice {
+  margin-top: 9px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--price);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 950;
+}
+
+.mainVehiclePrice del {
+  color: #868e99;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.mainVehicleSpecs {
+  min-height: 38px;
+  margin-top: 7px;
+  display: block;
+  color: #555d68;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 750;
+}
+
+.mainVehicleSeller {
+  margin-top: 9px;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: #edf5ff;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.mainEditorial {
+  margin-top: 54px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.mainNewsletter,
+.mainMagazine {
+  min-height: 250px;
+  border-radius: 8px;
+}
+
+.mainNewsletter {
+  padding: 30px;
+  background:
+    linear-gradient(90deg, rgba(13, 21, 34, .95), rgba(22, 44, 70, .82)),
+    url("assets/used-car/hero-silver-car.jpg") center / cover no-repeat;
+  color: #fff;
+}
+
+.mainNewsletter h2 {
+  width: 380px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.mainNewsletter p {
+  width: 380px;
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, .82);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 750;
+}
+
+.mainNewsletter form {
+  width: 410px;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 96px;
+  gap: 8px;
+}
+
+.mainNewsletter input {
+  min-width: 0;
+  height: 44px;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #15181d;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.mainNewsletter button {
+  height: 44px;
+  border-radius: 4px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.mainMagazine {
+  padding: 24px 24px 20px;
+  border: 1px solid #dfe3e8;
+  background: #fff;
+}
+
+.mainMagazine .mainSectionHeading {
+  margin-bottom: 8px;
+}
+
+.mainMagazine a:not(.mainSectionHeading a) {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eef0f3;
+  color: #20252d;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 900;
+}
+
+.mainLinkHub {
+  margin-top: 50px;
+}
+
+.mainLinkHub h2 {
+  margin: 0 0 16px;
+  color: #101114;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.mainLinkGroups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mainLinkGroups > div {
+  padding: 18px 20px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.mainLinkGroups h3 {
+  margin: 0 0 10px;
+  color: #1a1f27;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.mainLinkGroups a {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #535b66;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+body[data-bobae-main] .footer {
+  width: min(1200px, calc(100% - 80px));
+  margin-top: 58px;
+}
+
+@media (max-width: 1300px) {
+  body[data-bobae-main] .mainHomeShell,
+  body[data-bobae-main] .mainSearchDock,
+  body[data-bobae-main] .footer {
+    width: min(1200px, calc(100% - 80px));
+  }
+}
+
+@media (max-width: 767px) {
+  body[data-bobae-main] .bbHeader {
+    height: auto;
+  }
+
+  body[data-bobae-main] .bbHeaderTop {
+    display: none;
+  }
+
+  body[data-bobae-main] .bbHeaderInner {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  body[data-bobae-main] .bbHeaderMain {
+    height: 52px;
+  }
+
+  body[data-bobae-main] .bbHeaderMain .bbHeaderInner {
+    height: 52px;
+    align-items: center;
+  }
+
+  body[data-bobae-main] .bbNav {
+    height: 48px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  body[data-bobae-main] .bbNav::-webkit-scrollbar,
+  body[data-bobae-main] .bbNavList::-webkit-scrollbar,
+  body[data-bobae-main] .mainSearchTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  body[data-bobae-main] .bbNav .bbHeaderInner {
+    height: 48px;
+    padding: 0;
+  }
+
+  body[data-bobae-main] .bbNavList {
+    height: 48px;
+    gap: 22px;
+    min-width: max-content;
+    padding: 0 16px;
+  }
+
+  body[data-bobae-main] .bbNavLink {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  body[data-bobae-main] .bbHeaderActions {
+    display: none;
+  }
+
+  body[data-bobae-main] .mainHomeShell,
+  body[data-bobae-main] .mainSearchDock,
+  body[data-bobae-main] .footer {
+    width: 100%;
+  }
+
+  .mainHero {
+    min-height: 236px;
+    background-position: 58% center;
+  }
+
+  .mainHeroInner {
+    min-height: 236px;
+    padding: 0 18px;
+  }
+
+  .mainHeroCopy {
+    width: 260px;
+    padding-bottom: 46px;
+  }
+
+  .mainHeroCopy h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .mainHeroCopy p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .mainSearchDock {
+    margin-top: -44px;
+    padding: 0 12px;
+  }
+
+  .mainSearchPanel {
+    min-height: 0;
+    padding: 0 14px 16px;
+    box-shadow: 0 12px 26px rgba(20, 24, 31, .14);
+  }
+
+  .mainSearchTabs {
+    height: 50px;
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .mainSearchTabs button {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .mainSearchFields {
+    margin-top: 14px;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .mainSelect,
+  .mainSearchButton {
+    height: 52px;
+  }
+
+  .mainSearchFooter {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .mainExplore,
+  .mainSellBand,
+  .mainVehicleSection,
+  .mainEditorial,
+  .mainLinkHub {
+    margin-top: 34px;
+    padding: 0 12px;
+  }
+
+  .mainSectionHeading {
+    align-items: flex-start;
+  }
+
+  .mainSectionHeading h2,
+  .mainLinkHub h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .mainBodyTypeGrid,
+  .mainVehicleGrid,
+  .mainEditorial,
+  .mainLinkGroups {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .mainBodyTypeGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px 4px;
+  }
+
+  .mainBodyCard {
+    height: 74px;
+    grid-template-rows: 44px 22px;
+    padding: 1px 4px 0;
+  }
+
+  .mainBodyImage,
+  .mainBodyImage img {
+    height: 44px;
+  }
+
+  .mainBodyImage img {
+    width: 94px;
+  }
+
+  .mainBodyCard strong {
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .mainBrandBlock {
+    display: none;
+  }
+
+  .mainSellBand {
+    grid-template-columns: 1fr;
+  }
+
+  .mainSellLead {
+    padding: 0;
+  }
+
+  .mainVehicleCard {
+    min-height: 300px;
+  }
+
+  .mainVehicleMedia {
+    height: 136px;
+  }
+
+  .mainVehicleTitle {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .mainVehiclePrice {
+    font-size: 18px;
+  }
+
+  .mainNewsletter,
+  .mainMagazine {
+    grid-column: 1 / -1;
+  }
+
+  .mainNewsletter {
+    padding: 24px 18px;
+  }
+
+  .mainNewsletter h2,
+  .mainNewsletter p,
+  .mainNewsletter form {
+    width: 100%;
+  }
+
+  .mainNewsletter form {
+    grid-template-columns: 1fr 78px;
+  }
+
+  .mainLinkGroups > div {
+    padding: 16px;
+  }
+
+  body[data-bobae-main] .footer {
+    padding: 20px 12px 34px;
+  }
+}

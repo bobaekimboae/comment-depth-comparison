@@ -21,6 +21,29 @@
 
 final result: passed
 
+# S03-P-H Bobaedream Main QA
+
+**Source**
+- AutoScout24 DE: `https://www.autoscout24.de/`
+- AutoScout24 IT: `https://www.autoscout24.it/`
+
+**Implemented**
+- Added `bobaedream-main.html` as the S03 PC home/main draft.
+- Kept the existing Bobaedream header and GNB visual structure.
+- Matched the AutoScout24 main-body flow: image hero, floating search panel, vehicle tabs, maker/region search fields, result-count CTA, advanced search link, 8 body-type image links, popular brands, selling cards, popular listings, discounted listings, magazine/newsletter, and search link hub.
+- Used the 8 user-provided AutoScout24 vehicle category PNGs under `assets/main/categories/`.
+
+**Verification**
+- Desktop source capture: `captures/autoscout24-main-source-20260831/autoscout24-desktop-top.png`
+- Final desktop implementation capture: `captures/autoscout24-main-source-20260831/bobae-main-local-desktop-1536-final2.png`
+- Final mobile implementation capture: `captures/autoscout24-main-source-20260831/bobae-main-local-mobile-390-fixed.png`
+- Final comparison capture: `captures/autoscout24-main-source-20260831/comparison-autoscout24-vs-bobae-main-final.png`
+- Desktop check: `1536px` width, 8 vehicle category images in one row, search panel `1200px` wide, no horizontal overflow.
+- Mobile check: `390px` width, search panel `351px` wide, 8 category images in 4 x 2 layout, no horizontal overflow.
+- Interaction check: maker dropdown opens and updates selected maker, search button navigates to `bobaedream-used-car-list.html?type=car&maker=genesis`, listing cards link to detail pages, no browser console errors.
+
+final result: passed
+
 # Bobaedream Used Car HUD Option Icon QA
 
 **Findings**

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko" class="bobae-main-page">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="bobaedream-used-car.css?v=bobae-main-autoscout-20260831">
+<title>보배드림 메인 시안</title>
+</head>
+<body data-bobae-main>
+  <header class="bbHeader">
+    <div class="bbHeaderTop">
+      <div class="bbHeaderInner">
+        <nav class="bbHeaderLinks" aria-label="회원 메뉴">
+          <a href="#" data-toast="로그인 화면은 시안에서 준비 중입니다.">로그인</a>
+          <a href="#" data-toast="회원가입 화면은 시안에서 준비 중입니다.">회원가입</a>
+          <a href="#" data-toast="고객센터 화면은 시안에서 준비 중입니다.">고객센터</a>
+        </nav>
+      </div>
+    </div>
+    <div class="bbHeaderMain">
+      <div class="bbHeaderInner">
+        <a class="bbLogo" href="bobaedream-main.html" aria-label="보배드림 홈">
+          <img src="assets/used-car/bobaedream-logo.png" alt="보배드림">
+        </a>
+      </div>
+    </div>
+    <nav class="bbNav" aria-label="보배드림 주요 메뉴">
+      <div class="bbHeaderInner">
+        <div class="bbNavList">
+          <a class="bbNavLink is-active" data-nav="home" href="bobaedream-main.html">홈</a>
+          <a class="bbNavLink" data-nav="shorts" href="#" data-toast="숏폼카 화면은 시안에서 준비 중입니다.">숏폼카</a>
+          <a class="bbNavLink" href="bobaedream-used-car-list.html">국산차</a>
+          <a class="bbNavLink" href="bobaedream-used-car-list.html?category=used&brand=import" data-toast="수입차 필터를 적용했습니다.">수입차</a>
+          <a class="bbNavLink" href="#" data-toast="매물등록 기능은 다음 단계에서 연결합니다.">매물등록</a>
+          <a class="bbNavLink" href="#" data-toast="딜러 페이지는 시안에서 준비 중입니다.">딜러</a>
+          <a class="bbNavLink" href="bobaedream-used-car-list.html?category=parts">부품·용품</a>
+          <a class="bbNavLink" href="bobaedream-pc-board-list.html">커뮤니티</a>
+          <a class="bbNavLink bbNavMore" href="#" data-toast="더보기 메뉴는 시안에서 준비 중입니다.">더보기</a>
+        </div>
+        <div class="bbHeaderActions" aria-label="빠른 메뉴">
+          <button class="headerIcon search" type="button" data-toast="검색창은 시안에서 준비 중입니다." aria-label="검색"></button>
+          <button class="headerIcon person" type="button" data-toast="마이페이지는 시안에서 준비 중입니다." aria-label="마이페이지"></button>
+          <button class="headerIcon heart" type="button" data-toast="찜한 매물 화면은 시안에서 준비 중입니다." aria-label="찜"></button>
+          <button class="headerIcon bell" type="button" data-toast="알림 화면은 시안에서 준비 중입니다." aria-label="알림"></button>
+          <button class="headerIcon menu" type="button" data-toast="전체 메뉴는 시안에서 준비 중입니다." aria-label="전체 메뉴"><span></span></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="bbMainHome">
+    <section class="mainHero" aria-labelledby="mainHeroTitle">
+      <div class="mainHomeShell mainHeroInner">
+        <div class="mainHeroCopy">
+          <span class="mainHeroKicker">BOBAEDREAM MARKET</span>
+          <h1 id="mainHeroTitle">보배드림 중고차</h1>
+          <p>국산차, 수입차, 튜닝카까지 한 번에 찾고 비교하는 자동차 거래 홈</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mainSearchDock" aria-label="중고차 검색">
+      <div class="mainSearchPanel">
+        <div class="mainSearchTabs" role="tablist" aria-label="차량 유형">
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-main-tab="car">자동차</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="lease">리스</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="bike">바이크</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="camping">캠핑카</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="truck">트럭</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="parts">부품</button>
+        </div>
+
+        <div class="mainSearchFields">
+          <button class="mainSelect" type="button" data-select="maker" aria-haspopup="listbox">
+            <span>제조사 · 모델</span>
+            <strong id="mainMakerValue">전체 제조사</strong>
+          </button>
+          <button class="mainSelect" type="button" data-select="region" aria-haspopup="listbox">
+            <span>지역</span>
+            <strong id="mainRegionValue">전국</strong>
+          </button>
+          <button class="mainSearchButton" type="button" id="mainSearchButton">14,896대 검색</button>
+        </div>
+
+        <div class="mainSearchFooter">
+          <button type="button" id="mainAdvancedSearch">상세 검색</button>
+          <button type="button" id="mainSaveSearch">검색 저장</button>
+        </div>
+
+        <div class="mainSearchExplore" aria-labelledby="mainExploreTitle">
+          <div class="mainSectionHeading">
+            <h2 id="mainExploreTitle">중고차와 신차를 찾아보세요</h2>
+          </div>
+          <div class="mainBodyTypeGrid" id="mainBodyTypeGrid"></div>
+        </div>
+
+        <div class="mainSelectMenu" id="mainSelectMenu" hidden></div>
+      </div>
+    </section>
+
+    <section class="mainBrandRail mainHomeShell" aria-label="인기 브랜드">
+      <div class="mainBrandBlock">
+        <strong>인기 브랜드</strong>
+        <div class="mainBrandLinks" id="mainBrandLinks"></div>
+      </div>
+    </section>
+
+    <section class="mainSellBand mainHomeShell" aria-labelledby="mainSellTitle">
+      <div class="mainSellLead">
+        <h2 id="mainSellTitle">차를 팔고 싶으세요?</h2>
+        <p>내 차 시세 확인부터 광고 등록까지 빠르게 이어지는 판매 동선입니다.</p>
+      </div>
+      <article class="mainSellCard is-dealer">
+        <span>빠른 상담</span>
+        <h3>보배드림 제휴 딜러에게 판매</h3>
+        <ul>
+          <li>24시간 이내 견적 비교</li>
+          <li>방문 전 실매입가 확인</li>
+          <li>이전·정산 절차 안내</li>
+        </ul>
+        <button type="button" data-toast="딜러 판매 상담 화면은 시안에서 준비 중입니다.">딜러에게 판매</button>
+      </article>
+      <article class="mainSellCard is-listing">
+        <span>직접 등록</span>
+        <h3>보배드림에 내 차 광고 등록</h3>
+        <ul>
+          <li>사진과 옵션을 한 번에 등록</li>
+          <li>찜·문의 현황 확인</li>
+          <li>커뮤니티 노출 확장</li>
+        </ul>
+        <button type="button" data-toast="매물등록 기능은 다음 단계에서 연결합니다.">광고 등록</button>
+      </article>
+    </section>
+
+    <section class="mainVehicleSection mainHomeShell" aria-labelledby="mainPopularTitle">
+      <div class="mainSectionHeading">
+        <h2 id="mainPopularTitle">가장 많이 찾는 모델</h2>
+        <a href="bobaedream-used-car-list.html?sort=popular">더 많은 매물</a>
+      </div>
+      <div class="mainVehicleGrid" id="mainPopularGrid"></div>
+    </section>
+
+    <section class="mainVehicleSection mainHomeShell" aria-labelledby="mainDealTitle">
+      <div class="mainSectionHeading">
+        <div>
+          <h2 id="mainDealTitle">가격 인하 매물</h2>
+          <p>최근 판매자가 가격을 낮춘 매물을 먼저 모았습니다.</p>
+        </div>
+        <a href="bobaedream-used-car-list.html?sort=discount">할인 매물 보기</a>
+      </div>
+      <div class="mainVehicleGrid" id="mainDealGrid"></div>
+    </section>
+
+    <section class="mainEditorial mainHomeShell" aria-labelledby="mainEditorialTitle">
+      <div class="mainNewsletter">
+        <h2 id="mainEditorialTitle">자동차 소식을 한 번에 받아보세요</h2>
+        <p>신차 뉴스, 중고차 구매 팁, 시세 변동을 메일로 정리해드립니다.</p>
+        <form id="mainNewsletterForm">
+          <input type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="submit">구독</button>
+        </form>
+      </div>
+      <div class="mainMagazine">
+        <div class="mainSectionHeading">
+          <h2>보배드림 매거진</h2>
+          <a href="#" data-toast="매거진 목록은 시안에서 준비 중입니다.">더보기</a>
+        </div>
+        <a href="#" data-toast="기사 상세는 시안에서 준비 중입니다.">전기 SUV 중고차, 배터리 보증 먼저 보는 이유</a>
+        <a href="#" data-toast="기사 상세는 시안에서 준비 중입니다.">대형 세단을 고를 때 꼭 비교할 옵션 5가지</a>
+        <a href="#" data-toast="기사 상세는 시안에서 준비 중입니다.">리스 승계 매물 확인 전 체크리스트</a>
+      </div>
+    </section>
+
+    <section class="mainLinkHub mainHomeShell" aria-labelledby="mainLinkHubTitle">
+      <h2 id="mainLinkHubTitle">보배드림에서 많이 찾는 검색</h2>
+      <div class="mainLinkGroups">
+        <div>
+          <h3>브랜드</h3>
+          <a href="bobaedream-used-car-list.html?brand=genesis">제네시스 중고차</a>
+          <a href="bobaedream-used-car-list.html?brand=hyundai">현대 중고차</a>
+          <a href="bobaedream-used-car-list.html?brand=kia">기아 중고차</a>
+          <a href="bobaedream-used-car-list.html?brand=bmw">BMW 중고차</a>
+        </div>
+        <div>
+          <h3>차종</h3>
+          <a href="bobaedream-used-car-list.html?body=suv">SUV · 픽업</a>
+          <a href="bobaedream-used-car-list.html?body=sedan">세단</a>
+          <a href="bobaedream-used-car-list.html?body=coupe">쿠페</a>
+          <a href="bobaedream-used-car-list.html?body=truck">트럭 · 특장</a>
+        </div>
+        <div>
+          <h3>인기 조건</h3>
+          <a href="bobaedream-used-car-list.html?filter=no-accident">무사고 차량</a>
+          <a href="bobaedream-used-car-list.html?filter=certified">인증중고차</a>
+          <a href="bobaedream-used-car-list.html?filter=video">영상 매물</a>
+          <a href="bobaedream-used-car-list.html?filter=personal">개인 직거래</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>(주) 보배네트워크</strong> 사업자 정보 대표이사: 김보배 사업자등록번호 : 117-81-64543 사업자정보 확인<br>
+    주소 : (07995) 서울 양천구 목동동로 233-1 드림타워 11, 12층 통신판매업신고번호 : 제2013-서울양천-0465호 개인정보관리책임자 : 이은호<br>
+    회사소개 · 제휴/광고문의 · 이용약관 · 제휴/신고센터 · 고객센터 · 청소년보호정책 · 개인정보취급방침
+  </footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="bobaedream-used-car-data.js?v=bobae-main-autoscout-20260831"></script>
+  <script src="bobaedream-main.js?v=bobae-main-autoscout-20260831"></script>
+</body>
+</html>

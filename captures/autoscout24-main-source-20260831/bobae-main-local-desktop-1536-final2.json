@@ -1,0 +1,92 @@
+{
+  "bodyCards": 8,
+  "bodyGrid": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "grid",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 70,
+    "w": 1142,
+    "x": 189,
+    "y": 562
+  },
+  "brandRail": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "block",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 34,
+    "w": 1200,
+    "x": 160,
+    "y": 679
+  },
+  "clientWidth": 1521,
+  "dealCards": 4,
+  "firstBodyCard": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "grid",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 70,
+    "w": 138,
+    "x": 189,
+    "y": 562
+  },
+  "hero": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "block",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 302,
+    "w": 1521,
+    "x": 0,
+    "y": 117
+  },
+  "popularCards": 4,
+  "scrollWidth": 1521,
+  "searchExplore": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "block",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 107,
+    "w": 1142,
+    "x": 189,
+    "y": 525
+  },
+  "searchFields": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "grid",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 44,
+    "w": 1142,
+    "x": 189,
+    "y": 428
+  },
+  "searchFooter": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "flex",
+    "font": "800 14px / 20px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 20,
+    "w": 1142,
+    "x": 189,
+    "y": 485
+  },
+  "searchPanel": {
+    "bg": "rgb(255, 255, 255)",
+    "display": "block",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 306,
+    "w": 1200,
+    "x": 160,
+    "y": 351
+  },
+  "sellBand": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "display": "grid",
+    "font": "14px / 18.9px Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple SD Gothic Neo\", Helvetica, Arial, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "h": 251,
+    "w": 1200,
+    "x": 160,
+    "y": 761
+  },
+  "viewport": {
+    "h": 639,
+    "w": 1536
+  }
+}

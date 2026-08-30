@@ -1,0 +1,51 @@
+{
+  "bodyCards": 8,
+  "bodyGrid": {
+    "display": "grid",
+    "h": 156,
+    "w": 322,
+    "x": 27,
+    "y": 688
+  },
+  "brandBlock": {
+    "display": "none",
+    "h": 0,
+    "w": 0,
+    "x": 0,
+    "y": 0
+  },
+  "clientWidth": 375,
+  "firstBodyCard": {
+    "display": "grid",
+    "h": 74,
+    "w": 77,
+    "x": 27,
+    "y": 688
+  },
+  "firstVehicleCard": {
+    "display": "block",
+    "h": 366,
+    "w": 171,
+    "x": 12,
+    "y": 1591
+  },
+  "scrollWidth": 375,
+  "searchExplore": {
+    "display": "block",
+    "h": 193,
+    "w": 322,
+    "x": 27,
+    "y": 651
+  },
+  "searchPanel": {
+    "display": "block",
+    "h": 568,
+    "w": 351,
+    "x": 12,
+    "y": 293
+  },
+  "viewport": {
+    "h": 844,
+    "w": 390
+  }
+}
