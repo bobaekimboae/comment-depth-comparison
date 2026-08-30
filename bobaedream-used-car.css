@@ -2292,6 +2292,10 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   body.sheet-open {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
     overflow: hidden;
   }
 
@@ -2869,8 +2873,12 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileSheetLayer {
     position: fixed;
     inset: 0;
-    z-index: 30;
+    z-index: 240;
     display: none;
+  }
+
+  .mobileSheetLayer[data-sheet-variant="filter"] {
+    z-index: 260;
   }
 
   .mobileSheetLayer.is-open {
@@ -2912,7 +2920,6 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileSheetPop {
-    min-height: 420px;
     max-height: calc(100% - 96px);
     border-radius: 8px 8px 0 0;
   }
@@ -3178,7 +3185,7 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileActionList {
-    padding: 16px;
+    padding: 16px 16px 34px;
     display: grid;
     gap: 10px;
   }

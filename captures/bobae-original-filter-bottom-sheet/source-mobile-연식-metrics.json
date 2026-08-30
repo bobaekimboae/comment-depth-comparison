@@ -1,0 +1,62 @@
+[
+  {
+    "tag": "BODY",
+    "cls": "car-list-page-mode is-modal-scroll-locked",
+    "role": "",
+    "text": "연식 년 월 년 월 부터 까지 ~1년 ~2년 ~3년 ~4년 ~5년 6년~ 초기화 14,896대 보기 보배드림 지역: 전국 초기화 필터 전체중고차 제조사 연식 가격 연료 판매자 중고차 트럭 · 특장 바이크 캠핑카 올드",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 4744,
+    "bottom": -3900,
+    "radius": "0px 0px",
+    "z": "auto",
+    "pos": "fixed",
+    "visible": true
+  },
+  {
+    "tag": "DIV",
+    "cls": "pop car-list-mobile-filter-sheet car-list-mobile-filter-sheet--full car-list-mobile-filter-sheet--choice-apply open",
+    "role": "",
+    "text": "연식 년 월 년 월 부터 까지 ~1년 ~2년 ~3년 ~4년 ~5년 6년~ 초기화 14,896대 보기",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 844,
+    "bottom": 0,
+    "radius": "0px 0px",
+    "z": "260",
+    "pos": "fixed",
+    "visible": true
+  },
+  {
+    "tag": "DIV",
+    "cls": "car-list-mobile-filter-sheet__body pop-body",
+    "role": "",
+    "text": "년 월 년 월 부터 까지 ~1년 ~2년 ~3년 ~4년 ~5년 6년~",
+    "x": 0,
+    "y": 60,
+    "w": 390,
+    "h": 684,
+    "bottom": 100,
+    "radius": "0px 0px",
+    "z": "auto",
+    "pos": "static",
+    "visible": true
+  },
+  {
+    "tag": "DIV",
+    "cls": "car-list-mobile-filter-sheet__content",
+    "role": "",
+    "text": "년 월 년 월 부터 까지 ~1년 ~2년 ~3년 ~4년 ~5년 6년~",
+    "x": 16,
+    "y": 76,
+    "w": 358,
+    "h": 228,
+    "bottom": 540,
+    "radius": "0px 0px",
+    "z": "auto",
+    "pos": "static",
+    "visible": true
+  }
+]

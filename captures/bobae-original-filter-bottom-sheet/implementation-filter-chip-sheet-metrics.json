@@ -1,0 +1,589 @@
+{
+  "results": [
+    {
+      "text": "필터",
+      "target": {
+        "index": 24,
+        "text": "필터",
+        "x": 16,
+        "y": 106,
+        "w": 88,
+        "h": 32,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileChip"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "filter",
+          "activeSheet": "filter",
+          "z": "260",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "sheet": "filter",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetScroll",
+            "sheet": "",
+            "x": 0,
+            "y": 174,
+            "w": 390,
+            "h": 570,
+            "bottom": 100,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetFooter",
+            "sheet": "",
+            "x": 0,
+            "y": 744,
+            "w": 390,
+            "h": 100,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "제조사",
+      "target": {
+        "index": 26,
+        "text": "제조사",
+        "x": 233,
+        "y": 106,
+        "w": 79,
+        "h": 32,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileChip"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "filter",
+          "activeSheet": "maker",
+          "z": "260",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "sheet": "maker",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetScroll makerList",
+            "sheet": "",
+            "x": 0,
+            "y": 60,
+            "w": 390,
+            "h": 684,
+            "bottom": 100,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetFooter",
+            "sheet": "",
+            "x": 0,
+            "y": 744,
+            "w": 390,
+            "h": 100,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "연식",
+      "target": {
+        "index": 27,
+        "text": "연식",
+        "x": 321,
+        "y": 106,
+        "w": 66,
+        "h": 32,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileChip"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "filter",
+          "activeSheet": "year",
+          "z": "260",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "sheet": "generic",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetScroll",
+            "sheet": "",
+            "x": 0,
+            "y": 60,
+            "w": 390,
+            "h": 684,
+            "bottom": 100,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetFooter",
+            "sheet": "",
+            "x": 0,
+            "y": 744,
+            "w": 390,
+            "h": 100,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "가격",
+      "target": {
+        "index": 28,
+        "text": "가격",
+        "x": 162,
+        "y": 106,
+        "w": 66,
+        "h": 32,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileChip"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "filter",
+          "activeSheet": "price",
+          "z": "260",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "sheet": "generic",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetScroll",
+            "sheet": "",
+            "x": 0,
+            "y": 60,
+            "w": 390,
+            "h": 684,
+            "bottom": 100,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetFooter",
+            "sheet": "",
+            "x": 0,
+            "y": 744,
+            "w": 390,
+            "h": 100,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "연료",
+      "target": {
+        "index": 29,
+        "text": "연료",
+        "x": 220,
+        "y": 106,
+        "w": 66,
+        "h": 32,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileChip"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "filter",
+          "activeSheet": "fuel",
+          "z": "260",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "sheet": "generic",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetScroll",
+            "sheet": "",
+            "x": 0,
+            "y": 60,
+            "w": 390,
+            "h": 684,
+            "bottom": 100,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetFooter",
+            "sheet": "",
+            "x": 0,
+            "y": 744,
+            "w": 390,
+            "h": 100,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "판매자",
+      "target": {
+        "index": 30,
+        "text": "판매자",
+        "x": 295,
+        "y": 106,
+        "w": 79,
+        "h": 32,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileChip"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "filter",
+          "activeSheet": "seller",
+          "z": "260",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "sheet": "generic",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetScroll",
+            "sheet": "",
+            "x": 0,
+            "y": 60,
+            "w": 390,
+            "h": 684,
+            "bottom": 100,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetFooter",
+            "sheet": "",
+            "x": 0,
+            "y": 744,
+            "w": 390,
+            "h": 100,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "지역: 전국",
+      "target": {
+        "index": 22,
+        "text": "지역: 전국",
+        "x": 16,
+        "y": 60,
+        "w": 95,
+        "h": 36,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileRegionBtn"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "filter",
+          "activeSheet": "region",
+          "z": "260",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "sheet": "region",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetScroll",
+            "sheet": "",
+            "x": 0,
+            "y": 60,
+            "w": 390,
+            "h": 684,
+            "bottom": 100,
+            "display": "block",
+            "radius": "0px 0px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileSheetFooter",
+            "sheet": "",
+            "x": 0,
+            "y": 744,
+            "w": 390,
+            "h": 100,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "업데이트순",
+      "target": {
+        "index": 42,
+        "text": "업데이트순",
+        "x": 237,
+        "y": 270,
+        "w": 112,
+        "h": 51,
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "cls": "mobileSortButton"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "toolbar",
+          "activeSheet": "sort",
+          "z": "240",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetPop is-active",
+            "sheet": "sort",
+            "x": 0,
+            "y": 204,
+            "w": 390,
+            "h": 640,
+            "bottom": 0,
+            "display": "block",
+            "radius": "8px 8px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileActionList",
+            "sheet": "",
+            "x": 0,
+            "y": 264,
+            "w": 390,
+            "h": 580,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    },
+    {
+      "text": "보기",
+      "target": {
+        "text": "보기",
+        "x": 349,
+        "y": 282,
+        "w": 28,
+        "h": 28,
+        "cls": "mobileViewButton"
+      },
+      "metrics": {
+        "layer": {
+          "cls": "mobileSheetLayer is-open",
+          "variant": "toolbar",
+          "activeSheet": "view",
+          "z": "240",
+          "ariaHidden": "false"
+        },
+        "body": {
+          "className": "sheet-open",
+          "position": "fixed",
+          "top": "0px",
+          "overflow": "hidden"
+        },
+        "sheets": [
+          {
+            "cls": "mobileSheet mobileSheetPop is-active",
+            "sheet": "view",
+            "x": 0,
+            "y": 474,
+            "w": 390,
+            "h": 370,
+            "bottom": 0,
+            "display": "block",
+            "radius": "8px 8px",
+            "z": "auto"
+          },
+          {
+            "cls": "mobileActionList",
+            "sheet": "",
+            "x": 0,
+            "y": 534,
+            "w": 390,
+            "h": 310,
+            "bottom": 0,
+            "display": "grid",
+            "radius": "0px 0px",
+            "z": "auto"
+          }
+        ]
+      }
+    }
+  ],
+  "consoleErrors": []
+}

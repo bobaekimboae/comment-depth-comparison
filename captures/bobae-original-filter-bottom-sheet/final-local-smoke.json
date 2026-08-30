@@ -1,0 +1,273 @@
+{
+  "ko": {
+    "results": [
+      {
+        "action": "filter",
+        "metrics": {
+          "layer": {
+            "variant": "filter",
+            "activeSheet": "filter",
+            "z": "260",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "filter",
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "radius": "0px 0px"
+          },
+          "actionList": null,
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      },
+      {
+        "action": "maker",
+        "metrics": {
+          "layer": {
+            "variant": "filter",
+            "activeSheet": "maker",
+            "z": "260",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "maker",
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "radius": "0px 0px"
+          },
+          "actionList": null,
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      },
+      {
+        "action": "price",
+        "metrics": {
+          "layer": {
+            "variant": "filter",
+            "activeSheet": "price",
+            "z": "260",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "generic",
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "radius": "0px 0px"
+          },
+          "actionList": null,
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      },
+      {
+        "action": "sort",
+        "metrics": {
+          "layer": {
+            "variant": "toolbar",
+            "activeSheet": "sort",
+            "z": "240",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "sort",
+            "cls": "mobileSheet mobileSheetPop is-active",
+            "x": 0,
+            "y": 204,
+            "w": 390,
+            "h": 640,
+            "bottom": 0,
+            "radius": "8px 8px"
+          },
+          "actionList": {
+            "x": 0,
+            "y": 264,
+            "w": 390,
+            "h": 580,
+            "bottom": 0
+          },
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      },
+      {
+        "action": "view",
+        "metrics": {
+          "layer": {
+            "variant": "toolbar",
+            "activeSheet": "view",
+            "z": "240",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "view",
+            "cls": "mobileSheet mobileSheetPop is-active",
+            "x": 0,
+            "y": 474,
+            "w": 390,
+            "h": 370,
+            "bottom": 0,
+            "radius": "8px 8px"
+          },
+          "actionList": {
+            "x": 0,
+            "y": 534,
+            "w": 390,
+            "h": 310,
+            "bottom": 0
+          },
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      }
+    ],
+    "consoleErrors": []
+  },
+  "exportPage": {
+    "results": [
+      {
+        "action": "filter",
+        "metrics": {
+          "layer": {
+            "variant": "filter",
+            "activeSheet": "filter",
+            "z": "260",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "filter",
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "radius": "0px 0px"
+          },
+          "actionList": null,
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      },
+      {
+        "action": "maker",
+        "metrics": {
+          "layer": {
+            "variant": "filter",
+            "activeSheet": "maker",
+            "z": "260",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "maker",
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "radius": "0px 0px"
+          },
+          "actionList": null,
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      },
+      {
+        "action": "price",
+        "metrics": {
+          "layer": {
+            "variant": "filter",
+            "activeSheet": "price",
+            "z": "260",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "generic",
+            "cls": "mobileSheet mobileSheetFull is-active",
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844,
+            "bottom": 0,
+            "radius": "0px 0px"
+          },
+          "actionList": null,
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      },
+      {
+        "action": "sort",
+        "metrics": {
+          "layer": {
+            "variant": "toolbar",
+            "activeSheet": "sort",
+            "z": "240",
+            "ariaHidden": "false"
+          },
+          "active": {
+            "sheet": "sort",
+            "cls": "mobileSheet mobileSheetPop is-active",
+            "x": 0,
+            "y": 420,
+            "w": 390,
+            "h": 424,
+            "bottom": 0,
+            "radius": "8px 8px"
+          },
+          "actionList": {
+            "x": 0,
+            "y": 480,
+            "w": 390,
+            "h": 364,
+            "bottom": 0
+          },
+          "body": {
+            "position": "fixed",
+            "overflow": "hidden",
+            "top": "0px"
+          }
+        }
+      }
+    ],
+    "consoleErrors": []
+  }
+}

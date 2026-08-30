@@ -525,23 +525,44 @@
   function setupMobileList(state) {
     const layer = qs("#mobileSheetLayer");
     if (!qs("[data-mobile-list]") || !layer) return;
+    const filterSheetTypes = new Set(["filter", "maker", "region", "generic"]);
+    let sheetScrollY = 0;
 
     renderMobileCategoryButtons(state.category === "all" ? "used" : state.category);
     renderMobileMakerList(state);
     renderMobileRegionGrid(state);
     renderMobileSortList(state);
 
-    const openSheet = (type) => {
+    const lockSheetScroll = () => {
+      if (!document.body.classList.contains("sheet-open")) {
+        sheetScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.style.top = `-${sheetScrollY}px`;
+      }
+      document.body.classList.add("sheet-open");
+    };
+
+    const unlockSheetScroll = () => {
+      const savedScrollY = Math.abs(parseInt(document.body.style.top || "0", 10)) || sheetScrollY;
+      document.body.classList.remove("sheet-open");
+      document.body.style.top = "";
+      window.scrollTo(0, savedScrollY);
+    };
+
+    const openSheet = (type, triggerType = type) => {
       qsa(".mobileSheet", layer).forEach((sheet) => sheet.classList.toggle("is-active", sheet.dataset.sheet === type));
+      layer.dataset.sheetVariant = filterSheetTypes.has(type) ? "filter" : "toolbar";
+      layer.dataset.activeSheet = triggerType;
       layer.classList.add("is-open");
       layer.setAttribute("aria-hidden", "false");
-      document.body.classList.add("sheet-open");
+      lockSheetScroll();
     };
 
     const closeSheet = () => {
       layer.classList.remove("is-open");
       layer.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("sheet-open");
+      delete layer.dataset.sheetVariant;
+      delete layer.dataset.activeSheet;
+      unlockSheetScroll();
       qsa(".mobileSheet", layer).forEach((sheet) => sheet.classList.remove("is-active"));
     };
 
@@ -556,7 +577,7 @@
           return;
         }
         renderGenericSheet(type, state);
-        openSheet("generic");
+        openSheet("generic", type);
       });
     });
 

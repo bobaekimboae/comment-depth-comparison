@@ -1,0 +1,17 @@
+[
+  {
+    "tag": "BODY",
+    "cls": "car-list-page-mode is-modal-scroll-locked",
+    "role": "",
+    "text": "보배드림 필터 검색조건 유지 최근검색기록 0 검색조건 저장 카테고리 바디타입 차급 제조사 · 모델 제조사·모델 제외하기 연식 주행거리 가격 지역 매매단지 인승 구동방식 성능 · 보험 판매자 구분 판매방식 외부색상 시",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 4744,
+    "bottom": -3900,
+    "radius": "0px 0px",
+    "z": "auto",
+    "pos": "fixed",
+    "visible": true
+  }
+]

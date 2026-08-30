@@ -1,3 +1,36 @@
+# Bobaedream Used Car Original Filter Chip Bottom Sheet QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after the filter chip bottom-sheet pass.
+- [P3] The maker selector still uses temporary letter marks and counts instead of the original brand logo assets. This should be replaced in the planned icon pass when the supplied SVG files are available.
+
+**Implementation Checklist**
+- [x] Captured the live Bobaedream source mobile list from `https://dev.bbmuseum.co.kr/car/list`.
+- [x] Measured original filter-condition sheets: filter, maker, year, and region open as full-height bottom sheets at `390px x 844px` with `z-index: 260`.
+- [x] Measured original toolbar sheets: sort opens at `y=204 h=640`, and list-view opens at `y=474 h=370` with `z-index: 240`.
+- [x] Updated the mobile sheet layer to distinguish filter-condition sheets from toolbar action sheets.
+- [x] Locked body scroll with fixed positioning while a sheet is open, matching the original modal scroll behavior.
+- [x] Adjusted mobile action sheet padding so sort and view sheets match the source heights.
+- [x] Added the missing `한줄 광고로 보기` option to the list-view sheet.
+
+**Evidence**
+- Source filter screenshot: `captures/bobae-original-filter-bottom-sheet/source-mobile-필터.png`
+- Source maker screenshot: `captures/bobae-original-filter-bottom-sheet/source-mobile-제조사.png`
+- Source sort screenshot: `captures/bobae-original-filter-bottom-sheet/source-mobile-업데이트순.png`
+- Source view screenshot: `captures/bobae-original-filter-bottom-sheet/source-mobile-목록형.png`
+- Implementation metrics: `captures/bobae-original-filter-bottom-sheet/implementation-filter-chip-sheet-metrics.json`
+- Final local smoke metrics: `captures/bobae-original-filter-bottom-sheet/final-local-smoke.json`
+- Combined comparison image: `captures/bobae-original-filter-bottom-sheet/comparison-source-vs-implementation-filter-chip-sheets.png`
+- Viewport: Chrome mobile CSS viewport `390px x 844px`, device scale factor `1`.
+
+**Measured Pass**
+- `필터`, `제조사`, `연식`, `가격`, `연료`, `판매자`, and `지역: 전국` all open the filter-condition sheet path with layer `z-index: 260`, `aria-hidden=false`, body `position: fixed`, and active sheet rect `x=0 y=0 w=390 h=844`.
+- `업데이트순` opens the toolbar sheet path with layer `z-index: 240`, active sheet rect `x=0 y=204 w=390 h=640`, and action list rect `x=0 y=264 w=390 h=580`.
+- `보기` opens the toolbar sheet path with layer `z-index: 240`, active sheet rect `x=0 y=474 w=390 h=370`, and action list rect `x=0 y=534 w=390 h=310`.
+- Console and page errors checked: no document-originated errors.
+
+final result: passed
+
 # Bobaedream Used Car Chotot Sticky Summary QA
 
 **Findings**

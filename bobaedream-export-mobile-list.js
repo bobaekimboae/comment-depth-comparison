@@ -236,6 +236,8 @@
     video: false,
     sort: "latest"
   };
+  const filterSheetTypes = new Set(["filter", "maker", "port", "generic"]);
+  let sheetScrollY = 0;
 
   const sortOptions = [
     ["latest", "Latest"],
@@ -511,22 +513,44 @@
     updateLabels(visible);
   }
 
+  function lockSheetScroll() {
+    if (!document.body.classList.contains("sheet-open")) {
+      sheetScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+      document.body.style.top = `-${sheetScrollY}px`;
+    }
+    document.body.classList.add("sheet-open");
+  }
+
+  function unlockSheetScroll() {
+    const savedScrollY = Math.abs(parseInt(document.body.style.top || "0", 10)) || sheetScrollY;
+    document.body.classList.remove("sheet-open");
+    document.body.style.top = "";
+    window.scrollTo(0, savedScrollY);
+  }
+
   function openSheet(name) {
+    const triggerName = name;
     if (optionConfigs[name] && name !== "maker") {
       renderGenericOptions(name);
       name = "generic";
     }
+    const layer = qs("#mobileSheetLayer");
     qsa(".mobileSheet").forEach((sheet) => sheet.classList.toggle("is-active", sheet.dataset.sheet === name));
-    qs("#mobileSheetLayer").classList.add("is-open");
-    qs("#mobileSheetLayer").setAttribute("aria-hidden", "false");
-    document.body.classList.add("sheet-open");
+    layer.dataset.sheetVariant = filterSheetTypes.has(name) ? "filter" : "toolbar";
+    layer.dataset.activeSheet = triggerName;
+    layer.classList.add("is-open");
+    layer.setAttribute("aria-hidden", "false");
+    lockSheetScroll();
   }
 
   function closeSheet() {
-    qs("#mobileSheetLayer").classList.remove("is-open");
-    qs("#mobileSheetLayer").setAttribute("aria-hidden", "true");
+    const layer = qs("#mobileSheetLayer");
+    layer.classList.remove("is-open");
+    layer.setAttribute("aria-hidden", "true");
+    delete layer.dataset.sheetVariant;
+    delete layer.dataset.activeSheet;
     qsa(".mobileSheet").forEach((sheet) => sheet.classList.remove("is-active"));
-    document.body.classList.remove("sheet-open");
+    unlockSheetScroll();
   }
 
   function resetFilters() {
