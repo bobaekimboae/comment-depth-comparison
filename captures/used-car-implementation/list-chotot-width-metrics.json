@@ -1,0 +1,83 @@
+{
+  "desktopMetrics": {
+    "desktopListVisible": true,
+    "filter": {
+      "columnGap": "normal",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "h": 1344,
+      "w": 300,
+      "x": 112,
+      "y": 141
+    },
+    "firstRow": {
+      "columnGap": "16px",
+      "display": "grid",
+      "gridTemplateColumns": "160px 660px",
+      "h": 211,
+      "w": 836,
+      "x": 456,
+      "y": 443
+    },
+    "firstThumb": {
+      "columnGap": "normal",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "h": 160,
+      "w": 160,
+      "x": 456,
+      "y": 455
+    },
+    "gap": 24,
+    "innerWidth": 1440,
+    "main": {
+      "columnGap": "normal",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "h": 2705,
+      "w": 876,
+      "x": 436,
+      "y": 141
+    },
+    "mobileVisible": false,
+    "overflowX": -15,
+    "scrollWidth": 1425,
+    "shell": {
+      "columnGap": "24px",
+      "display": "grid",
+      "gridTemplateColumns": "300px 876px",
+      "h": 2705,
+      "w": 1200,
+      "x": 112,
+      "y": 141
+    },
+    "summary": {
+      "columnGap": "normal",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "h": 222,
+      "w": 876,
+      "x": 436,
+      "y": 141
+    },
+    "toolbar": {
+      "columnGap": "normal",
+      "display": "flex",
+      "gridTemplateColumns": "none",
+      "h": 56,
+      "w": 876,
+      "x": 436,
+      "y": 387
+    }
+  },
+  "mobileMetrics": {
+    "desktopListDisplay": "none",
+    "firstTitle": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+    "innerWidth": 390,
+    "mobileDisplay": "block",
+    "mobileRows": 11,
+    "overflowX": -15,
+    "scrollWidth": 375
+  },
+  "consoleErrors": []
+}

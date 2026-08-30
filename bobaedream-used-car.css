@@ -291,11 +291,11 @@ img {
 }
 
 .listShell {
-  width: 1408px;
+  width: 1200px;
   margin: 24px auto 0;
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 16px;
+  grid-template-columns: 300px 876px;
+  gap: 24px;
   align-items: start;
 }
 
@@ -1828,7 +1828,7 @@ img {
   }
 
   .listShell {
-    width: 1248px;
+    width: 1200px;
   }
 }
 

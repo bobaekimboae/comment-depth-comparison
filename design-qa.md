@@ -1,3 +1,38 @@
+# Bobaedream Used Car Chotot Width QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The Chotot reference keeps the filter rail on the right; the implementation intentionally keeps Bobaedream's existing left filter placement while matching the measured Chotot sizing rhythm.
+
+**Implementation Checklist**
+- [x] Captured the Chotot desktop reference from `https://xe.chotot.com/mua-ban-oto-dien-sdfu4`.
+- [x] Measured the reference desktop layout at `1440px`: outer content `1200px`, listing column `876px`, right-side filter card `300px`, and effective column gap `24px`.
+- [x] Updated the S03 used-car PC list grid to `300px / 24px / 876px`, with a total shell width of `1200px`.
+- [x] Verified mobile list still switches to the existing mobile UI and renders mock listing rows.
+
+**Evidence**
+- Source visual truth path: `captures/chotot-reference/desktop-1440-top.png`
+- Source metrics path: `captures/chotot-reference/desktop-metrics.json`
+- Implementation screenshot path: `captures/used-car-implementation/list-chotot-width-1440.png`
+- Mobile regression screenshot path: `captures/used-car-implementation/list-chotot-width-mobile-390.png`
+- Combined comparison image: `captures/used-car-implementation/comparison-chotot-width.png`
+- Viewport: desktop `1440 x 1200`, mobile `390 x 844`
+- Source pixels: `1440 x 1200`, CSS size `1440 x 1200`, device scale factor `1`
+- Implementation capture pixels: `1425 x 1054`, CSS viewport `1440 x 1200`, device scale factor `1`; the in-app browser captured the viewport minus the visible scrollbar.
+- State: top of S03 used-car list page, base mock listing state.
+- Full-view comparison evidence: Chotot shows `876px` listing content plus `24px` gap plus `300px` right rail inside a `1200px` content shell. The Bobaedream implementation mirrors that as `300px` left filter plus `24px` gap plus `876px` listing content.
+- Focused region comparison evidence: focused numeric measurement was sufficient for this change because the request was specifically about the listing/filter sizing, not typography, colors, or row content.
+
+**Measured Pass**
+- Implementation shell: `w=1200`, `grid-template-columns=300px 876px`, `gap=24px`.
+- Filter panel: `w=300`.
+- Main list column: `w=876`.
+- Summary card and toolbar: both `w=876`.
+- First row inner lane: `w=836`, `grid-template-columns=160px 660px`, matching the Chotot-style dense listing lane after row margins.
+- Mobile regression: desktop list hidden, mobile list visible, 11 mock rows rendered, no document-originated console errors.
+
+final result: passed
+
 # Bobaedream Used Car Mobile Interaction QA
 
 **Findings**
