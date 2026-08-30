@@ -14,6 +14,7 @@
 - [x] Match the comment area rhythm: comment count, notice bar, disabled composer, cleanbot row, list comments, reaction pills, and bottom pager.
 - [x] Replace right rail with virtual Bobaedream popular/latest scenarios.
 - [x] Connect the PC list titles to the new detail page.
+- [x] Add board-specific virtual scenarios: 15 PC board filters x 3 posts, with shared list/detail data and hydrated detail bodies.
 
 **Follow-up Polish**
 - Add a second detail state with photo attachments or accident-report media when the board scenario needs image-heavy posts.
@@ -31,6 +32,7 @@
 - Full-view comparison evidence: source and implementation use the same top-level composition and measured layout rhythm: page wrapper starts at `x=80`, center column at `x=294`, detail card at `x=294`, right rail at `x=1060`, and center card width `742px`. Implementation title starts at `x=318 y=586`, matching the captured source title top. Implementation comment count starts at `y=991`, about `18px` below the captured source because the Bobaedream scenario body wraps to two lines.
 - Focused region comparison evidence: the title/header/body/comment regions were checked separately with browser metrics; focused screenshots were not necessary because the measured desktop top capture keeps these details legible.
 - Primary interactions tested: list title link opens detail page, `목록` link returns to list, vote buttons increment their count, bookmark button toggles state, left board filters move to the selected board, write button opens the Chzzk-style write screen with login-required modal, demo login enables posting, submitted posts open in the detail page, comment composer and reply buttons show the login-required modal when logged out, logged-in comments and replies register in place, comment order toggles between `등록순` and `최신순`, refresh shows feedback.
+- Board scenario pass: `bobaedream-pc-scenarios.js` provides 45 virtual posts across 15 boards, and every left board filter renders exactly 3 matching rows with detail links that hydrate the title, author, meta, and body from the same data source.
 - Console errors checked: no document-originated browser console errors in the final implementation capture.
 
 ## Required Fidelity Surfaces
@@ -69,5 +71,6 @@
 2. Implementation created as `bobaedream-pc-board-detail.html` using the previously deployed PC list shell.
 3. Final browser capture confirms center width, comment count, right rail count, inter-page links, vote interaction, bookmark toggle, and absence of document-originated console errors.
 4. Interaction pass added shared prototype behavior in `bobaedream-pc-interactions.js`. Browser verification confirms `전기차 충전소` filter activates and renders only matching rows, write flow creates a saved post and opens its detail page, comment registration increments `댓글 10` to `댓글 11`, reply registration increments to `댓글 12`, and detail-page left navigation opens the selected board list.
+5. Board scenario pass adds 3 realistic automotive post scenarios per board: 국산차, 수입차, 전기차, SUV, 화물·특장, 중고차, 정비, 튜닝, 보험·사고, 블랙박스, 공지, 자유, 질문, 시승기, 출석체크.
 
 final result: passed

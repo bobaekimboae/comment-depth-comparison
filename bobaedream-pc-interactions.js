@@ -6,20 +6,20 @@
   var STORE_BOARD='bobaePcCurrentBoard';
   var isList=!!document.getElementById('postRows');
   var isDetail=!!document.querySelector('.commentSection');
-  var basePosts=window.bobaeBoardPosts||[];
+  var basePosts=window.bobaeScenarioPosts||window.bobaeBoardPosts||[];
   var boardNames=['전체 게시글','국산차 오너톡','수입차 라운지','전기차 충전소','SUV 패밀리카','화물·특장','중고차 문의','정비 상담','튜닝 인증','보험·사고','블랙박스 제보','공지','자유','질문','시승기','출석체크'];
   var boardConfig={
     '전체 게시글':{categories:[],label:'전체'},
     '국산차 오너톡':{categories:['국산차'],label:'국산차'},
     '수입차 라운지':{categories:['수입차'],label:'수입차'},
     '전기차 충전소':{categories:['전기차'],label:'전기차'},
-    'SUV 패밀리카':{categories:['SUV','국산차'],label:'SUV'},
+    'SUV 패밀리카':{categories:['SUV'],label:'SUV'},
     '화물·특장':{categories:['화물'],label:'화물'},
     '중고차 문의':{categories:['중고차'],label:'중고차'},
     '정비 상담':{categories:['정비'],label:'정비'},
     '튜닝 인증':{categories:['튜닝'],label:'튜닝'},
     '보험·사고':{categories:['보험','사고/블박'],label:'보험'},
-    '블랙박스 제보':{categories:['블랙박스','사고/블박'],label:'블랙박스'},
+    '블랙박스 제보':{categories:['블랙박스'],label:'블랙박스'},
     '공지':{categories:['공지'],label:'공지'},
     '자유':{categories:['자유'],label:'자유'},
     '질문':{categories:['질문'],label:'질문'},
@@ -283,9 +283,11 @@
       var title=document.querySelector('.feedTitle');
       var body=document.querySelector('.postText');
       var author=document.querySelector('.authorName');
+      var meta=document.querySelector('.metaLine');
       if(title) title.textContent=post[1];
       if(body) body.textContent=post[7]||detailCopyFor(board, post[1]);
       if(author) author.innerHTML=esc(post[2])+'<span class="level">LV 2</span>';
+      if(meta) meta.innerHTML='<span>'+esc(post[3])+'</span><span>조회수 '+esc(post[4])+'</span>';
       document.title=post[1]+' : 보배드림 자동차토론';
     }
   }
