@@ -1695,6 +1695,7 @@ body[data-used-car-list] .listShell .viewLine {
 .optionItem {
   min-height: 78px;
   display: grid;
+  grid-template-rows: 40px minmax(19px, auto);
   justify-items: center;
   align-content: start;
   gap: 9px;
@@ -1707,6 +1708,9 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .optionGlyph {
+  --option-icon-size: 40px;
+  --option-icon-x: 0px;
+  --option-icon-y: 0px;
   width: 40px;
   height: 40px;
   display: grid;
@@ -1716,10 +1720,63 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .optionGlyph img {
-  width: 40px;
-  height: 40px;
+  width: var(--option-icon-size);
+  height: var(--option-icon-size);
+  display: block;
   object-fit: contain;
+  max-width: none;
   opacity: 1;
+  transform: translate(var(--option-icon-x), var(--option-icon-y));
+}
+
+.optionGlyph--sunroof,
+.optionGlyph--smart-key {
+  --option-icon-size: 40px;
+}
+
+.optionGlyph--led-headlamp {
+  --option-icon-size: 42px;
+}
+
+.optionGlyph--adaptive-cruise {
+  --option-icon-size: 40px;
+  --option-icon-y: 0.5px;
+}
+
+.optionGlyph--rear-camera {
+  --option-icon-size: 41px;
+  --option-icon-x: -0.5px;
+  --option-icon-y: 0.5px;
+}
+
+.optionGlyph--around-view {
+  --option-icon-size: 42px;
+  --option-icon-y: 0.5px;
+}
+
+.optionGlyph--navigation {
+  --option-icon-size: 47px;
+}
+
+.optionGlyph--heated-seat,
+.optionGlyph--ventilated-seat {
+  --option-icon-size: 42.5px;
+}
+
+.optionGlyph--heated-seat {
+  --option-icon-y: -0.5px;
+}
+
+.optionGlyph--head-up-display,
+.optionGlyph--power-trunk {
+  --option-icon-size: 38.5px;
+  --option-icon-y: 0.5px;
+}
+
+.optionGlyph--collision-warning {
+  --option-icon-size: 39.5px;
+  --option-icon-x: 0.5px;
+  --option-icon-y: 1px;
 }
 
 .optionGlyphFallback {

@@ -806,7 +806,8 @@
     if (!fileName) {
       return `<span class="optionGlyph optionGlyphFallback">${optionIconNumbers[option] || String(index + 1).padStart(2, "0")}</span>`;
     }
-    return `<span class="optionGlyph"><img src="${optionIconBase}${fileName}" alt="" loading="lazy" decoding="async"></span>`;
+    const iconClass = fileName.replace(/\.[^.]+$/, "").replace(/^s03-\d+-option-/, "");
+    return `<span class="optionGlyph optionGlyph--${iconClass}"><img src="${optionIconBase}${fileName}" alt="" loading="lazy" decoding="async"></span>`;
   }
 
   function setupDetailPage() {

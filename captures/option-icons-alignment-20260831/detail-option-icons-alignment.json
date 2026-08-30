@@ -1,0 +1,142 @@
+{
+  "checkedAt": "2026-08-31T05:03:16+09:00",
+  "targetPaintMaxPx": 35,
+  "iconCount": 12,
+  "missingCssClasses": [],
+  "maxVisualDeviationPx": 0.2,
+  "maxCenterDeviationPx": 0.2,
+  "icons": [
+    {
+      "Label": "선루프",
+      "Class": "sunroof",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "102x126",
+      "CssSize": 40.0,
+      "VisualMax": 35.0,
+      "PaintCenterX": 20.0,
+      "PaintCenterY": 20.0
+    },
+    {
+      "Label": "LED 헤드램프",
+      "Class": "led-headlamp",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "120x89",
+      "CssSize": 42.0,
+      "VisualMax": 35.0,
+      "PaintCenterX": 20.0,
+      "PaintCenterY": 19.9
+    },
+    {
+      "Label": "어댑티브 크루즈 컨트롤",
+      "Class": "adaptive-cruise",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "126x123",
+      "CssSize": 40.0,
+      "VisualMax": 35.0,
+      "PaintCenterX": 20.0,
+      "PaintCenterY": 20.1
+    },
+    {
+      "Label": "후방카메라",
+      "Class": "rear-camera",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "123x114",
+      "CssSize": 41.0,
+      "VisualMax": 35.0,
+      "PaintCenterX": 19.9,
+      "PaintCenterY": 19.9
+    },
+    {
+      "Label": "어라운드뷰",
+      "Class": "around-view",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "120x111",
+      "CssSize": 42.0,
+      "VisualMax": 35.0,
+      "PaintCenterX": 20.0,
+      "PaintCenterY": 20.1
+    },
+    {
+      "Label": "스마트키",
+      "Class": "smart-key",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "126x120",
+      "CssSize": 40.0,
+      "VisualMax": 35.0,
+      "PaintCenterX": 20.0,
+      "PaintCenterY": 20.0
+    },
+    {
+      "Label": "순정 내비게이션",
+      "Class": "navigation",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "108x108",
+      "CssSize": 47.0,
+      "VisualMax": 35.2,
+      "PaintCenterX": 20.0,
+      "PaintCenterY": 20.0
+    },
+    {
+      "Label": "열선시트",
+      "Class": "heated-seat",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "119x99",
+      "CssSize": 42.5,
+      "VisualMax": 35.1,
+      "PaintCenterX": 19.9,
+      "PaintCenterY": 19.9
+    },
+    {
+      "Label": "통풍시트",
+      "Class": "ventilated-seat",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "119x102",
+      "CssSize": 42.5,
+      "VisualMax": 35.1,
+      "PaintCenterX": 19.9,
+      "PaintCenterY": 20.0
+    },
+    {
+      "Label": "헤드업 디스플레이",
+      "Class": "head-up-display",
+      "CssClassPresent": true,
+      "Canvas": "128x128",
+      "SourceBox": "116x74",
+      "CssSize": 38.5,
+      "VisualMax": 34.9,
+      "PaintCenterX": 20.0,
+      "PaintCenterY": 20.2
+    },
+    {
+      "Label": "전동트렁크",
+      "Class": "power-trunk",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "131x92",
+      "CssSize": 38.5,
+      "VisualMax": 35.0,
+      "PaintCenterX": 19.9,
+      "PaintCenterY": 20.2
+    },
+    {
+      "Label": "전방충돌방지",
+      "Class": "collision-warning",
+      "CssClassPresent": true,
+      "Canvas": "144x144",
+      "SourceBox": "128x102",
+      "CssSize": 39.5,
+      "VisualMax": 35.1,
+      "PaintCenterX": 20.2,
+      "PaintCenterY": 20.2
+    }
+  ]
+}
