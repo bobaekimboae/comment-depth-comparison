@@ -3327,6 +3327,86 @@ html.bobae-main-page body {
   margin: 0 auto;
 }
 
+body[data-bobae-main] .bbHeaderMain {
+  height: 48px;
+}
+
+body[data-bobae-main] .bbHeaderMain .bbHeaderInner {
+  height: 48px;
+  align-items: center;
+  gap: 28px;
+}
+
+body[data-bobae-main] .bbLogo {
+  flex: 0 0 114px;
+}
+
+.bbFamilyNav {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  min-width: 0;
+}
+
+.bbFamilyLink {
+  height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  color: #333944;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.bbFamilyLink.is-active {
+  color: #0a0c10;
+  font-weight: 950;
+}
+
+.bbFamilyLink.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 2px 2px 0 0;
+  background: #101114;
+}
+
+body[data-bobae-main] .bbNav {
+  height: 40px;
+  border-top: 1px solid #eef0f3;
+}
+
+body[data-bobae-main] .bbNav .bbHeaderInner {
+  height: 40px;
+}
+
+body[data-bobae-main] .bbNavList {
+  height: 40px;
+  gap: 24px;
+}
+
+body[data-bobae-main] .bbNavLink {
+  height: 40px;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+body[data-bobae-main] .bbNavMore {
+  padding-right: 10px;
+}
+
+body[data-bobae-main] .bbFamilyLink.is-active::after,
+body[data-bobae-main] .bbNavLink.is-active::after {
+  bottom: 0;
+}
+
 .mainHero {
   min-height: 302px;
   background:
@@ -4087,6 +4167,32 @@ body[data-bobae-main] .footer {
   body[data-bobae-main] .bbHeaderMain .bbHeaderInner {
     height: 52px;
     align-items: center;
+    gap: 16px;
+    overflow: hidden;
+  }
+
+  body[data-bobae-main] .bbLogo {
+    flex: 0 0 108px;
+    width: 108px;
+    height: 27px;
+  }
+
+  body[data-bobae-main] .bbFamilyNav {
+    height: 52px;
+    flex: 1 1 auto;
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  body[data-bobae-main] .bbFamilyNav::-webkit-scrollbar {
+    display: none;
+  }
+
+  body[data-bobae-main] .bbFamilyLink {
+    height: 52px;
+    font-size: 13px;
+    line-height: 18px;
   }
 
   body[data-bobae-main] .bbNav {
@@ -4108,7 +4214,7 @@ body[data-bobae-main] .footer {
 
   body[data-bobae-main] .bbNavList {
     height: 48px;
-    gap: 22px;
+    gap: 20px;
     min-width: max-content;
     padding: 0 16px;
   }
