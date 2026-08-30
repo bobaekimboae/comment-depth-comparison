@@ -1,3 +1,22 @@
+# Bobaedream Used Car Active GNB QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The active PC GNB underline now uses black instead of Bobaedream blue.
+
+**Implementation Checklist**
+- [x] Changed `.bbNavLink.is-active::after` from `var(--blue)` to `#101114`.
+- [x] Verified the active menu remains `홈` and the underline keeps the existing `3px` height.
+
+**Evidence**
+- Implementation screenshot path: `captures/used-car-implementation/list-active-gnb-black-1440.png`
+- Metrics path: `captures/used-car-implementation/list-active-gnb-black-metrics.json`
+- Viewport: `1440 x 520`
+- State: desktop used-car list top header.
+- Focused region comparison evidence: active GNB underline computed as `rgb(16, 17, 20)` with `3px` height.
+
+final result: passed
+
 # Bobaedream Used Car Header GNB QA
 
 **Findings**

@@ -139,7 +139,7 @@ img {
   bottom: -1px;
   height: 3px;
   border-radius: 2px 2px 0 0;
-  background: var(--blue);
+  background: #101114;
 }
 
 .bbNavMore {

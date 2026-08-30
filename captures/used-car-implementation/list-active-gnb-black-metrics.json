@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "activeText": "홈",
+    "activeX": 112,
+    "headerInnerWidth": 1200,
+    "shellWidth": 1200,
+    "underlineBackground": "rgb(16, 17, 20)",
+    "underlineHeight": "3px"
+  },
+  "consoleErrors": []
+}
