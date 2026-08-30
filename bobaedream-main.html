@@ -66,12 +66,14 @@
     <section class="mainSearchDock" aria-label="중고차 검색">
       <div class="mainSearchPanel">
         <div class="mainSearchTabs" role="tablist" aria-label="차량 유형">
-          <button class="is-active" type="button" role="tab" aria-selected="true" data-main-tab="car">자동차</button>
-          <button type="button" role="tab" aria-selected="false" data-main-tab="lease">리스</button>
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-main-tab="all">전체 차량</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="domestic">국산차</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="import">수입차</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="electric">전기차</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="truck">트럭-특장</button>
           <button type="button" role="tab" aria-selected="false" data-main-tab="bike">바이크</button>
           <button type="button" role="tab" aria-selected="false" data-main-tab="camping">캠핑카</button>
-          <button type="button" role="tab" aria-selected="false" data-main-tab="truck">트럭</button>
-          <button type="button" role="tab" aria-selected="false" data-main-tab="parts">부품</button>
+          <button type="button" role="tab" aria-selected="false" data-main-tab="machine">건설기계</button>
         </div>
 
         <div class="mainSearchFields">
@@ -93,7 +95,7 @@
 
         <div class="mainSearchExplore" aria-labelledby="mainExploreTitle">
           <div class="mainSectionHeading">
-            <h2 id="mainExploreTitle">중고차와 신차를 찾아보세요</h2>
+            <h2 id="mainExploreTitle">차종별 중고차를 검색하세요</h2>
           </div>
           <div class="mainBodyTypeGrid" id="mainBodyTypeGrid"></div>
         </div>

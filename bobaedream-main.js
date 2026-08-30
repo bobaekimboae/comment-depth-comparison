@@ -5,19 +5,21 @@
   const detailUrl = "bobaedream-used-car-detail.html";
 
   const state = {
-    tab: "car",
+    tab: "all",
     maker: { label: "전체 제조사", value: "" },
     region: { label: "전국", value: "" },
     price: { label: "전체 가격", value: "" }
   };
 
   const tabMeta = {
-    car: { label: "자동차", count: "14,896" },
-    lease: { label: "리스", count: "1,204" },
+    all: { label: "전체 차량", count: "14,896" },
+    domestic: { label: "국산차", count: "8,121" },
+    import: { label: "수입차", count: "4,092" },
+    electric: { label: "전기차", count: "1,126" },
+    truck: { label: "트럭-특장", count: "742" },
     bike: { label: "바이크", count: "982" },
     camping: { label: "캠핑카", count: "318" },
-    truck: { label: "트럭", count: "742" },
-    parts: { label: "부품", count: "6,431" }
+    machine: { label: "건설기계", count: "181" }
   };
 
   const bodyTypes = [
@@ -258,7 +260,7 @@
           tab.classList.toggle("is-active", tab === button);
           tab.setAttribute("aria-selected", tab === button ? "true" : "false");
         });
-        state.tab = button.getAttribute("data-main-tab") || "car";
+        state.tab = button.getAttribute("data-main-tab") || "all";
         updateCount();
       });
     });
