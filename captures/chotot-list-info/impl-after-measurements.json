@@ -1,0 +1,245 @@
+{
+  "badgeDisplay": "none",
+  "categoryBtn": {
+    "rect": {
+      "bottom": 368,
+      "height": 102,
+      "right": 468,
+      "width": 84,
+      "x": 384,
+      "y": 266
+    },
+    "style": {
+      "color": "rgb(89, 89, 89)",
+      "display": "flex",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "8px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "21px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "4px",
+      "paddingRight": "4px",
+      "paddingTop": "0px"
+    },
+    "text": "중고차"
+  },
+  "categoryGrid": {
+    "rect": {
+      "bottom": 368,
+      "height": 102,
+      "right": 1220,
+      "width": 836,
+      "x": 384,
+      "y": 266
+    },
+    "style": {
+      "color": "rgb(16, 17, 20)",
+      "display": "flex",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "8px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "18.9px",
+      "marginTop": "28px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "categoryIcon": {
+    "rect": {
+      "bottom": 318,
+      "height": 52,
+      "right": 452,
+      "width": 52,
+      "x": 400,
+      "y": 266
+    },
+    "style": {
+      "color": "rgb(25, 83, 155)",
+      "display": "grid",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "gridTemplateColumns": "52px",
+      "lineHeight": "21px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "dealer": {
+    "rect": {
+      "bottom": 613,
+      "height": 20,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 593
+    },
+    "style": {
+      "color": "rgb(34, 34, 34)",
+      "display": "flex",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "gap": "8px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "18px",
+      "marginTop": "18px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "location": {
+    "rect": {
+      "bottom": 575,
+      "height": 20,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 555
+    },
+    "style": {
+      "color": "rgb(89, 89, 89)",
+      "display": "flex",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "8px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "20px",
+      "marginTop": "7px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "meta": {
+    "rect": {
+      "bottom": 522,
+      "height": 20,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 502
+    },
+    "style": {
+      "color": "rgb(89, 89, 89)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "20px",
+      "marginTop": "2px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "17년05월(18년형) · 54만km · 가솔린 · 자동"
+  },
+  "price": {
+    "rect": {
+      "bottom": 548,
+      "height": 24,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 524
+    },
+    "style": {
+      "color": "rgb(229, 25, 59)",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "24px",
+      "marginTop": "2px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "row": {
+    "rect": {
+      "bottom": 653,
+      "height": 193,
+      "right": 1220,
+      "width": 836,
+      "x": 384,
+      "y": 460
+    },
+    "style": {
+      "color": "rgb(16, 17, 20)",
+      "display": "grid",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "16px",
+      "gridTemplateColumns": "160px 660px",
+      "lineHeight": "18.9px",
+      "marginTop": "0px",
+      "paddingBottom": "16px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "16px"
+    }
+  },
+  "thumb": {
+    "rect": {
+      "bottom": 636,
+      "height": 160,
+      "right": 544,
+      "width": 160,
+      "x": 384,
+      "y": 476
+    }
+  },
+  "title": {
+    "rect": {
+      "bottom": 500,
+      "height": 24,
+      "right": 867.24,
+      "width": 307.24,
+      "x": 560,
+      "y": 476
+    },
+    "style": {
+      "color": "rgb(34, 34, 34)",
+      "display": "inline-block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "24px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "viewDisplay": "none",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}

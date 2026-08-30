@@ -31,6 +31,42 @@
 
 final result: passed
 
+# Bobaedream Used Car Chotot Listing Info QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The first PC used-car listing row now follows Chotot's measured typography and row rhythm before the icon replacement pass.
+
+**Implementation Checklist**
+- [x] Captured the live Chotot used-car listing and first listing row.
+- [x] Measured Chotot's list item typography, thumbnail slot, row height, column width, and vertical gaps.
+- [x] Updated the Bobaedream list row to `160px` thumbnail, `660px` info column, `193px` row height, and `16px` row padding.
+- [x] Matched the listing information typography: title `16px / 24px / 600`, meta `14px / 20px / 400`, price `16px / 24px / 700`, location `14px / 20px / 400`, dealer line `12px / 18px / 400`.
+- [x] Changed the PC list meta scenario to Chotot's order: year, mileage, fuel, transmission.
+- [x] Hid PC-list-only badge and view count rows so the visible info density matches the Chotot list row.
+- [x] Measured Chotot's top maker tile slot for the next icon pass: tile `84px x 102px`, label `14px / 21px / 400`, label color `#595959`, tile gap `8px`.
+- [x] Updated the Bobaedream top category/maker rail to use the same `84px x 102px` slot, `8px` gap, and `14px / 21px / 400` label rhythm.
+
+**Evidence**
+- Source first-row screenshot: `captures/chotot-list-info/source-chotot-first-row-crop.png`
+- Source first-row metrics: `captures/chotot-list-info/source-chotot-measurements.json`
+- Source maker-area screenshot: `captures/chotot-list-info/source-chotot-brand-area-crop.png`
+- Source maker-area metrics: `captures/chotot-list-info/source-chotot-brand-area-measurements.json`
+- Implementation screenshot: `captures/chotot-list-info/impl-after-first-row-crop.png`
+- Implementation metrics: `captures/chotot-list-info/impl-after-measurements.json`
+- Combined comparison image: `captures/chotot-list-info/comparison-chotot-vs-bobae-list-info.png`
+- Viewport: `1280 x 720`
+- State: first desktop used-car listing row.
+
+**Measured Pass**
+- Source row: content lane `836px`, grid `176px / 660px`, thumbnail `160px`, title `16px / 24px / 600`, meta `14px / 21px / 400`, price `16px / 24px / 700`, location `14px / 21px / 400`, seller line `12px / 18px / 400`.
+- Implementation row: content lane `836px`, grid `160px / 660px` with `16px` gap, thumbnail `160px`, title `16px / 24px / 600`, meta `14px / 20px / 400`, price `16px / 24px / 700`, location `14px / 20px / 400`, dealer line `12px / 18px / 400`.
+- Implementation first-row visible text order: title, year/mileage/fuel/transmission, price, location, seller.
+- Implementation top category/maker tile: `84px x 102px`, `8px` row gap, icon slot `52px`, label `14px / 21px / 400`, label color `#595959`.
+- PC list badge row and view line both measure `display: none`.
+
+final result: passed
+
 # Bobaedream Export Mobile List QA
 
 **Findings**

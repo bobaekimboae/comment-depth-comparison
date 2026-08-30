@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Sans:wght@400;500;600;700;800;900&display=swap");
+
 :root {
-  --font-system: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Helvetica, Arial, NanumGothic, "Malgun Gothic", "맑은 고딕", sans-serif;
+  --font-system: "Reddit Sans", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Helvetica, Arial, NanumGothic, "Malgun Gothic", "맑은 고딕", sans-serif;
   --page-bg: #f4f4f5;
   --card: #fff;
   --ink: #101114;
@@ -12,7 +14,7 @@
   --blue: #19539b;
   --blue-strong: #0f4fa3;
   --blue-soft: #eef5ff;
-  --price: #ff3369;
+  --price: #e5193b;
   --danger: #e94141;
 }
 
@@ -583,26 +585,29 @@ img {
   margin-top: 28px;
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 8px;
 }
 
 .categoryBtn {
-  width: 48px;
+  width: 84px;
+  min-height: 102px;
+  padding: 0 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  color: #333840;
+  gap: 8px;
+  color: #595959;
   font-size: 14px;
-  font-weight: 800;
+  line-height: 21px;
+  font-weight: 400;
   white-space: nowrap;
 }
 
 .categoryIcon {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: #f0f1f2;
+  background: transparent;
   display: grid;
   place-items: center;
   color: #171a1f;
@@ -726,9 +731,9 @@ img {
 }
 
 .carRow {
-  min-height: 211px;
+  min-height: 193px;
   margin: 0 20px;
-  padding: 12px 0 18px;
+  padding: 16px 0;
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 16px;
@@ -854,11 +859,11 @@ img {
 
 .rowTitle {
   display: inline-block;
-  margin-top: 1px;
-  color: #272a30;
+  margin-top: 0;
+  color: #222;
   font-size: 16px;
-  line-height: 23px;
-  font-weight: 900;
+  line-height: 24px;
+  font-weight: 600;
 }
 
 .rowTitle:hover {
@@ -866,18 +871,19 @@ img {
 }
 
 .rowMeta {
-  margin-top: 4px;
-  color: #747982;
+  margin-top: 2px;
+  color: #595959;
   font-size: 14px;
-  font-weight: 700;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .rowPrice {
-  margin-top: 4px;
+  margin-top: 2px;
   color: var(--price);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 24px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .badgeRow {
@@ -885,6 +891,10 @@ img {
   flex-wrap: wrap;
   gap: 4px;
   margin-top: 5px;
+}
+
+body[data-used-car-list] .listShell .badgeRow {
+  display: none;
 }
 
 .badge {
@@ -900,13 +910,14 @@ img {
 }
 
 .locationLine {
-  margin-top: 16px;
+  margin-top: 7px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: #60656e;
-  font-size: 13px;
-  font-weight: 700;
+  gap: 8px;
+  color: #595959;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .pinIcon {
@@ -929,6 +940,10 @@ img {
   font-weight: 700;
 }
 
+body[data-used-car-list] .listShell .viewLine {
+  display: none;
+}
+
 .viewTriangle {
   width: 0;
   height: 0;
@@ -941,10 +956,11 @@ img {
   margin-top: 18px;
   display: flex;
   align-items: center;
-  gap: 7px;
-  color: #1e2228;
-  font-size: 13px;
-  font-weight: 900;
+  gap: 8px;
+  color: #222;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .dealerMini {
@@ -956,8 +972,8 @@ img {
 }
 
 .dealerLine .muted {
-  color: #5e646d;
-  font-weight: 700;
+  color: #8c8c8c;
+  font-weight: 400;
 }
 
 .rowActions {

@@ -117,7 +117,7 @@
   }
 
   function makeMeta(car) {
-    return [car.year, car.mileage, car.fuel, car.power, car.seatColor].filter(Boolean).join(" · ");
+    return [car.year, car.mileage, car.fuel, car.transmission].filter(Boolean).join(" · ");
   }
 
   function thumbMarkup(car, large = false) {

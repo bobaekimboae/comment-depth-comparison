@@ -1,0 +1,327 @@
+{
+  "actions": {
+    "rect": {
+      "bottom": 614.2,
+      "height": 28,
+      "right": 1220,
+      "width": 84,
+      "x": 1136,
+      "y": 586.2
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(16, 17, 20)",
+      "display": "flex",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "28px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "18.9px",
+      "marginBottom": "0px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "badgeRow": {
+    "rect": {
+      "bottom": 544.9,
+      "height": 21,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 523.9
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(16, 17, 20)",
+      "display": "flex",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "4px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "18.9px",
+      "marginBottom": "0px",
+      "marginTop": "5px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "인증중고차\n1년보증"
+  },
+  "carRows": {
+    "bottom": 2753,
+    "height": 2321,
+    "right": 1240,
+    "width": 876,
+    "x": 364,
+    "y": 432
+  },
+  "dealer": {
+    "rect": {
+      "bottom": 616.45,
+      "height": 20,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 596.45
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(30, 34, 40)",
+      "display": "flex",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "900",
+      "gap": "7px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "17.55px",
+      "marginBottom": "0px",
+      "marginTop": "18px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "한강모터스-박성수 딜러\n· 판매중 41대"
+  },
+  "listShell": {
+    "bottom": 2835,
+    "height": 2697,
+    "right": 1240,
+    "width": 1200,
+    "x": 40,
+    "y": 138
+  },
+  "location": {
+    "rect": {
+      "bottom": 578.45,
+      "height": 17.55,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 560.9
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(96, 101, 110)",
+      "display": "flex",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "700",
+      "gap": "5px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "17.55px",
+      "marginBottom": "0px",
+      "marginTop": "16px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "서울 서초구 · 오토갤러리"
+  },
+  "meta": {
+    "rect": {
+      "bottom": 490.9,
+      "height": 18.9,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 472
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(116, 121, 130)",
+      "display": "block",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "18.9px",
+      "marginBottom": "0px",
+      "marginTop": "4px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "17년05월(18년형) · 54만km · 가솔린 · 304마력 · 주황색 시트"
+  },
+  "price": {
+    "rect": {
+      "bottom": 518.9,
+      "height": 24,
+      "right": 1128,
+      "width": 568,
+      "x": 560,
+      "y": 494.9
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(255, 51, 105)",
+      "display": "block",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "17px",
+      "fontWeight": "900",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "24px",
+      "marginBottom": "0px",
+      "marginTop": "4px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "56,544만원"
+  },
+  "row": {
+    "rect": {
+      "bottom": 643,
+      "height": 211,
+      "right": 1220,
+      "width": 836,
+      "x": 384,
+      "y": 432
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(16, 17, 20)",
+      "display": "grid",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "16px",
+      "gridTemplateColumns": "160px 660px",
+      "lineHeight": "18.9px",
+      "marginBottom": "0px",
+      "marginTop": "0px",
+      "paddingBottom": "18px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "12px"
+    },
+    "text": "사진 준비 중\n1일전\n제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩\n17년05월(18년형) · 54만km · 가솔린 · 304마력 · 주황색 시트\n56,544만원\n인증중고차\n1년보증\n서울 서초구 · 오토갤러리\n29\n한강모터스-박성수 딜러\n· 판매중 41대"
+  },
+  "rowBody": {
+    "rect": {
+      "bottom": 624.2,
+      "height": 180.2,
+      "right": 1220,
+      "width": 660,
+      "x": 560,
+      "y": 444
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(16, 17, 20)",
+      "display": "block",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "18.9px",
+      "marginBottom": "0px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "92px",
+      "paddingTop": "0px"
+    }
+  },
+  "thumb": {
+    "rect": {
+      "bottom": 604,
+      "height": 160,
+      "right": 544,
+      "width": 160,
+      "x": 384,
+      "y": 444
+    },
+    "style": {
+      "borderRadius": "8px",
+      "color": "rgb(16, 17, 20)",
+      "display": "block",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "18.9px",
+      "marginBottom": "0px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    }
+  },
+  "title": {
+    "rect": {
+      "bottom": 468,
+      "height": 23,
+      "right": 893.39,
+      "width": 333.39,
+      "x": 560,
+      "y": 445
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(39, 42, 48)",
+      "display": "inline-block",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "900",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "lineHeight": "23px",
+      "marginBottom": "0px",
+      "marginTop": "1px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+  },
+  "viewLine": {
+    "rect": {
+      "bottom": 561.55,
+      "height": 17.55,
+      "right": 913.46,
+      "width": 29.46,
+      "x": 884,
+      "y": 544
+    },
+    "style": {
+      "borderRadius": "0px",
+      "color": "rgb(86, 91, 99)",
+      "display": "flex",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "700",
+      "gap": "7px",
+      "gridTemplateColumns": "none",
+      "lineHeight": "17.55px",
+      "marginBottom": "0px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px"
+    },
+    "text": "29"
+  },
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}
