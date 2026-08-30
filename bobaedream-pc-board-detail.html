@@ -21,7 +21,7 @@
   --soft:#697183;
   --line:#f5f5f5;
   --line-strong:#e7e7e7;
-  --purple:#4e41db;
+  --accent-blue:#1264c4;
   --dark:#222428;
   --red:#e53935;
 }
@@ -78,9 +78,9 @@ ul,ol{list-style:none;margin:0;padding:0}
 .menuSection{padding-bottom:15px;border-bottom:1px solid #f5f5f5}
 .menuSection+.menuSection{padding-top:17px}
 .menuItem{height:20px;margin-top:10px;display:flex;align-items:center;color:#222;font-size:14px;line-height:17px;font-weight:500;white-space:nowrap}
-.menuItem.active{color:var(--purple);font-weight:700}
+.menuItem.active{color:var(--accent-blue);font-weight:700}
 .menuItem:before{content:"";width:4px;height:4px;border-radius:50%;background:#d5d9e4;margin-right:8px}
-.menuItem.active:before{width:9px;height:9px;border-radius:3px;background:#ddd8ff;border:1px solid #938cff}
+.menuItem.active:before{width:9px;height:9px;border-radius:3px;background:#e8f1ff;border:1px solid #9fc2ef}
 .menuTitle{display:block;margin:0 0 9px;color:#000;font-size:15px;line-height:18px;font-weight:700}
 .newDot{width:6px;height:6px;margin-left:4px;border-radius:50%;background:#ff2b4a}
 .imagePanel{margin-top:24px;padding:27px 24px 24px}
@@ -91,7 +91,7 @@ ul,ol{list-style:none;margin:0;padding:0}
 .imageGrid img{width:100%;aspect-ratio:1;border-radius:7px;object-fit:cover;background:#f1f3f5}
 .guidePanel{margin-top:24px;padding:23px 24px}
 .guideItem{height:38px;display:flex;align-items:center;font-size:14px;line-height:17px;font-weight:700;color:#222}
-.guideIcon{width:23px;height:23px;margin-right:10px;border-radius:7px;background:#f1f2f6;display:grid;place-items:center;color:#4e41db;font-size:14px}
+.guideIcon{width:23px;height:23px;margin-right:10px;border-radius:7px;background:#f1f2f6;display:grid;place-items:center;color:#1264c4;font-size:14px}
 .centerPanel{width:742px}
 .detailNav{height:39px;display:flex;align-items:center;margin-bottom:15px}
 .detailButton{height:39px;border-radius:6px;background:#fff;color:#222;font-size:13px;line-height:16px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
@@ -102,8 +102,8 @@ ul,ol{list-style:none;margin:0;padding:0}
 .detailButton.next .chev{margin:0 0 0 8px;transform:rotate(225deg)}
 .detailCard{border-radius:12px;background:#fff;overflow:hidden}
 .articleTop{height:139px;padding:14px 24px 0}
-.boardCrumb{height:25px;margin-left:-8px;display:inline-flex;align-items:center;color:var(--purple);font-size:14px;line-height:17px;font-weight:600}
-.boardCrumb:after{content:"";width:7px;height:7px;margin-left:5px;border-right:1.5px solid var(--purple);border-top:1.5px solid var(--purple);transform:rotate(45deg)}
+.boardCrumb{height:25px;margin-left:-8px;display:inline-flex;align-items:center;color:var(--accent-blue);font-size:14px;line-height:17px;font-weight:600}
+.boardCrumb:after{content:"";width:7px;height:7px;margin-left:5px;border-right:1.5px solid var(--accent-blue);border-top:1.5px solid var(--accent-blue);transform:rotate(45deg)}
 .feedTitle{display:block;margin:7px 0 13px;color:#222;font-size:22px;line-height:30px;font-weight:600;letter-spacing:0}
 .postInfo{height:49px;position:relative;border-bottom:1px solid #ededed}
 .authorAvatar{position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:#e9edf6;overflow:hidden}
@@ -116,8 +116,8 @@ ul,ol{list-style:none;margin:0;padding:0}
 .toolIcon{width:25px;height:25px;display:grid;place-items:center;color:#98a0af}
 .bookmarkIcon{width:14px;height:18px;border:2px solid #a4a9b5;border-top-left-radius:2px;border-top-right-radius:2px;border-bottom:0;position:relative}
 .bookmarkIcon:after{content:"";position:absolute;left:2px;right:2px;bottom:-6px;height:10px;background:#fff;border-left:2px solid #a4a9b5;border-bottom:2px solid #a4a9b5;transform:skewY(-32deg)}
-.bookmarkToggle.active .bookmarkIcon{border-color:#4e41db}
-.bookmarkToggle.active .bookmarkIcon:after{border-color:#4e41db}
+.bookmarkToggle.active .bookmarkIcon{border-color:#1264c4}
+.bookmarkToggle.active .bookmarkIcon:after{border-color:#1264c4}
 .dotsIcon{width:3px;height:3px;border-radius:50%;background:#a4a9b5;box-shadow:0 7px 0 #a4a9b5,0 14px 0 #a4a9b5}
 .articleBody{padding:24px 24px 0}
 .postText{margin:0;color:#333;font-size:15px;line-height:22px;font-weight:400;white-space:pre-line}
@@ -142,8 +142,8 @@ ul,ol{list-style:none;margin:0;padding:0}
 .refreshButton{width:22px;height:22px;margin-left:7px;border-radius:50%;border:1px solid #e2e5ec;color:#a1a7b4;font-size:12px;font-weight:700;line-height:20px;text-align:center}
 .orderButton{margin-left:auto;height:27px;display:flex;align-items:center;color:#697183;font-size:14px;line-height:17px;font-weight:600}
 .orderButton:after{content:"";width:7px;height:7px;margin-left:5px;border-right:1.5px solid #697183;border-bottom:1.5px solid #697183;transform:rotate(45deg) translateY(-2px)}
-.commentNotice{height:39px;margin-top:11px;border:1px solid #e4e2ff;border-radius:10px;background:rgba(78,65,219,.05);display:flex;align-items:center;padding:0 14px;color:#4e41db;font-size:14px;line-height:17px;font-weight:500}
-.noticeIcon{width:18px;height:18px;margin-right:10px;border-radius:6px;background:#4e41db;color:#fff;font-size:12px;line-height:18px;text-align:center;font-weight:700}
+.commentNotice{height:39px;margin-top:11px;border:1px solid #dbe9ff;border-radius:10px;background:rgba(18,100,196,.06);display:flex;align-items:center;padding:0 14px;color:#1264c4;font-size:14px;line-height:17px;font-weight:500}
+.noticeIcon{width:18px;height:18px;margin-right:10px;border-radius:6px;background:#1264c4;color:#fff;font-size:12px;line-height:18px;text-align:center;font-weight:700}
 .commentComposer{height:127px;margin-top:10px;border:1px solid #e3e6ee;border-radius:16px;background:#f5f6fa;position:relative;padding:0 16px 0 50px}
 .composerAvatar{position:absolute;left:16px;top:13px;width:28px;height:28px;border-radius:50%;background:#dfe4ee}
 .composerGuide{height:72px;display:flex;align-items:flex-start;padding-top:17px;color:#858894;font-size:14px;line-height:20px;font-weight:400}
@@ -151,10 +151,10 @@ ul,ol{list-style:none;margin:0;padding:0}
 .counter{margin-left:auto;color:#697183;font-size:12px;line-height:15px}
 .composerTool{width:28px;height:28px;margin-left:8px;border-radius:8px;border:1px solid transparent;color:#9aa1af;display:grid;place-items:center;font-size:13px;font-weight:700}
 .registerButton{width:47px;height:30px;margin-left:9px;border-radius:15px;background:#c8cfdd;color:#fff;font-size:13px;line-height:16px;font-weight:700}
-.cleanBot{height:39px;margin-top:16px;border-radius:12px;background:#fff;border:1px solid #edf0f4;box-shadow:0 2px 6px rgba(25,32,48,.03);display:flex;align-items:center;padding:0 16px;color:#4e41db;font-size:14px;line-height:17px;font-weight:700}
-.botIcon{width:22px;height:22px;margin-right:10px;border-radius:50%;background:#edeaff;position:relative}
-.botIcon:before{content:"";position:absolute;left:6px;top:7px;width:10px;height:7px;border-radius:6px;background:#4e41db}
-.botIcon:after{content:"";position:absolute;left:10px;top:4px;width:2px;height:5px;background:#4e41db}
+.cleanBot{height:39px;margin-top:16px;border-radius:12px;background:#fff;border:1px solid #edf0f4;box-shadow:0 2px 6px rgba(25,32,48,.03);display:flex;align-items:center;padding:0 16px;color:#1264c4;font-size:14px;line-height:17px;font-weight:700}
+.botIcon{width:22px;height:22px;margin-right:10px;border-radius:50%;background:#e8f1ff;position:relative}
+.botIcon:before{content:"";position:absolute;left:6px;top:7px;width:10px;height:7px;border-radius:6px;background:#1264c4}
+.botIcon:after{content:"";position:absolute;left:10px;top:4px;width:2px;height:5px;background:#1264c4}
 .botSetting{margin-left:auto;color:#9aa1af;font-size:0}
 .botSetting:before{content:"";display:block;width:16px;height:16px;border:2px solid #9aa1af;border-radius:50%}
 .commentList{margin-top:8px}
@@ -164,7 +164,7 @@ ul,ol{list-style:none;margin:0;padding:0}
 .commentAvatar img{width:100%;height:100%;object-fit:cover}
 .commentAuthor{display:flex;align-items:center;height:18px;color:#000;font-size:13px;line-height:16px;font-weight:700}
 .commentAuthor .level{font-size:12px}
-.authorBadge{height:17px;margin-left:6px;padding:1px 5px;border-radius:4px;background:#eeeaff;color:#4e41db;font-size:11px;line-height:15px;font-weight:700}
+.authorBadge{height:17px;margin-left:6px;padding:1px 5px;border-radius:4px;background:#e8f1ff;color:#1264c4;font-size:11px;line-height:15px;font-weight:700}
 .commentMore{position:absolute;right:0;top:19px;width:18px;height:22px;display:grid;place-items:center}
 .commentMore:before{content:"";width:3px;height:3px;border-radius:50%;background:#a4a9b5;box-shadow:0 6px 0 #a4a9b5,0 12px 0 #a4a9b5}
 .commentText{margin:9px 40px 0 0;color:#222;font-size:15px;line-height:22px;font-weight:400;white-space:pre-line}
@@ -174,7 +174,7 @@ ul,ol{list-style:none;margin:0;padding:0}
 .smallVote{height:24px;min-width:48px;border:1px solid #dfe3eb;border-radius:12px;background:#fff;color:#9aa1af;font-size:12px;line-height:14px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;padding:0 8px}
 .smallVote .num{margin-left:5px;color:#697183;font-weight:400}
 .commentPager{height:66px;display:flex;align-items:center;justify-content:center}
-.commentPager span{width:27px;height:27px;border-radius:8px;background:#ddd8ff;color:#4e41db;font-size:13px;line-height:27px;font-weight:700;text-align:center}
+.commentPager span{width:27px;height:27px;border-radius:8px;background:#e8f1ff;color:#1264c4;font-size:13px;line-height:27px;font-weight:700;text-align:center}
 .rightPanel{width:300px}
 .popularCard{height:363px;border-radius:12px;background:#fff;padding:30px 24px 30px 21px}
 .rightCardTitle{display:block;color:#000;font-family:var(--font-side-title);font-size:17px;line-height:20px;font-weight:400}
@@ -184,7 +184,7 @@ ul,ol{list-style:none;margin:0;padding:0}
 .rightLink{height:19px;display:flex;align-items:center;min-width:0}
 .rightLink:before{content:"";width:3px;height:3px;border-radius:50%;background:#c8ccd7;margin:0 8px 0 3px;flex:0 0 auto}
 .rightText{display:block;color:#222;font-size:14px;line-height:19px;font-weight:400;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.rightReply{display:inline;margin-left:4px;color:#4e41db;font-size:13px;line-height:15px;font-weight:400;white-space:nowrap}
+.rightReply{display:inline;margin-left:4px;color:#1264c4;font-size:13px;line-height:15px;font-weight:400;white-space:nowrap}
 .hotBoards{height:363px;margin-top:24px;border-radius:12px;background:#fff;padding:30px 24px 30px 21px}
 .pointQuest{height:233px;margin-top:24px;border-radius:12px;background:#fff;padding:26px 24px}
 .pointQuest strong{display:block;font-size:22px;line-height:27px;font-weight:900;color:#111}

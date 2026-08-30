@@ -54,7 +54,7 @@
 
 ### Colors and Visual Tokens
 
-- Background `#f8f9fd`, cards `#fff`, source purple `#4e41db`, article title `#222`, body text `#333`, muted metadata `#858894`, and hairline dividers are preserved.
+- Background `#f8f9fd`, cards `#fff`, Bobaedream blue `#1264c4`, article title `#222`, body text `#333`, muted metadata `#858894`, and hairline dividers are preserved.
 - The automotive hero and banner colors are adapted from the existing Bobaedream PC list mockup so list and detail pages feel like one product surface.
 
 ### Image Quality and Asset Fidelity
