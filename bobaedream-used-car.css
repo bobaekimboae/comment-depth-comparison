@@ -1179,7 +1179,9 @@ body[data-used-car-list] .listShell .viewLine {
 .galleryStage img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #202020;
+  display: block;
 }
 
 .galleryPlaceholder {

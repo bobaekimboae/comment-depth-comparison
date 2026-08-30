@@ -1,3 +1,67 @@
+# Bobaedream Used Car Chotot Detail Image Fit QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after the image-fit correction.
+- [P3] The Chotot source vehicle photo is portrait-like, so its painted photo area is narrower than the Bobaedream sample's landscape image. The UI behavior now matches because both use a contained image inside the same media frame.
+
+**Open Questions**
+- None for this pass. The user's concern was whether the Bobaedream detail media appeared larger than the specific Chotot source detail.
+
+**Implementation Checklist**
+- [x] Captured the specific Chotot source detail URL supplied by the user.
+- [x] Re-measured source and implementation at the same actual Chrome viewport.
+- [x] Kept the outer gallery frame at `736px x 412px`, matching Chotot.
+- [x] Changed the gallery image from `object-fit: cover` to `object-fit: contain`.
+- [x] Updated static asset cache keys to `chotot-detail-fit-20260830`.
+
+**Follow-up Polish**
+- If the visual sample must look identical to the supplied Chotot screenshot, use a portrait-ratio first vehicle photo. With the current landscape sample, the correct Chotot behavior still produces a wider painted image.
+
+## Evidence
+
+- Source visual truth path: `captures/chotot-detail-size-check/source-specific-top-1600.png`
+- Implementation screenshot path: `captures/chotot-detail-size-check/implementation-local-fit-1600.png`
+- Combined comparison image: `captures/chotot-detail-size-check/comparison-source-vs-local-fit.png`
+- Source metrics path: `captures/chotot-detail-size-check/source-specific-measurements-1600.json`
+- Implementation metrics path: `captures/chotot-detail-size-check/implementation-local-fit-measurements.json`
+- Viewport: actual Chrome viewport `1536px x 639px`, device scale factor `1`
+- State: top of PC used-car detail page
+- Full-view comparison evidence: Chotot and Bobaedream both use a `1200px` shell, `736px` left media column, `464px` right info column, main gallery frame `736px x 412px`, and first thumbnail about `85px x 85px`.
+- Focused region comparison evidence: source main image CSS frame `736px x 412px`, source painted photo area `309px x 412px`; implementation before fix painted as `736px x 490.5px` because of cover scaling; implementation after fix paints as `618.2px x 412px` with `object-fit: contain`.
+- Primary interactions tested: page loads locally, gallery frame renders, CSS cache key resolves, and browser console errors checked.
+
+## Required Fidelity Surfaces
+
+### Fonts and Typography
+
+- No typography changes in this pass. The title, meta, price, and CTA typography remain from the previous Chotot detail QA pass.
+
+### Spacing and Layout Rhythm
+
+- Outer detail layout remains matched: shell `1200px`, media `736px x 412px`, right card `464px`, thumbnail slot `85px`.
+
+### Colors and Visual Tokens
+
+- The gallery keeps Chotot's dark media backdrop using `#202020` behind contained photos.
+
+### Image Quality and Asset Fidelity
+
+- Fixed the image scaling behavior so photos are no longer enlarged and cropped beyond the source-style media frame.
+- Remaining perceived difference comes from asset ratio, not the component sizing.
+
+### Copy and Content
+
+- No content changes in this pass.
+
+## Comparison History
+
+1. Captured the specific Chotot detail page from `https://xe.chotot.com/mua-ban-oto-huyen-chau-thanh-kien-giang/134278675.htm`.
+2. Re-measured source and deployed implementation in Chrome. Both used the same gallery frame size, but implementation used cover-like photo scaling and looked visually larger.
+3. Changed `.galleryStage img` to `object-fit: contain` and recaptured the local implementation.
+4. Post-fix capture confirms the image remains inside the same `736px x 412px` frame and now leaves dark side gutters like Chotot's media treatment.
+
+final result: passed
+
 # Bobaedream Used Car Chotot Spacing QA
 
 **Findings**

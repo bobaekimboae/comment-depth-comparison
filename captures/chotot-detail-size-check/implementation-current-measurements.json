@@ -1,0 +1,1519 @@
+{
+  "body": {
+    "bg": "rgb(244, 244, 245)",
+    "h": 2998,
+    "w": 1521
+  },
+  "chatCandidates": [
+    {
+      "className": "contactBtn",
+      "rect": {
+        "bottom": 334,
+        "h": 40,
+        "right": 1138.4,
+        "w": 210,
+        "x": 928.4,
+        "y": 294
+      },
+      "style": {
+        "background": "rgb(244, 244, 244)",
+        "border": "0px none rgb(34, 34, 34)",
+        "color": "rgb(34, 34, 34)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "9999px"
+      },
+      "tag": "button",
+      "text": "채팅"
+    },
+    {
+      "className": "contactRow",
+      "rect": {
+        "bottom": 334,
+        "h": 40,
+        "right": 1352.4,
+        "w": 424,
+        "x": 928.4,
+        "y": 294
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "210px 210px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "8px 0px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "div",
+      "text": "채팅 050-4375-0853"
+    },
+    {
+      "className": "sideCard priceCard",
+      "rect": {
+        "bottom": 469,
+        "h": 357,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "tag": "section",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전"
+    },
+    {
+      "className": "detailRight",
+      "rect": {
+        "bottom": 690,
+        "h": 578,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "aside",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전 한강모터스-박성수 ★ 5.0 · 1대 판매완료 · 41대 판매중"
+    },
+    {
+      "className": "detailShell",
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 1360.4,
+        "w": 1200,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "736px 464px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "24px 160.4px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "main",
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+    }
+  ],
+  "firstDetailThumb": {
+    "className": "detailThumb is-active",
+    "rect": {
+      "bottom": 629,
+      "h": 85,
+      "right": 255.4,
+      "w": 85,
+      "x": 170.4,
+      "y": 544
+    },
+    "style": {
+      "background": "rgb(222, 222, 222)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "8px"
+    },
+    "tag": "button",
+    "text": ""
+  },
+  "galleryCard": {
+    "className": "galleryCard",
+    "rect": {
+      "bottom": 629,
+      "h": 517,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 112
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "div",
+    "text": ""
+  },
+  "galleryStage": {
+    "className": "galleryStage",
+    "rect": {
+      "bottom": 524,
+      "h": 412,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 112
+    },
+    "style": {
+      "background": "rgb(32, 32, 32)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "8px"
+    },
+    "tag": "div",
+    "text": ""
+  },
+  "implChat": {
+    "className": "contactBtn",
+    "rect": {
+      "bottom": 334,
+      "h": 40,
+      "right": 1138.4,
+      "w": 210,
+      "x": 928.4,
+      "y": 294
+    },
+    "style": {
+      "background": "rgb(244, 244, 244)",
+      "border": "0px none rgb(34, 34, 34)",
+      "color": "rgb(34, 34, 34)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "9999px"
+    },
+    "tag": "button",
+    "text": "채팅"
+  },
+  "implMeta": {
+    "className": "detailMeta",
+    "rect": {
+      "bottom": 238,
+      "h": 24,
+      "right": 1352.4,
+      "w": 424,
+      "x": 928.4,
+      "y": 214
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(89, 89, 89)",
+      "color": "rgb(89, 89, 89)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "margin": "14px 0px 0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "div",
+    "text": "2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고"
+  },
+  "implPhone": {
+    "className": "contactBtn phone",
+    "rect": {
+      "bottom": 334,
+      "h": 40,
+      "right": 1352.4,
+      "w": 210,
+      "x": 1142.4,
+      "y": 294
+    },
+    "style": {
+      "background": "rgb(25, 83, 155)",
+      "border": "0px none rgb(255, 255, 255)",
+      "color": "rgb(255, 255, 255)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "9999px"
+    },
+    "tag": "button",
+    "text": "050-4375-0853"
+  },
+  "implPrice": {
+    "className": "detailPrice",
+    "rect": {
+      "bottom": 286,
+      "h": 36,
+      "right": 1051.6,
+      "w": 123.2,
+      "x": 928.4,
+      "y": 250
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(229, 25, 59)",
+      "color": "rgb(229, 25, 59)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "24px",
+      "fontWeight": "700",
+      "lineHeight": "36px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "strong",
+    "text": "56,544만원"
+  },
+  "implTitle": {
+    "className": "detailTitle",
+    "rect": {
+      "bottom": 200,
+      "h": 72,
+      "right": 1258.4,
+      "w": 330,
+      "x": 928.4,
+      "y": 128
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(7, 10, 15)",
+      "color": "rgb(7, 10, 15)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "24px",
+      "fontWeight": "700",
+      "lineHeight": "36px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "h1",
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+  },
+  "largestImages": [
+    {
+      "className": "",
+      "rect": {
+        "bottom": 524,
+        "h": 412,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 2532.9,
+        "h": 92,
+        "right": 404.9,
+        "w": 223.7,
+        "x": 181.2,
+        "y": 2440.9
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 2532.9,
+        "h": 92,
+        "right": 640.3,
+        "w": 223.7,
+        "x": 416.5,
+        "y": 2440.9
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 2532.9,
+        "h": 92,
+        "right": 875.6,
+        "w": 223.7,
+        "x": 651.9,
+        "y": 2440.9
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 2718.4,
+        "h": 92,
+        "right": 404.9,
+        "w": 223.7,
+        "x": 181.2,
+        "y": 2626.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 2718.4,
+        "h": 92,
+        "right": 640.3,
+        "w": 223.7,
+        "x": 416.5,
+        "y": 2626.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 2718.4,
+        "h": 92,
+        "right": 875.6,
+        "w": 223.7,
+        "x": 651.9,
+        "y": 2626.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 629,
+        "h": 85,
+        "right": 255.4,
+        "w": 85,
+        "x": 170.4,
+        "y": 544
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 629,
+        "h": 85,
+        "right": 355.4,
+        "w": 85,
+        "x": 270.4,
+        "y": 544
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 629,
+        "h": 85,
+        "right": 455.4,
+        "w": 85,
+        "x": 370.4,
+        "y": 544
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 629,
+        "h": 85,
+        "right": 555.4,
+        "w": 85,
+        "x": 470.4,
+        "y": 544
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "bottom": 629,
+        "h": 85,
+        "right": 655.4,
+        "w": 85,
+        "x": 570.4,
+        "y": 544
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    }
+  ],
+  "left": {
+    "className": "detailLeft",
+    "rect": {
+      "bottom": 2817.1,
+      "h": 2705.1,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 112
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "section",
+    "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+  },
+  "mainPointChain": [
+    {
+      "className": "",
+      "rect": {
+        "bottom": 524,
+        "h": 412,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "galleryStage",
+      "rect": {
+        "bottom": 524,
+        "h": 412,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgb(32, 32, 32)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px"
+      },
+      "tag": "div",
+      "text": ""
+    },
+    {
+      "className": "galleryCard",
+      "rect": {
+        "bottom": 629,
+        "h": 517,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "div",
+      "text": ""
+    },
+    {
+      "className": "detailLeft",
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "section",
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+    },
+    {
+      "className": "detailShell",
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 1360.4,
+        "w": 1200,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "736px 464px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "24px 160.4px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "main",
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+    }
+  ],
+  "phoneCandidates": [
+    {
+      "className": "contactBtn phone",
+      "rect": {
+        "bottom": 334,
+        "h": 40,
+        "right": 1352.4,
+        "w": 210,
+        "x": 1142.4,
+        "y": 294
+      },
+      "style": {
+        "background": "rgb(25, 83, 155)",
+        "border": "0px none rgb(255, 255, 255)",
+        "color": "rgb(255, 255, 255)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "9999px"
+      },
+      "tag": "button",
+      "text": "050-4375-0853"
+    },
+    {
+      "className": "contactRow",
+      "rect": {
+        "bottom": 334,
+        "h": 40,
+        "right": 1352.4,
+        "w": 424,
+        "x": 928.4,
+        "y": 294
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "210px 210px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "8px 0px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "div",
+      "text": "채팅 050-4375-0853"
+    },
+    {
+      "className": "sideCard priceCard",
+      "rect": {
+        "bottom": 469,
+        "h": 357,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "tag": "section",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전"
+    },
+    {
+      "className": "detailRight",
+      "rect": {
+        "bottom": 690,
+        "h": 578,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "aside",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전 한강모터스-박성수 ★ 5.0 · 1대 판매완료 · 41대 판매중"
+    },
+    {
+      "className": "detailShell",
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 1360.4,
+        "w": 1200,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "736px 464px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "24px 160.4px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "main",
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+    }
+  ],
+  "priceCandidates": [
+    {
+      "className": "detailPrice",
+      "rect": {
+        "bottom": 286,
+        "h": 36,
+        "right": 1051.6,
+        "w": 123.2,
+        "x": 928.4,
+        "y": 250
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(229, 25, 59)",
+        "color": "rgb(229, 25, 59)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "36px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "strong",
+      "text": "56,544만원"
+    },
+    {
+      "className": "priceLine",
+      "rect": {
+        "bottom": 286,
+        "h": 36,
+        "right": 1352.4,
+        "w": 424,
+        "x": 928.4,
+        "y": 250
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "flex",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "12px 0px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "div",
+      "text": "56,544만원 금융 상담 가능"
+    },
+    {
+      "className": "sideCard priceCard",
+      "rect": {
+        "bottom": 469,
+        "h": 357,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "tag": "section",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전"
+    },
+    {
+      "className": "detailRight",
+      "rect": {
+        "bottom": 690,
+        "h": 578,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "aside",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전 한강모터스-박성수 ★ 5.0 · 1대 판매완료 · 41대 판매중"
+    },
+    {
+      "className": "detailShell",
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 1360.4,
+        "w": 1200,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "736px 464px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "24px 160.4px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "main",
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+    }
+  ],
+  "priceCard": {
+    "className": "sideCard priceCard",
+    "rect": {
+      "bottom": 469,
+      "h": 357,
+      "right": 1372.4,
+      "w": 464,
+      "x": 908.4,
+      "y": 112
+    },
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "16px 20px",
+      "radius": "12px"
+    },
+    "tag": "section",
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전"
+  },
+  "right": {
+    "className": "detailRight",
+    "rect": {
+      "bottom": 690,
+      "h": 578,
+      "right": 1372.4,
+      "w": 464,
+      "x": 908.4,
+      "y": 112
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "aside",
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전 한강모터스-박성수 ★ 5.0 · 1대 판매완료 · 41대 판매중"
+  },
+  "rightPointChain": [
+    {
+      "className": "detailTitle",
+      "rect": {
+        "bottom": 200,
+        "h": 72,
+        "right": 1258.4,
+        "w": 330,
+        "x": 928.4,
+        "y": 128
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(7, 10, 15)",
+        "color": "rgb(7, 10, 15)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "36px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "h1",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+    },
+    {
+      "className": "sideOverviewHead",
+      "rect": {
+        "bottom": 200,
+        "h": 72,
+        "right": 1352.4,
+        "w": 424,
+        "x": 928.4,
+        "y": 128
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "330px 86px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "div",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+    },
+    {
+      "className": "sideCard priceCard",
+      "rect": {
+        "bottom": 469,
+        "h": 357,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "tag": "section",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전"
+    },
+    {
+      "className": "detailRight",
+      "rect": {
+        "bottom": 690,
+        "h": 578,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "aside",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전 한강모터스-박성수 ★ 5.0 · 1대 판매완료 · 41대 판매중"
+    },
+    {
+      "className": "detailShell",
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 1360.4,
+        "w": 1200,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "736px 464px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "24px 160.4px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "main",
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+    }
+  ],
+  "shell": {
+    "className": "detailShell",
+    "rect": {
+      "bottom": 2817.1,
+      "h": 2705.1,
+      "right": 1360.4,
+      "w": 1200,
+      "x": 160.4,
+      "y": 112
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "736px 464px",
+      "display": "grid",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "24px 160.4px 0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "main",
+    "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+  },
+  "thumbCandidates": [
+    "[Circular]",
+    "[Circular]",
+    "[Circular]",
+    "[Circular]",
+    "[Circular]"
+  ],
+  "thumbStrip": {
+    "className": "thumbStrip",
+    "rect": {
+      "bottom": 629,
+      "h": 85,
+      "right": 1365.4,
+      "w": 1195,
+      "x": 170.4,
+      "y": 544
+    },
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "flex",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.9px",
+      "margin": "20px 0px 0px 10px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "tag": "div",
+    "text": ""
+  },
+  "title": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 | 보배드림 중고차 PC 상세",
+  "titleCandidates": [
+    {
+      "className": "detailTitle",
+      "rect": {
+        "bottom": 200,
+        "h": 72,
+        "right": 1258.4,
+        "w": 330,
+        "x": 928.4,
+        "y": 128
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(7, 10, 15)",
+        "color": "rgb(7, 10, 15)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "36px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "h1",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+    },
+    {
+      "className": "sideOverviewHead",
+      "rect": {
+        "bottom": 200,
+        "h": 72,
+        "right": 1352.4,
+        "w": 424,
+        "x": 928.4,
+        "y": 128
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "330px 86px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "div",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+    },
+    {
+      "className": "sideCard priceCard",
+      "rect": {
+        "bottom": 469,
+        "h": 357,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "tag": "section",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전"
+    },
+    {
+      "className": "detailRight",
+      "rect": {
+        "bottom": 690,
+        "h": 578,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "aside",
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전 한강모터스-박성수 ★ 5.0 · 1대 판매완료 · 41대 판매중"
+    },
+    {
+      "className": "detailShell",
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 1360.4,
+        "w": 1200,
+        "x": 160.4,
+        "y": 112
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgb(16, 17, 20)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "736px 464px",
+        "display": "grid",
+        "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "24px 160.4px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "tag": "main",
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상"
+    }
+  ],
+  "url": "https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-used-car-detail.html?v=8650d54b",
+  "viewport": {
+    "h": 639,
+    "w": 1536
+  }
+}
