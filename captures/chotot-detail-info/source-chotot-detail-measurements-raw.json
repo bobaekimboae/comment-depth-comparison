@@ -1,0 +1,3986 @@
+{
+  "body": {
+    "h": 4329,
+    "w": 1526
+  },
+  "candidates": {
+    "anchors": [
+      {
+        "className": "aw__le5vecn adview",
+        "rect": {
+          "h": 40,
+          "w": 110,
+          "x": 72,
+          "y": 12.8
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(48, 107, 217)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "a",
+        "text": ""
+      },
+      {
+        "className": "aw__s7ee17s aw__c13gz4u4",
+        "rect": {
+          "h": 40,
+          "w": 106.6,
+          "x": 1121.9,
+          "y": 12.8
+        },
+        "style": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "20px",
+          "margin": "0px",
+          "padding": "10px 16px",
+          "radius": "9999px",
+          "size": "14px",
+          "weight": "600"
+        },
+        "tag": "a",
+        "text": "Liên hệ"
+      },
+      {
+        "className": "aw__s7ee17s aw__s18e8axz",
+        "rect": {
+          "h": 41.6,
+          "w": 103.6,
+          "x": 1236.5,
+          "y": 12
+        },
+        "style": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "20px",
+          "margin": "0px",
+          "padding": "10px 16px",
+          "radius": "9999px",
+          "size": "14px",
+          "weight": "600"
+        },
+        "tag": "a",
+        "text": "Quản lý tin"
+      },
+      {
+        "className": "aw__b1bfkju6 primary r-pill medium w-bold aw__bu25f5j",
+        "rect": {
+          "h": 40,
+          "w": 67.9,
+          "x": 1348.1,
+          "y": 12.8
+        },
+        "style": {
+          "background": "rgb(255, 212, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "inline-flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "20px",
+          "margin": "0px",
+          "padding": "0px 12px",
+          "radius": "9999px",
+          "size": "14px",
+          "weight": "600"
+        },
+        "tag": "a",
+        "text": "Bán xe"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 15.2,
+          "w": 59.4,
+          "x": 178.8,
+          "y": 81.6
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(140, 140, 140)",
+          "display": "inline",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "18px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "12px",
+          "weight": "400"
+        },
+        "tag": "a",
+        "text": "Chợ Tốt Xe"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 15.2,
+          "w": 23.9,
+          "x": 254.8,
+          "y": 81.6
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(140, 140, 140)",
+          "display": "inline",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "18px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "12px",
+          "weight": "400"
+        },
+        "tag": "a",
+        "text": "Ô tô"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 15.2,
+          "w": 83.3,
+          "x": 295.3,
+          "y": 81.6
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(140, 140, 140)",
+          "display": "inline",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "18px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "12px",
+          "weight": "400"
+        },
+        "tag": "a",
+        "text": "Ô tô Hậu Giang"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 15.2,
+          "w": 139.3,
+          "x": 395.1,
+          "y": 81.6
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(140, 140, 140)",
+          "display": "inline",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "18px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "12px",
+          "weight": "400"
+        },
+        "tag": "a",
+        "text": "Ô tô Huyện Châu Thành A"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 24,
+          "w": 71.7,
+          "x": 994.8,
+          "y": 496.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(48, 107, 217)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "30px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "20px",
+          "weight": "400"
+        },
+        "tag": "a",
+        "text": "Minh khôi"
+      },
+      {
+        "className": "rating-total",
+        "rect": {
+          "h": 21,
+          "w": 72.8,
+          "x": 1025.5,
+          "y": 529.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "a",
+        "text": "(1 Đánh giá)"
+      }
+    ],
+    "buttons": [
+      {
+        "className": "aw__ih8utai",
+        "rect": {
+          "h": 40,
+          "w": 40,
+          "x": 24,
+          "y": 12.8
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "div",
+        "text": ""
+      },
+      {
+        "className": "aw__b1bfkju6 tonal t-neutral r-pill large w-bold i-left",
+        "rect": {
+          "h": 40,
+          "w": 218.6,
+          "x": 182,
+          "y": 12.8
+        },
+        "style": {
+          "background": "rgb(244, 244, 244)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "24px",
+          "margin": "0px",
+          "padding": "0px 16px",
+          "radius": "9999px",
+          "size": "16px",
+          "weight": "700"
+        },
+        "tag": "button",
+        "text": "Huyện Châu Thành"
+      },
+      {
+        "className": "aw__c11zd90b",
+        "rect": {
+          "h": 32,
+          "w": 32,
+          "x": 957.9,
+          "y": 16.8
+        },
+        "style": {
+          "background": "rgb(255, 212, 0)",
+          "color": "rgb(255, 255, 255)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "28px",
+          "margin": "0px 0px 0px 4px",
+          "padding": "1px 8px",
+          "radius": "100%",
+          "size": "20px",
+          "weight": "400"
+        },
+        "tag": "button",
+        "text": ""
+      },
+      {
+        "className": "aw__s1in8l86",
+        "rect": {
+          "h": 40,
+          "w": 40,
+          "x": 1025.9,
+          "y": 12.8
+        },
+        "style": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "8px",
+          "radius": "9999px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "button",
+        "text": ""
+      },
+      {
+        "className": "BreadCrumb_iconPrev__2wAMN false",
+        "rect": {
+          "h": 28,
+          "w": 28,
+          "x": 163.8,
+          "y": 74.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "i",
+        "text": ""
+      },
+      {
+        "className": "BreadCrumb_iconNext__r0oRt false",
+        "rect": {
+          "h": 28,
+          "w": 28,
+          "x": 1333.8,
+          "y": 74.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "i",
+        "text": ""
+      },
+      {
+        "className": "b113r0uf outline o-tertiary r-pill large w-bold i-left",
+        "rect": {
+          "h": 40,
+          "w": 86.2,
+          "x": 1268.6,
+          "y": 127.4
+        },
+        "style": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(34, 34, 34)",
+          "display": "inline-flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "24px",
+          "margin": "0px",
+          "padding": "0px 16px",
+          "radius": "9999px",
+          "size": "16px",
+          "weight": "700"
+        },
+        "tag": "button",
+        "text": "Lưu"
+      },
+      {
+        "className": "w18njse9",
+        "rect": {
+          "h": 40,
+          "w": 209.2,
+          "x": 930.8,
+          "y": 303.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "div",
+        "text": "Chat"
+      },
+      {
+        "className": "b113r0uf tonal t-neutral r-pill large w-bold i-left stretch b1c30cgn",
+        "rect": {
+          "h": 40,
+          "w": 209.2,
+          "x": 930.8,
+          "y": 303.4
+        },
+        "style": {
+          "background": "rgb(244, 244, 244)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "8px",
+          "line": "24px",
+          "margin": "0px",
+          "padding": "0px 16px",
+          "radius": "9999px",
+          "size": "16px",
+          "weight": "700"
+        },
+        "tag": "button",
+        "text": "Chat"
+      },
+      {
+        "className": "w18njse9",
+        "rect": {
+          "h": 40,
+          "w": 210.8,
+          "x": 1144,
+          "y": 303.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "div",
+        "text": "Hiện số 090878****"
+      },
+      {
+        "className": "b113r0uf primary r-pill large w-bold i-left stretch bt1p3mb",
+        "rect": {
+          "h": 40,
+          "w": 210.8,
+          "x": 1144,
+          "y": 303.4
+        },
+        "style": {
+          "background": "rgb(255, 212, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "8px",
+          "line": "24px",
+          "margin": "0px",
+          "padding": "0px 16px",
+          "radius": "9999px",
+          "size": "16px",
+          "weight": "700"
+        },
+        "tag": "button",
+        "text": "Hiện số 090878****"
+      },
+      {
+        "className": "b113r0uf primary r-pill large w-bold",
+        "rect": {
+          "h": 40,
+          "w": 59,
+          "x": 1275.8,
+          "y": 613.4
+        },
+        "style": {
+          "background": "rgb(255, 212, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "24px",
+          "margin": "0px",
+          "padding": "0px 16px",
+          "radius": "9999px",
+          "size": "16px",
+          "weight": "700"
+        },
+        "tag": "button",
+        "text": "Gửi"
+      },
+      {
+        "className": "s1w31axf",
+        "rect": {
+          "h": 32,
+          "w": 32,
+          "x": 810.8,
+          "y": 121.4
+        },
+        "style": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "50%",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "button",
+        "text": "Chia sẻ qua:"
+      },
+      {
+        "className": "bfqqd64",
+        "rect": {
+          "h": 32,
+          "w": 32,
+          "x": 810.8,
+          "y": 121.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline-block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "2px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "button",
+        "text": ""
+      },
+      {
+        "className": "svtq6uc",
+        "rect": {
+          "h": 32,
+          "w": 32,
+          "x": 810.8,
+          "y": 121.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "inline-flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "28.8px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "100%",
+          "size": "19.2px",
+          "weight": "400"
+        },
+        "tag": "button",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 32,
+          "w": 32,
+          "x": 850.8,
+          "y": 121.4
+        },
+        "style": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "50%",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "button",
+        "text": ""
+      }
+    ],
+    "h1": [
+      {
+        "className": "",
+        "rect": {
+          "h": 72,
+          "w": 329.8,
+          "x": 930.8,
+          "y": 127.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "36px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "24px",
+          "weight": "700"
+        },
+        "tag": "h1",
+        "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí"
+      },
+      {
+        "className": "tfvqu6u",
+        "rect": {
+          "h": 27,
+          "w": 696,
+          "x": 182.8,
+          "y": 664.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "27px",
+          "margin": "0px 0px 16px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "18px",
+          "weight": "700"
+        },
+        "tag": "h2",
+        "text": "Mô tả chi tiết"
+      },
+      {
+        "className": "tfvqu6u",
+        "rect": {
+          "h": 27,
+          "w": 696,
+          "x": 182.8,
+          "y": 932.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "27px",
+          "margin": "0px 0px 16px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "18px",
+          "weight": "700"
+        },
+        "tag": "h2",
+        "text": "Thông số chi tiết"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 24,
+          "w": 696,
+          "x": 182.8,
+          "y": 975.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "24px",
+          "margin": "0px 0px 8px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "500"
+        },
+        "tag": "h3",
+        "text": "Tình trạng xe"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 24,
+          "w": 696,
+          "x": 182.8,
+          "y": 1164.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "24px",
+          "margin": "0px 0px 8px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "500"
+        },
+        "tag": "h3",
+        "text": "Thông số kỹ thuật"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 24,
+          "w": 194.6,
+          "x": 182.8,
+          "y": 1829.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "700"
+        },
+        "tag": "h2",
+        "text": "Tin rao khác của Minh khôi"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 192.8,
+          "y": 2075.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Toyota Camry 2.5Q 2018 Vàng cát"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 427.8,
+          "y": 2075.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Ford Everest 2.5 AT Limited 2012 Tự động"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 662.8,
+          "y": 2075.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Toyota Venza 2009 2.7 AWD Mỹ Nâu"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 897.8,
+          "y": 2075.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Lexus GX460 2009 Nâng hạ gầm up 2015"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 1132.8,
+          "y": 2075.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "BMW 328i Mui trần 2007 Trắng"
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 24,
+          "w": 131.2,
+          "x": 182.8,
+          "y": 2354.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "700"
+        },
+        "tag": "h2",
+        "text": "Tin đăng tương tự"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 190.8,
+          "y": 2600.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Ford Everest 2.5 AT Limited 2012 Tự động"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 426,
+          "y": 2600.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "KIA MORNING 2010 MODEL 2011 SPORT SỐ TỰ ĐỘNG"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 661.2,
+          "y": 2600.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Kia Carens 1.5G Luxury Trắng 7 chỗ cực mới"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 896.4,
+          "y": 2600.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "KIA CARNIVAL 2022 DẦU SIGNATURE SIÊU SANG"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 1131.6,
+          "y": 2600.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Toyota Vios Trắng Số sàn 5 chỗ"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 190.8,
+          "y": 2974.7
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Ford Transit 2024 16 vạn Bạc"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 22.9,
+          "w": 180,
+          "x": 426,
+          "y": 2974.7
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Hyundai Solati 2025"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 661.2,
+          "y": 2974.7
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "COROLLA ALTIS 2011 2.0V 47.000 km SIÊU CỌP"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 896.4,
+          "y": 2974.7
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "ACCENT 2023 SỐ TỰ ĐỘNG SIÊU MỚI"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 1131.6,
+          "y": 2974.7
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Toyota Fortuner 2016 Số sàn Bạc 300.000 km"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 190.8,
+          "y": 3348.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "HYUNDAI KONA 2019 2.0ATH (BẢN ĐẶC BIỆT) CỰC ĐẸP"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 426,
+          "y": 3348.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "MAZDA 2 2012 1.5L SỐ TỰ ĐỘNG RẤT ĐẸP"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 661.2,
+          "y": 3348.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "KIA MORNING 2018 SỐ SÀN BẢN ĐỦ CỰC MỚI"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 896.4,
+          "y": 3348.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "VinFast Fadil Plus 2020 Xám 98000 km"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 1131.6,
+          "y": 3348.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "TOYOTA VELOZ CROSS 2023 SỐ TỰ ĐỘNG BẢN TOP"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 190.8,
+          "y": 3722.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "MAZA 3 2021 MODEL 2022 LUXURY SIÊU LƯỚT 18.000km"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 426,
+          "y": 3722.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "BMW 328i Mui trần 2007 Trắng"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 661.2,
+          "y": 3722.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "COROLLA ALTIS 2021 1.8G CỰC SANG TRỌNG"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 896.4,
+          "y": 3722.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Kia Morning 2008 Xanh 139.000 km"
+      },
+      {
+        "className": "a197cqrz",
+        "rect": {
+          "h": 45.8,
+          "w": 180,
+          "x": 1131.6,
+          "y": 3722.2
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "flow-root",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "22.88px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "16px",
+          "weight": "400"
+        },
+        "tag": "h3",
+        "text": "Toyota Camry 2.5Q 2018 Vàng cát"
+      }
+    ],
+    "imgs": [
+      {
+        "className": "",
+        "rect": {
+          "h": 28,
+          "w": 104,
+          "x": 75,
+          "y": 18.8
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(48, 107, 217)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "aw__ijfxa41",
+        "rect": {
+          "h": 32,
+          "w": 32,
+          "x": 1428.8,
+          "y": 16.8
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "100%",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 48,
+          "w": 48,
+          "x": 930.8,
+          "y": 514.9
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "50%",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "vyocz8k",
+        "rect": {
+          "h": 412,
+          "w": 736,
+          "x": 162.8,
+          "y": 111.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "vguekfn",
+        "rect": {
+          "h": 56,
+          "w": 56,
+          "x": 502.8,
+          "y": 289.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "0px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "vyocz8k",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 172.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "vguekfn",
+        "rect": {
+          "h": 32,
+          "w": 32,
+          "x": 198.8,
+          "y": 569.4
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 272.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 272.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 372.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 372.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 472.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 472.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 572.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 572.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 672.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 672.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 772.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 772.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 872.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 872.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 972.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 972.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 1072.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 1072.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 1172.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 1172.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 1272.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      },
+      {
+        "className": "",
+        "rect": {
+          "h": 84.8,
+          "w": 84.8,
+          "x": 1272.4,
+          "y": 543
+        },
+        "style": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "display": "block",
+          "font": "\"Reddit Sans\", sans-serif",
+          "gap": "normal",
+          "line": "21px",
+          "margin": "0px",
+          "padding": "0px",
+          "radius": "8px",
+          "size": "14px",
+          "weight": "400"
+        },
+        "tag": "img",
+        "text": ""
+      }
+    ]
+  },
+  "imageLike": [
+    {
+      "className": "",
+      "rect": {
+        "h": 28,
+        "w": 104,
+        "x": 75,
+        "y": 18.8
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(48, 107, 217)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "aw__ijfxa41",
+      "rect": {
+        "h": 32,
+        "w": 32,
+        "x": 1428.8,
+        "y": 16.8
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "100%",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 48,
+        "w": 48,
+        "x": 930.8,
+        "y": 514.9
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "50%",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "vyocz8k",
+      "rect": {
+        "h": 412,
+        "w": 736,
+        "x": 162.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "vguekfn",
+      "rect": {
+        "h": 56,
+        "w": 56,
+        "x": 502.8,
+        "y": 289.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slider slick-initialized",
+      "rect": {
+        "h": 105.8,
+        "w": 734,
+        "x": 164.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px 0px -5px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "slick-list",
+      "rect": {
+        "h": 105.8,
+        "w": 734,
+        "x": 164.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "slick-track",
+      "rect": {
+        "h": 105.8,
+        "w": 1764,
+        "x": 164.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "slick-slide slick-active slick-current",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 164.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": ""
+    },
+    {
+      "className": "vyocz8k",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 172.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "vguekfn",
+      "rect": {
+        "h": 32,
+        "w": 32,
+        "x": 198.8,
+        "y": 569.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slide slick-active",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 264.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 272.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 272.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slide slick-active",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 364.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 3\" src=\"https://cdn.chotot.com/DKOBBIyjsZOQDTT6qsnQ_ay6GbCd-HVTNDh0JMOhaC0/preset:view/plai"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 372.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 372.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slide slick-active",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 464.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 4\" src=\"https://cdn.chotot.com/Llu88llyUhomLx573jMqlbicLm1bK3qzdNZx1CkEiOw/preset:view/plai"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 472.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 472.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slide slick-active",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 564.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 5\" src=\"https://cdn.chotot.com/nQx5a4JaxiP0vRx0pTURnwzKJT2iXIqU6OxHbDJGSmc/preset:view/plai"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 572.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 572.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slide",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 664.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 6\" src=\"https://cdn.chotot.com/7uaL1Z8KKttTCjq7st2HKcy-4gs5JTKyqKXzOJd5QtM/preset:view/plai"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 672.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 672.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slide",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 764.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 7\" src=\"https://cdn.chotot.com/U7CpiOpAPSBceObrOyuuYVH_TO5LxEw7MOdRf1BxDVo/preset:view/plai"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 772.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 84.8,
+        "w": 84.8,
+        "x": 772.4,
+        "y": 543
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "img",
+      "text": ""
+    },
+    {
+      "className": "slick-slide",
+      "rect": {
+        "h": 105.8,
+        "w": 100,
+        "x": 864.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 8\" src=\"https://cdn.chotot.com/bSS4iU46jU5Wg5ag6mJ0uNdvo0ZxOqUp9Oz2SD58acs/preset:view/plai"
+    }
+  ],
+  "textBlocks": [
+    {
+      "className": "w1iyv9is",
+      "rect": {
+        "h": 45.8,
+        "w": 1525.6,
+        "x": 0,
+        "y": 65.6
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Chợ Tốt XeÔ tôÔ tô Hậu GiangÔ tô Huyện Châu Thành AVinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "cqsusx6",
+      "rect": {
+        "h": 45,
+        "w": 1200,
+        "x": 162.8,
+        "y": 66.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "12px 16px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Chợ Tốt XeÔ tôÔ tô Hậu GiangÔ tô Huyện Châu Thành AVinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 21,
+        "w": 1168,
+        "x": 178.8,
+        "y": 78.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Chợ Tốt XeÔ tôÔ tô Hậu GiangÔ tô Huyện Châu Thành AVinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "BreadCrumb_wrapperOverflow__Iycpy",
+      "rect": {
+        "h": 21,
+        "w": 1168,
+        "x": 178.8,
+        "y": 78.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Chợ Tốt XeÔ tôÔ tô Hậu GiangÔ tô Huyện Châu Thành AVinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "BreadCrumb_breadcrumb__zGT1y ",
+      "rect": {
+        "h": 21,
+        "w": 1133,
+        "x": 178.8,
+        "y": 78.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "ol",
+      "text": "Chợ Tốt XeÔ tôÔ tô Hậu GiangÔ tô Huyện Châu Thành AVinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "BreadCrumb_breadcrumbItem__M8Q4i BreadCrumb_link__KeNbI",
+      "rect": {
+        "h": 15.2,
+        "w": 155.9,
+        "x": 395.1,
+        "y": 81.6
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(140, 140, 140)",
+        "display": "inline",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "18px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "12px",
+        "weight": "400"
+      },
+      "tag": "li",
+      "text": "Ô tô Huyện Châu Thành A"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 15.2,
+        "w": 139.3,
+        "x": 395.1,
+        "y": 81.6
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(140, 140, 140)",
+        "display": "inline",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "18px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "12px",
+        "weight": "400"
+      },
+      "tag": "a",
+      "text": "Ô tô Huyện Châu Thành A"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 15.2,
+        "w": 139.3,
+        "x": 395.1,
+        "y": 81.6
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(140, 140, 140)",
+        "display": "inline",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "18px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "12px",
+        "weight": "400"
+      },
+      "tag": "span",
+      "text": "Ô tô Huyện Châu Thành A"
+    },
+    {
+      "className": "BreadCrumb_breadcrumbItem__M8Q4i",
+      "rect": {
+        "h": 15.2,
+        "w": 241.6,
+        "x": 551,
+        "y": 81.6
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(140, 140, 140)",
+        "display": "inline",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "18px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "12px",
+        "weight": "400"
+      },
+      "tag": "li",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "BreadCrumb_breadcrumbLastItem__Bu4C8",
+      "rect": {
+        "h": 15.2,
+        "w": 241.6,
+        "x": 551,
+        "y": 81.6
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "inline",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "18px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "12px",
+        "weight": "700"
+      },
+      "tag": "span",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "container",
+      "rect": {
+        "h": 3814.6,
+        "w": 1200,
+        "x": 162.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px 162.8px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "ct-detail adview styles_adviewVeh__sS7WB",
+      "rect": {
+        "h": 1689.8,
+        "w": 1200,
+        "x": 162.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "row",
+      "rect": {
+        "h": 1689.8,
+        "w": 1200,
+        "x": 162.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "row c1ybwq5w",
+      "rect": {
+        "h": 1689.8,
+        "w": 1200,
+        "x": 162.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "12px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "col-md-8 ladherw",
+      "rect": {
+        "h": 1689.8,
+        "w": 736,
+        "x": 162.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "12px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "1 / 12 Mô tả chi tiết Xe điện VinFast VF5 Plus sản xuất 2024, màu xám, 5 chỗ ngồi. - Pin mua , sạc miễn phí 2027 - Xe chính chủ, bao zin, không đâm đụng, không ngập nước. - Vô full đèn led trợ sáng, 4 vỏ mới, mâm phây, ố"
+    },
+    {
+      "className": "hjb0igm",
+      "rect": {
+        "h": 52,
+        "w": 736,
+        "x": 162.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px 16px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Chia sẻ qua:Báo cáo tin đăngCần trợ giúp?"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 1689.8,
+        "w": 464,
+        "x": 910.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "col-md-4 r6o4304",
+      "rect": {
+        "h": 590,
+        "w": 464,
+        "x": 910.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "12px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "c189eou8",
+      "rect": {
+        "h": 357,
+        "w": 464,
+        "x": 910.8,
+        "y": 111.4
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "cpmughi",
+      "rect": {
+        "h": 325,
+        "w": 424,
+        "x": 930.8,
+        "y": 127.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "16px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu 2024 169.999 km Điện Tự động > 1 chủ 318.000.000 đ (Trả góp từ 3.32 triệu/tháng) Chat Hiện số 090878**** Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cầ"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 72,
+        "w": 424,
+        "x": 930.8,
+        "y": 127.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "8px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí Lưu"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 72,
+        "w": 329.8,
+        "x": 930.8,
+        "y": 127.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "36px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "24px",
+        "weight": "700"
+      },
+      "tag": "h1",
+      "text": "VinFast VF5 Plus 2024 pin mua sạc miễn phí"
+    },
+    {
+      "className": "ik7hy9d r9vw5if",
+      "rect": {
+        "h": 24,
+        "w": 424,
+        "x": 930.8,
+        "y": 215.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "0px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "2024 169.999 km Điện Tự động > 1 chủ"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 24,
+        "w": 424,
+        "x": 930.8,
+        "y": 255.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "8px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "318.000.000 đ (Trả góp từ 3.32 triệu/tháng)"
+    },
+    {
+      "className": "p26z2wb",
+      "rect": {
+        "h": 24,
+        "w": 163,
+        "x": 930.8,
+        "y": 255.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(240, 50, 94)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "24px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "24px",
+        "weight": "700"
+      },
+      "tag": "b",
+      "text": "318.000.000 đ"
+    },
+    {
+      "className": "c1u6gyxh p1072lfs",
+      "rect": {
+        "h": 18,
+        "w": 151.6,
+        "x": 1101.8,
+        "y": 258.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(89, 89, 89)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "18px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "12px",
+        "weight": "400"
+      },
+      "tag": "span",
+      "text": "(Trả góp từ 3.32 triệu/tháng)"
+    },
+    {
+      "className": "l16rn85q",
+      "rect": {
+        "h": 40,
+        "w": 424,
+        "x": 930.8,
+        "y": 303.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "8px",
+        "line": "21px",
+        "margin": "8px 0px 0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Chat Hiện số 090878****"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 40,
+        "w": 424,
+        "x": 930.8,
+        "y": 303.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "4px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Chat Hiện số 090878****"
+    },
+    {
+      "className": "",
+      "rect": {
+        "h": 40,
+        "w": 210.8,
+        "x": 1144,
+        "y": 303.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Hiện số 090878****"
+    },
+    {
+      "className": "w18njse9",
+      "rect": {
+        "h": 40,
+        "w": 210.8,
+        "x": 1144,
+        "y": 303.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Hiện số 090878****"
+    },
+    {
+      "className": "b113r0uf primary r-pill large w-bold i-left stretch bt1p3mb",
+      "rect": {
+        "h": 40,
+        "w": 210.8,
+        "x": 1144,
+        "y": 303.4
+      },
+      "style": {
+        "background": "rgb(255, 212, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "8px",
+        "line": "24px",
+        "margin": "0px",
+        "padding": "0px 16px",
+        "radius": "9999px",
+        "size": "16px",
+        "weight": "700"
+      },
+      "tag": "button",
+      "text": "Hiện số 090878****"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 45,
+        "w": 424,
+        "x": 930.8,
+        "y": 359.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "8px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cần Thơ mới"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 45,
+        "w": 365.6,
+        "x": 970.8,
+        "y": 359.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "0px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang Xã Thạnh Xuân, TP Cần Thơ mới"
+    },
+    {
+      "className": "bwq0cbs flex-1",
+      "rect": {
+        "h": 24,
+        "w": 365.6,
+        "x": 970.8,
+        "y": 359.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(89, 89, 89)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "24px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "16px",
+        "weight": "400"
+      },
+      "tag": "span",
+      "text": "Xã Tân Phú Thạnh, Huyện Châu Thành A, Hậu Giang"
+    },
+    {
+      "className": "bwq0cbs",
+      "rect": {
+        "h": 21,
+        "w": 196.6,
+        "x": 970.8,
+        "y": 383.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(140, 140, 140)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "span",
+      "text": "Xã Thạnh Xuân, TP Cần Thơ mới"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 32,
+        "w": 424,
+        "x": 930.8,
+        "y": 420.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "8px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Đăng 14 ngày trước"
+    },
+    {
+      "className": "bwq0cbs",
+      "rect": {
+        "h": 24,
+        "w": 138.5,
+        "x": 970.8,
+        "y": 424.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(89, 89, 89)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "24px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "16px",
+        "weight": "400"
+      },
+      "tag": "span",
+      "text": "Đăng 14 ngày trước"
+    },
+    {
+      "className": "c189eou8",
+      "rect": {
+        "h": 209,
+        "w": 464,
+        "x": 910.8,
+        "y": 480.4
+      },
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Minh khôi 1 (1 Đánh giá) 8 đã bán 6 đang bán Đang hoạt động Phản hồi: 82% Gửi"
+    },
+    {
+      "className": "pxvd52c vdi4wk",
+      "rect": {
+        "h": 85,
+        "w": 424,
+        "x": 930.8,
+        "y": 496.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "16px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Minh khôi 1 (1 Đánh giá) 8 đã bán 6 đang bán Đang hoạt động Phản hồi: 82%"
+    },
+    {
+      "className": "i1bvebsm vdi4wk",
+      "rect": {
+        "h": 85,
+        "w": 266.5,
+        "x": 994.8,
+        "y": 496.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "8px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Minh khôi 1 (1 Đánh giá) 8 đã bán 6 đang bán Đang hoạt động Phản hồi: 82%"
+    },
+    {
+      "className": "pf9ruvz vdi4wk",
+      "rect": {
+        "h": 24,
+        "w": 266.5,
+        "x": 994.8,
+        "y": 496.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(48, 107, 217)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "4px",
+        "line": "30px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "20px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Minh khôi"
+    },
+    {
+      "className": "i14mti5r vdi4wk",
+      "rect": {
+        "h": 24,
+        "w": 266.5,
+        "x": 994.8,
+        "y": 528.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(89, 89, 89)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "4px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "1 (1 Đánh giá) 8 đã bán 6 đang bán"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 24,
+        "w": 266.5,
+        "x": 994.8,
+        "y": 528.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(89, 89, 89)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "4px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "1 (1 Đánh giá) 8 đã bán 6 đang bán"
+    },
+    {
+      "className": "p1jpzkyv",
+      "rect": {
+        "h": 100.8,
+        "w": 736,
+        "x": 162.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "12px 0px 0px",
+        "padding": "0px 0px 0px 2px",
+        "radius": "8px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "slick-slider slick-initialized",
+      "rect": {
+        "h": 105.8,
+        "w": 734,
+        "x": 164.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px 0px -5px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "slick-list",
+      "rect": {
+        "h": 105.8,
+        "w": 734,
+        "x": 164.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "slick-track",
+      "rect": {
+        "h": 105.8,
+        "w": 1764,
+        "x": 164.8,
+        "y": 535.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "block",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "normal",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "<img alt=\"VinFast VF5 Plus 2024 pin mua sạc miễn phí. Mua bán Ô tô tại Huyện Châu Thành A Hậu Giang được đăng bởi Minh khôi hình 2\" src=\"https://cdn.chotot.com/jGEvftYaAein6tWFOAwxqHwLC-pNGCSdFNlu-zFYu1Y/preset:view/plai"
+    },
+    {
+      "className": "r9vw5if",
+      "rect": {
+        "h": 21,
+        "w": 218.9,
+        "x": 994.8,
+        "y": 560.4
+      },
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 34, 34)",
+        "display": "flex",
+        "font": "\"Reddit Sans\", sans-serif",
+        "gap": "16px",
+        "line": "21px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px",
+        "size": "14px",
+        "weight": "400"
+      },
+      "tag": "div",
+      "text": "Đang hoạt động Phản hồi: 82%"
+    }
+  ],
+  "title": "VinFast VF5 Plus 2024 pin mua sạc miễn phí - 134166231",
+  "url": "https://xe.chotot.com/mua-ban-oto-huyen-chau-thanh-a-hau-giang/134166231.htm#px=SR-stickyad-[PO-1][PL-top]",
+  "viewport": {
+    "h": 639,
+    "w": 1536
+  }
+}

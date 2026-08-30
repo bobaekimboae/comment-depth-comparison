@@ -167,6 +167,14 @@ img {
   gap: 20px;
 }
 
+body[data-used-car-detail] .bbHeader {
+  height: 88px;
+}
+
+body[data-used-car-detail] .bbHeaderTop {
+  display: none;
+}
+
 .headerIcon {
   width: 24px;
   height: 24px;
@@ -1133,10 +1141,10 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .detailShell {
-  width: 1160px;
+  width: 1200px;
   margin: 24px auto 0;
   display: grid;
-  grid-template-columns: 736px 412px;
+  grid-template-columns: 736px 464px;
   gap: 12px;
   align-items: start;
 }
@@ -1153,16 +1161,19 @@ body[data-used-car-list] .listShell .viewLine {
 
 .galleryCard {
   width: 736px;
-  height: 412px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #e9e9ea;
+  min-height: 0;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
   position: relative;
 }
 
 .galleryStage {
-  width: 100%;
-  height: 100%;
+  width: 736px;
+  height: 412px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #202020;
 }
 
 .galleryStage img {
@@ -1218,15 +1229,15 @@ body[data-used-car-list] .listShell .viewLine {
 
 .galleryControl {
   position: absolute;
-  top: 12px;
-  right: 14px;
+  top: 10px;
+  right: 16px;
   display: flex;
   gap: 8px;
 }
 
 .circleTool {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -1271,32 +1282,39 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .thumbStrip {
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 16px;
+  width: 1195px;
+  height: 85px;
+  margin: 20px 0 0 10px;
   display: flex;
-  gap: 8px;
+  gap: 15px;
+  overflow: hidden;
 }
 
 .detailThumb {
-  width: 58px;
-  height: 40px;
-  border-radius: 6px;
+  flex: 0 0 85px;
+  width: 85px;
+  height: 85px;
+  border-radius: 8px;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, .75);
-  background: rgba(255, 255, 255, .45);
+  border: 0;
+  background: #dedede;
 }
 
 .detailThumb.is-active {
-  border-color: var(--blue);
+  box-shadow: 0 0 0 2px #202020;
+}
+
+.detailThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overviewCard,
 .infoCard,
 .sideCard {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .overviewCard {
@@ -1308,66 +1326,181 @@ body[data-used-car-list] .listShell .viewLine {
 
 .detailTitle {
   margin: 0;
-  padding-right: 60px;
   color: #070a0f;
-  font-size: 22px;
-  line-height: 30px;
-  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
 }
 
 .detailSubcopy {
-  margin-top: 16px;
-  color: #59606a;
-  font-size: 13px;
-  font-weight: 700;
+  margin-top: 6px;
+  color: #595959;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .detailMeta {
   margin-top: 14px;
-  color: #2e343d;
-  font-size: 15px;
-  font-weight: 800;
+  color: #595959;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 .overviewStats {
-  position: absolute;
-  right: 20px;
-  bottom: 17px;
-  display: flex;
-  gap: 12px;
-  color: #858a92;
+  display: none;
+  color: #8c8c8c;
   font-size: 14px;
-  font-weight: 800;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .overviewHeart {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 34px;
-  height: 34px;
+  width: 86px;
+  height: 40px;
   border: 1px solid #e3e4e7;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   color: #16191e;
+  background: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.overviewHeart::after {
+  content: "찜";
+}
+
+.detailStickySummary {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  height: 65px;
+  display: none;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+}
+
+.detailStickySummary.is-visible {
+  display: block;
+}
+
+.detailStickyInner {
+  width: 960px;
+  height: 65px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 96px 72px 204px;
+  gap: 12px;
+  align-items: center;
+}
+
+.stickyThumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #e8e8e8;
+}
+
+.stickyThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stickyCopy {
+  min-width: 0;
+}
+
+.stickyCopy strong {
+  display: block;
+  overflow: hidden;
+  color: #222;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.stickyCopy span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.stickyCopy b {
+  color: var(--price);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.stickyCopy em {
+  min-width: 0;
+  overflow: hidden;
+  color: #8c8c8c;
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.stickySave,
+.stickyChat,
+.stickyPhone {
+  height: 40px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #222;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.stickySave {
+  text-decoration: underline;
+}
+
+.stickyChat {
+  background: #f4f4f4;
+}
+
+.stickyPhone {
+  background: var(--blue);
+  color: #fff;
 }
 
 .detailAnchorNav {
-  height: 56px;
-  width: 736px;
-  padding: 0 20px;
+  height: 52px;
+  width: 960px;
+  margin: 0;
+  padding: 0;
   display: none;
   align-items: center;
-  gap: 34px;
+  gap: 0;
   background: #fff;
   border-bottom: 1px solid var(--line-dark);
   position: fixed;
-  top: 0;
+  top: 71px;
   left: 50%;
-  transform: translateX(-580px);
+  transform: translateX(-480px);
   z-index: 4;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+  box-shadow: none;
 }
 
 .detailAnchorNav.is-visible {
@@ -1375,13 +1508,15 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .detailAnchorNav a {
-  height: 56px;
+  height: 52px;
+  padding: 16px;
   display: flex;
   align-items: center;
   position: relative;
-  color: #272a30;
+  color: #595959;
   font-size: 14px;
-  font-weight: 800;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .detailAnchorNav a.is-active::after {
@@ -1390,33 +1525,46 @@ body[data-used-car-list] .listShell .viewLine {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 2px;
+  height: 3px;
   background: #0e1014;
+}
+
+.detailAnchorNav a.is-active {
+  color: #222;
+  font-weight: 700;
 }
 
 .infoCard {
   margin-top: 12px;
-  padding: 20px;
+  padding: 16px 20px;
 }
 
 .infoCard h2 {
-  margin: 0 0 18px;
-  color: #0f1217;
+  margin: 0 0 16px;
+  color: #222;
   font-size: 18px;
-  line-height: 25px;
-  font-weight: 800;
+  line-height: 27px;
+  font-weight: 700;
+}
+
+.infoCard h3 {
+  margin: 0 0 8px;
+  color: #222;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .specGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 22px;
+  grid-template-columns: repeat(4, 156px);
+  gap: 16px 24px;
 }
 
 .specItem {
-  min-height: 44px;
-  padding-right: 20px;
-  border-right: 1px solid var(--line);
+  min-height: 46px;
+  padding-right: 12px;
+  border-right: 1px solid #eeeeef;
 }
 
 .specItem:nth-child(4n),
@@ -1425,16 +1573,18 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .specLabel {
-  color: #7f858f;
+  color: #8c8c8c;
   font-size: 14px;
-  font-weight: 500;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .specValue {
-  margin-top: 6px;
-  color: #0d1117;
-  font-size: 15px;
-  font-weight: 700;
+  margin-top: 4px;
+  color: #222;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .specValue.is-link {
@@ -1443,8 +1593,8 @@ body[data-used-car-list] .listShell .viewLine {
 
 .sectionDivider {
   height: 1px;
-  margin: 22px 0 18px;
-  background: var(--line-dark);
+  margin: 20px 0;
+  background: #eeeeef;
 }
 
 .optionGrid {
@@ -1599,28 +1749,49 @@ body[data-used-car-list] .listShell .viewLine {
 
 .descText {
   margin: 0;
-  color: #2d333b;
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 700;
+  color: #222;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 .priceCard {
-  min-height: 302px;
-  padding: 20px;
+  min-height: 357px;
+  padding: 16px 20px;
 }
 
 .priceTop {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
+}
+
+.sideOverviewHead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 86px;
+  gap: 8px;
+  align-items: start;
+}
+
+.priceLine {
+  margin-top: 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .detailPrice {
   color: var(--price);
   font-size: 24px;
-  line-height: 32px;
-  font-weight: 900;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.priceFinance {
+  color: #595959;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .outlineBlueBtn {
@@ -1635,8 +1806,8 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .insuranceLine {
+  display: none;
   margin-top: 24px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   color: #0f1217;
@@ -1645,10 +1816,10 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .costBox {
+  display: none;
   min-height: 80px;
   margin-top: 22px;
   padding: 16px 20px;
-  display: grid;
   grid-template-columns: 1fr 1px 108px;
   gap: 23px;
   align-items: center;
@@ -1690,8 +1861,8 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .sideBtnRow {
+  display: none;
   margin-top: 16px;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
@@ -1707,18 +1878,18 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .dealerCard {
-  min-height: 288px;
+  min-height: 209px;
   margin-top: 12px;
-  padding: 20px;
+  padding: 16px 20px;
 }
 
 .dealerProfile {
   display: grid;
   grid-template-columns: 48px 1fr;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--line-dark);
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .dealerAvatar {
@@ -1730,13 +1901,14 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .dealerName {
-  color: #101318;
+  color: #222;
   font-size: 16px;
-  font-weight: 900;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .dealerBadge {
-  display: inline-flex;
+  display: none;
   height: 20px;
   align-items: center;
   padding: 0 6px;
@@ -1749,22 +1921,24 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .dealerStats {
-  margin-top: 7px;
-  color: #22272f;
+  margin-top: 2px;
+  color: #595959;
   font-size: 14px;
-  font-weight: 800;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .dealerLocation {
   margin-top: 8px;
-  color: #767b83;
+  color: #8c8c8c;
   font-size: 14px;
-  font-weight: 800;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .dealerTable {
+  display: none;
   margin-top: 14px;
-  display: grid;
   gap: 18px;
 }
 
@@ -1777,19 +1951,20 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .contactRow {
-  margin-top: 22px;
+  margin-top: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 4px;
 }
 
 .contactBtn {
   height: 40px;
-  border-radius: 7px;
-  background: #f0f0f1;
-  color: #242930;
-  font-size: 15px;
-  font-weight: 900;
+  border-radius: 9999px;
+  background: #f4f4f4;
+  color: #222;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .contactBtn.phone {
@@ -1797,10 +1972,121 @@ body[data-used-car-list] .listShell .viewLine {
   color: #fff;
 }
 
+.sideInfoLine {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  color: #595959;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.sideInfoLine strong {
+  display: block;
+  color: #595959;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.sideInfoLine small {
+  display: block;
+  margin-top: 2px;
+  color: #8c8c8c;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.sideLineIcon {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  position: relative;
+  color: #595959;
+}
+
+.sideLineIcon.pin::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 10px;
+  height: 13px;
+  border: 1.8px solid currentColor;
+  border-radius: 8px 8px 8px 0;
+  transform: rotate(-45deg);
+}
+
+.sideLineIcon.pin::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.sideLineIcon.clock::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border: 1.8px solid currentColor;
+  border-radius: 50%;
+}
+
+.sideLineIcon.clock::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 6px;
+  border-left: 1.8px solid currentColor;
+  border-bottom: 1.8px solid currentColor;
+}
+
+.detailBadgeRow {
+  display: none;
+}
+
+.dealerQuick {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 59px;
+  gap: 8px;
+}
+
+.sellerMessageInput {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: #f4f4f4;
+  color: #8c8c8c;
+  text-align: left;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.sellerSendBtn {
+  height: 40px;
+  border-radius: 9999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 .reportBtn {
+  display: none;
   height: 28px;
   margin: 9px auto 0;
-  display: flex;
   align-items: center;
   justify-content: center;
   color: #8a8f98;

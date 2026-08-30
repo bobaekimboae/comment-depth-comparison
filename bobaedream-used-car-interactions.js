@@ -758,6 +758,10 @@
     document.title = `${car.title} | 보배드림 중고차 PC 상세`;
 
     const imageList = car.images && car.images.length ? car.images : [];
+    const galleryCount = Math.max(imageList.length, Math.min(Number(car.photoCount) || imageList.length, 12));
+    const galleryImages = imageList.length
+      ? Array.from({ length: galleryCount }, (_, index) => imageList[index % imageList.length])
+      : [];
 
     qs("#detailGallery").innerHTML = `
       <div class="galleryStage">${thumbMarkup(car, true)}</div>
@@ -765,14 +769,15 @@
         <button class="circleTool" type="button" data-toast="공유 링크가 복사되었습니다." aria-label="공유"><span class="shareIcon"></span></button>
         <button class="circleTool" type="button" data-toast="더보기 메뉴는 시안에서 준비 중입니다." aria-label="더보기"><span class="moreIcon"></span></button>
       </div>
-      ${imageList.length ? `<div class="thumbStrip">${imageList.map((src, index) => `<button class="detailThumb${index === 0 ? " is-active" : ""}" type="button" data-gallery-src="${src}"><img src="${src}" alt=""></button>`).join("")}</div>` : ""}
+      ${galleryImages.length ? `<div class="thumbStrip">${galleryImages.map((src, index) => `<button class="detailThumb${index === 0 ? " is-active" : ""}" type="button" data-gallery-src="${src}"><img src="${src}" alt=""></button>`).join("")}</div>` : ""}
     `;
 
     qs("#detailTitle").textContent = car.title;
-    qs("#detailSubcopy").textContent = car.intro;
-    qs("#detailMeta").textContent = `${car.number} · ${car.yearFull} · ${car.mileageFull} · ${car.fuel}`;
+    const detailSubcopy = qs("#detailSubcopy");
+    if (detailSubcopy) detailSubcopy.textContent = car.intro;
+    qs("#detailMeta").textContent = `${car.yearFull} · ${car.mileageFull} · ${car.fuel} · ${car.transmission} · ${car.accident === "없음" ? "무사고" : "사고이력"}`;
     qs("#detailBadges").innerHTML = car.badges.map((badge) => `<span class="badge">${badge}</span>`).join("");
-    qs("#detailStats").innerHTML = `<span>♥ ${car.likes}</span><span>⊙ ${car.views}</span><span>${car.posted.replace("전", " 전")}</span>`;
+    qs("#detailStats").innerHTML = `<span>추천 ${car.likes}</span><span>조회 ${car.views}</span>`;
     qs("#basicSpecs").innerHTML = specGridMarkup(valueList(car));
     qs("#detailSpecs").innerHTML = specGridMarkup(Object.entries(car.detailSpecs));
 
@@ -808,11 +813,19 @@
 
     qs("#dealerAvatar").src = dealer.avatar;
     qs("#dealerName").innerHTML = `${dealer.name}<span class="dealerBadge">${dealer.type}</span>`;
-    qs("#dealerStats").textContent = `${dealer.selling} · ${dealer.sold}`;
-    qs("#dealerLocation").textContent = `• ${dealer.location}`;
+    qs("#dealerStats").textContent = `★ 5.0 · ${dealer.sold} · ${dealer.selling}`;
+    qs("#dealerLocation").textContent = `● 상담 가능 · 응답률 82%`;
+    qs("#detailLocationLine").textContent = car.location;
+    qs("#detailComplexLine").textContent = car.complex;
+    qs("#detailPostedLine").textContent = `등록 ${car.posted.replace("전", " 전")}`;
     qs("#dealerNo").textContent = dealer.employeeNo;
     qs("#dealerGroup").textContent = dealer.group;
     qs("#dealerPhone").textContent = dealer.phone;
+    qs("#stickyThumb").innerHTML = thumbMarkup(car);
+    qs("#stickyTitle").textContent = car.title;
+    qs("#stickyPrice").textContent = car.price;
+    qs("#stickyMeta").textContent = `${car.yearFull} ${car.mileageFull} ${car.fuel} ${car.transmission}`;
+    qs("#stickyPhone").textContent = dealer.phone;
 
     const similar = cars.filter((item) => item.id !== car.id).slice(0, 6);
     qs("#similarGrid").innerHTML = similar.map((item) => `
@@ -844,8 +857,13 @@
     });
 
     const anchorNav = qs(".detailAnchorNav");
+    const stickySummary = qs(".detailStickySummary");
     if (anchorNav) {
-      const updateAnchorNav = () => anchorNav.classList.toggle("is-visible", window.scrollY > 430);
+      const updateAnchorNav = () => {
+        const isVisible = window.scrollY > 430;
+        anchorNav.classList.toggle("is-visible", isVisible);
+        stickySummary?.classList.toggle("is-visible", isVisible);
+      };
       updateAnchorNav();
       window.addEventListener("scroll", updateAnchorNav, { passive: true });
     }

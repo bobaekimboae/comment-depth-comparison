@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="bobaedream-used-car.css?v=chotot-thumb-20260830">
+<link rel="stylesheet" href="bobaedream-used-car.css?v=chotot-detail-20260830">
 <title>보배드림 중고차 PC 상세</title>
 </head>
 <body data-used-car-detail>
@@ -52,33 +52,42 @@
     </nav>
   </header>
 
+  <div class="detailStickySummary" aria-hidden="true">
+    <div class="detailStickyInner">
+      <span class="stickyThumb" id="stickyThumb"></span>
+      <div class="stickyCopy">
+        <strong id="stickyTitle"></strong>
+        <span><b id="stickyPrice"></b><em id="stickyMeta"></em></span>
+      </div>
+      <button class="stickySave" type="button" data-toggle-heart><span class="heartIcon"></span>찜하기</button>
+      <button class="stickyChat" type="button" data-toast="채팅은 로그인 후 사용할 수 있습니다.">채팅</button>
+      <button class="stickyPhone" type="button" data-toast="전화 연결은 실제로 실행하지 않는 시안입니다." id="stickyPhone"></button>
+    </div>
+  </div>
+
   <main class="detailShell">
     <section class="detailLeft" aria-label="차량 상세 정보">
       <div class="galleryCard" id="detailGallery"></div>
 
-      <article class="overviewCard">
-        <h1 class="detailTitle" id="detailTitle"></h1>
-        <button class="overviewHeart" type="button" data-toggle-heart aria-label="찜하기"><span class="heartIcon"></span></button>
-        <div class="detailSubcopy" id="detailSubcopy"></div>
-        <div class="detailMeta" id="detailMeta"></div>
-        <div class="badgeRow" id="detailBadges"></div>
-        <div class="overviewStats" id="detailStats"></div>
-      </article>
-
       <nav class="detailAnchorNav" aria-label="상세 섹션 이동">
-        <a class="is-active" href="#carInfo">차량 정보</a>
-        <a href="#carOptions">차량 옵션</a>
+        <a class="is-active" href="#descriptionInfo">차량 설명</a>
+        <a href="#carInfo">상세 정보</a>
         <a href="#insuranceInfo">보험 이력</a>
-        <a href="#historyInfo">이력정보</a>
-        <a href="#warrantyInfo">제조사 보증</a>
-        <a href="#sellerCars">딜러 매물</a>
+        <a href="#sellerCars">비슷한 매물</a>
+        <a href="#warrantyInfo">편의 기능</a>
       </nav>
 
+      <section class="infoCard" id="descriptionInfo">
+        <h2>차량 설명</h2>
+        <p class="descText" id="descriptionText"></p>
+      </section>
+
       <section class="infoCard" id="carInfo">
-        <h2>차량 정보</h2>
+        <h2>상세 정보</h2>
+        <h3>차량 상태</h3>
         <div class="specGrid" id="basicSpecs"></div>
         <div class="sectionDivider"></div>
-        <h2>상세 정보</h2>
+        <h3>차량 제원</h3>
         <div class="specGrid" id="detailSpecs"></div>
       </section>
 
@@ -115,11 +124,6 @@
         <p class="descText">보증 만료 또는 별도 고지 조건이 있는 차량입니다. 딜러 상담 시 상품화 점검표와 보증 가능 항목을 함께 확인하세요.</p>
       </section>
 
-      <section class="infoCard" id="descriptionInfo">
-        <h2>차량 설명</h2>
-        <p class="descText" id="descriptionText"></p>
-      </section>
-
       <section class="infoCard" id="sellerCars">
         <h2>딜러 매물</h2>
         <div class="similarGrid" id="similarGrid"></div>
@@ -128,8 +132,33 @@
 
     <aside class="detailRight" aria-label="가격 및 판매자 정보">
       <section class="sideCard priceCard">
-        <div class="priceTop">
+        <div class="sideOverviewHead">
+          <h1 class="detailTitle" id="detailTitle"></h1>
+          <button class="overviewHeart" type="button" data-toggle-heart aria-label="찜하기"><span class="heartIcon"></span></button>
+        </div>
+        <div class="detailMeta" id="detailMeta"></div>
+        <div class="priceLine">
           <strong class="detailPrice" id="detailPrice"></strong>
+          <span class="priceFinance">금융 상담 가능</span>
+        </div>
+        <div class="contactRow">
+          <button class="contactBtn" type="button" data-toast="채팅은 로그인 후 사용할 수 있습니다.">채팅</button>
+          <button class="contactBtn phone" type="button" data-toast="전화 연결은 실제로 실행하지 않는 시안입니다." id="dealerPhone"></button>
+        </div>
+        <div class="sideInfoLine">
+          <span class="sideLineIcon pin" aria-hidden="true"></span>
+          <div>
+            <strong id="detailLocationLine"></strong>
+            <small id="detailComplexLine"></small>
+          </div>
+        </div>
+        <div class="sideInfoLine">
+          <span class="sideLineIcon clock" aria-hidden="true"></span>
+          <span id="detailPostedLine"></span>
+        </div>
+        <div class="badgeRow detailBadgeRow" id="detailBadges"></div>
+        <div class="overviewStats" id="detailStats"></div>
+        <div class="priceTop">
           <button class="outlineBlueBtn" type="button" data-toast="보험료 계산 화면은 시안에서 준비 중입니다.">보험료 계산</button>
         </div>
         <div class="insuranceLine">
@@ -161,9 +190,9 @@
           <div class="dealerInfoRow"><span>종사원번호</span><strong><span id="dealerNo"></span> <u id="dealerGroup"></u></strong></div>
           <div class="dealerInfoRow"><span>매매유형</span><strong>-</strong></div>
         </div>
-        <div class="contactRow">
-          <button class="contactBtn" type="button" data-toast="채팅은 로그인 후 사용할 수 있습니다.">채팅</button>
-          <button class="contactBtn phone" type="button" data-toast="전화 연결은 실제로 실행하지 않는 시안입니다." id="dealerPhone"></button>
+        <div class="dealerQuick">
+          <button class="sellerMessageInput" type="button" data-toast="문의 문구 입력은 시안에서 준비 중입니다.">문의 내용을 입력해 주세요</button>
+          <button class="sellerSendBtn" type="button" data-toast="문의 전송은 실제로 실행하지 않는 시안입니다.">전송</button>
         </div>
         <button class="reportBtn" type="button" data-toast="신고 사유 선택 화면은 시안에서 준비 중입니다.">신고하기</button>
       </section>
@@ -176,7 +205,7 @@
     회사소개 · 제휴/광고문의 · 이용약관 · 제휴/신고센터 · 고객센터 · 청소년보호정책 · 개인정보취급방침
   </footer>
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="bobaedream-used-car-data.js?v=chotot-thumb-20260830"></script>
-  <script src="bobaedream-used-car-interactions.js?v=chotot-thumb-20260830"></script>
+  <script src="bobaedream-used-car-data.js?v=chotot-detail-20260830"></script>
+  <script src="bobaedream-used-car-interactions.js?v=chotot-detail-20260830"></script>
 </body>
 </html>

@@ -1,0 +1,309 @@
+{
+  "metrics": {
+    "contactBtn": {
+      "rect": {
+        "bottom": 334,
+        "h": 40,
+        "right": 1138.4,
+        "w": 210,
+        "x": 928.4,
+        "y": 294
+      },
+      "selector": ".contactBtn",
+      "style": {
+        "background": "rgb(244, 244, 244)",
+        "color": "rgb(34, 34, 34)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "gap": "normal",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "9999px"
+      },
+      "text": "채팅"
+    },
+    "dealerCard": {
+      "rect": {
+        "bottom": 690,
+        "h": 209,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 481
+      },
+      "selector": ".dealerCard",
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "gap": "normal",
+        "lineHeight": "18.9px",
+        "margin": "12px 0px 0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "text": "한강모터스-박성수 ★ 5.0 · 1대 판매완료 · 41대 판매중 ● 상담 가능 · 응답률 82% 문의 내용을 입력해 주세요 전송"
+    },
+    "descriptionInfo": {
+      "rect": {
+        "bottom": 788,
+        "h": 147,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 641
+      },
+      "selector": "#descriptionInfo",
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "gap": "normal",
+        "lineHeight": "18.9px",
+        "margin": "12px 0px 0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다."
+    },
+    "detailMeta": {
+      "rect": {
+        "bottom": 238,
+        "h": 24,
+        "right": 1352.4,
+        "w": 424,
+        "x": 928.4,
+        "y": 214
+      },
+      "selector": ".detailMeta",
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(89, 89, 89)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "gap": "normal",
+        "lineHeight": "24px",
+        "margin": "14px 0px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고"
+    },
+    "detailPrice": {
+      "rect": {
+        "bottom": 286,
+        "h": 36,
+        "right": 1051.6,
+        "w": 123.2,
+        "x": 928.4,
+        "y": 250
+      },
+      "selector": ".detailPrice",
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 25, 59)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "gap": "normal",
+        "lineHeight": "36px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "56,544만원"
+    },
+    "detailShell": {
+      "rect": {
+        "bottom": 2817.1,
+        "h": 2705.1,
+        "right": 1360.4,
+        "w": 1200,
+        "x": 160.4,
+        "y": 112
+      },
+      "selector": ".detailShell",
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "736px 464px",
+        "display": "grid",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "gap": "12px",
+        "lineHeight": "18.9px",
+        "margin": "24px 160.4px 0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다. 상세 정보 차량 상태 연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속"
+    },
+    "detailTitle": {
+      "rect": {
+        "bottom": 200,
+        "h": 72,
+        "right": 1258.4,
+        "w": 330,
+        "x": 928.4,
+        "y": 128
+      },
+      "selector": ".detailTitle",
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(7, 10, 15)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "gap": "normal",
+        "lineHeight": "36px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+    },
+    "galleryStage": {
+      "rect": {
+        "bottom": 524,
+        "h": 412,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 112
+      },
+      "selector": ".galleryStage",
+      "style": {
+        "background": "rgb(32, 32, 32)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "gap": "normal",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "8px"
+      },
+      "text": ""
+    },
+    "header": {
+      "rect": {
+        "bottom": 88,
+        "h": 88,
+        "right": 1520.8,
+        "w": 1520.8,
+        "x": 0,
+        "y": 0
+      },
+      "selector": ".bbHeader",
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "gap": "normal",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "홈 숏폼카 국산차 수입차 매물등록 딜러 부품·용품 커뮤니티 더보기"
+    },
+    "phoneBtn": {
+      "rect": {
+        "bottom": 334,
+        "h": 40,
+        "right": 1352.4,
+        "w": 210,
+        "x": 1142.4,
+        "y": 294
+      },
+      "selector": ".contactBtn.phone",
+      "style": {
+        "background": "rgb(25, 83, 155)",
+        "color": "rgb(255, 255, 255)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "gap": "normal",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "9999px"
+      },
+      "text": "050-4375-0853"
+    },
+    "priceCard": {
+      "rect": {
+        "bottom": 469,
+        "h": 357,
+        "right": 1372.4,
+        "w": 464,
+        "x": 908.4,
+        "y": 112
+      },
+      "selector": ".priceCard",
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "gap": "normal",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 2017년 5월 · 545,454km · 가솔린 · 자동 · 무사고 56,544만원 금융 상담 가능 채팅 050-4375-0853 서울 서초구 오토갤러리 등록 1일 전"
+    },
+    "thumbStrip": {
+      "rect": {
+        "bottom": 629,
+        "h": 85,
+        "right": 1365.4,
+        "w": 1195,
+        "x": 170.4,
+        "y": 544
+      },
+      "selector": ".thumbStrip",
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(16, 17, 20)",
+        "columns": "none",
+        "display": "flex",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "gap": "15px",
+        "lineHeight": "18.9px",
+        "margin": "20px 0px 0px 10px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": ""
+    },
+    "viewport": {
+      "h": 639,
+      "w": 1536
+    }
+  },
+  "consoleErrors": []
+}

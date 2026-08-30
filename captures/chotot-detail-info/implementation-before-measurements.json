@@ -1,0 +1,494 @@
+{
+  "bodyBg": "rgb(244, 244, 245)",
+  "contactBtn": {
+    "rect": {
+      "bottom": 697.8,
+      "h": 40,
+      "right": 1130.4,
+      "w": 182,
+      "x": 948.4,
+      "y": 657.8
+    },
+    "selector": ".contactBtn",
+    "style": {
+      "background": "rgb(240, 240, 241)",
+      "border": "0px none rgb(36, 41, 48)",
+      "color": "rgb(36, 41, 48)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "900",
+      "gap": "normal",
+      "lineHeight": "20.25px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "7px"
+    },
+    "text": "채팅"
+  },
+  "dealerCard": {
+    "rect": {
+      "bottom": 754.8,
+      "h": 299.8,
+      "right": 1340.4,
+      "w": 412,
+      "x": 928.4,
+      "y": 455
+    },
+    "selector": ".dealerCard",
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "12px 0px 0px",
+      "padding": "20px",
+      "radius": "8px"
+    },
+    "text": "한강모터스-박성수딜러 41대 판매중 · 1대 판매완료 • 서울 서초구 종사원번호 11-123-12345 상사/조합정보 매매유형 - 채팅 050-4375-0853 신고하기"
+  },
+  "detailLeft": {
+    "rect": {
+      "bottom": 2988,
+      "h": 2847,
+      "right": 916.4,
+      "w": 736,
+      "x": 180.4,
+      "y": 141
+    },
+    "selector": ".detailLeft",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 ㄴㅇㄹㅎㄴㅇㅎㄴㅇㅎ 61부1808 · 2017년 5월 · 545,454km · 가솔린 인증중고차 1년보증 ♥ 1 ⊙ 29 1일 전 차량 정보 연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 "
+  },
+  "detailMeta": {
+    "rect": {
+      "bottom": 682.8,
+      "h": 20.3,
+      "right": 896.4,
+      "w": 696,
+      "x": 200.4,
+      "y": 662.5
+    },
+    "selector": ".detailMeta",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(46, 52, 61)",
+      "color": "rgb(46, 52, 61)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "800",
+      "gap": "normal",
+      "lineHeight": "20.25px",
+      "margin": "14px 0px 0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "61부1808 · 2017년 5월 · 545,454km · 가솔린"
+  },
+  "detailPrice": {
+    "rect": {
+      "bottom": 195,
+      "h": 32,
+      "right": 1073.3,
+      "w": 124.9,
+      "x": 948.4,
+      "y": 163
+    },
+    "selector": ".detailPrice",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(229, 25, 59)",
+      "color": "rgb(229, 25, 59)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "24px",
+      "fontWeight": "900",
+      "gap": "normal",
+      "lineHeight": "32px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "56,544만원"
+  },
+  "detailRight": {
+    "rect": {
+      "bottom": 754.8,
+      "h": 613.8,
+      "right": 1340.4,
+      "w": 412,
+      "x": 928.4,
+      "y": 141
+    },
+    "selector": ".detailRight",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "56,544만원 보험료 계산 보험이력 0건 › 차량가 56,544만원 이전 등록비(예상) 3,788만원 매도비 44만원 예상 총 비용 60,376만원 비용계산기 동급매물 팔린매물 한강모터스-박성수딜러 41대 판매중 · 1대 판매완료 • 서울 서초구 종사원번호 11-123-12345 상사/조합정보 매매유형 - 채팅 050-"
+  },
+  "detailShell": {
+    "rect": {
+      "bottom": 2988,
+      "h": 2847,
+      "right": 1340.4,
+      "w": 1160,
+      "x": 180.4,
+      "y": 141
+    },
+    "selector": ".detailShell",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "736px 412px",
+      "display": "grid",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "12px",
+      "lineHeight": "18.9px",
+      "margin": "24px 180.4px 0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 ㄴㅇㄹㅎㄴㅇㅎㄴㅇㅎ 61부1808 · 2017년 5월 · 545,454km · 가솔린 인증중고차 1년보증 ♥ 1 ⊙ 29 1일 전 차량 정보 연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 "
+  },
+  "detailThumb": {
+    "rect": {
+      "bottom": 537,
+      "h": 40,
+      "right": 256.4,
+      "w": 58,
+      "x": 198.4,
+      "y": 497
+    },
+    "selector": ".detailThumb",
+    "style": {
+      "background": "rgba(255, 255, 255, 0.45)",
+      "border": "1.6px solid rgb(25, 83, 155)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "6px"
+    },
+    "text": ""
+  },
+  "detailTitle": {
+    "rect": {
+      "bottom": 615,
+      "h": 30,
+      "right": 896.4,
+      "w": 696,
+      "x": 200.4,
+      "y": 585
+    },
+    "selector": ".detailTitle",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(7, 10, 15)",
+      "color": "rgb(7, 10, 15)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "22px",
+      "fontWeight": "800",
+      "gap": "normal",
+      "lineHeight": "30px",
+      "margin": "0px",
+      "padding": "0px 60px 0px 0px",
+      "radius": "0px"
+    },
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩"
+  },
+  "galleryCard": {
+    "rect": {
+      "bottom": 553,
+      "h": 412,
+      "right": 916.4,
+      "w": 736,
+      "x": 180.4,
+      "y": 141
+    },
+    "selector": ".galleryCard",
+    "style": {
+      "background": "rgb(233, 233, 234)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "8px"
+    },
+    "text": ""
+  },
+  "galleryStage": {
+    "rect": {
+      "bottom": 553,
+      "h": 412,
+      "right": 916.4,
+      "w": 736,
+      "x": 180.4,
+      "y": 141
+    },
+    "selector": ".galleryStage",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": ""
+  },
+  "infoCard": {
+    "rect": {
+      "bottom": 1278.9,
+      "h": 525.9,
+      "right": 916.4,
+      "w": 736,
+      "x": 180.4,
+      "y": 753
+    },
+    "selector": ".infoCard",
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "12px 0px 0px",
+      "padding": "20px",
+      "radius": "8px"
+    },
+    "text": "차량 정보 연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 보라색 (외장) 지역 서울 서초구 사고이력 없음 상세 정보 최초등록일 2017년 05월 31일 차종 대형차 최고출력 304마력 최대토크 43kg·m 복합연비 10km/ℓ 전장/전폭/전고 "
+  },
+  "overviewCard": {
+    "rect": {
+      "bottom": 741,
+      "h": 176,
+      "right": 916.4,
+      "w": 736,
+      "x": 180.4,
+      "y": 565
+    },
+    "selector": ".overviewCard",
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "12px 0px 0px",
+      "padding": "20px 20px 16px",
+      "radius": "8px"
+    },
+    "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 ㄴㅇㄹㅎㄴㅇㅎㄴㅇㅎ 61부1808 · 2017년 5월 · 545,454km · 가솔린 인증중고차 1년보증 ♥ 1 ⊙ 29 1일 전"
+  },
+  "phoneBtn": {
+    "rect": {
+      "bottom": 697.8,
+      "h": 40,
+      "right": 1320.4,
+      "w": 182,
+      "x": 1138.4,
+      "y": 657.8
+    },
+    "selector": ".contactBtn.phone",
+    "style": {
+      "background": "rgb(25, 83, 155)",
+      "border": "0px none rgb(255, 255, 255)",
+      "color": "rgb(255, 255, 255)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "900",
+      "gap": "normal",
+      "lineHeight": "20.25px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "7px"
+    },
+    "text": "050-4375-0853"
+  },
+  "priceCard": {
+    "rect": {
+      "bottom": 443,
+      "h": 302,
+      "right": 1340.4,
+      "w": 412,
+      "x": 928.4,
+      "y": 141
+    },
+    "selector": ".priceCard",
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "20px",
+      "radius": "8px"
+    },
+    "text": "56,544만원 보험료 계산 보험이력 0건 › 차량가 56,544만원 이전 등록비(예상) 3,788만원 매도비 44만원 예상 총 비용 60,376만원 비용계산기 동급매물 팔린매물"
+  },
+  "specGrid": {
+    "rect": {
+      "bottom": 995.4,
+      "h": 179.4,
+      "right": 896.4,
+      "w": 696,
+      "x": 200.4,
+      "y": 816
+    },
+    "selector": ".specGrid",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "174px 174px 174px 174px",
+      "display": "grid",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "22px normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 보라색 (외장) 지역 서울 서초구 사고이력 없음"
+  },
+  "specItem": {
+    "rect": {
+      "bottom": 861.2,
+      "h": 45.2,
+      "right": 374.4,
+      "w": 174,
+      "x": 200.4,
+      "y": 816
+    },
+    "selector": ".specItem",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px 20px 0px 0px",
+      "radius": "0px"
+    },
+    "text": "연식 2017년 5월"
+  },
+  "thumbStrip": {
+    "rect": {
+      "bottom": 537,
+      "h": 40,
+      "right": 898.4,
+      "w": 700,
+      "x": 198.4,
+      "y": 497
+    },
+    "selector": ".thumbStrip",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none rgb(16, 17, 20)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "flex",
+      "fontFamily": "\"Reddit Sans\", -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", Helvetica, Arial, NanumGothic, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "8px",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": ""
+  },
+  "url": "http://127.0.0.1:8787/bobaedream-used-car-detail.html",
+  "viewport": {
+    "h": 639,
+    "w": 1536
+  }
+}

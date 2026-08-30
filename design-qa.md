@@ -31,6 +31,72 @@
 
 final result: passed
 
+# Bobaedream Used Car Chotot Detail QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain in the final captured state.
+- [P3] Source media is a portrait video-like car image with black side gutters; the implementation keeps the available Bobaedream landscape vehicle asset while matching the source image frame, thumbnail sizing, and surrounding spacing.
+- [P3] The primary phone CTA uses Bobaedream blue instead of Chotot yellow so the prototype stays aligned with the Bobaedream brand palette.
+
+**Open Questions**
+- None for this pass. The requested scope was PC used-car detail UI/UX typography, spacing, and sizing based on Chotot.
+
+**Implementation Checklist**
+- [x] Captured Chotot detail source from `https://xe.chotot.com/mua-ban-oto-dien-sdfu4` via the first visible listing detail.
+- [x] Rebuilt the detail top layout to `1200px` shell, `736px / 464px` columns, and `12px` gap.
+- [x] Matched the media area: main frame `736 x 412`, thumbnail rail `85px` tall, thumbnails `85 x 85`, `15px` gaps, and `20px` gap below the main image.
+- [x] Moved title, meta, price, contact buttons, location, and posted time into the right `464 x 357` overview card.
+- [x] Added the Chotot-style sticky summary bar and tab row: summary `65px`, tabs `960 x 52`, tab top `71px`.
+- [x] Restyled detail cards to `736px` width, `16px 20px` padding, `12px` radius, `18/27/700` h2, `16/24/500` h3, and `156px` 4-column spec grid.
+
+**Evidence**
+- Source visual truth paths: `captures/chotot-detail-info/source-chotot-detail-top.png`, `captures/chotot-detail-info/source-chotot-detail-mid.png`
+- Implementation screenshot paths: `captures/chotot-detail-info/implementation-final2-top.png`, `captures/chotot-detail-info/implementation-final2-mid.png`
+- Combined comparison images: `captures/chotot-detail-info/comparison-top.png`, `captures/chotot-detail-info/comparison-mid.png`
+- Source measurement paths: `captures/chotot-detail-info/source-chotot-detail-top-precise.json`, `captures/chotot-detail-info/source-chotot-detail-mid-measurements.json`
+- Implementation measurement paths: `captures/chotot-detail-info/implementation-final-top-measurements.json`, `captures/chotot-detail-info/implementation-final2-mid-measurements.json`
+- Viewport: browser CSS viewport `1536 x 639`
+- Source pixels: top `1526 x 635`, mid `1526 x 635`; implementation pixels: top `1521 x 633`, mid `1521 x 633`; same browser density, screenshot width differs only by visible scrollbar/chrome capture behavior.
+- State: PC used-car detail top and PC used-car detail at scrollY `650.4`.
+- Full-view comparison evidence: source and implementation now share the same above-the-fold content positions: source image `x=162.8 y=111.4 w=736 h=412`; implementation image `x=160.4 y=112 w=736 h=412`; source right card `x=910.8 y=111.4 w=464 h=357`; implementation right card `x=908.4 y=112 w=464 h=357`; source thumbnail rail begins at `y=543`, implementation at `y=544`.
+- Focused region comparison evidence: source and implementation spec cards both render at `736px` width with inner content `696px`, h2 `18/27/700`, h3 `16/24/500`, and spec grid `156px 156px 156px 156px`.
+- Primary interactions tested: gallery thumbnail click swaps the main image, sticky summary appears after scroll, tab clicks scroll to matching sections, favorite buttons toggle, contact buttons show toast feedback.
+- Console errors checked: no document-originated browser console errors in the final implementation capture.
+
+**Required Fidelity Surfaces**
+
+### Fonts and Typography
+
+- Source uses `Reddit Sans`; implementation uses the existing `Reddit Sans` stack.
+- Top title matches `24px / 36px / 700`; metadata matches `16px / 24px / 400`; price matches `24px / 36px / 700`; CTA labels match `16px / 24px / 700`.
+- Detail card h2/h3/spec text matches the measured Chotot scale.
+
+### Spacing and Layout Rhythm
+
+- Main detail shell, columns, major cards, thumbnail rail, sticky summary, sticky tabs, and spec grid match source-measured dimensions within normal browser scrollbar variance.
+- Detail-only header was compacted so the content starts at `y=112`, matching the Chotot source `y=111.4`.
+
+### Colors and Visual Tokens
+
+- Background, white card surfaces, black active tab underline, gray metadata, and red price token match the Chotot detail rhythm.
+- Bobaedream blue is intentionally retained for primary phone/send CTAs.
+
+### Image Quality and Asset Fidelity
+
+- Main image and thumbnails use real local vehicle assets. Frame size and rail sizing match source; the actual source media subject/aspect ratio is intentionally not copied.
+
+### Copy and Content
+
+- Source Vietnamese listing content is replaced with the Bobaedream used-car virtual scenario content while preserving equivalent roles: title, year, mileage, fuel, transmission, price, seller, location, posted time, description, and spec tables.
+
+**Comparison History**
+1. Captured Chotot top and mid detail screenshots and DOM measurements.
+2. First implementation pass matched the main shell, right overview card, thumbnail rail, and detail spec typography.
+3. QA found the fixed tab row lacked Chotot's sticky summary bar and overlapped content at scroll.
+4. Added a `65px` sticky summary bar, moved the tab row to `top=71px`, recaptured top/mid states, and verified no console errors.
+
+final result: passed
+
 # Bobaedream Used Car Chotot Listing Info QA
 
 **Findings**

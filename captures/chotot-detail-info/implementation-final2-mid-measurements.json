@@ -1,0 +1,121 @@
+{
+  "metrics": {
+    "anchorNav": {
+      "rect": {
+        "bottom": 123,
+        "h": 52,
+        "right": 1240.4,
+        "w": 960,
+        "x": 280.4,
+        "y": 71
+      },
+      "selector": ".detailAnchorNav",
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "columns": "none",
+        "display": "flex",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "차량 설명 상세 정보 보험 이력 비슷한 매물 편의 기능"
+    },
+    "carInfo": {
+      "rect": {
+        "bottom": 669.6,
+        "h": 520,
+        "right": 896.4,
+        "w": 736,
+        "x": 160.4,
+        "y": 149.6
+      },
+      "selector": "#carInfo",
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "12px 0px 0px",
+        "padding": "16px 20px",
+        "radius": "12px"
+      },
+      "text": "상세 정보 차량 상태 연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 보라색 (외장) 지역 서울 서초구 사고이력 없음 차량 제원 최초등록일 2017년 05월 31일 차종 대형차 최고출력 304마력 최대토크 43kg·m 복합연비 10km/ℓ 전장/"
+    },
+    "scrollY": 650.4000244140625,
+    "specGrid": {
+      "rect": {
+        "bottom": 410.6,
+        "h": 170,
+        "right": 876.4,
+        "w": 696,
+        "x": 180.4,
+        "y": 240.6
+      },
+      "selector": "#basicSpecs",
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "columns": "156px 156px 156px 156px",
+        "display": "grid",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 보라색 (외장) 지역 서울 서초구 사고이력 없음"
+    },
+    "sticky": {
+      "rect": {
+        "bottom": 65,
+        "h": 65,
+        "right": 1520.8,
+        "w": 1520.8,
+        "x": 0,
+        "y": 0
+      },
+      "selector": ".detailStickySummary",
+      "style": {
+        "background": "rgb(255, 255, 255)",
+        "columns": "none",
+        "display": "block",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 56,544만원 2017년 5월 545,454km 가솔린 자동 찜하기 채팅 050-4375-0853"
+    },
+    "stickyInner": {
+      "rect": {
+        "bottom": 65,
+        "h": 65,
+        "right": 1240.4,
+        "w": 960,
+        "x": 280.4,
+        "y": 0
+      },
+      "selector": ".detailStickyInner",
+      "style": {
+        "background": "rgba(0, 0, 0, 0)",
+        "columns": "48px 492px 96px 72px 204px",
+        "display": "grid",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "18.9px",
+        "margin": "0px 280.4px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 56,544만원 2017년 5월 545,454km 가솔린 자동 찜하기 채팅 050-4375-0853"
+    }
+  },
+  "consoleErrors": []
+}

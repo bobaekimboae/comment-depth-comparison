@@ -1,0 +1,257 @@
+{
+  "activeAnchor": {
+    "rect": {
+      "bottom": 51.6,
+      "h": 52,
+      "right": 368.8,
+      "w": 88.4,
+      "x": 280.4,
+      "y": -0.4
+    },
+    "selector": ".detailAnchorNav .is-active",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(34, 34, 34)",
+      "columns": "none",
+      "display": "flex",
+      "fontSize": "14px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "lineHeight": "20px",
+      "margin": "0px",
+      "padding": "16px",
+      "radius": "0px"
+    },
+    "text": "차량 설명"
+  },
+  "anchorNav": {
+    "rect": {
+      "bottom": 52,
+      "h": 52,
+      "right": 1240.4,
+      "w": 960,
+      "x": 280.4,
+      "y": 0
+    },
+    "selector": ".detailAnchorNav",
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "flex",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "0px",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "차량 설명 상세 정보 보험 이력 비슷한 매물 편의 기능"
+  },
+  "carInfo": {
+    "rect": {
+      "bottom": 669.6,
+      "h": 520,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": 149.6
+    },
+    "selector": "#carInfo",
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "12px 0px 0px",
+      "padding": "16px 20px",
+      "radius": "12px"
+    },
+    "text": "상세 정보 차량 상태 연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 보라색 (외장) 지역 서울 서초구 사고이력 없음 차량 제원 최초등록일 2017년 05월 31일 차종 대형차 최고출력 304마력 최대토크 43kg·m 복합연비 10km/ℓ 전장/전폭/전고 4,995 × 1,925 × 1,465 인승 5인승 압류/저당"
+  },
+  "descriptionInfo": {
+    "rect": {
+      "bottom": 137.6,
+      "h": 147,
+      "right": 896.4,
+      "w": 736,
+      "x": 160.4,
+      "y": -9.4
+    },
+    "selector": "#descriptionInfo",
+    "style": {
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "12px 0px 0px",
+      "padding": "16px 20px",
+      "radius": "12px"
+    },
+    "text": "차량 설명 오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다. AWD 사양, 보험 이력 공개, 주요 옵션 작동 확인 완료 상태로 상담 예약 후 실차 확인 가능합니다. 장거리 주행 이력이 있는 차량이라 하체와 소모품 상태를 중심으로 별도 점검 내역을 준비했습니다."
+  },
+  "infoH2": {
+    "rect": {
+      "bottom": 192.6,
+      "h": 27,
+      "right": 876.4,
+      "w": 696,
+      "x": 180.4,
+      "y": 165.6
+    },
+    "selector": "#carInfo h2",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(34, 34, 34)",
+      "columns": "none",
+      "display": "block",
+      "fontSize": "18px",
+      "fontWeight": "700",
+      "gap": "normal",
+      "lineHeight": "27px",
+      "margin": "0px 0px 16px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "상세 정보"
+  },
+  "infoH3": {
+    "rect": {
+      "bottom": 232.6,
+      "h": 24,
+      "right": 876.4,
+      "w": 696,
+      "x": 180.4,
+      "y": 208.6
+    },
+    "selector": "#carInfo h3",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(34, 34, 34)",
+      "columns": "none",
+      "display": "block",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "gap": "normal",
+      "lineHeight": "24px",
+      "margin": "0px 0px 8px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "차량 상태"
+  },
+  "scrollY": 650.4000244140625,
+  "specGrid": {
+    "rect": {
+      "bottom": 410.6,
+      "h": 170,
+      "right": 876.4,
+      "w": 696,
+      "x": 180.4,
+      "y": 240.6
+    },
+    "selector": "#basicSpecs",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "156px 156px 156px 156px",
+      "display": "grid",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "16px 24px",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "연식 2017년 5월 주행거리 545,454km 연료 가솔린 차량번호 61부1808 변속기 자동 배기량 3,342 cc 색상 보라색 (외장) 지역 서울 서초구 사고이력 없음"
+  },
+  "specItem": {
+    "rect": {
+      "bottom": 286.6,
+      "h": 46,
+      "right": 336.4,
+      "w": 156,
+      "x": 180.4,
+      "y": 240.6
+    },
+    "selector": "#basicSpecs .specItem",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(16, 17, 20)",
+      "columns": "none",
+      "display": "block",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "18.9px",
+      "margin": "0px",
+      "padding": "0px 12px 0px 0px",
+      "radius": "0px"
+    },
+    "text": "연식 2017년 5월"
+  },
+  "specLabel": {
+    "rect": {
+      "bottom": 261.6,
+      "h": 21,
+      "right": 323.6,
+      "w": 143.2,
+      "x": 180.4,
+      "y": 240.6
+    },
+    "selector": "#basicSpecs .specLabel",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(140, 140, 140)",
+      "columns": "none",
+      "display": "block",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "21px",
+      "margin": "0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "연식"
+  },
+  "specValue": {
+    "rect": {
+      "bottom": 286.6,
+      "h": 21,
+      "right": 323.6,
+      "w": 143.2,
+      "x": 180.4,
+      "y": 265.6
+    },
+    "selector": "#basicSpecs .specValue",
+    "style": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(34, 34, 34)",
+      "columns": "none",
+      "display": "block",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "gap": "normal",
+      "lineHeight": "21px",
+      "margin": "4px 0px 0px",
+      "padding": "0px",
+      "radius": "0px"
+    },
+    "text": "2017년 5월"
+  },
+  "viewport": {
+    "h": 639,
+    "w": 1536
+  }
+}
