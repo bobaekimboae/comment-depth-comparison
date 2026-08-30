@@ -1,0 +1,418 @@
+{
+  "listContainer": {
+    "rect": {
+      "bottom": 5588.2,
+      "height": 5024.8,
+      "right": 910.8,
+      "width": 876,
+      "x": 34.8,
+      "y": 563.4
+    },
+    "style": {
+      "borderBottomColor": "rgb(34, 34, 34)",
+      "borderBottomWidth": "0px",
+      "borderRadius": "0px",
+      "borderTopColor": "rgb(34, 34, 34)",
+      "borderTopWidth": "0px",
+      "boxSizing": "border-box",
+      "display": "block",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "height": "5024.8px",
+      "marginBottom": "0px",
+      "marginTop": "1px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px",
+      "width": "876px"
+    },
+    "text": "Tin ưu tiên 9 VF3 TRẢ TRƯỚC 45TR, KHÔNG CẦN CHỨNG MINH THU NHẬP 2026 Mới Điện Tự động 278.000.000 đ Tp Hồ Chí Minh Ms Phương Thảo Vinfast 5.0 1 đã bán Chat Tin ưu tiên 6 VF3 2025 Mua Pin, Độ 15tr 2025"
+  },
+  "rows": [
+    {
+      "index": 0,
+      "innerCandidate": {
+        "rect": {
+          "bottom": 756.2,
+          "height": 192.8,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 563.4
+        },
+        "style": {
+          "borderBottomColor": "rgb(244, 244, 244)",
+          "borderBottomWidth": "0.8px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "flex",
+          "gap": "12px",
+          "gridTemplateColumns": "none",
+          "height": "192.8px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "16px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "16px",
+          "width": "836px"
+        }
+      },
+      "linkCandidate": {
+        "rect": {
+          "bottom": 739.4,
+          "height": 160,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 579.4
+        },
+        "style": {
+          "borderBottomColor": "rgb(48, 107, 217)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(48, 107, 217)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "grid",
+          "gap": "0px",
+          "gridTemplateColumns": "176px 660px",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "836px"
+        }
+      },
+      "rect": {
+        "bottom": 756.2,
+        "height": 192.8,
+        "right": 910.8,
+        "width": 876,
+        "x": 34.8,
+        "y": 563.4
+      },
+      "style": {
+        "borderBottomColor": "rgb(34, 34, 34)",
+        "borderBottomWidth": "0px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(34, 34, 34)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "list-item",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "height": "192.8px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "20px",
+        "paddingRight": "20px",
+        "paddingTop": "0px",
+        "width": "876px"
+      },
+      "text": "Tin ưu tiên 9 VF3 TRẢ TRƯỚC 45TR, KHÔNG CẦN CHỨNG MINH THU NHẬP 2026 Mới Điện Tự động 278.000.000 đ Tp Hồ Chí Minh Ms Phương Thảo Vinfast 5.0 1 đã bán Chat"
+    },
+    {
+      "index": 1,
+      "innerCandidate": {
+        "rect": {
+          "bottom": 949,
+          "height": 192.8,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 756.2
+        },
+        "style": {
+          "borderBottomColor": "rgb(244, 244, 244)",
+          "borderBottomWidth": "0.8px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "flex",
+          "gap": "12px",
+          "gridTemplateColumns": "none",
+          "height": "192.8px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "16px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "16px",
+          "width": "836px"
+        }
+      },
+      "linkCandidate": {
+        "rect": {
+          "bottom": 932.2,
+          "height": 160,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 772.2
+        },
+        "style": {
+          "borderBottomColor": "rgb(48, 107, 217)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(48, 107, 217)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "grid",
+          "gap": "0px",
+          "gridTemplateColumns": "176px 660px",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "836px"
+        }
+      },
+      "rect": {
+        "bottom": 949,
+        "height": 192.8,
+        "right": 910.8,
+        "width": 876,
+        "x": 34.8,
+        "y": 756.2
+      },
+      "style": {
+        "borderBottomColor": "rgb(34, 34, 34)",
+        "borderBottomWidth": "0px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(34, 34, 34)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "list-item",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "height": "192.8px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "20px",
+        "paddingRight": "20px",
+        "paddingTop": "0px",
+        "width": "876px"
+      },
+      "text": "Tin ưu tiên 6 VF3 2025 Mua Pin, Độ 15tr 2025 32.000 km Điện Tự động 230.000.000 đ Tp Hồ Chí Minh Sơn Thuỷ 4.8 2 đã bán Chat"
+    },
+    {
+      "index": 2,
+      "innerCandidate": {
+        "rect": {
+          "bottom": 1141.8,
+          "height": 192.8,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 949
+        },
+        "style": {
+          "borderBottomColor": "rgb(244, 244, 244)",
+          "borderBottomWidth": "0.8px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "flex",
+          "gap": "12px",
+          "gridTemplateColumns": "none",
+          "height": "192.8px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "16px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "16px",
+          "width": "836px"
+        }
+      },
+      "linkCandidate": {
+        "rect": {
+          "bottom": 1125,
+          "height": 160,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 965
+        },
+        "style": {
+          "borderBottomColor": "rgb(48, 107, 217)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(48, 107, 217)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "grid",
+          "gap": "0px",
+          "gridTemplateColumns": "176px 660px",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "836px"
+        }
+      },
+      "rect": {
+        "bottom": 1141.8,
+        "height": 192.8,
+        "right": 910.8,
+        "width": 876,
+        "x": 34.8,
+        "y": 949
+      },
+      "style": {
+        "borderBottomColor": "rgb(34, 34, 34)",
+        "borderBottomWidth": "0px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(34, 34, 34)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "list-item",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "height": "192.8px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "20px",
+        "paddingRight": "20px",
+        "paddingTop": "0px",
+        "width": "876px"
+      },
+      "text": "Tin ưu tiên 10 VinFast VF5 Plus 2024 pin mua sạc miễn phí 2024 169.999 km Điện Tự động 318.000.000 đ Hậu Giang (TP Cần Thơ mới) Minh Khôi 1.0 8 đã bán Chat"
+    },
+    {
+      "index": 3,
+      "innerCandidate": {
+        "rect": {
+          "bottom": 1334.6,
+          "height": 192.8,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 1141.8
+        },
+        "style": {
+          "borderBottomColor": "rgb(244, 244, 244)",
+          "borderBottomWidth": "0.8px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "flex",
+          "gap": "12px",
+          "gridTemplateColumns": "none",
+          "height": "192.8px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "16px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "16px",
+          "width": "836px"
+        }
+      },
+      "linkCandidate": {
+        "rect": {
+          "bottom": 1317.8,
+          "height": 160,
+          "right": 890.8,
+          "width": 836,
+          "x": 54.8,
+          "y": 1157.8
+        },
+        "style": {
+          "borderBottomColor": "rgb(48, 107, 217)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(48, 107, 217)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "grid",
+          "gap": "0px",
+          "gridTemplateColumns": "176px 660px",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "836px"
+        }
+      },
+      "rect": {
+        "bottom": 1334.6,
+        "height": 192.8,
+        "right": 910.8,
+        "width": 876,
+        "x": 34.8,
+        "y": 1141.8
+      },
+      "style": {
+        "borderBottomColor": "rgb(34, 34, 34)",
+        "borderBottomWidth": "0px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(34, 34, 34)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "list-item",
+        "gap": "normal",
+        "gridTemplateColumns": "none",
+        "height": "192.8px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "20px",
+        "paddingRight": "20px",
+        "paddingTop": "0px",
+        "width": "876px"
+      },
+      "text": "Tin ưu tiên 9 🚗VF5 TRẢ TRƯỚC 0 ĐỒNG, BAO HS KHÓ, VAY 90% 2025 Mới Điện Tự động 446.000.000 đ Tp Hồ Chí Minh Ms Phương Thảo Vinfast 5.0 1 đã bán Chat"
+    }
+  ],
+  "separatorIntervals": [
+    {
+      "bottomToBottom": 192.8,
+      "firstBottomToNextTop": 0,
+      "from": 0,
+      "to": 1,
+      "topToTop": 192.8
+    },
+    {
+      "bottomToBottom": 192.8,
+      "firstBottomToNextTop": 0,
+      "from": 1,
+      "to": 2,
+      "topToTop": 192.8
+    },
+    {
+      "bottomToBottom": 192.8,
+      "firstBottomToNextTop": 0,
+      "from": 2,
+      "to": 3,
+      "topToTop": 192.8
+    }
+  ],
+  "url": "https://xe.chotot.com/mua-ban-oto-dien-sdfu4",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}

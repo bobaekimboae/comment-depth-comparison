@@ -1,0 +1,446 @@
+{
+  "listContainer": {
+    "rect": {
+      "bottom": 2583,
+      "height": 2123,
+      "right": 1240,
+      "width": 876,
+      "x": 364,
+      "y": 460
+    },
+    "style": {
+      "borderBottomColor": "rgb(16, 17, 20)",
+      "borderBottomWidth": "0px",
+      "borderRadius": "0px 0px 10px 10px",
+      "borderTopColor": "rgb(16, 17, 20)",
+      "borderTopWidth": "0px",
+      "boxSizing": "border-box",
+      "display": "block",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "height": "2123px",
+      "marginBottom": "0px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px",
+      "width": "876px"
+    }
+  },
+  "mainColumn": {
+    "rect": {
+      "bottom": 2665,
+      "height": 2527,
+      "right": 1240,
+      "width": 876,
+      "x": 364,
+      "y": 138
+    },
+    "style": {
+      "borderBottomColor": "rgb(16, 17, 20)",
+      "borderBottomWidth": "0px",
+      "borderRadius": "0px",
+      "borderTopColor": "rgb(16, 17, 20)",
+      "borderTopWidth": "0px",
+      "boxSizing": "border-box",
+      "display": "block",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "height": "2527px",
+      "marginBottom": "0px",
+      "marginTop": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "paddingTop": "0px",
+      "width": "876px"
+    }
+  },
+  "rows": [
+    {
+      "index": 0,
+      "rect": {
+        "bottom": 653,
+        "height": 193,
+        "right": 1220,
+        "width": 836,
+        "x": 384,
+        "y": 460
+      },
+      "style": {
+        "borderBottomColor": "rgb(238, 238, 239)",
+        "borderBottomWidth": "0.8px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(16, 17, 20)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "grid",
+        "gap": "16px",
+        "gridTemplateColumns": "160px 660px",
+        "height": "193px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "16px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "paddingTop": "16px",
+        "width": "836px"
+      },
+      "text": "1일전 10 제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩 17년05월(18년형) · 54만km · 가솔린 · 자동 56,544만원 서울 서초구 · 오토갤러리 한강모터스-박성수 딜러 · 판매중 41대",
+      "thumb": {
+        "rect": {
+          "bottom": 636,
+          "height": 160,
+          "right": 544,
+          "width": 160,
+          "x": 384,
+          "y": 476
+        },
+        "style": {
+          "borderBottomColor": "rgb(16, 17, 20)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "8px",
+          "borderTopColor": "rgb(16, 17, 20)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "160px"
+        }
+      },
+      "title": {
+        "rect": {
+          "bottom": 500,
+          "height": 24,
+          "right": 867.24,
+          "width": 307.24,
+          "x": 560,
+          "y": 476
+        },
+        "style": {
+          "borderBottomColor": "rgb(34, 34, 34)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "24px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "307.237px"
+        }
+      }
+    },
+    {
+      "index": 1,
+      "rect": {
+        "bottom": 846,
+        "height": 193,
+        "right": 1220,
+        "width": 836,
+        "x": 384,
+        "y": 653
+      },
+      "style": {
+        "borderBottomColor": "rgb(238, 238, 239)",
+        "borderBottomWidth": "0.8px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(16, 17, 20)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "grid",
+        "gap": "16px",
+        "gridTemplateColumns": "160px 660px",
+        "height": "193px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "16px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "paddingTop": "16px",
+        "width": "836px"
+      },
+      "text": "1일전 3 캐딜락 에스컬레이드 (GMT 900) 6.0 HEV 26년04월 · 700km · 가솔린 · 자동 19,200만원 서울 서초구 · 오토갤러리 한강모터스-박성수 딜러 · 판매중 41대",
+      "thumb": {
+        "rect": {
+          "bottom": 829,
+          "height": 160,
+          "right": 544,
+          "width": 160,
+          "x": 384,
+          "y": 669
+        },
+        "style": {
+          "borderBottomColor": "rgb(16, 17, 20)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "8px",
+          "borderTopColor": "rgb(16, 17, 20)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "160px"
+        }
+      },
+      "title": {
+        "rect": {
+          "bottom": 693,
+          "height": 24,
+          "right": 844.98,
+          "width": 284.98,
+          "x": 560,
+          "y": 669
+        },
+        "style": {
+          "borderBottomColor": "rgb(34, 34, 34)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "24px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "284.975px"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "rect": {
+        "bottom": 1039,
+        "height": 193,
+        "right": 1220,
+        "width": 836,
+        "x": 384,
+        "y": 846
+      },
+      "style": {
+        "borderBottomColor": "rgb(238, 238, 239)",
+        "borderBottomWidth": "0.8px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(16, 17, 20)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "grid",
+        "gap": "16px",
+        "gridTemplateColumns": "160px 660px",
+        "height": "193px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "16px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "paddingTop": "16px",
+        "width": "836px"
+      },
+      "text": "1일전 3 랜드로버 레인지로버 (L322) 4.4 V8 HSE 25년12월 · 8천km · 가솔린 · 자동 24,800만원 서울 서초구 · 오토갤러리 한강모터스-박성수 딜러 · 판매중 41대",
+      "thumb": {
+        "rect": {
+          "bottom": 1022,
+          "height": 160,
+          "right": 544,
+          "width": 160,
+          "x": 384,
+          "y": 862
+        },
+        "style": {
+          "borderBottomColor": "rgb(16, 17, 20)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "8px",
+          "borderTopColor": "rgb(16, 17, 20)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "160px"
+        }
+      },
+      "title": {
+        "rect": {
+          "bottom": 886,
+          "height": 24,
+          "right": 834.81,
+          "width": 274.81,
+          "x": 560,
+          "y": 862
+        },
+        "style": {
+          "borderBottomColor": "rgb(34, 34, 34)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "24px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "274.812px"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "rect": {
+        "bottom": 1232,
+        "height": 193,
+        "right": 1220,
+        "width": 836,
+        "x": 384,
+        "y": 1039
+      },
+      "style": {
+        "borderBottomColor": "rgb(238, 238, 239)",
+        "borderBottomWidth": "0.8px",
+        "borderRadius": "0px",
+        "borderTopColor": "rgb(16, 17, 20)",
+        "borderTopWidth": "0px",
+        "boxSizing": "border-box",
+        "display": "grid",
+        "gap": "16px",
+        "gridTemplateColumns": "160px 660px",
+        "height": "193px",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "paddingBottom": "16px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "paddingTop": "16px",
+        "width": "836px"
+      },
+      "text": "1일전 3 벤츠 GLE클래스 (W167) GLE 450 4매틱 23년12월(24년형) · 4만km · 가솔린 · 자동 8,950만원 서울 서초구 · 오토갤러리 한강모터스-박성수 딜러 · 판매중 41대",
+      "thumb": {
+        "rect": {
+          "bottom": 1215,
+          "height": 160,
+          "right": 544,
+          "width": 160,
+          "x": 384,
+          "y": 1055
+        },
+        "style": {
+          "borderBottomColor": "rgb(16, 17, 20)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "8px",
+          "borderTopColor": "rgb(16, 17, 20)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "160px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "160px"
+        }
+      },
+      "title": {
+        "rect": {
+          "bottom": 1079,
+          "height": 24,
+          "right": 831.6,
+          "width": 271.6,
+          "x": 560,
+          "y": 1055
+        },
+        "style": {
+          "borderBottomColor": "rgb(34, 34, 34)",
+          "borderBottomWidth": "0px",
+          "borderRadius": "0px",
+          "borderTopColor": "rgb(34, 34, 34)",
+          "borderTopWidth": "0px",
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "height": "24px",
+          "marginBottom": "0px",
+          "marginTop": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "paddingRight": "0px",
+          "paddingTop": "0px",
+          "width": "271.6px"
+        }
+      }
+    }
+  ],
+  "separatorIntervals": [
+    {
+      "bottomToBottom": 193,
+      "firstBottomToNextTop": 0,
+      "from": 0,
+      "to": 1,
+      "topToTop": 193
+    },
+    {
+      "bottomToBottom": 193,
+      "firstBottomToNextTop": 0,
+      "from": 1,
+      "to": 2,
+      "topToTop": 193
+    },
+    {
+      "bottomToBottom": 193,
+      "firstBottomToNextTop": 0,
+      "from": 2,
+      "to": 3,
+      "topToTop": 193
+    }
+  ],
+  "url": "https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-used-car-list.html?v=2c4b1f6-list-width-divider",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}

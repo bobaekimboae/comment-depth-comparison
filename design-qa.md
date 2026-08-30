@@ -128,6 +128,37 @@ final result: passed
 
 final result: passed
 
+# Bobaedream Used Car Chotot List Width Divider QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The Bobaedream list column width and repeated listing-row separator rhythm match Chotot.
+
+**Implementation Checklist**
+- [x] Measured Chotot's list container, first four listing rows, inner content lane, and top-to-top row intervals.
+- [x] Measured the deployed Bobaedream list container, first four listing rows, inner content lane, and top-to-top row intervals.
+- [x] Confirmed no CSS width or row-height change is needed.
+
+**Evidence**
+- Source screenshot: `captures/chotot-list-width-divider/source-chotot-list-width-divider.png`
+- Source metrics: `captures/chotot-list-width-divider/source-chotot-list-width-divider.json`
+- Implementation screenshot: `captures/chotot-list-width-divider/impl-bobae-list-width-divider.png`
+- Implementation metrics: `captures/chotot-list-width-divider/impl-bobae-list-width-divider.json`
+- Combined comparison image: `captures/chotot-list-width-divider/comparison-chotot-vs-bobae-list-width-divider.png`
+- Viewport: `1280 x 720`
+- State: desktop used-car listing rows, list view.
+
+**Measured Pass**
+- Chotot list column: `876px`.
+- Chotot inner content lane: `836px`.
+- Chotot listing row repeat: `192.8px` top-to-top and bottom-to-bottom, `0px` gap between one row bottom and the next row top.
+- Bobaedream list column: `876px`.
+- Bobaedream inner row/content lane: `836px`.
+- Bobaedream listing row repeat: `193px` top-to-top and bottom-to-bottom, `0px` gap between one row bottom and the next row top.
+- Difference: `0.2px`, from Chotot's fractional browser layout; visually equivalent at `1x` density.
+
+final result: passed
+
 # Bobaedream Export Mobile List QA
 
 **Findings**
