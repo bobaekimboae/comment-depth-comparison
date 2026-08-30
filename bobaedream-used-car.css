@@ -3321,23 +3321,27 @@ html.bobae-main-page body {
   word-break: keep-all;
 }
 
-.bobae-main-page .bbHeaderInner,
+.bobae-main-page .bbHeaderInner {
+  width: min(1280px, calc(100% - 160px));
+  margin: 0 auto;
+}
+
 .mainHomeShell {
   width: min(1200px, calc(100% - 80px));
   margin: 0 auto;
 }
 
 body[data-bobae-main] .bbHeaderTop {
-  height: 29px;
+  height: 32px;
   border-bottom: 1px solid #f0f1f3;
 }
 
 body[data-bobae-main] .bbHeader {
-  height: 85px;
+  height: 96px;
 }
 
 body[data-bobae-main] .bbHeaderTop .bbHeaderInner {
-  height: 29px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3351,15 +3355,15 @@ body[data-bobae-main] .bbLogo {
 }
 
 body[data-bobae-main] .bbHeaderActions {
-  height: 56px;
+  height: 64px;
   flex: 0 0 auto;
   margin-left: 0;
-  gap: 14px;
+  gap: 16px;
 }
 
 .bbTopIconAction {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3384,18 +3388,30 @@ body[data-bobae-main] .bbHeaderActions {
   background: #d9dde5;
 }
 
+.bbAuthAction {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  color: #0d1c63;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .bbSellChip {
-  height: 36px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  padding: 0 17px;
+  padding: 0 20px;
   border-radius: 4px;
-  background: var(--blue);
+  background: #0d1c63;
   color: #fff;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 900;
   white-space: nowrap;
 }
@@ -3403,35 +3419,39 @@ body[data-bobae-main] .bbHeaderActions {
 body[data-bobae-main] .bbHeaderLinks {
   flex: 0 0 auto;
   gap: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
 }
 
 body[data-bobae-main] .bbHeaderLinks a {
-  height: 29px;
+  height: 32px;
   position: relative;
   display: inline-flex;
   align-items: center;
 }
 
 body[data-bobae-main] .bbHeaderLinks a + a {
-  margin-left: 13px;
-  padding-left: 13px;
+  margin-left: 14px;
+  padding-left: 14px;
 }
 
 body[data-bobae-main] .bbHeaderLinks a + a::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 9px;
+  top: 10px;
   width: 1px;
-  height: 11px;
+  height: 12px;
   background: #dfe3e8;
 }
 
 body[data-bobae-main] .bbFamilyNav {
-  height: 29px;
+  height: 32px;
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
   min-width: 0;
   overflow-x: auto;
   scrollbar-width: none;
@@ -3442,48 +3462,41 @@ body[data-bobae-main] .bbFamilyNav::-webkit-scrollbar {
 }
 
 body[data-bobae-main] .bbFamilyLink {
-  height: 29px;
+  height: 32px;
   position: relative;
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-  color: #454b56;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 750;
+  color: #555;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
   white-space: nowrap;
 }
 
 body[data-bobae-main] .bbFamilyLink.is-active {
-  color: #0a0c10;
-  font-weight: 900;
+  color: #333;
+  font-weight: 700;
 }
 
 body[data-bobae-main] .bbFamilyLink.is-active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  border-radius: 2px 2px 0 0;
-  background: #101114;
+  display: none;
 }
 
 body[data-bobae-main] .bbNav {
-  height: 56px;
+  height: 64px;
   border-top: 0;
 }
 
 body[data-bobae-main] .bbNav .bbHeaderInner {
-  height: 56px;
+  height: 64px;
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 28px;
 }
 
 body[data-bobae-main] .bbNavList {
-  height: 56px;
+  height: 64px;
   flex: 1 1 auto;
   gap: 22px;
   min-width: 0;
@@ -3496,9 +3509,11 @@ body[data-bobae-main] .bbNavList::-webkit-scrollbar {
 }
 
 body[data-bobae-main] .bbNavLink {
-  height: 56px;
-  font-size: 14px;
-  font-weight: 850;
+  height: 64px;
+  color: #0d1c63;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 750;
 }
 
 body[data-bobae-main] .bbNavMore {
@@ -3539,17 +3554,17 @@ body[data-bobae-main] .bbNavLink.is-active::after {
 
 .mainHeroCopy h1 {
   margin: 10px 0 0;
-  font-size: 42px;
-  line-height: 52px;
+  font-size: 32px;
+  line-height: 48px;
   letter-spacing: 0;
-  font-weight: 950;
+  font-weight: 800;
 }
 
 .mainHeroCopy p {
   margin: 12px 0 0;
   color: rgba(255, 255, 255, .88);
-  font-size: 17px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 700;
 }
 
@@ -4272,12 +4287,12 @@ body[data-bobae-main] .footer {
   }
 
   body[data-bobae-main] .bbHeaderTop .bbHeaderInner {
-    width: max-content;
-    min-width: 100%;
+    width: 100%;
+    min-width: 0;
     height: 34px;
-    justify-content: flex-start;
-    gap: 20px;
-    overflow: visible;
+    justify-content: space-between;
+    gap: 12px;
+    overflow: hidden;
   }
 
   body[data-bobae-main] .bbHeaderTop .bbHeaderLinks {
@@ -4286,7 +4301,8 @@ body[data-bobae-main] .footer {
     gap: 0;
     padding-left: 12px;
     border-left: 1px solid #e2e5ea;
-    font-size: 11px;
+    font-size: 12px;
+    line-height: 18px;
   }
 
   body[data-bobae-main] .bbHeaderInner {
@@ -4295,35 +4311,45 @@ body[data-bobae-main] .footer {
   }
 
   body[data-bobae-main] .bbLogo {
-    flex: 0 0 102px;
-    width: 102px;
-    height: 25px;
+    flex: 0 0 92px;
+    width: 92px;
+    height: 23px;
   }
 
   body[data-bobae-main] .bbHeaderActions {
     height: 54px;
     flex: 0 0 auto;
     display: flex;
-    gap: 7px;
+    gap: 5px;
   }
 
   body[data-bobae-main] .bbTopIconAction {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 
   body[data-bobae-main] .bbTopIconAction img {
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
   }
 
   body[data-bobae-main] .bbHeaderDivider {
     height: 18px;
   }
 
+  body[data-bobae-main] .bbAuthAction {
+    width: 78px;
+    height: 30px;
+    overflow: hidden;
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 800;
+    text-overflow: clip;
+  }
+
   body[data-bobae-main] .bbSellChip {
     height: 30px;
-    padding: 0 10px;
+    padding: 0 9px;
     font-size: 12px;
     line-height: 17px;
   }
@@ -4359,16 +4385,17 @@ body[data-bobae-main] .footer {
 
   body[data-bobae-main] .bbNav .bbHeaderInner {
     height: 54px;
-    padding: 0 16px;
-    gap: 10px;
+    padding: 0 12px;
+    gap: 8px;
   }
 
   body[data-bobae-main] .bbNavList {
     height: 54px;
-    flex: 1 1 auto;
+    flex: 0 0 42px;
+    width: 42px;
     gap: 20px;
     min-width: 0;
-    overflow-x: auto;
+    overflow: hidden;
     padding: 0;
   }
 
