@@ -1,0 +1,106 @@
+{
+  "itemCount": 12,
+  "activeCount": 4,
+  "loadedIconCount": 11,
+  "brokenIconLabels": [],
+  "items": [
+    {
+      "label": "선루프",
+      "active": false,
+      "src": "assets/used-car/options/s03-30-option-sunroof.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "LED 헤드램프",
+      "active": false,
+      "src": "assets/used-car/options/s03-31-option-led-headlamp.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "어댑티브 크루즈 컨트롤",
+      "active": false,
+      "src": "assets/used-car/options/s03-32-option-adaptive-cruise.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "후방카메라",
+      "active": false,
+      "src": "assets/used-car/options/s03-33-option-rear-camera.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "어라운드뷰",
+      "active": true,
+      "src": "assets/used-car/options/s03-34-option-around-view.png",
+      "naturalWidth": 144,
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "스마트키",
+      "active": false,
+      "src": "assets/used-car/options/s03-35-option-smart-key.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "순정 내비게이션",
+      "active": false,
+      "src": "assets/used-car/options/s03-36-option-navigation.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "열선시트",
+      "active": false,
+      "src": "assets/used-car/options/s03-37-option-heated-seat.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "통풍시트",
+      "active": true,
+      "src": "assets/used-car/options/s03-38-option-ventilated-seat.png",
+      "naturalWidth": 144,
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "헤드업 디스플레이",
+      "active": true,
+      "src": null,
+      "naturalWidth": 0,
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "전동트렁크",
+      "active": true,
+      "src": "assets/used-car/options/s03-40-option-power-trunk.png",
+      "naturalWidth": 144,
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "전방충돌방지",
+      "active": false,
+      "src": "assets/used-car/options/s03-41-option-collision-warning.png",
+      "naturalWidth": 144,
+      "color": "rgb(139, 144, 152)",
+      "glyphBackground": "rgba(0, 0, 0, 0)"
+    }
+  ],
+  "consoleMessages": [],
+  "pageErrors": []
+}

@@ -1712,19 +1712,35 @@ body[data-used-car-list] .listShell .viewLine {
   display: grid;
   place-items: center;
   border-radius: 50%;
+  background: transparent;
+}
+
+.optionGlyph img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  opacity: .48;
+}
+
+.optionGlyphFallback {
   background: #f5f6f7;
   color: #adb1b7;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 900;
 }
 
 .optionItem.is-on {
-  color: #343941;
+  color: var(--blue);
 }
 
 .optionItem.is-on .optionGlyph {
   background: var(--blue-soft);
   color: var(--blue);
+}
+
+.optionItem.is-on .optionGlyph img {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(38%) saturate(1524%) hue-rotate(183deg) brightness(87%) contrast(95%);
 }
 
 .selectedOption {

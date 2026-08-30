@@ -1,0 +1,288 @@
+{
+  "url": "http://127.0.0.1:4177/bobaedream-used-car-detail.html?id=d8yrckju0e&v=option-icons-local-2",
+  "viewport": {
+    "width": 1536,
+    "height": 695
+  },
+  "scrollWidth": 1536,
+  "carOptionsRect": {
+    "x": 168,
+    "y": 175,
+    "w": 736,
+    "h": 345
+  },
+  "itemCount": 12,
+  "loadedIconCount": 11,
+  "fallbackLabels": [
+    "39:헤드업 디스플레이"
+  ],
+  "brokenIconLabels": [],
+  "items": [
+    {
+      "label": "선루프",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-30-option-sunroof.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 188,
+        "y": 234,
+        "w": 108,
+        "h": 87
+      },
+      "glyphRect": {
+        "x": 222,
+        "y": 234,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "LED 헤드램프",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-31-option-led-headlamp.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 306,
+        "y": 234,
+        "w": 108,
+        "h": 87
+      },
+      "glyphRect": {
+        "x": 339,
+        "y": 234,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "어댑티브 크루즈 컨트롤",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-32-option-adaptive-cruise.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 423,
+        "y": 234,
+        "w": 108,
+        "h": 87
+      },
+      "glyphRect": {
+        "x": 457,
+        "y": 234,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "후방카메라",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-33-option-rear-camera.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 541,
+        "y": 234,
+        "w": 108,
+        "h": 87
+      },
+      "glyphRect": {
+        "x": 575,
+        "y": 234,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "어라운드뷰",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-34-option-around-view.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 659,
+        "y": 234,
+        "w": 108,
+        "h": 87
+      },
+      "glyphRect": {
+        "x": 692,
+        "y": 234,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "스마트키",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-35-option-smart-key.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 776,
+        "y": 234,
+        "w": 108,
+        "h": 87
+      },
+      "glyphRect": {
+        "x": 810,
+        "y": 234,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "순정 내비게이션",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-36-option-navigation.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 188,
+        "y": 342,
+        "w": 108,
+        "h": 78
+      },
+      "glyphRect": {
+        "x": 222,
+        "y": 342,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "열선시트",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-37-option-heated-seat.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 306,
+        "y": 342,
+        "w": 108,
+        "h": 78
+      },
+      "glyphRect": {
+        "x": 339,
+        "y": 342,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "통풍시트",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-38-option-ventilated-seat.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 423,
+        "y": 342,
+        "w": 108,
+        "h": 78
+      },
+      "glyphRect": {
+        "x": 457,
+        "y": 342,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "헤드업 디스플레이",
+      "active": true,
+      "fallbackText": "39",
+      "src": null,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "rect": {
+        "x": 541,
+        "y": 342,
+        "w": 108,
+        "h": 78
+      },
+      "glyphRect": {
+        "x": 575,
+        "y": 342,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "전동트렁크",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-40-option-power-trunk.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 659,
+        "y": 342,
+        "w": 108,
+        "h": 78
+      },
+      "glyphRect": {
+        "x": 692,
+        "y": 342,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    },
+    {
+      "label": "전방충돌방지",
+      "active": true,
+      "fallbackText": null,
+      "src": "assets/used-car/options/s03-41-option-collision-warning.png",
+      "naturalWidth": 144,
+      "naturalHeight": 144,
+      "rect": {
+        "x": 776,
+        "y": 342,
+        "w": 108,
+        "h": 78
+      },
+      "glyphRect": {
+        "x": 810,
+        "y": 342,
+        "w": 40,
+        "h": 40
+      },
+      "color": "rgb(25, 83, 155)",
+      "glyphBackground": "rgb(238, 245, 255)"
+    }
+  ],
+  "consoleMessages": [],
+  "pageErrors": []
+}

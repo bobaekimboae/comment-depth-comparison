@@ -4,6 +4,37 @@
   const dealers = data.dealers || {};
   const categories = data.categories || [];
   const params = new URLSearchParams(window.location.search);
+  const optionIconBase = "assets/used-car/options/";
+  const optionIconFiles = {
+    "선루프": "s03-30-option-sunroof.png",
+    "파노라마 선루프": "s03-30-option-sunroof.png",
+    "LED 헤드램프": "s03-31-option-led-headlamp.png",
+    "어댑티브 크루즈": "s03-32-option-adaptive-cruise.png",
+    "어댑티브 크루즈 컨트롤": "s03-32-option-adaptive-cruise.png",
+    "후방카메라": "s03-33-option-rear-camera.png",
+    "어라운드뷰": "s03-34-option-around-view.png",
+    "스마트키": "s03-35-option-smart-key.png",
+    "순정 내비게이션": "s03-36-option-navigation.png",
+    "내비게이션": "s03-36-option-navigation.png",
+    "열선시트": "s03-37-option-heated-seat.png",
+    "통풍시트": "s03-38-option-ventilated-seat.png",
+    "전동트렁크": "s03-40-option-power-trunk.png",
+    "전방충돌방지": "s03-41-option-collision-warning.png"
+  };
+  const optionIconNumbers = {
+    "선루프": "30",
+    "LED 헤드램프": "31",
+    "어댑티브 크루즈 컨트롤": "32",
+    "후방카메라": "33",
+    "어라운드뷰": "34",
+    "스마트키": "35",
+    "순정 내비게이션": "36",
+    "열선시트": "37",
+    "통풍시트": "38",
+    "헤드업 디스플레이": "39",
+    "전동트렁크": "40",
+    "전방충돌방지": "41"
+  };
 
   const moneyToNumber = (value) => Number(String(value || "0").replace(/[^\d]/g, ""));
   const sortOptions = [
@@ -768,6 +799,14 @@
     `).join("");
   }
 
+  function optionIconMarkup(option, index) {
+    const fileName = optionIconFiles[option];
+    if (!fileName) {
+      return `<span class="optionGlyph optionGlyphFallback">${optionIconNumbers[option] || String(index + 1).padStart(2, "0")}</span>`;
+    }
+    return `<span class="optionGlyph"><img src="${optionIconBase}${fileName}" alt="" loading="lazy" decoding="async"></span>`;
+  }
+
   function setupDetailPage() {
     const root = qs("[data-used-car-detail]");
     if (!root) return;
@@ -819,7 +858,7 @@
     const allOptions = ["선루프", "LED 헤드램프", "어댑티브 크루즈 컨트롤", "후방카메라", "어라운드뷰", "스마트키", "순정 내비게이션", "열선시트", "통풍시트", "헤드업 디스플레이", "전동트렁크", "전방충돌방지"];
     qs("#optionGrid").innerHTML = allOptions.map((option, index) => `
       <div class="optionItem${car.options.includes(option) ? " is-on" : ""}">
-        <span class="optionGlyph">${String(index + 1).padStart(2, "0")}</span>
+        ${optionIconMarkup(option, index)}
         <span>${option}</span>
       </div>
     `).join("");

@@ -1,3 +1,29 @@
+# Bobaedream Used Car Option Icon Replacement QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after the first option icon replacement pass.
+- [P3] `s03-39-option-head-up-display` was not included in the supplied local PNG files, so `헤드업 디스플레이` keeps a `39` fallback badge until the source icon is provided.
+
+**Implementation Checklist**
+- [x] Read the supplied Google Sheet and confirmed the `아이콘관련` tab maps option icons `S03-30` through `S03-41` to the detail vehicle option area.
+- [x] Copied the 11 supplied PNG files into `assets/used-car/options/`.
+- [x] Replaced the detail-page numeric option badges with real PNG icon rendering for sunroof, LED headlamp, adaptive cruise, rear camera, around view, smart key, navigation, heated seat, ventilated seat, power trunk, and collision warning.
+- [x] Preserved active/inactive state styling with the Bobaedream blue palette and kept the existing 6-column option rhythm.
+
+**Evidence**
+- Implementation active-state screenshot: `captures/option-icons-20260831/detail-option-icons-1536.png`
+- Implementation inactive-state screenshot: `captures/option-icons-20260831/detail-option-icons-inactive-1536.png`
+- Active-state metrics: `captures/option-icons-20260831/detail-option-icons-1536.json`
+- Inactive-state metrics: `captures/option-icons-20260831/detail-option-icons-inactive-1536.json`
+- Source mapping: Google Sheet `아이콘관련` tab, rows `30` through `41`.
+
+**Measured Pass**
+- Active-detail check: `loadedIconCount=11`, `brokenIconLabels=[]`, `fallbackLabels=["39:헤드업 디스플레이"]`.
+- Inactive-detail check: `activeCount=4`, `loadedIconCount=11`, `brokenIconLabels=[]`.
+- Console and page errors checked: no document-originated errors.
+
+final result: passed
+
 # Bobaedream Used Car Pretendard Typography QA
 
 **Findings**
