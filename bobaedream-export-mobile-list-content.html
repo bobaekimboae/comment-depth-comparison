@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="bobaedream-used-car.css?v=chotot-spacing-20260830">
+<link rel="stylesheet" href="bobaedream-export-mobile-list.css?v=export-en-20260830b">
+<title>Bobaedream Export Cars</title>
+</head>
+<body class="exportMobileBody">
+  <section class="mobileCarApp exportMobileApp" data-export-mobile-list aria-label="Bobaedream export car list">
+    <header class="mobileTopBar">
+      <button class="mobileBackBtn" type="button" data-toast="Back navigation is not connected in this list mockup." aria-label="Back"></button>
+      <button class="mobileSearchPill" type="button" data-toast="Search input is ready for export keyword wiring.">
+        <span class="mobileSearchIcon"></span>
+        <strong>Export Cars</strong>
+        <span class="mobileBookmark"></span>
+      </button>
+      <button class="mobileHeartBtn" type="button" data-toast="Saved export cars will be connected later." aria-label="Saved cars"></button>
+      <button class="mobileChatBtn" type="button" data-toast="Buyer inquiry inbox will be connected later." aria-label="Inquiries"></button>
+    </header>
+
+    <div class="mobileRegionRow exportPortRow">
+      <button class="mobileRegionBtn" type="button" data-open-sheet="port"><span class="mobilePin"></span>Ship from: <strong id="mobilePortLabel">Korea</strong></button>
+      <button class="mobileResetInline" type="button" data-mobile-reset>Reset</button>
+    </div>
+
+    <nav class="mobileChipScroller" aria-label="Export car filters">
+      <button class="mobileChip" type="button" data-open-sheet="filter"><span class="mobileTuneIcon"></span>Filter</button>
+      <button class="mobileChip is-dark" type="button" data-mobile-reset>Export Ready <span>x</span></button>
+      <button class="mobileChip" type="button" data-open-sheet="maker"><span id="mobileMakerLabel">Maker</span></button>
+      <button class="mobileChip" type="button" data-open-sheet="year"><span id="mobileYearLabel">Year</span></button>
+      <button class="mobileChip" type="button" data-open-sheet="price"><span id="mobilePriceLabel">FOB Price</span></button>
+      <button class="mobileChip" type="button" data-open-sheet="fuel"><span id="mobileFuelLabel">Fuel</span></button>
+      <button class="mobileChip" type="button" data-open-sheet="seller"><span id="mobileSellerLabel">Seller</span></button>
+    </nav>
+
+    <nav class="mobileCategoryRail" id="mobileCategoryRail" aria-label="Vehicle categories"></nav>
+
+    <div class="mobileToolbar exportToolbar">
+      <label class="mobileVideoToggle">
+        <span>Video Units</span>
+        <button class="switch" type="button" id="mobileVideoSwitch" aria-label="Video units toggle"></button>
+      </label>
+      <div class="mobileSellerTabs">
+        <button class="mobileSellerTab is-active" type="button" data-mobile-seller="all">All</button>
+        <button class="mobileSellerTab" type="button" data-mobile-seller="dealer">Dealer</button>
+        <button class="mobileSellerTab" type="button" data-mobile-seller="private">Private</button>
+      </div>
+      <button class="mobileSortButton" type="button" data-open-sheet="sort"><span id="mobileSortLabel">Latest</span></button>
+      <button class="mobileViewButton" type="button" data-toast="List view is fixed for this export mockup." aria-label="List view"></button>
+    </div>
+
+    <div class="exportStatusStrip">
+      <span id="exportResultCount">Featured export-ready units</span>
+      <strong>FOB Korea</strong>
+    </div>
+
+    <div class="mobileCarRows" id="mobileCarRows"></div>
+
+    <nav class="mobileBottomNav" aria-label="Mobile bottom navigation">
+      <a class="is-active" href="#"><span></span>Home</a>
+      <a href="#" data-toast="Buyer inquiries will be connected later."><span></span>Inquiries</a>
+      <button class="mobilePlus" type="button" data-toast="Export listing registration will be connected later.">+</button>
+      <a href="#" data-toast="Export lounge will be connected later."><span></span>Lounge</a>
+      <a href="#" data-toast="My export account will be connected later."><span></span>My</a>
+    </nav>
+
+    <div class="mobileSheetLayer" id="mobileSheetLayer" aria-hidden="true">
+      <button class="mobileSheetBackdrop" type="button" data-close-sheet aria-label="Close"></button>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="filter" role="dialog" aria-modal="true" aria-label="Filter">
+        <header class="mobileSheetHeader">
+          <strong>Filter</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="Close"></button>
+        </header>
+        <div class="mobileFilterIntro exportFilterIntro">
+          <div><button class="switch is-on" type="button" aria-label="Export ready fixed"></button><span>Export-ready only</span></div>
+          <button type="button" data-toast="Recent export searches will be connected later.">Recent 0</button>
+          <button class="mobileSaveCondition" type="button" data-toast="Export search condition saved.">Save Search</button>
+        </div>
+        <div class="mobileSheetScroll">
+          <button class="mobileFilterRow" type="button" data-open-sheet="category">Vehicle Type <small id="filterCategoryLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="maker">Maker / Model <small id="filterMakerLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="year">Model Year <small id="filterYearLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="price">FOB Price <small id="filterPriceLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="mileage">Mileage <small id="filterMileageLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="fuel">Fuel Type <small id="filterFuelLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="transmission">Transmission <small id="filterTransmissionLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="steering">Steering <small id="filterSteeringLabel">LHD</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="port">Ship From <small id="filterPortLabel">Korea</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="seller">Seller Type <small id="filterSellerLabel">All</small></button>
+          <button class="mobileFilterRow" type="button" data-open-sheet="documents">Export Documents <small id="filterDocsLabel">Ready</small></button>
+        </div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>Reset</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span id="mobileApplyCount">View units</span></button>
+        </footer>
+      </section>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="maker" role="dialog" aria-modal="true" aria-label="Maker selection">
+        <header class="mobileSheetHeader">
+          <strong>Maker / Model</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="Close"></button>
+        </header>
+        <div class="mobileSheetScroll makerList" id="mobileMakerList"></div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>Reset</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span>Apply</span></button>
+        </footer>
+      </section>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="port" role="dialog" aria-modal="true" aria-label="Ship from">
+        <header class="mobileSheetHeader">
+          <strong>Ship From</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="Close"></button>
+        </header>
+        <div class="mobileSheetScroll">
+          <div class="mobileOptionGrid" id="mobilePortGrid"></div>
+        </div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>Reset</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span>Apply</span></button>
+        </footer>
+      </section>
+
+      <section class="mobileSheet mobileSheetPop" data-sheet="sort" role="dialog" aria-modal="true" aria-label="Sort">
+        <header class="mobileSheetHeader">
+          <strong>Sort</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="Close"></button>
+        </header>
+        <div class="mobileActionList" id="mobileSortList"></div>
+      </section>
+
+      <section class="mobileSheet mobileSheetFull" data-sheet="generic" role="dialog" aria-modal="true" aria-label="Condition selection">
+        <header class="mobileSheetHeader">
+          <strong id="genericSheetTitle">Select</strong>
+          <button class="mobileSheetClose" type="button" data-close-sheet aria-label="Close"></button>
+        </header>
+        <div class="mobileSheetScroll">
+          <div class="mobileOptionGrid" id="genericSheetOptions"></div>
+        </div>
+        <footer class="mobileSheetFooter">
+          <button class="mobileOutlineButton" type="button" data-mobile-reset>Reset</button>
+          <button class="mobilePrimaryButton" type="button" data-apply-sheet><span>Apply</span></button>
+        </footer>
+      </section>
+    </div>
+  </section>
+
+  <script src="bobaedream-export-mobile-list.js?v=export-en-20260830b" defer></script>
+</body>
+</html>

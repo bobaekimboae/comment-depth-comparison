@@ -17,7 +17,7 @@
 | S00 | 댓글/보기 방식 연구소 | 연구소 | LAB | `comment-ui-lab.html`, `depth-viewer.html`, `board-view-sheet-prototype.html` | 참고/실험 |
 | S01 | 보배드림 커뮤니티 모바일 | 커뮤모바일 | `S01-M-L`, `S01-M-D`, `S01-M-시트` | `naver-cafe-list.html`, `naver-cafe-detail.html`, `board-view-sheet-prototype.html` | 모바일 기준 시안 |
 | S02 | 보배드림 커뮤니티 PC | 커뮤PC | `S02-P-L`, `S02-P-D`, `S02-P-W`, `S02-P-C` | `bobaedream-pc-board-list.html`, `bobaedream-pc-board-detail.html` | 리스트/상세/글쓰기/댓글 동작 완료 |
-| S03 | 보배드림 중고차 매물 | 중고차 | `S03-P-L`, `S03-P-D`, `S03-M-L`, `S03-M-필터` | `bobaedream-used-car-list.html`, `bobaedream-used-car-detail.html` | PC 리스트/상세, 모바일 리스트/필터 시트 완료 |
+| S03 | 보배드림 중고차 매물 | 중고차 | `S03-P-L`, `S03-P-D`, `S03-M-L`, `S03-M-필터`, `S03-M-EX-L` | `bobaedream-used-car-list.html`, `bobaedream-used-car-detail.html`, `bobaedream-export-mobile-list.html` | PC 리스트/상세, 모바일 리스트/필터 시트, 수출용 영문 모바일 리스트 완료 |
 
 ## 활성 배포 URL
 
@@ -29,6 +29,7 @@
 | S02-P-D | 커뮤니티 PC 상세 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-pc-board-detail.html |
 | S03-P/M-L | 중고차 매물 리스트 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-used-car-list.html |
 | S03-P-D | 중고차 매물 상세 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-used-car-detail.html?id=d8yrckju0e |
+| S03-M-EX-L | 중고차 수출용 영문 모바일 리스트 | https://bobaekimboae.github.io/comment-depth-comparison/bobaedream-export-mobile-list.html |
 
 ## 작업 우선순위 원칙
 

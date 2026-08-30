@@ -1,0 +1,267 @@
+:root {
+  --export-blue: #19539b;
+  --export-green: #1f8f66;
+  --export-text: #11151b;
+  --export-muted: #707782;
+}
+
+.exportPreviewPage {
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 16px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: #eef0f3;
+  color: var(--export-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Helvetica, Arial, "Malgun Gothic", sans-serif;
+}
+
+.exportDeviceFrame {
+  width: 390px;
+  height: 844px;
+  overflow: hidden;
+  border: 1px solid #d9dde3;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(10, 18, 30, .18);
+}
+
+.exportDeviceFrame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #fff;
+}
+
+.exportMobileBody {
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+}
+
+@media (max-width: 767px) {
+  .exportPreviewPage {
+    display: block;
+    padding: 0;
+    background: #fff;
+  }
+
+  .exportDeviceFrame {
+    width: 100vw;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .exportMobileApp .mobileTopBar {
+    border-bottom: 1px solid #f0f1f3;
+  }
+
+  .exportMobileApp .mobileSearchPill strong {
+    min-width: 0;
+    overflow: hidden;
+    color: #22272f;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .exportPortRow {
+    border-bottom: 1px solid #f4f5f7;
+  }
+
+  .exportMobileApp .mobileChipScroller {
+    height: 50px;
+  }
+
+  .exportMobileApp .mobileCategoryRail {
+    height: 86px;
+    padding-bottom: 13px;
+    gap: 25px;
+  }
+
+  .exportMobileApp .mobileCategoryBtn {
+    font-size: 12px;
+  }
+
+  .exportToolbar.mobileToolbar {
+    min-height: 92px;
+  }
+
+  .exportToolbar .mobileVideoToggle {
+    justify-content: space-between;
+  }
+
+  .exportToolbar .mobileSellerTabs {
+    gap: 23px;
+  }
+
+  .exportToolbar .mobileSellerTab,
+  .exportToolbar .mobileSortButton {
+    font-size: 13px;
+  }
+
+  .exportToolbar .mobileSortButton {
+    padding: 0 10px;
+  }
+
+  .exportStatusStrip {
+    height: 36px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid #eef0f2;
+    background: #fff;
+    color: var(--export-muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .exportStatusStrip span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .exportStatusStrip strong {
+    flex: 0 0 auto;
+    color: var(--export-blue);
+    font-size: 12px;
+    font-weight: 950;
+  }
+
+  .exportMobileApp .mobileCarRow {
+    min-height: 205px;
+    grid-template-columns: 124px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .exportMobileApp .mobileThumb {
+    width: 124px;
+    height: 124px;
+  }
+
+  .exportMobileApp .mobileThumb img {
+    object-fit: cover;
+  }
+
+  .exportMobileApp .mobileRowBody {
+    padding-right: 25px;
+  }
+
+  .exportMobileApp .mobileRowTitle {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .exportMobileApp .mobileRowMeta {
+    height: auto;
+    max-height: 38px;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .exportMobileApp .mobileRowBadges {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .exportMobileApp .badge {
+    height: 20px;
+    padding: 0 5px;
+    font-size: 11px;
+  }
+
+  .exportMobileApp .badge.is-green {
+    background: #eaf8f1;
+    color: var(--export-green);
+  }
+
+  .exportMobileApp .badge.is-blue {
+    background: #edf5ff;
+    color: var(--export-blue);
+  }
+
+  .exportMobileApp .mobileLocation {
+    margin-top: 10px;
+    padding-right: 58px;
+    overflow: hidden;
+    color: #626974;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .exportMobileApp .mobileDealer {
+    margin-top: 7px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .exportMobileApp .mobileDealer span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .exportMobileApp .mobileViews {
+    bottom: 51px;
+    font-size: 12px;
+  }
+
+  .exportMobileApp .mobileRowHeart {
+    bottom: 19px;
+  }
+
+  .exportMobileApp .mobileRowHeart.is-active .heartIcon::before,
+  .exportMobileApp .mobileRowHeart.is-active .heartIcon::after {
+    color: var(--price);
+  }
+
+  .exportMobileApp .mobileFilterRow small {
+    min-width: 0;
+    margin-left: auto;
+    margin-right: 12px;
+    overflow: hidden;
+    color: #8a9099;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .exportFilterIntro {
+    min-height: 112px;
+  }
+
+  .exportMobileApp .mobileActionList button {
+    padding: 0 42px 0 14px;
+    text-align: left;
+  }
+
+  .exportMobileApp .mobileOptionButton {
+    height: auto;
+    min-height: 24px;
+    line-height: 18px;
+  }
+
+  .exportMobileApp .mobileOptionCount {
+    white-space: nowrap;
+  }
+
+  .exportMobileApp .mobileBottomNav a,
+  .exportMobileApp .mobileBottomNav button {
+    font-size: 10.5px;
+  }
+}

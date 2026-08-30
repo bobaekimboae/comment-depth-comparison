@@ -31,6 +31,36 @@
 
 final result: passed
 
+# Bobaedream Export Mobile List QA
+
+**Findings**
+- No actionable P0/P1/P2 issues in the final captured state.
+- The export page intentionally ships as a mobile-list-only preview with no detail route; title/thumb clicks show a scoped toast.
+
+**Implementation Checklist**
+- [x] Added `bobaedream-export-mobile-list.html` as the public PC-friendly mobile preview wrapper.
+- [x] Added `bobaedream-export-mobile-list-content.html` for the actual mobile list surface.
+- [x] Reused the existing S03 mobile list structure and visual rhythm while replacing copy with English export-market terminology.
+- [x] Added realistic export inventory scenarios: FOB price, ship-from port, LHD, inspection, export documents, seller type, video unit state, and export-ready badges.
+- [x] Added mobile interactions for seller tabs, video-only filtering, maker selection, category filtering, sorting, favorites, reset, and export filter sheets.
+- [x] Registered `S03-M-EX-L` in the work index.
+
+**Evidence**
+- Final wrapper capture: `captures/export-mobile-list/export-mobile-wrapper-top.png`
+- Filtered state capture: `captures/export-mobile-list/export-mobile-wrapper-dealer-video.png`
+- Source/target comparison capture: `captures/export-mobile-list/comparison-source-vs-export-frames.png`
+
+**Measured Pass**
+- Wrapper frame computed size: `390px x 844px`; iframe computed size: `390px x 844px`.
+- iframe viewport width: `390px`; rendered content scroll width: `375px`, with no horizontal overflow.
+- Base list renders 8 featured export-ready units from a virtual total of 286.
+- Visible text Korean check: passed, no Korean characters in the export mobile surface.
+- Interaction counts: base 8 rows, `Dealer` tab 7 rows, `Video Units` toggle 4 rows, `Dealer + Video + Kia` maker selection 1 row.
+- `node --check bobaedream-export-mobile-list.js`: passed.
+- `git diff --check` on touched files: passed.
+
+final result: passed
+
 # Bobaedream Used Car Active GNB QA
 
 **Findings**
