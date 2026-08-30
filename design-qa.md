@@ -7,6 +7,7 @@
 **Implementation Checklist**
 - [x] Changed `.bbNavLink.is-active::after` from `var(--blue)` to `#101114`.
 - [x] Verified the active menu remains `홈` and the underline keeps the existing `3px` height.
+- [x] Added a stylesheet version query to the list/detail pages so GitHub Pages and browser caches load the updated CSS immediately.
 
 **Evidence**
 - Implementation screenshot path: `captures/used-car-implementation/list-active-gnb-black-1440.png`
@@ -14,6 +15,7 @@
 - Viewport: `1440 x 520`
 - State: desktop used-car list top header.
 - Focused region comparison evidence: active GNB underline computed as `rgb(16, 17, 20)` with `3px` height.
+- Cache pass: list/detail pages load `bobaedream-used-car.css?v=gnb-black-20260830`.
 
 final result: passed
 
