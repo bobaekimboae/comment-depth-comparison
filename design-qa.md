@@ -1,3 +1,37 @@
+# Bobaedream Used Car Chotot Sticky Summary QA
+
+**Findings**
+- No actionable P0/P1/P2 issues remain after the sticky summary correction.
+- [P3] The fixed CTA phone button keeps Bobaedream blue instead of Chotot yellow, consistent with the current Bobaedream brand adaptation used in prior detail-page passes.
+
+**Implementation Checklist**
+- [x] Captured the live Chotot detail page from `https://xe.chotot.com/mua-ban-oto-huyen-chau-thanh-kien-giang/134278607.htm`.
+- [x] Measured the source sticky state at scroll `358px`: full-width fixed layer `1536px x 124px`, inner row `960px x 68px`, tab row `960px x 52px`, and `z-index: 200`.
+- [x] Moved the Bobaedream detail section tabs inside `.detailStickySummary` so the summary row and tabs behave as one fixed layer.
+- [x] Matched the source sticky summary geometry: centered inner lane `x=288 w=960`, thumbnail `48px`, title/price lane `506px`, save `106px`, chat `68px`, phone `200px`.
+- [x] Matched the source timing by showing the sticky summary after early detail scroll, around `320px`.
+- [x] Updated tab clicks to scroll sections below the `124px` fixed summary instead of hiding headings underneath it.
+
+**Evidence**
+- Source visual truth path: `captures/chotot-sticky-summary/source-scroll360.png`
+- Source metrics path: `captures/chotot-sticky-summary/source-sticky-measurements.json`
+- Implementation screenshot path: `captures/chotot-sticky-summary/implementation-scroll360.png`
+- Implementation tab-click screenshot path: `captures/chotot-sticky-summary/implementation-after-tab-click.png`
+- Implementation metrics path: `captures/chotot-sticky-summary/implementation-sticky-measurements.json`
+- Combined comparison image: `captures/chotot-sticky-summary/comparison-source-vs-implementation-sticky-summary.png`
+- Viewport: Chrome CSS viewport `1536px x 695px`, device scale factor `1`
+- State: PC used-car detail page after scroll, sticky vehicle summary visible.
+
+**Measured Pass**
+- Source sticky layer: `position: fixed`, `top: 0`, `z-index: 200`, rect `x=0 y=0 w=1536 h=124`.
+- Source summary content: inner lane `x=288 y=0 w=960 h=68`, title `x=344 y=10`, save `x=858 y=14 w=105.5 h=40`, chat `x=971.5 y=14 w=68.2 h=40`, phone `x=1047.7 y=14 w=200.3 h=40`, tab row `x=288 y=71 w=960 h=52`.
+- Implementation hidden state: at scroll `300px`, sticky summary is `display: none` and `aria-hidden=true`.
+- Implementation visible state: at scroll `360px`, sticky layer rect `x=0 y=0 w=1536 h=124`, inner lane `x=288 y=0 w=960 h=68`, thumbnail `48px`, title `x=344 y=10 w=506 h=24`, save `x=858 y=14 w=106 h=40`, chat `x=972 y=14 w=68 h=40`, phone `x=1048 y=14 w=200 h=40`, tab row `x=288 y=71 w=960 h=52`.
+- Tab interaction pass: clicking `상세 정보` scrolls to the detail section with the heading visible below the fixed summary and sets the active tab to `상세 정보`.
+- Console and page errors checked: no document-originated errors.
+
+final result: passed
+
 # Bobaedream Used Car Chotot Thumbnail Gesture QA
 
 **Findings**

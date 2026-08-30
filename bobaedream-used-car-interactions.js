@@ -948,23 +948,38 @@
     });
     renderThumbTrack();
 
-    qsa(".detailAnchorNav a").forEach((link) => {
+    const anchorLinks = qsa(".detailAnchorNav a");
+    const stickySummary = qs(".detailStickySummary");
+    const stickyOffset = 136;
+    const stickyThreshold = 320;
+    const setActiveAnchor = (activeLink) => {
+      anchorLinks.forEach((item) => item.classList.toggle("is-active", item === activeLink));
+    };
+
+    anchorLinks.forEach((link) => {
       link.addEventListener("click", (event) => {
         event.preventDefault();
-        qsa(".detailAnchorNav a").forEach((item) => item.classList.remove("is-active"));
-        link.classList.add("is-active");
         const target = qs(link.getAttribute("href"));
-        target?.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (!target) return;
+        setActiveAnchor(link);
+        const top = target.getBoundingClientRect().top + window.scrollY - stickyOffset;
+        window.scrollTo({ top, behavior: "smooth" });
       });
     });
 
-    const anchorNav = qs(".detailAnchorNav");
-    const stickySummary = qs(".detailStickySummary");
-    if (anchorNav) {
+    if (stickySummary) {
+      const sectionTargets = anchorLinks
+        .map((link) => ({ link, target: qs(link.getAttribute("href")) }))
+        .filter((item) => item.target);
       const updateAnchorNav = () => {
-        const isVisible = window.scrollY > 430;
-        anchorNav.classList.toggle("is-visible", isVisible);
-        stickySummary?.classList.toggle("is-visible", isVisible);
+        const isVisible = window.scrollY > stickyThreshold;
+        stickySummary.classList.toggle("is-visible", isVisible);
+        stickySummary.setAttribute("aria-hidden", String(!isVisible));
+        if (!sectionTargets.length) return;
+        const active = sectionTargets.reduce((current, item) => {
+          return item.target.getBoundingClientRect().top <= stickyOffset + 8 ? item : current;
+        }, sectionTargets[0]);
+        setActiveAnchor(active.link);
       };
       updateAnchorNav();
       window.addEventListener("scroll", updateAnchorNav, { passive: true });

@@ -1,0 +1,1515 @@
+{
+  "top": {
+    "label": "top",
+    "viewport": {
+      "w": 1536,
+      "h": 695,
+      "dpr": 1
+    },
+    "scrollY": 0,
+    "doc": {
+      "clientWidth": 1536,
+      "scrollWidth": 1536,
+      "bodyScrollWidth": 1536
+    },
+    "sticky": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "none",
+        "position": "fixed",
+        "top": "0px",
+        "zIndex": "200",
+        "height": "124px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      },
+      "ariaHidden": "true"
+    },
+    "inner": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "grid",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "68px",
+        "padding": "10px 0px",
+        "margin": "0px auto",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "thumb": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "48px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(232, 232, 232)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "title": {
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "auto",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "price": {
+      "text": "56,544만원",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "auto",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(229, 25, 59)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(229, 25, 59)"
+      }
+    },
+    "meta": {
+      "text": "2017년 5월 545,454km 가솔린 자동",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "auto",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/20px",
+        "color": "rgb(140, 140, 140)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(140, 140, 140)"
+      }
+    },
+    "save": {
+      "text": "찜하기",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "chat": {
+      "text": "채팅",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgb(244, 244, 244)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "phone": {
+      "text": "050-4375-0853",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(25, 83, 155)",
+        "borderBottom": "0px none rgb(255, 255, 255)"
+      }
+    },
+    "nav": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "52px",
+        "padding": "0px",
+        "margin": "3px auto 0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "1px solid rgb(222, 223, 226)"
+      },
+      "texts": [
+        {
+          "text": "차량 설명",
+          "cls": "is-active",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "700 14px/20px",
+            "color": "rgb(34, 34, 34)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(34, 34, 34)"
+          }
+        },
+        {
+          "text": "상세 정보",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "보험 이력",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "비슷한 매물",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "편의 기능",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        }
+      ]
+    }
+  },
+  "before": {
+    "label": "scroll300",
+    "viewport": {
+      "w": 1536,
+      "h": 695,
+      "dpr": 1
+    },
+    "scrollY": 300,
+    "doc": {
+      "clientWidth": 1536,
+      "scrollWidth": 1536,
+      "bodyScrollWidth": 1536
+    },
+    "sticky": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "none",
+        "position": "fixed",
+        "top": "0px",
+        "zIndex": "200",
+        "height": "124px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      },
+      "ariaHidden": "true"
+    },
+    "inner": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "grid",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "68px",
+        "padding": "10px 0px",
+        "margin": "0px auto",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "thumb": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "48px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(232, 232, 232)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "title": {
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "auto",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "price": {
+      "text": "56,544만원",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "auto",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(229, 25, 59)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(229, 25, 59)"
+      }
+    },
+    "meta": {
+      "text": "2017년 5월 545,454km 가솔린 자동",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "auto",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/20px",
+        "color": "rgb(140, 140, 140)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(140, 140, 140)"
+      }
+    },
+    "save": {
+      "text": "찜하기",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "chat": {
+      "text": "채팅",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgb(244, 244, 244)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "phone": {
+      "text": "050-4375-0853",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(25, 83, 155)",
+        "borderBottom": "0px none rgb(255, 255, 255)"
+      }
+    },
+    "nav": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "52px",
+        "padding": "0px",
+        "margin": "3px auto 0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "1px solid rgb(222, 223, 226)"
+      },
+      "texts": [
+        {
+          "text": "차량 설명",
+          "cls": "is-active",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "700 14px/20px",
+            "color": "rgb(34, 34, 34)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(34, 34, 34)"
+          }
+        },
+        {
+          "text": "상세 정보",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "보험 이력",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "비슷한 매물",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "편의 기능",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "auto",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        }
+      ]
+    }
+  },
+  "after": {
+    "label": "scroll360",
+    "viewport": {
+      "w": 1536,
+      "h": 695,
+      "dpr": 1
+    },
+    "scrollY": 360,
+    "doc": {
+      "clientWidth": 1536,
+      "scrollWidth": 1536,
+      "bodyScrollWidth": 1536
+    },
+    "sticky": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 124,
+        "right": 1536,
+        "bottom": 124
+      },
+      "css": {
+        "display": "block",
+        "position": "fixed",
+        "top": "0px",
+        "zIndex": "200",
+        "height": "124px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      },
+      "ariaHidden": "false"
+    },
+    "inner": {
+      "rect": {
+        "x": 288,
+        "y": 0,
+        "w": 960,
+        "h": 68,
+        "right": 1248,
+        "bottom": 68
+      },
+      "css": {
+        "display": "grid",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "68px",
+        "padding": "10px 0px",
+        "margin": "0px 288px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "thumb": {
+      "rect": {
+        "x": 288,
+        "y": 10,
+        "w": 48,
+        "h": 48,
+        "right": 336,
+        "bottom": 58
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "48px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(232, 232, 232)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "title": {
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+      "rect": {
+        "x": 344,
+        "y": 10,
+        "w": 506,
+        "h": 24,
+        "right": 850,
+        "bottom": 34
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "24px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "price": {
+      "text": "56,544만원",
+      "rect": {
+        "x": 344,
+        "y": 34,
+        "w": 82.1,
+        "h": 24,
+        "right": 426.1,
+        "bottom": 58
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "24px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(229, 25, 59)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(229, 25, 59)"
+      }
+    },
+    "meta": {
+      "text": "2017년 5월 545,454km 가솔린 자동",
+      "rect": {
+        "x": 442.1,
+        "y": 36,
+        "w": 214.9,
+        "h": 20,
+        "right": 657,
+        "bottom": 56
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "20px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/20px",
+        "color": "rgb(140, 140, 140)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(140, 140, 140)"
+      }
+    },
+    "save": {
+      "text": "찜하기",
+      "rect": {
+        "x": 858,
+        "y": 14,
+        "w": 106,
+        "h": 40,
+        "right": 964,
+        "bottom": 54
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "chat": {
+      "text": "채팅",
+      "rect": {
+        "x": 972,
+        "y": 14,
+        "w": 68,
+        "h": 40,
+        "right": 1040,
+        "bottom": 54
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgb(244, 244, 244)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "phone": {
+      "text": "050-4375-0853",
+      "rect": {
+        "x": 1048,
+        "y": 14,
+        "w": 200,
+        "h": 40,
+        "right": 1248,
+        "bottom": 54
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(25, 83, 155)",
+        "borderBottom": "0px none rgb(255, 255, 255)"
+      }
+    },
+    "nav": {
+      "rect": {
+        "x": 288,
+        "y": 71,
+        "w": 960,
+        "h": 52,
+        "right": 1248,
+        "bottom": 123
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "52px",
+        "padding": "0px",
+        "margin": "3px 288px 0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "1px solid rgb(222, 223, 226)"
+      },
+      "texts": [
+        {
+          "text": "차량 설명",
+          "cls": "is-active",
+          "rect": {
+            "x": 288,
+            "y": 70.5,
+            "w": 88.4,
+            "h": 52,
+            "right": 376.4,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "700 14px/20px",
+            "color": "rgb(34, 34, 34)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(34, 34, 34)"
+          }
+        },
+        {
+          "text": "상세 정보",
+          "cls": "",
+          "rect": {
+            "x": 376.4,
+            "y": 70.5,
+            "w": 88.1,
+            "h": 52,
+            "right": 464.5,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "보험 이력",
+          "cls": "",
+          "rect": {
+            "x": 464.5,
+            "y": 70.5,
+            "w": 88.1,
+            "h": 52,
+            "right": 552.5,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "비슷한 매물",
+          "cls": "",
+          "rect": {
+            "x": 552.5,
+            "y": 70.5,
+            "w": 101.2,
+            "h": 52,
+            "right": 653.7,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "편의 기능",
+          "cls": "",
+          "rect": {
+            "x": 653.7,
+            "y": 70.5,
+            "w": 88.1,
+            "h": 52,
+            "right": 741.8,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        }
+      ]
+    }
+  },
+  "afterTabClick": {
+    "label": "after-tab-click",
+    "viewport": {
+      "w": 1536,
+      "h": 695,
+      "dpr": 1
+    },
+    "scrollY": 672,
+    "doc": {
+      "clientWidth": 1536,
+      "scrollWidth": 1536,
+      "bodyScrollWidth": 1536
+    },
+    "sticky": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 124,
+        "right": 1536,
+        "bottom": 124
+      },
+      "css": {
+        "display": "block",
+        "position": "fixed",
+        "top": "0px",
+        "zIndex": "200",
+        "height": "124px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      },
+      "ariaHidden": "false"
+    },
+    "inner": {
+      "rect": {
+        "x": 288,
+        "y": 0,
+        "w": 960,
+        "h": 68,
+        "right": 1248,
+        "bottom": 68
+      },
+      "css": {
+        "display": "grid",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "68px",
+        "padding": "10px 0px",
+        "margin": "0px 288px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "thumb": {
+      "rect": {
+        "x": 288,
+        "y": 10,
+        "w": 48,
+        "h": 48,
+        "right": 336,
+        "bottom": 58
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "48px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(232, 232, 232)",
+        "borderBottom": "0px none rgb(16, 17, 20)"
+      }
+    },
+    "title": {
+      "text": "제네시스 G80 [RG3] 2.5 터보 AWD 스포츠팩",
+      "rect": {
+        "x": 344,
+        "y": 10,
+        "w": 506,
+        "h": 24,
+        "right": 850,
+        "bottom": 34
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "24px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "price": {
+      "text": "56,544만원",
+      "rect": {
+        "x": 344,
+        "y": 34,
+        "w": 82.1,
+        "h": 24,
+        "right": 426.1,
+        "bottom": 58
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "24px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(229, 25, 59)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(229, 25, 59)"
+      }
+    },
+    "meta": {
+      "text": "2017년 5월 545,454km 가솔린 자동",
+      "rect": {
+        "x": 442.1,
+        "y": 36,
+        "w": 214.9,
+        "h": 20,
+        "right": 657,
+        "bottom": 56
+      },
+      "css": {
+        "display": "block",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "20px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "400 14px/20px",
+        "color": "rgb(140, 140, 140)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(140, 140, 140)"
+      }
+    },
+    "save": {
+      "text": "찜하기",
+      "rect": {
+        "x": 858,
+        "y": 14,
+        "w": 106,
+        "h": 40,
+        "right": 964,
+        "bottom": 54
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "chat": {
+      "text": "채팅",
+      "rect": {
+        "x": 972,
+        "y": 14,
+        "w": 68,
+        "h": 40,
+        "right": 1040,
+        "bottom": 54
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(34, 34, 34)",
+        "bg": "rgb(244, 244, 244)",
+        "borderBottom": "0px none rgb(34, 34, 34)"
+      }
+    },
+    "phone": {
+      "text": "050-4375-0853",
+      "rect": {
+        "x": 1048,
+        "y": 14,
+        "w": 200,
+        "h": 40,
+        "right": 1248,
+        "bottom": 54
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "40px",
+        "padding": "0px",
+        "margin": "0px",
+        "font": "700 16px/24px",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(25, 83, 155)",
+        "borderBottom": "0px none rgb(255, 255, 255)"
+      }
+    },
+    "nav": {
+      "rect": {
+        "x": 288,
+        "y": 71,
+        "w": 960,
+        "h": 52,
+        "right": 1248,
+        "bottom": 123
+      },
+      "css": {
+        "display": "flex",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "height": "52px",
+        "padding": "0px",
+        "margin": "3px 288px 0px",
+        "font": "400 14px/18.9px",
+        "color": "rgb(16, 17, 20)",
+        "bg": "rgb(255, 255, 255)",
+        "borderBottom": "1px solid rgb(222, 223, 226)"
+      },
+      "texts": [
+        {
+          "text": "차량 설명",
+          "cls": "",
+          "rect": {
+            "x": 288,
+            "y": 70.5,
+            "w": 88.1,
+            "h": 52,
+            "right": 376.1,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "상세 정보",
+          "cls": "is-active",
+          "rect": {
+            "x": 376.1,
+            "y": 70.5,
+            "w": 88.4,
+            "h": 52,
+            "right": 464.5,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "700 14px/20px",
+            "color": "rgb(34, 34, 34)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(34, 34, 34)"
+          }
+        },
+        {
+          "text": "보험 이력",
+          "cls": "",
+          "rect": {
+            "x": 464.5,
+            "y": 70.5,
+            "w": 88.1,
+            "h": 52,
+            "right": 552.5,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "비슷한 매물",
+          "cls": "",
+          "rect": {
+            "x": 552.5,
+            "y": 70.5,
+            "w": 101.2,
+            "h": 52,
+            "right": 653.7,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        },
+        {
+          "text": "편의 기능",
+          "cls": "",
+          "rect": {
+            "x": 653.7,
+            "y": 70.5,
+            "w": 88.1,
+            "h": 52,
+            "right": 741.8,
+            "bottom": 122.5
+          },
+          "css": {
+            "display": "flex",
+            "position": "relative",
+            "top": "0px",
+            "zIndex": "auto",
+            "height": "52px",
+            "padding": "16px",
+            "margin": "0px",
+            "font": "400 14px/20px",
+            "color": "rgb(89, 89, 89)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "borderBottom": "0px none rgb(89, 89, 89)"
+          }
+        }
+      ]
+    }
+  },
+  "errors": []
+}

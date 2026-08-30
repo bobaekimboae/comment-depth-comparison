@@ -1474,8 +1474,8 @@ body[data-used-car-list] .listShell .viewLine {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 5;
-  height: 65px;
+  z-index: 200;
+  height: 124px;
   display: none;
   background: #fff;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .06);
@@ -1487,12 +1487,13 @@ body[data-used-car-list] .listShell .viewLine {
 
 .detailStickyInner {
   width: 960px;
-  height: 65px;
+  height: 68px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr) 96px 72px 204px;
-  gap: 12px;
+  grid-template-columns: 48px minmax(0, 506px) 106px 68px 200px;
+  gap: 8px;
   align-items: center;
+  padding: 10px 0;
 }
 
 .stickyThumb {
@@ -1527,7 +1528,7 @@ body[data-used-car-list] .listShell .viewLine {
 .stickyCopy span {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   min-width: 0;
 }
 
@@ -1543,7 +1544,7 @@ body[data-used-car-list] .listShell .viewLine {
   overflow: hidden;
   color: #8c8c8c;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 20px;
   font-style: normal;
   font-weight: 400;
   white-space: nowrap;
@@ -1581,23 +1582,17 @@ body[data-used-car-list] .listShell .viewLine {
 .detailAnchorNav {
   height: 52px;
   width: 960px;
-  margin: 0;
+  margin: 3px auto 0;
   padding: 0;
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0;
   background: #fff;
   border-bottom: 1px solid var(--line-dark);
-  position: fixed;
-  top: 71px;
-  left: 50%;
-  transform: translateX(-480px);
-  z-index: 4;
+  position: static;
+  transform: none;
+  z-index: auto;
   box-shadow: none;
-}
-
-.detailAnchorNav.is-visible {
-  display: flex;
 }
 
 .detailAnchorNav a {
