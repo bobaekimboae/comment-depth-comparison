@@ -381,8 +381,11 @@ function row(post){
 function popularRow(item){
   return '<li class="rightItem"><a class="rightLink" href="#"><span class="rightText">'+esc(item[0])+'</span><span class="rightReply">('+item[1]+')</span></a></li>';
 }
+window.bobaeBoardPosts=posts;
+window.bobaePopularPosts=popular;
 document.getElementById('postRows').innerHTML=posts.map(row).join('');
 document.getElementById('popularList').innerHTML=popular.map(popularRow).join('');
 </script>
+<script src="bobaedream-pc-interactions.js"></script>
 </body>
 </html>
