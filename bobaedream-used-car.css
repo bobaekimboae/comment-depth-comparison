@@ -3396,7 +3396,7 @@ html.bobae-main-page body {
 }
 
 .bobae-main-page .bbHeaderInner {
-  width: min(1280px, calc(100% - 160px));
+  width: calc(100% - 160px);
   margin: 0 auto;
 }
 
@@ -3471,7 +3471,7 @@ body[data-bobae-main] .bbHeaderActions {
   color: #0d1c63;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -3487,7 +3487,7 @@ body[data-bobae-main] .bbHeaderActions {
   color: #fff;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 900;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -3497,7 +3497,7 @@ body[data-bobae-main] .bbHeaderLinks {
   color: #555;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 body[data-bobae-main] .bbHeaderLinks a {
@@ -3539,13 +3539,13 @@ body[data-bobae-main] .bbFamilyLink {
   color: #555;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 400;
   white-space: nowrap;
 }
 
 body[data-bobae-main] .bbFamilyLink.is-active {
   color: #333;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 body[data-bobae-main] .bbFamilyLink.is-active::after {
@@ -3561,13 +3561,13 @@ body[data-bobae-main] .bbNav .bbHeaderInner {
   height: 64px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 body[data-bobae-main] .bbNavList {
   height: 64px;
   flex: 1 1 auto;
-  gap: 22px;
+  gap: 32px;
   min-width: 0;
   overflow-x: auto;
   scrollbar-width: none;
@@ -3582,16 +3582,20 @@ body[data-bobae-main] .bbNavLink {
   color: #0d1c63;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 750;
+  font-weight: 400;
 }
 
 body[data-bobae-main] .bbNavLink.is-active {
-  color: #101114;
-  font-weight: 900;
+  color: #0d1c63;
+  font-weight: 400;
 }
 
 body[data-bobae-main] .bbNavMore {
-  padding-right: 10px;
+  padding-right: 0;
+}
+
+body[data-bobae-main] .bbNavMore::after {
+  display: none;
 }
 
 body[data-bobae-main] .bbFamilyLink.is-active::after,
@@ -4438,12 +4442,12 @@ body[data-bobae-main] .footer {
   }
 
   body[data-bobae-main] .bbAuthAction {
-    width: 78px;
+    width: auto;
     height: 30px;
     overflow: hidden;
     font-size: 10px;
     line-height: 16px;
-    font-weight: 800;
+    font-weight: 400;
     text-overflow: clip;
   }
 
@@ -4474,7 +4478,8 @@ body[data-bobae-main] .footer {
 
   body[data-bobae-main] .bbNav {
     height: 54px;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   body[data-bobae-main] .bbNav::-webkit-scrollbar,
@@ -4485,23 +4490,26 @@ body[data-bobae-main] .footer {
 
   body[data-bobae-main] .bbNav .bbHeaderInner {
     height: 54px;
-    padding: 0 12px;
-    gap: 8px;
+    min-width: max-content;
+    padding: 0 16px;
+    gap: 20px;
   }
 
   body[data-bobae-main] .bbNavList {
     height: 54px;
-    flex: 0 0 42px;
-    width: 42px;
-    gap: 20px;
+    flex: 0 0 auto;
+    width: auto;
+    gap: 24px;
     min-width: 0;
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
   }
 
   body[data-bobae-main] .bbNavLink {
     height: 54px;
     font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
   }
 
   body[data-bobae-main] .mainHomeShell,
