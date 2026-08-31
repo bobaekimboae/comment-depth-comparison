@@ -27,12 +27,17 @@
   --icon-chat: url("assets/used-car/icons/s03-11-chat.svg");
   --icon-phone: url("assets/used-car/icons/s03-12-phone.svg");
   --icon-location: url("assets/used-car/icons/s03-13-location.svg");
+  --icon-detail-location: url("assets/used-car/icons/s03-detail-location.svg");
+  --icon-detail-time: url("assets/used-car/icons/s03-detail-time.svg");
   --icon-play: url("assets/used-car/icons/s03-15-play.svg");
   --icon-bookmark: url("assets/used-car/icons/s03-16-bookmark.svg");
   --icon-filter: url("assets/used-car/icons/s03-17-filter.svg");
   --icon-list-view: url("assets/used-car/icons/s03-19-list-view.svg");
   --icon-more: url("assets/used-car/icons/s03-20-more.svg");
   --icon-camera: url("assets/used-car/options/s03-33-option-rear-camera.png");
+  --icon-photo-thumbnail: url("assets/used-car/icons/s03-photo-thumbnail.svg");
+  --icon-thumb-next: url("assets/used-car/icons/s03-thumb-next.svg");
+  --icon-thumb-prev: url("assets/used-car/icons/s03-thumb-prev.svg");
 }
 
 * {
@@ -4686,11 +4691,13 @@ body[data-bobae-main] .footer {
 .listIcon,
 .photoMark,
 .videoMark,
+.pinIcon,
 .commentIcon,
 .heartIcon,
 .shareIcon,
 .moreIcon,
 .sideLineIcon.pin,
+.sideLineIcon.clock,
 .mobileSearchIcon,
 .mobilePin,
 .mobileTuneIcon,
@@ -4719,6 +4726,8 @@ body[data-bobae-main] .footer {
 .moreIcon::before,
 .sideLineIcon.pin::before,
 .sideLineIcon.pin::after,
+.sideLineIcon.clock::before,
+.sideLineIcon.clock::after,
 .mobileBackBtn::before,
 .mobileSearchIcon::after,
 .mobileBookmark::after,
@@ -4823,7 +4832,7 @@ body[data-bobae-main] .footer {
   height: 13px;
   border: 0;
   border-radius: 0;
-  background-image: var(--icon-camera);
+  background-image: var(--icon-photo-thumbnail);
   background-size: 13px 13px;
   filter: brightness(0) invert(1) drop-shadow(0 1px 1px rgba(0, 0, 0, .22));
 }
@@ -4860,23 +4869,40 @@ body[data-bobae-main] .footer {
   background-image: var(--icon-more);
 }
 
-.sideLineIcon.pin {
+.pinIcon {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 0;
   background-image: var(--icon-location);
+  background-size: 14px 14px;
+  transform: none;
+}
+
+.sideLineIcon.pin {
+  background-image: var(--icon-detail-location);
   background-size: 18px 18px;
 }
 
-.thumbArrow::before {
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  border: 0;
-  background: var(--icon-chevron-down) center / 18px 18px no-repeat;
-  transform: rotate(-90deg);
+.sideLineIcon.clock {
+  background-image: var(--icon-detail-time);
+  background-size: 18px 18px;
 }
 
+.thumbArrow {
+  border-radius: 0;
+  background: var(--icon-thumb-next) center / 34px 34px no-repeat;
+  box-shadow: none;
+}
+
+.thumbArrow.prev {
+  background-image: var(--icon-thumb-prev);
+}
+
+.thumbArrow::before,
 .thumbArrow.prev::before {
-  margin: 0;
-  transform: rotate(90deg);
+  content: none;
+  display: none;
 }
 
 @media (max-width: 767px) {
