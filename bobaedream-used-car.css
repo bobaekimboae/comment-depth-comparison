@@ -22,6 +22,10 @@
   --icon-bell: url("assets/used-car/icons/s03-04-bell.svg");
   --icon-menu: url("assets/used-car/icons/s03-05-menu.svg");
   --icon-chevron-down: url("assets/used-car/icons/s03-06-chevron-down.svg");
+  --icon-filter-chip-chevron: url("assets/used-car/icons/s03-filter-chip-chevron.svg");
+  --icon-filter-chip-close: url("assets/used-car/icons/s03-filter-chip-close.svg");
+  --icon-list-location: url("assets/used-car/icons/s03-list-location.svg");
+  --icon-sort-chevron: url("assets/used-car/icons/s03-sort-chevron.svg");
   --icon-close: url("assets/used-car/icons/s03-07-close.svg");
   --icon-share: url("assets/used-car/icons/s03-09-share.svg");
   --icon-chat: url("assets/used-car/icons/s03-11-chat.svg");
@@ -563,19 +567,21 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .chipBtn {
   height: 32px;
-  padding: 0 14px;
+  padding: 4px 12px;
   border-radius: 16px;
   background: var(--chip);
   color: #171a1f;
   font-size: 14px;
-  font-weight: 900;
+  line-height: 20px;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  justify-content: center;
+  gap: 2px;
 }
 
 .chipBtn.is-dark {
-  background: #25272b;
+  background: #222;
   color: #fff;
 }
 
@@ -589,26 +595,27 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .chipBtn.is-dark::after {
-  content: "x";
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, .18);
-  color: #fff;
-  display: inline-grid;
-  place-items: center;
-  font-size: 11px;
-  line-height: 16px;
+  content: "";
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  border-radius: 0;
+  background: var(--icon-filter-chip-close) center / 14px 14px no-repeat;
+  color: transparent;
+  display: block;
+  font-size: 0;
+  line-height: 0;
 }
 
 .chipBtn.has-caret::after {
   content: "";
-  width: 7px;
-  height: 7px;
-  border-right: 1.6px solid currentColor;
-  border-bottom: 1.6px solid currentColor;
-  transform: rotate(45deg);
-  margin-top: -4px;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border: 0;
+  background: var(--icon-filter-chip-chevron) center / 20px 20px no-repeat;
+  transform: none;
+  margin: 0;
 }
 
 .categoryGrid {
@@ -701,10 +708,10 @@ body[data-used-car-detail] .bbHeaderTop {
   margin-left: auto;
   display: flex;
   align-items: center;
-  height: 28px;
+  height: 32px;
   color: #20242a;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .videoToggleWrap {
@@ -717,12 +724,22 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .sortBtn,
 .viewBtn {
-  height: 28px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 18px;
+  padding: 0 20px;
   border-right: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.sortBtn {
+  gap: 2px;
+}
+
+.viewBtn {
+  gap: 8px;
 }
 
 .viewBtn {
@@ -732,12 +749,13 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .sortBtn::after {
   content: "";
-  width: 7px;
-  height: 7px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(45deg);
-  margin-top: -5px;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border: 0;
+  background: var(--icon-sort-chevron) center / 24px 24px no-repeat;
+  transform: none;
+  margin: 0;
 }
 
 .listIcon {
@@ -1002,7 +1020,7 @@ body[data-used-car-list] .listShell .badgeRow {
   margin-top: 7px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   color: #595959;
   font-size: 14px;
   line-height: 20px;
@@ -1010,11 +1028,13 @@ body[data-used-car-list] .listShell .badgeRow {
 }
 
 .pinIcon {
-  width: 12px;
-  height: 12px;
-  border: 3px solid #999da4;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--icon-list-location) center / 16px 16px no-repeat;
+  transform: none;
 }
 
 .viewLine {
@@ -4797,20 +4817,36 @@ body[data-bobae-main] .footer {
 
 .chipBtn.is-dark::after {
   content: "";
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, .18);
-  background-image: var(--icon-close);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 9px 9px;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  border-radius: 0;
+  background: var(--icon-filter-chip-close) center / 14px 14px no-repeat;
   color: transparent;
   font-size: 0;
+  line-height: 0;
 }
 
-.chipBtn.has-caret::after,
-.sortBtn::after,
+.chipBtn.has-caret::after {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  margin: 0;
+  border: 0;
+  background: var(--icon-filter-chip-chevron) center / 20px 20px no-repeat;
+  transform: none;
+}
+
+.sortBtn::after {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0;
+  border: 0;
+  background: var(--icon-sort-chevron) center / 24px 24px no-repeat;
+  transform: none;
+}
+
 .mainSelect::after {
   width: 12px;
   height: 12px;
@@ -4870,12 +4906,13 @@ body[data-bobae-main] .footer {
 }
 
 .pinIcon {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
   border: 0;
   border-radius: 0;
-  background-image: var(--icon-location);
-  background-size: 14px 14px;
+  background-image: var(--icon-list-location);
+  background-size: 16px 16px;
   transform: none;
 }
 
@@ -4934,8 +4971,6 @@ body[data-bobae-main] .footer {
   }
 
   .mobileRegionBtn::after,
-  .mobileChip:not(.is-dark)::after,
-  .mobileSortButton::after,
   .mobileFilterRow::after {
     width: 12px;
     height: 12px;
@@ -4945,14 +4980,32 @@ body[data-bobae-main] .footer {
     transform: none;
   }
 
+  .mobileChip:not(.is-dark)::after {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    border: 0;
+    background: var(--icon-filter-chip-chevron) center / 20px 20px no-repeat;
+    transform: none;
+  }
+
+  .mobileSortButton::after {
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+    border: 0;
+    background: var(--icon-sort-chevron) center / 24px 24px no-repeat;
+    transform: none;
+  }
+
   .mobilePin {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     margin-right: 0;
     border: 0;
     border-radius: 0;
-    background-image: var(--icon-location);
-    background-size: 15px 15px;
+    background-image: var(--icon-list-location);
+    background-size: 16px 16px;
     transform: none;
   }
 
@@ -4967,13 +5020,13 @@ body[data-bobae-main] .footer {
   }
 
   .mobileChip.is-dark span {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
     color: transparent;
     font-size: 0;
-    background-color: rgba(255, 255, 255, .16);
-    background-image: var(--icon-close);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 9px 9px;
+    line-height: 0;
+    background: var(--icon-filter-chip-close) center / 14px 14px no-repeat;
   }
 
   .mobileViewButton {
