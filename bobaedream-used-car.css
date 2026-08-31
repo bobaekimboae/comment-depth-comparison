@@ -3424,9 +3424,20 @@ body[data-bobae-main] .bbHeaderTop .bbHeaderInner {
 }
 
 body[data-bobae-main] .bbLogo {
-  flex: 0 0 114px;
-  width: 114px;
-  height: 28px;
+  flex: 0 0 102px;
+  width: 102px;
+  height: 64px;
+}
+
+body[data-bobae-main] .bbTextLogo {
+  display: inline-flex;
+  align-items: center;
+  color: #101114;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 900;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 body[data-bobae-main] .bbHeaderActions {
@@ -4415,9 +4426,15 @@ body[data-bobae-main] .footer {
   }
 
   body[data-bobae-main] .bbLogo {
-    flex: 0 0 92px;
-    width: 92px;
-    height: 23px;
+    flex: 0 0 86px;
+    width: 86px;
+    height: 54px;
+  }
+
+  body[data-bobae-main] .bbTextLogo {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 900;
   }
 
   body[data-bobae-main] .bbHeaderActions {
