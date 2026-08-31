@@ -4100,10 +4100,14 @@ body[data-bobae-main] .bbNavLink.is-active::after {
   background: var(--blue);
 }
 
-.mainSellCard button {
+.mainSellCard button,
+.mainSellCard .mainSellButton {
   height: 38px;
   margin-top: 18px;
   padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   background: #11151b;
   color: #fff;
