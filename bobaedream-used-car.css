@@ -16,6 +16,23 @@
   --blue-soft: #eef5ff;
   --price: #e5193b;
   --danger: #e94141;
+  --icon-search: url("assets/used-car/icons/s03-01-search.svg");
+  --icon-user: url("assets/used-car/icons/s03-02-user.svg");
+  --icon-heart: url("assets/used-car/icons/s03-03-heart.svg");
+  --icon-bell: url("assets/used-car/icons/s03-04-bell.svg");
+  --icon-menu: url("assets/used-car/icons/s03-05-menu.svg");
+  --icon-chevron-down: url("assets/used-car/icons/s03-06-chevron-down.svg");
+  --icon-close: url("assets/used-car/icons/s03-07-close.svg");
+  --icon-share: url("assets/used-car/icons/s03-09-share.svg");
+  --icon-chat: url("assets/used-car/icons/s03-11-chat.svg");
+  --icon-phone: url("assets/used-car/icons/s03-12-phone.svg");
+  --icon-location: url("assets/used-car/icons/s03-13-location.svg");
+  --icon-play: url("assets/used-car/icons/s03-15-play.svg");
+  --icon-bookmark: url("assets/used-car/icons/s03-16-bookmark.svg");
+  --icon-filter: url("assets/used-car/icons/s03-17-filter.svg");
+  --icon-list-view: url("assets/used-car/icons/s03-19-list-view.svg");
+  --icon-more: url("assets/used-car/icons/s03-20-more.svg");
+  --icon-camera: url("assets/used-car/options/s03-33-option-rear-camera.png");
 }
 
 * {
@@ -2135,6 +2152,34 @@ body[data-used-car-list] .listShell .viewLine {
 .contactBtn.phone {
   background: var(--blue);
   color: #fff;
+}
+
+.stickyChat,
+.stickyPhone,
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.stickyChat::before,
+.contactBtn::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  background: var(--icon-chat) center / 18px 18px no-repeat;
+}
+
+.stickyPhone::before,
+.contactBtn.phone::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  background: var(--icon-phone) center / 18px 18px no-repeat;
+  filter: brightness(0) invert(1);
 }
 
 .sideInfoLine {
@@ -4632,5 +4677,284 @@ body[data-bobae-main] .footer {
 
   body[data-bobae-main] .footer {
     padding: 20px 12px 34px;
+  }
+}
+
+/* Notion source icon mapping */
+.headerIcon,
+.bookmarkIcon,
+.listIcon,
+.photoMark,
+.videoMark,
+.commentIcon,
+.heartIcon,
+.shareIcon,
+.moreIcon,
+.sideLineIcon.pin,
+.mobileSearchIcon,
+.mobilePin,
+.mobileTuneIcon,
+.mobileHeartBtn,
+.mobileChatBtn,
+.mobileViewButton,
+.mobileSheetClose {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.headerIcon::before,
+.headerIcon::after,
+.headerIcon.menu span,
+.bookmarkIcon::after,
+.listIcon span,
+.photoMark::before,
+.videoMark::before,
+.commentIcon::before,
+.commentIcon::after,
+.heartIcon::before,
+.heartIcon::after,
+.shareIcon::before,
+.shareIcon::after,
+.moreIcon::before,
+.sideLineIcon.pin::before,
+.sideLineIcon.pin::after,
+.mobileBackBtn::before,
+.mobileSearchIcon::after,
+.mobileBookmark::after,
+.mobileHeartBtn::before,
+.mobileHeartBtn::after,
+.mobileChatBtn::before,
+.mobileChatBtn::after,
+.mobileViewButton::before,
+.mobileViewButton::after,
+.mobileSheetClose::before,
+.mobileSheetClose::after {
+  content: none;
+  display: none;
+}
+
+.headerIcon.search {
+  background-image: var(--icon-search);
+  background-size: 22px 22px;
+}
+
+.headerIcon.person {
+  background-image: var(--icon-user);
+  background-size: 22px 22px;
+}
+
+.headerIcon.heart {
+  background-image: var(--icon-heart);
+  background-size: 24px 24px;
+}
+
+.headerIcon.bell {
+  background-image: var(--icon-bell);
+  background-size: 23px 23px;
+}
+
+.headerIcon.menu {
+  background-image: var(--icon-menu);
+  background-size: 24px 24px;
+}
+
+.bbNavMore::after {
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;
+  border: 0;
+  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  transform: none;
+}
+
+.bookmarkIcon {
+  width: 16px;
+  height: 18px;
+  border: 0;
+  border-radius: 0;
+  background-image: var(--icon-bookmark);
+  background-size: 16px 18px;
+}
+
+.chipBtn.is-filter::before {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--icon-filter) center / 16px 16px no-repeat;
+  box-shadow: none;
+}
+
+.chipBtn.is-dark::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .18);
+  background-image: var(--icon-close);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  color: transparent;
+  font-size: 0;
+}
+
+.chipBtn.has-caret::after,
+.sortBtn::after,
+.mainSelect::after {
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;
+  border: 0;
+  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  transform: none;
+}
+
+.listIcon {
+  width: 20px;
+  height: 20px;
+  background-image: var(--icon-list-view);
+  background-size: 20px 20px;
+}
+
+.photoMark {
+  width: 13px;
+  height: 13px;
+  border: 0;
+  border-radius: 0;
+  background-image: var(--icon-camera);
+  background-size: 13px 13px;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 1px rgba(0, 0, 0, .22));
+}
+
+.videoMark {
+  width: 13px;
+  height: 13px;
+  border-radius: 0;
+  background: var(--icon-play) center / 13px 13px no-repeat;
+  box-shadow: none;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 1px rgba(0, 0, 0, .22));
+}
+
+.commentIcon {
+  background-image: var(--icon-chat);
+}
+
+.heartIcon {
+  background-image: var(--icon-heart);
+}
+
+.roundIconBtn.is-active .heartIcon,
+.overviewHeart.is-active .heartIcon,
+.stickySave.is-active .heartIcon,
+.mobileRowHeart.is-active .heartIcon {
+  filter: invert(22%) sepia(94%) saturate(2608%) hue-rotate(337deg) brightness(92%) contrast(94%);
+}
+
+.shareIcon {
+  background-image: var(--icon-share);
+}
+
+.moreIcon {
+  background-image: var(--icon-more);
+}
+
+.sideLineIcon.pin {
+  background-image: var(--icon-location);
+  background-size: 18px 18px;
+}
+
+.thumbArrow::before {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  border: 0;
+  background: var(--icon-chevron-down) center / 18px 18px no-repeat;
+  transform: rotate(-90deg);
+}
+
+.thumbArrow.prev::before {
+  margin: 0;
+  transform: rotate(90deg);
+}
+
+@media (max-width: 767px) {
+  .mobileBackBtn {
+    background: var(--icon-chevron-down) center / 18px 18px no-repeat;
+    transform: rotate(90deg);
+  }
+
+  .mobileSearchIcon {
+    border: 0;
+    border-radius: 0;
+    background-image: var(--icon-search);
+    background-size: 18px 18px;
+  }
+
+  .mobileBookmark {
+    border-left: 1px solid #c9ccd0;
+    background: var(--icon-bookmark) 10px center / 16px 18px no-repeat;
+  }
+
+  .mobileHeartBtn {
+    background-image: var(--icon-heart);
+    background-size: 24px 24px;
+  }
+
+  .mobileChatBtn {
+    background-image: var(--icon-chat);
+    background-size: 24px 24px;
+  }
+
+  .mobileRegionBtn::after,
+  .mobileChip:not(.is-dark)::after,
+  .mobileSortButton::after,
+  .mobileFilterRow::after {
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
+    border: 0;
+    background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+    transform: none;
+  }
+
+  .mobilePin {
+    width: 15px;
+    height: 15px;
+    margin-right: 0;
+    border: 0;
+    border-radius: 0;
+    background-image: var(--icon-location);
+    background-size: 15px 15px;
+    transform: none;
+  }
+
+  .mobileTuneIcon {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-radius: 0;
+    background-image: var(--icon-filter);
+    background-size: 16px 16px;
+    box-shadow: none;
+  }
+
+  .mobileChip.is-dark span {
+    color: transparent;
+    font-size: 0;
+    background-color: rgba(255, 255, 255, .16);
+    background-image: var(--icon-close);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+  }
+
+  .mobileViewButton {
+    background: var(--icon-list-view) center / 20px 20px no-repeat;
+  }
+
+  .mobileSheetClose {
+    background: var(--icon-close) center / 20px 20px no-repeat;
   }
 }
