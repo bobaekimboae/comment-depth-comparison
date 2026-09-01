@@ -266,8 +266,13 @@
   }
 
   function renderHeaderActive() {
+    const navCategories = ["used", "truck", "bike", "camping", "parts"];
+    const categoryNav = new URLSearchParams(window.location.search).get("category");
+    const activeNav = document.body?.matches("[data-used-car-list]")
+      ? (navCategories.includes(categoryNav) ? categoryNav : "used")
+      : document.body?.matches("[data-used-car-detail]") ? "used" : "home";
     qsa(".bbNavLink").forEach((link) => {
-      link.classList.toggle("is-active", link.dataset.nav === "home");
+      link.classList.toggle("is-active", link.dataset.nav === activeNav);
     });
   }
 

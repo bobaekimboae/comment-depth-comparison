@@ -1321,10 +1321,10 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .categoryIcon {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: transparent;
+  background: #f1f2f3;
   display: grid;
   place-items: center;
   color: #222;
@@ -1337,7 +1337,7 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .categoryBtn.is-active .categoryIcon {
-  background: transparent;
+  background: #f1f2f3;
   color: #171a1f;
   box-shadow: none;
 }
