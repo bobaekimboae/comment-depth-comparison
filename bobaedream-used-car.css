@@ -3005,10 +3005,14 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileDealer span {
+    display: -webkit-box;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    word-break: keep-all;
   }
 
   .mobileViews {

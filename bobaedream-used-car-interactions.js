@@ -149,13 +149,13 @@
     return dealers[car.dealer] || dealers.main || {};
   }
 
-  function dealerLabel(dealer) {
+  function dealerLabel(dealer, car) {
     const nameRole = [dealer.name, dealer.type].filter(Boolean).join(" ");
-    return [nameRole, dealer.company, dealer.sold].filter(Boolean).join(" - ");
+    return [nameRole, car?.location || dealer.location, car?.complex, dealer.company, dealer.sold].filter(Boolean).join(" · ");
   }
 
   function dealerSupportLabel(dealer) {
-    return [dealer.selling, dealer.location].filter(Boolean).join(" · ");
+    return [dealer.selling].filter(Boolean).join(" · ");
   }
 
   function makeMeta(car) {
@@ -388,7 +388,7 @@
             <div class="mobileRowPrice">${car.price}</div>
             <div class="mobileRowBadges">${car.badges.map((badge) => `<span class="badge">${badge}</span>`).join("")}</div>
             <div class="mobileLocation">${car.location} · ${car.complex}</div>
-            <div class="mobileDealer"><img src="${dealer.avatar}" alt=""><span>${dealerLabel(dealer)}</span></div>
+            <div class="mobileDealer"><img src="${dealer.avatar}" alt=""><span>${dealerLabel(dealer, car)}</span></div>
             <div class="mobileViews">조회 ${car.views}</div>
             <button class="mobileRowHeart" type="button" data-toggle-heart aria-label="찜"><span class="heartIcon"></span></button>
           </div>
@@ -431,7 +431,7 @@
             <div class="viewLine"><span class="viewTriangle"></span><span>${car.views}</span></div>
             <div class="dealerLine">
               <span class="dealerMini"><img src="${dealer.avatar}" alt=""></span>
-              <span class="dealerLabel">${dealerLabel(dealer)}</span>
+              <span class="dealerLabel">${dealerLabel(dealer, car)}</span>
             </div>
           </div>
           <div class="rowActions">
@@ -897,7 +897,7 @@
     qs("#totalCost").textContent = `${totalCost.toLocaleString("ko-KR")}만원`;
 
     qs("#dealerAvatar").src = dealer.avatar;
-    qs("#dealerName").textContent = dealerLabel(dealer);
+    qs("#dealerName").textContent = dealerLabel(dealer, car);
     qs("#dealerStats").textContent = dealerSupportLabel(dealer);
     qs("#dealerLocation").textContent = `상담 가능 · 응답률 82%`;
     qs("#detailLocationLine").textContent = car.location;
