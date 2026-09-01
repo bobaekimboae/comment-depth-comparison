@@ -2,7 +2,7 @@
 
 :root {
   --font-system: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", Helvetica, Arial, "Malgun Gothic", "맑은 고딕", sans-serif;
-  --page-bg: #f4f4f5;
+  --page-bg: #f4f4f4;
   --card: #fff;
   --ink: #101114;
   --text: #24262b;
@@ -16,6 +16,12 @@
   --blue-soft: #eef5ff;
   --price: #e5193b;
   --danger: #e94141;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, .08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .12);
+  --shadow-lg: 0 -2px 10px rgba(0, 0, 0, .08);
+  --z-sticky: 100;
+  --z-dropdown: 500;
+  --z-modal: 1000;
   --icon-search: url("assets/used-car/icons/s03-01-search.svg");
   --icon-user: url("assets/used-car/icons/s03-02-user.svg");
   --icon-heart: url("assets/used-car/icons/s03-03-heart.svg");
@@ -788,8 +794,8 @@ body[data-used-car-detail] .bbHeaderTop {
   padding: 16px 0;
   display: grid;
   grid-template-columns: 160px 1fr;
-  gap: 16px;
-  border-bottom: 1px solid var(--line);
+  gap: 12px;
+  border-bottom: .8px solid #f4f4f4;
   position: relative;
 }
 
@@ -802,7 +808,7 @@ body[data-used-car-detail] .bbHeaderTop {
   height: 160px;
   border-radius: 8px;
   overflow: hidden;
-  background: #e7e7e8;
+  background: transparent;
   position: relative;
   align-self: start;
 }
@@ -969,12 +975,19 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .rowTitle {
-  display: inline-block;
+  display: block;
+  max-width: 100%;
+  max-height: 24px;
   margin-top: 0;
+  overflow: hidden;
   color: #222;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+  letter-spacing: normal;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: normal;
 }
 
 .rowTitle:hover {
@@ -982,7 +995,7 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .rowMeta {
-  margin-top: 2px;
+  margin-top: 4px;
   color: #595959;
   font-size: 14px;
   line-height: 20px;
@@ -990,11 +1003,13 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .rowPrice {
-  margin-top: 2px;
+  margin-top: 4px;
   color: var(--price);
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
+  letter-spacing: normal;
+  font-variant-numeric: normal;
 }
 
 .badgeRow {
@@ -1189,8 +1204,7 @@ body[data-used-car-list] .listShell .viewLine {
 .detailShell {
   width: 1200px;
   margin: 24px auto 0;
-  display: grid;
-  grid-template-columns: 736px 464px;
+  display: flex;
   gap: 12px;
   align-items: start;
 }
@@ -1200,7 +1214,12 @@ body[data-used-car-list] .listShell .viewLine {
   min-width: 0;
 }
 
+.detailLeft {
+  flex: 0 0 736px;
+}
+
 .detailRight {
+  flex: 0 0 464px;
   position: sticky;
   top: 16px;
 }
@@ -1236,11 +1255,18 @@ body[data-used-car-list] .listShell .viewLine {
   right: 16px;
   bottom: 16px;
   z-index: 2;
+  width: 51.26px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+  background: rgba(34, 34, 34, .5);
   color: #fff;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 20px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  text-shadow: none;
 }
 
 .galleryPlaceholder {
@@ -1344,16 +1370,16 @@ body[data-used-car-list] .listShell .viewLine {
 
 .thumbStrip {
   width: 736px;
-  height: 106px;
-  margin: 12px 0 -5px;
-  padding-left: 2px;
+  height: 100.8px;
+  margin: 12px 0 0;
+  padding-left: 0;
   position: relative;
   overflow: hidden;
 }
 
 .thumbViewport {
-  width: 734px;
-  height: 106px;
+  width: 736px;
+  height: 100.8px;
   overflow: hidden;
   user-select: none;
 }
@@ -1378,25 +1404,25 @@ body[data-used-car-list] .listShell .viewLine {
   flex: 0 0 100px;
   width: 100px;
   height: 100px;
-  padding: 6px;
-  border-radius: 8px;
+  padding: 0;
+  border-radius: 12px;
   box-sizing: border-box;
   overflow: hidden;
-  border: 2px solid transparent;
+  border: 1.6px solid transparent;
   background: transparent;
   touch-action: pan-y;
   user-select: none;
 }
 
 .detailThumb.is-active {
-  border-color: #202020;
+  border-color: #222;
 }
 
 .detailThumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 10px;
   display: block;
   pointer-events: none;
   -webkit-user-drag: none;
@@ -1465,7 +1491,7 @@ body[data-used-car-list] .listShell .viewLine {
 
 .detailTitle {
   margin: 0;
-  color: #070a0f;
+  color: #222;
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
@@ -1579,7 +1605,7 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .stickyCopy b {
-  color: var(--price);
+  color: #f0325e;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -1621,8 +1647,8 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .stickyPhone {
-  background: var(--blue);
-  color: #fff;
+  background: #ffd400;
+  color: #222;
 }
 
 .detailAnchorNav {
@@ -1992,9 +2018,9 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .detailPrice {
-  color: var(--price);
+  color: #f0325e;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 24px;
   font-weight: 700;
 }
 
@@ -2179,8 +2205,8 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .contactBtn.phone {
-  background: var(--blue);
-  color: #fff;
+  background: #ffd400;
+  color: #222;
 }
 
 .stickyChat,
@@ -2208,7 +2234,7 @@ body[data-used-car-list] .listShell .viewLine {
   height: 18px;
   flex: 0 0 18px;
   background: var(--icon-phone) center / 18px 18px no-repeat;
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 .sideInfoLine {
@@ -2869,23 +2895,24 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileCarRow {
-    min-height: 194px;
-    margin: 0 16px;
-    padding: 13px 0 14px;
+    min-height: 200.8px;
+    margin: 0;
+    padding: 12px 16px;
     display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 16px;
-    border-bottom: 1px solid #e8e9eb;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 12px;
+    border-bottom: .8px solid #f4f4f4;
     position: relative;
   }
 
   .mobileThumb {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     border-radius: 8px;
     overflow: hidden;
-    background: #e7e7e8;
+    background: transparent;
     position: relative;
+    align-self: start;
   }
 
   .mobileThumb img,
@@ -2896,38 +2923,45 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileRowBody {
     min-width: 0;
-    padding-right: 28px;
+    padding-right: 0;
   }
 
   .mobileRowTitle {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    height: 40px;
     overflow: hidden;
-    color: #11151b;
-    font-size: 15px;
+    color: #222;
+    font-size: 16px;
     line-height: 20px;
     font-weight: 600;
+    letter-spacing: normal;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: normal;
   }
 
   .mobileRowMeta {
-    height: 19px;
-    margin-top: 4px;
+    height: 20px;
+    margin-top: 2px;
     overflow: hidden;
-    color: #707782;
-    font-size: 13px;
-    line-height: 18.2px;
+    color: #595959;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 400;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
   .mobileRowPrice {
-    margin-top: 5px;
+    margin-top: 2px;
     color: var(--price);
-    font-size: 17px;
-    line-height: 23.8px;
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 700;
+    letter-spacing: normal;
+    font-variant-numeric: normal;
   }
 
   .mobileRowBadges {
@@ -2938,9 +2972,10 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileLocation {
     margin-top: 14px;
-    color: #6e747e;
-    font-size: 13px;
-    font-weight: 700;
+    color: #595959;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
   }
 
   .mobileDealer {
@@ -2948,9 +2983,10 @@ body[data-used-car-list] .listShell .viewLine {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: #20242a;
+    color: #222;
     font-size: 12px;
-    font-weight: 900;
+    line-height: 18px;
+    font-weight: 400;
   }
 
   .mobileDealer img {
@@ -2961,7 +2997,7 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileViews {
     position: absolute;
-    right: 0;
+    right: 16px;
     bottom: 46px;
     color: #606771;
     font-size: 13px;
@@ -2970,7 +3006,7 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileRowHeart {
     position: absolute;
-    right: 0;
+    right: 16px;
     bottom: 18px;
     width: 28px;
     height: 28px;
@@ -3376,6 +3412,288 @@ body[data-used-car-list] .listShell .viewLine {
     right: 17px;
     top: 12px;
     border-color: #fff;
+  }
+
+  body[data-used-car-detail] {
+    background: #f4f4f4;
+    color: #222;
+  }
+
+  body[data-used-car-detail] .bbHeader,
+  body[data-used-car-detail] .footer {
+    display: none;
+  }
+
+  body[data-used-car-detail] .detailShell {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: #f4f4f4;
+  }
+
+  body[data-used-car-detail] .detailLeft {
+    display: contents;
+  }
+
+  body[data-used-car-detail] .detailRight {
+    order: 2;
+    width: 100%;
+    flex: 0 0 auto;
+    position: static;
+    top: auto;
+  }
+
+  body[data-used-car-detail] .galleryCard {
+    order: 1;
+    width: 100%;
+    border-radius: 0;
+    background: transparent;
+    overflow: visible;
+  }
+
+  body[data-used-car-detail] .galleryStage {
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+    background: #222;
+  }
+
+  body[data-used-car-detail] .galleryStage img {
+    object-fit: contain;
+    background: #222;
+  }
+
+  body[data-used-car-detail] .galleryCounter {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  body[data-used-car-detail] .galleryControl {
+    top: 12px;
+    right: 16px;
+  }
+
+  body[data-used-car-detail] .thumbStrip {
+    width: 100%;
+    height: 206.6px;
+    margin: 0;
+    padding: 6px 16px 0;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  body[data-used-car-detail] .thumbViewport {
+    width: 100%;
+    height: 206.6px;
+  }
+
+  body[data-used-car-detail] .thumbTrack {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+    transform: none !important;
+  }
+
+  body[data-used-car-detail] .detailThumb {
+    width: 100px;
+    height: 100px;
+    flex-basis: 100px;
+    padding: 0;
+    border: 1.6px solid transparent;
+    border-radius: 12px;
+  }
+
+  body[data-used-car-detail] .detailThumb.is-active {
+    border-color: #222;
+  }
+
+  body[data-used-car-detail] .detailThumb img {
+    border-radius: 10px;
+  }
+
+  body[data-used-car-detail] .thumbArrow {
+    display: none;
+  }
+
+  body[data-used-car-detail] .sideCard,
+  body[data-used-car-detail] .infoCard {
+    width: 100%;
+    border-radius: 0;
+    background: #fff;
+  }
+
+  body[data-used-car-detail] .priceCard {
+    min-height: 333px;
+    height: auto;
+    margin: 0 0 8px;
+    padding: 12px 16px;
+  }
+
+  body[data-used-car-detail] .dealerCard,
+  body[data-used-car-detail] .infoCard {
+    margin-top: 8px;
+    padding: 16px;
+  }
+
+  body[data-used-car-detail] .infoCard {
+    order: 3;
+  }
+
+  body[data-used-car-detail] #descriptionInfo {
+    min-height: 170px;
+  }
+
+  body[data-used-car-detail] .sideOverviewHead {
+    grid-template-columns: minmax(0, 1fr) 86px;
+  }
+
+  body[data-used-car-detail] .detailTitle {
+    color: #222;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+
+  body[data-used-car-detail] .detailMeta {
+    margin-top: 12px;
+    color: #595959;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  body[data-used-car-detail] .priceLine {
+    margin-top: 12px;
+  }
+
+  body[data-used-car-detail] .detailPrice {
+    color: #f0325e;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  body[data-used-car-detail] .contactRow {
+    grid-template-columns: 144.16px minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  body[data-used-car-detail] .contactBtn {
+    height: 40px;
+    border-radius: 9999px;
+  }
+
+  body[data-used-car-detail] .sideInfoLine {
+    grid-template-columns: 24px minmax(0, 1fr);
+    color: #595959;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  body[data-used-car-detail] .sideInfoLine strong {
+    color: #595959;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  body[data-used-car-detail] .infoCard h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  body[data-used-car-detail] .descText {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  body[data-used-car-detail] .specGrid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 0;
+  }
+
+  body[data-used-car-detail] .specItem,
+  body[data-used-car-detail] .specItem:nth-child(4n),
+  body[data-used-car-detail] .specItem:last-child {
+    padding-right: 12px;
+    border-right: 0;
+  }
+
+  body[data-used-car-detail] .detailStickySummary {
+    height: 111.8px;
+    z-index: 200;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+  }
+
+  body[data-used-car-detail] .detailStickyInner {
+    width: 100%;
+    height: 64px;
+    grid-template-columns: 40px minmax(0, 1fr) 40px 58px 94px;
+    gap: 6px;
+    padding: 8px 12px;
+  }
+
+  body[data-used-car-detail] .stickyThumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+  }
+
+  body[data-used-car-detail] .stickyCopy strong {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  body[data-used-car-detail] .stickyCopy span {
+    gap: 6px;
+  }
+
+  body[data-used-car-detail] .stickyCopy b,
+  body[data-used-car-detail] .stickyCopy em {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  body[data-used-car-detail] .stickySave {
+    width: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 0;
+  }
+
+  body[data-used-car-detail] .stickyChat,
+  body[data-used-car-detail] .stickyPhone {
+    height: 40px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  body[data-used-car-detail] .stickyChat {
+    background: #f4f4f4;
+  }
+
+  body[data-used-car-detail] .stickyPhone {
+    background: #ffd400;
+    color: #222;
+  }
+
+  body[data-used-car-detail] .detailAnchorNav {
+    width: 100%;
+    height: 47.8px;
+    margin: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  body[data-used-car-detail] .detailAnchorNav::-webkit-scrollbar {
+    display: none;
+  }
+
+  body[data-used-car-detail] .detailAnchorNav a {
+    height: 47.8px;
+    flex: 0 0 auto;
+    padding: 14px 16px;
   }
 
   .toast {
