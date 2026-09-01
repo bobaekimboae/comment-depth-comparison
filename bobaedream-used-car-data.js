@@ -36,26 +36,124 @@ window.BOBAE_USED_CAR = {
   ],
   dealers: {
     main: {
-      name: "한강모터스-박성수",
+      name: "이은호",
       type: "딜러",
+      company: "보배드림 모터스",
       selling: "41대 판매중",
-      sold: "1대 판매완료",
+      sold: "판매완료 12대",
       location: "서울 서초구",
       employeeNo: "11-123-12345",
-      group: "상사/조합정보",
+      group: "보배드림 모터스 / 서울자동차매매조합",
       avatar: "assets/used-car/dealer-avatar.png",
       phone: "050-4375-0853"
     },
+    eunho: {
+      name: "이은호",
+      type: "딜러",
+      company: "보배드림 모터스",
+      selling: "41대 판매중",
+      sold: "판매완료 12대",
+      location: "서울 서초구",
+      employeeNo: "11-123-12345",
+      group: "보배드림 모터스 / 서울자동차매매조합",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-4375-0853"
+    },
+    minjun: {
+      name: "강민준",
+      type: "딜러",
+      company: "서초 프리미엄모터스",
+      selling: "33대 판매중",
+      sold: "판매완료 27대",
+      location: "서울 서초구",
+      employeeNo: "11-218-60482",
+      group: "서초 프리미엄모터스 / 서울자동차매매조합",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-7124-9036"
+    },
+    seoyeon: {
+      name: "박서연",
+      type: "딜러",
+      company: "오토갤러리 인증센터",
+      selling: "19대 판매중",
+      sold: "판매완료 8대",
+      location: "서울 서초구",
+      employeeNo: "11-384-76210",
+      group: "오토갤러리 인증센터 / 서울자동차매매조합",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-6203-1448"
+    },
+    jihoon: {
+      name: "최지훈",
+      type: "딜러",
+      company: "강남 수입차 라운지",
+      selling: "52대 판매중",
+      sold: "판매완료 45대",
+      location: "서울 강남구",
+      employeeNo: "11-509-33671",
+      group: "강남 수입차 라운지 / 서울자동차매매조합",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-3348-7712"
+    },
+    taemin: {
+      name: "서태민",
+      type: "딜러",
+      company: "도이치오토월드 모터스",
+      selling: "28대 판매중",
+      sold: "판매완료 31대",
+      location: "경기 수원시",
+      employeeNo: "13-774-91820",
+      group: "도이치오토월드 모터스 / 경기자동차매매조합",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-5820-6641"
+    },
+    sujin: {
+      name: "김수진",
+      type: "딜러",
+      company: "청담 슈퍼카 컬렉션",
+      selling: "11대 판매중",
+      sold: "판매완료 6대",
+      location: "서울 강남구",
+      employeeNo: "11-862-44091",
+      group: "청담 슈퍼카 컬렉션 / 서울자동차매매조합",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-9011-2750"
+    },
+    hyunwoo: {
+      name: "정현우",
+      type: "딜러",
+      company: "화성 상용차센터",
+      selling: "24대 판매중",
+      sold: "판매완료 18대",
+      location: "경기 화성시",
+      employeeNo: "13-430-28415",
+      group: "화성 상용차센터 / 경기자동차매매조합",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-2468-5309"
+    },
     private: {
-      name: "목동 개인직거래",
+      name: "김도윤",
       type: "개인",
+      company: "목동 직거래",
       selling: "1대 판매중",
-      sold: "0대 판매완료",
+      sold: "판매완료 0대",
       location: "서울 양천구",
       employeeNo: "-",
       group: "개인판매",
       avatar: "assets/used-car/dealer-avatar.png",
       phone: "050-6812-3401"
+    },
+    privateBike: {
+      name: "윤태오",
+      type: "개인",
+      company: "강남 라이더 직거래",
+      selling: "1대 판매중",
+      sold: "판매완료 2대",
+      location: "서울 강남구",
+      employeeNo: "-",
+      group: "개인판매",
+      avatar: "assets/used-car/dealer-avatar.png",
+      phone: "050-7704-1250"
     }
   },
   cars: [
@@ -90,7 +188,7 @@ window.BOBAE_USED_CAR = {
       images: ["assets/used-car/hero-silver-car.jpg", "assets/used-car/thumb-range-rover.png", "assets/used-car/thumb-escalade.png"],
       photoCount: 18,
       video: true,
-      dealer: "main",
+      dealer: "eunho",
       intro: "ㄴㅇㄹㅎㄴㅇㅎㄴㅇㅎ",
       description: [
         "오토갤러리 입고 후 실내외 기본 점검을 마친 G80 스포츠팩 매물입니다.",
@@ -147,7 +245,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-escalade.png",
       images: ["assets/used-car/hero-red-car.jpg", "assets/used-car/thumb-escalade.png", "assets/used-car/thumb-gle-partial.png"],
       video: true,
-      dealer: "main",
+      dealer: "jihoon",
       intro: "신차급 컨디션, 대형 SUV 의전 패키지",
       description: [
         "출고 후 짧은 주행거리만 기록한 에스컬레이드 HEV입니다.",
@@ -204,7 +302,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-range-rover.png",
       images: ["assets/used-car/hero-silver-car.jpg", "assets/used-car/thumb-range-rover.png", "assets/used-car/thumb-escalade.png"],
       video: true,
-      dealer: "main",
+      dealer: "seoyeon",
       intro: "희소 컬러와 낮은 주행거리의 클래식 SUV",
       description: [
         "레인지로버 특유의 각진 실루엣과 V8 질감이 살아 있는 관리형 매물입니다.",
@@ -260,7 +358,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-gle-partial.png",
       images: ["assets/used-car/hero-sports-car.jpg", "assets/used-car/thumb-gle-partial.png", "assets/used-car/thumb-escalade.png"],
       video: true,
-      dealer: "main",
+      dealer: "minjun",
       intro: "패밀리 SUV 인기 사양, 실내 화이트 패키지",
       description: [
         "GLE 450 4매틱의 실내 화이트 시트 조합 매물입니다.",
@@ -316,7 +414,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-escalade.png",
       images: ["assets/used-car/hero-black-car.jpg", "assets/used-car/thumb-escalade.png"],
       video: false,
-      dealer: "main",
+      dealer: "taemin",
       intro: "고출력 SUV, M 퍼포먼스 감성",
       description: [
         "M50i 사양의 배기음과 출력감을 유지하면서 관리 이력이 뚜렷한 X5입니다.",
@@ -372,7 +470,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-range-rover.png",
       images: ["assets/used-car/hero-silver-car.jpg", "assets/used-car/thumb-range-rover.png"],
       video: false,
-      dealer: "main",
+      dealer: "seoyeon",
       intro: "감성형 SUV, 짧은 시승 예약 가능",
       description: [
         "르반떼 특유의 운전 감각을 찾는 구매자에게 맞춘 매물입니다.",
@@ -484,7 +582,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-escalade.png",
       images: ["assets/used-car/hero-silver-car.jpg", "assets/used-car/thumb-escalade.png"],
       video: true,
-      dealer: "main",
+      dealer: "sujin",
       intro: "짧은 주행거리의 오픈탑 슈퍼카",
       description: [
         "실내 보관 중심으로 관리된 750S 스파이더입니다.",
@@ -540,7 +638,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/hero-black-car.jpg",
       images: ["assets/used-car/hero-black-car.jpg", "assets/used-car/thumb-gle-partial.png"],
       video: false,
-      dealer: "main",
+      dealer: "eunho",
       intro: "관리 이력 공개, 합리적 가격대 세단",
       description: [
         "주행거리는 있지만 정비 이력과 보험 이력을 투명하게 공개하는 G80입니다.",
@@ -596,7 +694,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-gle-partial.png",
       images: ["assets/used-car/hero-red-car.jpg", "assets/used-car/thumb-gle-partial.png"],
       video: true,
-      dealer: "main",
+      dealer: "hyunwoo",
       intro: "택배·소형 물류에 바로 투입 가능한 윙바디",
       description: [
         "윙 개폐 장치와 리프트 작동을 점검한 3.5톤 특장 매물입니다.",
@@ -652,7 +750,7 @@ window.BOBAE_USED_CAR = {
       thumbnail: "assets/used-car/thumb-range-rover.png",
       images: ["assets/used-car/hero-sports-car.jpg", "assets/used-car/thumb-range-rover.png"],
       video: true,
-      dealer: "private",
+      dealer: "privateBike",
       intro: "장거리 투어링 세팅 완료",
       description: [
         "사이드 박스, 네비 마운트, 보호 가드를 장착한 투어링 세팅입니다.",

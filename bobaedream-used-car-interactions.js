@@ -149,6 +149,15 @@
     return dealers[car.dealer] || dealers.main || {};
   }
 
+  function dealerLabel(dealer) {
+    const nameRole = [dealer.name, dealer.type].filter(Boolean).join(" ");
+    return [nameRole, dealer.company, dealer.sold].filter(Boolean).join(" - ");
+  }
+
+  function dealerSupportLabel(dealer) {
+    return [dealer.selling, dealer.location].filter(Boolean).join(" · ");
+  }
+
   function makeMeta(car) {
     return [car.year, car.mileage, car.fuel, car.transmission].filter(Boolean).join(" · ");
   }
@@ -379,7 +388,7 @@
             <div class="mobileRowPrice">${car.price}</div>
             <div class="mobileRowBadges">${car.badges.map((badge) => `<span class="badge">${badge}</span>`).join("")}</div>
             <div class="mobileLocation">${car.location} · ${car.complex}</div>
-            <div class="mobileDealer"><img src="${dealer.avatar}" alt="">${dealer.name} ${dealer.type}</div>
+            <div class="mobileDealer"><img src="${dealer.avatar}" alt=""><span>${dealerLabel(dealer)}</span></div>
             <div class="mobileViews">조회 ${car.views}</div>
             <button class="mobileRowHeart" type="button" data-toggle-heart aria-label="찜"><span class="heartIcon"></span></button>
           </div>
@@ -422,8 +431,7 @@
             <div class="viewLine"><span class="viewTriangle"></span><span>${car.views}</span></div>
             <div class="dealerLine">
               <span class="dealerMini"><img src="${dealer.avatar}" alt=""></span>
-              <span>${dealer.name} ${dealer.type}</span>
-              <span class="muted">· 판매중 ${dealer.selling.replace(/[^0-9]/g, "")}대</span>
+              <span class="dealerLabel">${dealerLabel(dealer)}</span>
             </div>
           </div>
           <div class="rowActions">
@@ -889,9 +897,9 @@
     qs("#totalCost").textContent = `${totalCost.toLocaleString("ko-KR")}만원`;
 
     qs("#dealerAvatar").src = dealer.avatar;
-    qs("#dealerName").innerHTML = `${dealer.name}<span class="dealerBadge">${dealer.type}</span>`;
-    qs("#dealerStats").textContent = `★ 5.0 · ${dealer.sold} · ${dealer.selling}`;
-    qs("#dealerLocation").textContent = `● 상담 가능 · 응답률 82%`;
+    qs("#dealerName").textContent = dealerLabel(dealer);
+    qs("#dealerStats").textContent = dealerSupportLabel(dealer);
+    qs("#dealerLocation").textContent = `상담 가능 · 응답률 82%`;
     qs("#detailLocationLine").textContent = car.location;
     qs("#detailComplexLine").textContent = car.complex;
     qs("#detailPostedLine").textContent = `등록 ${car.posted.replace("전", " 전")}`;

@@ -1085,6 +1085,7 @@ body[data-used-car-list] .listShell .viewLine {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
   color: #222;
   font-size: 12px;
   line-height: 18px;
@@ -1102,6 +1103,13 @@ body[data-used-car-list] .listShell .viewLine {
 .dealerLine .muted {
   color: #8c8c8c;
   font-weight: 400;
+}
+
+.dealerLabel {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .rowActions {
@@ -2983,6 +2991,7 @@ body[data-used-car-list] .listShell .viewLine {
     display: flex;
     align-items: center;
     gap: 5px;
+    min-width: 0;
     color: #222;
     font-size: 12px;
     line-height: 18px;
@@ -2993,6 +3002,13 @@ body[data-used-car-list] .listShell .viewLine {
     width: 18px;
     height: 18px;
     border-radius: 50%;
+  }
+
+  .mobileDealer span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .mobileViews {
