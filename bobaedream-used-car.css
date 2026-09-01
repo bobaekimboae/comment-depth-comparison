@@ -156,10 +156,10 @@ img {
 
 .bbNavDivider {
   width: 1px;
-  height: 18px;
+  height: 24px;
   flex: 0 0 1px;
-  margin: 0 -4px;
-  background: #d7dbe3;
+  margin: 0 -2px;
+  background: #aeb6c4;
 }
 
 .bbNavLink {
@@ -4420,7 +4420,7 @@ html.bobae-main-page body {
 }
 
 .bobae-main-page .bbHeaderInner {
-  width: calc(100% - 160px);
+  width: min(1280px, calc(100% - 80px));
   margin: 0 auto;
 }
 
@@ -4596,21 +4596,21 @@ body[data-bobae-main] .bbNav .bbHeaderInner {
   height: 64px;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
 
 body[data-bobae-main] .bbNavList {
   height: 64px;
   flex: 1 1 auto;
-  gap: 18px;
+  gap: 14px;
   min-width: 0;
   overflow-x: auto;
   scrollbar-width: none;
 }
 
 body[data-bobae-main] .bbNavDivider {
-  height: 20px;
-  background: #d9dde5;
+  height: 26px;
+  background: #aeb6c4;
 }
 
 body[data-bobae-main] .bbNavList::-webkit-scrollbar {

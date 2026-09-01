@@ -119,10 +119,10 @@ img {
 
 .registerNavDivider {
   width: 1px;
-  height: 18px;
+  height: 24px;
   flex: 0 0 1px;
-  margin: 0 -4px;
-  background: #d7dbe3;
+  margin: 0 -2px;
+  background: #aeb6c4;
 }
 
 .registerNavLink {
