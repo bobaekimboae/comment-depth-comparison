@@ -1004,7 +1004,7 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .rowPrice {
   margin-top: 4px;
-  color: var(--price);
+  color: #222;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -1613,7 +1613,7 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .stickyCopy b {
-  color: #f0325e;
+  color: #222;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -2026,7 +2026,7 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .detailPrice {
-  color: #f0325e;
+  color: #222;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
@@ -2407,7 +2407,7 @@ body[data-used-car-list] .listShell .viewLine {
 
 .similarPrice {
   margin-top: 5px;
-  color: var(--price);
+  color: #222;
   font-size: 14px;
   font-weight: 900;
 }
@@ -2964,7 +2964,7 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileRowPrice {
     margin-top: 2px;
-    color: var(--price);
+    color: #222;
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
@@ -3588,7 +3588,7 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   body[data-used-car-detail] .detailPrice {
-    color: #f0325e;
+    color: #222;
     font-size: 20px;
     line-height: 24px;
   }
@@ -4542,7 +4542,7 @@ body[data-bobae-main] .bbNavLink.is-active::after {
   align-items: baseline;
   gap: 8px;
   min-width: 0;
-  color: var(--price);
+  color: #222;
   font-size: 20px;
   line-height: 26px;
   font-weight: 950;
