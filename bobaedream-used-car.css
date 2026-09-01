@@ -1336,6 +1336,10 @@ body[data-used-car-detail] .bbHeaderTop {
   object-fit: contain;
 }
 
+.categoryBtn[data-category="old"] .categoryIcon img {
+  transform: scaleX(-1);
+}
+
 .categoryBtn.is-active .categoryIcon {
   background: #f1f2f3;
   color: #171a1f;
@@ -3455,6 +3459,10 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileCategoryBtn img {
     width: 44px;
     height: 44px;
+  }
+
+  .mobileCategoryBtn[data-category="old"] img {
+    transform: scaleX(-1);
   }
 
   .mobileCategoryBtn.is-active {
