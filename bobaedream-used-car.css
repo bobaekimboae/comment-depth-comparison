@@ -1041,8 +1041,8 @@ body[data-used-car-list] .listShell .badgeRow {
   align-items: center;
   gap: 4px;
   color: #595959;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 18px;
   font-weight: 400;
 }
 
@@ -2981,8 +2981,8 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileLocation {
     margin-top: 6px;
     color: #595959;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
     font-weight: 400;
   }
 
