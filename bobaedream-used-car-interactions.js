@@ -266,7 +266,7 @@
   }
 
   function renderHeaderActive() {
-    const navCategories = ["used", "truck", "bike", "camping", "parts"];
+    const navCategories = ["used", "truck", "machine", "bike", "camping", "parts"];
     const categoryNav = new URLSearchParams(window.location.search).get("category");
     const brandNav = new URLSearchParams(window.location.search).get("brand");
     const sellerNav = new URLSearchParams(window.location.search).get("seller");

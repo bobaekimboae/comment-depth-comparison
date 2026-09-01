@@ -114,7 +114,15 @@ img {
   height: 54px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
+}
+
+.registerNavDivider {
+  width: 1px;
+  height: 18px;
+  flex: 0 0 1px;
+  margin: 0 -4px;
+  background: #d7dbe3;
 }
 
 .registerNavLink {
