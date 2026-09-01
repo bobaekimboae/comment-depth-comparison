@@ -1036,7 +1036,7 @@ body[data-used-car-list] .listShell .badgeRow {
 }
 
 .locationLine {
-  margin-top: 7px;
+  margin-top: 6px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -1081,7 +1081,7 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .dealerLine {
-  margin-top: 18px;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1655,8 +1655,8 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .stickyPhone {
-  background: #ffd400;
-  color: #222;
+  background: var(--blue);
+  color: #fff;
 }
 
 .detailAnchorNav {
@@ -2213,8 +2213,8 @@ body[data-used-car-list] .listShell .viewLine {
 }
 
 .contactBtn.phone {
-  background: #ffd400;
-  color: #222;
+  background: var(--blue);
+  color: #fff;
 }
 
 .stickyChat,
@@ -2242,7 +2242,7 @@ body[data-used-car-list] .listShell .viewLine {
   height: 18px;
   flex: 0 0 18px;
   background: var(--icon-phone) center / 18px 18px no-repeat;
-  filter: none;
+  filter: brightness(0) invert(1);
 }
 
 .sideInfoLine {
@@ -2979,7 +2979,7 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileLocation {
-    margin-top: 14px;
+    margin-top: 6px;
     color: #595959;
     font-size: 14px;
     line-height: 20px;
@@ -2987,7 +2987,7 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileDealer {
-    margin-top: 8px;
+    margin-top: 14px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -3018,7 +3018,7 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileViews {
     position: absolute;
     right: 16px;
-    bottom: 46px;
+    bottom: 59px;
     color: #606771;
     font-size: 13px;
     font-weight: 700;
@@ -3694,8 +3694,8 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   body[data-used-car-detail] .stickyPhone {
-    background: #ffd400;
-    color: #222;
+    background: var(--blue);
+    color: #fff;
   }
 
   body[data-used-car-detail] .detailAnchorNav {

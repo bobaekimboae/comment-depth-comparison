@@ -163,7 +163,7 @@
   }
 
   function makeMeta(car) {
-    return [car.year, car.mileage, car.fuel, car.transmission].filter(Boolean).join(" · ");
+    return [car.year, car.mileage, car.fuel, car.power].filter(Boolean).join(" · ");
   }
 
   function thumbMarkup(car, large = false) {
@@ -391,8 +391,8 @@
             <div class="mobileRowMeta">${makeMeta(car)}</div>
             <div class="mobileRowPrice">${car.price}</div>
             <div class="mobileRowBadges">${car.badges.map((badge) => `<span class="badge">${badge}</span>`).join("")}</div>
-            <div class="mobileLocation">${locationMarketLabel(car, dealer)}</div>
             <div class="mobileDealer"><img src="${dealer.avatar}" alt=""><span>${dealerLabel(dealer)}</span></div>
+            <div class="mobileLocation">${locationMarketLabel(car, dealer)}</div>
             <div class="mobileViews">조회 ${car.views}</div>
             <button class="mobileRowHeart" type="button" data-toggle-heart aria-label="찜"><span class="heartIcon"></span></button>
           </div>
@@ -431,12 +431,12 @@
             <div class="rowMeta">${makeMeta(car)}</div>
             <div class="rowPrice">${car.price}</div>
             <div class="badgeRow">${car.badges.map((badge) => `<span class="badge">${badge}</span>`).join("")}</div>
-            <div class="locationLine"><span class="pinIcon"></span><span>${locationMarketLabel(car, dealer)}</span></div>
             <div class="viewLine"><span class="viewTriangle"></span><span>${car.views}</span></div>
             <div class="dealerLine">
               <span class="dealerMini"><img src="${dealer.avatar}" alt=""></span>
               <span class="dealerLabel">${dealerLabel(dealer)}</span>
             </div>
+            <div class="locationLine"><span class="pinIcon"></span><span>${locationMarketLabel(car, dealer)}</span></div>
           </div>
           <div class="rowActions">
             <button class="roundIconBtn" type="button" data-toast="매물 문의 화면은 시안에서 준비 중입니다." aria-label="문의">
@@ -796,7 +796,7 @@
       ["주행거리", car.mileageFull],
       ["연료", car.fuel],
       ["차량번호", car.number],
-      ["변속기", car.transmission],
+      ["최고출력", car.power],
       ["배기량", car.displacement],
       ["색상", car.color],
       ["지역", car.location],
@@ -864,7 +864,7 @@
     qs("#detailTitle").textContent = car.title;
     const detailSubcopy = qs("#detailSubcopy");
     if (detailSubcopy) detailSubcopy.textContent = car.intro;
-    qs("#detailMeta").textContent = `${car.yearFull} · ${car.mileageFull} · ${car.fuel} · ${car.transmission} · ${car.accident === "없음" ? "무사고" : "사고이력"}`;
+    qs("#detailMeta").textContent = `${car.yearFull} · ${car.mileageFull} · ${car.fuel} · ${car.power} · ${car.accident === "없음" ? "무사고" : "사고이력"}`;
     qs("#detailBadges").innerHTML = car.badges.map((badge) => `<span class="badge">${badge}</span>`).join("");
     qs("#detailStats").innerHTML = `<span>추천 ${car.likes}</span><span>조회 ${car.views}</span>`;
     qs("#basicSpecs").innerHTML = specGridMarkup(valueList(car));
@@ -913,7 +913,7 @@
     qs("#stickyThumb").innerHTML = thumbMarkup(car);
     qs("#stickyTitle").textContent = car.title;
     qs("#stickyPrice").textContent = car.price;
-    qs("#stickyMeta").textContent = `${car.yearFull} ${car.mileageFull} ${car.fuel} ${car.transmission}`;
+    qs("#stickyMeta").textContent = `${car.yearFull} ${car.mileageFull} ${car.fuel} ${car.power}`;
     qs("#stickyPhone").textContent = dealer.phone;
 
     const similar = cars.filter((item) => item.id !== car.id).slice(0, 6);
