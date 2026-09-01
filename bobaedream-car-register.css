@@ -314,6 +314,11 @@ img {
   max-width: none;
 }
 
+.categoryIconBox.is-photo.is-used img {
+  width: 60px;
+  height: 45px;
+}
+
 .categoryText {
   width: 336px;
   height: 48px;
