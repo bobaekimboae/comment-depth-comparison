@@ -74,7 +74,7 @@
     category: {
       title: "카테고리",
       options: () => [
-        ["전체중고차", "all", data.totalCount],
+        ["전체차량", "all", data.totalCount],
         ...categories.map((category) => [category.label, category.key, category.key === "used" ? data.totalCount : "1,000+"])
       ]
     },
@@ -123,6 +123,41 @@
       options: [["전체", "", data.totalCount], ["차량번호 공개", "number", "12,438"], ["성능점검 공개", "history", "10,004"], ["전화 상담 가능", "phone", "13,012"], ["영상 상담 가능", "video", "1,826"]]
     }
   };
+  const currentYear = new Date().getFullYear();
+  const pcYearOptions = [
+    ["전체", "", null, null],
+    ["~1년", "year-1", currentYear - 1, null],
+    ["~2년", "year-2", currentYear - 2, null],
+    ["~3년", "year-3", currentYear - 3, null],
+    ["~4년", "year-4", currentYear - 4, null],
+    ["~5년", "year-5", currentYear - 5, null],
+    ["6년~", "year-old", null, currentYear - 6]
+  ];
+  const pcPriceOptions = [
+    ["전체", "", null, null],
+    ["1천만원", "0-1000", null, 1000],
+    ["2천만원", "0-2000", null, 2000],
+    ["3천만원", "0-3000", null, 3000],
+    ["4천만원", "0-4000", null, 4000],
+    ["5천만원", "0-5000", null, 5000],
+    ["6천만원", "0-6000", null, 6000],
+    ["7천만원", "0-7000", null, 7000],
+    ["8천만원", "0-8000", null, 8000],
+    ["9천만원~", "9000-", 9000, null]
+  ];
+  const pcFuelOptions = [
+    ["가솔린", "가솔린", "9,925"],
+    ["디젤", "디젤", "3,373"],
+    ["LPG", "LPG", "281"],
+    ["가솔린 하이브리드", "하이브리드", "890"],
+    ["전기", "전기", "344"],
+    ["기타", "기타", "21"]
+  ];
+  const pcSellerOptions = [
+    ["전체", "all", data.totalCount],
+    ["개인", "private", "875"],
+    ["딜러", "dealer", "13,465"]
+  ];
 
   function qs(selector, root = document) {
     return root.querySelector(selector);
@@ -288,7 +323,8 @@
       const videoMatch = !state.video || car.video;
       const regionMatch = !state.region || state.region === "전국" || String(car.location || "").startsWith(state.region);
       const fuelMatch = !state.fuel || car.fuel === state.fuel;
-      const yearMatch = !state.yearMin || carYear(car) >= state.yearMin;
+      const yearValue = carYear(car);
+      const yearMatch = (!state.yearMin || yearValue >= state.yearMin) && (!state.yearMax || yearValue <= state.yearMax);
       const price = moneyToNumber(car.price);
       const priceMatch = (!state.priceMin || price >= state.priceMin) && (!state.priceMax || price <= state.priceMax);
       const mileageMatch = !state.mileageMax || normalizeKoreanNumber(car.mileageFull || car.mileage) <= state.mileageMax;
@@ -308,7 +344,7 @@
   }
 
   function getCountText(state, visible) {
-    const isBaseView = state.category === "all" && state.seller === "all" && !state.brand && !state.video && (!state.region || state.region === "전국") && !state.fuel && !state.yearMin && !state.priceMin && !state.priceMax && !state.mileageMax && !state.complex && !state.option && !state.feature && !state.plate;
+    const isBaseView = state.category === "all" && state.seller === "all" && !state.brand && !state.video && (!state.region || state.region === "전국") && !state.fuel && !state.yearMin && !state.yearMax && !state.priceMin && !state.priceMax && !state.mileageMax && !state.complex && !state.option && !state.feature && !state.plate;
     return isBaseView ? `${data.totalCount}대` : `${visible.length ? visible.length.toLocaleString("ko-KR") : "0"}대`;
   }
 
@@ -347,6 +383,8 @@
     qs("#videoSwitch")?.classList.toggle("is-on", state.video);
     qs("#mobileVideoSwitch")?.classList.toggle("is-on", state.video);
 
+    renderPcFilterChips(state);
+    if (qs("#pcFilterApplyCount")) qs("#pcFilterApplyCount").textContent = `${countText} 보기`;
     updateMobileChipLabels(state);
   }
 
@@ -462,8 +500,11 @@
     state.sort = "updated";
     state.fuel = "";
     state.yearMin = null;
+    state.yearMax = null;
+    state.yearLabel = "";
     state.priceMin = null;
     state.priceMax = null;
+    state.priceLabel = "";
     state.mileageMax = null;
     state.complex = "";
     state.option = "";
@@ -482,11 +523,63 @@
     return option ? option[0] : "";
   }
 
+  function selectedTopFilterLabel(state, type) {
+    if (type === "brand") return state.brand || "";
+    if (type === "year") return state.yearLabel || selectedGenericLabel(state, "year");
+    if (type === "price") return state.priceLabel || selectedGenericLabel(state, "price");
+    if (type === "fuel") return state.fuel || "";
+    if (type === "seller") {
+      if (state.seller === "private") return "개인";
+      if (state.seller === "dealer") return "딜러";
+      return "";
+    }
+    return "";
+  }
+
+  function activeTopFilterCount(state) {
+    return ["brand", "year", "price", "fuel", "seller"].filter((type) => selectedTopFilterLabel(state, type)).length;
+  }
+
+  function renderSelectedChip(label, type, modalType = type) {
+    return `
+      <button class="chipBtn is-dark is-selected" type="button" data-pc-filter="${modalType}" data-clear-filter="${type}" aria-label="${label} 조건 수정">
+        <span>${label}</span>
+      </button>
+    `;
+  }
+
+  function renderOpenChip(label, modalType) {
+    return `<button class="chipBtn has-caret" type="button" data-pc-filter="${modalType}">${label}</button>`;
+  }
+
+  function renderPcFilterChips(state) {
+    const root = qs("#pcFilterChips");
+    if (!root) return;
+    const count = activeTopFilterCount(state);
+    const types = [
+      ["brand", "제조사", "maker"],
+      ["year", "연식", "year"],
+      ["price", "가격", "price"],
+      ["fuel", "연료", "fuel"],
+      ["seller", "판매자", "seller"]
+    ];
+    const chips = [
+      `<button class="chipBtn is-filter${count ? " is-applied" : ""}" type="button" data-pc-filter-menu>${count || "필터"}</button>`,
+      renderSelectedChip("전체차량", "category", "category")
+    ];
+
+    types.forEach(([type, label, modalType]) => {
+      const selected = selectedTopFilterLabel(state, type);
+      chips.push(selected ? renderSelectedChip(selected, type, modalType) : renderOpenChip(label, modalType));
+    });
+    root.innerHTML = chips.join("");
+  }
+
   function updateMobileChipLabels(state) {
     ["year", "price", "fuel", "seller"].forEach((type) => {
       const chip = qs(`.mobileChip[data-open-sheet="${type}"]`);
       if (!chip) return;
-      const label = selectedGenericLabel(state, type) || ({ year: "연식", price: "가격", fuel: "연료", seller: "판매자" }[type]);
+      const label = selectedTopFilterLabel(state, type) || ({ year: "연식", price: "가격", fuel: "연료", seller: "판매자" }[type]);
       chip.textContent = label;
     });
   }
@@ -534,12 +627,17 @@
     if (type === "category") state.category = value || "all";
     if (type === "seller") state.seller = value || "all";
     if (type === "fuel") state.fuel = value || "";
-    if (type === "year") state.yearMin = value ? Number(value) : null;
+    if (type === "year") {
+      state.yearMin = value ? Number(value) : null;
+      state.yearMax = null;
+      state.yearLabel = "";
+    }
     if (type === "mileage") state.mileageMax = value ? Number(value) : null;
     if (type === "price") {
       const [min, max] = String(value || "").split("-");
       state.priceMin = min ? Number(min) : null;
       state.priceMax = max ? Number(max) : null;
+      state.priceLabel = "";
     }
     if (type === "complex") state.complex = value || "";
     if (type === "option") state.option = value || "";
@@ -565,6 +663,313 @@
         <span class="mobileOptionCount">${count || ""}</span>
       </button>
     `).join("");
+  }
+
+  function rangeLabel(min, max, unit) {
+    if (min && max) return `${min.toLocaleString("ko-KR")}${unit}~${max.toLocaleString("ko-KR")}${unit}`;
+    if (min) return `${min.toLocaleString("ko-KR")}${unit}~`;
+    if (max) return `${max.toLocaleString("ko-KR")}${unit}`;
+    return "";
+  }
+
+  function resetSingleFilter(state, type) {
+    if (type === "category") state.category = "all";
+    if (type === "brand" || type === "maker") state.brand = "";
+    if (type === "year") {
+      state.yearMin = null;
+      state.yearMax = null;
+      state.yearLabel = "";
+      delete state.generic.year;
+    }
+    if (type === "price") {
+      state.priceMin = null;
+      state.priceMax = null;
+      state.priceLabel = "";
+      delete state.generic.price;
+    }
+    if (type === "fuel") {
+      state.fuel = "";
+      delete state.generic.fuel;
+    }
+    if (type === "seller") {
+      state.seller = "all";
+      delete state.generic.seller;
+    }
+  }
+
+  function renderPcMakerModal(state) {
+    const groups = [
+      ["국산", data.filters?.domestic || []],
+      ["수입", data.filters?.imported || []]
+    ];
+    return `
+      <div class="pcFilterMakerList">
+        ${groups.map(([title, items]) => `
+          <div class="pcFilterGroupTitle">${title}</div>
+          ${items.map(([label, count]) => `
+            <button class="pcFilterOptionButton${state.brand === label ? " is-selected" : ""}" type="button" data-pc-brand="${label}" ${count === "0" ? "disabled" : ""}>
+              <span class="pcFilterLogoMark">${label.slice(0, 1)}</span>
+              <span>${label}</span>
+              <span class="pcFilterCount">${count}</span>
+            </button>
+          `).join("")}
+        `).join("")}
+      </div>
+    `;
+  }
+
+  function renderPcYearModal(state) {
+    return `
+      <div class="pcQuickFilterPanel">
+        <div class="pcQuickRange">
+          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="부터" value="${state.yearMin || ""}" data-pc-year-min>
+          <span>~</span>
+          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="까지" value="${state.yearMax || ""}" data-pc-year-max>
+        </div>
+        <div class="pcQuickUnit">년</div>
+        <div class="pcQuickOptions">
+          ${pcYearOptions.map(([label, key, min, max]) => {
+            const selected = key
+              ? state.yearLabel === label
+              : !state.yearMin && !state.yearMax;
+            return `<button class="pcQuickButton${selected ? " is-selected" : ""}" type="button" data-pc-year-key="${key}" data-pc-year-min-value="${min || ""}" data-pc-year-max-value="${max || ""}" data-pc-label="${label}"><span>${label}</span></button>`;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPcPriceModal(state) {
+    return `
+      <div class="pcQuickFilterPanel">
+        <div class="pcQuickTabs" aria-label="가격 유형">
+          <button class="is-active" type="button">일반</button>
+          <button type="button" data-toast="리스 / 렌트 가격 조건은 시안에서 준비 중입니다.">리스 / 렌트</button>
+        </div>
+        <div class="pcQuickRange">
+          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="부터" value="${state.priceMin || ""}" data-pc-price-min>
+          <span>~</span>
+          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="까지" value="${state.priceMax || ""}" data-pc-price-max>
+        </div>
+        <div class="pcQuickUnit">만원</div>
+        <div class="pcQuickOptions">
+          ${pcPriceOptions.map(([label, key, min, max]) => {
+            const selected = key
+              ? state.priceLabel === label
+              : !state.priceMin && !state.priceMax;
+            return `<button class="pcQuickButton${selected ? " is-selected" : ""}" type="button" data-pc-price-key="${key}" data-pc-price-min-value="${min || ""}" data-pc-price-max-value="${max || ""}" data-pc-label="${label}"><span>${label}</span></button>`;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPcCheckModal(state, type) {
+    const options = type === "seller" ? pcSellerOptions : pcFuelOptions;
+    const selectedValue = type === "seller" ? state.seller : state.fuel;
+    return `
+      <div class="pcFilterCheckGrid">
+        ${options.map(([label, value, count]) => {
+          const selected = type === "seller"
+            ? selectedValue === value || (!selectedValue && value === "all")
+            : selectedValue === value;
+          return `
+            <button class="pcFilterCheckButton${selected ? " is-selected" : ""}" type="button" data-pc-${type}="${value}">
+              <span>${label}</span>
+              <span class="pcFilterCount">${count || ""}</span>
+            </button>
+          `;
+        }).join("")}
+      </div>
+    `;
+  }
+
+  function renderPcFilterModal(type, state) {
+    const title = qs("#pcFilterModalTitle");
+    const body = qs("#pcFilterModalBody");
+    const layer = qs("#pcFilterModalLayer");
+    if (!title || !body || !layer) return;
+    const titles = {
+      category: "카테고리",
+      maker: "제조사 선택",
+      year: "연식",
+      price: "가격",
+      fuel: "연료",
+      seller: "판매자"
+    };
+    layer.dataset.pcFilterType = type;
+    title.textContent = titles[type] || "조건 선택";
+    if (type === "maker") body.innerHTML = renderPcMakerModal(state);
+    else if (type === "year") body.innerHTML = renderPcYearModal(state);
+    else if (type === "price") body.innerHTML = renderPcPriceModal(state);
+    else if (type === "fuel" || type === "seller") body.innerHTML = renderPcCheckModal(state, type);
+    else {
+      const config = genericSheetConfigs.category;
+      body.innerHTML = `
+        <div class="pcFilterCheckGrid">
+          ${getGenericOptions(config).map(([label, value, count]) => `
+            <button class="pcFilterCheckButton${(state.category || "all") === value ? " is-selected" : ""}" type="button" data-pc-category="${value}">
+              <span>${label}</span>
+              <span class="pcFilterCount">${count || ""}</span>
+            </button>
+          `).join("")}
+        </div>
+      `;
+    }
+    setupGenericActions();
+  }
+
+  function setupPcFilterChips(state) {
+    const chips = qs("#pcFilterChips");
+    const layer = qs("#pcFilterModalLayer");
+    if (!chips || !layer) return;
+
+    const openPcFilter = (type) => {
+      renderPcFilterModal(type, state);
+      layer.classList.add("is-open");
+      layer.setAttribute("aria-hidden", "false");
+      document.body.classList.add("pc-filter-open");
+    };
+
+    const closePcFilter = () => {
+      layer.classList.remove("is-open");
+      layer.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("pc-filter-open");
+      delete layer.dataset.pcFilterType;
+    };
+
+    chips.addEventListener("click", (event) => {
+      const clearButton = event.target.closest("[data-clear-filter]");
+      if (clearButton) {
+        const rect = clearButton.getBoundingClientRect();
+        if (event.clientX <= rect.right - 30) {
+          const filterButton = event.target.closest("[data-pc-filter]");
+          if (filterButton) openPcFilter(filterButton.dataset.pcFilter || "maker");
+          return;
+        }
+        event.stopPropagation();
+        resetSingleFilter(state, clearButton.dataset.clearFilter || "");
+        renderRows(state);
+        renderMobileMakerList(state);
+        renderMobileRegionGrid(state);
+        renderMobileSortList(state);
+        showToast("선택한 조건을 해제했습니다.");
+        return;
+      }
+      const filterButton = event.target.closest("[data-pc-filter]");
+      if (filterButton) {
+        openPcFilter(filterButton.dataset.pcFilter || "maker");
+        return;
+      }
+      if (event.target.closest("[data-pc-filter-menu]")) {
+        qs(".filterPanel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        showToast("좌측 필터에서 상세 조건을 선택하세요.");
+      }
+    });
+
+    layer.addEventListener("click", (event) => {
+      if (event.target.closest("[data-close-pc-filter]")) {
+        closePcFilter();
+        return;
+      }
+      if (event.target.closest("[data-reset-pc-filter]")) {
+        const type = layer.dataset.pcFilterType || "";
+        resetSingleFilter(state, type);
+        renderRows(state);
+        renderMobileMakerList(state);
+        renderMobileRegionGrid(state);
+        renderMobileSortList(state);
+        renderPcFilterModal(type, state);
+        showToast("선택한 조건을 초기화했습니다.");
+        return;
+      }
+
+      const brandButton = event.target.closest("[data-pc-brand]");
+      if (brandButton && !brandButton.disabled) {
+        state.brand = state.brand === brandButton.dataset.pcBrand ? "" : brandButton.dataset.pcBrand;
+        renderRows(state);
+        renderPcFilterModal("maker", state);
+        renderMobileMakerList(state);
+        return;
+      }
+
+      const categoryButton = event.target.closest("[data-pc-category]");
+      if (categoryButton) {
+        state.category = categoryButton.dataset.pcCategory || "all";
+        state.generic.category = state.category;
+        renderRows(state);
+        renderPcFilterModal("category", state);
+        renderMobileCategoryButtons(state.category === "all" ? "used" : state.category);
+        return;
+      }
+
+      const yearButton = event.target.closest("[data-pc-year-key]");
+      if (yearButton) {
+        state.yearMin = yearButton.dataset.pcYearMinValue ? Number(yearButton.dataset.pcYearMinValue) : null;
+        state.yearMax = yearButton.dataset.pcYearMaxValue ? Number(yearButton.dataset.pcYearMaxValue) : null;
+        state.yearLabel = yearButton.dataset.pcLabel === "전체" ? "" : yearButton.dataset.pcLabel;
+        delete state.generic.year;
+        renderRows(state);
+        renderPcFilterModal("year", state);
+        return;
+      }
+
+      const priceButton = event.target.closest("[data-pc-price-key]");
+      if (priceButton) {
+        state.priceMin = priceButton.dataset.pcPriceMinValue ? Number(priceButton.dataset.pcPriceMinValue) : null;
+        state.priceMax = priceButton.dataset.pcPriceMaxValue ? Number(priceButton.dataset.pcPriceMaxValue) : null;
+        state.priceLabel = priceButton.dataset.pcLabel === "전체" ? "" : priceButton.dataset.pcLabel;
+        delete state.generic.price;
+        renderRows(state);
+        renderPcFilterModal("price", state);
+        return;
+      }
+
+      const fuelButton = event.target.closest("[data-pc-fuel]");
+      if (fuelButton) {
+        state.fuel = fuelButton.dataset.pcFuel || "";
+        if (state.fuel === "all") state.fuel = "";
+        state.generic.fuel = state.fuel;
+        renderRows(state);
+        renderPcFilterModal("fuel", state);
+        return;
+      }
+
+      const sellerButton = event.target.closest("[data-pc-seller]");
+      if (sellerButton) {
+        state.seller = sellerButton.dataset.pcSeller || "all";
+        state.generic.seller = state.seller;
+        renderRows(state);
+        renderPcFilterModal("seller", state);
+      }
+    });
+
+    layer.addEventListener("change", (event) => {
+      if (event.target.matches("[data-pc-year-min], [data-pc-year-max]")) {
+        const min = Number(qs("[data-pc-year-min]", layer)?.value || "");
+        const max = Number(qs("[data-pc-year-max]", layer)?.value || "");
+        state.yearMin = min || null;
+        state.yearMax = max || null;
+        state.yearLabel = rangeLabel(state.yearMin, state.yearMax, "년");
+        delete state.generic.year;
+        renderRows(state);
+        renderPcFilterModal("year", state);
+      }
+      if (event.target.matches("[data-pc-price-min], [data-pc-price-max]")) {
+        const min = Number(qs("[data-pc-price-min]", layer)?.value || "");
+        const max = Number(qs("[data-pc-price-max]", layer)?.value || "");
+        state.priceMin = min || null;
+        state.priceMax = max || null;
+        state.priceLabel = rangeLabel(state.priceMin, state.priceMax, "만원");
+        delete state.generic.price;
+        renderRows(state);
+        renderPcFilterModal("price", state);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && layer.classList.contains("is-open")) closePcFilter();
+    });
   }
 
   function setupMobileList(state) {
@@ -715,8 +1120,11 @@
       sort: "updated",
       fuel: "",
       yearMin: null,
+      yearMax: null,
+      yearLabel: "",
       priceMin: null,
       priceMax: null,
+      priceLabel: "",
       mileageMax: null,
       complex: "",
       option: "",
@@ -727,6 +1135,7 @@
 
     renderFilterLists();
     renderCategoryButtons(state.category === "all" ? "used" : state.category);
+    setupPcFilterChips(state);
     setupMobileList(state);
     renderRows(state);
 
