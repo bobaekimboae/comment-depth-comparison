@@ -252,7 +252,7 @@ img {
 .dialogBody h2 {
   width: 440px;
   height: 24px;
-  margin: 14px 0 0;
+  margin: 0;
   color: var(--text-strong);
   font-size: 16px;
   font-weight: 700;
@@ -785,7 +785,7 @@ img {
   }
 
   .dialogBody h2 {
-    margin-top: 12px;
+    margin-top: 0;
   }
 
   .categoryList {
