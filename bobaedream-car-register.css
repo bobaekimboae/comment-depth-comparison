@@ -301,6 +301,18 @@ img {
   object-fit: contain;
 }
 
+.categoryIconBox.is-photo {
+  width: 64px;
+  flex-basis: 64px;
+  background: #f5f6f8;
+}
+
+.categoryIconBox.is-photo img {
+  width: 66px;
+  height: 48px;
+  max-width: none;
+}
+
 .categoryText {
   width: 336px;
   height: 48px;
