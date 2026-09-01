@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="bobaedream-car-register.css?v=bobae-register-category-first-20260901">
+<link rel="stylesheet" href="bobaedream-car-register.css?v=bobae-register-category-order-20260901">
 <title>매물 등록 - 보배드림</title>
 </head>
 <body data-bobae-register>
@@ -73,9 +73,9 @@
       <div class="dialogBody">
         <h2>카테고리 선택</h2>
         <div class="categoryList" aria-label="등록 카테고리">
-          <button class="categoryRow" type="button" data-category="자동차" data-subtitle="국산차, 수입차, 전기차">
+          <button class="categoryRow" type="button" data-category="중고차" data-subtitle="국산차, 수입차, 전기차">
             <span class="categoryIconBox"><img src="assets/used-car/categories/s03-23-category-used-car.svg" alt=""></span>
-            <span class="categoryText"><strong>자동차</strong><em>국산차, 수입차, 전기차</em></span>
+            <span class="categoryText"><strong>중고차</strong><em>국산차, 수입차, 전기차</em></span>
             <span class="categoryArrow" aria-hidden="true"></span>
           </button>
           <button class="categoryRow" type="button" data-category="오토바이" data-subtitle="바이크, 스쿠터">
@@ -83,14 +83,19 @@
             <span class="categoryText"><strong>오토바이</strong><em>바이크, 스쿠터</em></span>
             <span class="categoryArrow" aria-hidden="true"></span>
           </button>
-          <button class="categoryRow" type="button" data-category="화물·트럭" data-subtitle="화물·특장, 캠핑카">
-            <span class="categoryIconBox"><img src="assets/used-car/categories/s03-24-category-truck.svg" alt=""></span>
-            <span class="categoryText"><strong>화물·트럭</strong><em>화물·특장, 캠핑카</em></span>
+          <button class="categoryRow" type="button" data-category="캠핑카" data-subtitle="캠핑카, 카라반">
+            <span class="categoryIconBox"><img src="assets/used-car/categories/s03-26-category-camping.svg" alt=""></span>
+            <span class="categoryText"><strong>캠핑카</strong><em>캠핑카, 카라반</em></span>
             <span class="categoryArrow" aria-hidden="true"></span>
           </button>
-          <button class="categoryRow" type="button" data-category="기타" data-subtitle="올드카, 부품·용품, 건설기계">
-            <span class="categoryIconBox"><img src="assets/used-car/categories/s03-29-category-parts.svg" alt=""></span>
-            <span class="categoryText"><strong>기타</strong><em>올드카, 부품·용품, 건설기계</em></span>
+          <button class="categoryRow" type="button" data-category="건설기계" data-subtitle="굴삭기, 지게차, 중장비">
+            <span class="categoryIconBox"><img src="assets/used-car/categories/s03-28-category-machine.svg" alt=""></span>
+            <span class="categoryText"><strong>건설기계</strong><em>굴삭기, 지게차, 중장비</em></span>
+            <span class="categoryArrow" aria-hidden="true"></span>
+          </button>
+          <button class="categoryRow" type="button" data-category="화물-특장" data-subtitle="화물차, 특장차, 캠핑카">
+            <span class="categoryIconBox"><img src="assets/used-car/categories/s03-24-category-truck.svg" alt=""></span>
+            <span class="categoryText"><strong>화물-특장</strong><em>화물차, 특장차, 캠핑카</em></span>
             <span class="categoryArrow" aria-hidden="true"></span>
           </button>
         </div>
@@ -99,10 +104,11 @@
 
     <section class="registerFormCard is-hidden" id="formStep" aria-labelledby="selectedCategoryLabel">
       <div class="registerChipRow" role="list" aria-label="등록 유형">
-        <button class="registerChip is-active" type="button" role="listitem" id="selectedCategoryLabel">자동차</button>
+        <button class="registerChip is-active" type="button" role="listitem" id="selectedCategoryLabel">중고차</button>
         <button class="registerChip" type="button" role="listitem">오토바이</button>
-        <button class="registerChip" type="button" role="listitem">화물 · 트럭</button>
-        <button class="registerChip" type="button" role="listitem">기타</button>
+        <button class="registerChip" type="button" role="listitem">캠핑카</button>
+        <button class="registerChip" type="button" role="listitem">건설기계</button>
+        <button class="registerChip" type="button" role="listitem">화물-특장</button>
       </div>
 
       <div class="vehicleInputWrap">
@@ -149,6 +155,6 @@
   </footer>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="bobaedream-car-register.js?v=bobae-register-category-first-20260901"></script>
+  <script src="bobaedream-car-register.js?v=bobae-register-category-order-20260901"></script>
 </body>
 </html>
