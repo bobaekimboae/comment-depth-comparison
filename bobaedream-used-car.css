@@ -1301,37 +1301,38 @@ body[data-used-car-detail] .bbHeaderTop {
   margin-top: 28px;
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 13px;
 }
 
 .categoryBtn {
-  width: 84px;
-  min-height: 102px;
-  padding: 0 4px;
+  width: 65px;
+  min-height: 76px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  color: #595959;
+  justify-content: center;
+  gap: 12px;
+  color: #616161;
   font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
+  line-height: 19.6px;
+  font-weight: 500;
   white-space: nowrap;
 }
 
 .categoryIcon {
-  width: 52px;
-  height: 52px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: transparent;
   display: grid;
   place-items: center;
-  color: #171a1f;
+  color: #222;
 }
 
 .categoryIcon img {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 
@@ -1339,10 +1340,6 @@ body[data-used-car-detail] .bbHeaderTop {
   background: transparent;
   color: #171a1f;
   box-shadow: none;
-}
-
-.categoryBtn[data-category="old"] .categoryIcon img {
-  transform: scaleX(-1);
 }
 
 .toolbar {
