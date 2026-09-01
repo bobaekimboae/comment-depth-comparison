@@ -4594,7 +4594,7 @@ body[data-bobae-main] .bbNav .bbHeaderInner {
 body[data-bobae-main] .bbNavList {
   height: 64px;
   flex: 1 1 auto;
-  gap: 32px;
+  gap: 24px;
   min-width: 0;
   overflow-x: auto;
   scrollbar-width: none;

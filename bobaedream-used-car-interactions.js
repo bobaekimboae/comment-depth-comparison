@@ -268,9 +268,20 @@
   function renderHeaderActive() {
     const navCategories = ["used", "truck", "bike", "camping", "parts"];
     const categoryNav = new URLSearchParams(window.location.search).get("category");
-    const activeNav = document.body?.matches("[data-used-car-list]")
-      ? (navCategories.includes(categoryNav) ? categoryNav : "used")
-      : document.body?.matches("[data-used-car-detail]") ? "used" : "home";
+    const brandNav = new URLSearchParams(window.location.search).get("brand");
+    const sellerNav = new URLSearchParams(window.location.search).get("seller");
+    let activeNav = "home";
+    if (document.body?.matches("[data-used-car-list]")) {
+      if (sellerNav === "dealer") {
+        activeNav = "dealer";
+      } else if (brandNav === "import") {
+        activeNav = "import";
+      } else {
+        activeNav = navCategories.includes(categoryNav) ? categoryNav : "used";
+      }
+    } else if (document.body?.matches("[data-used-car-detail]")) {
+      activeNav = "used";
+    }
     qsa(".bbNavLink").forEach((link) => {
       link.classList.toggle("is-active", link.dataset.nav === activeNav);
     });
@@ -368,10 +379,11 @@
   }
 
   function filterCars(state) {
+    const importedBrands = new Set((data.filters?.imported || []).map(([brand]) => brand));
     let visible = cars.filter((car) => {
       const categoryMatch = state.category === "all" || state.category === car.category;
       const sellerMatch = matchesSellerType(car, state.seller);
-      const brandMatch = !state.brand || car.brand === state.brand;
+      const brandMatch = !state.brand || (state.brand === "import" ? importedBrands.has(car.brand) : car.brand === state.brand);
       const videoMatch = !state.video || car.video;
       const regionMatch = !state.region || state.region === "전국" || String(car.location || "").startsWith(state.region);
       const fuelMatch = !state.fuel || car.fuel === normalizedFuelFilter(state.fuel);
@@ -1261,7 +1273,7 @@
     const state = {
       category: params.get("category") || "all",
       seller: params.get("seller") || "all",
-      brand: "",
+      brand: params.get("brand") || "",
       region: "전국",
       video: false,
       sort: "updated",

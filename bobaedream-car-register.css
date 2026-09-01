@@ -114,7 +114,7 @@ img {
   height: 54px;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
 }
 
 .registerNavLink {
@@ -142,6 +142,7 @@ img {
 
 .registerNavMore {
   gap: 6px;
+  padding-right: 2px;
 }
 
 .registerNavMore::after {
