@@ -682,8 +682,8 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcFilterModalHeader strong {
   color: #12161d;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 25px;
   font-weight: 700;
 }
 
@@ -736,7 +736,17 @@ body[data-used-car-detail] .bbHeaderTop {
   border-radius: 7px;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterModal {
+  width: 430px;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterModalFooter {
+  height: 84px;
+  padding: 16px 20px 20px;
+  grid-template-columns: 88px 1fr;
 }
 
 .pcFilterOutlineButton {
@@ -841,6 +851,164 @@ body[data-used-car-detail] .bbHeaderTop {
 .pcQuickTabs button.is-active {
   background: #222;
   color: #fff;
+}
+
+.pcPriceFilterPanel {
+  padding: 0 20px 22px;
+}
+
+.pcPriceTabs {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  border-bottom: 1px solid #eceef1;
+}
+
+.pcPriceTabs button {
+  position: relative;
+  height: 44px;
+  color: #767676;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.pcPriceTabs button.is-active {
+  color: #1a1a1a;
+}
+
+.pcPriceTabs button.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: #222;
+}
+
+.pcPriceRangeRow {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr 32px;
+  gap: 8px;
+  align-items: center;
+}
+
+.pcPriceSelectBox {
+  position: relative;
+  height: 48px;
+  min-width: 0;
+  display: block;
+  border: 1px solid #e3e5e8;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.pcPriceSelect {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  padding: 0 76px 0 14px;
+  color: #1a1a1a;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  outline: 0;
+}
+
+.pcPriceUnit {
+  position: absolute;
+  right: 38px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1a1a1a;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.pcPriceChevron {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  width: 10px;
+  height: 5px;
+  transform: translateY(-50%);
+  background: var(--icon-filter-chip-chevron) center / 10px 5px no-repeat;
+  pointer-events: none;
+}
+
+.pcPriceRangeText {
+  color: #767676;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.pcPriceRangeSlider {
+  position: relative;
+  height: 36px;
+  margin: 22px 13px 20px;
+}
+
+.pcPriceRangeSlider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16px;
+  height: 4px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.pcPriceRangeFill {
+  position: absolute;
+  top: 16px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.pcPriceHandle {
+  position: absolute;
+  top: 5px;
+  width: 26px;
+  height: 26px;
+  transform: translateX(-50%);
+  border: 1px solid #e6e8eb;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
+}
+
+.pcPricePresetGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.pcPricePreset {
+  height: 44px;
+  border-radius: 5px;
+  background: #f4f4f4;
+  color: #505050;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.pcPricePreset.is-selected {
+  background: #e8f1ff;
+  color: var(--blue);
 }
 
 .pcQuickRange {

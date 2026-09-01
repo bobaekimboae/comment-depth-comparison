@@ -145,6 +145,11 @@
     ["8천만원", "0-8000", null, 8000],
     ["9천만원~", "9000-", 9000, null]
   ];
+  const pcPriceRangeOptions = [
+    100, 200, 300, 400, 500, 600, 700, 800, 900,
+    1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000,
+    2500, 3000, 3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000
+  ];
   const pcFuelOptions = [
     ["가솔린", "가솔린", "9,925"],
     ["디젤", "디젤", "3,373"],
@@ -672,6 +677,21 @@
     return "";
   }
 
+  function priceSelectOptions(placeholder, selectedValue) {
+    const selected = String(selectedValue || "");
+    return `
+      <option value="">${placeholder}</option>
+      ${pcPriceRangeOptions.map((value) => `
+        <option value="${value}"${selected === String(value) ? " selected" : ""}>${value.toLocaleString("ko-KR")}</option>
+      `).join("")}
+    `;
+  }
+
+  function priceRangePercent(value, fallback) {
+    if (!value) return fallback;
+    return Math.max(0, Math.min(100, (Number(value) / 10000) * 100));
+  }
+
   function resetSingleFilter(state, type) {
     if (type === "category") state.category = "all";
     if (type === "brand" || type === "maker") state.brand = "";
@@ -740,24 +760,43 @@
   }
 
   function renderPcPriceModal(state) {
+    const minPercent = priceRangePercent(state.priceMin, 0);
+    const maxPercent = priceRangePercent(state.priceMax, 100);
     return `
-      <div class="pcQuickFilterPanel">
-        <div class="pcQuickTabs" aria-label="가격 유형">
+      <div class="pcQuickFilterPanel pcPriceFilterPanel">
+        <div class="pcPriceTabs" aria-label="가격 판매방식">
           <button class="is-active" type="button">일반</button>
           <button type="button" data-toast="리스 / 렌트 가격 조건은 시안에서 준비 중입니다.">리스 / 렌트</button>
         </div>
-        <div class="pcQuickRange">
-          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="부터" value="${state.priceMin || ""}" data-pc-price-min>
-          <span>~</span>
-          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="까지" value="${state.priceMax || ""}" data-pc-price-max>
+        <div class="pcPriceRangeRow">
+          <label class="pcPriceSelectBox">
+            <select class="pcPriceSelect" data-pc-price-min aria-label="최저 가격">
+              ${priceSelectOptions("최저", state.priceMin)}
+            </select>
+            <span class="pcPriceUnit">만원</span>
+            <span class="pcPriceChevron" aria-hidden="true"></span>
+          </label>
+          <span class="pcPriceRangeText">부터</span>
+          <label class="pcPriceSelectBox">
+            <select class="pcPriceSelect" data-pc-price-max aria-label="최대 가격">
+              ${priceSelectOptions("최대", state.priceMax)}
+            </select>
+            <span class="pcPriceUnit">만원</span>
+            <span class="pcPriceChevron" aria-hidden="true"></span>
+          </label>
+          <span class="pcPriceRangeText">까지</span>
         </div>
-        <div class="pcQuickUnit">만원</div>
-        <div class="pcQuickOptions">
+        <div class="pcPriceRangeSlider" aria-hidden="true">
+          <span class="pcPriceRangeFill" style="left:${minPercent}%;right:${100 - maxPercent}%;"></span>
+          <span class="pcPriceHandle" style="left:${minPercent}%;"></span>
+          <span class="pcPriceHandle" style="left:${maxPercent}%;"></span>
+        </div>
+        <div class="pcPricePresetGrid">
           ${pcPriceOptions.map(([label, key, min, max]) => {
             const selected = key
               ? state.priceLabel === label
               : !state.priceMin && !state.priceMax;
-            return `<button class="pcQuickButton${selected ? " is-selected" : ""}" type="button" data-pc-price-key="${key}" data-pc-price-min-value="${min || ""}" data-pc-price-max-value="${max || ""}" data-pc-label="${label}"><span>${label}</span></button>`;
+            return `<button class="pcPricePreset${selected ? " is-selected" : ""}" type="button" data-pc-price-key="${key}" data-pc-price-min-value="${min || ""}" data-pc-price-max-value="${max || ""}" data-pc-label="${label}">${label}</button>`;
           }).join("")}
         </div>
       </div>
