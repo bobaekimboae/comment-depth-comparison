@@ -10,7 +10,7 @@
   --soft: #656a73;
   --line: #eeeeef;
   --line-dark: #dedfe2;
-  --chip: #f2f3f4;
+  --chip: #f0f0f0;
   --blue: #19539b;
   --blue-strong: #0f4fa3;
   --blue-soft: #eef5ff;
@@ -579,7 +579,7 @@ body[data-used-car-detail] .bbHeaderTop {
   color: #171a1f;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -655,14 +655,14 @@ body[data-used-car-detail] .bbHeaderTop {
 .pcFilterModalBackdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, .28);
+  background: rgba(0, 0, 0, .35);
 }
 
 .pcFilterModal {
   position: relative;
   z-index: 1;
   width: 480px;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -672,8 +672,9 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterModalHeader {
-  height: 57px;
-  padding: 0 16px 0 20px;
+  height: 72px;
+  flex: 0 0 72px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -688,8 +689,8 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterModalClose {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   position: relative;
 }
 
@@ -697,9 +698,9 @@ body[data-used-car-detail] .bbHeaderTop {
 .pcFilterModalClose::after {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 13px;
-  width: 20px;
+  left: 3px;
+  top: 11px;
+  width: 18px;
   height: 2px;
   border-radius: 2px;
   background: #161a20;
@@ -714,15 +715,22 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterModalBody {
-  min-height: 180px;
-  max-height: calc(100vh - 214px);
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.pcFilterModalBody::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .pcFilterModalFooter {
-  height: 77px;
-  padding: 16px;
+  height: 100px;
+  flex: 0 0 100px;
+  padding: 24px 20px;
   display: grid;
   grid-template-columns: 120px 1fr;
   gap: 8px;
@@ -732,21 +740,54 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcFilterOutlineButton,
 .pcFilterPrimaryButton {
-  height: 44px;
+  height: 52px;
   border-radius: 7px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 600;
 }
 
-.pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterModal {
+.pcFilterModalLayer[data-pc-filter-type="maker"] .pcFilterModal {
   width: 430px;
+  height: 576px;
 }
 
+.pcFilterModalLayer[data-pc-filter-type="year"] .pcFilterModal {
+  width: 430px;
+  height: 440px;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterModal {
+  width: 430px;
+  height: 590px;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="maker"] .pcFilterModalFooter,
+.pcFilterModalLayer[data-pc-filter-type="year"] .pcFilterModalFooter,
 .pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterModalFooter {
-  height: 84px;
-  padding: 16px 20px 20px;
+  height: 88px;
+  flex-basis: 88px;
+  padding: 16px 20px 28px;
   grid-template-columns: 88px 1fr;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="maker"] .pcFilterOutlineButton,
+.pcFilterModalLayer[data-pc-filter-type="maker"] .pcFilterPrimaryButton,
+.pcFilterModalLayer[data-pc-filter-type="year"] .pcFilterOutlineButton,
+.pcFilterModalLayer[data-pc-filter-type="year"] .pcFilterPrimaryButton,
+.pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterOutlineButton,
+.pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterPrimaryButton {
+  height: 44px;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="fuel"] .pcFilterModal {
+  width: 480px;
+  height: 588px;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="seller"] .pcFilterModal {
+  width: 480px;
+  height: 372px;
 }
 
 .pcFilterOutlineButton {
@@ -761,30 +802,35 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterMakerList {
-  padding-bottom: 14px;
+  padding-bottom: 0;
 }
 
 .pcFilterGroupTitle {
   height: 36px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 16px;
   background: #f4f4f5;
-  color: #777f89;
+  color: #505050;
   font-size: 13px;
   line-height: 18px;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.pcFilterMakerItems {
+  padding: 0 16px;
 }
 
 .pcFilterOptionButton {
   width: 100%;
-  min-height: 48px;
-  padding: 0 20px;
+  height: 66px;
+  min-height: 66px;
+  padding: 0;
   display: grid;
-  grid-template-columns: 28px 1fr auto 18px;
-  gap: 13px;
+  grid-template-columns: 32px 1fr;
+  gap: 18px;
   align-items: center;
-  color: #20242b;
+  color: #1a1a1a;
   text-align: left;
   font-size: 14px;
   line-height: 20px;
@@ -801,31 +847,32 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterOptionButton.is-selected::after {
-  content: "";
-  width: 8px;
-  height: 14px;
-  border-right: 2px solid var(--blue);
-  border-bottom: 2px solid var(--blue);
-  transform: rotate(45deg);
+  display: none;
 }
 
 .pcFilterLogoMark {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   background: #f2f3f5;
-  color: var(--blue);
+  color: #8c939f;
   font-size: 12px;
   line-height: 17px;
   font-weight: 900;
 }
 
+.pcFilterBrandLogoImage {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .pcFilterCount {
   color: #a0a5ad;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .pcQuickFilterPanel {
@@ -853,8 +900,79 @@ body[data-used-car-detail] .bbHeaderTop {
   color: #fff;
 }
 
+.pcYearFilterPanel {
+  padding: 16px 16px 0;
+}
+
+.pcYearRangeRows {
+  display: grid;
+  gap: 6px;
+}
+
+.pcYearRangeRow {
+  display: grid;
+  grid-template-columns: 179px 179px 24px;
+  gap: 6px;
+  align-items: center;
+}
+
+.pcYearSelectBox {
+  position: relative;
+  height: 48px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.pcYearSelect {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  padding: 0 42px 0 14px;
+  color: #1a1a1a;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  outline: 0;
+}
+
+.pcYearRangeText {
+  color: #505050;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.pcYearPresetGrid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.pcYearPreset {
+  height: 44px;
+  border-radius: 5px;
+  background: #f4f4f4;
+  color: #505050;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.pcYearPreset.is-selected {
+  background: #e8f1ff;
+  color: var(--blue);
+}
+
 .pcPriceFilterPanel {
-  padding: 0 20px 22px;
+  padding: 0 16px 22px;
 }
 
 .pcPriceTabs {
@@ -891,8 +1009,8 @@ body[data-used-car-detail] .bbHeaderTop {
 .pcPriceRangeRow {
   margin-top: 28px;
   display: grid;
-  grid-template-columns: 1fr 32px 1fr 32px;
-  gap: 8px;
+  grid-template-columns: 162px 26px 162px 32px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -913,7 +1031,7 @@ body[data-used-car-detail] .bbHeaderTop {
   border: 0;
   border-radius: 7px;
   background: transparent;
-  padding: 0 76px 0 14px;
+  padding: 0 64px 0 14px;
   color: #1a1a1a;
   font-size: 14px;
   line-height: 20px;
@@ -923,7 +1041,7 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcPriceUnit {
   position: absolute;
-  right: 38px;
+  right: 34px;
   top: 50%;
   transform: translateY(-50%);
   color: #1a1a1a;
@@ -950,12 +1068,13 @@ body[data-used-car-detail] .bbHeaderTop {
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .pcPriceRangeSlider {
   position: relative;
   height: 36px;
-  margin: 22px 13px 20px;
+  margin: 22px 24px 20px;
 }
 
 .pcPriceRangeSlider::before {
@@ -1117,6 +1236,65 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcFilterCheckGrid {
   padding: 18px 20px 22px;
+}
+
+.pcFilterChoiceList {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pcFilterChoiceButton {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1a1a1a;
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.pcFilterChoiceButton .pcFilterCount {
+  color: #8f8f8f;
+}
+
+.pcFilterChoiceButton.is-disabled {
+  color: #d6d6d6;
+  cursor: default;
+}
+
+.pcFilterChoiceButton.is-disabled .pcFilterCount {
+  color: #d6d6d6;
+}
+
+.pcFilterCheckbox {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.pcFilterChoiceButton.is-selected .pcFilterCheckbox {
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.pcFilterChoiceButton.is-selected .pcFilterCheckbox::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 7px;
+  height: 12px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
 }
 
 .categoryGrid {

@@ -150,19 +150,47 @@
     1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000,
     2500, 3000, 3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000
   ];
+  const pcYearRangeOptions = Array.from({ length: currentYear - 1979 }, (_, index) => currentYear - index);
+  const pcMonthRangeOptions = Array.from({ length: 12 }, (_, index) => index + 1);
   const pcFuelOptions = [
     ["가솔린", "가솔린", "9,925"],
     ["디젤", "디젤", "3,373"],
     ["LPG", "LPG", "281"],
-    ["가솔린 하이브리드", "하이브리드", "890"],
+    ["LPG 일반인구입", "LPG 일반인구입", "1"],
+    ["가솔린/LPG겸용", "가솔린/LPG겸용", "30"],
+    ["가솔린 하이브리드", "가솔린 하이브리드", "890"],
+    ["LPG 하이브리드", "LPG 하이브리드", "0"],
+    ["디젤 하이브리드", "디젤 하이브리드", "7"],
+    ["CNG", "CNG", "0"],
     ["전기", "전기", "344"],
     ["기타", "기타", "21"]
   ];
   const pcSellerOptions = [
-    ["전체", "all", data.totalCount],
+    ["딜러", "dealer", "13,465"],
     ["개인", "private", "875"],
-    ["딜러", "dealer", "13,465"]
+    ["브랜드인증", "certified", "3,167"],
+    ["리스렌트제휴", "lease-partner", "3,713"],
+    ["실차주", "real-owner", "14,894"]
   ];
+  const pcBrandLogos = {
+    "현대": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/49/e0f2b451-ba55-4a62-af9f-dec69e5f1c5c.png",
+    "제네시스": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/76/30e88aab-a5b1-4a4b-9fca-fd44e59c6ad0.png",
+    "기아": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/3/edb84b29-c499-4e69-a5f4-8b2cf9fe53dc.png",
+    "GM대우": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/8/d56d4eed-d156-4886-a73b-fa69bdf2a2b2.png",
+    "르노코리아(삼성)": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/26/d38e6e99-91ae-4055-8f2d-f5e650ce825b.png",
+    "KG모빌리티(쌍용)": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/31/d8644b9d-f875-4cf3-a302-4bee2d41220c.png",
+    "어울림모터스": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/71/82bfbecd-7cad-4c70-bf76-83bcb86aa005.png",
+    "벤츠": "https://file5.bobaedream.co.kr/car_photo/2026/1556270218Logo.png",
+    "BMW": "https://file5.bobaedream.co.kr/car_photo/2026/bmw.png",
+    "아우디": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/32/1ec31772-a629-4924-8dfb-eae0e6b88d78.png",
+    "폭스바겐": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/44/9396e810-aa96-45f4-a5b5-d2318e8a1684.png",
+    "렉서스": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/13/e5607358-c83b-4c12-bf58-535c9a4122c7.png",
+    "미니": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/67/a05c14ad-b7c4-419b-8fb5-b4e5f42807ae.png",
+    "GMC": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/54/8f1368ea-4402-4909-bc0f-b275c830e758.png",
+    "닛산": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/5/e32d5e81-7f0f-4d53-b332-34e9e687472b.png",
+    "다이하쓰": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/6/adacf27f-05f9-4d08-a419-60ee24374289.png",
+    "닷지": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/7/f6357841-31d8-4353-93ba-77d22dc9cf34.png"
+  };
 
   function qs(selector, root = document) {
     return root.querySelector(selector);
@@ -320,14 +348,28 @@
     return Number(String(car.power || "").replace(/[^\d]/g, "")) || 0;
   }
 
+  function normalizedFuelFilter(value) {
+    if (!value) return "";
+    if (String(value).includes("하이브리드")) return "하이브리드";
+    if (String(value).includes("LPG")) return "LPG";
+    return value;
+  }
+
+  function matchesSellerType(car, seller) {
+    if (!seller || seller === "all") return true;
+    if (seller === "certified" || seller === "lease-partner") return car.sellerType === "dealer";
+    if (seller === "real-owner") return true;
+    return car.sellerType === seller;
+  }
+
   function filterCars(state) {
     let visible = cars.filter((car) => {
       const categoryMatch = state.category === "all" || state.category === car.category;
-      const sellerMatch = state.seller === "all" || state.seller === car.sellerType;
+      const sellerMatch = matchesSellerType(car, state.seller);
       const brandMatch = !state.brand || car.brand === state.brand;
       const videoMatch = !state.video || car.video;
       const regionMatch = !state.region || state.region === "전국" || String(car.location || "").startsWith(state.region);
-      const fuelMatch = !state.fuel || car.fuel === state.fuel;
+      const fuelMatch = !state.fuel || car.fuel === normalizedFuelFilter(state.fuel);
       const yearValue = carYear(car);
       const yearMatch = (!state.yearMin || yearValue >= state.yearMin) && (!state.yearMax || yearValue <= state.yearMax);
       const price = moneyToNumber(car.price);
@@ -389,7 +431,7 @@
     qs("#mobileVideoSwitch")?.classList.toggle("is-on", state.video);
 
     renderPcFilterChips(state);
-    if (qs("#pcFilterApplyCount")) qs("#pcFilterApplyCount").textContent = `${countText} 보기`;
+    updatePcFilterApplyCount(countText);
     updateMobileChipLabels(state);
   }
 
@@ -528,16 +570,18 @@
     return option ? option[0] : "";
   }
 
+  function selectedSellerLabel(value) {
+    if (!value || value === "all") return "";
+    const option = pcSellerOptions.find(([, optionValue]) => optionValue === value);
+    return option ? option[0] : "";
+  }
+
   function selectedTopFilterLabel(state, type) {
     if (type === "brand") return state.brand || "";
     if (type === "year") return state.yearLabel || selectedGenericLabel(state, "year");
     if (type === "price") return state.priceLabel || selectedGenericLabel(state, "price");
     if (type === "fuel") return state.fuel || "";
-    if (type === "seller") {
-      if (state.seller === "private") return "개인";
-      if (state.seller === "dealer") return "딜러";
-      return "";
-    }
+    if (type === "seller") return selectedSellerLabel(state.seller);
     return "";
   }
 
@@ -677,6 +721,34 @@
     return "";
   }
 
+  function pcFilterApplyLabel(type, countText) {
+    if (type === "fuel" || type === "seller" || type === "category") return `확인 ${countText}`;
+    return `${countText} 보기`;
+  }
+
+  function updatePcFilterApplyCount(countText) {
+    const count = qs("#pcFilterApplyCount");
+    if (!count) return;
+    const type = qs("#pcFilterModalLayer")?.dataset.pcFilterType || "";
+    count.textContent = pcFilterApplyLabel(type, countText);
+  }
+
+  function selectOptions(options, placeholder, selectedValue) {
+    const selected = String(selectedValue || "");
+    return `
+      <option value="">${placeholder}</option>
+      ${options.map((value) => `
+        <option value="${value}"${selected === String(value) ? " selected" : ""}>${String(value).toLocaleString("ko-KR")}</option>
+      `).join("")}
+    `;
+  }
+
+  function brandLogoMarkup(label) {
+    const src = pcBrandLogos[label];
+    if (src) return `<img class="pcFilterBrandLogoImage" src="${src}" alt="${label} 로고" loading="lazy" decoding="async">`;
+    return `<span class="pcFilterLogoMark">${label.slice(0, 1)}</span>`;
+  }
+
   function priceSelectOptions(placeholder, selectedValue) {
     const selected = String(selectedValue || "");
     return `
@@ -726,13 +798,14 @@
       <div class="pcFilterMakerList">
         ${groups.map(([title, items]) => `
           <div class="pcFilterGroupTitle">${title}</div>
+          <div class="pcFilterMakerItems">
           ${items.map(([label, count]) => `
             <button class="pcFilterOptionButton${state.brand === label ? " is-selected" : ""}" type="button" data-pc-brand="${label}" ${count === "0" ? "disabled" : ""}>
-              <span class="pcFilterLogoMark">${label.slice(0, 1)}</span>
+              ${brandLogoMarkup(label)}
               <span>${label}</span>
-              <span class="pcFilterCount">${count}</span>
             </button>
           `).join("")}
+          </div>
         `).join("")}
       </div>
     `;
@@ -740,19 +813,46 @@
 
   function renderPcYearModal(state) {
     return `
-      <div class="pcQuickFilterPanel">
-        <div class="pcQuickRange">
-          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="부터" value="${state.yearMin || ""}" data-pc-year-min>
-          <span>~</span>
-          <input class="pcQuickInput" type="number" inputmode="numeric" placeholder="까지" value="${state.yearMax || ""}" data-pc-year-max>
+      <div class="pcQuickFilterPanel pcYearFilterPanel">
+        <div class="pcYearRangeRows">
+          <div class="pcYearRangeRow">
+            <label class="pcYearSelectBox">
+              <select class="pcYearSelect" data-pc-year-min aria-label="시작 연식 연도">
+                ${selectOptions(pcYearRangeOptions, "년", state.yearMin)}
+              </select>
+              <span class="pcPriceChevron" aria-hidden="true"></span>
+            </label>
+            <label class="pcYearSelectBox">
+              <select class="pcYearSelect" data-pc-year-month-min aria-label="시작 연식 월">
+                ${selectOptions(pcMonthRangeOptions, "월", "")}
+              </select>
+              <span class="pcPriceChevron" aria-hidden="true"></span>
+            </label>
+            <span class="pcYearRangeText">부터</span>
+          </div>
+          <div class="pcYearRangeRow">
+            <label class="pcYearSelectBox">
+              <select class="pcYearSelect" data-pc-year-max aria-label="종료 연식 연도">
+                ${selectOptions(pcYearRangeOptions, "년", state.yearMax)}
+              </select>
+              <span class="pcPriceChevron" aria-hidden="true"></span>
+            </label>
+            <label class="pcYearSelectBox">
+              <select class="pcYearSelect" data-pc-year-month-max aria-label="종료 연식 월">
+                ${selectOptions(pcMonthRangeOptions, "월", "")}
+              </select>
+              <span class="pcPriceChevron" aria-hidden="true"></span>
+            </label>
+            <span class="pcYearRangeText">까지</span>
+          </div>
         </div>
-        <div class="pcQuickUnit">년</div>
-        <div class="pcQuickOptions">
+        <div class="pcYearPresetGrid">
           ${pcYearOptions.map(([label, key, min, max]) => {
+            if (!key) return "";
             const selected = key
               ? state.yearLabel === label
               : !state.yearMin && !state.yearMax;
-            return `<button class="pcQuickButton${selected ? " is-selected" : ""}" type="button" data-pc-year-key="${key}" data-pc-year-min-value="${min || ""}" data-pc-year-max-value="${max || ""}" data-pc-label="${label}"><span>${label}</span></button>`;
+            return `<button class="pcYearPreset${selected ? " is-selected" : ""}" type="button" data-pc-year-key="${key}" data-pc-year-min-value="${min || ""}" data-pc-year-max-value="${max || ""}" data-pc-label="${label}">${label}</button>`;
           }).join("")}
         </div>
       </div>
@@ -807,13 +907,15 @@
     const options = type === "seller" ? pcSellerOptions : pcFuelOptions;
     const selectedValue = type === "seller" ? state.seller : state.fuel;
     return `
-      <div class="pcFilterCheckGrid">
+      <div class="pcFilterChoiceList">
         ${options.map(([label, value, count]) => {
           const selected = type === "seller"
-            ? selectedValue === value || (!selectedValue && value === "all")
+            ? selectedValue === value
             : selectedValue === value;
+          const disabled = count === "0";
           return `
-            <button class="pcFilterCheckButton${selected ? " is-selected" : ""}" type="button" data-pc-${type}="${value}">
+            <button class="pcFilterChoiceButton${selected ? " is-selected" : ""}${disabled ? " is-disabled" : ""}" type="button" data-pc-${type}="${value}" ${disabled ? "disabled" : ""}>
+              <span class="pcFilterCheckbox" aria-hidden="true"></span>
               <span>${label}</span>
               <span class="pcFilterCount">${count || ""}</span>
             </button>
@@ -834,7 +936,7 @@
       year: "연식",
       price: "가격",
       fuel: "연료",
-      seller: "판매자"
+      seller: "판매자 구분"
     };
     layer.dataset.pcFilterType = type;
     title.textContent = titles[type] || "조건 선택";
@@ -855,6 +957,7 @@
         </div>
       `;
     }
+    updatePcFilterApplyCount(qs("#visibleCount")?.textContent?.trim() || `${data.totalCount}대`);
     setupGenericActions();
   }
 
