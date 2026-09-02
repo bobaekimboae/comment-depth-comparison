@@ -28,6 +28,7 @@
   --icon-bell: url("assets/used-car/icons/s03-04-bell.svg");
   --icon-menu: url("assets/used-car/icons/s03-05-menu.svg");
   --icon-chevron-down: url("assets/used-car/icons/s03-06-chevron-down.svg");
+  --icon-checkbox-off: url("assets/used-car/icons/s03-checkbox-off.svg");
   --icon-checkbox-on: url("assets/used-car/icons/s03-checkbox-on.svg");
   --icon-filter-chip-chevron: url("assets/used-car/icons/s03-filter-chip-chevron.svg");
   --icon-filter-chip-close: url("assets/used-car/icons/s03-filter-chip-close.svg");
@@ -498,13 +499,12 @@ body[data-used-car-detail] .bbHeaderTop {
   width: 24px;
   height: 24px;
   appearance: none;
-  border: 1px solid #d2d5d9;
-  border-radius: 5px;
-  background: #fff;
+  border: 0;
+  border-radius: 0;
+  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .filterOption input:checked {
-  border-color: transparent;
   background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
   box-shadow: none;
 }
