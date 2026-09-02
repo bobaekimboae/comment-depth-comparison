@@ -226,8 +226,8 @@
     return [dealer.selling].filter(Boolean).join(" · ");
   }
 
-  function locationMarketLabel(car, dealer) {
-    return [car.location, car.complex, dealer.company].filter(Boolean).join(" · ");
+  function locationMarketLabel(car) {
+    return [car.location, car.complex].filter(Boolean).join(" · ");
   }
 
   function makeMeta(car) {
@@ -266,7 +266,7 @@
   }
 
   function renderHeaderActive() {
-    const navCategories = ["used", "truck", "machine", "bike", "camping", "parts"];
+    const navCategories = ["domestic", "truck", "parts"];
     const categoryNav = new URLSearchParams(window.location.search).get("category");
     const brandNav = new URLSearchParams(window.location.search).get("brand");
     const sellerNav = new URLSearchParams(window.location.search).get("seller");
@@ -274,13 +274,15 @@
     if (document.body?.matches("[data-used-car-list]")) {
       if (sellerNav === "dealer") {
         activeNav = "dealer";
-      } else if (brandNav === "import") {
+      } else if (brandNav === "import" || categoryNav === "import") {
         activeNav = "import";
+      } else if (!categoryNav || categoryNav === "all" || categoryNav === "used" || categoryNav === "domestic") {
+        activeNav = "domestic";
       } else {
-        activeNav = navCategories.includes(categoryNav) ? categoryNav : "used";
+        activeNav = navCategories.includes(categoryNav) ? categoryNav : "domestic";
       }
     } else if (document.body?.matches("[data-used-car-detail]")) {
-      activeNav = "used";
+      activeNav = "domestic";
     }
     qsa(".bbNavLink").forEach((link) => {
       link.classList.toggle("is-active", link.dataset.nav === activeNav);
@@ -494,7 +496,7 @@
             <div class="mobileRowPrice">${car.price}</div>
             <div class="mobileRowBadges">${car.badges.map((badge) => `<span class="badge">${badge}</span>`).join("")}</div>
             <div class="mobileDealer"><img src="${dealer.avatar}" alt=""><span>${dealerLabel(dealer)}</span></div>
-            <div class="mobileLocation">${locationMarketLabel(car, dealer)}</div>
+            <div class="mobileLocation">${locationMarketLabel(car)}</div>
             <div class="mobileViews">조회 ${car.views}</div>
             <button class="mobileRowHeart" type="button" data-toggle-heart aria-label="찜"><span class="heartIcon"></span></button>
           </div>
@@ -538,7 +540,7 @@
               <span class="dealerMini"><img src="${dealer.avatar}" alt=""></span>
               <span class="dealerLabel">${dealerLabel(dealer)}</span>
             </div>
-            <div class="locationLine"><span class="pinIcon"></span><span>${locationMarketLabel(car, dealer)}</span></div>
+            <div class="locationLine"><span class="pinIcon"></span><span>${locationMarketLabel(car)}</span></div>
           </div>
           <div class="rowActions">
             <button class="roundIconBtn" type="button" data-toast="매물 문의 화면은 시안에서 준비 중입니다." aria-label="문의">
@@ -1473,7 +1475,7 @@
     qs("#dealerStats").textContent = dealerSupportLabel(dealer);
     qs("#dealerLocation").textContent = `상담 가능 · 응답률 82%`;
     qs("#detailLocationLine").textContent = car.location;
-    qs("#detailComplexLine").textContent = [car.complex, dealer.company].filter(Boolean).join(" · ");
+    qs("#detailComplexLine").textContent = car.complex || "";
     qs("#detailPostedLine").textContent = `등록 ${car.posted.replace("전", " 전")}`;
     qs("#dealerNo").textContent = dealer.employeeNo;
     qs("#dealerGroup").textContent = dealer.group;
