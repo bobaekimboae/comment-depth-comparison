@@ -192,25 +192,25 @@
     "닷지": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/7/f6357841-31d8-4353-93ba-77d22dc9cf34.png"
   };
   const filterBrandLogos = {
-    "현대": "assets/used-car/brand-icons-svg/hyundai.svg",
-    "제네시스": "assets/used-car/brand-icons-svg/genesis.svg",
-    "기아": "assets/used-car/brand-icons-svg/kia.svg",
-    "쉐보레(국산)": "assets/used-car/brand-icons-svg/chevrolet.svg",
-    "GM대우": "assets/used-car/brand-icons-svg/daewoo.svg",
-    "르노코리아(삼성)": "assets/used-car/brand-icons-svg/renault.svg",
-    "KG모빌리티(쌍용)": "assets/used-car/brand-icons-svg/ssangyong.svg",
+    "현대": "assets/used-car/brand-icons-hq/hyundai.svg",
+    "제네시스": "assets/used-car/brand-icons-hq/genesis.svg",
+    "기아": "assets/used-car/brand-icons-hq/kia.svg",
+    "쉐보레(국산)": "assets/used-car/brand-icons-hq/chevrolet.svg",
+    "GM대우": "assets/used-car/brand-icons-hq/daewoo.svg",
+    "르노코리아(삼성)": "assets/used-car/brand-icons-hq/renault.svg",
+    "KG모빌리티(쌍용)": "assets/used-car/brand-icons-hq/kgm.svg",
     "어울림모터스": "assets/used-car/brand-icons/oullim.png",
     "기타 국산차": "assets/used-car/categories/s03-23-category-used-car.svg",
-    "벤츠": "assets/used-car/brand-icons-svg/mercedes-benz.svg",
-    "BMW": "assets/used-car/brand-icons-svg/bmw.svg",
-    "아우디": "assets/used-car/brand-icons-svg/audi.svg",
-    "폭스바겐": "assets/used-car/brand-icons-svg/volkswagen.svg",
-    "렉서스": "assets/used-car/brand-icons-svg/lexus.svg",
-    "미니": "assets/used-car/brand-icons-svg/mini.svg",
-    "GMC": "assets/used-car/brand-icons-svg/gmc.svg",
-    "닛산": "assets/used-car/brand-icons-svg/nissan.svg",
-    "다이하쓰": "assets/used-car/brand-icons-svg/daihatsu.svg",
-    "닷지": "assets/used-car/brand-icons-svg/dodge.svg"
+    "벤츠": "assets/used-car/brand-icons-hq/mercedes-benz.svg",
+    "BMW": "assets/used-car/brand-icons-hq/bmw.svg",
+    "아우디": "assets/used-car/brand-icons-hq/audi.svg",
+    "폭스바겐": "assets/used-car/brand-icons-hq/volkswagen.svg",
+    "렉서스": "assets/used-car/brand-icons-hq/lexus.svg",
+    "미니": "assets/used-car/brand-icons-hq/mini.svg",
+    "GMC": "assets/used-car/brand-icons-hq/gmc.svg",
+    "닛산": "assets/used-car/brand-icons-hq/nissan.svg",
+    "다이하쓰": "assets/used-car/brand-icons-hq/daihatsu.svg",
+    "닷지": "assets/used-car/brand-icons-hq/dodge.svg"
   };
 
   function qs(selector, root = document) {
