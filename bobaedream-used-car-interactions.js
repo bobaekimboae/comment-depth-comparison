@@ -266,7 +266,8 @@
   }
 
   function renderHeaderActive() {
-    const navCategories = ["used", "truck", "machine", "bike", "camping", "parts"];
+    const navCategories = ["used", "truck", "bike", "camping", "parts"];
+    const mergedNavCategories = { machine: "truck" };
     const categoryNav = new URLSearchParams(window.location.search).get("category");
     const brandNav = new URLSearchParams(window.location.search).get("brand");
     const sellerNav = new URLSearchParams(window.location.search).get("seller");
@@ -277,7 +278,7 @@
       } else if (brandNav === "import") {
         activeNav = "import";
       } else {
-        activeNav = navCategories.includes(categoryNav) ? categoryNav : "used";
+        activeNav = mergedNavCategories[categoryNav] || (navCategories.includes(categoryNav) ? categoryNav : "used");
       }
     } else if (document.body?.matches("[data-used-car-detail]")) {
       activeNav = "used";
