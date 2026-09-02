@@ -266,7 +266,7 @@
   }
 
   function renderHeaderActive() {
-    const navCategories = ["domestic", "truck", "parts"];
+    const navCategories = ["all", "domestic", "truck", "parts"];
     const categoryNav = new URLSearchParams(window.location.search).get("category");
     const brandNav = new URLSearchParams(window.location.search).get("brand");
     const sellerNav = new URLSearchParams(window.location.search).get("seller");
@@ -276,7 +276,9 @@
         activeNav = "dealer";
       } else if (brandNav === "import" || categoryNav === "import") {
         activeNav = "import";
-      } else if (!categoryNav || categoryNav === "all" || categoryNav === "used" || categoryNav === "domestic") {
+      } else if (!categoryNav || categoryNav === "all") {
+        activeNav = "all";
+      } else if (categoryNav === "used" || categoryNav === "domestic") {
         activeNav = "domestic";
       } else {
         activeNav = navCategories.includes(categoryNav) ? categoryNav : "domestic";
