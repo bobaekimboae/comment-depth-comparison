@@ -17,22 +17,22 @@
     domestic: { label: "국산차", count: "8,121" },
     import: { label: "수입차", count: "4,092" },
     electric: { label: "전기차", count: "1,126" },
-    truck: { label: "트럭-특장", count: "742" },
+    truck: { label: "트럭·특장·버스", count: "742" },
     bike: { label: "바이크", count: "982" },
     camping: { label: "캠핑카", count: "318" },
-    machine: { label: "건설기계", count: "181" }
+    machine: { label: "중장비", count: "181" }
   };
 
   const bodyTypes = [
     { key: "domestic", label: "국산차", count: "8,121", image: `assets/main/categories/vehicle-type-all.png${categoryAssetVersion}`, href: `${listUrl}?category=domestic` },
     { key: "import", label: "수입차", count: "4,092", image: `assets/main/categories/vehicle-type-import.png${categoryAssetVersion}`, href: `${listUrl}?category=import` },
-    { key: "truck", label: "트럭·특장", count: "742", image: `assets/main/categories/vehicle-type-truck.png${categoryAssetVersion}`, href: `${listUrl}?category=truck` },
+    { key: "truck", label: "트럭·특장·버스", count: "742", image: `assets/main/categories/vehicle-type-truck.png${categoryAssetVersion}`, href: `${listUrl}?category=truck` },
     { key: "bike", label: "바이크", count: "982", image: `assets/main/categories/vehicle-type-bike.png${categoryAssetVersion}`, href: `${listUrl}?category=bike` },
     { key: "scooter", label: "스쿠터", count: "436", image: `assets/main/categories/vehicle-type-scooter.png${categoryAssetVersion}`, href: `${listUrl}?category=scooter` },
     { key: "electric-scooter", label: "전기스쿠터", count: "214", image: `assets/main/categories/vehicle-type-electric-scooter.png${categoryAssetVersion}`, href: `${listUrl}?category=electric-scooter` },
     { key: "ebike", label: "자전거", count: "167", image: `assets/main/categories/vehicle-type-ebike.png${categoryAssetVersion}`, href: `${listUrl}?category=ebike` },
     { key: "parts", label: "부품·용품", count: "1,430", image: `assets/main/categories/vehicle-type-parts.png${categoryAssetVersion}`, href: `${listUrl}?category=parts` },
-    { key: "machine", label: "건설기계", count: "181", image: `assets/main/categories/vehicle-type-machine.png${categoryAssetVersion}`, href: `${listUrl}?category=machine` }
+    { key: "machine", label: "중장비", count: "181", image: `assets/main/categories/vehicle-type-machine.png${categoryAssetVersion}`, href: `${listUrl}?category=machine` }
   ];
 
   const brands = [
