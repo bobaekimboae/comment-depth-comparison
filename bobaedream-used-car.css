@@ -576,8 +576,8 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterBrandLogoImage.is-domestic-kgm {
-  --filter-brand-logo-width: 25px;
-  --filter-brand-logo-height: 25px;
+  --filter-brand-logo-width: 34px;
+  --filter-brand-logo-height: 24px;
 }
 
 .filterBrandLogoImage.is-domestic-oullim {

@@ -198,7 +198,7 @@
     "쉐보레(국산)": "assets/used-car/brand-icons-hq/chevrolet.svg",
     "GM대우": "assets/used-car/brand-icons-hq/daewoo.svg",
     "르노코리아(삼성)": "assets/used-car/brand-icons-hq/renault.svg",
-    "KG모빌리티(쌍용)": "assets/used-car/brand-icons/ssangyong.png",
+    "KG모빌리티(쌍용)": "assets/used-car/brand-icons-svg/ssangyong.svg",
     "어울림모터스": "assets/used-car/brand-icons/oullim.png",
     "기타 국산차": "assets/used-car/categories/s03-23-category-used-car.svg",
     "벤츠": "assets/used-car/brand-icons-hq/mercedes-benz.svg",
