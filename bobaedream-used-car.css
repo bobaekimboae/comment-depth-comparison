@@ -514,6 +514,27 @@ body[data-used-car-detail] .bbHeaderTop {
   font-weight: 600;
 }
 
+.filterBrandLabel {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.filterBrandLabel span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.filterBrandLogoImage {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+}
+
 .filterOption.is-disabled {
   color: #c4c7cc;
 }

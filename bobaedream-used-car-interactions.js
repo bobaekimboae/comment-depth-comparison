@@ -191,6 +191,18 @@
     "다이하쓰": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/6/adacf27f-05f9-4d08-a419-60ee24374289.png",
     "닷지": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/7/f6357841-31d8-4353-93ba-77d22dc9cf34.png"
   };
+  const filterBrandLogos = {
+    "현대": "assets/used-car/brand-icons/hyundai.png",
+    "제네시스": "assets/used-car/brand-icons/genesis.png",
+    "기아": "assets/used-car/brand-icons/kia.png",
+    "쉐보레(국산)": "assets/used-car/brand-icons/chevrolet.png",
+    "르노코리아(삼성)": "assets/used-car/brand-icons/renault.png",
+    "KG모빌리티(쌍용)": "assets/used-car/brand-icons/ssangyong.png",
+    "벤츠": "assets/used-car/brand-icons/mercedes-benz.png",
+    "BMW": "assets/used-car/brand-icons/bmw.png",
+    "아우디": "assets/used-car/brand-icons/audi.png",
+    "폭스바겐": "assets/used-car/brand-icons/volkswagen.png"
+  };
 
   function qs(selector, root = document) {
     return root.querySelector(selector);
@@ -319,7 +331,7 @@
       domestic.innerHTML = (data.filters?.domestic || []).map(([label, count]) => `
         <label class="filterOption">
           <input type="checkbox" value="${label}" data-brand-filter>
-          <span>${label}</span>
+          ${filterBrandLabelMarkup(label)}
           <span class="count">${count}</span>
         </label>
       `).join("");
@@ -328,7 +340,7 @@
       imported.innerHTML = (data.filters?.imported || []).map(([label, count]) => `
         <label class="filterOption${count === "0" ? " is-disabled" : ""}">
           <input type="checkbox" value="${label}" data-brand-filter ${count === "0" ? "disabled" : ""}>
-          <span>${label}</span>
+          ${filterBrandLabelMarkup(label)}
           <span class="count">${count}</span>
         </label>
       `).join("");
@@ -768,6 +780,12 @@
     const src = pcBrandLogos[label];
     if (src) return `<img class="pcFilterBrandLogoImage" src="${src}" alt="${label} 로고" loading="lazy" decoding="async">`;
     return `<span class="pcFilterLogoMark">${label.slice(0, 1)}</span>`;
+  }
+
+  function filterBrandLabelMarkup(label) {
+    const src = filterBrandLogos[label];
+    const logo = src ? `<img class="filterBrandLogoImage" src="${src}" alt="" loading="lazy" decoding="async">` : "";
+    return `<span class="filterBrandLabel">${logo}<span>${label}</span></span>`;
   }
 
   function priceSelectOptions(placeholder, selectedValue) {
