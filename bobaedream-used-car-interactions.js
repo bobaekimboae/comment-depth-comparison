@@ -192,16 +192,16 @@
     "닷지": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/7/f6357841-31d8-4353-93ba-77d22dc9cf34.png"
   };
   const filterBrandLogos = {
-    "현대": "assets/used-car/brand-icons/hyundai.png",
-    "제네시스": "assets/used-car/brand-icons/genesis.png",
-    "기아": "assets/used-car/brand-icons/kia.png",
-    "쉐보레(국산)": "assets/used-car/brand-icons/chevrolet.png",
-    "르노코리아(삼성)": "assets/used-car/brand-icons/renault.png",
-    "KG모빌리티(쌍용)": "assets/used-car/brand-icons/ssangyong.png",
-    "벤츠": "assets/used-car/brand-icons/mercedes-benz.png",
-    "BMW": "assets/used-car/brand-icons/bmw.png",
-    "아우디": "assets/used-car/brand-icons/audi.png",
-    "폭스바겐": "assets/used-car/brand-icons/volkswagen.png"
+    "현대": "assets/used-car/brand-icons-svg/hyundai.svg",
+    "제네시스": "assets/used-car/brand-icons-svg/genesis.svg",
+    "기아": "assets/used-car/brand-icons-svg/kia.svg",
+    "쉐보레(국산)": "assets/used-car/brand-icons-svg/chevrolet.svg",
+    "르노코리아(삼성)": "assets/used-car/brand-icons-svg/renault.svg",
+    "KG모빌리티(쌍용)": "assets/used-car/brand-icons-svg/ssangyong.svg",
+    "벤츠": "assets/used-car/brand-icons-svg/mercedes-benz.svg",
+    "BMW": "assets/used-car/brand-icons-svg/bmw.svg",
+    "아우디": "assets/used-car/brand-icons-svg/audi.svg",
+    "폭스바겐": "assets/used-car/brand-icons-svg/volkswagen.svg"
   };
 
   function qs(selector, root = document) {
