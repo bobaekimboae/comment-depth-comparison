@@ -130,11 +130,16 @@ img {
   display: inline-flex;
   align-items: center;
   position: relative;
-  color: #0a0c10;
+  color: #1a1a1a;
   font-size: 15px;
   font-weight: 800;
   line-height: 22px;
   white-space: nowrap;
+}
+
+.registerNavLink:hover,
+.registerNavLink.is-active {
+  color: #1b4c8c;
 }
 
 .registerNavLink.is-active::after {
@@ -145,7 +150,7 @@ img {
   bottom: -1px;
   height: 3px;
   border-radius: 2px 2px 0 0;
-  background: #101114;
+  background: #1b4c8c;
 }
 
 .registerNavMore {
@@ -157,8 +162,8 @@ img {
   content: "";
   width: 7px;
   height: 7px;
-  border-right: 2px solid #16181d;
-  border-bottom: 2px solid #16181d;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
   margin-top: -5px;
 }

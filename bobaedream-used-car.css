@@ -167,10 +167,15 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  color: #0a0c10;
+  color: #1a1a1a;
   font-size: 15px;
   font-weight: 800;
   white-space: nowrap;
+}
+
+.bbNavLink:hover,
+.bbNavLink.is-active {
+  color: #1b4c8c;
 }
 
 .bbNavLink.is-active::after {
@@ -181,7 +186,7 @@ img {
   bottom: -1px;
   height: 3px;
   border-radius: 2px 2px 0 0;
-  background: #101114;
+  background: #1b4c8c;
 }
 
 .bbNavMore {
@@ -194,8 +199,8 @@ img {
   content: "";
   width: 7px;
   height: 7px;
-  border-right: 2px solid #16181d;
-  border-bottom: 2px solid #16181d;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
   margin-top: -5px;
 }
@@ -4619,15 +4624,19 @@ body[data-bobae-main] .bbNavList::-webkit-scrollbar {
 
 body[data-bobae-main] .bbNavLink {
   height: 64px;
-  color: #0d1c63;
+  color: #1a1a1a;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
 body[data-bobae-main] .bbNavLink.is-active {
-  color: #0d1c63;
+  color: #1b4c8c;
   font-weight: 400;
+}
+
+body[data-bobae-main] .bbNavLink:hover {
+  color: #1b4c8c;
 }
 
 body[data-bobae-main] .bbNavMore {
