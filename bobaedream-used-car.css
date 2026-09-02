@@ -521,18 +521,73 @@ body[data-used-car-detail] .bbHeaderTop {
   gap: 7px;
 }
 
-.filterBrandLabel span {
+.filterBrandText {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.filterBrandLogoImage {
+.filterBrandLogoBox {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterBrandLogoImage {
+  width: var(--filter-brand-logo-width, 24px);
+  height: var(--filter-brand-logo-height, 24px);
+  flex: 0 0 auto;
   object-fit: contain;
+  transform: translateY(var(--filter-brand-logo-y, 0));
+}
+
+.filterBrandLogoImage.is-domestic-hyundai {
+  --filter-brand-logo-width: 28px;
+  --filter-brand-logo-height: 28px;
+}
+
+.filterBrandLogoImage.is-domestic-genesis {
+  --filter-brand-logo-width: 32px;
+  --filter-brand-logo-height: 24px;
+}
+
+.filterBrandLogoImage.is-domestic-kia {
+  --filter-brand-logo-width: 29px;
+  --filter-brand-logo-height: 24px;
+}
+
+.filterBrandLogoImage.is-domestic-chevrolet {
+  --filter-brand-logo-width: 29px;
+  --filter-brand-logo-height: 24px;
+}
+
+.filterBrandLogoImage.is-domestic-daewoo {
+  --filter-brand-logo-width: 27px;
+  --filter-brand-logo-height: 24px;
+}
+
+.filterBrandLogoImage.is-domestic-renault {
+  --filter-brand-logo-width: 22px;
+  --filter-brand-logo-height: 22px;
+}
+
+.filterBrandLogoImage.is-domestic-kgm {
+  --filter-brand-logo-width: 25px;
+  --filter-brand-logo-height: 25px;
+}
+
+.filterBrandLogoImage.is-domestic-oullim {
+  --filter-brand-logo-width: 25px;
+  --filter-brand-logo-height: 25px;
+}
+
+.filterBrandLogoImage.is-domestic-other {
+  --filter-brand-logo-width: 22px;
+  --filter-brand-logo-height: 22px;
 }
 
 .filterOption.is-disabled {

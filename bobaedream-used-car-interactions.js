@@ -198,7 +198,7 @@
     "쉐보레(국산)": "assets/used-car/brand-icons-hq/chevrolet.svg",
     "GM대우": "assets/used-car/brand-icons-hq/daewoo.svg",
     "르노코리아(삼성)": "assets/used-car/brand-icons-hq/renault.svg",
-    "KG모빌리티(쌍용)": "assets/used-car/brand-icons-hq/kgm.svg",
+    "KG모빌리티(쌍용)": "assets/used-car/brand-icons/ssangyong.png",
     "어울림모터스": "assets/used-car/brand-icons/oullim.png",
     "기타 국산차": "assets/used-car/categories/s03-23-category-used-car.svg",
     "벤츠": "assets/used-car/brand-icons-hq/mercedes-benz.svg",
@@ -211,6 +211,17 @@
     "닛산": "assets/used-car/brand-icons-hq/nissan.svg",
     "다이하쓰": "assets/used-car/brand-icons-hq/daihatsu.svg",
     "닷지": "assets/used-car/brand-icons-hq/dodge.svg"
+  };
+  const filterBrandLogoClasses = {
+    "현대": "is-domestic-hyundai",
+    "제네시스": "is-domestic-genesis",
+    "기아": "is-domestic-kia",
+    "쉐보레(국산)": "is-domestic-chevrolet",
+    "GM대우": "is-domestic-daewoo",
+    "르노코리아(삼성)": "is-domestic-renault",
+    "KG모빌리티(쌍용)": "is-domestic-kgm",
+    "어울림모터스": "is-domestic-oullim",
+    "기타 국산차": "is-domestic-other"
   };
 
   function qs(selector, root = document) {
@@ -793,8 +804,9 @@
 
   function filterBrandLabelMarkup(label) {
     const src = filterBrandLogos[label];
-    const logo = src ? `<img class="filterBrandLogoImage" src="${src}" alt="" loading="lazy" decoding="async">` : "";
-    return `<span class="filterBrandLabel">${logo}<span>${label}</span></span>`;
+    const brandLogoClass = filterBrandLogoClasses[label] || "";
+    const logo = src ? `<span class="filterBrandLogoBox"><img class="filterBrandLogoImage ${brandLogoClass}" src="${src}" alt="" loading="lazy" decoding="async"></span>` : "";
+    return `<span class="filterBrandLabel">${logo}<span class="filterBrandText">${label}</span></span>`;
   }
 
   function priceSelectOptions(placeholder, selectedValue) {
