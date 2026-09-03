@@ -542,6 +542,10 @@ body[data-used-car-detail] .bbHeaderTop {
   font-weight: 700;
 }
 
+.commercialPresetBlock {
+  margin-top: 12px;
+}
+
 .commercialEmpty,
 .commercialModalEmpty {
   color: var(--airbnb-text-secondary);
