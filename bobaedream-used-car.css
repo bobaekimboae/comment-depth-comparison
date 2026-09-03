@@ -693,6 +693,8 @@ body[data-used-car-detail] .bbHeaderTop {
 .filterOption input {
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  flex: 0 0 24px;
   appearance: none;
   border: 0;
   border-radius: 0;
@@ -700,9 +702,30 @@ body[data-used-car-detail] .bbHeaderTop {
   cursor: pointer;
 }
 
+.filterMenu .filterOption input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  flex-basis: 24px;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+}
+
 .filterOption input:checked {
   background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
   box-shadow: none;
+}
+
+.filterMenu .filterOption input[type="checkbox"]:checked {
+  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  box-shadow: none;
+}
+
+.filterMenu .filterOption input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--airbnb-text-primary);
+  outline-offset: 3px;
 }
 
 .filterOption .count {
@@ -1077,7 +1100,7 @@ body[data-used-car-detail] .bbHeaderTop {
 .filterOption.is-disabled input {
   opacity: .46;
   cursor: default;
-  background: var(--icon-checkbox-off) center / 18px 18px no-repeat;
+  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .filterPanel .sectionDivider {
