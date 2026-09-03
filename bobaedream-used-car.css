@@ -531,6 +531,33 @@ body[data-used-car-detail] .bbHeaderTop {
   font-weight: 600;
 }
 
+.commercialTypeBlock + .commercialTypeBlock {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.commercialOption.is-selected {
+  color: var(--airbnb-text-primary);
+  font-weight: 700;
+}
+
+.commercialEmpty,
+.commercialModalEmpty {
+  color: var(--airbnb-text-secondary);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.commercialModalEmpty {
+  padding: 20px;
+}
+
+.commercialPcChoiceList {
+  max-height: min(58vh, 560px);
+  overflow: auto;
+}
+
 .filterOption {
   min-height: 40px;
   display: grid;

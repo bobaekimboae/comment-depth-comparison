@@ -3,6 +3,8 @@
   const cars = data.cars || [];
   const dealers = data.dealers || {};
   const categories = data.categories || [];
+  const commercial = data.commercial || {};
+  const commercialTypes = commercial.types || [];
   const params = new URLSearchParams(window.location.search);
   const optionIconBase = "assets/used-car/options/";
   const optionIconFiles = {
@@ -268,6 +270,22 @@
     ["option", "옵션", "option"],
     ["plate", "차량번호", "plate"]
   ];
+  const commercialFilterChipTypes = [
+    ["vehicleType1Id", "형식", "vehicleType1"],
+    ["vehicleType2Id", "상세형식", "vehicleType2"],
+    ["payloadCapacityCode", "적재용량", "payload"],
+    ["loadStandardCode", "축장/규격", "standard"],
+    ["brand", "제조사", "maker"],
+    ["year", "연식", "year"],
+    ["mileage", "주행거리", "mileage"],
+    ["price", "가격", "price"],
+    ["region", "지역", "region"],
+    ["seller", "판매자", "seller"],
+    ["fuel", "연료", "fuel"],
+    ["option", "옵션", "option"],
+    ["plate", "차량번호", "plate"]
+  ];
+  const commercialModalTypes = new Set(["vehicleType1", "vehicleType2", "payload", "standard"]);
   function qs(selector, root = document) {
     return root.querySelector(selector);
   }
@@ -399,6 +417,7 @@
   function renderFilterLists() {
     const domestic = qs("#domesticFilter");
     const imported = qs("#importedFilter");
+    const commercialBrand = qs("#commercialBrandFilter");
     if (domestic) {
       domestic.innerHTML = (data.filters?.domestic || []).map(([label, count]) => `
         <label class="filterOption">
@@ -417,6 +436,20 @@
         </label>
       `).join("");
     }
+    if (commercialBrand) {
+      const truckCars = cars.filter((car) => car.category === "truck");
+      const brandCounts = truckCars.reduce((acc, car) => {
+        acc.set(car.brand, (acc.get(car.brand) || 0) + 1);
+        return acc;
+      }, new Map());
+      commercialBrand.innerHTML = Array.from(brandCounts.entries()).map(([label, count]) => `
+        <label class="filterOption">
+          <input type="checkbox" value="${label}" data-brand-filter>
+          ${filterBrandLabelMarkup(label)}
+          <span class="count">${count}</span>
+        </label>
+      `).join("");
+    }
   }
 
   function renderCategoryButtons(activeCategory) {
@@ -428,6 +461,202 @@
         <span>${category.label}</span>
       </button>
     `).join("");
+  }
+
+  function isCommercialMode(state) {
+    return state.category === "truck";
+  }
+
+  function commercialType1ByCode(code) {
+    return commercialTypes.find((type) => type.code === code) || null;
+  }
+
+  function commercialType2ByCode(state) {
+    const selectedType = commercialType1ByCode(state.vehicleType1Id);
+    const scoped = selectedType?.children || [];
+    return scoped.find((type) => type.code === state.vehicleType2Id)
+      || commercialTypes.flatMap((type) => type.children || []).find((type) => type.code === state.vehicleType2Id)
+      || null;
+  }
+
+  function commercialChildrenForState(state) {
+    return commercialType1ByCode(state.vehicleType1Id)?.children || [];
+  }
+
+  function commercialOptionList(state, field) {
+    const selectedType2 = commercialType2ByCode(state);
+    if (!selectedType2) return [];
+    return field === "payloadCapacityCode"
+      ? selectedType2.payloadOptions || []
+      : selectedType2.standardOptions || [];
+  }
+
+  function commercialLabel(state, type) {
+    if (type === "vehicleType1Id") return commercialType1ByCode(state.vehicleType1Id)?.label || "";
+    if (type === "vehicleType2Id") return commercialType2ByCode(state)?.label || "";
+    if (type === "payloadCapacityCode") return state.payloadCapacityCode || "";
+    if (type === "loadStandardCode") return state.loadStandardCode || "";
+    return "";
+  }
+
+  function commercialFilterTypesForState(state) {
+    if (!isCommercialMode(state)) return allFilterChipTypes;
+    const selectedType2 = commercialType2ByCode(state);
+    return commercialFilterChipTypes.filter(([type]) => {
+      if (type === "payloadCapacityCode") return Boolean(selectedType2?.payloadOptions?.length);
+      if (type === "loadStandardCode") return Boolean(selectedType2?.standardOptions?.length);
+      return true;
+    });
+  }
+
+  function applyCommercialFilter(state, field, value) {
+    if (field === "vehicleType1Id") {
+      state.vehicleType1Id = state.vehicleType1Id === value ? "" : value;
+      state.vehicleType2Id = "";
+      state.payloadCapacityCode = "";
+      state.loadStandardCode = "";
+      return;
+    }
+    if (field === "vehicleType2Id") {
+      state.vehicleType2Id = state.vehicleType2Id === value ? "" : value;
+      state.payloadCapacityCode = "";
+      state.loadStandardCode = "";
+      return;
+    }
+    state[field] = state[field] === value ? "" : value;
+  }
+
+  function syncCommercialUrlParams(state) {
+    if (!isCommercialMode(state) || !window.history?.replaceState) return;
+    const next = new URLSearchParams(window.location.search);
+    next.set("category", "truck");
+    [
+      ["vehicleType1Id", state.vehicleType1Id],
+      ["vehicleType2Id", state.vehicleType2Id],
+      ["payloadCapacityCode", state.payloadCapacityCode],
+      ["loadStandardCode", state.loadStandardCode]
+    ].forEach(([key, value]) => {
+      if (value) next.set(key, value);
+      else next.delete(key);
+    });
+    window.history.replaceState(null, "", `${window.location.pathname}?${next.toString()}`);
+  }
+
+  function commercialOptionMarkup(state, field, items, emptyText = "") {
+    if (!items.length) {
+      return emptyText ? `<div class="commercialEmpty">${emptyText}</div>` : "";
+    }
+    return items.map((item) => {
+      const selected = String(state[field] || "") === String(item.value || item.code || "");
+      const value = item.value || item.code || "";
+      const count = item.count || "";
+      return `
+        <label class="filterOption commercialOption${selected ? " is-selected" : ""}">
+          <input type="checkbox" value="${escapeHtml(value)}" data-commercial-filter="${field}" ${selected ? "checked" : ""}>
+          <span>${escapeHtml(item.label)}</span>
+          <span class="count">${count}</span>
+        </label>
+      `;
+    }).join("");
+  }
+
+  function commercialChoiceSection(title, body, open = true) {
+    return `
+      <section class="filterItem${open ? " is-open" : ""}">
+        <button class="filterToggle" type="button">${title}</button>
+        <div class="filterPanelBody">${body}</div>
+      </section>
+    `;
+  }
+
+  function renderCommercialFilterPanel(state) {
+    const title = qs(".filterTitle");
+    const menu = qs(".filterMenu");
+    if (!title || !menu || !isCommercialMode(state)) return;
+    title.innerHTML = `화물·특장 필터 <span class="filterCountBadge" id="filterCountBadge" hidden>0</span>`;
+    const type2Options = commercialChildrenForState(state);
+    const payloadOptions = commercialOptionList(state, "payloadCapacityCode");
+    const standardOptions = commercialOptionList(state, "loadStandardCode");
+    menu.innerHTML = `
+      ${commercialChoiceSection("형식", `
+        <div class="commercialTypeBlock">
+          <div class="filterGroupTitle">1차 형식</div>
+          ${commercialOptionMarkup(state, "vehicleType1Id", commercialTypes)}
+        </div>
+        ${state.vehicleType1Id ? `
+          <div class="commercialTypeBlock">
+            <div class="filterGroupTitle">2차 형식</div>
+            ${commercialOptionMarkup(state, "vehicleType2Id", type2Options)}
+          </div>
+        ` : ""}
+      `)}
+      ${state.vehicleType2Id && payloadOptions.length ? commercialChoiceSection("적재용량", commercialOptionMarkup(state, "payloadCapacityCode", payloadOptions), true) : ""}
+      ${state.vehicleType2Id && standardOptions.length ? commercialChoiceSection("축장/규격", commercialOptionMarkup(state, "loadStandardCode", standardOptions), true) : ""}
+      ${commercialChoiceSection("제조사/모델/등급", `<div id="commercialBrandFilter"></div>`, true)}
+      ${commercialChoiceSection("연식", `
+        <div class="filterRangeRows">
+          <div class="filterRangeRow">
+            <label class="filterSelectBox"><select data-left-year-select data-left-year-min aria-label="시작 연식 연도"></select></label>
+            <label class="filterSelectBox"><select data-left-month-select aria-label="시작 연식 월"></select></label>
+            <span class="filterRangeText">부터</span>
+          </div>
+          <div class="filterRangeRow">
+            <label class="filterSelectBox"><select data-left-year-select data-left-year-max aria-label="종료 연식 연도"></select></label>
+            <label class="filterSelectBox"><select data-left-month-select aria-label="종료 연식 월"></select></label>
+            <span class="filterRangeText">까지</span>
+          </div>
+        </div>
+      `)}
+      ${commercialChoiceSection("주행거리", `
+        <div class="filterRangeRows">
+          <div class="filterRangeRow is-mileage">
+            <label class="filterSelectBox"><select data-left-mileage-select data-left-mileage-min aria-label="최저 주행거리"></select></label>
+            <span class="filterRangeText">부터</span>
+          </div>
+          <div class="filterRangeRow is-mileage">
+            <label class="filterSelectBox"><select data-left-mileage-select data-left-mileage-max aria-label="최대 주행거리"></select></label>
+            <span class="filterRangeText">까지</span>
+          </div>
+        </div>
+      `, false)}
+      ${commercialChoiceSection("가격", `
+        <div class="filterPricePreview" data-pc-left-price-range>
+          <div class="filterPriceRangeTrack" data-pc-left-price-track>
+            <span class="filterPriceRangeFill" data-pc-left-price-fill></span>
+            <button class="filterPriceRangeHandle" type="button" role="slider" data-pc-left-price-handle="min" aria-label="최저 가격" aria-valuemin="0" aria-valuemax="10000" aria-valuenow="0" aria-valuetext="0만원"></button>
+            <button class="filterPriceRangeHandle" type="button" role="slider" data-pc-left-price-handle="max" aria-label="최대 가격" aria-valuemin="0" aria-valuemax="10000" aria-valuenow="10000" aria-valuetext="1억원 이상"></button>
+          </div>
+          <div class="filterPriceInputs">
+            <label><input type="number" min="0" max="10000" step="100" data-pc-left-price-min-input aria-label="최저 가격"> 만원</label>
+            <label><input type="number" min="0" max="10000" step="100" data-pc-left-price-max-input aria-label="최대 가격"> 만원</label>
+          </div>
+        </div>
+      `, false)}
+      ${commercialChoiceSection("지역", regionOptions.map(([label, count]) => `
+        <label class="filterOption"><input type="checkbox" value="${label}" data-pc-left-region><span>${label}</span><span class="count">${count}</span></label>
+      `).join(""), false)}
+      ${commercialChoiceSection("판매자구분", pcSellerOptions.map(([label, value, count]) => `
+        <label class="filterOption"><input type="checkbox" value="${value}" data-left-seller><span>${label}</span><span class="count">${count}</span></label>
+      `).join(""), false)}
+      ${commercialChoiceSection("판매방식", getGenericOptions(genericSheetConfigs.sale).map(([label, value, count]) => `
+        <label class="filterOption"><input type="checkbox" value="${value}" data-left-filter="sale"><span>${label}</span><span class="count">${count}</span></label>
+      `).join(""), false)}
+      ${commercialChoiceSection("외부색상", getGenericOptions(genericSheetConfigs["ext-color"]).map(([label, value, count], index) => `
+        <label class="filterOption" ${index > 5 ? "data-filter-extra" : ""}><input type="checkbox" value="${value}" data-left-filter="ext-color"><span><i class="filterColorSwatch ${colorSwatchClass(label)}"></i>${label}</span><span class="count">${count}</span></label>
+      `).join("") + `<button class="filterMoreBtn" type="button" data-filter-more data-collapsed-label="색상 더보기" data-expanded-label="색상 접기" aria-expanded="false">색상 더보기</button>`, false)}
+      ${commercialChoiceSection("연료", pcFuelOptions.map(([label, value, count]) => `
+        <label class="filterOption"><input type="checkbox" value="${value}" data-left-fuel><span>${label}</span><span class="count">${count}</span></label>
+      `).join(""), false)}
+      ${commercialChoiceSection("옵션", getGenericOptions(genericSheetConfigs.option).map(([label, value, count], index) => `
+        <label class="filterOption" ${index > 7 ? "data-filter-extra" : ""}><input type="checkbox" value="${value}" data-left-filter="option"><span>${label}</span><span class="count">${count}</span></label>
+      `).join("") + `<button class="filterMoreBtn" type="button" data-filter-more data-collapsed-label="옵션 더보기" data-expanded-label="옵션 접기" aria-expanded="false">옵션 더보기</button>`, false)}
+      ${commercialChoiceSection("차량번호/판매자 이름", `
+        <label class="filterSearchBox">
+          <input type="search" id="leftKeywordSearch" placeholder="예) 83도1024, 이은호" value="${escapeHtml(state.leftKeyword)}">
+          <button type="button" data-left-keyword-apply>검색</button>
+        </label>
+      `, false)}
+    `;
   }
 
   function normalizeKoreanNumber(value) {
@@ -593,10 +822,16 @@
       const optionMatch = !state.option || (car.options || []).includes(state.option) || (car.badges || []).includes(state.option);
       const featureMatch = !state.feature || (car.badges || []).includes(state.feature);
       const plateMatch = !state.plate || (state.plate === "video" ? car.video : true);
+      const commercialSpec = car.commercial || {};
+      const commercialMatch = !isCommercialMode(state)
+        || ((!state.vehicleType1Id || commercialSpec.type1 === state.vehicleType1Id)
+          && (!state.vehicleType2Id || commercialSpec.type2 === state.vehicleType2Id)
+          && (!state.payloadCapacityCode || commercialSpec.payload === state.payloadCapacityCode)
+          && (!state.loadStandardCode || commercialSpec.standard === state.loadStandardCode));
       const leftKeyword = String(state.leftKeyword || "").trim();
       const dealer = getDealer(car);
       const keywordMatch = !leftKeyword || [car.number, car.title, dealer.name, dealer.company].some((value) => String(value || "").includes(leftKeyword));
-      return categoryMatch && sellerMatch && brandMatch && videoMatch && regionMatch && fuelMatch && yearMatch && priceMatch && mileageMatch && complexMatch && optionMatch && featureMatch && plateMatch && matchesPassiveLeftFilters(car) && keywordMatch;
+      return categoryMatch && sellerMatch && brandMatch && videoMatch && regionMatch && fuelMatch && yearMatch && priceMatch && mileageMatch && complexMatch && optionMatch && featureMatch && plateMatch && commercialMatch && matchesPassiveLeftFilters(car) && keywordMatch;
     });
 
     if (state.sort === "price-high") visible = [...visible].sort((a, b) => moneyToNumber(b.price) - moneyToNumber(a.price));
@@ -608,7 +843,7 @@
   }
 
   function getCountText(state, visible) {
-    const isBaseView = state.category === "all" && state.seller === "all" && !state.brand && !state.video && (!state.region || state.region === "전국") && !state.fuel && !state.yearMin && !state.yearMax && !state.priceMin && !state.priceMax && !state.mileageMin && !state.mileageMax && !state.complex && !state.option && !state.feature && !state.plate && !state.leftKeyword && !passiveLeftFilterCount();
+    const isBaseView = state.category === "all" && state.seller === "all" && !state.brand && !state.video && (!state.region || state.region === "전국") && !state.fuel && !state.yearMin && !state.yearMax && !state.priceMin && !state.priceMax && !state.mileageMin && !state.mileageMax && !state.complex && !state.option && !state.feature && !state.plate && !state.leftKeyword && !state.vehicleType1Id && !state.vehicleType2Id && !state.payloadCapacityCode && !state.loadStandardCode && !passiveLeftFilterCount();
     return isBaseView ? `${data.totalCount}대` : `${visible.length ? visible.length.toLocaleString("ko-KR") : "0"}대`;
   }
 
@@ -781,6 +1016,10 @@
     state.feature = "";
     state.plate = "";
     state.leftKeyword = "";
+    state.vehicleType1Id = "";
+    state.vehicleType2Id = "";
+    state.payloadCapacityCode = "";
+    state.loadStandardCode = "";
     state.generic = {};
   }
 
@@ -819,6 +1058,14 @@
   }
 
   function selectedTopFilterLabel(state, type) {
+    if (commercialModalTypes.has(type) || ["vehicleType1Id", "vehicleType2Id", "payloadCapacityCode", "loadStandardCode"].includes(type)) {
+      const stateField = type === "vehicleType1" ? "vehicleType1Id"
+        : type === "vehicleType2" ? "vehicleType2Id"
+          : type === "payload" ? "payloadCapacityCode"
+            : type === "standard" ? "loadStandardCode"
+              : type;
+      return commercialLabel(state, stateField);
+    }
     if (passiveFilterTypes.has(type)) return summarizeFilterValues(selectedLeftFilterValues(type));
     if (type === "brand") return state.brand || "";
     if (type === "region") return state.region && state.region !== "전국" ? state.region : "";
@@ -851,6 +1098,10 @@
       state.feature,
       state.seller && state.seller !== "all",
       state.leftKeyword
+      , state.vehicleType1Id
+      , state.vehicleType2Id
+      , state.payloadCapacityCode
+      , state.loadStandardCode
     ].filter(Boolean).length;
     return selectedCount + passiveLeftFilterCount();
   }
@@ -879,12 +1130,15 @@
     const root = qs("#pcFilterChips");
     if (!root) return;
     const count = activeTopFilterCount(state);
+    const categoryLabel = isCommercialMode(state)
+      ? categories.find((category) => category.key === "truck")?.label || "트럭-특장"
+      : "전체차량";
     const chips = [
       `<button class="chipBtn is-filter${count ? " is-applied" : ""}" type="button" data-pc-filter-menu>${count || "필터"}</button>`,
-      renderSelectedChip("전체차량", "category", "category")
+      renderSelectedChip(categoryLabel, "category", "category")
     ];
 
-    allFilterChipTypes.forEach(([type, label, modalType]) => {
+    commercialFilterTypesForState(state).forEach(([type, label, modalType]) => {
       const selected = selectedTopFilterLabel(state, type);
       chips.push(selected ? renderSelectedChip(selected, type, modalType) : renderOpenChip(label, modalType));
     });
@@ -892,7 +1146,7 @@
   }
 
   function updateMobileChipLabels(state) {
-    allFilterChipTypes.forEach(([type, fallback, sheetType]) => {
+    commercialFilterTypesForState(state).forEach(([type, fallback, sheetType]) => {
       const chip = qs(`.mobileChip[data-open-sheet="${sheetType}"]`);
       if (!chip) return;
       const label = selectedTopFilterLabel(state, type) || fallback;
@@ -1447,6 +1701,19 @@
   function resetSingleFilter(state, type) {
     if (type === "category") state.category = "all";
     if (type === "brand" || type === "maker") state.brand = "";
+    if (type === "vehicleType1" || type === "vehicleType1Id") {
+      state.vehicleType1Id = "";
+      state.vehicleType2Id = "";
+      state.payloadCapacityCode = "";
+      state.loadStandardCode = "";
+    }
+    if (type === "vehicleType2" || type === "vehicleType2Id") {
+      state.vehicleType2Id = "";
+      state.payloadCapacityCode = "";
+      state.loadStandardCode = "";
+    }
+    if (type === "payload" || type === "payloadCapacityCode") state.payloadCapacityCode = "";
+    if (type === "standard" || type === "loadStandardCode") state.loadStandardCode = "";
     if (type === "region") {
       state.region = "전국";
       delete state.generic.region;
@@ -1705,6 +1972,34 @@
     `;
   }
 
+  function renderPcCommercialModal(state, type) {
+    const field = type === "vehicleType1" ? "vehicleType1Id"
+      : type === "vehicleType2" ? "vehicleType2Id"
+        : type === "payload" ? "payloadCapacityCode"
+          : "loadStandardCode";
+    const options = field === "vehicleType1Id"
+      ? commercialTypes.map((item) => ({ ...item, value: item.code }))
+      : field === "vehicleType2Id"
+        ? commercialChildrenForState(state).map((item) => ({ ...item, value: item.code }))
+        : commercialOptionList(state, field);
+    const emptyText = field === "vehicleType2Id" ? "1차 형식을 먼저 선택하세요." : "상세 형식 선택 후 사용할 수 있습니다.";
+    if (!options.length) return `<div class="commercialModalEmpty">${emptyText}</div>`;
+    return `
+      <div class="pcFilterChoiceList commercialPcChoiceList">
+        ${options.map((item) => {
+          const selected = String(state[field] || "") === String(item.value || "");
+          return `
+            <button class="pcFilterChoiceButton${selected ? " is-selected" : ""}" type="button" data-pc-commercial-field="${field}" data-pc-commercial-value="${escapeHtml(item.value || "")}">
+              <span class="pcFilterCheckbox" aria-hidden="true"></span>
+              <span>${escapeHtml(item.label)}</span>
+              <span class="pcFilterCount">${item.count || ""}</span>
+            </button>
+          `;
+        }).join("")}
+      </div>
+    `;
+  }
+
   function renderPcFilterModal(type, state) {
     const title = qs("#pcFilterModalTitle");
     const body = qs("#pcFilterModalBody");
@@ -1719,7 +2014,11 @@
       region: "지역",
       fuel: "연료",
       seller: "판매자구분",
-      plate: "차량번호/판매자 이름"
+      plate: "차량번호/판매자 이름",
+      vehicleType1: "형식",
+      vehicleType2: "상세형식",
+      payload: "적재용량",
+      standard: "축장/규격"
     };
     layer.dataset.pcFilterType = type;
     title.textContent = titles[type] || genericSheetConfigs[type]?.title || "조건 선택";
@@ -1729,6 +2028,7 @@
     else if (type === "price") body.innerHTML = renderPcPriceModal(state);
     else if (type === "fuel" || type === "seller") body.innerHTML = renderPcCheckModal(state, type);
     else if (type === "plate") body.innerHTML = renderPcKeywordModal(state);
+    else if (commercialModalTypes.has(type)) body.innerHTML = renderPcCommercialModal(state, type);
     else if (genericSheetConfigs[type]) body.innerHTML = renderPcGenericModal(state, type);
     else {
       const config = genericSheetConfigs.category;
@@ -1777,6 +2077,10 @@
         }
         event.stopPropagation();
         resetSingleFilter(state, clearButton.dataset.clearFilter || "");
+        if (isCommercialMode(state)) {
+          refreshCommercialLeftPanel(state);
+          syncCommercialUrlParams(state);
+        }
         renderRows(state);
         renderMobileMakerList(state);
         renderMobileRegionGrid(state);
@@ -1803,6 +2107,10 @@
       if (event.target.closest("[data-reset-pc-filter]")) {
         const type = layer.dataset.pcFilterType || "";
         resetSingleFilter(state, type);
+        if (isCommercialMode(state)) {
+          refreshCommercialLeftPanel(state);
+          syncCommercialUrlParams(state);
+        }
         syncPcLeftRangeSelects(state);
         renderRows(state);
         renderMobileMakerList(state);
@@ -1822,9 +2130,24 @@
         return;
       }
 
+      const commercialButton = event.target.closest("[data-pc-commercial-field]");
+      if (commercialButton && !commercialButton.disabled) {
+        const type = layer.dataset.pcFilterType || "";
+        applyCommercialFilter(state, commercialButton.dataset.pcCommercialField || "", commercialButton.dataset.pcCommercialValue || "");
+        syncCommercialUrlParams(state);
+        renderRows(state);
+        renderPcFilterModal(type, state);
+        return;
+      }
+
       const categoryButton = event.target.closest("[data-pc-category]");
       if (categoryButton) {
-        state.category = categoryButton.dataset.pcCategory || "all";
+        const nextCategory = categoryButton.dataset.pcCategory || "all";
+        if ((state.category === "truck") !== (nextCategory === "truck")) {
+          window.location.href = `bobaedream-used-car-list.html?category=${encodeURIComponent(nextCategory)}`;
+          return;
+        }
+        state.category = nextCategory;
         state.generic.category = state.category;
         renderRows(state);
         renderPcFilterModal("category", state);
@@ -2175,7 +2498,12 @@
     qs("#mobileCategoryRail")?.addEventListener("click", (event) => {
       const button = event.target.closest("[data-category]");
       if (!button) return;
-      state.category = button.dataset.category || "all";
+      const nextCategory = button.dataset.category || "all";
+      if ((state.category === "truck") !== (nextCategory === "truck")) {
+        window.location.href = `bobaedream-used-car-list.html?category=${encodeURIComponent(nextCategory)}`;
+        return;
+      }
+      state.category = nextCategory;
       state.generic.category = state.category;
       renderRows(state);
       showToast(`${button.textContent.trim()} 매물로 이동했습니다.`);
@@ -2191,6 +2519,119 @@
         renderMobileSortList(state);
         showToast("검색 조건을 초기화했습니다.");
       });
+    });
+  }
+
+  function refreshCommercialLeftPanel(state) {
+    renderCommercialFilterPanel(state);
+    renderFilterLists();
+    populateLeftRangeSelects();
+    setupPcLeftPriceRange(state);
+    syncPcLeftRegionUi(state);
+    syncPcLeftFuelSellerUi(state);
+    syncPcLeftRangeSelects(state);
+    syncPcLeftPriceRangeUi(state);
+  }
+
+  function setupCommercialLeftFilters(state) {
+    const menu = qs(".filterMenu");
+    if (!menu) return;
+
+    menu.addEventListener("click", (event) => {
+      const toggle = event.target.closest(".filterToggle");
+      if (toggle) {
+        toggle.closest(".filterItem")?.classList.toggle("is-open");
+        return;
+      }
+      const moreButton = event.target.closest("[data-filter-more]");
+      if (moreButton) {
+        setFilterMoreState(moreButton, moreButton.getAttribute("aria-expanded") !== "true");
+        return;
+      }
+      if (event.target.closest("[data-left-keyword-apply]")) {
+        state.leftKeyword = qs("#leftKeywordSearch")?.value.trim() || "";
+        renderRows(state);
+      }
+    });
+
+    menu.addEventListener("keydown", (event) => {
+      if (!event.target.matches("#leftKeywordSearch") || event.key !== "Enter") return;
+      state.leftKeyword = event.target.value.trim();
+      renderRows(state);
+    });
+
+    menu.addEventListener("change", (event) => {
+      const target = event.target;
+      if (!target) return;
+
+      if (target.matches("[data-commercial-filter]")) {
+        applyCommercialFilter(state, target.dataset.commercialFilter || "", target.value || "");
+        refreshCommercialLeftPanel(state);
+        syncCommercialUrlParams(state);
+        renderRows(state);
+        return;
+      }
+
+      if (target.matches("[data-brand-filter]")) {
+        qsa("[data-brand-filter]", menu).forEach((other) => {
+          if (other !== target) other.checked = false;
+        });
+        state.brand = target.checked ? target.value : "";
+        renderRows(state);
+        return;
+      }
+
+      if (target.matches("[data-pc-left-region]")) {
+        qsa("[data-pc-left-region]", menu).forEach((other) => {
+          if (other !== target) other.checked = false;
+        });
+        state.region = target.checked ? target.value : "전국";
+        if (!state.region) state.region = "전국";
+        renderRows(state);
+        renderMobileRegionGrid(state);
+        return;
+      }
+
+      if (target.matches("[data-left-fuel]")) {
+        qsa("[data-left-fuel]", menu).forEach((other) => {
+          if (other !== target) other.checked = false;
+        });
+        state.fuel = target.checked ? target.value : "";
+        state.generic.fuel = state.fuel;
+        renderRows(state);
+        return;
+      }
+
+      if (target.matches("[data-left-seller]")) {
+        qsa("[data-left-seller]", menu).forEach((other) => {
+          if (other !== target) other.checked = false;
+        });
+        state.seller = target.checked ? target.value : "all";
+        state.generic.seller = state.seller;
+        renderRows(state);
+        return;
+      }
+
+      if (target.matches("[data-left-filter]")) {
+        renderRows(state);
+        return;
+      }
+
+      if (target.matches("[data-left-year-min], [data-left-year-max]")) {
+        state.yearMin = Number(qs("[data-left-year-min]")?.value || "") || null;
+        state.yearMax = Number(qs("[data-left-year-max]")?.value || "") || null;
+        state.yearLabel = rangeLabel(state.yearMin, state.yearMax, "년");
+        delete state.generic.year;
+        renderRows(state);
+        return;
+      }
+
+      if (target.matches("[data-left-mileage-min], [data-left-mileage-max]")) {
+        state.mileageMin = Number(qs("[data-left-mileage-min]")?.value || "") || null;
+        state.mileageMax = Number(qs("[data-left-mileage-max]")?.value || "") || null;
+        delete state.generic.mileage;
+        renderRows(state);
+      }
     });
   }
 
@@ -2219,9 +2660,14 @@
       feature: "",
       plate: "",
       leftKeyword: "",
+      vehicleType1Id: params.get("vehicleType1Id") || "",
+      vehicleType2Id: params.get("vehicleType2Id") || "",
+      payloadCapacityCode: params.get("payloadCapacityCode") || "",
+      loadStandardCode: params.get("loadStandardCode") || "",
       generic: {}
     };
 
+    if (isCommercialMode(state)) renderCommercialFilterPanel(state);
     renderFilterLists();
     populateLeftRangeSelects();
     renderCategoryButtons(state.category === "all" ? "used" : state.category);
@@ -2230,17 +2676,21 @@
     renderRows(state);
     setupPcLeftPriceRange(state);
 
-    qsa(".filterToggle").forEach((button) => {
-      button.addEventListener("click", () => {
-        button.closest(".filterItem")?.classList.toggle("is-open");
+    if (isCommercialMode(state)) {
+      setupCommercialLeftFilters(state);
+    } else {
+      qsa(".filterToggle").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.closest(".filterItem")?.classList.toggle("is-open");
+        });
       });
-    });
 
-    qsa("[data-filter-more]").forEach((button) => {
-      button.addEventListener("click", () => {
-        setFilterMoreState(button, button.getAttribute("aria-expanded") !== "true");
+      qsa("[data-filter-more]").forEach((button) => {
+        button.addEventListener("click", () => {
+          setFilterMoreState(button, button.getAttribute("aria-expanded") !== "true");
+        });
       });
-    });
+    }
 
     qsa(".sellerTab").forEach((tab) => {
       tab.addEventListener("click", () => {
@@ -2254,90 +2704,97 @@
     qs("#categoryGrid")?.addEventListener("click", (event) => {
       const button = event.target.closest("[data-category]");
       if (!button) return;
+      const nextCategory = button.dataset.category || "all";
+      if ((state.category === "truck") !== (nextCategory === "truck")) {
+        window.location.href = `bobaedream-used-car-list.html?category=${encodeURIComponent(nextCategory)}`;
+        return;
+      }
       qsa(".categoryBtn").forEach((item) => item.classList.remove("is-active"));
       button.classList.add("is-active");
-      state.category = button.dataset.category || "all";
+      state.category = nextCategory;
       renderRows(state);
       showToast(`${button.textContent.trim()} 매물로 이동했습니다.`);
     });
 
-    qsa("[data-brand-filter]").forEach((box) => {
-      box.addEventListener("change", () => {
-        qsa("[data-brand-filter]").forEach((other) => {
-          if (other !== box) other.checked = false;
+    if (!isCommercialMode(state)) {
+      qsa("[data-brand-filter]").forEach((box) => {
+        box.addEventListener("change", () => {
+          qsa("[data-brand-filter]").forEach((other) => {
+            if (other !== box) other.checked = false;
+          });
+          state.brand = box.checked ? box.value : "";
+          renderRows(state);
         });
-        state.brand = box.checked ? box.value : "";
-        renderRows(state);
       });
-    });
 
-    qsa("[data-pc-left-region]").forEach((box) => {
-      box.addEventListener("change", () => {
-        qsa("[data-pc-left-region]").forEach((other) => {
-          if (other !== box) other.checked = false;
+      qsa("[data-pc-left-region]").forEach((box) => {
+        box.addEventListener("change", () => {
+          qsa("[data-pc-left-region]").forEach((other) => {
+            if (other !== box) other.checked = false;
+          });
+          state.region = box.checked ? box.value : "전국";
+          if (!state.region) state.region = "전국";
+          renderRows(state);
+          renderMobileRegionGrid(state);
         });
-        state.region = box.checked ? box.value : "전국";
-        if (!state.region) state.region = "전국";
-        renderRows(state);
-        renderMobileRegionGrid(state);
       });
-    });
 
-    qsa("[data-left-fuel]").forEach((box) => {
-      box.addEventListener("change", () => {
-        qsa("[data-left-fuel]").forEach((other) => {
-          if (other !== box) other.checked = false;
+      qsa("[data-left-fuel]").forEach((box) => {
+        box.addEventListener("change", () => {
+          qsa("[data-left-fuel]").forEach((other) => {
+            if (other !== box) other.checked = false;
+          });
+          state.fuel = box.checked ? box.value : "";
+          state.generic.fuel = state.fuel;
+          renderRows(state);
         });
-        state.fuel = box.checked ? box.value : "";
-        state.generic.fuel = state.fuel;
-        renderRows(state);
       });
-    });
 
-    qsa("[data-left-seller]").forEach((box) => {
-      box.addEventListener("change", () => {
-        qsa("[data-left-seller]").forEach((other) => {
-          if (other !== box) other.checked = false;
+      qsa("[data-left-seller]").forEach((box) => {
+        box.addEventListener("change", () => {
+          qsa("[data-left-seller]").forEach((other) => {
+            if (other !== box) other.checked = false;
+          });
+          state.seller = box.checked ? box.value : "all";
+          state.generic.seller = state.seller;
+          renderRows(state);
         });
-        state.seller = box.checked ? box.value : "all";
-        state.generic.seller = state.seller;
-        renderRows(state);
       });
-    });
 
-    qsa("[data-left-filter]").forEach((box) => {
-      box.addEventListener("change", () => {
-        renderRows(state);
+      qsa("[data-left-filter]").forEach((box) => {
+        box.addEventListener("change", () => {
+          renderRows(state);
+        });
       });
-    });
 
-    qsa("[data-left-year-min], [data-left-year-max]").forEach((select) => {
-      select.addEventListener("change", () => {
-        state.yearMin = Number(qs("[data-left-year-min]")?.value || "") || null;
-        state.yearMax = Number(qs("[data-left-year-max]")?.value || "") || null;
-        state.yearLabel = rangeLabel(state.yearMin, state.yearMax, "년");
-        delete state.generic.year;
-        renderRows(state);
+      qsa("[data-left-year-min], [data-left-year-max]").forEach((select) => {
+        select.addEventListener("change", () => {
+          state.yearMin = Number(qs("[data-left-year-min]")?.value || "") || null;
+          state.yearMax = Number(qs("[data-left-year-max]")?.value || "") || null;
+          state.yearLabel = rangeLabel(state.yearMin, state.yearMax, "년");
+          delete state.generic.year;
+          renderRows(state);
+        });
       });
-    });
 
-    qsa("[data-left-mileage-min], [data-left-mileage-max]").forEach((select) => {
-      select.addEventListener("change", () => {
-        state.mileageMin = Number(qs("[data-left-mileage-min]")?.value || "") || null;
-        state.mileageMax = Number(qs("[data-left-mileage-max]")?.value || "") || null;
-        delete state.generic.mileage;
-        renderRows(state);
+      qsa("[data-left-mileage-min], [data-left-mileage-max]").forEach((select) => {
+        select.addEventListener("change", () => {
+          state.mileageMin = Number(qs("[data-left-mileage-min]")?.value || "") || null;
+          state.mileageMax = Number(qs("[data-left-mileage-max]")?.value || "") || null;
+          delete state.generic.mileage;
+          renderRows(state);
+        });
       });
-    });
 
-    const applyLeftKeyword = () => {
-      state.leftKeyword = qs("#leftKeywordSearch")?.value.trim() || "";
-      renderRows(state);
-    };
-    qs("[data-left-keyword-apply]")?.addEventListener("click", applyLeftKeyword);
-    qs("#leftKeywordSearch")?.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") applyLeftKeyword();
-    });
+      const applyLeftKeyword = () => {
+        state.leftKeyword = qs("#leftKeywordSearch")?.value.trim() || "";
+        renderRows(state);
+      };
+      qs("[data-left-keyword-apply]")?.addEventListener("click", applyLeftKeyword);
+      qs("#leftKeywordSearch")?.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") applyLeftKeyword();
+      });
+    }
 
     qs("#videoSwitch")?.addEventListener("click", (event) => {
       event.preventDefault();
@@ -2353,8 +2810,14 @@
     });
 
     qs("#resetFilters")?.addEventListener("click", () => {
+      const keepCommercialMode = isCommercialMode(state);
       resetState(state);
+      if (keepCommercialMode) state.category = "truck";
       clearLeftPanelControls();
+      if (keepCommercialMode) {
+        refreshCommercialLeftPanel(state);
+        syncCommercialUrlParams(state);
+      }
       renderRows(state);
       renderMobileMakerList(state);
       renderMobileRegionGrid(state);
