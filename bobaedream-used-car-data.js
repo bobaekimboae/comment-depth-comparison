@@ -718,8 +718,8 @@ window.BOBAE_USED_CAR = {
         event: "특장 장치 점검"
       },
       commercial: {
-        type1: "WING_TOP",
-        type2: "WING_TOP_01",
+        type1: "WING_BOX",
+        type2: "WING_BOX_006",
         payload: "3.5톤",
         standard: "장축"
       }
@@ -949,7 +949,7 @@ window.BOBAE_USED_CAR = {
       detailSpecs: { "최초등록일": "2023년 03월 12일", "차종": "카고(화물)트럭", "최고출력": "133마력", "인승": "3인승", "수입구분": "국산" },
       options: ["후방카메라", "블랙박스", "내비게이션"],
       history: { ownDamage: "0건", otherDamage: "0건", note: "없음", useType: "일반", event: "입고 점검" },
-      commercial: { type1: "TRUCK_CARGO", type2: "TRUCK_CARGO_01", payload: "1톤", standard: "초장축" }
+      commercial: { type1: "CARGO", type2: "CARGO_001", payload: "1톤", standard: "초장축" }
     },
     {
       id: "truck-freezer-top",
@@ -988,7 +988,7 @@ window.BOBAE_USED_CAR = {
       detailSpecs: { "최초등록일": "2022년 11월 08일", "차종": "냉동탑", "최고출력": "135마력", "인승": "3인승", "수입구분": "국산" },
       options: ["파워게이트", "냉동기", "후방카메라", "열선시트"],
       history: { ownDamage: "0건", otherDamage: "1건", note: "외판 단순수리", useType: "영업용 가능", event: "냉동 장치 점검" },
-      commercial: { type1: "WING_TOP", type2: "WING_TOP_17", payload: "1.2톤", standard: "장축" }
+      commercial: { type1: "WING_BOX", type2: "WING_BOX_022", payload: "1.2톤", standard: "장축" }
     },
     {
       id: "truck-dump-25ton",
@@ -1027,7 +1027,7 @@ window.BOBAE_USED_CAR = {
       detailSpecs: { "최초등록일": "2020년 06월 19일", "차종": "덤프", "최고출력": "440마력", "인승": "2인승", "수입구분": "국산" },
       options: ["후방카메라", "블랙박스", "타이어 점검"],
       history: { ownDamage: "0건", otherDamage: "0건", note: "없음", useType: "영업용 가능", event: "유압 점검" },
-      commercial: { type1: "DUMP_CONSTRUCTION", type2: "DUMP_CONSTRUCTION_01", payload: "25.5톤", standard: "후축" }
+      commercial: { type1: "DUMP_HEAVY", type2: "DUMP_HEAVY_001", payload: "25.5톤", standard: "후축" }
     },
     {
       id: "truck-bus-45",
@@ -1066,7 +1066,7 @@ window.BOBAE_USED_CAR = {
       detailSpecs: { "최초등록일": "2019년 10월 21일", "차종": "버스", "최고출력": "380마력", "인승": "45인승", "수입구분": "국산" },
       options: ["냉난방", "후방카메라", "블랙박스"],
       history: { ownDamage: "1건", otherDamage: "0건", note: "외판 단순수리", useType: "영업용 가능", event: "정비 이력 공개" },
-      commercial: { type1: "BUS", type2: "BUS_01", payload: "", standard: "" }
+      commercial: { type1: "BUS", type2: "BUS_001", payload: "", standard: "" }
     },
     {
       id: "truck-camping-trailer",
@@ -1105,7 +1105,7 @@ window.BOBAE_USED_CAR = {
       detailSpecs: { "최초등록일": "2024년 04월 06일", "차종": "캠핑트레일러", "최고출력": "-", "인승": "4인승", "수입구분": "국산" },
       options: ["어닝", "무버", "냉장고", "전기 인입"],
       history: { ownDamage: "0건", otherDamage: "0건", note: "없음", useType: "레저", event: "위탁 판매" },
-      commercial: { type1: "CAMPING", type2: "CAMPING_02", payload: "", standard: "장축" }
+      commercial: { type1: "CAMPING", type2: "CAMPING_002", payload: "", standard: "장축" }
     },
     {
       id: "truck-self-loader",
@@ -1144,7 +1144,7 @@ window.BOBAE_USED_CAR = {
       detailSpecs: { "최초등록일": "2021년 07월 11일", "차종": "셀프로더", "최고출력": "135마력", "인승": "3인승", "수입구분": "국산" },
       options: ["윈치", "후방카메라", "블랙박스"],
       history: { ownDamage: "0건", otherDamage: "0건", note: "없음", useType: "영업용 가능", event: "특장 장치 점검" },
-      commercial: { type1: "TOW_TRANSPORT", type2: "TOW_TRANSPORT_01", payload: "1톤", standard: "" }
+      commercial: { type1: "TOW_CARRIER", type2: "TOW_CARRIER_001", payload: "1톤", standard: "" }
     }
   );
 })();

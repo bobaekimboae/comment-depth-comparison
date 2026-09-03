@@ -686,28 +686,87 @@
     return commercialChoiceSection(title || commercialCommonConfig(key)?.label || key, commercialCommonOptionMarkup(state, key, visibleLimit), open);
   }
 
+  function commercialTreeControlMarkup(state, field, item, level, pc = false, hidden = false) {
+    const value = item.value || item.code || "";
+    const selected = String(state[field] || "") === String(value);
+    const count = item.count || "";
+    const classes = `commercialTreeNode is-level-${level}${selected ? " is-selected" : ""}`;
+    if (pc) {
+      return `
+        <button class="pcFilterChoiceButton ${classes}" type="button" data-pc-commercial-field="${field}" data-pc-commercial-value="${escapeHtml(value)}"${hidden ? " data-pc-filter-extra" : ""}>
+          <span class="pcFilterCheckbox" aria-hidden="true"></span>
+          <span>${escapeHtml(item.label)}</span>
+          <span class="pcFilterCount">${count}</span>
+        </button>
+      `;
+    }
+    return `
+      <label class="filterOption commercialOption ${classes}"${hidden ? " data-filter-extra" : ""}>
+        <input type="checkbox" value="${escapeHtml(value)}" data-commercial-filter="${field}" ${selected ? "checked" : ""}>
+        <span>${escapeHtml(item.label)}</span>
+        <span class="count">${count}</span>
+      </label>
+    `;
+  }
+
+  function renderCommercialTree(state, pc = false) {
+    const type2Limit = pc ? 18 : 14;
+    const payloadLimit = pc ? 24 : 18;
+    let hasHidden = false;
+    const tree = commercialTypes.map((type) => {
+      const typeSelected = state.vehicleType1Id === type.code;
+      const children = typeSelected ? type.children || [] : [];
+      return `
+        <div class="commercialTreeGroup${typeSelected ? " is-open" : ""}">
+          ${commercialTreeControlMarkup(state, "vehicleType1Id", { ...type, value: type.code }, 1, pc)}
+          ${children.length ? `
+            <div class="commercialTreeChildren">
+              ${children.map((child, index) => {
+                const childSelected = state.vehicleType2Id === child.code;
+                const hideChild = index >= type2Limit && !childSelected;
+                if (hideChild) hasHidden = true;
+                const payloadOptions = childSelected ? child.payloadOptions || [] : [];
+                return `
+                  ${commercialTreeControlMarkup(state, "vehicleType2Id", { ...child, value: child.code }, 2, pc, hideChild)}
+                  ${childSelected ? `
+                    <div class="commercialTreeChildren is-capacity">
+                      <div class="filterGroupTitle">적재용량</div>
+                      ${payloadOptions.length
+                        ? payloadOptions.map((payload, payloadIndex) => {
+                          const payloadSelected = state.payloadCapacityCode === payload.value;
+                          const hidePayload = payloadIndex >= payloadLimit && !payloadSelected;
+                          if (hidePayload) hasHidden = true;
+                          return commercialTreeControlMarkup(state, "payloadCapacityCode", payload, 3, pc, hidePayload);
+                        }).join("")
+                        : `<div class="commercialEmpty">이 형식은 적재용량 조건이 없습니다.</div>`}
+                    </div>
+                  ` : ""}
+                `;
+              }).join("")}
+            </div>
+          ` : ""}
+        </div>
+      `;
+    }).join("");
+    const moreButton = !hasHidden ? "" : pc
+      ? `<button class="pcFilterMoreButton" type="button" data-pc-filter-more data-collapsed-label="하위 노드 더보기" data-expanded-label="하위 노드 접기" aria-expanded="false">하위 노드 더보기</button>`
+      : `<button class="filterMoreBtn" type="button" data-filter-more data-collapsed-label="하위 노드 더보기" data-expanded-label="하위 노드 접기" aria-expanded="false">하위 노드 더보기</button>`;
+    return `
+      <div class="commercialFilterTree${pc ? " is-pc" : ""}"${pc ? " data-pc-generic-list" : ""}>
+        ${tree}
+        ${moreButton}
+      </div>
+    `;
+  }
+
   function renderCommercialFilterPanel(state) {
     const title = qs(".filterTitle");
     const menu = qs(".filterMenu");
     if (!title || !menu || !isCommercialMode(state)) return;
     title.innerHTML = `화물·특장 필터 <span class="filterCountBadge" id="filterCountBadge" hidden>0</span>`;
-    const type2Options = commercialChildrenForState(state);
-    const payloadOptions = commercialOptionList(state, "payloadCapacityCode");
     const standardOptions = commercialOptionList(state, "loadStandardCode");
     menu.innerHTML = `
-      ${commercialChoiceSection("형식", `
-        <div class="commercialTypeBlock">
-          <div class="filterGroupTitle">1차 형식</div>
-          ${commercialOptionMarkup(state, "vehicleType1Id", commercialTypes, "", 13)}
-        </div>
-        ${state.vehicleType1Id ? `
-          <div class="commercialTypeBlock">
-            <div class="filterGroupTitle">2차 형식</div>
-            ${commercialOptionMarkup(state, "vehicleType2Id", type2Options, "", 14)}
-          </div>
-        ` : ""}
-      `)}
-      ${state.vehicleType2Id && payloadOptions.length ? commercialChoiceSection("적재용량", commercialOptionMarkup(state, "payloadCapacityCode", payloadOptions, "", 16), true) : ""}
+      ${commercialChoiceSection("형식/적재용량", renderCommercialTree(state), true)}
       ${state.vehicleType2Id && standardOptions.length ? commercialChoiceSection("축장/규격", commercialOptionMarkup(state, "loadStandardCode", standardOptions, "", 12), true) : ""}
       ${commercialCommonSection(state, "Manufacturer", "제조사/모델/등급", true, 12)}
       ${commercialCommonSection(state, "Varaxis", "가변축", false)}
@@ -2186,6 +2245,9 @@
   }
 
   function renderPcCommercialModal(state, type) {
+    if (type === "vehicleType1" || type === "vehicleType2" || type === "payload") {
+      return renderCommercialTree(state, true);
+    }
     const field = type === "vehicleType1" ? "vehicleType1Id"
       : type === "vehicleType2" ? "vehicleType2Id"
         : type === "payload" ? "payloadCapacityCode"
@@ -2254,9 +2316,9 @@
       fuel: "연료",
       seller: "판매자구분",
       plate: "차량번호/판매자 이름",
-      vehicleType1: "형식",
-      vehicleType2: "상세형식",
-      payload: "적재용량",
+      vehicleType1: "형식/적재용량",
+      vehicleType2: "형식/적재용량",
+      payload: "형식/적재용량",
       standard: "축장/규격"
     };
     const commonKey = commercialCommonKey(type);

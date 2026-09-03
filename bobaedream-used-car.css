@@ -546,6 +546,64 @@ body[data-used-car-detail] .bbHeaderTop {
   margin-top: 12px;
 }
 
+.commercialFilterTree {
+  display: grid;
+  gap: 0;
+}
+
+.commercialTreeGroup + .commercialTreeGroup {
+  border-top: 1px solid #f4f4f4;
+}
+
+.commercialTreeChildren {
+  display: grid;
+  gap: 0;
+  margin: 0 0 8px 28px;
+  padding-left: 12px;
+  border-left: 1px solid #e8e8e8;
+}
+
+.commercialTreeChildren.is-capacity {
+  margin: 4px 0 10px 56px;
+}
+
+.commercialTreeNode {
+  position: relative;
+}
+
+.commercialTreeNode.is-level-2 {
+  min-height: 36px;
+  font-size: 13px;
+}
+
+.commercialTreeNode.is-level-3 {
+  min-height: 34px;
+  color: var(--airbnb-text-secondary);
+  font-size: 13px;
+}
+
+.commercialTreeNode.is-level-3.is-selected {
+  color: var(--airbnb-text-primary);
+}
+
+.commercialFilterTree.is-pc {
+  min-width: min(720px, calc(100vw - 56px));
+  max-height: min(58vh, 560px);
+  overflow: auto;
+}
+
+.commercialFilterTree.is-pc .commercialTreeGroup + .commercialTreeGroup {
+  border-top: 0;
+}
+
+.commercialFilterTree.is-pc .commercialTreeChildren {
+  margin-left: 30px;
+}
+
+.commercialFilterTree.is-pc .commercialTreeChildren.is-capacity {
+  margin-left: 60px;
+}
+
 .commercialEmpty,
 .commercialModalEmpty {
   color: var(--airbnb-text-secondary);
