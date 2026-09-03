@@ -14,6 +14,9 @@
   --blue: #19539b;
   --blue-strong: #0f4fa3;
   --blue-soft: #eef5ff;
+  --airbnb-action-black: #222222;
+  --airbnb-action-black-hover: #000000;
+  --airbnb-action-black-pressed: #111111;
   --price: #e5193b;
   --danger: #e94141;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, .08);
@@ -888,7 +891,15 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcFilterPrimaryButton {
   color: #fff;
-  background: var(--blue);
+  background: var(--airbnb-action-black);
+}
+
+.pcFilterPrimaryButton:hover {
+  background: var(--airbnb-action-black-hover);
+}
+
+.pcFilterPrimaryButton:active {
+  background: var(--airbnb-action-black-pressed);
 }
 
 .pcFilterMakerList {
@@ -4058,7 +4069,11 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobilePrimaryButton {
     color: #fff;
-    background: var(--blue);
+    background: var(--airbnb-action-black);
+  }
+
+  .mobilePrimaryButton:active {
+    background: var(--airbnb-action-black-pressed);
   }
 
   .makerList {
@@ -4884,11 +4899,19 @@ body[data-bobae-main] .bbNavLink.is-active::after {
   justify-content: center;
   min-width: 0;
   border-radius: 4px;
-  background: var(--blue);
+  background: var(--airbnb-action-black);
   color: #fff;
   font-size: 15px;
   line-height: 20px;
   font-weight: 950;
+}
+
+.mainSearchButton:hover {
+  background: var(--airbnb-action-black-hover);
+}
+
+.mainSearchButton:active {
+  background: var(--airbnb-action-black-pressed);
 }
 
 .mainSearchFooter {
