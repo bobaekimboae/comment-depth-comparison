@@ -40,9 +40,10 @@
   --icon-checkbox-off: url("assets/used-car/icons/airbnb-checkbox-off.svg");
   --icon-checkbox-on: url("assets/used-car/icons/airbnb-checkbox-on.svg");
   --icon-filter-chip-chevron: url("assets/used-car/icons/airbnb-chevron-down.svg");
-  --icon-filter-chip-close: url("assets/used-car/icons/s03-filter-chip-close.svg");
+  --icon-filter-chip-close: url("assets/used-car/icons/airbnb-close.svg");
   --icon-airbnb-chevron-down: url("assets/used-car/icons/airbnb-chevron-down.svg");
   --icon-airbnb-close: url("assets/used-car/icons/airbnb-close.svg");
+  --icon-airbnb-close-white: url("assets/used-car/icons/airbnb-close-white.svg");
   --icon-airbnb-check: url("assets/used-car/icons/airbnb-check.svg");
   --icon-airbnb-check-white: url("assets/used-car/icons/airbnb-check-white.svg");
   --icon-airbnb-range-handle: url("assets/used-car/icons/airbnb-range-handle.svg");
@@ -555,17 +556,17 @@ body[data-used-car-detail] .bbHeaderTop {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 4px 0 12px;
+  padding: 2px 0 14px;
 }
 
 .commercialSelectedNode {
   min-width: 0;
-  height: 36px;
-  padding: 0 10px 0 12px;
+  height: 40px;
+  padding: 0 12px 0 14px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  border: 1px solid var(--airbnb-border);
+  gap: 8px;
+  border: 1px solid var(--airbnb-border-strong);
   border-radius: var(--airbnb-button-radius);
   background: #fff;
   color: var(--airbnb-text-primary);
@@ -588,15 +589,16 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .commercialSelectedNode i {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  background: var(--icon-airbnb-close) center / 14px 14px no-repeat;
-  opacity: .72;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  background: var(--icon-airbnb-close) center / 18px 18px no-repeat;
+  opacity: .84;
 }
 
 .commercialSelectedNode:hover {
-  border-color: var(--airbnb-border-strong);
+  border-color: var(--airbnb-text-primary);
+  box-shadow: 0 0 0 1px var(--airbnb-text-primary);
 }
 
 .commercialTreeGroup + .commercialTreeGroup {
@@ -669,19 +671,22 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterOption {
-  min-height: 40px;
+  min-height: 44px;
   display: grid;
   grid-template-columns: 24px minmax(0, 1fr) auto;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
+  padding: 0 2px;
+  border-radius: var(--airbnb-button-radius);
   color: var(--airbnb-text-primary);
   font-size: 14px;
   line-height: 22px;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
 }
 
 .filterOption:hover {
+  background: var(--airbnb-surface-soft);
   color: #000;
 }
 
@@ -703,7 +708,7 @@ body[data-used-car-detail] .bbHeaderTop {
 .filterOption .count {
   color: var(--airbnb-text-secondary);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .filterPricePreview {
@@ -880,7 +885,7 @@ body[data-used-car-detail] .bbHeaderTop {
   font-size: 13px;
   line-height: 18px;
   font-weight: 600;
-  background: var(--icon-chevron-down) right 9px center / 12px 12px no-repeat;
+  background: var(--icon-airbnb-chevron-down) right 9px center / 12px 12px no-repeat;
 }
 
 .filterRangeText {
@@ -941,7 +946,7 @@ body[data-used-car-detail] .bbHeaderTop {
   width: 12px;
   height: 12px;
   flex: 0 0 12px;
-  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
   transition: transform 0.16s ease;
 }
 
@@ -1137,18 +1142,19 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .chipRow {
-  margin-top: 8px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 8px;
 }
 
 .chipBtn {
-  height: 32px;
-  padding: 4px 12px;
-  border-radius: 16px;
-  background: var(--chip);
-  color: #171a1f;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--airbnb-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--airbnb-text-primary);
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
@@ -1159,13 +1165,15 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .chipBtn.is-dark {
-  background: #222;
+  border-color: var(--airbnb-text-primary);
+  background: var(--airbnb-text-primary);
   color: #fff;
 }
 
 .chipBtn.is-filter.is-applied {
   min-width: 54px;
-  background: #222;
+  border-color: var(--airbnb-text-primary);
+  background: var(--airbnb-text-primary);
   color: #fff;
   font-weight: 700;
 }
@@ -1185,11 +1193,11 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .chipBtn.is-selected::after {
   content: "";
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
   border-radius: 0;
-  background: var(--icon-filter-chip-close) center / 14px 14px no-repeat;
+  background: var(--icon-filter-chip-close) center / 16px 16px no-repeat;
   color: transparent;
   display: block;
   font-size: 0;
@@ -1198,6 +1206,11 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .chipBtn.is-selected:not(.is-dark)::after {
   background-image: var(--icon-filter-chip-close);
+}
+
+.chipBtn.is-selected.is-dark::after,
+.chipBtn.is-dark::after {
+  background-image: var(--icon-airbnb-close-white);
 }
 
 .chipBtn.has-caret::after {
@@ -1238,52 +1251,44 @@ body[data-used-car-detail] .bbHeaderTop {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #fff;
-  box-shadow: 0 18px 48px rgba(0, 0, 0, .22);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .28);
 }
 
 .pcFilterModalHeader {
-  height: 72px;
-  flex: 0 0 72px;
-  padding: 0 16px;
+  height: 64px;
+  flex: 0 0 64px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ebecef;
+  border-bottom: 1px solid var(--airbnb-border);
 }
 
 .pcFilterModalHeader strong {
-  color: #12161d;
-  font-size: 18px;
-  line-height: 25px;
+  color: var(--airbnb-text-primary);
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 700;
 }
 
 .pcFilterModalClose {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   position: relative;
+  border-radius: 50%;
+  background: var(--icon-airbnb-close) center / 20px 20px no-repeat;
+}
+
+.pcFilterModalClose:hover {
+  background-color: var(--airbnb-surface-soft);
 }
 
 .pcFilterModalClose::before,
 .pcFilterModalClose::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 11px;
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background: #161a20;
-}
-
-.pcFilterModalClose::before {
-  transform: rotate(45deg);
-}
-
-.pcFilterModalClose::after {
-  transform: rotate(-45deg);
+  content: none;
+  display: none;
 }
 
 .pcFilterModalBody {
@@ -1300,19 +1305,20 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterModalFooter {
-  height: 100px;
-  flex: 0 0 100px;
-  padding: 24px 20px;
+  height: 88px;
+  flex: 0 0 88px;
+  padding: 16px 24px 24px;
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 8px;
-  border-top: 1px solid #ebecef;
+  grid-template-columns: minmax(76px, auto) 1fr;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px solid var(--airbnb-border);
   background: #fff;
 }
 
 .pcFilterOutlineButton,
 .pcFilterPrimaryButton {
-  height: 52px;
+  height: 48px;
   border-radius: var(--airbnb-button-radius);
   font-size: 16px;
   line-height: 22px;
@@ -1405,9 +1411,13 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterOutlineButton {
-  border: 1px solid #dfe2e6;
-  color: #333941;
-  background: #fff;
+  justify-self: start;
+  padding: 0 2px;
+  border: 0;
+  color: var(--airbnb-text-primary);
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .pcFilterPrimaryButton {
@@ -1864,10 +1874,10 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterChoiceList {
-  padding: 16px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 2px;
 }
 
 .pcFilterChoiceList:not(.is-expanded) [data-pc-filter-extra] {
@@ -1875,15 +1885,22 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterChoiceButton {
-  height: 24px;
-  display: flex;
+  min-height: 44px;
+  padding: 0 4px;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 8px;
-  color: #1a1a1a;
+  gap: 10px;
+  border-radius: var(--airbnb-button-radius);
+  color: var(--airbnb-text-primary);
   text-align: left;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.pcFilterChoiceButton:hover {
+  background: var(--airbnb-surface-soft);
 }
 
 .pcFilterChoiceLabel {
@@ -1894,7 +1911,8 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterChoiceButton .pcFilterCount {
-  color: #8f8f8f;
+  color: var(--airbnb-text-secondary);
+  font-weight: 500;
 }
 
 .pcFilterChoiceButton.is-disabled {
@@ -1933,7 +1951,7 @@ body[data-used-car-detail] .bbHeaderTop {
   color: var(--airbnb-action-black);
   font-size: 13px;
   line-height: 18px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .pcFilterMoreButton::after {
@@ -1941,7 +1959,7 @@ body[data-used-car-detail] .bbHeaderTop {
   width: 12px;
   height: 12px;
   flex: 0 0 12px;
-  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
   transition: transform 0.16s ease;
 }
 
@@ -2129,7 +2147,7 @@ body[data-used-car-detail] .bbHeaderTop {
   height: 24px;
   flex: 0 0 24px;
   border: 0;
-  background: var(--icon-sort-chevron) center / 24px 24px no-repeat;
+  background: var(--icon-airbnb-chevron-down) center / 14px 14px no-repeat;
   transform: none;
   margin: 0;
 }
@@ -4036,12 +4054,17 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileSortButton::after,
   .mobileFilterRow::after {
     content: "";
-    width: 7px;
-    height: 7px;
-    border-right: 2px solid #171a20;
-    border-bottom: 2px solid #171a20;
-    transform: rotate(45deg);
-    margin-top: -5px;
+    width: 12px;
+    height: 12px;
+    border: 0;
+    background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
+    transform: rotate(-90deg);
+    margin-top: 0;
+  }
+
+  .mobileChip:not(.is-dark)::after,
+  .mobileSortButton::after {
+    transform: none;
   }
 
   .mobilePin {
@@ -4090,13 +4113,13 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileChip {
-    height: 34px;
+    height: 36px;
     padding: 0 14px;
     display: inline-flex;
     align-items: center;
     gap: 6px;
     border: 1px solid var(--airbnb-border);
-    border-radius: 24px;
+    border-radius: 999px;
     background: #fff;
     color: var(--airbnb-text-primary);
     white-space: nowrap;
@@ -4116,9 +4139,10 @@ body[data-used-car-list] .listShell .viewLine {
     height: 16px;
     display: inline-grid;
     place-items: center;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, .16);
-    font-size: 11px;
+    background: var(--icon-airbnb-close-white) center / 14px 14px no-repeat;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
   }
 
   .mobileTuneIcon {
@@ -4481,7 +4505,7 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileSheetBackdrop {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, .34);
+    background: rgba(0, 0, 0, .36);
     opacity: 0;
     transition: opacity .22s ease;
   }
@@ -4514,16 +4538,16 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileSheetPop {
     max-height: calc(100% - 96px);
-    border-radius: 8px 8px 0 0;
+    border-radius: 12px 12px 0 0;
   }
 
   .mobileSheetHeader {
-    height: 57px;
-    padding: 0 16px;
+    height: 64px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ebecef;
+    border-bottom: 1px solid var(--airbnb-border);
   }
 
   .mobileSheetHeader strong {
@@ -4534,29 +4558,21 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileSheetClose {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     position: relative;
+    border-radius: 50%;
+    background: var(--icon-airbnb-close) center / 20px 20px no-repeat;
+  }
+
+  .mobileSheetClose:active {
+    background-color: var(--airbnb-surface-soft);
   }
 
   .mobileSheetClose::before,
   .mobileSheetClose::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 13px;
-    width: 20px;
-    height: 2px;
-    border-radius: 2px;
-    background: #161a20;
-  }
-
-  .mobileSheetClose::before {
-    transform: rotate(45deg);
-  }
-
-  .mobileSheetClose::after {
-    transform: rotate(-45deg);
+    content: none;
+    display: none;
   }
 
   .mobileFilterIntro {
@@ -4609,12 +4625,13 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileFilterRow {
     width: 100%;
-    height: 58px;
-    padding: 0 16px;
+    min-height: 64px;
+    height: auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--airbnb-border);
     color: var(--airbnb-text-primary);
     font-size: 14px;
     line-height: 19.6px;
@@ -4665,19 +4682,19 @@ body[data-used-car-list] .listShell .viewLine {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 77px;
-    padding: 16px 20px;
+    height: 88px;
+    padding: 16px 24px 24px;
     display: grid;
     grid-template-columns: minmax(62px, auto) minmax(0, 1fr);
     gap: 16px;
     align-items: center;
-    border-top: 1px solid #ebecef;
+    border-top: 1px solid var(--airbnb-border);
     background: #fff;
   }
 
   .mobileResetTextButton,
   .mobilePrimaryButton {
-    height: 44px;
+    height: 48px;
     border-radius: var(--airbnb-button-radius);
     font-size: 16px;
     line-height: 22.4px;
@@ -4759,7 +4776,7 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileOptionGrid {
-    padding: 16px;
+    padding: 18px 20px 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
@@ -4795,17 +4812,24 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileOptionButton {
     min-width: 0;
-    height: 24px;
+    min-height: 44px;
+    height: auto;
+    padding: 0 2px;
     display: grid;
     grid-template-columns: 24px 1fr auto;
-    gap: 8px;
+    gap: 10px;
     align-items: center;
     position: relative;
     color: var(--airbnb-text-primary);
     text-align: left;
     font-size: 14px;
     line-height: 19.6px;
-    font-weight: 600;
+    font-weight: 500;
+    border-radius: var(--airbnb-button-radius);
+  }
+
+  .mobileOptionButton:active {
+    background: var(--airbnb-surface-soft);
   }
 
   .mobileOptionLabel {
@@ -4839,7 +4863,7 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileOptionCount {
     color: var(--airbnb-text-secondary);
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .mobileRangePanel {
@@ -4883,7 +4907,7 @@ body[data-used-car-list] .listShell .viewLine {
     appearance: none;
     border: 0;
     outline: 0;
-    background: var(--icon-chevron-down) right 12px center / 12px 12px no-repeat;
+    background: var(--icon-airbnb-chevron-down) right 12px center / 12px 12px no-repeat;
     color: var(--airbnb-text-primary);
     font-size: 14px;
     line-height: 20px;
@@ -4950,7 +4974,7 @@ body[data-used-car-list] .listShell .viewLine {
     width: 12px;
     height: 12px;
     flex: 0 0 12px;
-    background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+    background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
     transition: transform 0.16s ease;
   }
 
@@ -6821,7 +6845,7 @@ body[data-bobae-main] .footer {
   height: 12px;
   margin-top: 1px;
   border: 0;
-  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
   transform: none;
 }
 
@@ -6845,11 +6869,11 @@ body[data-bobae-main] .footer {
 
 .chipBtn.is-dark::after {
   content: "";
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
   border-radius: 0;
-  background: var(--icon-filter-chip-close) center / 14px 14px no-repeat;
+  background: var(--icon-airbnb-close-white) center / 16px 16px no-repeat;
   color: transparent;
   font-size: 0;
   line-height: 0;
@@ -6871,7 +6895,7 @@ body[data-bobae-main] .footer {
   flex: 0 0 24px;
   margin: 0;
   border: 0;
-  background: var(--icon-sort-chevron) center / 24px 24px no-repeat;
+  background: var(--icon-airbnb-chevron-down) center / 14px 14px no-repeat;
   transform: none;
 }
 
@@ -6880,7 +6904,7 @@ body[data-bobae-main] .footer {
   height: 12px;
   margin-top: 1px;
   border: 0;
-  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
   transform: none;
 }
 
@@ -6972,7 +6996,7 @@ body[data-bobae-main] .footer {
 
 @media (max-width: 767px) {
   .mobileBackBtn {
-    background: var(--icon-chevron-down) center / 18px 18px no-repeat;
+    background: var(--icon-airbnb-chevron-down) center / 18px 18px no-repeat;
     transform: rotate(90deg);
   }
 
@@ -7008,6 +7032,10 @@ body[data-bobae-main] .footer {
     transform: none;
   }
 
+  .mobileFilterRow::after {
+    transform: rotate(-90deg);
+  }
+
   .mobileChip:not(.is-dark)::after {
     width: 12px;
     height: 12px;
@@ -7022,7 +7050,7 @@ body[data-bobae-main] .footer {
     height: 24px;
     margin-top: 0;
     border: 0;
-    background: var(--icon-sort-chevron) center / 24px 24px no-repeat;
+    background: var(--icon-airbnb-chevron-down) center / 14px 14px no-repeat;
     transform: none;
   }
 
@@ -7048,13 +7076,13 @@ body[data-bobae-main] .footer {
   }
 
   .mobileChip.is-dark span {
-    width: 14px;
-    height: 14px;
-    flex: 0 0 14px;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
     color: transparent;
     font-size: 0;
     line-height: 0;
-    background: var(--icon-filter-chip-close) center / 14px 14px no-repeat;
+    background: var(--icon-airbnb-close-white) center / 14px 14px no-repeat;
   }
 
   .mobileViewButton {
