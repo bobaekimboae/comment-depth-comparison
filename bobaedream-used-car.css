@@ -371,15 +371,32 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterPanel {
+  position: sticky;
+  top: 118px;
+  max-height: calc(100vh - 136px);
+  overflow: auto;
   background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(34, 34, 34, .07);
+  scrollbar-width: thin;
+  scrollbar-color: #c9c9c9 transparent;
+}
+
+.filterPanel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filterPanel::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  border-radius: 999px;
 }
 
 .filterSummary {
-  height: 100px;
-  padding: 20px 16px 0;
-  border-bottom: 1px solid var(--line);
+  min-height: 104px;
+  padding: 18px 18px 16px;
+  border-bottom: 1px solid var(--airbnb-border);
+  background: #fff;
 }
 
 .filterTitleRow,
@@ -390,32 +407,50 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--airbnb-text-primary);
   font-size: 18px;
   line-height: 26px;
-  font-weight: 900;
+  font-weight: 800;
+}
+
+.filterTitle::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: var(--icon-filter) center / 18px 18px no-repeat;
 }
 
 .resetBtn {
-  color: #15171b;
+  color: var(--airbnb-text-primary);
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .filterToolRow {
   justify-content: flex-start;
-  gap: 9px;
-  margin-top: 13px;
-  color: #5c626c;
+  gap: 10px;
+  min-height: 40px;
+  margin-top: 14px;
+  padding: 0 12px;
+  color: var(--airbnb-text-secondary);
   font-size: 13px;
+  font-weight: 600;
   white-space: nowrap;
+  background: var(--airbnb-surface-soft);
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
 }
 
 .switch {
-  width: 32px;
-  height: 18px;
-  border-radius: 18px;
-  background: #dadcdf;
+  width: 34px;
+  height: 20px;
+  border-radius: 999px;
+  background: #d7d7d7;
   position: relative;
   flex: 0 0 auto;
 }
@@ -425,15 +460,15 @@ body[data-used-car-detail] .bbHeaderTop {
   position: absolute;
   left: 2px;
   top: 2px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .14);
 }
 
 .switch.is-on {
-  background: var(--blue);
+  background: var(--airbnb-action-black);
 }
 
 .switch.is-on::after {
@@ -442,71 +477,85 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .historyBtn {
   margin-left: auto;
-  color: #535961;
+  color: var(--airbnb-text-primary);
   font-size: 13px;
+  font-weight: 700;
   white-space: nowrap;
 }
 
 .filterMenu {
-  padding-bottom: 12px;
+  padding: 0 14px 14px;
 }
 
 .filterItem {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #ebebeb;
+}
+
+.filterItem:last-child {
+  border-bottom: 0;
 }
 
 .filterToggle {
   width: 100%;
-  height: 49px;
-  padding: 0 16px;
+  height: 52px;
+  padding: 0 2px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #0e1116;
-  font-size: 14px;
-  font-weight: 900;
+  color: var(--airbnb-text-primary);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .filterToggle::after {
   content: "";
-  width: 8px;
-  height: 8px;
-  border-right: 1.5px solid #9da1a8;
-  border-bottom: 1.5px solid #9da1a8;
-  transform: rotate(45deg);
-  margin-top: -5px;
+  width: 14px;
+  height: 14px;
+  background: var(--icon-airbnb-chevron-down) center / 14px 14px no-repeat;
+  opacity: .68;
+  transform: rotate(0);
+  margin-top: 0;
 }
 
 .filterItem.is-open .filterToggle::after {
-  transform: rotate(-135deg);
-  margin-top: 4px;
+  transform: rotate(180deg);
+  margin-top: 0;
 }
 
 .filterPanelBody {
   display: none;
-  padding: 3px 16px 18px;
+  padding: 0 0 18px;
 }
 
 .filterItem.is-open .filterPanelBody {
-  display: block;
+  display: grid;
+  gap: 10px;
 }
 
 .filterGroupTitle {
-  margin: 6px 0 10px;
-  color: #161a21;
-  font-size: 14px;
-  font-weight: 900;
+  margin: 4px 0 0;
+  color: var(--airbnb-text-secondary);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 800;
 }
 
 .filterOption {
-  min-height: 32px;
+  min-height: 34px;
   display: grid;
-  grid-template-columns: 24px 1fr auto;
-  gap: 8px;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  gap: 10px;
   align-items: center;
-  color: #11151b;
-  font-size: 13px;
-  font-weight: 700;
+  color: var(--airbnb-text-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filterOption:hover {
+  color: #000;
 }
 
 .filterOption input {
@@ -516,6 +565,7 @@ body[data-used-car-detail] .bbHeaderTop {
   border: 0;
   border-radius: 0;
   background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  cursor: pointer;
 }
 
 .filterOption input:checked {
@@ -524,8 +574,125 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterOption .count {
-  color: #7d848d;
+  color: var(--airbnb-text-secondary);
+  font-size: 13px;
   font-weight: 600;
+}
+
+.filterPricePreview {
+  padding: 14px 12px 12px;
+  border: 1px solid var(--airbnb-border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(34, 34, 34, .04);
+}
+
+.filterPriceCopy {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filterPriceCopy strong {
+  color: var(--airbnb-text-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+}
+
+.filterPriceCopy span {
+  color: var(--airbnb-text-secondary);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.filterPriceBars {
+  height: 54px;
+  padding: 0 7px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: end;
+  gap: 3px;
+}
+
+.filterPriceBars span {
+  display: block;
+  min-height: 8px;
+  border-radius: 4px 4px 0 0;
+  background: #d8d8d8;
+}
+
+.filterPriceBars span.is-active {
+  background: var(--airbnb-action-black);
+}
+
+.filterPriceRangeTrack {
+  position: relative;
+  height: 30px;
+  margin: 2px 8px 0;
+  touch-action: none;
+  cursor: pointer;
+}
+
+.filterPriceRangeTrack::before,
+.filterPriceRangeFill {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 13px;
+  height: 4px;
+  border-radius: 999px;
+}
+
+.filterPriceRangeTrack::before {
+  background: var(--airbnb-border);
+}
+
+.filterPriceRangeFill {
+  background: var(--airbnb-action-black);
+}
+
+.filterPriceRangeHandle {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--icon-airbnb-range-handle) center / 20px 20px no-repeat;
+  transform: translateX(-50%);
+  cursor: grab;
+}
+
+.filterPriceRangeHandle:active,
+.filterPriceRangeTrack.is-dragging .filterPriceRangeHandle {
+  cursor: grabbing;
+}
+
+.filterPriceRangeHandle:focus-visible {
+  outline: 2px solid var(--airbnb-action-black);
+  outline-offset: 3px;
+}
+
+.filterPriceTicks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  color: var(--airbnb-text-secondary);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.filterPricePresets {
+  margin-top: 8px;
+  display: grid;
+  gap: 2px;
 }
 
 .filterBrandLabel {
@@ -605,12 +772,24 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterOption.is-disabled {
-  color: #c4c7cc;
+  color: #b0b0b0;
+  cursor: default;
+}
+
+.filterOption.is-disabled .count {
+  color: #b0b0b0;
 }
 
 .filterOption.is-disabled input {
-  background: #fafafa;
-  border-color: #ececef;
+  opacity: .46;
+  cursor: default;
+  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+}
+
+.filterPanel .sectionDivider {
+  height: 1px;
+  margin: 8px 0 0;
+  background: #ebebeb;
 }
 
 .mainColumn {

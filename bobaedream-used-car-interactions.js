@@ -488,6 +488,7 @@
     renderPcFilterChips(state);
     updatePcFilterApplyCount(countText);
     updateMobileChipLabels(state);
+    syncPcLeftPriceRangeUi(state);
   }
 
   function renderMobileCategoryButtons(activeCategory) {
@@ -757,7 +758,7 @@
     const { min, max } = currentMobilePriceRange(state);
     const minPercent = priceRangePercent(min, 0);
     const maxPercent = priceRangePercent(max, 100);
-    const selectedLabel = priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
+    const selectedLabel = state.priceLabel || priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
     return `
       <div class="mobilePriceRangePanel" data-mobile-price-range>
         <div class="mobilePriceRangeLabel">
@@ -880,7 +881,7 @@
     const fill = qs(".mobilePriceRangeFill", root);
     const minHandle = qs('[data-mobile-price-handle="min"]', root);
     const maxHandle = qs('[data-mobile-price-handle="max"]', root);
-    if (label) label.textContent = priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
+    if (label) label.textContent = state.priceLabel || priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
     if (fill) {
       fill.style.left = `${minPercent}%`;
       fill.style.right = `${100 - maxPercent}%`;
@@ -897,6 +898,127 @@
     qsa(".mobileOptionButton", root).forEach((button) => {
       button.classList.toggle("is-selected", String(state.generic?.price || "") === String(button.dataset.genericValue || ""));
     });
+  }
+
+  function syncPcLeftPriceRangeUi(state) {
+    const root = qs("[data-pc-left-price-range]");
+    if (!root) return;
+    const { min, max } = currentMobilePriceRange(state);
+    const minPercent = priceRangePercent(min, 0);
+    const maxPercent = priceRangePercent(max, 100);
+    const label = qs("[data-pc-left-price-label]", root);
+    const fill = qs("[data-pc-left-price-fill]", root);
+    const minHandle = qs('[data-pc-left-price-handle="min"]', root);
+    const maxHandle = qs('[data-pc-left-price-handle="max"]', root);
+    if (label) label.textContent = state.priceLabel || priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
+    if (fill) {
+      fill.style.left = `${minPercent}%`;
+      fill.style.right = `${100 - maxPercent}%`;
+    }
+    [
+      [minHandle, min, minPercent],
+      [maxHandle, max, maxPercent]
+    ].forEach(([handle, value, percent]) => {
+      if (!handle) return;
+      handle.style.left = `${percent}%`;
+      handle.setAttribute("aria-valuenow", String(value));
+      handle.setAttribute("aria-valuetext", mobilePriceValueText(value));
+    });
+    qsa("[data-pc-left-price-preset]", root).forEach((input) => {
+      const presetMin = input.dataset.priceMin ? Number(input.dataset.priceMin) : null;
+      const presetMax = input.dataset.priceMax ? Number(input.dataset.priceMax) : null;
+      input.checked = (state.priceMin || null) === presetMin && (state.priceMax || null) === presetMax;
+    });
+  }
+
+  function applyPcLeftPricePreset(state, input) {
+    qsa("[data-pc-left-price-preset]").forEach((other) => {
+      if (other !== input) other.checked = false;
+    });
+    if (!input.checked) {
+      state.priceMin = null;
+      state.priceMax = null;
+      state.priceLabel = "";
+      delete state.generic.price;
+      renderRows(state);
+      return;
+    }
+    state.priceMin = input.dataset.priceMin ? Number(input.dataset.priceMin) : null;
+    state.priceMax = input.dataset.priceMax ? Number(input.dataset.priceMax) : null;
+    state.priceLabel = input.dataset.priceLabel || priceRangeLabel(state.priceMin, state.priceMax);
+    const key = mobilePriceGenericKey(state.priceMin, state.priceMax);
+    if (key) state.generic.price = key;
+    else delete state.generic.price;
+    renderRows(state);
+  }
+
+  function updatePcLeftPriceRangeValue(state, handle, value) {
+    const current = currentMobilePriceRange(state);
+    if (handle === "min") setMobilePriceRangeState(state, Math.min(value, current.max), current.max);
+    else setMobilePriceRangeState(state, current.min, Math.max(value, current.min));
+    renderRows(state);
+  }
+
+  function setupPcLeftPriceRange(state) {
+    const root = qs("[data-pc-left-price-range]");
+    if (!root) return;
+    let priceDrag = null;
+
+    const finishPcPriceDrag = () => {
+      if (!priceDrag) return;
+      priceDrag.track.classList.remove("is-dragging");
+      priceDrag = null;
+    };
+
+    root.addEventListener("change", (event) => {
+      const input = event.target.closest("[data-pc-left-price-preset]");
+      if (!input) return;
+      applyPcLeftPricePreset(state, input);
+    });
+
+    root.addEventListener("pointerdown", (event) => {
+      const track = event.target.closest("[data-pc-left-price-track]");
+      if (!track) return;
+      const value = mobilePriceValueFromPoint(track, event.clientX);
+      const directHandle = event.target.closest("[data-pc-left-price-handle]")?.dataset.pcLeftPriceHandle;
+      const handle = directHandle || chooseMobilePriceHandle(state, value);
+      finishPcPriceDrag();
+      priceDrag = { track, handle };
+      track.classList.add("is-dragging");
+      try {
+        track.setPointerCapture?.(event.pointerId);
+      } catch (error) {
+        // Pointer capture can fail on synthetic events; document listeners keep the drag usable.
+      }
+      updatePcLeftPriceRangeValue(state, handle, value);
+      event.preventDefault();
+    });
+
+    root.addEventListener("keydown", (event) => {
+      const handle = event.target.closest("[data-pc-left-price-handle]");
+      if (!handle) return;
+      const handleType = handle.dataset.pcLeftPriceHandle || "max";
+      const { min, max } = currentMobilePriceRange(state);
+      const current = handleType === "min" ? min : max;
+      let next = current;
+      if (event.key === "ArrowLeft" || event.key === "ArrowDown") next = current - (event.shiftKey ? 500 : mobilePriceSliderStep);
+      else if (event.key === "ArrowRight" || event.key === "ArrowUp") next = current + (event.shiftKey ? 500 : mobilePriceSliderStep);
+      else if (event.key === "Home") next = 0;
+      else if (event.key === "End") next = mobilePriceSliderMax;
+      else return;
+      updatePcLeftPriceRangeValue(state, handleType, next);
+      event.preventDefault();
+    });
+
+    document.addEventListener("pointermove", (event) => {
+      if (!priceDrag) return;
+      updatePcLeftPriceRangeValue(state, priceDrag.handle, mobilePriceValueFromPoint(priceDrag.track, event.clientX));
+      event.preventDefault();
+    });
+
+    document.addEventListener("pointerup", finishPcPriceDrag);
+    document.addEventListener("pointercancel", finishPcPriceDrag);
+    syncPcLeftPriceRangeUi(state);
   }
 
   function pcFilterApplyLabel(type, countText) {
@@ -1519,6 +1641,7 @@
     setupPcFilterChips(state);
     setupMobileList(state);
     renderRows(state);
+    setupPcLeftPriceRange(state);
 
     qsa(".filterToggle").forEach((button) => {
       button.addEventListener("click", () => {
