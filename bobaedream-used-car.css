@@ -4475,16 +4475,16 @@ body[data-used-car-list] .listShell .viewLine {
     right: 0;
     bottom: 0;
     height: 77px;
-    padding: 16px;
+    padding: 16px 20px;
     display: grid;
-    grid-template-columns: 112px 1fr;
-    gap: 8px;
-    align-items: start;
+    grid-template-columns: minmax(62px, auto) minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
     border-top: 1px solid #ebecef;
     background: #fff;
   }
 
-  .mobileOutlineButton,
+  .mobileResetTextButton,
   .mobilePrimaryButton {
     height: 44px;
     border-radius: var(--airbnb-button-radius);
@@ -4493,10 +4493,14 @@ body[data-used-car-list] .listShell .viewLine {
     font-weight: 600;
   }
 
-  .mobileOutlineButton {
-    border: 1px solid var(--airbnb-border);
+  .mobileResetTextButton {
+    justify-self: start;
+    padding: 0 2px;
+    border: 0;
     color: var(--airbnb-text-primary);
-    background: #fff;
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .mobilePrimaryButton {
