@@ -17,6 +17,7 @@
   --airbnb-action-black: #222222;
   --airbnb-action-black-hover: #000000;
   --airbnb-action-black-pressed: #111111;
+  --airbnb-button-radius: 8px;
   --price: #e5193b;
   --danger: #e94141;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, .08);
@@ -834,7 +835,7 @@ body[data-used-car-detail] .bbHeaderTop {
 .pcFilterOutlineButton,
 .pcFilterPrimaryButton {
   height: 52px;
-  border-radius: 7px;
+  border-radius: var(--airbnb-button-radius);
   font-size: 16px;
   line-height: 22px;
   font-weight: 600;
@@ -4055,7 +4056,7 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileOutlineButton,
   .mobilePrimaryButton {
     height: 44px;
-    border-radius: 7px;
+    border-radius: var(--airbnb-button-radius);
     font-size: 16px;
     line-height: 22.4px;
     font-weight: 600;
@@ -4898,7 +4899,7 @@ body[data-bobae-main] .bbNavLink.is-active::after {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  border-radius: 4px;
+  border-radius: var(--airbnb-button-radius);
   background: var(--airbnb-action-black);
   color: #fff;
   font-size: 15px;
