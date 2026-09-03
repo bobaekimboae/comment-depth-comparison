@@ -1021,13 +1021,12 @@ body[data-used-car-detail] .bbHeaderTop {
 .chipRow.is-fixed {
   position: fixed;
   left: var(--chip-row-fixed-left, 0px);
-  top: 0;
+  top: 16px;
   z-index: var(--z-sticky);
   width: var(--chip-row-fixed-width, auto);
   margin-top: 0;
   padding: 10px 20px;
-  border-radius: 0 0 10px 10px;
-  border-bottom: 1px solid #ebecef;
+  border-radius: 10px;
   background: #fff;
   box-shadow: 0 8px 22px rgba(15, 23, 42, .08);
 }

@@ -1958,6 +1958,7 @@
     const summary = row?.closest(".summaryCard");
     const shell = qs(".listShell");
     if (!row || !summary || !shell) return;
+    const stickyTop = 16;
 
     const slot = document.createElement("div");
     slot.className = "chipRowStickySlot";
@@ -1980,7 +1981,7 @@
       const summaryRect = summary.getBoundingClientRect();
       const shellRect = shell.getBoundingClientRect();
       const slotRect = slot.getBoundingClientRect();
-      const shouldFix = slotRect.top <= 0 && shellRect.bottom > 96;
+      const shouldFix = slotRect.top <= stickyTop && shellRect.bottom > 96 + stickyTop;
       if (!shouldFix) {
         release();
         return;
