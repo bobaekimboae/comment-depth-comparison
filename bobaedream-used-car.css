@@ -525,6 +525,10 @@ body[data-used-car-detail] .bbHeaderTop {
   display: none;
 }
 
+.commercialFilterTree:not(.is-expanded) [data-filter-extra] {
+  display: none;
+}
+
 .filterGroupTitle {
   margin: 0 0 4px;
   color: var(--airbnb-text-secondary);
@@ -554,35 +558,32 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .commercialSelectedNodes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 2px 0 14px;
+  display: grid;
+  gap: 6px;
+  padding: 0 0 10px;
 }
 
 .commercialSelectedNode {
   min-width: 0;
-  height: 40px;
-  padding: 0 12px 0 14px;
+  width: 100%;
+  height: 36px;
+  padding: 0 10px 0 12px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border: 1px solid var(--airbnb-border-strong);
-  border-radius: var(--airbnb-button-radius);
-  background: #fff;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #f5f5f5;
   color: var(--airbnb-text-primary);
   font-size: 13px;
   line-height: 18px;
   font-weight: 700;
 }
 
-.commercialSelectedNode span {
-  color: var(--airbnb-text-secondary);
-  font-weight: 600;
-}
-
 .commercialSelectedNode strong {
-  max-width: 142px;
+  min-width: 0;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -598,8 +599,7 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .commercialSelectedNode:hover {
-  border-color: var(--airbnb-text-primary);
-  box-shadow: 0 0 0 1px var(--airbnb-text-primary);
+  background: #eeeeee;
 }
 
 .commercialTreeGroup + .commercialTreeGroup {
@@ -614,8 +614,18 @@ body[data-used-car-detail] .bbHeaderTop {
   border-left: 1px solid #e8e8e8;
 }
 
+.commercialTreeChildren.is-active-depth {
+  margin: 0;
+  padding-left: 0;
+  border-left: 0;
+}
+
 .commercialTreeChildren.is-capacity {
   margin: 4px 0 10px 56px;
+}
+
+.commercialTreeChildren.is-active-depth.is-capacity {
+  margin: 0;
 }
 
 .commercialTreeNode {
@@ -1926,6 +1936,10 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterChoiceList:not(.is-expanded) [data-pc-filter-extra] {
+  display: none;
+}
+
+.commercialFilterTree.is-pc:not(.is-expanded) [data-pc-filter-extra] {
   display: none;
 }
 

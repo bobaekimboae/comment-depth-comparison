@@ -749,7 +749,6 @@
       <div class="commercialSelectedNodes" aria-label="선택한 형식 조건">
         ${nodes.map(([field, name, label]) => `
           <button class="commercialSelectedNode" type="button" data-commercial-clear-field="${field}" aria-label="${escapeHtml(name)} ${escapeHtml(label)} 해제">
-            <span>${escapeHtml(name)}</span>
             <strong>${escapeHtml(label)}</strong>
             <i aria-hidden="true"></i>
           </button>
@@ -762,41 +761,42 @@
     const type2Limit = pc ? 18 : 14;
     const payloadLimit = pc ? 24 : 18;
     let hasHidden = false;
-    const tree = commercialTypes.map((type) => {
-      const typeSelected = state.vehicleType1Id === type.code;
-      const children = typeSelected ? type.children || [] : [];
-      return `
-        <div class="commercialTreeGroup${typeSelected ? " is-open" : ""}">
+    const selectedType = commercialType1ByCode(state.vehicleType1Id);
+    const selectedType2 = commercialType2ByCode(state);
+    let tree = "";
+
+    if (!selectedType) {
+      tree = commercialTypes.map((type) => `
+        <div class="commercialTreeGroup">
           ${commercialTreeControlMarkup(state, "vehicleType1Id", { ...type, value: type.code }, 1, pc)}
-          ${children.length ? `
-            <div class="commercialTreeChildren">
-              ${children.map((child, index) => {
-                const childSelected = state.vehicleType2Id === child.code;
-                const hideChild = index >= type2Limit && !childSelected;
-                if (hideChild) hasHidden = true;
-                const payloadOptions = childSelected ? child.payloadOptions || [] : [];
-                return `
-                  ${commercialTreeControlMarkup(state, "vehicleType2Id", { ...child, value: child.code }, 2, pc, hideChild)}
-                  ${childSelected ? `
-                    <div class="commercialTreeChildren is-capacity">
-                      <div class="filterGroupTitle">적재용량</div>
-                      ${payloadOptions.length
-                        ? payloadOptions.map((payload, payloadIndex) => {
-                          const payloadSelected = state.payloadCapacityCode === payload.value;
-                          const hidePayload = payloadIndex >= payloadLimit && !payloadSelected;
-                          if (hidePayload) hasHidden = true;
-                          return commercialTreeControlMarkup(state, "payloadCapacityCode", payload, 3, pc, hidePayload);
-                        }).join("")
-                        : `<div class="commercialEmpty">이 형식은 적재용량 조건이 없습니다.</div>`}
-                    </div>
-                  ` : ""}
-                `;
-              }).join("")}
-            </div>
-          ` : ""}
         </div>
-      `;
-    }).join("");
+      `).join("");
+    } else if (!selectedType2) {
+      const children = selectedType.children || [];
+      tree = children.length ? `
+        <div class="commercialTreeChildren is-active-depth">
+          ${children.map((child, index) => {
+            const hideChild = index >= type2Limit;
+            if (hideChild) hasHidden = true;
+            return commercialTreeControlMarkup(state, "vehicleType2Id", { ...child, value: child.code }, 2, pc, hideChild);
+          }).join("")}
+        </div>
+      ` : `<div class="commercialEmpty">선택 가능한 상세형식이 없습니다.</div>`;
+    } else {
+      const payloadOptions = selectedType2.payloadOptions || [];
+      tree = payloadOptions.length ? `
+        <div class="commercialTreeChildren is-active-depth is-capacity">
+          <div class="filterGroupTitle">적재용량</div>
+          ${payloadOptions.map((payload, payloadIndex) => {
+            const payloadSelected = state.payloadCapacityCode === payload.value;
+            const hidePayload = payloadIndex >= payloadLimit && !payloadSelected;
+            if (hidePayload) hasHidden = true;
+            return commercialTreeControlMarkup(state, "payloadCapacityCode", payload, 3, pc, hidePayload);
+          }).join("")}
+        </div>
+      ` : `<div class="commercialEmpty">이 형식은 적재용량 조건이 없습니다.</div>`;
+    }
+
     const moreButton = !hasHidden ? "" : pc
       ? `<button class="pcFilterMoreButton" type="button" data-pc-filter-more data-collapsed-label="하위 노드 더보기" data-expanded-label="하위 노드 접기" aria-expanded="false">하위 노드 더보기</button>`
       : `<button class="filterMoreBtn" type="button" data-filter-more data-collapsed-label="하위 노드 더보기" data-expanded-label="하위 노드 접기" aria-expanded="false">하위 노드 더보기</button>`;
