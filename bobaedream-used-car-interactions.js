@@ -1953,54 +1953,6 @@
     });
   }
 
-  function setupPcStickyFilterChips() {
-    const row = qs("#pcFilterChips");
-    const summary = row?.closest(".summaryCard");
-    const shell = qs(".listShell");
-    if (!row || !summary || !shell) return;
-    const stickyTop = 16;
-
-    const slot = document.createElement("div");
-    slot.className = "chipRowStickySlot";
-    row.before(slot);
-
-    const release = () => {
-      row.classList.remove("is-fixed");
-      slot.classList.remove("is-active");
-      row.style.removeProperty("--chip-row-fixed-left");
-      row.style.removeProperty("--chip-row-fixed-width");
-      slot.style.removeProperty("--chip-row-sticky-height");
-    };
-
-    const sync = () => {
-      if (window.innerWidth <= 767) {
-        release();
-        return;
-      }
-
-      const summaryRect = summary.getBoundingClientRect();
-      const shellRect = shell.getBoundingClientRect();
-      const slotRect = slot.getBoundingClientRect();
-      const shouldFix = slotRect.top <= stickyTop && shellRect.bottom > 96 + stickyTop;
-      if (!shouldFix) {
-        release();
-        return;
-      }
-
-      const rowHeight = row.getBoundingClientRect().height;
-      row.style.setProperty("--chip-row-fixed-left", `${Math.round(summaryRect.left)}px`);
-      row.style.setProperty("--chip-row-fixed-width", `${Math.round(summaryRect.width)}px`);
-      slot.style.setProperty("--chip-row-sticky-height", `${Math.round(rowHeight + stickyTop + 8)}px`);
-      slot.classList.add("is-active");
-      row.classList.add("is-fixed");
-    };
-
-    window.addEventListener("scroll", sync, { passive: true });
-    window.addEventListener("resize", sync);
-    requestAnimationFrame(sync);
-    window.addEventListener("load", sync, { once: true });
-  }
-
   function setupMobileList(state) {
     const layer = qs("#mobileSheetLayer");
     if (!qs("[data-mobile-list]") || !layer) return;
@@ -2274,7 +2226,6 @@
     populateLeftRangeSelects();
     renderCategoryButtons(state.category === "all" ? "used" : state.category);
     setupPcFilterChips(state);
-    setupPcStickyFilterChips();
     setupMobileList(state);
     renderRows(state);
     setupPcLeftPriceRange(state);
