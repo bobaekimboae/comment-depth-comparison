@@ -4532,8 +4532,8 @@ body[data-used-car-list] .listShell .viewLine {
     height: 66px;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 32px 1fr auto 18px;
-    gap: 16px;
+    grid-template-columns: 32px minmax(0, 1fr) auto 24px;
+    gap: 14px;
     align-items: center;
     color: var(--airbnb-text-primary);
     font-size: 15px;
@@ -4556,11 +4556,15 @@ body[data-used-car-list] .listShell .viewLine {
     color: var(--airbnb-text-primary);
   }
 
-  .makerOption.is-selected::after {
+  .makerOption::after {
     content: "";
     width: 24px;
     height: 24px;
-    background: var(--icon-airbnb-check) center / 18px 18px no-repeat;
+    background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  }
+
+  .makerOption.is-selected::after {
+    background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
   }
 
   .mobileOptionGrid {
