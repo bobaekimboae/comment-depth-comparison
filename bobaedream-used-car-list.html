@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="bobaedream-used-car.css?v=bobae-airbnb-rental-left-filter-20260903">
+<link rel="stylesheet" href="bobaedream-used-car.css?v=bobae-airbnb-rental-filter-direct-20260903">
 <title>보배드림 중고차 PC 리스트</title>
 </head>
 <body data-used-car-list>
@@ -211,52 +211,41 @@
     <aside class="filterPanel" aria-label="중고차 필터">
       <div class="filterSummary">
         <div class="filterTitleRow">
-          <strong class="filterTitle">필터</strong>
-          <button class="resetBtn" type="button" id="resetFilters">초기화</button>
-        </div>
-        <div class="filterToolRow">
-          <button class="switch" type="button" data-toast="검색조건 유지가 켜졌습니다." aria-label="검색조건 유지"></button>
-          <span>검색조건 유지</span>
-          <button class="historyBtn" type="button" data-toast="최근검색기록이 없습니다.">최근검색기록 0</button>
+          <strong class="filterTitle">필터 <span class="filterCountBadge" id="filterCountBadge" hidden>0</span></strong>
+          <button class="resetBtn" type="button" id="resetFilters">모두 지우기</button>
         </div>
       </div>
       <div class="filterMenu">
+        <section class="filterItem is-open">
+          <button class="filterToggle" type="button">지역</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="전국" data-pc-left-region checked><span>전국</span><span class="count">14,896</span></label>
+            <label class="filterOption"><input type="checkbox" value="서울" data-pc-left-region><span>서울</span><span class="count">4,220</span></label>
+            <label class="filterOption"><input type="checkbox" value="경기" data-pc-left-region><span>경기</span><span class="count">3,948</span></label>
+            <label class="filterOption"><input type="checkbox" value="부산" data-pc-left-region><span>부산</span><span class="count">1,122</span></label>
+          </div>
+        </section>
         <section class="filterItem is-open filterPriceItem">
           <button class="filterToggle" type="button">가격</button>
           <div class="filterPanelBody">
             <div class="filterPricePreview" data-pc-left-price-range>
-              <div class="filterPriceCopy">
-                <strong data-pc-left-price-label>전체 가격</strong>
-                <span>평균 4,530만원</span>
-              </div>
-              <div class="filterPriceBars" aria-hidden="true">
-                <span style="height: 18px"></span>
-                <span style="height: 26px"></span>
-                <span style="height: 34px"></span>
-                <span class="is-active" style="height: 44px"></span>
-                <span class="is-active" style="height: 52px"></span>
-                <span class="is-active" style="height: 48px"></span>
-                <span class="is-active" style="height: 40px"></span>
-                <span class="is-active" style="height: 32px"></span>
-                <span style="height: 24px"></span>
-                <span style="height: 19px"></span>
-                <span style="height: 14px"></span>
-                <span style="height: 10px"></span>
-              </div>
               <div class="filterPriceRangeTrack" data-pc-left-price-track>
                 <span class="filterPriceRangeFill" data-pc-left-price-fill></span>
                 <button class="filterPriceRangeHandle" type="button" role="slider" data-pc-left-price-handle="min" aria-label="최저 가격" aria-valuemin="0" aria-valuemax="10000" aria-valuenow="0" aria-valuetext="0만원"></button>
                 <button class="filterPriceRangeHandle" type="button" role="slider" data-pc-left-price-handle="max" aria-label="최대 가격" aria-valuemin="0" aria-valuemax="10000" aria-valuenow="10000" aria-valuetext="1억원 이상"></button>
               </div>
-              <div class="filterPriceTicks">
-                <span>0</span>
-                <span>1억원+</span>
+              <div class="filterPriceInputs">
+                <label class="filterPriceInputBox">
+                  <span>최소</span>
+                  <div><input type="number" value="0" min="0" max="10000" step="100" inputmode="numeric" data-pc-left-price-min-input><em>만원</em></div>
+                </label>
+                <span class="filterPriceDash">-</span>
+                <label class="filterPriceInputBox">
+                  <span>최대</span>
+                  <div><input type="number" value="10000" min="0" max="10000" step="100" inputmode="numeric" data-pc-left-price-max-input><em>만원</em></div>
+                </label>
               </div>
-              <div class="filterPricePresets">
-                <label class="filterOption"><input type="checkbox" data-pc-left-price-preset data-price-min="" data-price-max="3000" data-price-label="3천만원 이하"><span>3천만원 이하</span><span class="count">4,218</span></label>
-                <label class="filterOption"><input type="checkbox" data-pc-left-price-preset data-price-min="" data-price-max="5000" data-price-label="5천만원 이하"><span>5천만원 이하</span><span class="count">8,120</span></label>
-                <label class="filterOption"><input type="checkbox" data-pc-left-price-preset data-price-min="10000" data-price-max="" data-price-label="1억원 이상"><span>1억원 이상</span><span class="count">2,592</span></label>
-              </div>
+              <p class="filterPriceAverage">시세 평균은 4,530만원입니다.</p>
             </div>
           </div>
         </section>
@@ -282,7 +271,6 @@
         <section class="filterItem"><button class="filterToggle" type="button">주행거리</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>3만km 이하</span><span class="count">3,906</span></label><label class="filterOption"><input type="checkbox"><span>10만km 이하</span><span class="count">9,451</span></label></div></section>
         <section class="filterItem"><button class="filterToggle" type="button">바디타입</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>세단</span><span class="count">4,226</span></label><label class="filterOption"><input type="checkbox"><span>SUV</span><span class="count">5,340</span></label><label class="filterOption"><input type="checkbox"><span>스포츠카</span><span class="count">919</span></label></div></section>
         <section class="filterItem"><button class="filterToggle" type="button">차급</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>준중형</span><span class="count">2,011</span></label><label class="filterOption"><input type="checkbox"><span>중형</span><span class="count">3,540</span></label><label class="filterOption"><input type="checkbox"><span>대형</span><span class="count">2,814</span></label></div></section>
-        <section class="filterItem"><button class="filterToggle" type="button">지역</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>서울</span><span class="count">4,220</span></label><label class="filterOption"><input type="checkbox"><span>경기</span><span class="count">3,948</span></label></div></section>
         <section class="filterItem"><button class="filterToggle" type="button">성능 · 보험</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>보험 이력 공개</span><span class="count">12,001</span></label><label class="filterOption"><input type="checkbox"><span>무사고</span><span class="count">7,420</span></label></div></section>
         <section class="filterItem"><button class="filterToggle" type="button">판매자 구분</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>딜러</span><span class="count">13,320</span></label><label class="filterOption"><input type="checkbox"><span>개인</span><span class="count">1,576</span></label></div></section>
       </div>
@@ -362,6 +350,6 @@
   </footer>
   <div class="toast" role="status" aria-live="polite"></div>
   <script src="bobaedream-used-car-data.js?v=bobae-gnb-menu-location-clean-20260902"></script>
-  <script src="bobaedream-used-car-interactions.js?v=bobae-airbnb-rental-left-filter-20260903"></script>
+  <script src="bobaedream-used-car-interactions.js?v=bobae-airbnb-rental-filter-direct-20260903"></script>
 </body>
 </html>

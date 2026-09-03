@@ -376,9 +376,9 @@ body[data-used-car-detail] .bbHeaderTop {
   max-height: calc(100vh - 136px);
   overflow: auto;
   background: #fff;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e5e5e5;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(34, 34, 34, .07);
+  box-shadow: none;
   scrollbar-width: thin;
   scrollbar-color: #c9c9c9 transparent;
 }
@@ -393,14 +393,13 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterSummary {
-  min-height: 104px;
-  padding: 18px 18px 16px;
-  border-bottom: 1px solid var(--airbnb-border);
+  min-height: 61px;
+  padding: 16px;
+  border-bottom: 1px solid #e5e5e5;
   background: #fff;
 }
 
-.filterTitleRow,
-.filterToolRow {
+.filterTitleRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -412,15 +411,27 @@ body[data-used-car-detail] .bbHeaderTop {
   gap: 8px;
   color: var(--airbnb-text-primary);
   font-size: 18px;
-  line-height: 26px;
+  line-height: 28px;
   font-weight: 800;
 }
 
-.filterTitle::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background: var(--icon-filter) center / 18px 18px no-repeat;
+.filterCountBadge {
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--airbnb-action-black);
+  color: #fff;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.filterCountBadge[hidden] {
+  display: none;
 }
 
 .resetBtn {
@@ -429,21 +440,6 @@ body[data-used-car-detail] .bbHeaderTop {
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-
-.filterToolRow {
-  justify-content: flex-start;
-  gap: 10px;
-  min-height: 40px;
-  margin-top: 14px;
-  padding: 0 12px;
-  color: var(--airbnb-text-secondary);
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-  background: var(--airbnb-surface-soft);
-  border: 1px solid #eeeeee;
-  border-radius: 12px;
 }
 
 .switch {
@@ -475,16 +471,8 @@ body[data-used-car-detail] .bbHeaderTop {
   left: 16px;
 }
 
-.historyBtn {
-  margin-left: auto;
-  color: var(--airbnb-text-primary);
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
 .filterMenu {
-  padding: 0 14px 14px;
+  padding: 0 16px 16px;
 }
 
 .filterItem {
@@ -497,14 +485,15 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .filterToggle {
   width: 100%;
-  height: 52px;
-  padding: 0 2px;
+  min-height: 52px;
+  padding: 16px 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--airbnb-text-primary);
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
   letter-spacing: 0;
 }
 
@@ -525,32 +514,32 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .filterPanelBody {
   display: none;
-  padding: 0 0 18px;
+  padding: 0 0 16px;
 }
 
 .filterItem.is-open .filterPanelBody {
   display: grid;
-  gap: 10px;
+  gap: 0;
 }
 
 .filterGroupTitle {
-  margin: 4px 0 0;
+  margin: 0 0 4px;
   color: var(--airbnb-text-secondary);
   font-size: 12px;
-  line-height: 16px;
-  font-weight: 800;
+  line-height: 18px;
+  font-weight: 600;
 }
 
 .filterOption {
-  min-height: 34px;
+  min-height: 40px;
   display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) auto;
+  grid-template-columns: 18px minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
   color: var(--airbnb-text-primary);
   font-size: 14px;
-  line-height: 20px;
-  font-weight: 600;
+  line-height: 22px;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -559,17 +548,17 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterOption input {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   appearance: none;
   border: 0;
   border-radius: 0;
-  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  background: var(--icon-checkbox-off) center / 18px 18px no-repeat;
   cursor: pointer;
 }
 
 .filterOption input:checked {
-  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  background: var(--icon-checkbox-on) center / 18px 18px no-repeat;
   box-shadow: none;
 }
 
@@ -580,59 +569,13 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterPricePreview {
-  padding: 14px 12px 12px;
-  border: 1px solid var(--airbnb-border);
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 3px 10px rgba(34, 34, 34, .04);
-}
-
-.filterPriceCopy {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.filterPriceCopy strong {
-  color: var(--airbnb-text-primary);
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 800;
-}
-
-.filterPriceCopy span {
-  color: var(--airbnb-text-secondary);
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-}
-
-.filterPriceBars {
-  height: 54px;
-  padding: 0 7px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: end;
-  gap: 3px;
-}
-
-.filterPriceBars span {
-  display: block;
-  min-height: 8px;
-  border-radius: 4px 4px 0 0;
-  background: #d8d8d8;
-}
-
-.filterPriceBars span.is-active {
-  background: var(--airbnb-action-black);
+  padding: 8px 0 0;
 }
 
 .filterPriceRangeTrack {
   position: relative;
-  height: 30px;
-  margin: 2px 8px 0;
+  height: 28px;
+  margin: 0 12px 12px;
   touch-action: none;
   cursor: pointer;
 }
@@ -643,13 +586,13 @@ body[data-used-car-detail] .bbHeaderTop {
   position: absolute;
   left: 0;
   right: 0;
-  top: 13px;
+  top: 12px;
   height: 4px;
   border-radius: 999px;
 }
 
 .filterPriceRangeTrack::before {
-  background: var(--airbnb-border);
+  background: #c7c7c7;
 }
 
 .filterPriceRangeFill {
@@ -658,13 +601,13 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .filterPriceRangeHandle {
   position: absolute;
-  top: 5px;
+  top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border: 0;
   border-radius: 50%;
-  background: var(--icon-airbnb-range-handle) center / 20px 20px no-repeat;
+  background: var(--icon-airbnb-range-handle) center / 28px 28px no-repeat;
   transform: translateX(-50%);
   cursor: grab;
 }
@@ -679,27 +622,92 @@ body[data-used-car-detail] .bbHeaderTop {
   outline-offset: 3px;
 }
 
-.filterPriceTicks {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0;
-  color: var(--airbnb-text-secondary);
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
+.filterPriceInputs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
+  gap: 5px;
+  align-items: center;
 }
 
-.filterPricePresets {
-  margin-top: 8px;
-  display: grid;
-  gap: 2px;
+.filterPriceInputBox {
+  height: 56px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #8c8c8c;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.filterPriceInputBox span {
+  color: var(--airbnb-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.filterPriceInputBox div {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.filterPriceInputBox input {
+  min-width: 0;
+  width: 0;
+  flex: 1 1 auto;
+  border: 0;
+  outline: 0;
+  color: var(--airbnb-text-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  background: transparent;
+}
+
+.filterPriceInputBox em {
+  flex: 0 0 auto;
+  color: var(--airbnb-text-primary);
+  font-style: normal;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.filterPriceInputBox input::-webkit-outer-spin-button,
+.filterPriceInputBox input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filterPriceInputBox input[type="number"] {
+  appearance: textfield;
+}
+
+.filterPriceDash {
+  color: var(--airbnb-text-secondary);
+  font-size: 14px;
+  line-height: 56px;
+  text-align: center;
+}
+
+.filterPriceAverage {
+  margin: 12px 0 0;
+  color: var(--airbnb-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .filterBrandLabel {
   min-width: 0;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
 }
 
 .filterBrandText {
@@ -710,55 +718,55 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterBrandLogoBox {
-  width: 24px;
-  height: 24px;
-  flex: 0 0 24px;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .filterBrandLogoImage {
-  width: var(--filter-brand-logo-width, 24px);
-  height: var(--filter-brand-logo-height, 24px);
+  width: var(--filter-brand-logo-width, 22px);
+  height: var(--filter-brand-logo-height, 22px);
   flex: 0 0 auto;
   object-fit: contain;
   transform: translateY(var(--filter-brand-logo-y, 0));
 }
 
 .filterBrandLogoImage.is-domestic-hyundai {
-  --filter-brand-logo-width: 28px;
-  --filter-brand-logo-height: 28px;
+  --filter-brand-logo-width: 24px;
+  --filter-brand-logo-height: 24px;
 }
 
 .filterBrandLogoImage.is-domestic-genesis {
-  --filter-brand-logo-width: 32px;
-  --filter-brand-logo-height: 24px;
+  --filter-brand-logo-width: 28px;
+  --filter-brand-logo-height: 20px;
 }
 
 .filterBrandLogoImage.is-domestic-kia {
-  --filter-brand-logo-width: 29px;
-  --filter-brand-logo-height: 24px;
+  --filter-brand-logo-width: 25px;
+  --filter-brand-logo-height: 20px;
 }
 
 .filterBrandLogoImage.is-domestic-chevrolet {
-  --filter-brand-logo-width: 29px;
-  --filter-brand-logo-height: 24px;
+  --filter-brand-logo-width: 25px;
+  --filter-brand-logo-height: 20px;
 }
 
 .filterBrandLogoImage.is-domestic-daewoo {
-  --filter-brand-logo-width: 27px;
-  --filter-brand-logo-height: 24px;
+  --filter-brand-logo-width: 23px;
+  --filter-brand-logo-height: 20px;
 }
 
 .filterBrandLogoImage.is-domestic-renault {
-  --filter-brand-logo-width: 29px;
-  --filter-brand-logo-height: 22px;
+  --filter-brand-logo-width: 25px;
+  --filter-brand-logo-height: 19px;
 }
 
 .filterBrandLogoImage.is-domestic-kgm {
-  --filter-brand-logo-width: 34px;
-  --filter-brand-logo-height: 24px;
+  --filter-brand-logo-width: 29px;
+  --filter-brand-logo-height: 20px;
 }
 
 .filterBrandLogoImage.is-domestic-oullim {
@@ -767,8 +775,8 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterBrandLogoImage.is-domestic-other {
-  --filter-brand-logo-width: 22px;
-  --filter-brand-logo-height: 22px;
+  --filter-brand-logo-width: 20px;
+  --filter-brand-logo-height: 20px;
 }
 
 .filterOption.is-disabled {
@@ -783,7 +791,7 @@ body[data-used-car-detail] .bbHeaderTop {
 .filterOption.is-disabled input {
   opacity: .46;
   cursor: default;
-  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  background: var(--icon-checkbox-off) center / 18px 18px no-repeat;
 }
 
 .filterPanel .sectionDivider {

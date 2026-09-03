@@ -488,7 +488,9 @@
     renderPcFilterChips(state);
     updatePcFilterApplyCount(countText);
     updateMobileChipLabels(state);
+    syncPcLeftRegionUi(state);
     syncPcLeftPriceRangeUi(state);
+    syncFilterCountBadge(state);
   }
 
   function renderMobileCategoryButtons(activeCategory) {
@@ -643,6 +645,32 @@
 
   function activeTopFilterCount(state) {
     return ["brand", "year", "price", "fuel", "seller"].filter((type) => selectedTopFilterLabel(state, type)).length;
+  }
+
+  function activeLeftFilterCount(state) {
+    return [
+      state.category && state.category !== "all",
+      state.brand,
+      state.region && state.region !== "전국",
+      state.video,
+      state.fuel,
+      state.yearMin || state.yearMax,
+      state.priceMin || state.priceMax,
+      state.mileageMax,
+      state.complex,
+      state.option,
+      state.feature,
+      state.plate,
+      state.seller && state.seller !== "all"
+    ].filter(Boolean).length;
+  }
+
+  function syncFilterCountBadge(state) {
+    const badge = qs("#filterCountBadge");
+    if (!badge) return;
+    const count = activeLeftFilterCount(state);
+    badge.hidden = !count;
+    if (count) badge.textContent = String(count);
   }
 
   function renderSelectedChip(label, type, modalType = type) {
@@ -900,21 +928,30 @@
     });
   }
 
+  function syncPcLeftRegionUi(state) {
+    const selected = state.region || "전국";
+    qsa("[data-pc-left-region]").forEach((input) => {
+      input.checked = input.value === selected || (!state.region && input.value === "전국");
+    });
+  }
+
   function syncPcLeftPriceRangeUi(state) {
     const root = qs("[data-pc-left-price-range]");
     if (!root) return;
     const { min, max } = currentMobilePriceRange(state);
     const minPercent = priceRangePercent(min, 0);
     const maxPercent = priceRangePercent(max, 100);
-    const label = qs("[data-pc-left-price-label]", root);
     const fill = qs("[data-pc-left-price-fill]", root);
     const minHandle = qs('[data-pc-left-price-handle="min"]', root);
     const maxHandle = qs('[data-pc-left-price-handle="max"]', root);
-    if (label) label.textContent = state.priceLabel || priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
+    const minInput = qs("[data-pc-left-price-min-input]", root);
+    const maxInput = qs("[data-pc-left-price-max-input]", root);
     if (fill) {
       fill.style.left = `${minPercent}%`;
       fill.style.right = `${100 - maxPercent}%`;
     }
+    if (minInput) minInput.value = String(min);
+    if (maxInput) maxInput.value = String(max);
     [
       [minHandle, min, minPercent],
       [maxHandle, max, maxPercent]
@@ -924,31 +961,14 @@
       handle.setAttribute("aria-valuenow", String(value));
       handle.setAttribute("aria-valuetext", mobilePriceValueText(value));
     });
-    qsa("[data-pc-left-price-preset]", root).forEach((input) => {
-      const presetMin = input.dataset.priceMin ? Number(input.dataset.priceMin) : null;
-      const presetMax = input.dataset.priceMax ? Number(input.dataset.priceMax) : null;
-      input.checked = (state.priceMin || null) === presetMin && (state.priceMax || null) === presetMax;
-    });
   }
 
-  function applyPcLeftPricePreset(state, input) {
-    qsa("[data-pc-left-price-preset]").forEach((other) => {
-      if (other !== input) other.checked = false;
-    });
-    if (!input.checked) {
-      state.priceMin = null;
-      state.priceMax = null;
-      state.priceLabel = "";
-      delete state.generic.price;
-      renderRows(state);
-      return;
-    }
-    state.priceMin = input.dataset.priceMin ? Number(input.dataset.priceMin) : null;
-    state.priceMax = input.dataset.priceMax ? Number(input.dataset.priceMax) : null;
-    state.priceLabel = input.dataset.priceLabel || priceRangeLabel(state.priceMin, state.priceMax);
-    const key = mobilePriceGenericKey(state.priceMin, state.priceMax);
-    if (key) state.generic.price = key;
-    else delete state.generic.price;
+  function applyPcLeftPriceInputs(state, root) {
+    const minInput = qs("[data-pc-left-price-min-input]", root);
+    const maxInput = qs("[data-pc-left-price-max-input]", root);
+    const min = normalizeMobilePriceValue(minInput?.value || 0);
+    const max = normalizeMobilePriceValue(maxInput?.value || mobilePriceSliderMax);
+    setMobilePriceRangeState(state, min, max);
     renderRows(state);
   }
 
@@ -971,9 +991,9 @@
     };
 
     root.addEventListener("change", (event) => {
-      const input = event.target.closest("[data-pc-left-price-preset]");
-      if (!input) return;
-      applyPcLeftPricePreset(state, input);
+      if (event.target.closest("[data-pc-left-price-min-input], [data-pc-left-price-max-input]")) {
+        applyPcLeftPriceInputs(state, root);
+      }
     });
 
     root.addEventListener("pointerdown", (event) => {
@@ -1675,6 +1695,18 @@
         });
         state.brand = box.checked ? box.value : "";
         renderRows(state);
+      });
+    });
+
+    qsa("[data-pc-left-region]").forEach((box) => {
+      box.addEventListener("change", () => {
+        qsa("[data-pc-left-region]").forEach((other) => {
+          if (other !== box) other.checked = false;
+        });
+        state.region = box.checked ? box.value : "전국";
+        if (!state.region) state.region = "전국";
+        renderRows(state);
+        renderMobileRegionGrid(state);
       });
     });
 
