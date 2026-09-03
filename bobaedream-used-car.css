@@ -1009,6 +1009,29 @@ body[data-used-car-detail] .bbHeaderTop {
   gap: 7px;
 }
 
+.chipRowStickySlot {
+  display: block;
+  height: 0;
+}
+
+.chipRowStickySlot.is-active {
+  height: var(--chip-row-sticky-height, 0px);
+}
+
+.chipRow.is-fixed {
+  position: fixed;
+  left: var(--chip-row-fixed-left, 0px);
+  top: 0;
+  z-index: var(--z-sticky);
+  width: var(--chip-row-fixed-width, auto);
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 1px solid #ebecef;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, .08);
+}
+
 .chipBtn {
   height: 32px;
   padding: 4px 12px;
