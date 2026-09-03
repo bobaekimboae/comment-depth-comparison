@@ -4204,6 +4204,7 @@ body[data-used-car-list] .listShell .viewLine {
     position: relative;
     height: 40px;
     margin: 0 10px;
+    touch-action: none;
   }
 
   .mobilePriceRangeTrack::before {
@@ -4233,6 +4234,22 @@ body[data-used-car-list] .listShell .viewLine {
     transform: translateX(-50%);
     background: var(--icon-airbnb-range-handle) center / 28px 28px no-repeat;
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .12));
+    cursor: grab;
+    touch-action: none;
+    z-index: 2;
+  }
+
+  .mobilePriceRangeHandle[data-mobile-price-handle="max"] {
+    z-index: 3;
+  }
+
+  .mobilePriceRangeHandle:focus-visible {
+    outline: 2px solid var(--airbnb-text-primary);
+    outline-offset: 3px;
+  }
+
+  .mobilePriceRangeTrack.is-dragging .mobilePriceRangeHandle {
+    cursor: grabbing;
   }
 
   .mobilePriceRangeTicks {

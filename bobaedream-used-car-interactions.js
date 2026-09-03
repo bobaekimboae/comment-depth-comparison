@@ -150,6 +150,8 @@
     1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000,
     2500, 3000, 3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000
   ];
+  const mobilePriceSliderMax = 10000;
+  const mobilePriceSliderStep = 100;
   const pcYearRangeOptions = Array.from({ length: currentYear - 1979 }, (_, index) => currentYear - index);
   const pcMonthRangeOptions = Array.from({ length: 12 }, (_, index) => index + 1);
   const pcFuelOptions = [
@@ -752,19 +754,20 @@
   }
 
   function renderMobilePriceRange(state) {
-    const minPercent = priceRangePercent(state.priceMin, 0);
-    const maxPercent = priceRangePercent(state.priceMax, 100);
-    const selectedLabel = rangeLabel(state.priceMin, state.priceMax, "만원") || "전체 가격";
+    const { min, max } = currentMobilePriceRange(state);
+    const minPercent = priceRangePercent(min, 0);
+    const maxPercent = priceRangePercent(max, 100);
+    const selectedLabel = priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
     return `
-      <div class="mobilePriceRangePanel" aria-hidden="true">
+      <div class="mobilePriceRangePanel" data-mobile-price-range>
         <div class="mobilePriceRangeLabel">
           <strong>${selectedLabel}</strong>
           <span>최대 1억원+</span>
         </div>
-        <div class="mobilePriceRangeTrack">
+        <div class="mobilePriceRangeTrack" data-mobile-price-track>
           <span class="mobilePriceRangeFill" style="left:${minPercent}%;right:${100 - maxPercent}%;"></span>
-          <span class="mobilePriceRangeHandle" style="left:${minPercent}%;"></span>
-          <span class="mobilePriceRangeHandle" style="left:${maxPercent}%;"></span>
+          <button class="mobilePriceRangeHandle" type="button" role="slider" data-mobile-price-handle="min" aria-label="최저 가격" aria-valuemin="0" aria-valuemax="${mobilePriceSliderMax}" aria-valuenow="${min}" aria-valuetext="${mobilePriceValueText(min)}" style="left:${minPercent}%;"></button>
+          <button class="mobilePriceRangeHandle" type="button" role="slider" data-mobile-price-handle="max" aria-label="최대 가격" aria-valuemin="0" aria-valuemax="${mobilePriceSliderMax}" aria-valuenow="${max}" aria-valuetext="${mobilePriceValueText(max)}" style="left:${maxPercent}%;"></button>
         </div>
         <div class="mobilePriceRangeTicks">
           <span>0</span>
@@ -797,6 +800,103 @@
     if (min) return `${min.toLocaleString("ko-KR")}${unit}~`;
     if (max) return `${max.toLocaleString("ko-KR")}${unit}`;
     return "";
+  }
+
+  function priceRangeLabel(min, max) {
+    if (min && max) return `${min.toLocaleString("ko-KR")}만원~${max.toLocaleString("ko-KR")}만원`;
+    if (min) return `${min.toLocaleString("ko-KR")}만원 이상`;
+    if (max) return `${max.toLocaleString("ko-KR")}만원 이하`;
+    return "";
+  }
+
+  function currentMobilePriceRange(state) {
+    return {
+      min: state.priceMin || 0,
+      max: state.priceMax || mobilePriceSliderMax
+    };
+  }
+
+  function mobilePriceValueText(value) {
+    if (value >= mobilePriceSliderMax) return "1억원 이상";
+    if (!value) return "0만원";
+    return `${value.toLocaleString("ko-KR")}만원`;
+  }
+
+  function normalizeMobilePriceValue(value) {
+    const number = Number(value) || 0;
+    const snapped = Math.round(number / mobilePriceSliderStep) * mobilePriceSliderStep;
+    return Math.max(0, Math.min(mobilePriceSliderMax, snapped));
+  }
+
+  function mobilePriceValueFromPoint(track, clientX) {
+    const rect = track.getBoundingClientRect();
+    const ratio = rect.width ? (clientX - rect.left) / rect.width : 0;
+    return normalizeMobilePriceValue(ratio * mobilePriceSliderMax);
+  }
+
+  function chooseMobilePriceHandle(state, value) {
+    const { min, max } = currentMobilePriceRange(state);
+    return Math.abs(value - min) <= Math.abs(value - max) ? "min" : "max";
+  }
+
+  function mobilePriceGenericKey(min, max) {
+    if (!min && !max) return "";
+    const options = getGenericOptions(genericSheetConfigs.price);
+    const match = options.find(([, optionValue]) => {
+      const [rawMin, rawMax] = String(optionValue || "").split("-");
+      const optionMin = rawMin ? Number(rawMin) : null;
+      const optionMax = rawMax ? Number(rawMax) : null;
+      return (optionMin || null) === (min || null) && (optionMax || null) === (max || null);
+    });
+    if (match) return String(match[1]);
+    return `${min || ""}-${max || ""}`;
+  }
+
+  function setMobilePriceRangeState(state, min, max) {
+    const nextMin = normalizeMobilePriceValue(Math.min(min, max));
+    const nextMax = normalizeMobilePriceValue(Math.max(min, max));
+    state.priceMin = nextMin > 0 ? nextMin : null;
+    state.priceMax = nextMax < mobilePriceSliderMax ? nextMax : null;
+    state.priceLabel = priceRangeLabel(state.priceMin, state.priceMax);
+    const key = mobilePriceGenericKey(state.priceMin, state.priceMax);
+    if (key) state.generic.price = key;
+    else delete state.generic.price;
+  }
+
+  function updateMobilePriceRangeValue(state, root, handle, value) {
+    const current = currentMobilePriceRange(state);
+    if (handle === "min") setMobilePriceRangeState(state, Math.min(value, current.max), current.max);
+    else setMobilePriceRangeState(state, current.min, Math.max(value, current.min));
+    syncMobilePriceRangeUi(root, state);
+    renderRows(state);
+  }
+
+  function syncMobilePriceRangeUi(root, state) {
+    if (!root || root.dataset.genericType !== "price") return;
+    const { min, max } = currentMobilePriceRange(state);
+    const minPercent = priceRangePercent(min, 0);
+    const maxPercent = priceRangePercent(max, 100);
+    const label = qs(".mobilePriceRangeLabel strong", root);
+    const fill = qs(".mobilePriceRangeFill", root);
+    const minHandle = qs('[data-mobile-price-handle="min"]', root);
+    const maxHandle = qs('[data-mobile-price-handle="max"]', root);
+    if (label) label.textContent = priceRangeLabel(state.priceMin, state.priceMax) || "전체 가격";
+    if (fill) {
+      fill.style.left = `${minPercent}%`;
+      fill.style.right = `${100 - maxPercent}%`;
+    }
+    [
+      [minHandle, min, minPercent],
+      [maxHandle, max, maxPercent]
+    ].forEach(([handle, value, percent]) => {
+      if (!handle) return;
+      handle.style.left = `${percent}%`;
+      handle.setAttribute("aria-valuenow", String(value));
+      handle.setAttribute("aria-valuetext", mobilePriceValueText(value));
+    });
+    qsa(".mobileOptionButton", root).forEach((button) => {
+      button.classList.toggle("is-selected", String(state.generic?.price || "") === String(button.dataset.genericValue || ""));
+    });
   }
 
   function pcFilterApplyLabel(type, countText) {
@@ -1204,6 +1304,7 @@
     if (!qs("[data-mobile-list]") || !layer) return;
     const filterSheetTypes = new Set(["filter", "maker", "region", "generic"]);
     let sheetScrollY = 0;
+    let mobilePriceDrag = null;
 
     renderMobileCategoryButtons(state.category === "all" ? "used" : state.category);
     renderMobileMakerList(state);
@@ -1225,6 +1326,12 @@
       window.scrollTo(0, savedScrollY);
     };
 
+    const finishMobilePriceDrag = () => {
+      if (!mobilePriceDrag) return;
+      mobilePriceDrag.track.classList.remove("is-dragging");
+      mobilePriceDrag = null;
+    };
+
     const openSheet = (type, triggerType = type) => {
       qsa(".mobileSheet", layer).forEach((sheet) => sheet.classList.toggle("is-active", sheet.dataset.sheet === type));
       layer.dataset.sheetVariant = filterSheetTypes.has(type) ? "filter" : "toolbar";
@@ -1235,6 +1342,7 @@
     };
 
     const closeSheet = () => {
+      finishMobilePriceDrag();
       layer.classList.remove("is-open");
       layer.setAttribute("aria-hidden", "true");
       delete layer.dataset.sheetVariant;
@@ -1290,7 +1398,9 @@
       closeSheet();
     });
 
-    qs("#genericSheetOptions")?.addEventListener("click", (event) => {
+    const genericOptionsRoot = qs("#genericSheetOptions");
+
+    genericOptionsRoot?.addEventListener("click", (event) => {
       const button = event.target.closest("[data-generic-value]");
       if (!button) return;
       const type = event.currentTarget.dataset.genericType;
@@ -1298,6 +1408,50 @@
       renderRows(state);
       renderGenericSheet(type, state);
     });
+
+    genericOptionsRoot?.addEventListener("pointerdown", (event) => {
+      if (event.currentTarget.dataset.genericType !== "price") return;
+      const track = event.target.closest("[data-mobile-price-track]");
+      if (!track) return;
+      const value = mobilePriceValueFromPoint(track, event.clientX);
+      const directHandle = event.target.closest("[data-mobile-price-handle]")?.dataset.mobilePriceHandle;
+      const handle = directHandle || chooseMobilePriceHandle(state, value);
+      finishMobilePriceDrag();
+      mobilePriceDrag = { root: event.currentTarget, track, handle };
+      track.classList.add("is-dragging");
+      try {
+        track.setPointerCapture?.(event.pointerId);
+      } catch (error) {
+        // Some synthetic pointer events cannot be captured; dragging still works through document listeners.
+      }
+      updateMobilePriceRangeValue(state, event.currentTarget, handle, value);
+      event.preventDefault();
+    });
+
+    genericOptionsRoot?.addEventListener("keydown", (event) => {
+      const handle = event.target.closest("[data-mobile-price-handle]");
+      if (!handle || event.currentTarget.dataset.genericType !== "price") return;
+      const handleType = handle.dataset.mobilePriceHandle || "max";
+      const { min, max } = currentMobilePriceRange(state);
+      const current = handleType === "min" ? min : max;
+      let next = current;
+      if (event.key === "ArrowLeft" || event.key === "ArrowDown") next = current - (event.shiftKey ? 500 : mobilePriceSliderStep);
+      else if (event.key === "ArrowRight" || event.key === "ArrowUp") next = current + (event.shiftKey ? 500 : mobilePriceSliderStep);
+      else if (event.key === "Home") next = 0;
+      else if (event.key === "End") next = mobilePriceSliderMax;
+      else return;
+      updateMobilePriceRangeValue(state, event.currentTarget, handleType, next);
+      event.preventDefault();
+    });
+
+    document.addEventListener("pointermove", (event) => {
+      if (!mobilePriceDrag) return;
+      updateMobilePriceRangeValue(state, mobilePriceDrag.root, mobilePriceDrag.handle, mobilePriceValueFromPoint(mobilePriceDrag.track, event.clientX));
+      event.preventDefault();
+    });
+
+    document.addEventListener("pointerup", finishMobilePriceDrag);
+    document.addEventListener("pointercancel", finishMobilePriceDrag);
 
     qsa("[data-mobile-seller]").forEach((tab) => {
       tab.addEventListener("click", () => {
