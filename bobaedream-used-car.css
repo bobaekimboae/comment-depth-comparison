@@ -522,6 +522,10 @@ body[data-used-car-detail] .bbHeaderTop {
   gap: 0;
 }
 
+.filterPanelBody:not(.is-expanded) [data-filter-extra] {
+  display: none;
+}
+
 .filterGroupTitle {
   margin: 0 0 4px;
   color: var(--airbnb-text-secondary);
@@ -778,6 +782,38 @@ body[data-used-car-detail] .bbHeaderTop {
 .filterColorSwatch.is-green { background: #2f8f5b; }
 .filterColorSwatch.is-brown { background: #7a5232; }
 .filterColorSwatch.is-beige { background: #d8c1a1; }
+.filterColorSwatch.is-orange { background: #ee8234; }
+.filterColorSwatch.is-purple { background: #7451c8; }
+.filterColorSwatch.is-etc { background: linear-gradient(135deg, #f5f5f5 0 50%, #8d8d8d 50%); }
+
+.filterMoreButton {
+  min-height: 36px;
+  margin: 2px 0 0;
+  padding: 6px 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  color: var(--airbnb-action-black);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.filterMoreButton::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  transition: transform 0.16s ease;
+}
+
+.filterMoreButton[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
 
 .filterSearchBox {
   padding: 4px 0 12px;
@@ -970,7 +1006,7 @@ body[data-used-car-detail] .bbHeaderTop {
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
 }
 
 .chipBtn {
@@ -1164,8 +1200,14 @@ body[data-used-car-detail] .bbHeaderTop {
   height: 590px;
 }
 
+.pcFilterModalLayer[data-pc-filter-type="mileage"] .pcFilterModal {
+  width: 430px;
+  height: 456px;
+}
+
 .pcFilterModalLayer[data-pc-filter-type="maker"] .pcFilterModalFooter,
 .pcFilterModalLayer[data-pc-filter-type="year"] .pcFilterModalFooter,
+.pcFilterModalLayer[data-pc-filter-type="mileage"] .pcFilterModalFooter,
 .pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterModalFooter {
   height: 88px;
   flex-basis: 88px;
@@ -1177,9 +1219,16 @@ body[data-used-car-detail] .bbHeaderTop {
 .pcFilterModalLayer[data-pc-filter-type="maker"] .pcFilterPrimaryButton,
 .pcFilterModalLayer[data-pc-filter-type="year"] .pcFilterOutlineButton,
 .pcFilterModalLayer[data-pc-filter-type="year"] .pcFilterPrimaryButton,
+.pcFilterModalLayer[data-pc-filter-type="mileage"] .pcFilterOutlineButton,
+.pcFilterModalLayer[data-pc-filter-type="mileage"] .pcFilterPrimaryButton,
 .pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterOutlineButton,
 .pcFilterModalLayer[data-pc-filter-type="price"] .pcFilterPrimaryButton {
   height: 44px;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="plate"] .pcFilterModal {
+  width: 430px;
+  height: 292px;
 }
 
 .pcFilterModalLayer[data-pc-filter-type="fuel"] .pcFilterModal {
@@ -1323,6 +1372,13 @@ body[data-used-car-detail] .bbHeaderTop {
   display: grid;
   grid-template-columns: 179px 179px 24px;
   gap: 6px;
+  align-items: center;
+}
+
+.pcMileageRangeRow {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  gap: 8px;
   align-items: center;
 }
 
@@ -1651,6 +1707,10 @@ body[data-used-car-detail] .bbHeaderTop {
   gap: 12px;
 }
 
+.pcFilterChoiceList:not(.is-expanded) [data-pc-filter-extra] {
+  display: none;
+}
+
 .pcFilterChoiceButton {
   height: 24px;
   display: flex;
@@ -1661,6 +1721,13 @@ body[data-used-car-detail] .bbHeaderTop {
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
+}
+
+.pcFilterChoiceLabel {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .pcFilterChoiceButton .pcFilterCount {
@@ -1692,6 +1759,71 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcFilterChoiceButton.is-selected .pcFilterCheckbox::after {
   content: none;
+}
+
+.pcFilterMoreButton {
+  min-height: 36px;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--airbnb-action-black);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.pcFilterMoreButton::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+  transition: transform 0.16s ease;
+}
+
+.pcFilterMoreButton[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.pcKeywordPanel {
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.pcKeywordPanel label {
+  display: grid;
+  gap: 8px;
+  color: var(--airbnb-text-secondary);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.pcKeywordPanel input {
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: var(--airbnb-button-radius);
+  color: var(--airbnb-text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  outline: 0;
+}
+
+.pcKeywordPanel input:focus {
+  border-color: var(--airbnb-action-black);
+  box-shadow: 0 0 0 1px var(--airbnb-action-black);
+}
+
+.pcKeywordPanel button {
+  height: 44px;
+  border-radius: var(--airbnb-button-radius);
+  background: var(--airbnb-action-black);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
 }
 
 .categoryGrid {
@@ -4435,6 +4567,18 @@ body[data-used-car-list] .listShell .viewLine {
     row-gap: 16px;
   }
 
+  .mobileOptionGrid.is-single-column {
+    grid-template-columns: 1fr;
+  }
+
+  .mobileOptionGrid[data-generic-type="mileage"] {
+    grid-template-columns: 1fr;
+  }
+
+  .mobileOptionGrid:not(.is-expanded) [data-mobile-filter-extra] {
+    display: none;
+  }
+
   .mobileOptionButton {
     min-width: 0;
     height: 24px;
@@ -4448,6 +4592,13 @@ body[data-used-car-list] .listShell .viewLine {
     font-size: 14px;
     line-height: 19.6px;
     font-weight: 600;
+  }
+
+  .mobileOptionLabel {
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .mobileOptionButton::before {
@@ -4475,6 +4626,122 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileOptionCount {
     color: var(--airbnb-text-secondary);
     font-weight: 600;
+  }
+
+  .mobileRangePanel {
+    grid-column: 1 / -1;
+    padding: 2px 0 6px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .mobileRangeTitle {
+    color: var(--airbnb-text-primary);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 800;
+  }
+
+  .mobileRangeRow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px;
+    gap: 8px;
+    align-items: center;
+    color: var(--airbnb-text-secondary);
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  .mobileRangeSelect {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--airbnb-border);
+    border-radius: var(--airbnb-button-radius);
+    background: #fff;
+  }
+
+  .mobileRangeSelect select {
+    width: 100%;
+    height: 42px;
+    padding: 0 34px 0 12px;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: var(--icon-chevron-down) right 12px center / 12px 12px no-repeat;
+    color: var(--airbnb-text-primary);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  .mobileKeywordPanel {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 12px;
+  }
+
+  .mobileKeywordPanel label {
+    display: grid;
+    gap: 8px;
+    color: var(--airbnb-text-secondary);
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  .mobileKeywordPanel input {
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid var(--airbnb-border);
+    border-radius: var(--airbnb-button-radius);
+    color: var(--airbnb-text-primary);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    outline: 0;
+  }
+
+  .mobileKeywordPanel input:focus {
+    border-color: var(--airbnb-action-black);
+    box-shadow: 0 0 0 1px var(--airbnb-action-black);
+  }
+
+  .mobileKeywordPanel button,
+  .mobileFilterMoreButton {
+    height: 42px;
+    border-radius: var(--airbnb-button-radius);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 800;
+  }
+
+  .mobileKeywordPanel button {
+    background: var(--airbnb-action-black);
+    color: #fff;
+  }
+
+  .mobileFilterMoreButton {
+    grid-column: 1 / -1;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--airbnb-action-black);
+  }
+
+  .mobileFilterMoreButton::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+    transition: transform 0.16s ease;
+  }
+
+  .mobileFilterMoreButton[aria-expanded="true"]::after {
+    transform: rotate(180deg);
   }
 
   .mobilePriceRangePanel {

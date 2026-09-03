@@ -80,11 +80,7 @@
     },
     body: {
       title: "차종",
-      options: [["경차", "경차", "612"], ["소형차", "소형차", "438"], ["준중형차", "준중형차", "2,280"], ["중형차", "중형차", "3,116"], ["대형차", "대형차", "2,044"], ["스포츠카", "스포츠카", "183"], ["SUV", "SUV", "3,208"], ["RV", "RV", "1,044"], ["승합차", "승합차", "305"], ["화물차", "화물차", "1,203"]]
-    },
-    class: {
-      title: "차급",
-      options: [["경차", "mini", "612"], ["소형", "small", "1,104"], ["준중형", "compact", "2,280"], ["중형", "middle", "3,116"], ["대형", "large", "2,044"], ["스포츠카", "sports", "183"]]
+      options: [["경차", "경차", "612"], ["소형차", "소형차", "438"], ["준중형차", "준중형차", "2,280"], ["중형차", "중형차", "3,116"], ["대형차", "대형차", "2,044"], ["스포츠카", "스포츠카", "183"], ["SUV", "SUV", "3,208"], ["RV", "RV", "1,044"], ["경승합차", "경승합차", "42"], ["승합차", "승합차", "305"], ["화물차", "화물차", "1,203"], ["기타", "기타", "6"]]
     },
     year: {
       title: "연식",
@@ -98,29 +94,49 @@
       title: "가격",
       options: [["전체", "", data.totalCount], ["3천만원 이하", "0-3000", "4,218"], ["5천만원 이하", "0-5000", "8,120"], ["7천만원 이하", "0-7000", "10,966"], ["1억원 이하", "0-10000", "12,304"], ["1억원 이상", "10000-", "2,592"]]
     },
-    complex: {
-      title: "매매단지",
-      options: [["전체", "", data.totalCount], ["오토갤러리", "오토갤러리", "4,602"], ["국민차매매단지", "국민차매매단지", "1,018"], ["수원 도이치오토월드", "수원 도이치오토월드", "1,264"], ["개인직거래", "개인직거래", "322"]]
+    region: {
+      title: "지역",
+      options: () => regionOptions.map(([label, count]) => [label, label, count])
+    },
+    seat: {
+      title: "인승",
+      options: [["2인승 이하", "2인승 이하", "102"], ["3인승", "3인승", "74"], ["4인승", "4인승", "280"], ["5인승", "5인승", "10,820"], ["6인승", "6인승", "238"], ["7인승", "7인승", "1,705"], ["8인승", "8인승", "141"], ["9인승", "9인승", "630"], ["10인승 이상", "10인승 이상", "253"]]
+    },
+    history: {
+      title: "성능/보험공개",
+      options: [["직영 성능점검", "직영 성능점검", "2,106"], ["성능기록부", "성능기록부", "10,004"], ["보험이력", "보험이력", "12,001"], ["차량 이력 공개", "차량 이력 공개", "11,738"]]
     },
     seller: {
       title: "판매자구분",
       options: [["전체", "all", data.totalCount], ["개인", "private", "882"], ["딜러", "dealer", "13,854"], ["리스렌트제휴", "lease-partner", "319"]]
     },
+    sale: {
+      title: "판매방식",
+      options: [["일반", "일반", "13,870"], ["렌트", "렌트", "176"], ["리스", "리스", "732"]]
+    },
+    "ext-color": {
+      title: "외부색상",
+      options: [["흰색", "흰색", "5,318"], ["검정색", "검정색", "3,412"], ["쥐색", "쥐색", "2,345"], ["청색", "청색", "709"], ["은색", "은색", "665"], ["빨간색", "빨간색", "318"], ["노란색", "노란색", "84"], ["초록색", "초록색", "76"], ["갈색", "갈색", "62"], ["주황색", "주황색", "34"], ["보라색", "보라색", "18"], ["기타색상", "기타색상", "42"]]
+    },
+    "int-color": {
+      title: "내부색상",
+      options: [["검정색 계열", "검정색 계열", "9,241"], ["갈색 계열", "갈색 계열", "2,048"], ["베이지색 계열", "베이지색 계열", "1,254"], ["회색 계열", "회색 계열", "1,170"], ["청색 계열", "청색 계열", "119"], ["흰색 계열", "흰색 계열", "92"], ["빨간색 계열", "빨간색 계열", "35"], ["주황색 계열", "주황색 계열", "24"]]
+    },
     fuel: {
       title: "연료",
       options: [["전체", "", data.totalCount], ["가솔린", "가솔린", "8,202"], ["디젤", "디젤", "3,118"], ["LPG(일반인 구입)", "LPG", "394"], ["가솔린+전기", "하이브리드", "1,020"], ["LPG+전기", "LPG+전기", "20"], ["가솔린+LPG", "가솔린+LPG", "199"], ["전기", "전기", "642"], ["수소", "수소", "36"], ["기타", "기타", "2"]]
+    },
+    transmission: {
+      title: "변속기",
+      options: [["오토", "오토", "13,944"], ["수동", "수동", "186"], ["세미오토", "세미오토", "28"], ["CVT", "CVT", "48"], ["기타", "기타", "1"]]
     },
     option: {
       title: "옵션",
       options: [["선루프", "선루프", "4,320"], ["내비게이션", "내비게이션", "12,139"], ["스마트키", "스마트키", "12,722"], ["헤드램프(HID)", "헤드램프(HID)", "1,669"], ["후방 카메라", "후방 카메라", "13,173"], ["가죽시트", "가죽시트", "13,743"], ["에어백(동승석)", "에어백(동승석)", "13,945"], ["에어백(사이드)", "에어백(사이드)", "13,209"], ["통풍시트", "통풍시트", "7,440"], ["헤드업 디스플레이", "헤드업 디스플레이", "2,190"], ["어라운드뷰", "어라운드뷰", "6,148"], ["전동트렁크", "전동트렁크", "5,328"]]
     },
-    feature: {
-      title: "성능/보험공개",
-      options: [["직영 성능점검", "직영 성능점검", "2,106"], ["성능기록부", "성능기록부", "10,004"], ["보험이력", "보험이력", "12,001"], ["차량 이력 공개", "차량 이력 공개", "11,738"]]
-    },
     plate: {
       title: "차량번호/판매자 이름",
-      options: [["전체", "", data.totalCount], ["차량번호 입력", "number", "12,438"], ["판매자 이름 입력", "seller-name", "13,012"]]
+      options: []
     }
   };
   const currentYear = new Date().getFullYear();
@@ -233,13 +249,39 @@
     "쉐보레(GM대우)": ["쉐보레(GM대우)", "쉐보레(국산)", "GM대우"],
     "기타 제조사": ["기타 제조사", "기타 국산차", "어울림모터스"]
   };
-
+  const passiveFilterTypes = new Set(["body", "seat", "history", "sale", "ext-color", "int-color", "transmission", "option"]);
+  const allFilterChipTypes = [
+    ["body", "차종", "body"],
+    ["brand", "제조사", "maker"],
+    ["year", "연식", "year"],
+    ["mileage", "주행거리", "mileage"],
+    ["price", "가격", "price"],
+    ["region", "지역", "region"],
+    ["seat", "인승", "seat"],
+    ["history", "성능/보험", "history"],
+    ["seller", "판매자", "seller"],
+    ["sale", "판매방식", "sale"],
+    ["ext-color", "외부색상", "ext-color"],
+    ["int-color", "내부색상", "int-color"],
+    ["fuel", "연료", "fuel"],
+    ["transmission", "변속기", "transmission"],
+    ["option", "옵션", "option"],
+    ["plate", "차량번호", "plate"]
+  ];
   function qs(selector, root = document) {
     return root.querySelector(selector);
   }
 
   function qsa(selector, root = document) {
     return Array.from(root.querySelectorAll(selector));
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
   function showToast(message) {
@@ -418,7 +460,26 @@
   }
 
   function selectedLeftFilterValues(type) {
-    return qsa(`[data-left-filter="${type}"]:checked`).map((input) => input.value).filter(Boolean);
+    return leftFilterInputs(type).filter((input) => input.checked).map((input) => input.value).filter(Boolean);
+  }
+
+  function leftFilterInputs(type) {
+    return qsa("[data-left-filter]").filter((input) => input.dataset.leftFilter === type);
+  }
+
+  function syncLeftFilterValue(type, value, exclusive = false) {
+    const inputs = leftFilterInputs(type);
+    if (!value) {
+      inputs.forEach((input) => { input.checked = false; });
+      return;
+    }
+    inputs.forEach((input) => {
+      if (input.value !== value) {
+        if (exclusive) input.checked = false;
+        return;
+      }
+      input.checked = exclusive ? true : !input.checked;
+    });
   }
 
   function passiveLeftFilterCount() {
@@ -448,7 +509,10 @@
     if (value === "노란색") return /노랑|옐로|yellow/i.test(text);
     if (value === "초록색") return /초록|그린|green/i.test(text);
     if (value === "갈색") return /갈|브라운|brown/i.test(text);
+    if (value === "주황색") return /주황|오렌지|orange/i.test(text);
+    if (value === "보라색") return /보라|퍼플|purple/i.test(text);
     if (value === "베이지색") return /베이지|beige/i.test(text);
+    if (value === "기타색상") return !/(흰|화이트|white|검|블랙|black|쥐|회|그레이|gray|grey|은|실버|silver|청|파랑|블루|blue|빨|레드|red|노랑|옐로|yellow|초록|그린|green|갈|브라운|brown|주황|오렌지|orange|보라|퍼플|purple|베이지|beige)/i.test(text);
     return text.includes(value);
   }
 
@@ -742,17 +806,33 @@
     return option ? option[0] : value;
   }
 
+  function summarizeFilterValues(values) {
+    if (!values.length) return "";
+    return values.length > 1 ? `${values[0]} 외 ${values.length - 1}` : values[0];
+  }
+
+  function mileageRangeLabel(min, max) {
+    if (min && max) return `${min.toLocaleString("ko-KR")}km~${max.toLocaleString("ko-KR")}km`;
+    if (min) return `${min.toLocaleString("ko-KR")}km 이상`;
+    if (max) return `${max.toLocaleString("ko-KR")}km 이하`;
+    return "";
+  }
+
   function selectedTopFilterLabel(state, type) {
+    if (passiveFilterTypes.has(type)) return summarizeFilterValues(selectedLeftFilterValues(type));
     if (type === "brand") return state.brand || "";
+    if (type === "region") return state.region && state.region !== "전국" ? state.region : "";
     if (type === "year") return state.yearLabel || selectedGenericLabel(state, "year");
+    if (type === "mileage") return mileageRangeLabel(state.mileageMin, state.mileageMax) || selectedGenericLabel(state, "mileage");
     if (type === "price") return state.priceLabel || selectedGenericLabel(state, "price");
     if (type === "fuel") return selectedFuelLabel(state.fuel);
     if (type === "seller") return selectedSellerLabel(state.seller);
+    if (type === "plate") return state.leftKeyword || selectedGenericLabel(state, "plate");
     return "";
   }
 
   function activeTopFilterCount(state) {
-    return ["brand", "year", "price", "fuel", "seller"].filter((type) => selectedTopFilterLabel(state, type)).length;
+    return activeLeftFilterCount(state);
   }
 
   function activeLeftFilterCount(state) {
@@ -769,7 +849,6 @@
       state.complex,
       state.option,
       state.feature,
-      state.plate,
       state.seller && state.seller !== "all",
       state.leftKeyword
     ].filter(Boolean).length;
@@ -800,19 +879,12 @@
     const root = qs("#pcFilterChips");
     if (!root) return;
     const count = activeTopFilterCount(state);
-    const types = [
-      ["brand", "제조사", "maker"],
-      ["year", "연식", "year"],
-      ["price", "가격", "price"],
-      ["fuel", "연료", "fuel"],
-      ["seller", "판매자", "seller"]
-    ];
     const chips = [
       `<button class="chipBtn is-filter${count ? " is-applied" : ""}" type="button" data-pc-filter-menu>${count || "필터"}</button>`,
       renderSelectedChip("전체차량", "category", "category")
     ];
 
-    types.forEach(([type, label, modalType]) => {
+    allFilterChipTypes.forEach(([type, label, modalType]) => {
       const selected = selectedTopFilterLabel(state, type);
       chips.push(selected ? renderSelectedChip(selected, type, modalType) : renderOpenChip(label, modalType));
     });
@@ -820,10 +892,15 @@
   }
 
   function updateMobileChipLabels(state) {
-    ["year", "price", "fuel", "seller"].forEach((type) => {
-      const chip = qs(`.mobileChip[data-open-sheet="${type}"]`);
+    allFilterChipTypes.forEach(([type, fallback, sheetType]) => {
+      const chip = qs(`.mobileChip[data-open-sheet="${sheetType}"]`);
       if (!chip) return;
-      const label = selectedTopFilterLabel(state, type) || ({ year: "연식", price: "가격", fuel: "연료", seller: "판매자" }[type]);
+      const label = selectedTopFilterLabel(state, type) || fallback;
+      if (type === "brand") {
+        const makerLabel = qs("#mobileMakerLabel");
+        if (makerLabel) makerLabel.textContent = label;
+        return;
+      }
       chip.textContent = label;
     });
   }
@@ -867,8 +944,16 @@
   }
 
   function applyGenericSelection(state, type, value) {
+    if (passiveFilterTypes.has(type)) {
+      syncLeftFilterValue(type, value);
+      if (type === "option") state.option = "";
+      if (type === "history") state.feature = "";
+      delete state.generic[type];
+      return;
+    }
     state.generic[type] = value;
     if (type === "category") state.category = value || "all";
+    if (type === "region") state.region = value || "전국";
     if (type === "seller") state.seller = value || "all";
     if (type === "fuel") state.fuel = value || "";
     if (type === "year") {
@@ -876,21 +961,105 @@
       state.yearMax = null;
       state.yearLabel = "";
     }
-    if (type === "mileage") state.mileageMax = value ? Number(value) : null;
+    if (type === "mileage") {
+      state.mileageMin = null;
+      state.mileageMax = value ? Number(value) : null;
+    }
     if (type === "price") {
       const [min, max] = String(value || "").split("-");
       state.priceMin = min ? Number(min) : null;
       state.priceMax = max ? Number(max) : null;
       state.priceLabel = "";
     }
-    if (type === "complex") state.complex = value || "";
-    if (type === "option") state.option = value || "";
-    if (type === "feature") state.feature = value || "";
-    if (type === "plate") state.plate = value || "";
   }
 
   function getGenericOptions(config) {
     return typeof config.options === "function" ? config.options() : config.options;
+  }
+
+  function genericOptionSelected(state, type, value) {
+    if (!value && passiveFilterTypes.has(type)) return !selectedLeftFilterValues(type).length;
+    if (passiveFilterTypes.has(type)) return selectedLeftFilterValues(type).includes(value);
+    if (type === "year" && !value) return !state.yearMin && !state.yearMax;
+    if (type === "mileage" && !value) return !state.mileageMin && !state.mileageMax;
+    if (type === "price" && !value) return !state.priceMin && !state.priceMax;
+    if (type === "region") return (state.region || "전국") === value;
+    if (type === "seller") return (state.seller || "all") === value;
+    if (type === "fuel") return state.fuel === value;
+    return String(state.generic?.[type] || "") === String(value);
+  }
+
+  function colorSwatchClass(label) {
+    if (label.includes("흰")) return "is-white";
+    if (label.includes("검")) return "is-black";
+    if (label.includes("쥐") || label.includes("회")) return "is-gray";
+    if (label.includes("청")) return "is-blue";
+    if (label.includes("은")) return "is-silver";
+    if (label.includes("빨")) return "is-red";
+    if (label.includes("노")) return "is-yellow";
+    if (label.includes("초")) return "is-green";
+    if (label.includes("갈")) return "is-brown";
+    if (label.includes("베이지")) return "is-beige";
+    if (label.includes("주황")) return "is-orange";
+    if (label.includes("보라")) return "is-purple";
+    return "is-etc";
+  }
+
+  function mobileGenericLabelMarkup(type, label) {
+    if (type === "ext-color" || type === "int-color") {
+      return `<span class="mobileOptionLabel"><i class="filterColorSwatch ${colorSwatchClass(label)}"></i>${label}</span>`;
+    }
+    return `<span>${label}</span>`;
+  }
+
+  function renderMobileSelectOptions(values, placeholder, selectedValue, formatter = (value) => value) {
+    const selected = String(selectedValue || "");
+    return `<option value="">${placeholder}</option>${values.map((value) => `<option value="${value}"${selected === String(value) ? " selected" : ""}>${formatter(value)}</option>`).join("")}`;
+  }
+
+  function renderMobileRangePanel(type, state) {
+    if (type === "year") {
+      return `
+        <div class="mobileRangePanel">
+          <div class="mobileRangeTitle">${rangeLabel(state.yearMin, state.yearMax, "년") || "연식 범위"}</div>
+          <div class="mobileRangeRow">
+            <label class="mobileRangeSelect"><select data-mobile-year-min>${renderMobileSelectOptions(pcYearRangeOptions, "시작 연도", state.yearMin, (value) => `${value}년`)}</select></label>
+            <span>부터</span>
+          </div>
+          <div class="mobileRangeRow">
+            <label class="mobileRangeSelect"><select data-mobile-year-max>${renderMobileSelectOptions(pcYearRangeOptions, "종료 연도", state.yearMax, (value) => `${value}년`)}</select></label>
+            <span>까지</span>
+          </div>
+        </div>
+      `;
+    }
+    if (type === "mileage") {
+      return `
+        <div class="mobileRangePanel">
+          <div class="mobileRangeTitle">${mileageRangeLabel(state.mileageMin, state.mileageMax) || "주행거리 범위"}</div>
+          <div class="mobileRangeRow">
+            <label class="mobileRangeSelect"><select data-mobile-mileage-min>${renderMobileSelectOptions(pcMileageRangeOptions, "최소", state.mileageMin, (value) => `${value.toLocaleString("ko-KR")} km`)}</select></label>
+            <span>부터</span>
+          </div>
+          <div class="mobileRangeRow">
+            <label class="mobileRangeSelect"><select data-mobile-mileage-max>${renderMobileSelectOptions(pcMileageRangeOptions, "최대", state.mileageMax, (value) => `${value.toLocaleString("ko-KR")} km`)}</select></label>
+            <span>까지</span>
+          </div>
+        </div>
+      `;
+    }
+    if (type === "plate") {
+      return `
+        <div class="mobileKeywordPanel">
+          <label>
+            <span>차량번호 또는 판매자 이름</span>
+            <input type="search" data-mobile-keyword-input value="${escapeHtml(state.leftKeyword)}" placeholder="예) 12가1234, 이은호">
+          </label>
+          <button type="button" data-mobile-keyword-apply>검색</button>
+        </div>
+      `;
+    }
+    return "";
   }
 
   function renderMobilePriceRange(state) {
@@ -925,14 +1094,28 @@
     if (title) title.textContent = config.title;
     root.dataset.genericType = type;
     root.classList.toggle("has-price-range", type === "price");
-    const selected = String(state.generic?.[type] || "");
-    const priceRange = type === "price" ? renderMobilePriceRange(state) : "";
-    root.innerHTML = priceRange + getGenericOptions(config).map(([label, value, count]) => `
-      <button class="mobileOptionButton${selected === String(value) ? " is-selected" : ""}" type="button" data-generic-value="${value}">
-        <span>${label}</span>
-        <span class="mobileOptionCount">${count || ""}</span>
-      </button>
-    `).join("");
+    root.classList.toggle("is-single-column", type === "plate");
+    const rangePanel = type === "price" ? renderMobilePriceRange(state) : renderMobileRangePanel(type, state);
+    if (type === "plate") {
+      root.innerHTML = rangePanel;
+      return;
+    }
+    const options = getGenericOptions(config);
+    const visibleLimit = type === "option" ? 8 : (type === "ext-color" || type === "int-color" ? 5 : Number.POSITIVE_INFINITY);
+    const normalizedOptions = passiveFilterTypes.has(type) ? [["전체", "", data.totalCount], ...options] : options;
+    const optionMarkup = normalizedOptions.map(([label, value, count], index) => {
+      const extraAttr = index > visibleLimit ? " data-mobile-filter-extra" : "";
+      return `
+        <button class="mobileOptionButton${genericOptionSelected(state, type, value) ? " is-selected" : ""}" type="button" data-generic-value="${value}"${extraAttr}>
+          ${mobileGenericLabelMarkup(type, label)}
+          <span class="mobileOptionCount">${count || ""}</span>
+        </button>
+      `;
+    }).join("");
+    const moreButton = Number.isFinite(visibleLimit) && normalizedOptions.length > visibleLimit + 1
+      ? `<button class="mobileFilterMoreButton" type="button" data-mobile-filter-more data-collapsed-label="${config.title} 더보기" data-expanded-label="${config.title} 접기" aria-expanded="false">${config.title} 더보기</button>`
+      : "";
+    root.innerHTML = rangePanel + optionMarkup + moreButton;
   }
 
   function rangeLabel(min, max, unit) {
@@ -1035,7 +1218,7 @@
       handle.setAttribute("aria-valuetext", mobilePriceValueText(value));
     });
     qsa(".mobileOptionButton", root).forEach((button) => {
-      button.classList.toggle("is-selected", String(state.generic?.price || "") === String(button.dataset.genericValue || ""));
+      button.classList.toggle("is-selected", genericOptionSelected(state, "price", button.dataset.genericValue || ""));
     });
   }
 
@@ -1082,6 +1265,16 @@
     });
     const keyword = qs("#leftKeywordSearch");
     if (keyword) keyword.value = "";
+    qsa("[data-filter-more]").forEach((button) => setFilterMoreState(button, false));
+  }
+
+  function setFilterMoreState(button, expanded) {
+    const body = button.closest(".filterPanelBody");
+    if (body) body.classList.toggle("is-expanded", expanded);
+    button.setAttribute("aria-expanded", expanded ? "true" : "false");
+    button.textContent = expanded
+      ? button.dataset.expandedLabel || "접기"
+      : button.dataset.collapsedLabel || "더보기";
   }
 
   function syncPcLeftRangeSelects(state) {
@@ -1254,11 +1447,20 @@
   function resetSingleFilter(state, type) {
     if (type === "category") state.category = "all";
     if (type === "brand" || type === "maker") state.brand = "";
+    if (type === "region") {
+      state.region = "전국";
+      delete state.generic.region;
+    }
     if (type === "year") {
       state.yearMin = null;
       state.yearMax = null;
       state.yearLabel = "";
       delete state.generic.year;
+    }
+    if (type === "mileage") {
+      state.mileageMin = null;
+      state.mileageMax = null;
+      delete state.generic.mileage;
     }
     if (type === "price") {
       state.priceMin = null;
@@ -1273,6 +1475,19 @@
     if (type === "seller") {
       state.seller = "all";
       delete state.generic.seller;
+    }
+    if (type === "plate") {
+      state.plate = "";
+      state.leftKeyword = "";
+      delete state.generic.plate;
+      const keyword = qs("#leftKeywordSearch");
+      if (keyword) keyword.value = "";
+    }
+    if (passiveFilterTypes.has(type)) {
+      syncLeftFilterValue(type, "");
+      if (type === "option") state.option = "";
+      if (type === "history") state.feature = "";
+      delete state.generic[type];
     }
   }
 
@@ -1390,6 +1605,84 @@
     `;
   }
 
+  function renderPcMileageModal(state) {
+    return `
+      <div class="pcQuickFilterPanel pcYearFilterPanel">
+        <div class="pcYearRangeRows">
+          <div class="pcMileageRangeRow">
+            <label class="pcYearSelectBox">
+              <select class="pcYearSelect" data-pc-mileage-min aria-label="최소 주행거리">
+                ${renderMobileSelectOptions(pcMileageRangeOptions, "최소", state.mileageMin, (value) => `${value.toLocaleString("ko-KR")} km`)}
+              </select>
+              <span class="pcPriceChevron" aria-hidden="true"></span>
+            </label>
+            <span class="pcYearRangeText">부터</span>
+          </div>
+          <div class="pcMileageRangeRow">
+            <label class="pcYearSelectBox">
+              <select class="pcYearSelect" data-pc-mileage-max aria-label="최대 주행거리">
+                ${renderMobileSelectOptions(pcMileageRangeOptions, "최대", state.mileageMax, (value) => `${value.toLocaleString("ko-KR")} km`)}
+              </select>
+              <span class="pcPriceChevron" aria-hidden="true"></span>
+            </label>
+            <span class="pcYearRangeText">까지</span>
+          </div>
+        </div>
+        <div class="pcYearPresetGrid">
+          ${getGenericOptions(genericSheetConfigs.mileage).map(([label, value, count]) => `
+            <button class="pcYearPreset${String(state.generic?.mileage || "") === String(value) ? " is-selected" : ""}" type="button" data-pc-generic-value="${value}">
+              <span>${label}</span>
+              <span class="pcFilterCount">${count || ""}</span>
+            </button>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function pcGenericLabelMarkup(type, label) {
+    if (type === "ext-color" || type === "int-color") {
+      return `<span class="pcFilterChoiceLabel"><i class="filterColorSwatch ${colorSwatchClass(label)}"></i>${label}</span>`;
+    }
+    return `<span>${label}</span>`;
+  }
+
+  function renderPcGenericModal(state, type) {
+    const config = genericSheetConfigs[type] || genericSheetConfigs.category;
+    const options = getGenericOptions(config);
+    const visibleLimit = type === "option" ? 8 : (type === "ext-color" || type === "int-color" ? 5 : Number.POSITIVE_INFINITY);
+    const normalizedOptions = passiveFilterTypes.has(type) ? [["전체", "", data.totalCount], ...options] : options;
+    return `
+      <div class="pcFilterChoiceList${type === "ext-color" || type === "int-color" ? " is-color-list" : ""}" data-pc-generic-list>
+        ${normalizedOptions.map(([label, value, count], index) => {
+          const extraAttr = index > visibleLimit ? " data-pc-filter-extra" : "";
+          return `
+            <button class="pcFilterChoiceButton${genericOptionSelected(state, type, value) ? " is-selected" : ""}${count === "0" ? " is-disabled" : ""}" type="button" data-pc-generic-value="${value}"${count === "0" ? " disabled" : ""}${extraAttr}>
+              <span class="pcFilterCheckbox" aria-hidden="true"></span>
+              ${pcGenericLabelMarkup(type, label)}
+              <span class="pcFilterCount">${count || ""}</span>
+            </button>
+          `;
+        }).join("")}
+        ${Number.isFinite(visibleLimit) && normalizedOptions.length > visibleLimit + 1
+          ? `<button class="pcFilterMoreButton" type="button" data-pc-filter-more data-collapsed-label="${config.title} 더보기" data-expanded-label="${config.title} 접기" aria-expanded="false">${config.title} 더보기</button>`
+          : ""}
+      </div>
+    `;
+  }
+
+  function renderPcKeywordModal(state) {
+    return `
+      <div class="pcKeywordPanel">
+        <label>
+          <span>차량번호 또는 판매자 이름</span>
+          <input type="search" data-pc-keyword-input value="${escapeHtml(state.leftKeyword)}" placeholder="예) 12가1234, 이은호">
+        </label>
+        <button type="button" data-pc-keyword-apply>검색</button>
+      </div>
+    `;
+  }
+
   function renderPcCheckModal(state, type) {
     const options = type === "seller" ? pcSellerOptions : pcFuelOptions;
     const selectedValue = type === "seller" ? state.seller : state.fuel;
@@ -1421,16 +1714,22 @@
       category: "카테고리",
       maker: "제조사 선택",
       year: "연식",
+      mileage: "주행거리",
       price: "가격",
+      region: "지역",
       fuel: "연료",
-      seller: "판매자 구분"
+      seller: "판매자구분",
+      plate: "차량번호/판매자 이름"
     };
     layer.dataset.pcFilterType = type;
-    title.textContent = titles[type] || "조건 선택";
+    title.textContent = titles[type] || genericSheetConfigs[type]?.title || "조건 선택";
     if (type === "maker") body.innerHTML = renderPcMakerModal(state);
     else if (type === "year") body.innerHTML = renderPcYearModal(state);
+    else if (type === "mileage") body.innerHTML = renderPcMileageModal(state);
     else if (type === "price") body.innerHTML = renderPcPriceModal(state);
     else if (type === "fuel" || type === "seller") body.innerHTML = renderPcCheckModal(state, type);
+    else if (type === "plate") body.innerHTML = renderPcKeywordModal(state);
+    else if (genericSheetConfigs[type]) body.innerHTML = renderPcGenericModal(state, type);
     else {
       const config = genericSheetConfigs.category;
       body.innerHTML = `
@@ -1504,6 +1803,7 @@
       if (event.target.closest("[data-reset-pc-filter]")) {
         const type = layer.dataset.pcFilterType || "";
         resetSingleFilter(state, type);
+        syncPcLeftRangeSelects(state);
         renderRows(state);
         renderMobileMakerList(state);
         renderMobileRegionGrid(state);
@@ -1529,6 +1829,39 @@
         renderRows(state);
         renderPcFilterModal("category", state);
         renderMobileCategoryButtons(state.category === "all" ? "used" : state.category);
+        return;
+      }
+
+      const moreButton = event.target.closest("[data-pc-filter-more]");
+      if (moreButton) {
+        const list = moreButton.closest("[data-pc-generic-list]");
+        const expanded = moreButton.getAttribute("aria-expanded") !== "true";
+        list?.classList.toggle("is-expanded", expanded);
+        moreButton.setAttribute("aria-expanded", expanded ? "true" : "false");
+        moreButton.textContent = expanded
+          ? moreButton.dataset.expandedLabel || "접기"
+          : moreButton.dataset.collapsedLabel || "더보기";
+        return;
+      }
+
+      const genericButton = event.target.closest("[data-pc-generic-value]");
+      if (genericButton && !genericButton.disabled) {
+        const type = layer.dataset.pcFilterType || "";
+        applyGenericSelection(state, type, genericButton.dataset.pcGenericValue || "");
+        renderRows(state);
+        renderPcFilterModal(type, state);
+        if (type === "region") renderMobileRegionGrid(state);
+        return;
+      }
+
+      const pcKeywordButton = event.target.closest("[data-pc-keyword-apply]");
+      if (pcKeywordButton) {
+        state.leftKeyword = qs("[data-pc-keyword-input]", layer)?.value.trim() || "";
+        state.plate = state.leftKeyword ? "keyword" : "";
+        const leftKeyword = qs("#leftKeywordSearch");
+        if (leftKeyword) leftKeyword.value = state.leftKeyword;
+        renderRows(state);
+        renderPcFilterModal("plate", state);
         return;
       }
 
@@ -1594,6 +1927,25 @@
         renderRows(state);
         renderPcFilterModal("price", state);
       }
+      if (event.target.matches("[data-pc-mileage-min], [data-pc-mileage-max]")) {
+        const min = Number(qs("[data-pc-mileage-min]", layer)?.value || "");
+        const max = Number(qs("[data-pc-mileage-max]", layer)?.value || "");
+        state.mileageMin = min || null;
+        state.mileageMax = max || null;
+        delete state.generic.mileage;
+        renderRows(state);
+        renderPcFilterModal("mileage", state);
+      }
+    });
+
+    layer.addEventListener("keydown", (event) => {
+      if (!event.target.matches("[data-pc-keyword-input]") || event.key !== "Enter") return;
+      state.leftKeyword = event.target.value.trim();
+      state.plate = state.leftKeyword ? "keyword" : "";
+      const leftKeyword = qs("#leftKeywordSearch");
+      if (leftKeyword) leftKeyword.value = state.leftKeyword;
+      renderRows(state);
+      renderPcFilterModal("plate", state);
     });
 
     document.addEventListener("keydown", (event) => {
@@ -1703,12 +2055,63 @@
     const genericOptionsRoot = qs("#genericSheetOptions");
 
     genericOptionsRoot?.addEventListener("click", (event) => {
+      const moreButton = event.target.closest("[data-mobile-filter-more]");
+      if (moreButton) {
+        const expanded = moreButton.getAttribute("aria-expanded") !== "true";
+        event.currentTarget.classList.toggle("is-expanded", expanded);
+        moreButton.setAttribute("aria-expanded", expanded ? "true" : "false");
+        moreButton.textContent = expanded
+          ? moreButton.dataset.expandedLabel || "접기"
+          : moreButton.dataset.collapsedLabel || "더보기";
+        return;
+      }
+
+      const keywordButton = event.target.closest("[data-mobile-keyword-apply]");
+      if (keywordButton) {
+        state.leftKeyword = qs("[data-mobile-keyword-input]", event.currentTarget)?.value.trim() || "";
+        state.plate = state.leftKeyword ? "keyword" : "";
+        const leftKeyword = qs("#leftKeywordSearch");
+        if (leftKeyword) leftKeyword.value = state.leftKeyword;
+        renderRows(state);
+        renderGenericSheet("plate", state);
+        return;
+      }
+
       const button = event.target.closest("[data-generic-value]");
       if (!button) return;
       const type = event.currentTarget.dataset.genericType;
       applyGenericSelection(state, type, button.dataset.genericValue || "");
       renderRows(state);
       renderGenericSheet(type, state);
+    });
+
+    genericOptionsRoot?.addEventListener("change", (event) => {
+      const type = event.currentTarget.dataset.genericType;
+      if (type === "year" && event.target.matches("[data-mobile-year-min], [data-mobile-year-max]")) {
+        state.yearMin = Number(qs("[data-mobile-year-min]", event.currentTarget)?.value || "") || null;
+        state.yearMax = Number(qs("[data-mobile-year-max]", event.currentTarget)?.value || "") || null;
+        state.yearLabel = rangeLabel(state.yearMin, state.yearMax, "년");
+        delete state.generic.year;
+        renderRows(state);
+        renderGenericSheet("year", state);
+      }
+      if (type === "mileage" && event.target.matches("[data-mobile-mileage-min], [data-mobile-mileage-max]")) {
+        state.mileageMin = Number(qs("[data-mobile-mileage-min]", event.currentTarget)?.value || "") || null;
+        state.mileageMax = Number(qs("[data-mobile-mileage-max]", event.currentTarget)?.value || "") || null;
+        delete state.generic.mileage;
+        renderRows(state);
+        renderGenericSheet("mileage", state);
+      }
+    });
+
+    genericOptionsRoot?.addEventListener("keydown", (event) => {
+      if (!event.target.matches("[data-mobile-keyword-input]") || event.key !== "Enter") return;
+      state.leftKeyword = event.target.value.trim();
+      state.plate = state.leftKeyword ? "keyword" : "";
+      const leftKeyword = qs("#leftKeywordSearch");
+      if (leftKeyword) leftKeyword.value = state.leftKeyword;
+      renderRows(state);
+      renderGenericSheet("plate", state);
     });
 
     genericOptionsRoot?.addEventListener("pointerdown", (event) => {
@@ -1830,6 +2233,12 @@
     qsa(".filterToggle").forEach((button) => {
       button.addEventListener("click", () => {
         button.closest(".filterItem")?.classList.toggle("is-open");
+      });
+    });
+
+    qsa("[data-filter-more]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setFilterMoreState(button, button.getAttribute("aria-expanded") !== "true");
       });
     });
 
