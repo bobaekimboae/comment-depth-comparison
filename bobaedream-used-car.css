@@ -551,6 +551,54 @@ body[data-used-car-detail] .bbHeaderTop {
   gap: 0;
 }
 
+.commercialSelectedNodes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 0 12px;
+}
+
+.commercialSelectedNode {
+  min-width: 0;
+  height: 36px;
+  padding: 0 10px 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--airbnb-border);
+  border-radius: var(--airbnb-button-radius);
+  background: #fff;
+  color: var(--airbnb-text-primary);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.commercialSelectedNode span {
+  color: var(--airbnb-text-secondary);
+  font-weight: 600;
+}
+
+.commercialSelectedNode strong {
+  max-width: 142px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.commercialSelectedNode i {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  background: var(--icon-airbnb-close) center / 14px 14px no-repeat;
+  opacity: .72;
+}
+
+.commercialSelectedNode:hover {
+  border-color: var(--airbnb-border-strong);
+}
+
 .commercialTreeGroup + .commercialTreeGroup {
   border-top: 1px solid #f4f4f4;
 }
@@ -623,8 +671,8 @@ body[data-used-car-detail] .bbHeaderTop {
 .filterOption {
   min-height: 40px;
   display: grid;
-  grid-template-columns: 18px minmax(0, 1fr) auto;
-  gap: 10px;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  gap: 8px;
   align-items: center;
   color: var(--airbnb-text-primary);
   font-size: 14px;
@@ -638,17 +686,17 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterOption input {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   appearance: none;
   border: 0;
   border-radius: 0;
-  background: var(--icon-checkbox-off) center / 18px 18px no-repeat;
+  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
   cursor: pointer;
 }
 
 .filterOption input:checked {
-  background: var(--icon-checkbox-on) center / 18px 18px no-repeat;
+  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
   box-shadow: none;
 }
 
@@ -1325,6 +1373,35 @@ body[data-used-car-detail] .bbHeaderTop {
 .pcFilterModalLayer[data-pc-filter-type="seller"] .pcFilterModal {
   width: 480px;
   height: 372px;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="filter"] .pcFilterModal {
+  width: 560px;
+  height: min(760px, calc(100vh - 64px));
+}
+
+.pcFilterModalLayer[data-pc-filter-type="filter"] .pcFilterModalFooter {
+  height: 88px;
+  flex-basis: 88px;
+  padding: 16px 20px 28px;
+  grid-template-columns: 88px 1fr;
+}
+
+.pcFilterModalLayer[data-pc-filter-type="filter"] .pcFilterOutlineButton,
+.pcFilterModalLayer[data-pc-filter-type="filter"] .pcFilterPrimaryButton {
+  height: 44px;
+}
+
+.pcCommercialFilterMenu {
+  padding: 0 20px 8px;
+}
+
+.pcCommercialFilterMenu .filterPanelBody {
+  padding-bottom: 18px;
+}
+
+.pcCommercialFilterMenu .pcRangePanel {
+  padding: 0;
 }
 
 .pcFilterOutlineButton {
@@ -4544,6 +4621,26 @@ body[data-used-car-list] .listShell .viewLine {
     font-weight: 600;
   }
 
+  .mobileFilterRow span {
+    min-width: 0;
+  }
+
+  .mobileFilterRow em {
+    max-width: 48%;
+    overflow: hidden;
+    color: var(--airbnb-text-secondary);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+
+  .mobileFilterRow.is-applied em {
+    color: var(--airbnb-text-primary);
+  }
+
   .mobileFilterRow.muted {
     justify-content: flex-start;
     margin: 16px;
@@ -4675,6 +4772,21 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileOptionGrid[data-generic-type="mileage"] {
     grid-template-columns: 1fr;
+  }
+
+  .mobileOptionGrid.is-commercial-filter-list {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .mobileOptionGrid.is-commercial-filter-list .commercialFilterTree,
+  .mobileOptionGrid.is-commercial-filter-list .filterPanelBody,
+  .mobileOptionGrid.is-commercial-filter-list .pcFilterChoiceList {
+    width: 100%;
+  }
+
+  .mobileOptionGrid.is-commercial-filter-list .filterOption {
+    grid-template-columns: 24px minmax(0, 1fr) auto;
   }
 
   .mobileOptionGrid:not(.is-expanded) [data-mobile-filter-extra] {
