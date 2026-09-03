@@ -23,6 +23,7 @@
   --airbnb-border-strong: #b0b0b0;
   --airbnb-surface-soft: #f7f7f7;
   --airbnb-button-radius: 8px;
+  --airbnb-checkbox-off-color: #6a6a6a;
   --price: #e5193b;
   --danger: #e94141;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, .08);
@@ -710,7 +711,10 @@ body[data-used-car-detail] .bbHeaderTop {
   appearance: none;
   border: 0;
   border-radius: 0;
-  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-checkbox-off-color);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .filterOption input:checked {
@@ -719,7 +723,10 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterMenu .filterOption input[type="checkbox"]:checked {
-  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-action-black);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
   box-shadow: none;
 }
 
@@ -1100,7 +1107,10 @@ body[data-used-car-detail] .bbHeaderTop {
 .filterOption.is-disabled input {
   opacity: .46;
   cursor: default;
-  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-checkbox-off-color);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .filterPanel .sectionDivider {
