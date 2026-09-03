@@ -1990,7 +1990,7 @@
       const rowHeight = row.getBoundingClientRect().height;
       row.style.setProperty("--chip-row-fixed-left", `${Math.round(summaryRect.left)}px`);
       row.style.setProperty("--chip-row-fixed-width", `${Math.round(summaryRect.width)}px`);
-      slot.style.setProperty("--chip-row-sticky-height", `${Math.round(rowHeight)}px`);
+      slot.style.setProperty("--chip-row-sticky-height", `${Math.round(rowHeight + stickyTop + 8)}px`);
       slot.classList.add("is-active");
       row.classList.add("is-fixed");
     };
