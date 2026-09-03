@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="bobaedream-used-car.css?v=bobae-bottom-sheet-checkbox-icon-20260903">
+<link rel="stylesheet" href="bobaedream-used-car.css?v=bobae-sticky-filter-fix-v2-20260903">
 <title>보배드림 중고차 PC 리스트</title>
 </head>
 <body data-used-car-list>
@@ -71,26 +71,28 @@
       <button class="mobileResetInline" type="button" data-mobile-reset>초기화</button>
     </div>
 
-    <nav class="mobileChipScroller" aria-label="모바일 필터">
-      <button class="mobileChip" type="button" data-open-sheet="filter"><span class="mobileTuneIcon"></span>필터</button>
-      <button class="mobileChip is-dark" type="button" data-mobile-reset>전체차량 <span>x</span></button>
-      <button class="mobileChip" type="button" data-open-sheet="body">차종</button>
-      <button class="mobileChip" type="button" data-open-sheet="maker"><span id="mobileMakerLabel">제조사</span></button>
-      <button class="mobileChip" type="button" data-open-sheet="year">연식</button>
-      <button class="mobileChip" type="button" data-open-sheet="mileage">주행거리</button>
-      <button class="mobileChip" type="button" data-open-sheet="price">가격</button>
-      <button class="mobileChip" type="button" data-open-sheet="region">지역</button>
-      <button class="mobileChip" type="button" data-open-sheet="seat">인승</button>
-      <button class="mobileChip" type="button" data-open-sheet="history">성능/보험</button>
-      <button class="mobileChip" type="button" data-open-sheet="seller">판매자</button>
-      <button class="mobileChip" type="button" data-open-sheet="sale">판매방식</button>
-      <button class="mobileChip" type="button" data-open-sheet="ext-color">외부색상</button>
-      <button class="mobileChip" type="button" data-open-sheet="int-color">내부색상</button>
-      <button class="mobileChip" type="button" data-open-sheet="fuel">연료</button>
-      <button class="mobileChip" type="button" data-open-sheet="transmission">변속기</button>
-      <button class="mobileChip" type="button" data-open-sheet="option">옵션</button>
-      <button class="mobileChip" type="button" data-open-sheet="plate">차량번호</button>
-    </nav>
+    <div class="mobileFilterStick">
+      <nav class="mobileChipScroller" aria-label="모바일 필터">
+        <button class="mobileChip" type="button" data-open-sheet="filter"><span class="mobileTuneIcon"></span>필터</button>
+        <button class="mobileChip is-dark" type="button" data-mobile-reset>전체차량 <span>x</span></button>
+        <button class="mobileChip" type="button" data-open-sheet="body">차종</button>
+        <button class="mobileChip" type="button" data-open-sheet="maker"><span id="mobileMakerLabel">제조사</span></button>
+        <button class="mobileChip" type="button" data-open-sheet="year">연식</button>
+        <button class="mobileChip" type="button" data-open-sheet="mileage">주행거리</button>
+        <button class="mobileChip" type="button" data-open-sheet="price">가격</button>
+        <button class="mobileChip" type="button" data-open-sheet="region">지역</button>
+        <button class="mobileChip" type="button" data-open-sheet="seat">인승</button>
+        <button class="mobileChip" type="button" data-open-sheet="history">성능/보험</button>
+        <button class="mobileChip" type="button" data-open-sheet="seller">판매자</button>
+        <button class="mobileChip" type="button" data-open-sheet="sale">판매방식</button>
+        <button class="mobileChip" type="button" data-open-sheet="ext-color">외부색상</button>
+        <button class="mobileChip" type="button" data-open-sheet="int-color">내부색상</button>
+        <button class="mobileChip" type="button" data-open-sheet="fuel">연료</button>
+        <button class="mobileChip" type="button" data-open-sheet="transmission">변속기</button>
+        <button class="mobileChip" type="button" data-open-sheet="option">옵션</button>
+        <button class="mobileChip" type="button" data-open-sheet="plate">차량번호</button>
+      </nav>
+    </div>
 
     <nav class="mobileCategoryRail" id="mobileCategoryRail" aria-label="모바일 카테고리"></nav>
 

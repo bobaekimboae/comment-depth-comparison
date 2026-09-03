@@ -372,8 +372,8 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .filterPanel {
   position: sticky;
-  top: 118px;
-  max-height: calc(100vh - 136px);
+  top: 16px;
+  max-height: calc(100vh - 198px);
   overflow: auto;
   background: #fff;
   border: 1px solid #e5e5e5;
@@ -3675,7 +3675,7 @@ body[data-used-car-list] .listShell .viewLine {
     min-width: 0;
     width: 100%;
     background: #fff;
-    overflow-x: hidden;
+    overflow-x: clip;
     font-size: 14px;
   }
 
@@ -3911,6 +3911,14 @@ body[data-used-car-list] .listShell .viewLine {
   .mobileChipScroller::-webkit-scrollbar,
   .mobileCategoryRail::-webkit-scrollbar {
     display: none;
+  }
+
+  .mobileFilterStick {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    background: #fff;
+    box-shadow: 0 1px 0 #f1f2f4;
   }
 
   .mobileChipScroller {
