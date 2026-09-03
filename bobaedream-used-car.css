@@ -703,6 +703,117 @@ body[data-used-car-detail] .bbHeaderTop {
   font-weight: 400;
 }
 
+.filterRangeRows {
+  padding: 4px 0 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.filterRangeRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 34px;
+  gap: 6px;
+  align-items: center;
+}
+
+.filterRangeRow.is-mileage {
+  grid-template-columns: minmax(0, 1fr) 34px;
+}
+
+.filterSelectBox {
+  height: 40px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.filterSelectBox select {
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  padding: 0 28px 0 10px;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  color: var(--airbnb-text-primary);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  background: var(--icon-chevron-down) right 9px center / 12px 12px no-repeat;
+}
+
+.filterRangeText {
+  color: var(--airbnb-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.filterColorOption > span:not(.count) {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterColorSwatch {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border-radius: 50%;
+  border: 1px solid #d8d8d8;
+}
+
+.filterColorSwatch.is-white { background: #fff; }
+.filterColorSwatch.is-black { background: #222; }
+.filterColorSwatch.is-gray { background: #767676; }
+.filterColorSwatch.is-blue { background: #2f6fd6; }
+.filterColorSwatch.is-silver { background: #c8ccd2; }
+.filterColorSwatch.is-red { background: #d13a32; }
+.filterColorSwatch.is-yellow { background: #f2c94c; }
+.filterColorSwatch.is-green { background: #2f8f5b; }
+.filterColorSwatch.is-brown { background: #7a5232; }
+.filterColorSwatch.is-beige { background: #d8c1a1; }
+
+.filterSearchBox {
+  padding: 4px 0 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 58px;
+  gap: 6px;
+}
+
+.filterSearchBox input {
+  min-width: 0;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  color: var(--airbnb-text-primary);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  outline: 0;
+}
+
+.filterSearchBox input:focus {
+  border-color: var(--airbnb-action-black);
+  box-shadow: 0 0 0 1px var(--airbnb-action-black);
+}
+
+.filterSearchBox button {
+  height: 42px;
+  border-radius: 8px;
+  background: var(--airbnb-action-black);
+  color: #fff;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
 .filterBrandLabel {
   min-width: 0;
   display: flex;

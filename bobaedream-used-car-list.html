@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="bobaedream-used-car.css?v=bobae-airbnb-rental-filter-direct-20260903">
+<link rel="stylesheet" href="bobaedream-used-car.css?v=bobae-encar-filter-conditions-20260903">
 <title>보배드림 중고차 PC 리스트</title>
 </head>
 <body data-used-car-list>
@@ -217,12 +217,59 @@
       </div>
       <div class="filterMenu">
         <section class="filterItem is-open">
-          <button class="filterToggle" type="button">지역</button>
+          <button class="filterToggle" type="button">차종</button>
           <div class="filterPanelBody">
-            <label class="filterOption"><input type="checkbox" value="전국" data-pc-left-region checked><span>전국</span><span class="count">14,896</span></label>
-            <label class="filterOption"><input type="checkbox" value="서울" data-pc-left-region><span>서울</span><span class="count">4,220</span></label>
-            <label class="filterOption"><input type="checkbox" value="경기" data-pc-left-region><span>경기</span><span class="count">3,948</span></label>
-            <label class="filterOption"><input type="checkbox" value="부산" data-pc-left-region><span>부산</span><span class="count">1,122</span></label>
+            <label class="filterOption"><input type="checkbox" value="경차" data-left-filter="body"><span>경차</span><span class="count">612</span></label>
+            <label class="filterOption"><input type="checkbox" value="소형차" data-left-filter="body"><span>소형차</span><span class="count">438</span></label>
+            <label class="filterOption"><input type="checkbox" value="준중형차" data-left-filter="body"><span>준중형차</span><span class="count">2,280</span></label>
+            <label class="filterOption"><input type="checkbox" value="중형차" data-left-filter="body"><span>중형차</span><span class="count">3,116</span></label>
+            <label class="filterOption"><input type="checkbox" value="대형차" data-left-filter="body"><span>대형차</span><span class="count">2,044</span></label>
+            <label class="filterOption"><input type="checkbox" value="스포츠카" data-left-filter="body"><span>스포츠카</span><span class="count">183</span></label>
+            <label class="filterOption"><input type="checkbox" value="SUV" data-left-filter="body"><span>SUV</span><span class="count">3,208</span></label>
+            <label class="filterOption"><input type="checkbox" value="RV" data-left-filter="body"><span>RV</span><span class="count">1,044</span></label>
+            <label class="filterOption"><input type="checkbox" value="경승합차" data-left-filter="body"><span>경승합차</span><span class="count">42</span></label>
+            <label class="filterOption"><input type="checkbox" value="승합차" data-left-filter="body"><span>승합차</span><span class="count">305</span></label>
+            <label class="filterOption"><input type="checkbox" value="화물차" data-left-filter="body"><span>화물차</span><span class="count">1,203</span></label>
+            <label class="filterOption"><input type="checkbox" value="기타" data-left-filter="body"><span>기타</span><span class="count">6</span></label>
+          </div>
+        </section>
+        <section class="filterItem is-open">
+          <button class="filterToggle" type="button">제조사/모델/등급</button>
+          <div class="filterPanelBody">
+            <div class="filterGroupTitle">제조사</div>
+            <div id="domesticFilter"></div>
+          </div>
+        </section>
+        <section class="filterItem is-open">
+          <button class="filterToggle" type="button">연식</button>
+          <div class="filterPanelBody">
+            <div class="filterRangeRows">
+              <div class="filterRangeRow">
+                <label class="filterSelectBox"><select data-left-year-select data-left-year-min aria-label="시작 연식 연도"></select></label>
+                <label class="filterSelectBox"><select data-left-month-select aria-label="시작 연식 월"></select></label>
+                <span class="filterRangeText">부터</span>
+              </div>
+              <div class="filterRangeRow">
+                <label class="filterSelectBox"><select data-left-year-select data-left-year-max aria-label="종료 연식 연도"></select></label>
+                <label class="filterSelectBox"><select data-left-month-select aria-label="종료 연식 월"></select></label>
+                <span class="filterRangeText">까지</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="filterItem is-open">
+          <button class="filterToggle" type="button">주행거리</button>
+          <div class="filterPanelBody">
+            <div class="filterRangeRows">
+              <div class="filterRangeRow is-mileage">
+                <label class="filterSelectBox"><select data-left-mileage-select data-left-mileage-min aria-label="최저 주행거리"></select></label>
+                <span class="filterRangeText">부터</span>
+              </div>
+              <div class="filterRangeRow is-mileage">
+                <label class="filterSelectBox"><select data-left-mileage-select data-left-mileage-max aria-label="최대 주행거리"></select></label>
+                <span class="filterRangeText">까지</span>
+              </div>
+            </div>
           </div>
         </section>
         <section class="filterItem is-open filterPriceItem">
@@ -245,34 +292,144 @@
                   <div><input type="number" value="10000" min="0" max="10000" step="100" inputmode="numeric" data-pc-left-price-max-input><em>만원</em></div>
                 </label>
               </div>
-              <p class="filterPriceAverage">시세 평균은 4,530만원입니다.</p>
+              <p class="filterPriceAverage">100만원부터 1억원까지 직접 입력할 수 있습니다.</p>
             </div>
           </div>
         </section>
-        <section class="filterItem">
-          <button class="filterToggle" type="button">카테고리</button>
-          <div class="filterPanelBody">
-            <label class="filterOption"><input type="checkbox"><span>중고차</span><span class="count">14,896</span></label>
-            <label class="filterOption"><input type="checkbox"><span>트럭-특장</span><span class="count">1,203</span></label>
-            <label class="filterOption"><input type="checkbox"><span>바이크</span><span class="count">732</span></label>
-          </div>
-        </section>
         <section class="filterItem is-open">
-          <button class="filterToggle" type="button">제조사 · 모델</button>
+          <button class="filterToggle" type="button">지역</button>
           <div class="filterPanelBody">
-            <div class="filterGroupTitle">국산차</div>
-            <div id="domesticFilter"></div>
-            <div class="sectionDivider"></div>
-            <div class="filterGroupTitle">수입차</div>
-            <div id="importedFilter"></div>
+            <label class="filterOption"><input type="checkbox" value="전국" data-pc-left-region checked><span>전국</span><span class="count">14,896</span></label>
+            <label class="filterOption"><input type="checkbox" value="서울" data-pc-left-region><span>서울</span><span class="count">4,220</span></label>
+            <label class="filterOption"><input type="checkbox" value="경기" data-pc-left-region><span>경기</span><span class="count">3,948</span></label>
+            <label class="filterOption"><input type="checkbox" value="부산" data-pc-left-region><span>부산</span><span class="count">1,122</span></label>
+            <label class="filterOption"><input type="checkbox" value="인천" data-pc-left-region><span>인천</span><span class="count">802</span></label>
+            <label class="filterOption"><input type="checkbox" value="대구" data-pc-left-region><span>대구</span><span class="count">688</span></label>
+            <label class="filterOption"><input type="checkbox" value="광주" data-pc-left-region><span>광주</span><span class="count">232</span></label>
+            <label class="filterOption"><input type="checkbox" value="대전" data-pc-left-region><span>대전</span><span class="count">128</span></label>
+            <label class="filterOption"><input type="checkbox" value="울산" data-pc-left-region><span>울산</span><span class="count">41</span></label>
+            <label class="filterOption"><input type="checkbox" value="강원" data-pc-left-region><span>강원</span><span class="count">92</span></label>
+            <label class="filterOption"><input type="checkbox" value="충북" data-pc-left-region><span>충북</span><span class="count">163</span></label>
+            <label class="filterOption"><input type="checkbox" value="충남" data-pc-left-region><span>충남</span><span class="count">222</span></label>
+            <label class="filterOption"><input type="checkbox" value="전북" data-pc-left-region><span>전북</span><span class="count">148</span></label>
+            <label class="filterOption"><input type="checkbox" value="전남" data-pc-left-region><span>전남</span><span class="count">96</span></label>
+            <label class="filterOption"><input type="checkbox" value="경북" data-pc-left-region><span>경북</span><span class="count">205</span></label>
+            <label class="filterOption"><input type="checkbox" value="경남" data-pc-left-region><span>경남</span><span class="count">188</span></label>
+            <label class="filterOption"><input type="checkbox" value="제주" data-pc-left-region><span>제주</span><span class="count">24</span></label>
           </div>
         </section>
-        <section class="filterItem"><button class="filterToggle" type="button">연식</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>2023년 이후</span><span class="count">4,118</span></label><label class="filterOption"><input type="checkbox"><span>2020년 이후</span><span class="count">8,315</span></label></div></section>
-        <section class="filterItem"><button class="filterToggle" type="button">주행거리</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>3만km 이하</span><span class="count">3,906</span></label><label class="filterOption"><input type="checkbox"><span>10만km 이하</span><span class="count">9,451</span></label></div></section>
-        <section class="filterItem"><button class="filterToggle" type="button">바디타입</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>세단</span><span class="count">4,226</span></label><label class="filterOption"><input type="checkbox"><span>SUV</span><span class="count">5,340</span></label><label class="filterOption"><input type="checkbox"><span>스포츠카</span><span class="count">919</span></label></div></section>
-        <section class="filterItem"><button class="filterToggle" type="button">차급</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>준중형</span><span class="count">2,011</span></label><label class="filterOption"><input type="checkbox"><span>중형</span><span class="count">3,540</span></label><label class="filterOption"><input type="checkbox"><span>대형</span><span class="count">2,814</span></label></div></section>
-        <section class="filterItem"><button class="filterToggle" type="button">성능 · 보험</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>보험 이력 공개</span><span class="count">12,001</span></label><label class="filterOption"><input type="checkbox"><span>무사고</span><span class="count">7,420</span></label></div></section>
-        <section class="filterItem"><button class="filterToggle" type="button">판매자 구분</button><div class="filterPanelBody"><label class="filterOption"><input type="checkbox"><span>딜러</span><span class="count">13,320</span></label><label class="filterOption"><input type="checkbox"><span>개인</span><span class="count">1,576</span></label></div></section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">인승</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="2인승 이하" data-left-filter="seat"><span>2인승 이하</span><span class="count">102</span></label>
+            <label class="filterOption"><input type="checkbox" value="3인승" data-left-filter="seat"><span>3인승</span><span class="count">74</span></label>
+            <label class="filterOption"><input type="checkbox" value="4인승" data-left-filter="seat"><span>4인승</span><span class="count">280</span></label>
+            <label class="filterOption"><input type="checkbox" value="5인승" data-left-filter="seat"><span>5인승</span><span class="count">10,820</span></label>
+            <label class="filterOption"><input type="checkbox" value="6인승" data-left-filter="seat"><span>6인승</span><span class="count">238</span></label>
+            <label class="filterOption"><input type="checkbox" value="7인승" data-left-filter="seat"><span>7인승</span><span class="count">1,705</span></label>
+            <label class="filterOption"><input type="checkbox" value="8인승" data-left-filter="seat"><span>8인승</span><span class="count">141</span></label>
+            <label class="filterOption"><input type="checkbox" value="9인승" data-left-filter="seat"><span>9인승</span><span class="count">630</span></label>
+            <label class="filterOption"><input type="checkbox" value="10인승 이상" data-left-filter="seat"><span>10인승 이상</span><span class="count">253</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">성능/보험공개</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="직영 성능점검" data-left-filter="history"><span>직영 성능점검</span><span class="count">2,106</span></label>
+            <label class="filterOption"><input type="checkbox" value="성능기록부" data-left-filter="history"><span>성능기록부</span><span class="count">10,004</span></label>
+            <label class="filterOption"><input type="checkbox" value="보험이력" data-left-filter="history"><span>보험이력</span><span class="count">12,001</span></label>
+            <label class="filterOption"><input type="checkbox" value="차량 이력 공개" data-left-filter="history"><span>차량 이력 공개</span><span class="count">11,738</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">판매자구분</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="private" data-left-seller><span>개인</span><span class="count">882</span></label>
+            <label class="filterOption"><input type="checkbox" value="dealer" data-left-seller><span>딜러</span><span class="count">13,854</span></label>
+            <label class="filterOption"><input type="checkbox" value="lease-partner" data-left-seller><span>리스렌트제휴</span><span class="count">319</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">판매방식</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="일반" data-left-filter="sale"><span>일반</span><span class="count">13,870</span></label>
+            <label class="filterOption"><input type="checkbox" value="렌트" data-left-filter="sale"><span>렌트</span><span class="count">176</span></label>
+            <label class="filterOption"><input type="checkbox" value="리스" data-left-filter="sale"><span>리스</span><span class="count">732</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">외부색상</button>
+          <div class="filterPanelBody">
+            <label class="filterOption filterColorOption"><input type="checkbox" value="흰색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-white"></i>흰색</span><span class="count">5,318</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="검정색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-black"></i>검정색</span><span class="count">3,412</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="쥐색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-gray"></i>쥐색</span><span class="count">2,345</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="청색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-blue"></i>청색</span><span class="count">709</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="은색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-silver"></i>은색</span><span class="count">665</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="빨간색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-red"></i>빨간색</span><span class="count">318</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="노란색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-yellow"></i>노란색</span><span class="count">84</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="초록색" data-left-filter="ext-color"><span><i class="filterColorSwatch is-green"></i>초록색</span><span class="count">76</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">내부색상</button>
+          <div class="filterPanelBody">
+            <label class="filterOption filterColorOption"><input type="checkbox" value="검정색 계열" data-left-filter="int-color"><span><i class="filterColorSwatch is-black"></i>검정색 계열</span><span class="count">9,241</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="갈색 계열" data-left-filter="int-color"><span><i class="filterColorSwatch is-brown"></i>갈색 계열</span><span class="count">2,048</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="베이지색 계열" data-left-filter="int-color"><span><i class="filterColorSwatch is-beige"></i>베이지색 계열</span><span class="count">1,254</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="회색 계열" data-left-filter="int-color"><span><i class="filterColorSwatch is-gray"></i>회색 계열</span><span class="count">1,170</span></label>
+            <label class="filterOption filterColorOption"><input type="checkbox" value="청색 계열" data-left-filter="int-color"><span><i class="filterColorSwatch is-blue"></i>청색 계열</span><span class="count">119</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">연료</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="가솔린" data-left-fuel><span>가솔린</span><span class="count">8,202</span></label>
+            <label class="filterOption"><input type="checkbox" value="디젤" data-left-fuel><span>디젤</span><span class="count">3,118</span></label>
+            <label class="filterOption"><input type="checkbox" value="LPG" data-left-fuel><span>LPG(일반인 구입)</span><span class="count">394</span></label>
+            <label class="filterOption"><input type="checkbox" value="하이브리드" data-left-fuel><span>가솔린+전기</span><span class="count">1,020</span></label>
+            <label class="filterOption"><input type="checkbox" value="LPG+전기" data-left-fuel><span>LPG+전기</span><span class="count">20</span></label>
+            <label class="filterOption"><input type="checkbox" value="가솔린+LPG" data-left-fuel><span>가솔린+LPG</span><span class="count">199</span></label>
+            <label class="filterOption"><input type="checkbox" value="전기" data-left-fuel><span>전기</span><span class="count">642</span></label>
+            <label class="filterOption"><input type="checkbox" value="수소" data-left-fuel><span>수소</span><span class="count">36</span></label>
+            <label class="filterOption"><input type="checkbox" value="기타" data-left-fuel><span>기타</span><span class="count">2</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">변속기</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="오토" data-left-filter="transmission"><span>오토</span><span class="count">13,944</span></label>
+            <label class="filterOption"><input type="checkbox" value="수동" data-left-filter="transmission"><span>수동</span><span class="count">186</span></label>
+            <label class="filterOption"><input type="checkbox" value="세미오토" data-left-filter="transmission"><span>세미오토</span><span class="count">28</span></label>
+            <label class="filterOption"><input type="checkbox" value="CVT" data-left-filter="transmission"><span>CVT</span><span class="count">48</span></label>
+            <label class="filterOption"><input type="checkbox" value="기타" data-left-filter="transmission"><span>기타</span><span class="count">1</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">옵션</button>
+          <div class="filterPanelBody">
+            <label class="filterOption"><input type="checkbox" value="선루프" data-left-filter="option"><span>선루프</span><span class="count">4,320</span></label>
+            <label class="filterOption"><input type="checkbox" value="내비게이션" data-left-filter="option"><span>내비게이션</span><span class="count">12,139</span></label>
+            <label class="filterOption"><input type="checkbox" value="스마트키" data-left-filter="option"><span>스마트키</span><span class="count">12,722</span></label>
+            <label class="filterOption"><input type="checkbox" value="헤드램프(HID)" data-left-filter="option"><span>헤드램프(HID)</span><span class="count">1,669</span></label>
+            <label class="filterOption"><input type="checkbox" value="후방 카메라" data-left-filter="option"><span>후방 카메라</span><span class="count">13,173</span></label>
+            <label class="filterOption"><input type="checkbox" value="가죽시트" data-left-filter="option"><span>가죽시트</span><span class="count">13,743</span></label>
+            <label class="filterOption"><input type="checkbox" value="에어백(동승석)" data-left-filter="option"><span>에어백(동승석)</span><span class="count">13,945</span></label>
+            <label class="filterOption"><input type="checkbox" value="에어백(사이드)" data-left-filter="option"><span>에어백(사이드)</span><span class="count">13,209</span></label>
+            <label class="filterOption"><input type="checkbox" value="통풍시트" data-left-filter="option"><span>통풍시트</span><span class="count">7,440</span></label>
+            <label class="filterOption"><input type="checkbox" value="헤드업 디스플레이" data-left-filter="option"><span>헤드업 디스플레이</span><span class="count">2,190</span></label>
+            <label class="filterOption"><input type="checkbox" value="어라운드뷰" data-left-filter="option"><span>어라운드뷰</span><span class="count">6,148</span></label>
+            <label class="filterOption"><input type="checkbox" value="전동트렁크" data-left-filter="option"><span>전동트렁크</span><span class="count">5,328</span></label>
+          </div>
+        </section>
+        <section class="filterItem">
+          <button class="filterToggle" type="button">차량번호/판매자 이름</button>
+          <div class="filterPanelBody">
+            <label class="filterSearchBox">
+              <input type="search" id="leftKeywordSearch" placeholder="예) 12가1234, 이은호">
+              <button type="button" data-left-keyword-apply>검색</button>
+            </label>
+          </div>
+        </section>
       </div>
     </aside>
 
@@ -349,7 +506,7 @@
     회사소개 · 제휴/광고문의 · 이용약관 · 제휴/신고센터 · 고객센터 · 청소년보호정책 · 개인정보취급방침
   </footer>
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="bobaedream-used-car-data.js?v=bobae-gnb-menu-location-clean-20260902"></script>
-  <script src="bobaedream-used-car-interactions.js?v=bobae-airbnb-rental-filter-direct-20260903"></script>
+  <script src="bobaedream-used-car-data.js?v=bobae-encar-filter-conditions-20260903"></script>
+  <script src="bobaedream-used-car-interactions.js?v=bobae-encar-filter-conditions-20260903"></script>
 </body>
 </html>

@@ -79,8 +79,8 @@
       ]
     },
     body: {
-      title: "바디타입",
-      options: [["세단", "sedan", "8,124"], ["SUV", "suv", "3,208"], ["쿠페", "coupe", "721"], ["왜건", "wagon", "144"], ["밴", "van", "305"], ["컨버터블", "convertible", "76"]]
+      title: "차종",
+      options: [["경차", "경차", "612"], ["소형차", "소형차", "438"], ["준중형차", "준중형차", "2,280"], ["중형차", "중형차", "3,116"], ["대형차", "대형차", "2,044"], ["스포츠카", "스포츠카", "183"], ["SUV", "SUV", "3,208"], ["RV", "RV", "1,044"], ["승합차", "승합차", "305"], ["화물차", "화물차", "1,203"]]
     },
     class: {
       title: "차급",
@@ -92,7 +92,7 @@
     },
     mileage: {
       title: "주행거리",
-      options: [["전체", "", data.totalCount], ["1만km 이하", "10000", "728"], ["3만km 이하", "30000", "2,905"], ["5만km 이하", "50000", "5,486"], ["10만km 이하", "100000", "10,122"], ["20만km 이하", "200000", "13,774"]]
+      options: [["전체", "", data.totalCount], ["10,000 km 이하", "10000", "728"], ["30,000 km 이하", "30000", "2,905"], ["50,000 km 이하", "50000", "5,486"], ["100,000 km 이하", "100000", "10,122"], ["200,000 km 이하", "200000", "13,774"]]
     },
     price: {
       title: "가격",
@@ -103,24 +103,24 @@
       options: [["전체", "", data.totalCount], ["오토갤러리", "오토갤러리", "4,602"], ["국민차매매단지", "국민차매매단지", "1,018"], ["수원 도이치오토월드", "수원 도이치오토월드", "1,264"], ["개인직거래", "개인직거래", "322"]]
     },
     seller: {
-      title: "판매자 구분",
-      options: [["전체", "all", data.totalCount], ["개인", "private", "1,042"], ["딜러", "dealer", "13,854"]]
+      title: "판매자구분",
+      options: [["전체", "all", data.totalCount], ["개인", "private", "882"], ["딜러", "dealer", "13,854"], ["리스렌트제휴", "lease-partner", "319"]]
     },
     fuel: {
       title: "연료",
-      options: [["전체", "", data.totalCount], ["가솔린", "가솔린", "8,202"], ["디젤", "디젤", "3,118"], ["하이브리드", "하이브리드", "1,020"], ["전기", "전기", "642"], ["LPG", "LPG", "394"]]
+      options: [["전체", "", data.totalCount], ["가솔린", "가솔린", "8,202"], ["디젤", "디젤", "3,118"], ["LPG(일반인 구입)", "LPG", "394"], ["가솔린+전기", "하이브리드", "1,020"], ["LPG+전기", "LPG+전기", "20"], ["가솔린+LPG", "가솔린+LPG", "199"], ["전기", "전기", "642"], ["수소", "수소", "36"], ["기타", "기타", "2"]]
     },
     option: {
       title: "옵션",
-      options: [["선루프", "선루프", "4,320"], ["어라운드뷰", "어라운드뷰", "6,148"], ["헤드업 디스플레이", "헤드업 디스플레이", "2,190"], ["통풍시트", "통풍시트", "7,440"], ["전동트렁크", "전동트렁크", "5,328"], ["후석 모니터", "후석 모니터", "836"]]
+      options: [["선루프", "선루프", "4,320"], ["내비게이션", "내비게이션", "12,139"], ["스마트키", "스마트키", "12,722"], ["헤드램프(HID)", "헤드램프(HID)", "1,669"], ["후방 카메라", "후방 카메라", "13,173"], ["가죽시트", "가죽시트", "13,743"], ["에어백(동승석)", "에어백(동승석)", "13,945"], ["에어백(사이드)", "에어백(사이드)", "13,209"], ["통풍시트", "통풍시트", "7,440"], ["헤드업 디스플레이", "헤드업 디스플레이", "2,190"], ["어라운드뷰", "어라운드뷰", "6,148"], ["전동트렁크", "전동트렁크", "5,328"]]
     },
     feature: {
-      title: "차량 특징",
-      options: [["인증중고차", "인증중고차", "2,804"], ["1년보증", "1년보증", "1,408"], ["무사고", "무사고", "9,201"], ["리스승계", "리스승계", "664"], ["튜닝", "튜닝", "190"], ["희소 컬러", "희소 컬러", "88"]]
+      title: "성능/보험공개",
+      options: [["직영 성능점검", "직영 성능점검", "2,106"], ["성능기록부", "성능기록부", "10,004"], ["보험이력", "보험이력", "12,001"], ["차량 이력 공개", "차량 이력 공개", "11,738"]]
     },
     plate: {
-      title: "차량번호 / 판매자",
-      options: [["전체", "", data.totalCount], ["차량번호 공개", "number", "12,438"], ["성능점검 공개", "history", "10,004"], ["전화 상담 가능", "phone", "13,012"], ["영상 상담 가능", "video", "1,826"]]
+      title: "차량번호/판매자 이름",
+      options: [["전체", "", data.totalCount], ["차량번호 입력", "number", "12,438"], ["판매자 이름 입력", "seller-name", "13,012"]]
     }
   };
   const currentYear = new Date().getFullYear();
@@ -148,36 +148,36 @@
   const pcPriceRangeOptions = [
     100, 200, 300, 400, 500, 600, 700, 800, 900,
     1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000,
-    2500, 3000, 3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000
+    3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000
   ];
   const mobilePriceSliderMax = 10000;
   const mobilePriceSliderStep = 100;
   const pcYearRangeOptions = Array.from({ length: currentYear - 1979 }, (_, index) => currentYear - index);
   const pcMonthRangeOptions = Array.from({ length: 12 }, (_, index) => index + 1);
+  const pcMileageRangeOptions = Array.from({ length: 20 }, (_, index) => (index + 1) * 10000);
   const pcFuelOptions = [
-    ["가솔린", "가솔린", "9,925"],
-    ["디젤", "디젤", "3,373"],
-    ["LPG", "LPG", "281"],
-    ["LPG 일반인구입", "LPG 일반인구입", "1"],
-    ["가솔린/LPG겸용", "가솔린/LPG겸용", "30"],
-    ["가솔린 하이브리드", "가솔린 하이브리드", "890"],
-    ["LPG 하이브리드", "LPG 하이브리드", "0"],
-    ["디젤 하이브리드", "디젤 하이브리드", "7"],
-    ["CNG", "CNG", "0"],
-    ["전기", "전기", "344"],
-    ["기타", "기타", "21"]
+    ["가솔린", "가솔린", "8,202"],
+    ["디젤", "디젤", "3,118"],
+    ["LPG(일반인 구입)", "LPG", "394"],
+    ["가솔린+전기", "하이브리드", "1,020"],
+    ["LPG+전기", "LPG+전기", "20"],
+    ["가솔린+LPG", "가솔린+LPG", "199"],
+    ["LPG+가솔린", "LPG+가솔린", "1"],
+    ["가솔린+CNG", "가솔린+CNG", "6"],
+    ["전기", "전기", "642"],
+    ["수소", "수소", "36"],
+    ["기타", "기타", "2"]
   ];
   const pcSellerOptions = [
-    ["딜러", "dealer", "13,465"],
-    ["개인", "private", "875"],
-    ["브랜드인증", "certified", "3,167"],
-    ["리스렌트제휴", "lease-partner", "3,713"],
-    ["실차주", "real-owner", "14,894"]
+    ["개인", "private", "882"],
+    ["딜러", "dealer", "13,854"],
+    ["리스렌트제휴", "lease-partner", "319"]
   ];
   const pcBrandLogos = {
     "현대": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/49/e0f2b451-ba55-4a62-af9f-dec69e5f1c5c.png",
     "제네시스": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/76/30e88aab-a5b1-4a4b-9fca-fd44e59c6ad0.png",
     "기아": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/3/edb84b29-c499-4e69-a5f4-8b2cf9fe53dc.png",
+    "쉐보레(GM대우)": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/8/d56d4eed-d156-4886-a73b-fa69bdf2a2b2.png",
     "GM대우": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/8/d56d4eed-d156-4886-a73b-fa69bdf2a2b2.png",
     "르노코리아(삼성)": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/26/d38e6e99-91ae-4055-8f2d-f5e650ce825b.png",
     "KG모빌리티(쌍용)": "https://file9.bobaedream.co.kr/strange/car/maker-emblems/31/d8644b9d-f875-4cf3-a302-4bee2d41220c.png",
@@ -197,11 +197,13 @@
     "현대": "assets/used-car/brand-icons-hq/hyundai.svg",
     "제네시스": "assets/used-car/brand-icons-hq/genesis.svg",
     "기아": "assets/used-car/brand-icons-hq/kia.svg",
+    "쉐보레(GM대우)": "assets/used-car/brand-icons-hq/chevrolet.svg",
     "쉐보레(국산)": "assets/used-car/brand-icons-hq/chevrolet.svg",
     "GM대우": "assets/used-car/brand-icons-hq/daewoo.svg",
     "르노코리아(삼성)": "assets/used-car/brand-icons-hq/renault-korea-symbol.svg",
     "KG모빌리티(쌍용)": "assets/used-car/brand-icons-svg/ssangyong.svg",
     "어울림모터스": "assets/used-car/brand-icons/oullim.png",
+    "기타 제조사": "assets/used-car/categories/s03-23-category-used-car.svg",
     "기타 국산차": "assets/used-car/categories/s03-23-category-used-car.svg",
     "벤츠": "assets/used-car/brand-icons-hq/mercedes-benz.svg",
     "BMW": "assets/used-car/brand-icons-hq/bmw.svg",
@@ -218,12 +220,18 @@
     "현대": "is-domestic-hyundai",
     "제네시스": "is-domestic-genesis",
     "기아": "is-domestic-kia",
+    "쉐보레(GM대우)": "is-domestic-chevrolet",
     "쉐보레(국산)": "is-domestic-chevrolet",
     "GM대우": "is-domestic-daewoo",
     "르노코리아(삼성)": "is-domestic-renault",
     "KG모빌리티(쌍용)": "is-domestic-kgm",
     "어울림모터스": "is-domestic-oullim",
+    "기타 제조사": "is-domestic-other",
     "기타 국산차": "is-domestic-other"
+  };
+  const brandAliases = {
+    "쉐보레(GM대우)": ["쉐보레(GM대우)", "쉐보레(국산)", "GM대우"],
+    "기타 제조사": ["기타 제조사", "기타 국산차", "어울림모터스"]
   };
 
   function qs(selector, root = document) {
@@ -409,6 +417,92 @@
     return value;
   }
 
+  function selectedLeftFilterValues(type) {
+    return qsa(`[data-left-filter="${type}"]:checked`).map((input) => input.value).filter(Boolean);
+  }
+
+  function passiveLeftFilterCount() {
+    return qsa("[data-left-filter]:checked").length;
+  }
+
+  function normalizeBodyType(value) {
+    const text = String(value || "");
+    if (/SUV|RV/.test(text)) return text;
+    return text.replace(/차$/, "");
+  }
+
+  function matchesBrandValue(carBrand, selectedBrand) {
+    if (!selectedBrand) return true;
+    return (brandAliases[selectedBrand] || [selectedBrand]).includes(carBrand);
+  }
+
+  function matchesColorValue(source, selected) {
+    const text = String(source || "");
+    const value = String(selected || "").replace(" 계열", "");
+    if (value === "흰색") return /흰|화이트|white/i.test(text);
+    if (value === "검정색") return /검|블랙|black/i.test(text);
+    if (value === "쥐색") return /쥐|회|그레이|gray|grey/i.test(text);
+    if (value === "은색") return /은|실버|silver/i.test(text);
+    if (value === "청색") return /청|파랑|블루|blue/i.test(text);
+    if (value === "빨간색") return /빨|레드|red/i.test(text);
+    if (value === "노란색") return /노랑|옐로|yellow/i.test(text);
+    if (value === "초록색") return /초록|그린|green/i.test(text);
+    if (value === "갈색") return /갈|브라운|brown/i.test(text);
+    if (value === "베이지색") return /베이지|beige/i.test(text);
+    return text.includes(value);
+  }
+
+  function matchesOptionValue(car, selected) {
+    const options = car.options || [];
+    const aliases = {
+      "내비게이션": ["내비게이션", "순정 내비게이션"],
+      "헤드램프(HID)": ["헤드램프(HID)", "LED 헤드램프"],
+      "후방 카메라": ["후방 카메라", "후방카메라"],
+      "가죽시트": ["가죽시트", "열선시트", "통풍시트"],
+      "에어백(동승석)": ["에어백(동승석)"],
+      "에어백(사이드)": ["에어백(사이드)"]
+    };
+    return (aliases[selected] || [selected]).some((value) => options.includes(value) || (car.badges || []).includes(value));
+  }
+
+  function matchesLeftFilterGroup(car, type, values) {
+    if (!values.length) return true;
+    return values.some((value) => {
+      if (type === "body") {
+        const body = car.detailSpecs?.["차종"] || "";
+        return normalizeBodyType(body) === normalizeBodyType(value) || String(car.title || "").includes(value);
+      }
+      if (type === "seat") {
+        const seats = car.detailSpecs?.["인승"] || "";
+        if (value === "2인승 이하") return Number(String(seats).replace(/[^\d]/g, "")) <= 2;
+        if (value === "10인승 이상") return Number(String(seats).replace(/[^\d]/g, "")) >= 10;
+        return seats === value;
+      }
+      if (type === "history") {
+        if (value === "직영 성능점검") return (car.badges || []).includes("인증중고차");
+        return Boolean(car.history);
+      }
+      if (type === "sale") {
+        if (value === "일반") return (car.history?.useType || "일반") === "일반";
+        return (car.history?.useType || "").includes(value) || (car.badges || []).some((badge) => badge.includes(value));
+      }
+      if (type === "ext-color") return matchesColorValue(car.color, value);
+      if (type === "int-color") return matchesColorValue(car.seatColor, value);
+      if (type === "transmission") {
+        const transmission = String(car.transmission || "");
+        if (value === "오토") return /자동|오토/i.test(transmission);
+        return transmission.includes(value);
+      }
+      if (type === "option") return matchesOptionValue(car, value);
+      return true;
+    });
+  }
+
+  function matchesPassiveLeftFilters(car) {
+    const groups = ["body", "seat", "history", "sale", "ext-color", "int-color", "transmission", "option"];
+    return groups.every((type) => matchesLeftFilterGroup(car, type, selectedLeftFilterValues(type)));
+  }
+
   function matchesSellerType(car, seller) {
     if (!seller || seller === "all") return true;
     if (seller === "certified" || seller === "lease-partner") return car.sellerType === "dealer";
@@ -421,7 +515,7 @@
     let visible = cars.filter((car) => {
       const categoryMatch = state.category === "all" || state.category === car.category;
       const sellerMatch = matchesSellerType(car, state.seller);
-      const brandMatch = !state.brand || (state.brand === "import" ? importedBrands.has(car.brand) : car.brand === state.brand);
+      const brandMatch = !state.brand || (state.brand === "import" ? importedBrands.has(car.brand) : matchesBrandValue(car.brand, state.brand));
       const videoMatch = !state.video || car.video;
       const regionMatch = !state.region || state.region === "전국" || String(car.location || "").startsWith(state.region);
       const fuelMatch = !state.fuel || car.fuel === normalizedFuelFilter(state.fuel);
@@ -429,12 +523,16 @@
       const yearMatch = (!state.yearMin || yearValue >= state.yearMin) && (!state.yearMax || yearValue <= state.yearMax);
       const price = moneyToNumber(car.price);
       const priceMatch = (!state.priceMin || price >= state.priceMin) && (!state.priceMax || price <= state.priceMax);
-      const mileageMatch = !state.mileageMax || normalizeKoreanNumber(car.mileageFull || car.mileage) <= state.mileageMax;
+      const mileage = normalizeKoreanNumber(car.mileageFull || car.mileage);
+      const mileageMatch = (!state.mileageMin || mileage >= state.mileageMin) && (!state.mileageMax || mileage <= state.mileageMax);
       const complexMatch = !state.complex || car.complex === state.complex;
       const optionMatch = !state.option || (car.options || []).includes(state.option) || (car.badges || []).includes(state.option);
       const featureMatch = !state.feature || (car.badges || []).includes(state.feature);
       const plateMatch = !state.plate || (state.plate === "video" ? car.video : true);
-      return categoryMatch && sellerMatch && brandMatch && videoMatch && regionMatch && fuelMatch && yearMatch && priceMatch && mileageMatch && complexMatch && optionMatch && featureMatch && plateMatch;
+      const leftKeyword = String(state.leftKeyword || "").trim();
+      const dealer = getDealer(car);
+      const keywordMatch = !leftKeyword || [car.number, car.title, dealer.name, dealer.company].some((value) => String(value || "").includes(leftKeyword));
+      return categoryMatch && sellerMatch && brandMatch && videoMatch && regionMatch && fuelMatch && yearMatch && priceMatch && mileageMatch && complexMatch && optionMatch && featureMatch && plateMatch && matchesPassiveLeftFilters(car) && keywordMatch;
     });
 
     if (state.sort === "price-high") visible = [...visible].sort((a, b) => moneyToNumber(b.price) - moneyToNumber(a.price));
@@ -446,7 +544,7 @@
   }
 
   function getCountText(state, visible) {
-    const isBaseView = state.category === "all" && state.seller === "all" && !state.brand && !state.video && (!state.region || state.region === "전국") && !state.fuel && !state.yearMin && !state.yearMax && !state.priceMin && !state.priceMax && !state.mileageMax && !state.complex && !state.option && !state.feature && !state.plate;
+    const isBaseView = state.category === "all" && state.seller === "all" && !state.brand && !state.video && (!state.region || state.region === "전국") && !state.fuel && !state.yearMin && !state.yearMax && !state.priceMin && !state.priceMax && !state.mileageMin && !state.mileageMax && !state.complex && !state.option && !state.feature && !state.plate && !state.leftKeyword && !passiveLeftFilterCount();
     return isBaseView ? `${data.totalCount}대` : `${visible.length ? visible.length.toLocaleString("ko-KR") : "0"}대`;
   }
 
@@ -489,6 +587,8 @@
     updatePcFilterApplyCount(countText);
     updateMobileChipLabels(state);
     syncPcLeftRegionUi(state);
+    syncPcLeftFuelSellerUi(state);
+    syncPcLeftRangeSelects(state);
     syncPcLeftPriceRangeUi(state);
     syncFilterCountBadge(state);
   }
@@ -610,11 +710,13 @@
     state.priceMin = null;
     state.priceMax = null;
     state.priceLabel = "";
+    state.mileageMin = null;
     state.mileageMax = null;
     state.complex = "";
     state.option = "";
     state.feature = "";
     state.plate = "";
+    state.leftKeyword = "";
     state.generic = {};
   }
 
@@ -634,11 +736,17 @@
     return option ? option[0] : "";
   }
 
+  function selectedFuelLabel(value) {
+    if (!value) return "";
+    const option = pcFuelOptions.find(([, optionValue]) => optionValue === value);
+    return option ? option[0] : value;
+  }
+
   function selectedTopFilterLabel(state, type) {
     if (type === "brand") return state.brand || "";
     if (type === "year") return state.yearLabel || selectedGenericLabel(state, "year");
     if (type === "price") return state.priceLabel || selectedGenericLabel(state, "price");
-    if (type === "fuel") return state.fuel || "";
+    if (type === "fuel") return selectedFuelLabel(state.fuel);
     if (type === "seller") return selectedSellerLabel(state.seller);
     return "";
   }
@@ -648,7 +756,7 @@
   }
 
   function activeLeftFilterCount(state) {
-    return [
+    const selectedCount = [
       state.category && state.category !== "all",
       state.brand,
       state.region && state.region !== "전국",
@@ -656,13 +764,16 @@
       state.fuel,
       state.yearMin || state.yearMax,
       state.priceMin || state.priceMax,
+      state.mileageMin,
       state.mileageMax,
       state.complex,
       state.option,
       state.feature,
       state.plate,
-      state.seller && state.seller !== "all"
+      state.seller && state.seller !== "all",
+      state.leftKeyword
     ].filter(Boolean).length;
+    return selectedCount + passiveLeftFilterCount();
   }
 
   function syncFilterCountBadge(state) {
@@ -933,6 +1044,55 @@
     qsa("[data-pc-left-region]").forEach((input) => {
       input.checked = input.value === selected || (!state.region && input.value === "전국");
     });
+  }
+
+  function syncPcLeftFuelSellerUi(state) {
+    qsa("[data-left-fuel]").forEach((input) => {
+      input.checked = Boolean(state.fuel) && input.value === state.fuel;
+    });
+    qsa("[data-left-seller]").forEach((input) => {
+      input.checked = state.seller !== "all" && input.value === state.seller;
+    });
+  }
+
+  function populateSelectOptions(select, values, placeholder, formatter = (value) => value) {
+    if (!select || select.dataset.populated === "true") return;
+    select.innerHTML = `<option value="">${placeholder}</option>${values.map((value) => `<option value="${value}">${formatter(value)}</option>`).join("")}`;
+    select.dataset.populated = "true";
+  }
+
+  function populateLeftRangeSelects() {
+    qsa("[data-left-year-select]").forEach((select) => {
+      populateSelectOptions(select, pcYearRangeOptions, "년", (value) => `${value}년`);
+    });
+    qsa("[data-left-month-select]").forEach((select) => {
+      populateSelectOptions(select, pcMonthRangeOptions, "월", (value) => `${value}월`);
+    });
+    qsa("[data-left-mileage-select]").forEach((select) => {
+      populateSelectOptions(select, pcMileageRangeOptions, "선택", (value) => `${value.toLocaleString("ko-KR")} km`);
+    });
+  }
+
+  function clearLeftPanelControls() {
+    qsa("[data-left-filter], [data-left-fuel], [data-left-seller]").forEach((input) => {
+      input.checked = false;
+    });
+    qsa("[data-left-year-select], [data-left-month-select], [data-left-mileage-select]").forEach((select) => {
+      select.value = "";
+    });
+    const keyword = qs("#leftKeywordSearch");
+    if (keyword) keyword.value = "";
+  }
+
+  function syncPcLeftRangeSelects(state) {
+    const yearMin = qs("[data-left-year-min]");
+    const yearMax = qs("[data-left-year-max]");
+    const mileageMin = qs("[data-left-mileage-min]");
+    const mileageMax = qs("[data-left-mileage-max]");
+    if (yearMin) yearMin.value = state.yearMin ? String(state.yearMin) : "";
+    if (yearMax) yearMax.value = state.yearMax ? String(state.yearMax) : "";
+    if (mileageMin) mileageMin.value = state.mileageMin ? String(state.mileageMin) : "";
+    if (mileageMax) mileageMax.value = state.mileageMax ? String(state.mileageMax) : "";
   }
 
   function syncPcLeftPriceRangeUi(state) {
@@ -1621,6 +1781,7 @@
     qsa("[data-mobile-reset]").forEach((button) => {
       button.addEventListener("click", () => {
         resetState(state);
+        clearLeftPanelControls();
         renderRows(state);
         renderMobileMakerList(state);
         renderMobileRegionGrid(state);
@@ -1648,15 +1809,18 @@
       priceMin: null,
       priceMax: null,
       priceLabel: "",
+      mileageMin: null,
       mileageMax: null,
       complex: "",
       option: "",
       feature: "",
       plate: "",
+      leftKeyword: "",
       generic: {}
     };
 
     renderFilterLists();
+    populateLeftRangeSelects();
     renderCategoryButtons(state.category === "all" ? "used" : state.category);
     setupPcFilterChips(state);
     setupMobileList(state);
@@ -1710,6 +1874,62 @@
       });
     });
 
+    qsa("[data-left-fuel]").forEach((box) => {
+      box.addEventListener("change", () => {
+        qsa("[data-left-fuel]").forEach((other) => {
+          if (other !== box) other.checked = false;
+        });
+        state.fuel = box.checked ? box.value : "";
+        state.generic.fuel = state.fuel;
+        renderRows(state);
+      });
+    });
+
+    qsa("[data-left-seller]").forEach((box) => {
+      box.addEventListener("change", () => {
+        qsa("[data-left-seller]").forEach((other) => {
+          if (other !== box) other.checked = false;
+        });
+        state.seller = box.checked ? box.value : "all";
+        state.generic.seller = state.seller;
+        renderRows(state);
+      });
+    });
+
+    qsa("[data-left-filter]").forEach((box) => {
+      box.addEventListener("change", () => {
+        renderRows(state);
+      });
+    });
+
+    qsa("[data-left-year-min], [data-left-year-max]").forEach((select) => {
+      select.addEventListener("change", () => {
+        state.yearMin = Number(qs("[data-left-year-min]")?.value || "") || null;
+        state.yearMax = Number(qs("[data-left-year-max]")?.value || "") || null;
+        state.yearLabel = rangeLabel(state.yearMin, state.yearMax, "년");
+        delete state.generic.year;
+        renderRows(state);
+      });
+    });
+
+    qsa("[data-left-mileage-min], [data-left-mileage-max]").forEach((select) => {
+      select.addEventListener("change", () => {
+        state.mileageMin = Number(qs("[data-left-mileage-min]")?.value || "") || null;
+        state.mileageMax = Number(qs("[data-left-mileage-max]")?.value || "") || null;
+        delete state.generic.mileage;
+        renderRows(state);
+      });
+    });
+
+    const applyLeftKeyword = () => {
+      state.leftKeyword = qs("#leftKeywordSearch")?.value.trim() || "";
+      renderRows(state);
+    };
+    qs("[data-left-keyword-apply]")?.addEventListener("click", applyLeftKeyword);
+    qs("#leftKeywordSearch")?.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") applyLeftKeyword();
+    });
+
     qs("#videoSwitch")?.addEventListener("click", (event) => {
       event.preventDefault();
       state.video = !state.video;
@@ -1725,6 +1945,7 @@
 
     qs("#resetFilters")?.addEventListener("click", () => {
       resetState(state);
+      clearLeftPanelControls();
       renderRows(state);
       renderMobileMakerList(state);
       renderMobileRegionGrid(state);
