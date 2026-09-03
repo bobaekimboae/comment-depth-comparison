@@ -751,6 +751,29 @@
     return typeof config.options === "function" ? config.options() : config.options;
   }
 
+  function renderMobilePriceRange(state) {
+    const minPercent = priceRangePercent(state.priceMin, 0);
+    const maxPercent = priceRangePercent(state.priceMax, 100);
+    const selectedLabel = rangeLabel(state.priceMin, state.priceMax, "만원") || "전체 가격";
+    return `
+      <div class="mobilePriceRangePanel" aria-hidden="true">
+        <div class="mobilePriceRangeLabel">
+          <strong>${selectedLabel}</strong>
+          <span>최대 1억원+</span>
+        </div>
+        <div class="mobilePriceRangeTrack">
+          <span class="mobilePriceRangeFill" style="left:${minPercent}%;right:${100 - maxPercent}%;"></span>
+          <span class="mobilePriceRangeHandle" style="left:${minPercent}%;"></span>
+          <span class="mobilePriceRangeHandle" style="left:${maxPercent}%;"></span>
+        </div>
+        <div class="mobilePriceRangeTicks">
+          <span>0</span>
+          <span>1억원+</span>
+        </div>
+      </div>
+    `;
+  }
+
   function renderGenericSheet(type, state) {
     const config = genericSheetConfigs[type] || genericSheetConfigs.category;
     const title = qs("#genericSheetTitle");
@@ -758,8 +781,10 @@
     if (!root) return;
     if (title) title.textContent = config.title;
     root.dataset.genericType = type;
+    root.classList.toggle("has-price-range", type === "price");
     const selected = String(state.generic?.[type] || "");
-    root.innerHTML = getGenericOptions(config).map(([label, value, count]) => `
+    const priceRange = type === "price" ? renderMobilePriceRange(state) : "";
+    root.innerHTML = priceRange + getGenericOptions(config).map(([label, value, count]) => `
       <button class="mobileOptionButton${selected === String(value) ? " is-selected" : ""}" type="button" data-generic-value="${value}">
         <span>${label}</span>
         <span class="mobileOptionCount">${count || ""}</span>

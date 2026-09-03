@@ -17,6 +17,11 @@
   --airbnb-action-black: #222222;
   --airbnb-action-black-hover: #000000;
   --airbnb-action-black-pressed: #111111;
+  --airbnb-text-primary: #222222;
+  --airbnb-text-secondary: #6c6c6c;
+  --airbnb-border: #dddddd;
+  --airbnb-border-strong: #b0b0b0;
+  --airbnb-surface-soft: #f7f7f7;
   --airbnb-button-radius: 8px;
   --price: #e5193b;
   --danger: #e94141;
@@ -32,10 +37,15 @@
   --icon-bell: url("assets/used-car/icons/s03-04-bell.svg");
   --icon-menu: url("assets/used-car/icons/s03-05-menu.svg");
   --icon-chevron-down: url("assets/used-car/icons/s03-06-chevron-down.svg");
-  --icon-checkbox-off: url("assets/used-car/icons/s03-checkbox-off.svg");
-  --icon-checkbox-on: url("assets/used-car/icons/s03-checkbox-on.svg");
-  --icon-filter-chip-chevron: url("assets/used-car/icons/s03-filter-chip-chevron.svg");
+  --icon-checkbox-off: url("assets/used-car/icons/airbnb-checkbox-off.svg");
+  --icon-checkbox-on: url("assets/used-car/icons/airbnb-checkbox-on.svg");
+  --icon-filter-chip-chevron: url("assets/used-car/icons/airbnb-chevron-down.svg");
   --icon-filter-chip-close: url("assets/used-car/icons/s03-filter-chip-close.svg");
+  --icon-airbnb-chevron-down: url("assets/used-car/icons/airbnb-chevron-down.svg");
+  --icon-airbnb-close: url("assets/used-car/icons/airbnb-close.svg");
+  --icon-airbnb-check: url("assets/used-car/icons/airbnb-check.svg");
+  --icon-airbnb-check-white: url("assets/used-car/icons/airbnb-check-white.svg");
+  --icon-airbnb-range-handle: url("assets/used-car/icons/airbnb-range-handle.svg");
   --icon-list-location: url("assets/used-car/icons/s03-list-location.svg");
   --icon-sort-chevron: url("assets/used-car/icons/s03-sort-chevron.svg");
   --icon-close: url("assets/used-car/icons/s03-07-close.svg");
@@ -47,7 +57,7 @@
   --icon-detail-time: url("assets/used-car/icons/s03-detail-time.svg");
   --icon-play: url("assets/used-car/icons/s03-15-play.svg");
   --icon-bookmark: url("assets/used-car/icons/s03-16-bookmark.svg");
-  --icon-filter: url("assets/used-car/icons/s03-17-filter.svg");
+  --icon-filter: url("assets/used-car/icons/airbnb-filter-sliders.svg");
   --icon-list-view: url("assets/used-car/icons/s03-19-list-view.svg");
   --icon-more: url("assets/used-car/icons/s03-20-more.svg");
   --icon-camera: url("assets/used-car/options/s03-33-option-rear-camera.png");
@@ -945,7 +955,7 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .pcFilterOptionButton.is-selected {
-  color: var(--blue);
+  color: var(--airbnb-text-primary);
 }
 
 .pcFilterOptionButton.is-selected::after {
@@ -1059,18 +1069,20 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcYearPreset {
   height: 44px;
-  border-radius: 5px;
-  background: #f4f4f4;
-  color: #505050;
+  border: 1px solid var(--airbnb-border);
+  border-radius: var(--airbnb-button-radius);
+  background: #fff;
+  color: var(--airbnb-text-primary);
   text-align: center;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .pcYearPreset.is-selected {
-  background: #e8f1ff;
-  color: var(--blue);
+  border-color: var(--airbnb-text-primary);
+  background: var(--airbnb-surface-soft);
+  color: var(--airbnb-text-primary);
 }
 
 .pcPriceFilterPanel {
@@ -1157,10 +1169,10 @@ body[data-used-car-detail] .bbHeaderTop {
   position: absolute;
   right: 13px;
   top: 50%;
-  width: 10px;
-  height: 5px;
+  width: 12px;
+  height: 12px;
   transform: translateY(-50%);
-  background: var(--icon-filter-chip-chevron) center / 10px 5px no-repeat;
+  background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
   pointer-events: none;
 }
 
@@ -1187,7 +1199,7 @@ body[data-used-car-detail] .bbHeaderTop {
   top: 16px;
   height: 4px;
   border-radius: 999px;
-  background: #e5e7eb;
+  background: var(--airbnb-border);
 }
 
 .pcPriceRangeFill {
@@ -1195,7 +1207,7 @@ body[data-used-car-detail] .bbHeaderTop {
   top: 16px;
   height: 4px;
   border-radius: 999px;
-  background: var(--blue);
+  background: var(--airbnb-text-primary);
 }
 
 .pcPriceHandle {
@@ -1204,9 +1216,9 @@ body[data-used-car-detail] .bbHeaderTop {
   width: 26px;
   height: 26px;
   transform: translateX(-50%);
-  border: 1px solid #e6e8eb;
+  border: 0;
   border-radius: 50%;
-  background: #fff;
+  background: var(--icon-airbnb-range-handle) center / 26px 26px no-repeat;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
 }
 
@@ -1218,18 +1230,20 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcPricePreset {
   height: 44px;
-  border-radius: 5px;
-  background: #f4f4f4;
-  color: #505050;
+  border: 1px solid var(--airbnb-border);
+  border-radius: var(--airbnb-button-radius);
+  background: #fff;
+  color: var(--airbnb-text-primary);
   text-align: center;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .pcPricePreset.is-selected {
-  background: #e8f1ff;
-  color: var(--blue);
+  border-color: var(--airbnb-text-primary);
+  background: var(--airbnb-surface-soft);
+  color: var(--airbnb-text-primary);
 }
 
 .pcQuickRange {
@@ -1303,19 +1317,19 @@ body[data-used-car-detail] .bbHeaderTop {
   content: "";
   width: 24px;
   height: 24px;
-  border: 2px solid #d9dce1;
-  border-radius: 5px;
+  border: 0;
+  border-radius: 0;
+  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .pcQuickButton.is-selected,
 .pcFilterCheckButton.is-selected {
-  color: var(--blue);
+  color: var(--airbnb-text-primary);
 }
 
 .pcQuickButton.is-selected::before,
 .pcFilterCheckButton.is-selected::before {
-  border-color: var(--blue);
-  background: var(--blue);
+  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
 }
 
 .pcQuickButton,
@@ -1325,15 +1339,7 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcQuickButton.is-selected span::after,
 .pcFilterCheckButton.is-selected span:first-of-type::after {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 4px;
-  width: 7px;
-  height: 12px;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  transform: rotate(45deg);
+  content: none;
 }
 
 .pcFilterCheckGrid {
@@ -1377,26 +1383,17 @@ body[data-used-car-detail] .bbHeaderTop {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
-  border: 2px solid #e0e0e0;
-  border-radius: 5px;
-  background: #fff;
+  border: 0;
+  border-radius: 0;
+  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .pcFilterChoiceButton.is-selected .pcFilterCheckbox {
-  border-color: var(--blue);
-  background: var(--blue);
+  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
 }
 
 .pcFilterChoiceButton.is-selected .pcFilterCheckbox::after {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 3px;
-  width: 7px;
-  height: 12px;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  transform: rotate(45deg);
+  content: none;
 }
 
 .categoryGrid {
@@ -3437,7 +3434,7 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileRegionBtn strong {
-    color: var(--blue);
+    color: var(--airbnb-text-primary);
     font-weight: 600;
   }
 
@@ -3487,27 +3484,29 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileChipScroller {
-    height: 49px;
-    padding: 5px 16px 8px;
+    height: 52px;
+    padding: 8px 16px 10px;
   }
 
   .mobileChip {
-    height: 32px;
-    padding: 0 12px;
+    height: 34px;
+    padding: 0 14px;
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    border-radius: 16px;
-    background: #f1f2f3;
-    color: #171a20;
+    gap: 6px;
+    border: 1px solid var(--airbnb-border);
+    border-radius: 24px;
+    background: #fff;
+    color: var(--airbnb-text-primary);
     white-space: nowrap;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 18px;
     font-weight: 600;
   }
 
   .mobileChip.is-dark {
-    background: #272a2f;
+    border-color: var(--airbnb-text-primary);
+    background: var(--airbnb-text-primary);
     color: #fff;
   }
 
@@ -3522,11 +3521,12 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileTuneIcon {
-    width: 15px;
-    height: 15px;
-    border: 2px solid #333740;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 3px #fff;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-radius: 0;
+    background: var(--icon-filter) center / 16px 16px no-repeat;
+    box-shadow: none;
   }
 
   .mobileCategoryRail {
@@ -3926,7 +3926,7 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileSheetHeader strong {
-    color: #12161d;
+    color: var(--airbnb-text-primary);
     font-size: 16px;
     line-height: 22.4px;
     font-weight: 600;
@@ -3966,7 +3966,7 @@ body[data-used-car-list] .listShell .viewLine {
     gap: 12px;
     align-items: center;
     border-bottom: 1px solid #f0f1f3;
-    color: #676e78;
+    color: var(--airbnb-text-secondary);
     font-size: 14px;
     line-height: 19.6px;
     font-weight: 500;
@@ -3979,16 +3979,17 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileFilterIntro button:not(.switch) {
-    color: #606873;
+    color: var(--airbnb-text-secondary);
     font-weight: 500;
   }
 
   .mobileSaveCondition {
     grid-column: 1 / 3;
     height: 36px;
-    border-radius: 7px;
-    background: #f7f7f8;
-    color: #333941;
+    border: 1px solid var(--airbnb-border);
+    border-radius: var(--airbnb-button-radius);
+    background: #fff;
+    color: var(--airbnb-text-primary);
     font-size: 13px;
     line-height: 18.2px;
     font-weight: 600;
@@ -4012,8 +4013,8 @@ body[data-used-car-list] .listShell .viewLine {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ebecef;
-    color: #20242a;
+    border-bottom: 1px solid #eeeeee;
+    color: var(--airbnb-text-primary);
     font-size: 14px;
     line-height: 19.6px;
     font-weight: 600;
@@ -4026,9 +4027,9 @@ body[data-used-car-list] .listShell .viewLine {
     height: 35px;
     padding: 0 13px;
     border: 0;
-    border-radius: 7px;
-    background: #f2f2f3;
-    color: #4c535e;
+    border-radius: var(--airbnb-button-radius);
+    background: var(--airbnb-surface-soft);
+    color: var(--airbnb-text-primary);
     font-size: 13px;
     line-height: 18.2px;
     font-weight: 600;
@@ -4063,8 +4064,8 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileOutlineButton {
-    border: 1px solid #dfe2e6;
-    color: #333941;
+    border: 1px solid var(--airbnb-border);
+    color: var(--airbnb-text-primary);
     background: #fff;
   }
 
@@ -4086,8 +4087,8 @@ body[data-used-car-list] .listShell .viewLine {
     display: flex;
     align-items: center;
     padding: 0 16px;
-    background: #f4f4f5;
-    color: #777f89;
+    background: var(--airbnb-surface-soft);
+    color: var(--airbnb-text-secondary);
     font-size: 13px;
     font-weight: 600;
   }
@@ -4100,7 +4101,7 @@ body[data-used-car-list] .listShell .viewLine {
     grid-template-columns: 32px 1fr auto 18px;
     gap: 16px;
     align-items: center;
-    color: #20242b;
+    color: var(--airbnb-text-primary);
     font-size: 15px;
     font-weight: 600;
   }
@@ -4112,23 +4113,20 @@ body[data-used-car-list] .listShell .viewLine {
     place-items: center;
     border-radius: 50%;
     background: #f2f3f5;
-    color: var(--blue);
+    color: var(--airbnb-text-primary);
     font-size: 12px;
     font-weight: 900;
   }
 
   .makerOption.is-selected {
-    color: var(--blue);
+    color: var(--airbnb-text-primary);
   }
 
-  .makerOption.is-selected::after,
-  .mobileActionList button.is-active::after {
+  .makerOption.is-selected::after {
     content: "";
-    width: 9px;
-    height: 15px;
-    border-right: 2px solid var(--blue);
-    border-bottom: 2px solid var(--blue);
-    transform: rotate(45deg);
+    width: 24px;
+    height: 24px;
+    background: var(--icon-airbnb-check) center / 18px 18px no-repeat;
   }
 
   .mobileOptionGrid {
@@ -4147,7 +4145,7 @@ body[data-used-car-list] .listShell .viewLine {
     gap: 8px;
     align-items: center;
     position: relative;
-    color: #737983;
+    color: var(--airbnb-text-primary);
     text-align: left;
     font-size: 14px;
     line-height: 19.6px;
@@ -4158,35 +4156,92 @@ body[data-used-car-list] .listShell .viewLine {
     content: "";
     width: 24px;
     height: 24px;
-    border: 2px solid #d9dce1;
-    border-radius: 5px;
+    border: 0;
+    border-radius: 0;
+    background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
   }
 
   .mobileOptionButton.is-selected {
-    color: var(--blue);
+    color: var(--airbnb-text-primary);
   }
 
   .mobileOptionButton.is-selected::before {
-    border-color: var(--blue);
-    background: var(--blue);
+    background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
     box-shadow: none;
   }
 
   .mobileOptionButton.is-selected::after {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 3px;
-    width: 7px;
-    height: 13px;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transform: rotate(45deg);
+    content: none;
   }
 
   .mobileOptionCount {
-    color: #a0a5ad;
-    font-weight: 800;
+    color: var(--airbnb-text-secondary);
+    font-weight: 600;
+  }
+
+  .mobilePriceRangePanel {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 13px;
+    padding: 4px 0 6px;
+  }
+
+  .mobilePriceRangeLabel {
+    display: flex;
+    justify-content: space-between;
+    color: var(--airbnb-text-primary);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  .mobilePriceRangeLabel span:last-child {
+    color: var(--airbnb-text-secondary);
+    font-weight: 600;
+  }
+
+  .mobilePriceRangeTrack {
+    position: relative;
+    height: 40px;
+    margin: 0 10px;
+  }
+
+  .mobilePriceRangeTrack::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 18px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--airbnb-border);
+  }
+
+  .mobilePriceRangeFill {
+    position: absolute;
+    top: 18px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--airbnb-text-primary);
+  }
+
+  .mobilePriceRangeHandle {
+    position: absolute;
+    top: 6px;
+    width: 28px;
+    height: 28px;
+    transform: translateX(-50%);
+    background: var(--icon-airbnb-range-handle) center / 28px 28px no-repeat;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .12));
+  }
+
+  .mobilePriceRangeTicks {
+    display: flex;
+    justify-content: space-between;
+    color: var(--airbnb-text-secondary);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
   }
 
   .mobileActionList {
@@ -4197,9 +4252,10 @@ body[data-used-car-list] .listShell .viewLine {
 
   .mobileActionList button {
     height: 44px;
-    border-radius: 7px;
-    background: #f4f4f5;
-    color: #525962;
+    border: 1px solid var(--airbnb-border);
+    border-radius: var(--airbnb-button-radius);
+    background: #fff;
+    color: var(--airbnb-text-primary);
     font-size: 16px;
     line-height: 22.4px;
     font-weight: 600;
@@ -4207,15 +4263,19 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileActionList button.is-active {
-    background: var(--blue);
+    border-color: var(--airbnb-text-primary);
+    background: var(--airbnb-text-primary);
     color: #fff;
   }
 
   .mobileActionList button.is-active::after {
+    content: "";
     position: absolute;
     right: 17px;
-    top: 12px;
-    border-color: #fff;
+    top: 13px;
+    width: 18px;
+    height: 18px;
+    background: var(--icon-airbnb-check-white) center / 18px 18px no-repeat;
   }
 
   body[data-used-car-detail] {
@@ -6000,12 +6060,12 @@ body[data-bobae-main] .footer {
 }
 
 .chipBtn.has-caret::after {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
   margin: 0;
   border: 0;
-  background: var(--icon-filter-chip-chevron) center / 20px 20px no-repeat;
+  background: var(--icon-filter-chip-chevron) center / 12px 12px no-repeat;
   transform: none;
 }
 
@@ -6148,16 +6208,16 @@ body[data-bobae-main] .footer {
     height: 12px;
     margin-top: 0;
     border: 0;
-    background: var(--icon-chevron-down) center / 12px 12px no-repeat;
+    background: var(--icon-airbnb-chevron-down) center / 12px 12px no-repeat;
     transform: none;
   }
 
   .mobileChip:not(.is-dark)::after {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     margin-top: 0;
     border: 0;
-    background: var(--icon-filter-chip-chevron) center / 20px 20px no-repeat;
+    background: var(--icon-filter-chip-chevron) center / 12px 12px no-repeat;
     transform: none;
   }
 
@@ -6206,6 +6266,12 @@ body[data-bobae-main] .footer {
   }
 
   .mobileSheetClose {
-    background: var(--icon-close) center / 20px 20px no-repeat;
+    background: var(--icon-airbnb-close) center / 20px 20px no-repeat;
+  }
+
+  .mobileSheetClose::before,
+  .mobileSheetClose::after {
+    content: none;
+    display: none;
   }
 }
