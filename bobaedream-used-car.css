@@ -699,7 +699,10 @@ body[data-used-car-detail] .bbHeaderTop {
   appearance: none;
   border: 0;
   border-radius: 0;
-  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-checkbox-off-color);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
   cursor: pointer;
 }
 
@@ -718,7 +721,10 @@ body[data-used-car-detail] .bbHeaderTop {
 }
 
 .filterOption input:checked {
-  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-action-black);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
   box-shadow: none;
 }
 
@@ -1879,7 +1885,10 @@ body[data-used-car-detail] .bbHeaderTop {
   height: 24px;
   border: 0;
   border-radius: 0;
-  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-checkbox-off-color);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .pcQuickButton.is-selected,
@@ -1889,7 +1898,10 @@ body[data-used-car-detail] .bbHeaderTop {
 
 .pcQuickButton.is-selected::before,
 .pcFilterCheckButton.is-selected::before {
-  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-action-black);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
 }
 
 .pcQuickButton,
@@ -1964,11 +1976,17 @@ body[data-used-car-detail] .bbHeaderTop {
   flex: 0 0 24px;
   border: 0;
   border-radius: 0;
-  background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-checkbox-off-color);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
 }
 
 .pcFilterChoiceButton.is-selected .pcFilterCheckbox {
-  background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  background-color: var(--airbnb-action-black);
+  background-image: none;
+  -webkit-mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+  mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
 }
 
 .pcFilterChoiceButton.is-selected .pcFilterCheckbox::after {
@@ -4801,11 +4819,17 @@ body[data-used-car-list] .listShell .viewLine {
     content: "";
     width: 24px;
     height: 24px;
-    background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+    background-color: var(--airbnb-checkbox-off-color);
+    background-image: none;
+    -webkit-mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+    mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
   }
 
   .makerOption.is-selected::after {
-    background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+    background-color: var(--airbnb-action-black);
+    background-image: none;
+    -webkit-mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+    mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
   }
 
   .mobileOptionGrid {
@@ -4878,7 +4902,10 @@ body[data-used-car-list] .listShell .viewLine {
     height: 24px;
     border: 0;
     border-radius: 0;
-    background: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+    background-color: var(--airbnb-checkbox-off-color);
+    background-image: none;
+    -webkit-mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
+    mask: var(--icon-checkbox-off) center / 24px 24px no-repeat;
   }
 
   .mobileOptionButton.is-selected {
@@ -4886,7 +4913,10 @@ body[data-used-car-list] .listShell .viewLine {
   }
 
   .mobileOptionButton.is-selected::before {
-    background: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+    background-color: var(--airbnb-action-black);
+    background-image: none;
+    -webkit-mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
+    mask: var(--icon-checkbox-on) center / 24px 24px no-repeat;
     box-shadow: none;
   }
 
