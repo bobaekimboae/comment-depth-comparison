@@ -1,3 +1,23 @@
+# Bobaedream Passenger Register Sheet Sync QA
+
+**Source Visual Truth**
+- Source URL: `https://dev.bbmuseum.co.kr/car/register/form`
+- Checked states: vehicle exterior color sheet and vehicle option sheet.
+- Source pattern: gray dim overlay, centered white selection card on desktop, 12px card radius, right-side X close, 72px header rhythm, small gray color chips, option category tabs on the left, option checklist on the right, and footer actions `취소 / 선택완료35`.
+
+**Implementation Checks**
+- Color sheet now uses source copy `차량 외장 색상 선택`, `대표 색상`, full source color set, 4-column compact gray chips, circular swatches, and X close icon.
+- Option sheet now uses source copy `차량 옵션`, left vertical category tabs, right single-category checklist, blue checked state, and `취소 / 선택완료{count}` footer.
+- Option selection is held in the sheet until `선택완료` is clicked; count updates live while the sheet remains open.
+- Mobile breakpoint keeps the same component as a bottom-attached sheet.
+
+**Result**
+- `node --check bobaedream-car-register.js`: passed.
+- `git diff --check -- bobaedream-car-register.css bobaedream-car-register.js design-qa.md`: passed, with expected CRLF warnings only.
+- Browser DOM verification: option count changed `선택완료35` to `선택완료34`, applied summary changed to `LED헤드램프 외 33개`, and color selection set `검정색` with validation cleared.
+
+final result: passed
+
 # Bobaedream Passenger Register Dev Flow QA
 
 **Source Visual Truth**

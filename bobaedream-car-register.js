@@ -37,40 +37,40 @@
     },
     selectedOptions: new Set([
       "선루프",
-      "파노라마선루프",
+      "LED헤드램프",
+      "LED리어램프",
+      "알루미늄휠",
+      "전동사이드미러",
+      "데이라이트",
+      "하이빔어시스트",
+      "루프랙",
       "가죽시트",
       "전동시트(운전석)",
       "전동시트(동승석)",
       "열선시트(앞좌석)",
       "열선시트(뒷좌석)",
       "통풍시트",
-      "스마트키",
-      "후방카메라",
-      "후방센서",
-      "전방센서",
-      "어라운드뷰",
-      "HUD",
-      "LED헤드램프",
-      "오토라이트",
-      "하이빔어시스트",
-      "차선이탈경보",
-      "후측방경보",
-      "스마트크루즈컨트롤",
-      "차체자세제어장치",
-      "ABS",
-      "에어백",
+      "메모리시트",
+      "하이패스룸미러",
+      "ECM룸미러",
+      "동승석에어백",
+      "측면에어백",
       "커튼에어백",
       "무릎에어백",
-      "전동트렁크",
-      "스마트트렁크",
-      "전동사이드미러",
-      "전자주차브레이크",
-      "블루투스",
-      "USB",
-      "네비게이션(순정)",
-      "하이패스룸미러",
-      "무선충전",
-      "패들쉬프트"
+      "브레이크잠김방지(ABS)",
+      "차체자세제어장치(ESC)",
+      "후방센서",
+      "전방센서",
+      "후방카메라",
+      "어라운드뷰",
+      "타이어공기압감지(TPMS)",
+      "차선이탈경보(LDWS)",
+      "자동긴급제동",
+      "스마트키",
+      "열선핸들",
+      "자동에어컨",
+      "크루즈컨트롤",
+      "스마트크루즈컨트롤"
     ]),
     mediaCount: 0
   };
@@ -88,7 +88,26 @@
       ["노란색", "#fff846"],
       ["갈색", "#685a35"],
       ["하늘색", "#75919c"],
-      ["녹색", "#00aa55"]
+      ["녹색", "#42c748"],
+      ["담녹색", "#335764"],
+      ["연금색", "#827b62"],
+      ["명은색", "#dce4ef"],
+      ["주황색", "#e37d2f"],
+      ["연두색", "#9ba95d"],
+      ["자주색", "#7b2a72"],
+      ["은하색", "#c1cbc8"],
+      ["갈대색", "#7f8175"],
+      ["청옥색", "#367d78"],
+      ["분홍색", "#f2a0be"],
+      ["검정투톤", "linear-gradient(90deg, #111 0 50%, #efefef 50% 100%)"],
+      ["보라색", "#6a1794"],
+      ["흰색투톤", "linear-gradient(90deg, #fff 0 50%, #dcdcdc 50% 100%)"],
+      ["은색투톤", "linear-gradient(90deg, #d8d8d8 0 50%, #9f9f9f 50% 100%)"],
+      ["금색", "#857931"],
+      ["진주투톤", "linear-gradient(90deg, #f8f8e2 0 50%, #d9d9c6 50% 100%)"],
+      ["갈색투톤", "linear-gradient(90deg, #685a35 0 50%, #d9c7a5 50% 100%)"],
+      ["금색투톤", "linear-gradient(90deg, #857931 0 50%, #efe4a4 50% 100%)"],
+      ["기타", "#ffffff"]
     ],
     seat: [
       ["검정 계열", "#151515"],
@@ -105,19 +124,27 @@
   const optionGroups = [
     {
       title: "외관",
-      items: ["선루프", "파노라마선루프", "LED헤드램프", "LED리어램프", "루프랙", "전동트렁크", "스마트트렁크", "전동사이드미러"]
+      items: ["선루프", "파노라마선루프", "알루미늄휠", "전동사이드미러", "HID램프", "LED헤드램프", "어댑티드헤드램프", "LED리어램프", "데이라이트", "하이빔어시스트", "압축도어", "자동슬라이딩도어", "전동사이드스탭", "루프랙"]
     },
     {
-      title: "시트",
-      items: ["가죽시트", "전동시트(운전석)", "전동시트(동승석)", "열선시트(앞좌석)", "열선시트(뒷좌석)", "통풍시트", "메모리시트", "요추받침"]
+      title: "내장",
+      items: ["가죽시트", "전동시트(운전석)", "전동시트(동승석)", "열선시트(앞좌석)", "열선시트(뒷좌석)", "통풍시트", "메모리시트", "폴딩시트", "마사지시트", "워크인시트", "요추받침", "하이패스룸미러", "ECM룸미러", "뒷좌석에어벤트", "패들쉬프트", "전동햇빛가리개", "엠비언트라이트"]
     },
     {
       title: "안전",
-      items: ["후방카메라", "후방센서", "전방센서", "어라운드뷰", "ABS", "에어백", "커튼에어백", "무릎에어백", "차체자세제어장치", "자동긴급제동", "차선이탈경보", "후측방경보"]
+      items: ["동승석에어백", "측면에어백", "커튼에어백", "무릎에어백", "승객감지에어백", "브레이크잠김방지(ABS)", "차체자세제어장치(ESC)", "후방센서", "전방센서", "후방카메라", "전방카메라", "어라운드뷰", "타이어공기압감지(TPMS)", "차선이탈경보(LDWS)", "자동긴급제동", "전자제어서스펜션(ECS)", "후측방경보", "미끄럼방지(TCS)"]
     },
     {
       title: "편의",
-      items: ["스마트키", "HUD", "하이패스룸미러", "무선충전", "블루투스", "USB", "네비게이션(순정)", "스마트크루즈컨트롤", "오토라이트", "하이빔어시스트", "전자주차브레이크", "패들쉬프트"]
+      items: ["스마트키", "열선핸들", "리모컨핸들", "자동에어컨", "좌우독립에어컨", "오토라이트", "크루즈컨트롤", "스마트크루즈컨트롤", "스탑앤고", "전동트렁크", "스마트트렁크", "전자주차브레이크(EPB)", "경사로밀림방지", "헤드업디스플레이(HUD)", "무선충전", "자동주차", "냉장고"]
+    },
+    {
+      title: "멀티미디어",
+      items: ["네비게이션(순정)", "네비게이션(비순정)", "USB", "AUX", "블루투스", "MP3", "DMB", "CD플레이어", "AV시스템", "뒷좌석TV", "텔레매틱스", "스마트폰미러링"]
+    },
+    {
+      title: "튜닝",
+      items: ["흡기", "배기", "ECU맵핑", "터보차저", "슈퍼차저", "NA튜닝", "스트럿바", "엔진스왑", "브레이크", "스포일러", "에어로파츠", "휠/타이어", "서스펜션", "오디오"]
     }
   ];
 
@@ -165,6 +192,7 @@
     modalTitle.textContent = title;
     modalBody.innerHTML = body || "";
     modalFooter.innerHTML = footer || "";
+    modal.dataset.sheet = modalContext.type || "";
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -175,6 +203,7 @@
     modal.setAttribute("aria-hidden", "true");
     modalBody.innerHTML = "";
     modalFooter.innerHTML = "";
+    delete modal.dataset.sheet;
     document.body.style.overflow = "";
   }
 
@@ -203,13 +232,13 @@
 
   function openColorModal(kind) {
     const list = colors[kind] || colors.body;
-    const title = kind === "seat" ? "시트색상" : "색상";
-    const body = `<div class="colorGrid">${list.map(([label, hex]) => {
+    const title = kind === "seat" ? "시트 색상 선택" : "차량 외장 색상 선택";
+    const body = `<section class="colorSheet"><h3 class="modalSectionTitle">대표 색상</h3><div class="colorGrid">${list.map(([label, hex]) => {
       const selected = state.colors[kind] === label ? " is-selected" : "";
       return `<button class="colorChip${selected}" type="button" data-color-choice="${label}" data-color-kind="${kind}">
         <span class="colorSwatch" style="background:${hex}"></span><strong>${label}</strong>
       </button>`;
-    }).join("")}</div>`;
+    }).join("")}</div></section>`;
     setModal(title, body, "", { type: "color", kind });
   }
 
@@ -224,19 +253,44 @@
     setModal(label, body, "", { type: "count", target });
   }
 
-  function openOptionsModal() {
-    const body = optionGroups.map((group) => {
-      const checks = group.items.map((item) => {
-        const checked = state.selectedOptions.has(item) ? " checked" : "";
-        return `<label class="optionCheck"><input type="checkbox" value="${item}"${checked}><i aria-hidden="true"></i><span>${item}</span></label>`;
-      }).join("");
-      return `<section class="optionGroup"><h3>${group.title}</h3><div class="optionGrid">${checks}</div></section>`;
+  function renderOptionsSheet(activeIndex, tempOptions) {
+    const safeIndex = Math.max(0, Math.min(activeIndex, optionGroups.length - 1));
+    const activeGroup = optionGroups[safeIndex];
+    const tabs = optionGroups.map((group, index) => {
+      const active = index === safeIndex ? " is-active" : "";
+      return `<button class="optionTab${active}" type="button" data-option-tab="${index}">${group.title}</button>`;
     }).join("");
+    const checks = activeGroup.items.map((item) => {
+      const checked = tempOptions.has(item) ? " checked" : "";
+      return `<label class="optionCheck"><input type="checkbox" value="${item}"${checked}><i aria-hidden="true"></i><span>${item}</span></label>`;
+    }).join("");
+    return `<div class="optionSheet">
+      <nav class="optionTabs" aria-label="옵션 분류">${tabs}</nav>
+      <section class="optionPane">
+        <div class="optionPaneHeading"><h3>${activeGroup.title}</h3></div>
+        <div class="optionList">${checks}</div>
+      </section>
+    </div>`;
+  }
+
+  function renderOptionsFooter(tempOptions) {
+    return modalButton("취소", "is-ghost", "data-close-modal") + modalButton(`선택완료${tempOptions.size}`, "is-primary", "data-apply-options");
+  }
+
+  function refreshOptionsModal(activeIndex) {
+    if (modalContext.type !== "options") return;
+    modalContext.activeIndex = activeIndex;
+    modalBody.innerHTML = renderOptionsSheet(activeIndex, modalContext.tempOptions);
+    modalFooter.innerHTML = renderOptionsFooter(modalContext.tempOptions);
+  }
+
+  function openOptionsModal(activeIndex = 0) {
+    const tempOptions = new Set(state.selectedOptions);
     setModal(
-      "옵션",
-      body,
-      modalButton("초기화", "is-text", "data-reset-options") + modalButton("적용", "is-primary", "data-apply-options"),
-      { type: "options" }
+      "차량 옵션",
+      renderOptionsSheet(activeIndex, tempOptions),
+      renderOptionsFooter(tempOptions),
+      { type: "options", activeIndex, tempOptions }
     );
   }
 
@@ -476,6 +530,12 @@
       return;
     }
 
+    const optionTab = event.target.closest("[data-option-tab]");
+    if (optionTab && modalContext.type === "options") {
+      refreshOptionsModal(Number(optionTab.dataset.optionTab));
+      return;
+    }
+
     const countChoice = event.target.closest("[data-count-choice]");
     if (countChoice) {
       const target = countChoice.dataset.countTarget || modalContext.target || "seizure";
@@ -501,17 +561,9 @@
       return;
     }
 
-    if (event.target.closest("[data-reset-options]")) {
-      state.selectedOptions.clear();
-      openOptionsModal();
-      return;
-    }
-
     if (event.target.closest("[data-apply-options]")) {
       state.selectedOptions.clear();
-      $$(".optionCheck input", modalBody).forEach((input) => {
-        if (input.checked) state.selectedOptions.add(input.value);
-      });
+      modalContext.tempOptions.forEach((item) => state.selectedOptions.add(item));
       updateOptionSummary();
       closeModal();
       showToast("옵션을 적용했습니다.");
@@ -578,6 +630,17 @@
       event.preventDefault();
       showToast(toastTarget.getAttribute("data-toast"));
     }
+  });
+
+  modalBody.addEventListener("change", (event) => {
+    const optionInput = event.target.closest(".optionCheck input");
+    if (!optionInput || modalContext.type !== "options") return;
+    if (optionInput.checked) {
+      modalContext.tempOptions.add(optionInput.value);
+    } else {
+      modalContext.tempOptions.delete(optionInput.value);
+    }
+    modalFooter.innerHTML = renderOptionsFooter(modalContext.tempOptions);
   });
 
   document.addEventListener("keydown", (event) => {

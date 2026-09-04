@@ -1017,7 +1017,7 @@ img {
 .registerModalBackdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, .42);
+  background: rgba(0, 0, 0, .36);
 }
 
 .registerModalPanel {
@@ -1029,15 +1029,15 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 12px;
   background: #fff;
   transform: translate(-50%, -50%);
-  box-shadow: 0 22px 54px rgba(0, 0, 0, .2);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, .12);
 }
 
 .registerModalHeader {
-  min-height: 56px;
-  padding: 17px 56px 15px 20px;
+  min-height: 72px;
+  padding: 24px 64px 19px 20px;
   position: relative;
   border-bottom: 1px solid #ededed;
 }
@@ -1045,19 +1045,19 @@ img {
 .registerModalHeader h2 {
   margin: 0;
   color: #1a1a1a;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 900;
-  line-height: 24px;
+  line-height: 28px;
 }
 
 .registerModalClose {
   position: absolute;
-  right: 12px;
-  top: 8px;
-  width: 40px;
-  height: 40px;
+  right: 14px;
+  top: 19px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: transparent url("assets/used-car/icons/s03-07-close.svg") center / 18px 18px no-repeat;
+  background: transparent url("assets/used-car/icons/airbnb-close.svg") center / 20px 20px no-repeat;
 }
 
 .registerModalClose::before,
@@ -1066,16 +1066,20 @@ img {
 }
 
 .registerModalBody {
-  padding: 18px 20px;
+  padding: 20px;
   overflow: auto;
 }
 
 .registerModalFooter {
-  padding: 14px 20px 18px;
+  padding: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: stretch;
   gap: 8px;
-  border-top: 1px solid #ededed;
+  border-top: 0;
+}
+
+.registerModalFooter:empty {
+  display: none;
 }
 
 .modalText {
@@ -1087,11 +1091,11 @@ img {
 }
 
 .modalButton {
-  min-width: 96px;
-  height: 42px;
-  padding: 0 16px;
-  border-radius: 10px;
-  font-size: 14px;
+  min-width: 136px;
+  height: 54px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-size: 15px;
   font-weight: 900;
 }
 
@@ -1102,7 +1106,8 @@ img {
 }
 
 .modalButton.is-primary {
-  background: #1a1a1a;
+  flex: 1 1 auto;
+  background: #222;
   color: #fff;
 }
 
@@ -1114,38 +1119,108 @@ img {
   text-decoration: underline;
 }
 
+.modalSectionTitle {
+  margin: 0 0 14px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
 .colorGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: 10px 8px;
 }
 
 .colorChip {
-  min-height: 72px;
-  padding: 10px 8px 8px;
+  min-height: 38px;
+  padding: 0 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
-  border: 1.4px solid #e3e3e3;
-  border-radius: 12px;
-  background: #fff;
+  border: 0;
+  border-radius: 6px;
+  background: #f4f4f4;
   color: #222;
   font-size: 13px;
   font-weight: 800;
+  line-height: 18px;
+  text-align: left;
 }
 
 .colorChip.is-selected {
-  border-color: #1a1a1a;
-  box-shadow: inset 0 0 0 1px #1a1a1a;
+  background: #e9eef8;
+  box-shadow: inset 0 0 0 1px #41649b;
+}
+
+.colorChip strong {
+  overflow: hidden;
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .colorSwatch {
-  width: 26px;
-  height: 26px;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
   border: 1px solid rgba(0, 0, 0, .14);
   border-radius: 50%;
+}
+
+.optionSheet {
+  min-height: 382px;
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.optionTabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.optionTab {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 18px;
+  background: #f5f5f5;
+  color: #b6b6b6;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 32px;
+  text-align: center;
+}
+
+.optionTab.is-active {
+  background: #222;
+  color: #fff;
+}
+
+.optionPane {
+  min-width: 0;
+}
+
+.optionPaneHeading {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.optionPaneHeading h3 {
+  margin: 0;
+  color: #222;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 22px;
+}
+
+.optionList {
+  display: grid;
 }
 
 .optionGroup + .optionGroup {
@@ -1169,13 +1244,14 @@ img {
 
 .optionCheck,
 .modalRadio {
-  min-height: 38px;
+  min-height: 50px;
   display: flex;
   align-items: center;
-  gap: 9px;
-  color: #222;
+  gap: 10px;
+  border-bottom: 1px solid #efefef;
+  color: #9b9b9b;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 20px;
   cursor: pointer;
 }
@@ -1188,35 +1264,36 @@ img {
 
 .optionCheck i,
 .modalRadio i {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
   border: 1.6px solid #d6d6d6;
-  border-radius: 5px;
+  border-radius: 50%;
   background: #fff;
   position: relative;
 }
 
-.modalRadio i {
-  border-radius: 50%;
-}
-
 .optionCheck input:checked + i,
 .modalRadio input:checked + i {
-  border-color: #1a1a1a;
-  background: #1a1a1a;
+  border-color: #3f6093;
+  background: #3f6093;
 }
 
 .optionCheck input:checked + i::after {
   content: "";
   position: absolute;
-  left: 6px;
+  left: 5px;
   top: 3px;
-  width: 5px;
-  height: 9px;
+  width: 4px;
+  height: 8px;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
   transform: rotate(45deg);
+}
+
+.optionCheck input:checked ~ span {
+  color: #344f80;
+  font-weight: 900;
 }
 
 .modalRadio input:checked + i::after {
