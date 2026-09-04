@@ -35,6 +35,11 @@
       seizure: "0",
       mortgage: "0"
     },
+    date: {
+      year: "2015년",
+      month: "11월",
+      modelYear: "2016년"
+    },
     selectedOptions: new Set([
       "선루프",
       "LED헤드램프",
@@ -73,6 +78,22 @@
       "스마트크루즈컨트롤"
     ]),
     mediaCount: 0
+  };
+
+  const currentYear = Math.max(2026, new Date().getFullYear());
+  const dateSelects = {
+    year: {
+      title: "연식 선택",
+      values: Array.from({ length: currentYear - 1989 }, (_, index) => `${currentYear - index}년`)
+    },
+    month: {
+      title: "월 선택",
+      values: Array.from({ length: 12 }, (_, index) => `${index + 1}월`)
+    },
+    modelYear: {
+      title: "형식연도 선택",
+      values: Array.from({ length: currentYear - 1988 }, (_, index) => `${currentYear + 1 - index}년`)
+    }
   };
 
   const colors = {
@@ -251,6 +272,16 @@
       return `<button class="countButton${selected}" type="button" data-count-choice="${value}" data-count-target="${target}">${value}</button>`;
     }).join("")}</div>`;
     setModal(label, body, "", { type: "count", target });
+  }
+
+  function openDateSelectModal(target) {
+    const config = dateSelects[target] || dateSelects.year;
+    const current = state.date[target] || config.values[0];
+    const body = `<div class="countList">${config.values.map((value) => {
+      const selected = value === current ? " is-selected" : "";
+      return `<button class="countButton${selected}" type="button" data-date-choice="${value}" data-date-target="${target}">${value}</button>`;
+    }).join("")}</div>`;
+    setModal(config.title, body, "", { type: "dateSelect", target });
   }
 
   function renderOptionsSheet(activeIndex, tempOptions) {
@@ -506,6 +537,7 @@
       if (type === "policyInfo") openPolicyInfo();
       if (type === "color") openColorModal(modalTarget.dataset.colorKind || "body");
       if (type === "count") openCountModal(modalTarget.dataset.countTarget || "seizure");
+      if (type === "dateSelect") openDateSelectModal(modalTarget.dataset.dateTarget || "year");
       if (type === "options") openOptionsModal();
       if (type === "region") openRegionModal();
       if (type === "externalVideo") openExternalVideoModal();
@@ -542,6 +574,16 @@
       state.counts[target] = countChoice.dataset.countChoice;
       const output = $(`[data-count-value="${target}"]`);
       if (output) output.textContent = state.counts[target];
+      closeModal();
+      return;
+    }
+
+    const dateChoice = event.target.closest("[data-date-choice]");
+    if (dateChoice) {
+      const target = dateChoice.dataset.dateTarget || modalContext.target || "year";
+      state.date[target] = dateChoice.dataset.dateChoice;
+      const output = $(`[data-date-value="${target}"]`);
+      if (output) output.textContent = state.date[target];
       closeModal();
       return;
     }

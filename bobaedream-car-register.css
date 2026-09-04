@@ -314,6 +314,8 @@ img {
 }
 
 .bbFloatingField input {
+  flex: 1 1 auto;
+  min-width: 0;
   width: 100%;
   height: 22px;
   padding: 0;
@@ -330,13 +332,17 @@ img {
 }
 
 .bbFloatingField em {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  height: 22px;
   margin-left: 8px;
-  align-self: center;
+  align-self: flex-end;
   color: #5f6368;
   font-size: 15px;
   font-style: normal;
   font-weight: 800;
-  line-height: 21px;
+  line-height: 22px;
 }
 
 .registerLookupInput {

@@ -1,3 +1,22 @@
+# Bobaedream Passenger Register Dropdown And Unit QA
+
+**Scope**
+- Fixed passenger-car register detail fields for `연식`, `월`, `형식연도`.
+- Fixed the sale price unit alignment for `만원`.
+
+**Checks**
+- `연식 선택` modal opens from the year field and updates the field from `2015년` to `2020년`.
+- `월 선택` modal opens from the month field and updates the field from `11월` to `3월`.
+- `형식연도 선택` modal opens from the model-year field and updates the field from `2016년` to `2021년`.
+- Price field test value `2350` keeps the input text and `만원` unit on the same vertical line; measured input/unit bottom difference: `0px`.
+
+**Result**
+- `node --check bobaedream-car-register.js`: passed.
+- `git diff --check -- bobaedream-car-register.html bobaedream-car-register.css bobaedream-car-register.js`: passed, with expected CRLF warnings only.
+- Browser click-through verification on local static server: passed.
+
+final result: passed
+
 # Bobaedream Passenger Register Sheet Sync QA
 
 **Source Visual Truth**

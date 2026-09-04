@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="bobaedream-car-register.css?v=bobae-register-sheet-sync-20260904">
+<link rel="stylesheet" href="bobaedream-car-register.css?v=bobae-register-dropdown-unit-fix-20260904">
 <title>매물 등록 - 보배드림</title>
 </head>
 <body data-bobae-register>
@@ -122,19 +122,19 @@
             </div>
 
             <div class="registerYearGrid">
-              <button class="bbFloatingField registerSelectField is-disabled is-filled" type="button" disabled>
+              <button class="bbFloatingField registerSelectField is-filled" type="button" data-modal="dateSelect" data-date-target="year">
                 <span class="bbFloatingFieldLabel">연식 <b>*</b></span>
-                <span class="fieldValue">2015년</span>
+                <span class="fieldValue" data-date-value="year">2015년</span>
                 <span class="selectChevron" aria-hidden="true"></span>
               </button>
-              <button class="bbFloatingField registerSelectField is-disabled is-filled" type="button" disabled>
+              <button class="bbFloatingField registerSelectField is-filled" type="button" data-modal="dateSelect" data-date-target="month">
                 <span class="bbFloatingFieldLabel">월 <b>*</b></span>
-                <span class="fieldValue">11월</span>
+                <span class="fieldValue" data-date-value="month">11월</span>
                 <span class="selectChevron" aria-hidden="true"></span>
               </button>
-              <button class="bbFloatingField registerSelectField is-disabled is-filled" type="button" disabled>
+              <button class="bbFloatingField registerSelectField is-filled" type="button" data-modal="dateSelect" data-date-target="modelYear">
                 <span class="bbFloatingFieldLabel">형식연도 <b>*</b></span>
-                <span class="fieldValue">2016년</span>
+                <span class="fieldValue" data-date-value="modelYear">2016년</span>
                 <span class="selectChevron" aria-hidden="true"></span>
               </button>
             </div>
@@ -364,6 +364,6 @@
   </div>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="bobaedream-car-register.js?v=bobae-register-sheet-sync-20260904"></script>
+  <script src="bobaedream-car-register.js?v=bobae-register-dropdown-unit-fix-20260904"></script>
 </body>
 </html>
