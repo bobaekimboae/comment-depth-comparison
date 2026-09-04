@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="bobaedream-car-register.css?v=bobae-gnb-dev-color-20260902">
+<link rel="stylesheet" href="bobaedream-car-register.css?v=bobae-passenger-register-dev-sync-20260904">
 <title>매물 등록 - 보배드림</title>
 </head>
 <body data-bobae-register>
@@ -15,8 +15,7 @@
     <div class="registerHeaderTop">
       <div class="registerHeaderInner">
         <nav class="registerHeaderLinks" aria-label="회원 메뉴">
-          <a href="#" data-toast="로그인 화면은 시안에서 준비 중입니다.">로그인</a>
-          <a href="#" data-toast="회원가입 화면은 시안에서 준비 중입니다.">회원가입</a>
+          <a href="#" data-toast="로그아웃은 실제로 실행하지 않는 시안입니다.">로그아웃</a>
           <a href="#" data-toast="고객센터 화면은 시안에서 준비 중입니다.">고객센터</a>
         </nav>
       </div>
@@ -36,7 +35,7 @@
           <a class="registerNavLink" href="bobaedream-used-car-list.html?category=used">국산차</a>
           <a class="registerNavLink" href="bobaedream-used-car-list.html?category=used&brand=import">수입차</a>
           <a class="registerNavLink" href="bobaedream-used-car-list.html?category=truck">트럭-특장</a>
-          <a class="registerNavLink" href="bobaedream-car-register.html">매물등록</a>
+          <a class="registerNavLink is-active" href="bobaedream-car-register.html">매물등록</a>
           <a class="registerNavLink" href="bobaedream-used-car-list.html?seller=dealer">딜러</a>
           <a class="registerNavLink" href="bobaedream-used-car-list.html?category=parts">부품·용품</a>
           <span class="registerNavDivider" aria-hidden="true"></span>
@@ -53,6 +52,9 @@
           <button class="registerHeaderIcon" type="button" data-toast="찜한 매물 화면은 시안에서 준비 중입니다." aria-label="찜">
             <img src="assets/used-car/icons/s03-03-heart.svg" alt="">
           </button>
+          <button class="registerHeaderIcon" type="button" data-toast="채팅 화면은 시안에서 준비 중입니다." aria-label="채팅">
+            <img src="assets/used-car/icons/s03-11-chat.svg" alt="">
+          </button>
           <button class="registerHeaderIcon" type="button" data-toast="알림 화면은 시안에서 준비 중입니다." aria-label="알림">
             <img src="assets/used-car/icons/s03-04-bell.svg" alt="">
           </button>
@@ -65,86 +67,273 @@
   </header>
 
   <main class="registerMain">
-    <section class="categoryDialog" id="categoryStep" aria-labelledby="categoryStepTitle">
-      <header class="dialogHeader">
-        <a class="dialogClose" href="bobaedream-main.html" aria-label="닫기">
-          <img src="assets/used-car/icons/s03-07-close.svg" alt="">
-        </a>
-        <h1 id="categoryStepTitle">매물 등록</h1>
-      </header>
-      <div class="dialogBody">
-        <h2>어떤 매물을 등록하시나요?</h2>
-        <div class="categoryList" aria-label="등록 카테고리">
-          <button class="categoryRow" type="button" data-category="중고차" data-subtitle="국산차, 수입차, 전기차 등록해요">
-            <span class="categoryIconBox is-photo is-used"><img src="assets/main/categories/register-photo-used.png" alt=""></span>
-            <span class="categoryText"><strong>중고차</strong><em>국산차, 수입차, 전기차 등록해요</em></span>
-            <span class="categoryArrow" aria-hidden="true"></span>
-          </button>
-          <button class="categoryRow" type="button" data-category="트럭-특장" data-subtitle="트럭, 특장차 등록해요">
-            <span class="categoryIconBox is-photo"><img src="assets/main/categories/register-photo-truck.png" alt=""></span>
-            <span class="categoryText"><strong>트럭-특장</strong><em>트럭, 특장차 등록해요</em></span>
-            <span class="categoryArrow" aria-hidden="true"></span>
-          </button>
-          <button class="categoryRow" type="button" data-category="오토바이" data-subtitle="바이크, 스쿠터 등록해요">
-            <span class="categoryIconBox is-photo"><img src="assets/main/categories/register-photo-bike.png" alt=""></span>
-            <span class="categoryText"><strong>오토바이</strong><em>바이크, 스쿠터 등록해요</em></span>
-            <span class="categoryArrow" aria-hidden="true"></span>
-          </button>
-          <button class="categoryRow" type="button" data-category="캠핑카" data-subtitle="캠핑카, 캠핑 트레일러 등록해요">
-            <span class="categoryIconBox is-photo"><img src="assets/main/categories/register-photo-camping.png" alt=""></span>
-            <span class="categoryText"><strong>캠핑카</strong><em>캠핑카, 캠핑 트레일러 등록해요</em></span>
-            <span class="categoryArrow" aria-hidden="true"></span>
-          </button>
-          <button class="categoryRow" type="button" data-category="건설기계" data-subtitle="굴착기, 지게차, 중장비 등록해요">
-            <span class="categoryIconBox is-photo"><img src="assets/main/categories/register-photo-machine.png" alt=""></span>
-            <span class="categoryText"><strong>건설기계</strong><em>굴착기, 지게차, 중장비 등록해요</em></span>
-            <span class="categoryArrow" aria-hidden="true"></span>
-          </button>
-          <button class="categoryRow" type="button" data-category="중고 부품·용품" data-subtitle="부품, 휠, 타이어 등록해요">
-            <span class="categoryIconBox is-photo"><img src="assets/main/categories/register-photo-parts.png" alt=""></span>
-            <span class="categoryText"><strong>중고 부품·용품</strong><em>부품, 휠, 타이어 등록해요</em></span>
-            <span class="categoryArrow" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="registerFormCard is-hidden" id="formStep" aria-labelledby="selectedCategoryLabel">
-      <div class="registerChipRow" role="list" aria-label="등록 유형">
-        <button class="registerChip is-active" type="button" role="listitem" id="selectedCategoryLabel">중고차</button>
-        <button class="registerChip" type="button" role="listitem">트럭-특장</button>
-        <button class="registerChip" type="button" role="listitem">오토바이</button>
-        <button class="registerChip" type="button" role="listitem">캠핑카</button>
-        <button class="registerChip" type="button" role="listitem">건설기계</button>
-        <button class="registerChip" type="button" role="listitem">중고 부품·용품</button>
+    <section class="registerLookupCard" id="lookupStep" aria-labelledby="lookupTitle">
+      <h1 id="lookupTitle">매물 등록</h1>
+      <div class="registerChipRow s1Cat" role="list" aria-label="등록 유형">
+        <button class="registerChip is-active" type="button" role="listitem" data-register-type="자동차">자동차</button>
+        <button class="registerChip" type="button" role="listitem" data-register-type="오토바이">오토바이</button>
+        <button class="registerChip" type="button" role="listitem" data-register-type="화물 · 트럭">화물 · 트럭</button>
+        <button class="registerChip" type="button" role="listitem" data-register-type="기타">기타</button>
       </div>
 
-      <div class="vehicleInputWrap">
-        <input id="vehicleNumber" name="vnum" type="text" value="14러0927" placeholder="차량번호 *" autocomplete="off" inputmode="text" aria-label="차량번호" aria-describedby="vehicleHelp">
-      </div>
+      <label class="bbFloatingField registerLookupInput is-required" data-validation-field="vehicle">
+        <span class="bbFloatingFieldLabel">차량번호 <b>*</b></span>
+        <input id="vehicleNumber" name="vnum" type="text" value="" autocomplete="off" inputmode="text" aria-label="차량번호" aria-describedby="vehicleHelp">
+      </label>
       <p class="fieldHelp" id="vehicleHelp">등록할 차량번호를 띄어쓰기 없이 입력해주세요</p>
 
       <div class="temporaryRow">
         <label class="tempCheckbox">
-          <input type="checkbox">
+          <input type="checkbox" id="temporaryVehicle">
           <span class="miniCheck" aria-hidden="true"></span>
           <strong>임시번호/직수입 차량등록</strong>
         </label>
-        <button class="saveDraft" type="button" data-toast="임시저장 목록은 시안에서 준비 중입니다.">임시저장 (0)</button>
+        <button class="saveDraft" type="button" data-toast="저장된 임시 매물이 없습니다.">임시저장 (0)</button>
       </div>
 
-      <div class="policyBox">
-        <p><strong>허위매물 운영정책</strong>에 위반될 경우, 별도의 환불 없이 광고가 삭제되며 이용이 제한될 수 있습니다.</p>
-        <label class="agreement">
-          <input type="checkbox" id="policyAgree">
-          <span class="checkMark" aria-hidden="true"></span>
-          <span>위 내용을 모두 확인했으며 매물 등록 정책에 동의합니다. <b>(필수)</b></span>
-        </label>
+      <div class="policyText">
+        <button type="button" data-modal="policyInfo">허위매물 운영정책</button>
+        <span>에 위반될 경우,</span>
+        <strong>별도의 환불 없이 광고가 삭제되며 이용이 제한될 수 있습니다.</strong>
       </div>
 
+      <p class="policyAgreeText">위 내용을 확인하였으며 이에 동의합니다. (필수)</p>
       <button class="nextButton" type="button" id="nextButton" disabled>다음</button>
     </section>
+
+    <section class="registerDetailShell is-hidden" id="detailStep" aria-labelledby="detailTitle">
+      <div class="registerDetailWorkspace">
+        <div class="registerDetailStack">
+          <section class="registerDetailSection registerVehicleSection" aria-labelledby="detailTitle">
+            <h1 id="detailTitle">매물 정보</h1>
+            <div class="registerDetailGrid">
+              <label class="bbFloatingField registerDetailField is-full is-readonly is-filled">
+                <span class="bbFloatingFieldLabel">차량번호 <b>*</b></span>
+                <input id="detailPlate" type="text" value="14러0927" readonly>
+              </label>
+              <label class="bbFloatingField registerDetailField is-readonly is-disabled is-filled">
+                <span class="bbFloatingFieldLabel">제조사 <b>*</b></span>
+                <input type="text" value="BMW" disabled>
+              </label>
+              <label class="bbFloatingField registerDetailField is-readonly is-disabled is-filled">
+                <span class="bbFloatingFieldLabel">모델 <b>*</b></span>
+                <input type="text" value="3시리즈" disabled>
+              </label>
+            </div>
+
+            <div class="registerYearGrid">
+              <button class="bbFloatingField registerSelectField is-disabled is-filled" type="button" disabled>
+                <span class="bbFloatingFieldLabel">연식 <b>*</b></span>
+                <span class="fieldValue">2015년</span>
+                <span class="selectChevron" aria-hidden="true"></span>
+              </button>
+              <button class="bbFloatingField registerSelectField is-disabled is-filled" type="button" disabled>
+                <span class="bbFloatingFieldLabel">월 <b>*</b></span>
+                <span class="fieldValue">11월</span>
+                <span class="selectChevron" aria-hidden="true"></span>
+              </button>
+              <button class="bbFloatingField registerSelectField is-disabled is-filled" type="button" disabled>
+                <span class="bbFloatingFieldLabel">형식연도 <b>*</b></span>
+                <span class="fieldValue">2016년</span>
+                <span class="selectChevron" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div class="registerDetailGrid">
+              <label class="bbFloatingField registerDetailField is-filled">
+                <span class="bbFloatingFieldLabel">세부모델 <b>*</b></span>
+                <input type="text" value="3시리즈 6세대 F30 (12~18년)">
+              </label>
+              <label class="bbFloatingField registerDetailField is-readonly is-disabled is-filled">
+                <span class="bbFloatingFieldLabel">연료 <b>*</b></span>
+                <input type="text" value="디젤" disabled>
+              </label>
+              <label class="bbFloatingField registerDetailField is-filled">
+                <span class="bbFloatingFieldLabel">등급 <b>*</b></span>
+                <input type="text" value="320d xDrive -">
+              </label>
+              <label class="bbFloatingField registerDetailField is-disabled is-filled is-unit">
+                <span class="bbFloatingFieldLabel">배기량 <b>*</b></span>
+                <input type="text" value="1,995" disabled>
+                <em>CC</em>
+              </label>
+              <button class="bbFloatingField registerSelectField is-filled" type="button" data-modal="count" data-count-target="seizure">
+                <span class="bbFloatingFieldLabel">압류 <b>*</b></span>
+                <span class="fieldValue" data-count-value="seizure">0</span>
+                <span class="selectChevron" aria-hidden="true"></span>
+              </button>
+              <button class="bbFloatingField registerSelectField is-filled" type="button" data-modal="count" data-count-target="mortgage">
+                <span class="bbFloatingFieldLabel">저당 <b>*</b></span>
+                <span class="fieldValue" data-count-value="mortgage">0</span>
+                <span class="selectChevron" aria-hidden="true"></span>
+              </button>
+              <button class="bbFloatingField registerSelectField is-error" type="button" data-modal="color" data-color-kind="body" data-validation-field="bodyColor">
+                <span class="bbFloatingFieldLabel">색상 <b>*</b></span>
+                <span class="fieldValue" data-color-value="body"></span>
+              </button>
+              <button class="bbFloatingField registerSelectField is-error" type="button" data-modal="color" data-color-kind="seat" data-validation-field="seatColor">
+                <span class="bbFloatingFieldLabel">시트색상 <b>*</b></span>
+                <span class="fieldValue" data-color-value="seat"></span>
+              </button>
+            </div>
+            <div class="fieldMessageGrid">
+              <p class="validationMessage" data-error-for="bodyColor">색상을 선택해주세요.</p>
+              <p class="validationMessage" data-error-for="seatColor">시트색상을 선택해주세요.</p>
+            </div>
+
+            <label class="bbFloatingField registerDetailField is-half is-unit is-error" data-validation-field="mileage">
+              <span class="bbFloatingFieldLabel">주행거리 <b>*</b></span>
+              <input id="mileageInput" type="text" inputmode="numeric" aria-label="주행거리">
+              <em>km</em>
+            </label>
+            <p class="validationMessage" data-error-for="mileage">주행거리를 입력해주세요.</p>
+
+            <div class="choiceMatrix">
+              <div class="registerChoiceBlock">
+                <strong>변속기 <b>*</b></strong>
+                <div class="choiceRow" data-choice-group="transmission">
+                  <button class="choicePill is-active" type="button">자동</button>
+                  <button class="choicePill" type="button">수동</button>
+                </div>
+              </div>
+              <div class="registerChoiceBlock">
+                <strong>제조사 보증 <b>*</b></strong>
+                <div class="choiceRow" data-choice-group="warranty">
+                  <button class="choicePill is-active" type="button">보증가능</button>
+                  <button class="choicePill" type="button">보증만료</button>
+                </div>
+              </div>
+              <div class="registerChoiceBlock">
+                <strong>수입구분 <b>*</b></strong>
+                <div class="choiceRow" data-choice-group="import">
+                  <button class="choicePill is-active" type="button">정식수입</button>
+                  <button class="choicePill" type="button">병행수입</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="registerChoiceBlock registerSaleTypeArea">
+              <strong>매매유형 <b>*</b></strong>
+              <p>제시번호와 성능기록부가 없다면 '위탁판매'를 선택해 주세요.</p>
+              <div class="choiceRow is-wrap" data-choice-group="tradeType">
+                <button class="choicePill is-active" type="button">직접매도(실차주)</button>
+                <button class="choicePill" type="button">매매알선(소속 상사 매물)</button>
+                <button class="choicePill" type="button">매매알선(타 상사 매물)</button>
+                <button class="choicePill" type="button">위탁판매(개인/법인)</button>
+              </div>
+            </div>
+
+            <button class="bbFloatingField registerSelectField is-full is-filled" type="button" data-modal="options">
+              <span class="bbFloatingFieldLabel">옵션</span>
+              <span class="fieldValue" id="optionSummary">선루프 외 34개</span>
+            </button>
+          </section>
+
+          <section class="registerDetailSection registerMediaSection" aria-labelledby="mediaTitle">
+            <aside class="registerMediaTip">영상을 등록하시면<br>조회수를 높일 수 있어요🔥</aside>
+            <header class="registerMediaHeader">
+              <h2 id="mediaTitle">사진 및 영상</h2>
+              <button type="button" data-modal="prohibition">금지사항</button>
+            </header>
+            <div class="registerMediaGrid" id="mediaGrid">
+              <button class="registerMediaAction" type="button" data-media-action="photo">
+                <span class="mediaIcon is-photo" aria-hidden="true"></span>
+                <strong>사진 추가</strong>
+              </button>
+              <button class="registerMediaAction" type="button" data-media-action="video">
+                <span class="mediaIcon is-video" aria-hidden="true"></span>
+                <strong>영상 추가</strong>
+              </button>
+              <button class="registerMediaAction" type="button" data-modal="externalVideo">
+                <span class="mediaIcon is-link" aria-hidden="true"></span>
+                <strong>외부영상 추가</strong>
+              </button>
+            </div>
+            <input class="registerMediaHiddenInput" id="photoFileInput" type="file" accept="image/*" multiple>
+          </section>
+
+          <section class="registerDetailSection registerSaleSection" aria-labelledby="saleTitle">
+            <h2 id="saleTitle">판매 정보</h2>
+            <div class="registerChoiceBlock">
+              <strong>판매구분 <b>*</b></strong>
+              <div class="choiceRow" data-choice-group="saleType">
+                <button class="choicePill is-active" type="button">일반</button>
+                <button class="choicePill" type="button">리스승계</button>
+                <button class="choicePill" type="button">렌트</button>
+              </div>
+            </div>
+            <label class="bbFloatingField registerDetailField is-full is-unit is-error" data-validation-field="price">
+              <span class="bbFloatingFieldLabel">판매가격 <b>*</b></span>
+              <input id="priceInput" type="text" inputmode="numeric" aria-label="판매가격">
+              <em>만원</em>
+            </label>
+            <p class="validationMessage" data-error-for="price">판매가격을 입력해주세요.</p>
+            <button class="bbFloatingField registerSelectField is-full is-filled is-link" type="button" data-modal="region">
+              <span class="bbFloatingFieldLabel">거래지역 <b>*</b></span>
+              <span class="fieldValue" id="regionValue">서울 서초구 양재대로11길 36 100호</span>
+              <span class="rightChevron" aria-hidden="true"></span>
+            </button>
+            <div class="contactRow">
+              <span>연락처 <b>*</b></span>
+              <label class="squareCheckbox">
+                <input type="checkbox" checked>
+                <i aria-hidden="true"></i>
+                <strong>01089560858</strong>
+              </label>
+            </div>
+            <ul class="saleHelpList">
+              <li>* 개인정보 보호를 위해 050 안심번호로 표시됩니다.</li>
+              <li>* 미선택 시 채팅으로만 판매상담할 수 있습니다.</li>
+            </ul>
+          </section>
+
+          <section class="registerDetailSection registerDescriptionSection" aria-labelledby="descriptionTitle">
+            <header class="registerDescriptionHeader">
+              <h2 id="descriptionTitle">상세설명</h2>
+              <button type="button" data-modal="descriptionList">내 설명글 불러오기 <span aria-hidden="true">›</span></button>
+            </header>
+            <div class="registerChoiceBlock">
+              <strong>유형선택</strong>
+              <div class="choiceRow" data-choice-group="descriptionType">
+                <button class="choicePill is-active" type="button">직접입력</button>
+                <button class="choicePill" type="button" id="defaultTemplateButton">기본양식</button>
+              </div>
+            </div>
+            <label class="bbFloatingField registerDetailField is-full" data-validation-field="title">
+              <span class="bbFloatingFieldLabel">제목</span>
+              <input id="titleInput" type="text" aria-label="제목">
+            </label>
+            <label class="bbFloatingTextarea" data-validation-field="description">
+              <span>상세설명</span>
+              <textarea id="descriptionInput" rows="8" maxlength="2000" aria-label="상세설명"></textarea>
+              <em><b id="descriptionCount">0</b>/2000</em>
+            </label>
+          </section>
+
+          <button class="registerInfoCard" type="button" data-modal="inspection">
+            <span>
+              <strong>성능 · 상태 점검기록부</strong>
+              <em>딜러 회원(자동차매매업자)이 성능·상태점검기록부, 제시신고번호를 미기재 시 과태료가 부과됩니다.</em>
+              <small>(제84조 제4항 제21의3호 신설) 과태료 1차 50만 원, 2차 75만 원, 3차 100만 원 부과</small>
+            </span>
+            <i aria-hidden="true"></i>
+          </button>
+
+          <button class="registerInfoCard registerServiceCard" type="button" data-modal="services">
+            <span><strong>부가서비스</strong></span>
+            <i aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <div class="registerDetailFooter is-hidden" id="detailFooter">
+    <div class="registerDetailFooterInner">
+      <button class="registerDetailFooterSave" type="button" data-toast="작성 중인 내용을 임시저장했습니다.">임시저장</button>
+      <button class="registerDetailFooterSubmit" type="button" id="submitButton">등록하기</button>
+    </div>
+  </div>
 
   <footer class="registerFooter">
     <div class="registerFooterInner">
@@ -162,7 +351,19 @@
     </div>
   </footer>
 
+  <div class="registerModal" id="registerModal" aria-hidden="true">
+    <div class="registerModalBackdrop" data-close-modal></div>
+    <section class="registerModalPanel" role="dialog" aria-modal="true" aria-labelledby="registerModalTitle">
+      <header class="registerModalHeader">
+        <h2 id="registerModalTitle"></h2>
+        <button class="registerModalClose" type="button" data-close-modal aria-label="닫기"></button>
+      </header>
+      <div class="registerModalBody" id="registerModalBody"></div>
+      <footer class="registerModalFooter" id="registerModalFooter"></footer>
+    </section>
+  </div>
+
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="bobaedream-car-register.js?v=bobae-gnb-menu-location-clean-20260902"></script>
+  <script src="bobaedream-car-register.js?v=bobae-passenger-register-dev-sync-20260904"></script>
 </body>
 </html>

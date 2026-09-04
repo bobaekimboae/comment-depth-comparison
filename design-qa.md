@@ -1,3 +1,31 @@
+# Bobaedream Passenger Register Dev Flow QA
+
+**Source Visual Truth**
+- Source URL: `https://dev.bbmuseum.co.kr/car/register`
+- Logged-in source state was inspected in Chrome.
+- Test vehicle number: `14러0927`.
+
+**Implementation Surface**
+- `bobaedream-car-register.html`
+- `bobaedream-car-register.css`
+- `bobaedream-car-register.js`
+
+**Checked Flow**
+- Initial 매물등록 card renders with category chips, 차량번호 field, 임시번호 checkbox, 임시저장, policy text, and 다음 CTA.
+- `14러0927` is prefilled for the requested passenger-car test flow.
+- 다음 opens the 허위매물 운영정책 consent modal.
+- 동의 switches into the passenger-car detail form and mirrors the source information structure: 매물 정보, 사진 및 영상, 판매 정보, 상세설명, 성능·상태 점검기록부, 부가서비스, and fixed bottom actions.
+- Color, seat color, option, region, media, external video, description template, inspection, and service interactions open and update without leaving the prototype.
+- Mileage and price fields format numeric input with thousands separators.
+- 등록하기 validates required fields and then shows a prototype completion confirmation instead of submitting real data.
+
+**Result**
+- `node --check bobaedream-car-register.js`: passed.
+- `git diff --check -- bobaedream-car-register.html bobaedream-car-register.css bobaedream-car-register.js`: passed, with expected CRLF warnings only.
+- Browser click-through verification: passed.
+
+final result: passed
+
 # S03-P-H Bobaedream Main Header Gap And Vehicle Type Image QA
 
 **Source Visual Truth**
